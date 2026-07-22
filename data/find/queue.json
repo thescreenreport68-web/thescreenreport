@@ -1,43 +1,45 @@
 {
-  "runId": "run-2026-07-22T13-31-02",
-  "builtAt": "2026-07-22T13:33:39.317Z",
-  "count": 10,
+  "runId": "run-2026-07-22T14-01-11",
+  "builtAt": "2026-07-22T14:03:57.250Z",
+  "count": 14,
   "topics": [
     {
-      "id": "news-elon-musk-grok-ai-the-odyssey-movie",
-      "slug": "elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
-      "title": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie",
+      "id": "news-odyssey-film-premieres-zendaya-tom-holland",
+      "slug": "scorsese-spielberg-attend-cape-fear-screening-zendaya-tom-holland-prom",
+      "title": "Scorsese, Spielberg Attend 'Cape Fear' Screening; Zendaya & Tom Holland Promote 'Spider-Man'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "elon-musk-grok-ai-the-odyssey-movie",
-      "primaryKeyword": "The Odyssey movie",
+      "eventSlug": "odyssey-film-premieres-zendaya-tom-holland",
+      "primaryKeyword": "The Odyssey film premiere",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "Elon Musk",
-        "Grok"
+        "The Odyssey (film)",
+        "Martin Scorsese",
+        "Steven Spielberg",
+        "Zendaya"
       ],
-      "angle": "Elon Musk announced that his AI, Grok, will generate an AI-generated movie based on Homer's 'The Odyssey'.",
+      "angle": "Highlights from film premieres and celebrity red carpet appearances, including 'The Odyssey' and 'Spider-Man: Brand New Day'.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMURWLW9Mbw?oc=5",
-          "ageMin": 216,
-          "headline": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMUR"
+          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
+          "ageMin": 31,
+          "headline": "Martin Scorsese and Steven Spielberg Attend Cape Fear Screening in NYC, Zendaya and Tom Holland Promote Spider-Man: Brand New Day and More Celeb Red Carpet Photos: July 2026",
+          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
         }
       ],
-      "ageMin": 216,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
+        "key": "rss:martin-scorsese-and-steven-spielberg-attend-cape-fear-screen",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -45,21 +47,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 102,
+      "priority": 122,
       "signals": {
-        "recency": 9,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -72,48 +74,47 @@
       "tierClass": "A"
     },
     {
-      "id": "news-audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood",
-      "slug": "jonathan-bailey-ella-purnell-aimee-lou-wood-set-for-audible-s-dracula",
-      "title": "Jonathan Bailey, Ella Purnell, Aimee Lou Wood Set for Audible's 'Dracula'",
+      "id": "news-tiff-discovery-program-stuffed-jodie-comer-harry-melling",
+      "slug": "jodie-comer-s-stuffed-to-open-tiff-discovery-program",
+      "title": "Jodie Comer's 'Stuffed' to Open TIFF Discovery Program",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood",
-      "primaryKeyword": "Dracula",
-      "primaryEntity": "Dracula",
+      "eventSlug": "tiff-discovery-program-stuffed-jodie-comer-harry-melling",
+      "primaryKeyword": "Stuffed TIFF",
+      "primaryEntity": "Stuffed (2026 film)",
       "entities": [
-        "Jonathan Bailey",
-        "Ella Purnell",
-        "Aimee Lou Wood",
-        "Audible"
+        "Jodie Comer",
+        "Harry Melling",
+        "Toronto International Film Festival"
       ],
-      "angle": "Audible is releasing multiple language adaptations of Dracula with notable voice cast members.",
+      "angle": "Jodie Comer and Harry Melling's debut feature 'Stuffed' will open the Discovery program at TIFF.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/digital/news/audible-dracula-jonathan-bailey-ella-purnell-aimee-lou-wood-1236816846/",
-          "ageMin": 31,
-          "headline": "Audible Dracula Adaptation Stars Jonathan Bailey, Ella Purnell, Aimee Lou Wood",
-          "summary": "Bram Stoker s classic spine-tingler Dracula is getting all-new adaptations from Audible in seven different languages, each with its own full-cast audio recording. Audible is adapting the Gothic horror novel for English, Castilian Spanish, French, German, Italian, Latin American Spanish and Brazilian Portuguese. Each production features a full ensemble cast. The English-language production of Audib"
-        },
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/bailey-purnell-gyllenhaal-dracula-audible-1237000068/",
-          "ageMin": 31,
-          "headline": "Jonathan Bailey, Ella Purnell, Aimee Lou Wood Maggie Gyllenhaal Set For Audible’s ‘Dracula’; Omar Sy, Deva Cassel Riccardo Scamarcio Unveiled For International Versions",
-          "summary": "In one of its biggest rollouts to date, Audible has unveiled a roster of stars for its English-language and international adaptations of Bram Stoker’s 1897 gothic horror classic Dracula ahead of a worldwide launch this fall. Bridgerton and Wicked: For Good star Jonathan Bailey leads the English-language production as Count Dracula, alongside Ella Purnell (Fallout) [ ]"
+          "url": "https://deadline.com/2026/07/tiff-2026-discovery-stuffed-jodie-comer-harry-melling-1236999990/",
+          "ageMin": 1,
+          "headline": "TIFF 2026: ‘Stuffed’ Starring Jodie Comer Harry Melling Among Discovery Titles",
+          "summary": "British director Theo Rhys’s debut feature Stuffed, starring Jodie Comer and Harry Melling, is among the titles set to screen as part of the Discovery lineup at this year’s Toronto Film Festival. TIFF released the Discovery lineup this morning. Stuffed has been described as a “gloriously twisted musical” and has been expanded by Rhys from [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/toronto-jodie-comers-stuffed-discovery-program-1236653546/",
+          "ageMin": 1,
+          "headline": "Toronto: Jodie Comer’s ‘Stuffed’ to Open Discovery Program",
+          "summary": "TIFF also booked the latest films by Stephanie Ahn, David Turpin, Alexandra Pechman, Anna Foglietta and Lars Vega for its 51st edition in September."
         }
       ],
-      "ageMin": 31,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:audible-dracula-adaptation-stars-jonathan-bailey-ella-purnel",
+        "key": "rss:tiff-2026-stuffed-starring-jodie-comer-harry-melling-among-d",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -123,25 +124,25 @@
         "tier1Owners": 1,
         "outletCount": 2,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "Deadline",
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 100,
+      "priority": 107,
       "signals": {
-        "recency": 24,
+        "recency": 30,
         "corroboration": 18,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 8,
         "spice": 0,
         "softTv": 0
@@ -149,38 +150,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-vince-gilligan-location-managers-guild-honor",
-      "slug": "vince-gilligan-to-receive-top-honor-from-location-managers-guild",
-      "title": "Vince Gilligan to Receive Top Honor from Location Managers Guild",
+      "id": "news-buzzfeed-studios-muvpix-microdrama-production-pact",
+      "slug": "buzzfeed-studios-and-muvpix-ink-100-title-microdrama-production-pact",
+      "title": "BuzzFeed Studios and MuVpix Ink 100-Title Microdrama Production Pact",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "award",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "vince-gilligan-location-managers-guild-honor",
-      "primaryKeyword": "vince gilligan",
-      "primaryEntity": "Vince Gilligan",
+      "eventSlug": "buzzfeed-studios-muvpix-microdrama-production-pact",
+      "primaryKeyword": "BuzzFeed Studios microdrama",
+      "primaryEntity": "BuzzFeed Studios",
       "entities": [
-        "Breaking Bad",
-        "Better Call Saul"
+        "Romeo + Juliet",
+        "MuVpix",
+        "Romeo Juliet"
       ],
-      "angle": "Location Managers Guild International honors 'Breaking Bad' creator Vince Gilligan with its highest award.",
+      "angle": "BuzzFeed Studios and MuVpix partner for a 100-title microdrama production slate.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/vince-gilligan-career-honor-location-managers-guild-awards-1236999785/",
-          "ageMin": 31,
-          "headline": "Need A Career Honoree For Location Managers Guild Awards? Better Call Vince Gilligan",
-          "summary": "Location Managers Guild International is giving a TV kingpin its highest honor this year. The group is set to fete Breaking Bad, Pluribus and Better Call Saul creator Vince Gilligan with its 2026 Eva Monley Award. He ll received the career prize during the 13th annual LMGI Awards on August 22 at the Eli and Edythe [ ]"
+          "url": "https://deadline.com/2026/07/buzzfeed-studios-muvpix-microdrama-romeo-juliet-reimagined-1237000057/",
+          "ageMin": 1,
+          "headline": "BuzzFeed Studios MuVPix Set 100-Title Microdrama Production Pact, Starting With Romeo Juliet, Reimagined",
+          "summary": "EXCLUSIVE: BuzzFeed Studios and vertical video firm MuVpix are going big on microdrama production. The pair has entered into a partnership to produce more than 100 titles over the next two years and launch them with a cross-platform distribution strategy. First up on the slate will be Romeo Juliet, Reimagined, the retelling of the [ ]"
         }
       ],
-      "ageMin": 31,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:need-a-career-honoree-for-location-managers-guild-awards-bet",
+        "key": "rss:buzzfeed-studios-muvpix-set-100-title-microdrama-production-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -199,12 +201,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 86,
+      "priority": 87,
       "signals": {
-        "recency": 24,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -215,65 +217,66 @@
       "tierClass": "B"
     },
     {
-      "id": "news-disney-worldbuilders-documentary-announcement",
-      "slug": "new-disney-documentary-worldbuilders-goes-behind-the-scenes-with-iconi",
-      "title": "New Disney Documentary 'Worldbuilders' Goes Behind the Scenes with Iconic Storytellers",
+      "id": "news-rory-scovel-netflix-special-show-must-go-on",
+      "slug": "rory-scovel-sets-new-netflix-comedy-special-show-must-go-on",
+      "title": "Rory Scovel Sets New Netflix Comedy Special 'Show Must Go On'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "disney-worldbuilders-documentary-announcement",
-      "primaryKeyword": "disney worldbuilders documentary",
-      "primaryEntity": "Disney Worldbuilders (documentary)",
+      "eventSlug": "rory-scovel-netflix-special-show-must-go-on",
+      "primaryKeyword": "Rory Scovel Netflix special",
+      "primaryEntity": "Rory Scovel",
       "entities": [
-        "Walt Disney",
-        "Disney"
+        "The Show Must Go On",
+        "Netflix",
+        "Show Must Go On"
       ],
-      "angle": "New documentary 'Disney Worldbuilders' offers behind-the-scenes look at iconic storytellers.",
+      "angle": "Comedian Rory Scovel is set to release a new Netflix comedy special titled 'Show Must Go On'.",
       "tmdbType": "movie",
-      "source": "gnews:ABC7 New York",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "ABC7 New York",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaWJNQnA2MlFVY2FLQVNLR0N3Z0ZUTndBSjIwS1pBY01rNERVbjNnVkVPbEh5VkU5N2VSRzNjUnJjRnRRSk9UQkcwdW5iaGxLejgxeG5GTFlDQTZWQlRfcWNaQnV5cVdiSFhwcmpRZ2xVS3RyM0tvdHdlckdCVmxSN1NrSE54UmhKTXhsY3BYcTMtVXl6aU16aHJHN1VUcHhHYXljLW4yRXZQcknSAbABQVVfeXFMT2ViLWxPWEl5V0lqN0FWYWpvMHQ4a0stLVZrZ1dZRmFrSVdDSWhkbWFHOTlvLXc0dHNHQ1JjMm41MDVfdlJ2RXIxem9wUXRLWG5kLThpTXZRVnFkTXRoVTBFQmxyZG5hLUplMkpVQVI3cHBBWFlkc3hKekQ3bklKWjFlR0l5MWRyN2ttc054OXNaSnVZdENkd2NaUFNSWDBZSGhNTVVtTnRDbVNFM05FTXU?oc=5",
-          "ageMin": 24,
-          "headline": "Go behind-the-scenes with iconic storytellers in the new documentary, 'Disney Worldbuilders' - ABC7 New York",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaWJNQnA2MlFVY2FLQVNLR0N3Z0ZUTndBSjIwS1pBY01rNERVbjNnVkVPbEh5VkU5N2VSRzNjUnJjRnRRSk9UQkcwdW5iaGxLejgxeG5GTFlDQTZWQlRfcWNaQnV5cVdiSFhwcmpRZ2xVS3RyM0tvdHdlckdCVmxSN1NrSE54UmhKTXhsY3BYcTMtVXl6aU16aHJHN1VUcHhHYXljLW4yRXZQcknSAbABQVVfeXFMT2ViLWx"
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/rory-scovel-netflix-special-show-must-go-on-premiere-date-1236997707/",
+          "ageMin": 31,
+          "headline": "Rory Scovel Sets New Netflix Comedy Special Show Must Go On",
+          "summary": "EXCLUSIVE: Rory Scovel has announced a new Netflix special, Show Must Go On, that is set to premiere globally on Tuesday, August 11. Scovel returns to Netflix with a new hour for the first time since 2017 s Rory Scovel Tries Stand-Up for the First Time. No word yet on what he discusses in his new hour, but we [ ]"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:go-behind-the-scenes-with-iconic-storytellers-in-the-new-doc",
+        "key": "rss:rory-scovel-sets-new-netflix-comedy-special-show-must-go-on",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "ABC7 New York"
+          "Deadline"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "ABC7 New York",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 83,
+      "priority": 81,
       "signals": {
         "recency": 24,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -281,7 +284,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-jason-statham-new-film-john-wick-director-action-star",
+      "id": "news-jason-statham-john-wick-director-action-star-casting",
       "slug": "jason-statham-s-new-film-from-john-wick-director-recruits-fellow-actio",
       "title": "Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action Star",
       "contentType": "news",
@@ -290,13 +293,13 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jason-statham-new-film-john-wick-director-action-star",
+      "eventSlug": "jason-statham-john-wick-director-action-star-casting",
       "primaryKeyword": "jason statham new movie",
       "primaryEntity": "Jason Statham",
       "entities": [
         "Chad Stahelski"
       ],
-      "angle": "Jason Statham's next film from John Wick director adds another action star.",
+      "angle": "Jason Statham joins a new action film from the director of John Wick, with another action star also recruited.",
       "tmdbType": "movie",
       "source": "gnews:MovieWeb",
       "sources": [
@@ -304,12 +307,12 @@
           "outlet": "MovieWeb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5zZGw1UkZlM3hHYWRlRXE0cFhZMzlpRmxlOE5PanBkdzExa181Zy0tSmRKVEVYc05CaWNGR2ZjVk15al9odXFhQXBDTUcxZ24yazJTWUxDanAtVzNBMGs4QjlDc2NIdEc4TldiaTRCWno5Znc?oc=5",
-          "ageMin": 89,
+          "ageMin": 119,
           "headline": "Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action Star - MovieWeb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5zZGw1UkZlM3hHYWRlRXE0cFhZMzlpRmxlOE5PanBkdzExa181Zy0tSmRKVEVYc05CaWNGR2ZjVk15al9odXFhQXBDTUcxZ24yazJTWUxDanAtVzNBMGs4QjlDc2NIdEc4TldiaTRCWno5Znc?oc=5\" target=\"_blank\" Jason Statham's New Film From 'John Wick' Director Recruits Fellow Action"
         }
       ],
-      "ageMin": 89,
+      "ageMin": 119,
       "_cand": {
         "key": "rss:jason-statham-s-new-film-from-john-wick-director-recruits-fe",
         "popularity": 0,
@@ -346,39 +349,105 @@
       "tierClass": "B"
     },
     {
-      "id": "news-kill-jackie-us-rights-acquired",
-      "slug": "catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-by-amc-in-t",
-      "title": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
+      "id": "music-news-ne-yo-reba-mcentire-country-album-inspiration",
+      "slug": "ne-yo-on-how-reba-mcentire-inspired-his-new-country-album",
+      "title": "Ne-Yo on How Reba McEntire Inspired His New Country Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ne-yo-reba-mcentire-country-album-inspiration",
+      "primaryKeyword": "Ne-Yo country album",
+      "primaryEntity": "Ne-Yo",
+      "entities": [
+        "Reba McEntire"
+      ],
+      "angle": "Ne-Yo discusses Reba McEntire's inspiration for his new country album.",
+      "tmdbType": "movie",
+      "source": "gnews:TODAY.com",
+      "sources": [
+        {
+          "outlet": "TODAY.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWpJdHFlQW8yaUNabEI4ZUVXcl9DUHBHQXM4SHVfM2NmMlBCTW5GdW5DRlRBei1lV2x1WVYtcXdxWUMzTWJabEY0OEQ1ZWRmcHpMOXN4UWpHNHVKS1pOQ0NUd2VBYnNFbHVQWXVSdE1aZ1NIeWJqUHczX2ZsMi1kT0h6N05IN2QtaFhTYTRuM09XNTYwb3ZzRE1BQ1Rhakk1?oc=5",
+          "ageMin": 6,
+          "headline": "Ne-Yo on How Reba McEntire Inspired His New Country Album - TODAY.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWpJdHFlQW8yaUNabEI4ZUVXcl9DUHBHQXM4SHVfM2NmMlBCTW5GdW5DRlRBei1lV2x1WVYtcXdxWUMzTWJabEY0OEQ1ZWRmcHpMOXN4UWpHNHVKS1pOQ0NUd2VBYnNFbHVQWXVSdE1aZ1NIeWJqUHczX2ZsMi1kT0h6N05IN2QtaFhTYTRuM09XNTYwb3ZzRE1BQ1Rhakk1?oc=5\" target=\"_blank\" Ne-Yo on How"
+        }
+      ],
+      "ageMin": 6,
+      "_cand": {
+        "key": "rss:ne-yo-on-how-reba-mcentire-inspired-his-new-country-album-to",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TODAY.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TODAY.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-aileen-wuornos-ai-docuseries",
+      "slug": "serial-killer-aileen-wuornos-brought-to-life-with-ai-in-groundbreaking",
+      "title": "Serial Killer Aileen Wuornos Brought To Life With AI In “Groundbreaking” Docuseries For ID",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "kill-jackie-us-rights-acquired",
-      "primaryKeyword": "kill jackie",
-      "primaryEntity": "To Kill with Intrigue",
+      "eventSlug": "aileen-wuornos-ai-docuseries",
+      "primaryKeyword": "aileen wuornos ai docuseries",
+      "primaryEntity": "Aileen Wuornos: The Selling of a Serial Killer",
       "entities": [
-        "Kill Jackie",
-        "Catherine Zeta-Jones",
-        "AMC"
+        "Aileen Wuornos",
+        "Investigation Discovery"
       ],
-      "angle": "AMC has secured U.S. distribution rights for Catherine Zeta-Jones' upcoming revenge thriller series.",
+      "angle": "Investigation Discovery announces a docuseries about serial killer Aileen Wuornos that uses AI.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/global/catherine-zeta-jones-kill-jackie-acquired-amc-us-1236817910/",
-          "ageMin": 178,
-          "headline": "Catherine Zeta-Jones Revenge Thriller Kill Jackie Acquired by AMC in the U.S.",
-          "summary": "AMC Global Media has acquired the U.S. rights to Catherine Zeta-Jones upcoming revenge thriller series Kill Jackie. Starring and executive produced by Zeta-Jones and co-produced by Steel Springs Pictures and Fremantle, Kill Jackie is set to premiere this fall on AMC+ in the U.S. Based on Nick Harkaway s bestselling novel The Price You Pay (which [ ]"
+          "url": "https://deadline.com/2026/07/serial-killer-aileen-wuornos-ai-true-crime-docuseries-id-1236998740/",
+          "ageMin": 61,
+          "headline": "Serial Killer Aileen Wuornos Brought To Life With AI In “Groundbreaking” Docuseries For ID",
+          "summary": "EXCLUSIVE: Aileen Wuornos was widely considered one of America’s first female serial killers and was brought to life by Charlize Theron in the 2003 film Monster that won her an Oscar. Investigation Discovery (ID) is now bringing Wuornos to life in a completely different way in a series that uses AI technology in a way [ ]"
         }
       ],
-      "ageMin": 178,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:catherine-zeta-jones-revenge-thriller-kill-jackie-acquired-b",
+        "key": "rss:serial-killer-aileen-wuornos-brought-to-life-with-ai-in-grou",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -388,11 +457,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -413,40 +482,240 @@
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
+      "id": "news-cape-fear-stars-javier-bardem-amy-adams-attend-finale-screening",
+      "slug": "cape-fear-stars-javier-bardem-amy-adams-attend-finale-screening",
+      "title": "'Cape Fear' stars Javier Bardem, Amy Adams attend finale screening",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "cape-fear-stars-javier-bardem-amy-adams-attend-finale-screening",
+      "primaryKeyword": "Cape Fear screening",
+      "primaryEntity": "Cape Fear",
+      "entities": [
+        "Javier Bardem",
+        "Amy Adams"
+      ],
+      "angle": "Stars of 'Cape Fear' attend the show's finale screening.",
+      "tmdbType": "movie",
+      "source": "gnews:upi.com",
+      "sources": [
+        {
+          "outlet": "upi.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQdHRVcWtLY0g1YUZ5SUdPUll0cTE4MV81ZjR0QXd2bkZ4LTlWdnhNZ2drb1R1cUZPT2JpcXJaZmJ4bkNRdW9mdzdNSk84V3JxYm1mT3V2LWo3WkVCZ3JPbVNRR2VpZWM4RDhNRUY0dUM1Wjg4dTFjeWQxdzhrcEp3RXMtMG1ieWk2dng1NWUwU3BQNTdkaFp0NmR30gGfAUFVX3lxTE84QjRqS25FRGJKSlhLYmVWZ0l5YzRPakVybjdxd29oTElYYUdHSDQtV1Z1aTJHdEVVZjFTZzhMLWpDc3plZl94dEZ0Q3lsWEhERUVXdmZVVWo4OE80dHgyeFE2ZDFYa3ZodWpUMnNpR21QeXhTQWZ1LTZZcjIxbjVIbl9VRHhORXFtaE5kZllsSnZVeUJ3eXhMTVF4enZXcw?oc=5",
+          "ageMin": 7,
+          "headline": "'Cape Fear' stars Javier Bardem, Amy Adams attend finale screening - upi.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQdHRVcWtLY0g1YUZ5SUdPUll0cTE4MV81ZjR0QXd2bkZ4LTlWdnhNZ2drb1R1cUZPT2JpcXJaZmJ4bkNRdW9mdzdNSk84V3JxYm1mT3V2LWo3WkVCZ3JPbVNRR2VpZWM4RDhNRUY0dUM1Wjg4dTFjeWQxdzhrcEp3RXMtMG1ieWk2dng1NWUwU3BQNTdkaFp0NmR30gGfAUFVX3lxTE84QjRqS25FRGJKSlhLYmVWZ0l5YzR"
+        }
+      ],
+      "ageMin": 7,
+      "_cand": {
+        "key": "rss:-cape-fear-stars-javier-bardem-amy-adams-attend-finale-scree",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "upi.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "upi.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-snoop-dogg-casting",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "tier": "popular",
+      "eventSlug": "snoop-dogg-casting",
       "primaryKeyword": "Snoop Dogg biopic",
-      "primaryEntity": "Snoop Dogg Biopic",
+      "primaryEntity": "Snoop Dogg's Hood of Horror",
       "entities": [
-        "Snoop Dogg's Hood of Horror",
         "Snoop Dogg",
         "Jonathan Daviss",
-        "Craig Brewer"
+        "Craig Brewer",
+        "Universal"
       ],
-      "angle": "Universal has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
+      "angle": "Jonathan Daviss has been cast as Snoop Dogg in an upcoming biopic directed by Craig Brewer.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/awards/industry/will-2026-emmys-bring-back-cut-categories-1235206508/",
+          "ageMin": 991,
+          "headline": "Will the Emmys Bring Back Cut Categories? History Provides Hope",
+          "summary": "Though the Television Academy announced plans to cut five categories from the 2026 Primetime Emmys, the decision is likely not set in stone."
+        }
+      ],
+      "ageMin": 991,
+      "_cand": {
+        "key": "rss:will-the-emmys-bring-back-cut-categories-history-provides-ho",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-intocable-six-riaa-latin-diamond-awards",
+      "slug": "intocable-makes-history-with-six-riaa-latin-diamond-awards",
+      "title": "Intocable Makes History With Six RIAA Latin Diamond Awards",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "award",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "intocable-six-riaa-latin-diamond-awards",
+      "primaryKeyword": "Intocable RIAA awards",
+      "primaryEntity": "Intocable",
+      "entities": [
+        "RIAA"
+      ],
+      "angle": "Intocable makes history by achieving six RIAA Latin Diamond Awards, the most for any band.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/awards/intocable-history-six-riaa-latin-diamond-awards-1236300473/",
+          "ageMin": 580,
+          "headline": "Intocable Makes History With Six RIAA Latin Diamond Awards",
+          "summary": "The Texas-based outfit has now collected more RIAA Latin Diamond certifications than any other band."
+        }
+      ],
+      "ageMin": 580,
+      "_cand": {
+        "key": "rss:intocable-makes-history-with-six-riaa-latin-diamond-awards",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ted-lasso-other",
+      "slug": "ted-lasso-was-finished-then-jason-sudeikis-had-an-epiphany",
+      "title": "Ted Lasso Was Finished. Then Jason Sudeikis Had An Epiphany",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "ted-lasso-other",
+      "primaryKeyword": "ted lasso season 4",
+      "primaryEntity": "Ted Lasso",
+      "entities": [
+        "Jason Sudeikis",
+        "Apple TV+"
+      ],
+      "angle": "Jason Sudeikis and creators discuss the unexpected continuation of 'Ted Lasso'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 961,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/ted-lasso-returns-jason-sudeikis-interview-season-four-1236653124/",
+          "ageMin": 61,
+          "headline": "Ted Lasso Was Finished. Then Jason Sudeikis Had An Epiphany",
+          "summary": "As Apple TV’s game-changing hit returns for a never-supposed-to-happen fourth season, THR goes deep with the cast and creators on the off-field drama — and on-brand hope — that made it possible."
         }
       ],
-      "ageMin": 961,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+        "key": "rss:ted-lasso-was-finished-then-jason-sudeikis-had-an-epiphany",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -465,23 +734,23 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 57,
       "signals": {
-        "recency": 1,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 6,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-luke-skywalker-lightsaber-auction-3-75m",
+      "id": "news-luke-skywalker-lightsaber-auction-record",
       "slug": "luke-s-empire-strikes-back-lightsaber-with-severed-hand-sells-for-3-75",
       "title": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million",
       "contentType": "news",
@@ -490,14 +759,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-auction-3-75m",
+      "eventSlug": "luke-skywalker-lightsaber-auction-record",
       "primaryKeyword": "luke skywalker lightsaber auction",
       "primaryEntity": "Luke Skywalker's lightsaber",
       "entities": [
         "The Empire Strikes Back",
         "Star Wars: Episode V - The Empire Strikes Back"
       ],
-      "angle": "An iconic prop from 'Star Wars: The Empire Strikes Back', Luke Skywalker's lightsaber with a severed hand, sold for $3.75 million at auction.",
+      "angle": "A prop lightsaber used by Luke Skywalker in 'The Empire Strikes Back,' complete with a severed hand, sold for a record $3.75 million at auction.",
       "tmdbType": "movie",
       "source": "gnews:Gizmodo",
       "sources": [
@@ -505,12 +774,12 @@
           "outlet": "Gizmodo",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5",
-          "ageMin": 150,
+          "ageMin": 181,
           "headline": "Luke’s ‘Empire Strikes Back’ Lightsaber (With Severed Hand) Sells for $3.75 Million - Gizmodo",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPalhWd0VQQ3k1YWlmTkhsMnVZdnVSMU0tSlVHMDBmVnBjVndDc1EwVmtDWkFiVEl3OXBNc2VDaTVMSkhsWW14Y2d6SUxTMm1INDJKcjdJNHFnaUk5T05KWTlkazBMVE94cUV0akVZc00tRXlDRzlpZFhTY1luOURYZlBEUTJnS2xzcVBZc0pZa1BmWTNkM2hDbW1rTklFblA2dHItWndpLWRYV0pw?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 150,
+      "ageMin": 181,
       "_cand": {
         "key": "rss:luke-s-empire-strikes-back-lightsaber-with-severed-hand-sell",
         "popularity": 0,
@@ -531,9 +800,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 52,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -547,87 +816,23 @@
       "tierClass": "C"
     },
     {
-      "id": "news-whodunnit-series-recommendation",
-      "slug": "lesley-manville-and-claire-rushbrook-s-best-show-the-clever-whodunnit-",
-      "title": "Lesley Manville and Claire Rushbrook's best show: The clever whodunnit series to binge-watch free tonight",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "whodunnit-series-recommendation",
-      "primaryKeyword": "whodunnit series",
-      "primaryEntity": "Lesley Manville",
-      "entities": [
-        "Claire Rushbrook"
-      ],
-      "angle": "Cosmopolitan recommends a clever whodunnit series starring Lesley Manville and Claire Rushbrook available to stream for free.",
-      "tmdbType": "movie",
-      "source": "gnews:Cosmopolitan",
-      "sources": [
-        {
-          "outlet": "Cosmopolitan",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQTm13RU1kNkhob2swZmlHNERTT1hQTVEteFc3T25LVmVSZUt5bEtnLWRUQlYxYkxvQl9uRVBhYkF6NU5lamlYYVAtdWdtMVhQOEstN3FSMHdtS08zOTVoQXZkV0Rsa0ZkQVlSal9wX08zek9Ub1UwRWxsOEk1Y0g3WWVfcjhXS2ZhdkNCa3RFZk5ISXRNLXc?oc=5",
-          "ageMin": 171,
-          "headline": "\"Lesley Manville and Claire Rushbrook's best show\": The clever whodunnit series to binge-watch free tonight - Cosmopolitan",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxQTm13RU1kNkhob2swZmlHNERTT1hQTVEteFc3T25LVmVSZUt5bEtnLWRUQlYxYkxvQl9uRVBhYkF6NU5lamlYYVAtdWdtMVhQOEstN3FSMHdtS08zOTVoQXZkV0Rsa0ZkQVlSal9wX08zek9Ub1UwRWxsOEk1Y0g3WWVfcjhXS2ZhdkNCa3RFZk5ISXRNLXc?oc=5\" target=\"_blank\" \"Lesley Manville and Clai"
-        }
-      ],
-      "ageMin": 171,
-      "_cand": {
-        "key": "rss:-lesley-manville-and-claire-rushbrook-s-best-show-the-clever",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Cosmopolitan"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Cosmopolitan",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
       "id": "news-jason-alexander-apology-courtney-stodden",
-      "slug": "jason-alexander-apologizes-to-courtney-stodden-for-past-sketch",
-      "title": "Jason Alexander Apologizes to Courtney Stodden for Past Sketch",
+      "slug": "jason-alexander-apologizes-to-courtney-stodden-for-filming-inappropria",
+      "title": "Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch as Minor",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
+      "eventType": "legal",
+      "sensitivity": "high",
       "eventSlug": "jason-alexander-apology-courtney-stodden",
-      "primaryKeyword": "Jason Alexander",
+      "primaryKeyword": "Jason Alexander apology",
       "primaryEntity": "Jason Alexander",
       "entities": [
-        "Courtney Stodden"
+        "Courtney Stodden",
+        "Seinfeld"
       ],
-      "angle": "Seinfeld star Jason Alexander apologizes to Courtney Stodden for an inappropriate sketch filmed when she was a minor.",
+      "angle": "Jason Alexander apologizes to Courtney Stodden for filming an inappropriate sketch when she was a minor.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -635,12 +840,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/jason-alexander-courtney-stodden-inappropriate-behavior-minor-1236817958/",
-          "ageMin": 18,
+          "ageMin": 48,
           "headline": "Seinfeld Star Jason Alexander Apologizes to Courtney Stodden for Filming Inappropriate Sketch When She Was a Minor: I Truly Regret It",
-          "summary": "Seinfeld alum Jason Alexander issued an apology to reality star Courtney Stodden after she called him out on Instagram for filming an inappropriate comedy sketch her when she was a minor. Stodden was 17 years old when she filmed a Funny or Die sketch with Alexander that parodied Dr. Phil and other daytime talk shows. [ ]"
+          "summary": "“Seinfeld” alum Jason Alexander issued an apology to reality star Courtney Stodden after she called him out on Instagram for filming an inappropriate comedy sketch her when she was a minor. Stodden was 17 years old when she filmed a Funny or Die sketch with Alexander that parodied “Dr. Phil” and other daytime talk shows. [ ]"
         }
       ],
-      "ageMin": 18,
+      "ageMin": 48,
       "_cand": {
         "key": "rss:seinfeld-star-jason-alexander-apologizes-to-courtney-stodden",
         "popularity": 0,
@@ -655,18 +860,18 @@
           "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
+        "sensitivity": "high",
         "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 66,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -674,7 +879,75 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
+    },
+    {
+      "id": "news-jayhawks-gary-louris-new-album",
+      "slug": "the-jayhawks-gary-louris-on-new-album-and-new-john-and-yoko-love-story",
+      "title": "The Jayhawks' Gary Louris on New Album and 'New John and Yoko' Love Story",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jayhawks-gary-louris-new-album",
+      "primaryKeyword": "The Jayhawks new album",
+      "primaryEntity": "The Jayhawks",
+      "entities": [
+        "Don't Go Near the Park",
+        "Gary Louris",
+        "Sanctuary Park"
+      ],
+      "angle": "The Jayhawks' Gary Louris discusses the band's new album and his personal life.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/jayhawks-gary-louris-new-album-interview-canada-1235596029/",
+          "ageMin": 26,
+          "headline": "The Jayhawks Gary Louris on His Canadian Love Story",
+          "summary": "The roots-rock bandleader talks about their great new album, Sanctuary Park , and why he and his wife are \"the new John and Yoko\""
+        }
+      ],
+      "ageMin": 26,
+      "_cand": {
+        "key": "rss:the-jayhawks-gary-louris-on-his-canadian-love-story",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
     }
   ]
 }
