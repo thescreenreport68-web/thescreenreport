@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 121,
-   "at": "2026-07-22T18:34:08.279Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 122,
+   "at": "2026-07-22T19:02:58.329Z",
    "dead": true,
-   "expiresAt": "2026-07-25T18:34:08.279Z"
+   "expiresAt": "2026-07-25T19:02:58.329Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2144,17 +2144,21 @@
    "key": "sullivan-s-crossing-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T14:37:17.578Z"
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T19:04:42.992Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T19:04:42.992Z"
   },
   {
    "key": "outcome-now-streaming|NOW-STREAMING",
    "eventSlug": "outcome-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T14:40:08.033Z"
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-22T19:07:34.303Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T19:07:34.303Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d64|BO-UPDATE",
@@ -2181,14 +2185,14 @@
    "at": "2026-07-22T16:08:52.843Z"
   }
  ],
- "zeroStreak": 10,
+ "zeroStreak": 11,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.3276
+  "usd": 0.37474
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784745065018
+  "lastMs": 1784746869530
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2196,14 +2200,14 @@
   "byFilm": {
    "voicemails for isabelle": 2,
    "the boss baby": 1,
-   "outcome": 2,
+   "outcome": 3,
    "the mandalorian and grogu": 3,
    "sniper: no nation": 1,
    "avatar: the last airbender": 1,
    "worst neighbor ever": 1,
    "raw": 1,
    "the ultimatum: marry or move on": 1,
-   "sullivan's crossing": 1,
+   "sullivan's crossing": 2,
    "kingdom": 1,
    "project hail mary": 1,
    "wwe: unreal": 1,
