@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-22T13:01:18.228Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "odelya-halevis-pregnancy-timing-came-with-a-sweet-clue",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.024633,
+  "costPerPublished": 0.024633,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 31731,
+      "out": 1529,
+      "usd": 0.012533960000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2669,
+      "out": 349,
+      "usd": 0.000298422
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 32023,
+      "out": 5872,
+      "usd": 0.010734481649999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 8602,
+      "out": 514,
+      "usd": 0.0010658
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2606,
+      "out": 199,
+      "usd": 0.0012793,
+      "ms": 2218
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2669,
+      "out": 349,
+      "usd": 0.00030303,
+      "ms": 13788
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 31301,
+      "out": 5571,
+      "usd": 0.00909337,
+      "ms": 157283
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 0,
+      "in": 29125,
+      "out": 1330,
+      "usd": 0.0120625,
+      "ms": 21902
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 6015,
+      "out": 340,
+      "usd": 0.0007375000000000001,
+      "ms": 2125
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 722,
+      "out": 301,
+      "usd": 0.00026839999999999996,
+      "ms": 11054
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 1827
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 202,
+      "out": 52,
+      "usd": 0.000041,
+      "ms": 902
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2096,
+      "out": 94,
+      "usd": 0.0002472,
+      "ms": 1559
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 289,
+      "out": 28,
+      "usd": 0.0000401,
+      "ms": 468
+    }
+  }
+}
