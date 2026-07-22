@@ -1,0 +1,219 @@
+{
+ "runId": "run-2026-07-22T07-01-04",
+ "mode": "live",
+ "startedAt": "2026-07-22T07:01:04.780Z",
+ "films": 39,
+ "published": [],
+ "held": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "score": 58
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
+   "score": 75
+  },
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
+   "score": 42
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "they-will-kill-you-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "house-of-the-dragon-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rick-and-morty-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.2,
+  "behind": true,
+  "expected": 15.43,
+  "allow": 2
+ },
+ "queueBuilt": 12,
+ "attemptCapHit": 4,
+ "zeroStreak": 3,
+ "audit": {
+  "day": "2026-07-21",
+  "sampled": [
+   "jason-statham-s-meg-2-the-trench-chomps-into-netflix-top-5-with-7-million-hours",
+   "chiara-messineo-s-shipwrecked-nightmare-at-sea-hauls-in-17-million-hours-stays",
+   "salish-jordan-matter-father-daughter-duo-pulls-5-2m-hours-on-netflix-at-7"
+  ],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.05886
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T07:13:52.294Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 4,
+    "errors": 0,
+    "in": 4705,
+    "out": 523,
+    "usd": 0.00068,
+    "ms": 3743
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 21477,
+    "out": 2760,
+    "usd": 0.00325,
+    "ms": 11468
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3556,
+    "out": 330,
+    "usd": 0.00017,
+    "ms": 1233
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2782,
+    "out": 2309,
+    "usd": 0.00067,
+    "ms": 43688
+   },
+   "writer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 18406,
+    "out": 6529,
+    "usd": 0.01781,
+    "ms": 150371
+   },
+   "qa": {
+    "calls": 32,
+    "errors": 8,
+    "in": 68218,
+    "out": 9446,
+    "usd": 0.03128,
+    "ms": 185828
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2013,
+    "out": 1100,
+    "usd": 0.00084,
+    "ms": 32702
+   }
+  },
+  "totalUsd": 0.0547
+ },
+ "openrouterTotalUsd": 0.05886
+}

@@ -1711,10 +1711,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 95,
-   "at": "2026-07-22T06:33:08.158Z",
+   "tries": 96,
+   "at": "2026-07-22T07:13:51.915Z",
    "dead": true,
-   "expiresAt": "2026-07-25T06:33:08.158Z"
+   "expiresAt": "2026-07-25T07:13:51.915Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1832,9 +1832,11 @@
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "voicemails-for-isabelle-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 155 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-21T21:38:46.454Z"
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-22T07:04:59.277Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T07:04:59.277Z"
   },
   {
    "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1880,9 +1882,11 @@
    "key": "the-boss-baby-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "the-boss-baby-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "8 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-21T23:37:02.291Z"
+   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-22T07:07:27.117Z",
+   "dead": true,
+   "expiresAt": "2026-07-25T07:07:27.117Z"
   },
   {
    "key": "joy-ride-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1987,60 +1991,32 @@
    "reason": "5 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-22T06:37:58.084Z"
+  },
+  {
+   "key": "outcome-now-streaming|NOW-STREAMING",
+   "eventSlug": "outcome-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-22T07:12:20.114Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
-  "laDay": "2026-07-21",
-  "usd": 1.33602
+  "laDay": "2026-07-22",
+  "usd": 0.05886
  },
  "pace": {
-  "tokens": 3.141458373015873,
-  "lastMs": 1784701863566
+  "tokens": 3.19863976984127,
+  "lastMs": 1784703664780
  },
- "lastAuditDay": "2026-07-21",
+ "lastAuditDay": "2026-07-22",
  "attempts": {
-  "laDay": "2026-07-21",
+  "laDay": "2026-07-22",
   "byFilm": {
-   "rust creek": 1,
-   "the sheep detectives": 1,
-   "outcome": 3,
-   "king of the hill": 1,
-   "call me by your name": 1,
-   "project hail mary": 3,
-   "the mandalorian and grogu": 3,
-   "f9: the fast saga": 1,
-   "old henry": 1,
-   "malcolm in the middle: life's still unfair": 1,
-   "spider-man: brand new day": 1,
-   "descendants: wicked wonderland": 3,
-   "star wars: the mandalorian and grogu | a special look": 2,
-   "peter dinklage’s biggest fantasy movie with rachel zegler": 1,
-   "heartstopper forever": 1,
-   "mortal kombat ii": 1,
-   "the boss baby": 3,
-   "wwe: unreal": 1,
-   "shipwrecked: nightmare at sea": 3,
-   "voicemails for isabelle": 3,
-   "enola holmes 3": 3,
-   "regretting you": 3,
-   "meg 2: the trench": 1,
-   "kpop demon hunters": 3,
-   "death on the nile": 3,
-   "joy ride": 3,
-   "little house on the prairie": 3,
-   "i will find you": 3,
-   "the hawk": 3,
-   "the get out": 1,
-   "stop! that! train!": 1,
-   "avatar: the last airbender": 2,
-   "worst neighbor ever": 2,
-   "raw": 2,
-   "salish & jordan matter": 2,
-   "the ultimatum: marry or move on": 2,
-   "borderline": 1,
-   "sniper: no nation": 2,
-   "sullivan's crossing": 1
+   "voicemails for isabelle": 1,
+   "the boss baby": 1,
+   "outcome": 1
   }
  }
 }
