@@ -1,0 +1,96 @@
+{
+ "runId": "run-2026-07-22T09-31-13",
+ "mode": "live",
+ "startedAt": "2026-07-22T09:31:13.056Z",
+ "films": 40,
+ "published": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "slug": "young-washington-box-office-day-18-adds-433-123-as-domestic-total-hits-41-4",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/young-washington-box-office-day-18-adds-433-123-as-domestic-total-hits-41-4.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.06,
+  "behind": true,
+  "expected": 15.66,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.08493
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T09:36:38.135Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3675,
+    "out": 521,
+    "usd": 0.0002,
+    "ms": 1742
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 5518,
+    "out": 548,
+    "usd": 0.00077,
+    "ms": 2986
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 1,
+    "in": 1557,
+    "out": 1259,
+    "usd": 0.00035,
+    "ms": 20299
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4040,
+    "out": 2202,
+    "usd": 0.00168,
+    "ms": 96236
+   }
+  },
+  "totalUsd": 0.003
+ },
+ "openrouterTotalUsd": 0.00323
+}
