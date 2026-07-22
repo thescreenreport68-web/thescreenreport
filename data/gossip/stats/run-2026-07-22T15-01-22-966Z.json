@@ -1,0 +1,144 @@
+{
+  "ts": "2026-07-22T15:01:22.966Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "bella-hadid-is-single-source-says-amid-rumors-about-artist-friend",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaTitle-contract:repaired",
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012003,
+  "costPerPublished": 0.012003,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 13754,
+      "out": 946,
+      "usd": 0.006491200000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 944,
+      "out": 1600,
+      "usd": 0.0004073552
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 942,
+      "out": 375,
+      "usd": 0.00030228
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 14781,
+      "out": 4959,
+      "usd": 0.00442327895
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 2273,
+      "out": 380,
+      "usd": 0.00037929999999999995
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2403,
+      "out": 180,
+      "usd": 0.0011709000000000001,
+      "ms": 1754
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 942,
+      "out": 375,
+      "usd": 0.00037206,
+      "ms": 21873
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14169,
+      "out": 4591,
+      "usd": 0.00481981,
+      "ms": 175475
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11351,
+      "out": 766,
+      "usd": 0.005320300000000001,
+      "ms": 9084
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1443,
+      "out": 190,
+      "usd": 0.00022030000000000002,
+      "ms": 1088
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 612,
+      "out": 368,
+      "usd": 0.00026587999999999997,
+      "ms": 13191
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 389,
+      "out": 127,
+      "usd": 0.00008970000000000001,
+      "ms": 938
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 158,
+      "out": 36,
+      "usd": 0.000030200000000000002,
+      "ms": 682
+    },
+    "image": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 3359
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 283,
+      "out": 27,
+      "usd": 0.0000391,
+      "ms": 820
+    }
+  }
+}
