@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 124,
-   "at": "2026-07-22T20:02:38.300Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 125,
+   "at": "2026-07-22T20:09:11.120Z",
    "dead": true,
-   "expiresAt": "2026-07-25T20:02:38.300Z"
+   "expiresAt": "2026-07-25T20:09:11.120Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2183,16 +2183,24 @@
    "reason": "words 87 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-22T16:08:52.843Z"
+  },
+  {
+   "key": "x-men-97-trending-tv|TRENDING-TV",
+   "eventSlug": "x-men-97-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 168 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-22T20:11:10.077Z"
   }
  ],
- "zeroStreak": 13,
+ "zeroStreak": 14,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.40085
+  "usd": 0.42081
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784750475149
+  "lastMs": 1784750823798
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2212,7 +2220,8 @@
    "project hail mary": 1,
    "wwe: unreal": 1,
    "star wars: the mandalorian and grogu | a special look": 1,
-   "off campus": 1
+   "off campus": 1,
+   "x-men '97": 1
   }
  }
 }
