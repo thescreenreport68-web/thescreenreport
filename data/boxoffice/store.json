@@ -740,6 +740,20 @@
    "headlineNumberRaw": null,
    "filmKey": "meg 2: the trench",
    "chartDate": null
+  },
+  {
+   "key": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19|NETFLIX-TOP10",
+   "at": "2026-07-22T02:03:26.455Z",
+   "eventSlug": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19",
+   "form": "NETFLIX-TOP10",
+   "slug": "chiara-messineo-s-shipwrecked-nightmare-at-sea-hauls-in-17-million-hours-stays",
+   "title": "Chiara Messineo's Shipwrecked: Nightmare at Sea Hauls in 17 Million Hours, Stays #1 on Netflix",
+   "film": "Shipwrecked: Nightmare at Sea",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": null,
+   "filmKey": "shipwrecked: nightmare at sea",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1683,10 +1697,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 85,
-   "at": "2026-07-22T01:33:24.292Z",
+   "tries": 86,
+   "at": "2026-07-22T02:09:23.816Z",
    "dead": true,
-   "expiresAt": "2026-07-25T01:33:24.292Z"
+   "expiresAt": "2026-07-25T02:09:23.816Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1773,8 +1787,8 @@
    "eventSlug": "star-wars-the-mandalorian-and-grogu-a-special-look-trending-tv",
    "form": "TRENDING-TV",
    "reason": "under floor: no confirmed streaming platform for trending TV",
-   "tries": 1,
-   "at": "2026-07-21T12:34:45.704Z"
+   "tries": 2,
+   "at": "2026-07-22T02:06:49.032Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d63|BO-UPDATE",
@@ -1799,14 +1813,6 @@
    "reason": "words 175 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-21T16:20:46.770Z"
-  },
-  {
-   "key": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19|NETFLIX-TOP10",
-   "eventSlug": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19",
-   "form": "NETFLIX-TOP10",
-   "reason": "words 122 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-21T21:36:25.404Z"
   },
   {
    "key": "voicemails-for-isabelle-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -1935,16 +1941,24 @@
    "reason": "8 unverified claim(s) cut, unrecovered",
    "tries": 1,
    "at": "2026-07-22T01:38:07.697Z"
+  },
+  {
+   "key": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T02:06:48.886Z"
   }
  ],
- "zeroStreak": 11,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 0.94941
+  "usd": 0.98742
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784683891427
+  "tokens": 3,
+  "lastMs": 1784685692538
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -1962,13 +1976,13 @@
    "malcolm in the middle: life's still unfair": 1,
    "spider-man: brand new day": 1,
    "descendants: wicked wonderland": 3,
-   "star wars: the mandalorian and grogu | a special look": 1,
+   "star wars: the mandalorian and grogu | a special look": 2,
    "peter dinklage’s biggest fantasy movie with rachel zegler": 1,
    "heartstopper forever": 1,
    "mortal kombat ii": 1,
    "the boss baby": 3,
    "wwe: unreal": 1,
-   "shipwrecked: nightmare at sea": 2,
+   "shipwrecked: nightmare at sea": 3,
    "voicemails for isabelle": 3,
    "enola holmes 3": 2,
    "regretting you": 2,
@@ -1984,7 +1998,8 @@
    "avatar: the last airbender": 1,
    "worst neighbor ever": 1,
    "raw": 1,
-   "salish & jordan matter": 1
+   "salish & jordan matter": 1,
+   "the ultimatum: marry or move on": 1
   }
  }
 }

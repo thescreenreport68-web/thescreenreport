@@ -1,0 +1,227 @@
+{
+ "runId": "run-2026-07-22T02-01-32",
+ "mode": "live",
+ "startedAt": "2026-07-22T02:01:32.538Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "shipwrecked-nightmare-at-sea-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "slug": "chiara-messineo-s-shipwrecked-nightmare-at-sea-hauls-in-17-million-hours-stays",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/chiara-messineo-s-shipwrecked-nightmare-at-sea-hauls-in-17-million-hours-stays.md",
+   "score": 90
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-ultimatum-marry-or-move-on-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 85
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "score": 80
+  }
+ ],
+ "rejected": [
+  {
+   "tag": "star-wars-the-mandalorian-and-grogu-a-special-look-trending-tv×TRENDING-TV",
+   "stage": "gatherer",
+   "reason": "under floor: no confirmed streaming platform for trending TV (try 2)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "salish-jordan-matter-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "they-will-kill-you-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "house-of-the-dragon-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "rick-and-morty-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 16.6,
+  "allow": 2
+ },
+ "queueBuilt": 11,
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-21",
+  "usd": 0.98742
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "critical": 1
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed (google/gemini-2.5-flash-lite, openai/gpt-5-nano): empty completion",
+    "severity": "critical",
+    "at": "2026-07-22T02:08:35.101Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-22T02:09:23.819Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 999,
+    "out": 535,
+    "usd": 0.00031,
+    "ms": 2555
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3439,
+    "out": 443,
+    "usd": 0.00018,
+    "ms": 2177
+   },
+   "gatherer": {
+    "calls": 5,
+    "errors": 3,
+    "in": 3688,
+    "out": 1866,
+    "usd": 0.00102,
+    "ms": 14468
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2071,
+    "out": 3406,
+    "usd": 0.0008,
+    "ms": 96711
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12221,
+    "out": 4000,
+    "usd": 0.01129,
+    "ms": 48758
+   },
+   "qa": {
+    "calls": 16,
+    "errors": 0,
+    "in": 45259,
+    "out": 5340,
+    "usd": 0.02693,
+    "ms": 37481
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1975,
+    "out": 1009,
+    "usd": 0.0008,
+    "ms": 36704
+   }
+  },
+  "totalUsd": 0.04133
+ },
+ "openrouterTotalUsd": 0.03801
+}
