@@ -1,0 +1,104 @@
+{
+ "runId": "run-2026-07-22T08-01-11",
+ "mode": "live",
+ "startedAt": "2026-07-22T08:01:11.966Z",
+ "films": 39,
+ "published": [
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-20-adds-1-8-million-as-domestic-total-hits-138",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-day-20-adds-1-8-million-as-domestic-total-hits-138.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.31,
+  "behind": true,
+  "expected": 15.54,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-22",
+  "usd": 0.07104
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-22T08:08:36.196Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1050,
+    "out": 520,
+    "usd": 0.00031,
+    "ms": 2880
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3663,
+    "out": 624,
+    "usd": 0.00022,
+    "ms": 1976
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12539,
+    "out": 693,
+    "usd": 0.00153,
+    "ms": 4900
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2819,
+    "out": 3370,
+    "usd": 0.00086,
+    "ms": 75139
+   },
+   "writerChart": {
+    "calls": 4,
+    "errors": 0,
+    "in": 7775,
+    "out": 4181,
+    "usd": 0.00321,
+    "ms": 135816
+   }
+  },
+  "totalUsd": 0.00613
+ },
+ "openrouterTotalUsd": 0.00605
+}
