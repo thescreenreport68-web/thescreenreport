@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-22T23:01:07.876Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ella-langleys-dress-unzipped-mid-set-so-she-grabbed-a-ravens-jersey",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012959,
+  "costPerPublished": 0.012959,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 14919,
+      "out": 1153,
+      "usd": 0.0073582000000000005
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 926,
+      "out": 416,
+      "usd": 0.000196896
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15341,
+      "out": 4834,
+      "usd": 0.0045240092
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 5741,
+      "out": 765,
+      "usd": 0.0008801
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2388,
+      "out": 181,
+      "usd": 0.0011689,
+      "ms": 1254
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 926,
+      "out": 416,
+      "usd": 0.00015821999999999999,
+      "ms": 50275
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14652,
+      "out": 4502,
+      "usd": 0.0049006399999999995,
+      "ms": 98615
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 12531,
+      "out": 972,
+      "usd": 0.006189300000000001,
+      "ms": 6710
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2746,
+      "out": 500,
+      "usd": 0.00047460000000000004,
+      "ms": 2326
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 689,
+      "out": 332,
+      "usd": 0.00027135,
+      "ms": 5772
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 403,
+      "out": 101,
+      "usd": 0.00008070000000000002,
+      "ms": 892
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 207,
+      "out": 43,
+      "usd": 0.000037900000000000006,
+      "ms": 432
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2076,
+      "out": 95,
+      "usd": 0.0002456,
+      "ms": 2328
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 309,
+      "out": 26,
+      "usd": 0.0000413,
+      "ms": 387
+    }
+  }
+}
