@@ -1,0 +1,144 @@
+{
+  "ts": "2026-07-22T19:01:15.750Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "michael-urie-expresses-enthusiasm-for-potential-ugly-betty-reunion",
+      "category": "tv",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "absence-claim:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.015558,
+  "costPerPublished": 0.015558,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 15087,
+      "out": 1934,
+      "usd": 0.008832979999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1183,
+      "out": 1600,
+      "usd": 0.000429534
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 1160,
+      "out": 329,
+      "usd": 0.00042075
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 16361,
+      "out": 4959,
+      "usd": 0.0050783476
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5496,
+      "out": 618,
+      "usd": 0.0007968000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2737,
+      "out": 172,
+      "usd": 0.0012511,
+      "ms": 1552
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 1160,
+      "out": 329,
+      "usd": 0.00038646000000000004,
+      "ms": 73626
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 15705,
+      "out": 4620,
+      "usd": 0.00518295,
+      "ms": 122753
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 12350,
+      "out": 1762,
+      "usd": 0.00811,
+      "ms": 10626
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1585,
+      "out": 294,
+      "usd": 0.00027610000000000004,
+      "ms": 1465
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 656,
+      "out": 339,
+      "usd": 0.00026614,
+      "ms": 10000
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 432,
+      "out": 98,
+      "usd": 0.00008240000000000001,
+      "ms": 826
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 205,
+      "out": 39,
+      "usd": 0.0000361,
+      "ms": 576
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2076,
+      "out": 81,
+      "usd": 0.00024000000000000003,
+      "ms": 1401
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1198,
+      "out": 106,
+      "usd": 0.00016219999999999999,
+      "ms": 2813
+    }
+  }
+}
