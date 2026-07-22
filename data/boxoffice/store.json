@@ -1710,11 +1710,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 94,
-   "at": "2026-07-22T06:04:10.933Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 95,
+   "at": "2026-07-22T06:33:08.158Z",
    "dead": true,
-   "expiresAt": "2026-07-25T06:04:10.933Z"
+   "expiresAt": "2026-07-25T06:33:08.158Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1979,16 +1979,24 @@
    "reason": "words 107 < 180 (owner-set ~200-word minimum)",
    "tries": 2,
    "at": "2026-07-22T06:07:02.217Z"
+  },
+  {
+   "key": "sullivan-s-crossing-trending-tv-w2026-07-19|TRENDING-TV",
+   "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-19",
+   "form": "TRENDING-TV",
+   "reason": "5 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-22T06:37:58.084Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-21",
-  "usd": 1.31215
+  "usd": 1.33602
  },
  "pace": {
-  "tokens": 3.0700797222222223,
-  "lastMs": 1784700064824
+  "tokens": 3.141458373015873,
+  "lastMs": 1784701863566
  },
  "lastAuditDay": "2026-07-21",
  "attempts": {
@@ -2031,7 +2039,8 @@
    "salish & jordan matter": 2,
    "the ultimatum: marry or move on": 2,
    "borderline": 1,
-   "sniper: no nation": 2
+   "sniper: no nation": 2,
+   "sullivan's crossing": 1
   }
  }
 }
