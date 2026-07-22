@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-22T17:01:13.463Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "lucy-hale-announces-fathers-death-in-heartbreaking-tribute",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012261,
+  "costPerPublished": 0.012261,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 14128,
+      "out": 1406,
+      "usd": 0.007753400000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1097,
+      "out": 365,
+      "usd": 0.000204624
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 13486,
+      "out": 3803,
+      "usd": 0.0035442958999999997
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5288,
+      "out": 574,
+      "usd": 0.0007584
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4465,
+      "out": 305,
+      "usd": 0.0021019999999999997,
+      "ms": 2715
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1097,
+      "out": 365,
+      "usd": 0.00016443,
+      "ms": 62679
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12874,
+      "out": 3502,
+      "usd": 0.0041517,
+      "ms": 113486
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9663,
+      "out": 1101,
+      "usd": 0.005651399999999999,
+      "ms": 31906
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1473,
+      "out": 174,
+      "usd": 0.00021690000000000004,
+      "ms": 858
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 612,
+      "out": 301,
+      "usd": 0.00024310000000000003,
+      "ms": 10140
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 389,
+      "out": 120,
+      "usd": 0.00008690000000000001,
+      "ms": 1078
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 184,
+      "out": 50,
+      "usd": 0.000038400000000000005,
+      "ms": 643
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2084,
+      "out": 100,
+      "usd": 0.0002484,
+      "ms": 2115
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1158,
+      "out": 130,
+      "usd": 0.0001678,
+      "ms": 3478
+    }
+  }
+}
