@@ -1,79 +1,69 @@
 {
-  "runId": "run-2026-07-22T09-31-08",
-  "builtAt": "2026-07-22T09:32:41.711Z",
-  "count": 6,
+  "runId": "run-2026-07-22T10-01-14",
+  "builtAt": "2026-07-22T10:02:51.038Z",
+  "count": 13,
   "topics": [
     {
-      "id": "news-elon-musk-grok-ai-odyssey-film",
-      "slug": "elon-musk-claims-grok-ai-will-create-odyssey-film",
-      "title": "Elon Musk Claims Grok AI Will Create 'Odyssey' Film",
+      "id": "news-elon-musk-grok-ai-the-odyssey-movie",
+      "slug": "elon-musk-says-grok-ai-will-make-the-odyssey-movie",
+      "title": "Elon Musk Says Grok AI Will Make 'The Odyssey' Movie",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "elon-musk-grok-ai-odyssey-film",
-      "primaryKeyword": "The Odyssey AI film",
+      "eventSlug": "elon-musk-grok-ai-the-odyssey-movie",
+      "primaryKeyword": "AI movie adaptation",
       "primaryEntity": "The Odyssey",
       "entities": [
-        "The Odyssey (film)",
         "Elon Musk",
         "Grok AI"
       ],
-      "angle": "Elon Musk's Grok AI aims to create a historically accurate AI version of 'The Odyssey'.",
+      "angle": "Elon Musk's AI, Grok, is reportedly being developed to create an AI-generated movie adaptation of Homer's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://variety.com/2026/film/global/elon-musk-grok-ai-odyssey-film-historically-accurate-1236817856/",
-          "ageMin": 24,
-          "headline": "Elon Musk Says Grok Will Make an AI ‘Odyssey’ Film That Is ‘Historically Accurate’ by the End of the Year",
-          "summary": "Elon Munk has — finally — broken his silence on The Odyssey (well, at least since Christopher Nolan s epic was released and started breaking various box office records). The tech mogul and recently-crowned trillionaire — who spent some time before the film s launch rallying against various casting decisions — wrote on his social media platform X that his AI [ ]"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/elon-musk-odyssey-grok-imagine-ai-film-1236999981/",
-          "ageMin": 70,
-          "headline": "Elon Musk Claims Grok Imagine Will Create Historically Accurate AI Version Of The Odyssey",
-          "summary": "Elon Musk s campaign against Christopher Nolan epic The Odyssey just deepened. The tech mogul wrote on his social media service X that his AI tool Grok Imagine would create a full-length feature version of Homer s Greek myth. Before this year ends, Grok Imagine will make a full-length movie of The Odyssey that is historically accurate [ ]"
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMURWLW9Mbw?oc=5",
+          "ageMin": 6,
+          "headline": "Elon Musk Says Grok Will Make AI-Generated 'The Odyssey' Movie - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2NuVkVPRFAxbGNUS09Qd1Q2R0xRaGZRZzJ4ckVENGVGMzZNa1VlUFdBWlFHRjhIb00wSTBVb1JfVkVGTkZEV2lQdnQ5QUQwODFZb2hJcFBLdU9ma1YzaDFtT0Z0b19oQ1FKeDFIclRwSUZXZmpMcEE1a3ItV3ZtdHpRWHhZRWZVNTc2MWtSb1lvT1RSSHhhczJHUGxHZDdzQXhYUEROa0dwV1cxRUQzdjEzZGROSXRNMUR"
         }
       ],
-      "ageMin": 24,
+      "ageMin": 6,
       "_cand": {
-        "key": "rss:elon-musk-says-grok-will-make-an-ai-odyssey-film-that-is-his",
+        "key": "rss:elon-musk-says-grok-will-make-ai-generated-the-odyssey-movie",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Variety",
-          "Deadline"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 131,
+      "priority": 123,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0,
         "radar": 30
@@ -82,128 +72,130 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-star-wars-attack-of-the-clones-kamino-clip",
-      "slug": "obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-of-the-clo",
-      "title": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip",
-      "contentType": "trailer",
-      "formatTag": "trailer",
+      "id": "news-travis-scott-the-odyssey-filming",
+      "slug": "travis-scott-was-actually-nervous-when-he-shot-his-scenes-for-the-odys",
+      "title": "Travis Scott Was ‘Actually Nervous’ When He Shot His Scenes For ‘The Odyssey’",
+      "contentType": "news",
+      "formatTag": "news",
       "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "subcategory": "news",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-attack-of-the-clones-kamino-clip",
-      "primaryKeyword": "Star Wars Attack of the Clones clip",
-      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
+      "eventSlug": "travis-scott-the-odyssey-filming",
+      "primaryKeyword": "travis scott",
+      "primaryEntity": "Travis Scott",
       "entities": [
-        "Star Wars: Episode II – Attack of the Clones",
-        "Obi-Wan Kenobi",
-        "Kamino"
+        "The Odyssey",
+        "Christopher Nolan"
       ],
-      "angle": "An official clip from 'Star Wars: Attack of the Clones' has been released, showing Obi-Wan Kenobi discovering the clone army.",
+      "angle": "Travis Scott admits to being nervous while filming his scenes for Christopher Nolan's 'The Odyssey'.",
       "tmdbType": "movie",
-      "source": "gnews:Jedi News",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Jedi News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjVPWDcwV1lzMUtpYS1YT0ZiX05jYldUeWc?oc=5",
-          "ageMin": 138,
-          "headline": "Obi-Wan Discovers The Clone Army on Kamino | Star Wars: Attack of the Clones | Official Clip - Jedi News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPeUllV3FscHVMcmpEdEdmbGJFWGtmd3RfV2VOUkhHYVBka211ZlRsTVQ0R1gzOXhJU2gzeVBndGQzaGRQTThSNmowNmZfX1JRaU1JaUdsMHpNWWxadzBoOGFmSU54YzRobkdKSHBBSGxXRDViX0xfZDdfNzhaZHJYeEJPVF9PdWlhOWRzXy1lTnMxRG1zdENLTF9Xakx4VXFVOFVVamJUMzhuSjRLSTRnd2xFWEY5UlcyZjV"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/travis-scott-actually-nervous-shooting-the-odyssey-1236300520/",
+          "ageMin": 24,
+          "headline": "Travis Scott Was ‘Actually Nervous’ When He Shot His Scenes For ‘The Odyssey’",
+          "summary": "Scott was out of his comfort zone, as every star in Chris Nolan's star-heavy project watched on as he delivered his lines."
         }
       ],
-      "ageMin": 138,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:obi-wan-discovers-the-clone-army-on-kamino-star-wars-attack-",
+        "key": "rss:travis-scott-was-actually-nervous-when-he-shot-his-scenes-fo",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Jedi News"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Jedi News",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 101,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-jennifer-garner-13-going-on-30-netflix-movie-set-photos",
-      "slug": "jennifer-garner-returns-for-13-going-on-30-netflix-movie-new-cast-reve",
-      "title": "Jennifer Garner Returns for '13 Going on 30' Netflix Movie, New Cast Revealed",
+      "id": "news-venice-days-my-notes-on-mars-opening-film",
+      "slug": "venice-days-unveils-female-centric-selection-kicking-off-with-lili-hor",
+      "title": "Venice Days Unveils Female-Centric Selection, Kicking Off With Lili Horvát’s My Notes on Mars Starring Mackenzie Davis and Rupert Friend",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jennifer-garner-13-going-on-30-netflix-movie-set-photos",
-      "primaryKeyword": "13 Going on 30 Netflix movie",
-      "primaryEntity": "13 Going on 30",
+      "eventSlug": "venice-days-my-notes-on-mars-opening-film",
+      "primaryKeyword": "my notes on mars",
+      "primaryEntity": "My Notes on Mars (2026 film)",
       "entities": [
-        "13 Going on 30 (film)",
-        "Jennifer Garner",
-        "Netflix"
+        "Lili Horvát",
+        "Mackenzie Davis",
+        "Rupert Friend",
+        "Venice Film Festival"
       ],
-      "angle": "First look at Jennifer Garner and new cast members on the set of the upcoming Netflix adaptation of '13 Going on 30'.",
+      "angle": "Venice Days announces its opening film, Lili Horvát's English-language debut 'My Notes on Mars' starring Mackenzie Davis and Rupert Friend.",
       "tmdbType": "movie",
-      "source": "gnews:What's on Netflix",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "What's on Netflix",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdFNkWFJzNEEwLTFnbkVpbzR1dE5KbXpaRTRQd0RFS3NpanBwYmtNcHRRbE5yWl81d2x6N3dWQXJTY2ZtcmRQVXRKQzZRUnNIS09zNTZmWXVUWUcxaTlSbWVhbHBOQ0JPUlhETVBlamZEX3A0REFKellLY3ZvTGJOYkRwV0tDUWFLVVBwRU5hVGlkSmVBdllONmstRXVDbmxYVnE4SDRMLTVEZkpoWG1laWFkX3gyVkJJZy1YUUdWaFpmNXlYTFRUQQ?oc=5",
-          "ageMin": 54,
-          "headline": "'13 Going on 30' Netflix Movie Set Photos Reveal Jennifer Garner and Surprise Cast Additions - What's on Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdFNkWFJzNEEwLTFnbkVpbzR1dE5KbXpaRTRQd0RFS3NpanBwYmtNcHRRbE5yWl81d2x6N3dWQXJTY2ZtcmRQVXRKQzZRUnNIS09zNTZmWXVUWUcxaTlSbWVhbHBOQ0JPUlhETVBlamZEX3A0REFKellLY3ZvTGJOYkRwV0tDUWFLVVBwRU5hVGlkSmVBdllONmstRXVDbmxYVnE4SDRMLTVEZkpoWG1laWFkX3gyVkJJZy1"
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/festivals/venice-days-lineup-lili-horvat-my-notes-on-mars-open-1236817239/",
+          "ageMin": 1,
+          "headline": "Venice Days Unveils Female-Centric Selection, Kicking Off With Lili Horvát’s My Notes on Mars Starring Mackenzie Davis and Rupert Friend",
+          "summary": "Hungarian filmmaker Lili Horvát’s first English-language feature, “My Notes on Mars,” starring Mackenzie Davis and Rupert Friend, will open the Venice Film Festival’s independently run Giornate Degli Autori. The section has unveiled a richly assorted lineup that featuring works by female directors and those exploring the female universe, regardless of who is behind the camera. This [ ]"
         }
       ],
-      "ageMin": 54,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:-13-going-on-30-netflix-movie-set-photos-reveal-jennifer-gar",
+        "key": "rss:venice-days-unveils-female-centric-selection-kicking-off-wit",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "What's on Netflix"
+          "Variety"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "What's on Netflix",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 83,
+      "priority": 93,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 30,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -216,17 +208,218 @@
       "tierClass": "B"
     },
     {
-      "id": "news-monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
-      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson",
-      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson",
+      "id": "news-warner-bros-discovery-uk-tlc-comedy-slate",
+      "slug": "top-trumps-panel-show-new-seasons-of-mock-the-week-unveiled-as-part-of",
+      "title": "Top Trumps Panel Show, New Seasons of ‘Mock the Week’ Unveiled as Part of Warner Bros. Discovery U.K.’s TLC Comedy Slate",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "warner-bros-discovery-uk-tlc-comedy-slate",
+      "primaryKeyword": "mock the week",
+      "primaryEntity": "Mock the Week",
+      "entities": [
+        "Katherine Ryan: Glitter Room",
+        "Warner Bros. Discovery U.K.",
+        "TLC",
+        "Katherine Ryan"
+      ],
+      "angle": "Warner Bros. Discovery U.K.'s TLC announces new seasons of 'Mock the Week' and a Top Trumps-themed panel show hosted by Katherine Ryan.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/top-trumps-panel-show-mock-the-week-tlc-uk-1236817874/",
+          "ageMin": 21,
+          "headline": "Top Trumps Panel Show, New Seasons of ‘Mock the Week’ Unveiled as Part of Warner Bros. Discovery U.K.’s TLC Comedy Slate",
+          "summary": "TLC in the U.K. has ordered a Top Trumps-themed panel show set to be hosted by comedian Katherine Ryan. Based on the card game and tentatively titled “Top Trumps: The Comedy Pack,” it will see Ryan in charge of proceedings as team captains Joel Dommett and Jon Richardson battle it out with classic card face-offs, [ ]"
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:top-trumps-panel-show-new-seasons-of-mock-the-week-unveiled-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-venice-days-2026-lineup",
+      "slug": "mia-wasikowska-catherine-deneuve-rupert-friend-in-2026-venice-days",
+      "title": "Mia Wasikowska, Catherine Deneuve, Rupert Friend in 2026 Venice Days",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "venice-days-2026-lineup",
+      "primaryKeyword": "venice days",
+      "primaryEntity": "Venice Days",
+      "entities": [
+        "Mia Wasikowska",
+        "Catherine Deneuve",
+        "Rupert Friend"
+      ],
+      "angle": "The Venice independent sidebar, Venice Days, has revealed its 2026 lineup featuring Mia Wasikowska and Catherine Deneuve.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/venice-days-mia-wasikowska-catherine-denueve-rupert-friend-1236653013/",
+          "ageMin": 1,
+          "headline": "Mia Wasikowska, Catherine Denueve, Rupert Friend in 2026 Venice Days",
+          "summary": "The Venice independent sidebar unveiled its 2026 lineup on Wednesday."
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:mia-wasikowska-catherine-denueve-rupert-friend-in-2026-venic",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-taylor-dayne-joe-mchugh-celebrity-family-feud",
+      "slug": "taylor-dayne-and-joe-mchugh-to-play-on-celebrity-family-feud",
+      "title": "Taylor Dayne and Joe McHugh to Play on 'Celebrity Family Feud'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "taylor-dayne-joe-mchugh-celebrity-family-feud",
+      "primaryKeyword": "Taylor Dayne Joe McHugh Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Taylor Dayne",
+        "Joe McHugh"
+      ],
+      "angle": "Taylor Dayne and Joe McHugh will compete on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPd18xazN4NzNzeVdycHlYS0ZSNGtKWVM4SGhQNzVfUFdGc0lHTGdCLWNrc29lc1dhU2pBUmFmNGhQNnNMeWNETlNQbWFGR3NGNDRTOGRYVDFkYjlWWUFLZUp5VUhxX3p3TjBJdkpSV3o3NGhxd19vdTlnd0lkanA1SUdlb1g5YTdGY2pF?oc=5",
+          "ageMin": 826,
+          "headline": "Sony Pictures Looking To Bring Cinerama Dome Hollywood Arclight Back To Life – The Dish - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPd18xazN4NzNzeVdycHlYS0ZSNGtKWVM4SGhQNzVfUFdGc0lHTGdCLWNrc29lc1dhU2pBUmFmNGhQNnNMeWNETlNQbWFGR3NGNDRTOGRYVDFkYjlWWUFLZUp5VUhxX3p3TjBJdkpSV3o3NGhxd19vdTlnd0lkanA1SUdlb1g5YTdGY2pF?oc=5\" target=\"_blank\" Sony Pictures Looking To Bring Cinerama "
+        }
+      ],
+      "ageMin": 826,
+      "_cand": {
+        "key": "rss:sony-pictures-looking-to-bring-cinerama-dome-hollywood-arcli",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-monarch-legacy-of-monsters-casting",
+      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson-nya",
+      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "monarch-legacy-of-monsters-casting-corey-stoll-ralph-ineson",
-      "primaryKeyword": "monarch legacy of monsters casting",
+      "eventSlug": "monarch-legacy-of-monsters-casting",
+      "primaryKeyword": "Monarch Legacy of Monsters casting",
       "primaryEntity": "Monarch: Legacy of Monsters",
       "entities": [
         "Wyatt Russell",
@@ -234,7 +427,7 @@
         "Ralph Ineson",
         "Apple TV+"
       ],
-      "angle": "Corey Stoll and Ralph Ineson join the cast of Apple TV+'s 'Monarch: Legacy of Monsters' spinoff.",
+      "angle": "Apple TV+'s Monsterverse series 'Monarch: Legacy of Monsters' adds Corey Stoll, Ralph Ineson, and Nyasha Hatendi to its cast.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -242,12 +435,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/wyatt-russell-monsterverse-series-corey-stoll-ralph-ineson-1236817481/",
-          "ageMin": 853,
+          "ageMin": 883,
           "headline": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
           "summary": "The upcoming Monarch: Legacy of Monsters spinoff at Apple TV has added three new cast members. Variety has confirmed that Corey Stoll ( Imperfect Women,” “Appropriate,” “Billions ), Ralph Inneson ( The Witch, The Fantastic Four: First Steps ), and Nyasha Hatendi (“Agatha Christie’s The Seven Dials,” “Casual”) will all appear in the new series, which was originally announced [ ]"
         }
       ],
-      "ageMin": 853,
+      "ageMin": 883,
       "_cand": {
         "key": "rss:wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-",
         "popularity": 0,
@@ -284,7 +477,205 @@
       "tierClass": "B"
     },
     {
-      "id": "news-timothy-olyphant-david-fincher-takes",
+      "id": "music-news-intocable-riaa-latin-diamond-awards",
+      "slug": "intocable-makes-history-with-six-riaa-latin-diamond-awards",
+      "title": "Intocable Makes History With Six RIAA Latin Diamond Awards",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "intocable-riaa-latin-diamond-awards",
+      "primaryKeyword": "Intocable music awards",
+      "primaryEntity": "Intocable",
+      "entities": [
+        "RIAA"
+      ],
+      "angle": "Intocable makes history with multiple RIAA Latin Diamond Awards.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/awards/intocable-history-six-riaa-latin-diamond-awards-1236300473/",
+          "ageMin": 340,
+          "headline": "Intocable Makes History With Six RIAA Latin Diamond Awards",
+          "summary": "The Texas-based outfit has now collected more RIAA Latin Diamond certifications than any other band."
+        }
+      ],
+      "ageMin": 340,
+      "_cand": {
+        "key": "rss:intocable-makes-history-with-six-riaa-latin-diamond-awards",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-cooper-flagg-celebrity-family-feud",
+      "slug": "cooper-flagg-to-appear-on-celebrity-family-feud",
+      "title": "Cooper Flagg to Appear on 'Celebrity Family Feud'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "cooper-flagg-celebrity-family-feud",
+      "primaryKeyword": "Cooper Flagg Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Cooper Flagg"
+      ],
+      "angle": "Basketball prospect Cooper Flagg is set to appear on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:newscentermaine.com",
+      "sources": [
+        {
+          "outlet": "newscentermaine.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNWG4wdjRsLUI1WWNZVk9HeUxHWXlhNnZXeDFZNDJNMUY0aERGX3JfVWdoNlVzY18zSm9PeHpvdG9DVWwyZnFxZy1KVHB3SDRiVldKSXJPYmh2bzl1b1VGNzVLMHFrYVJGcWxzbVRTZTBzUXhZVG9JUWNUSlEwQU9QS3lBMjdKQWg1Vm95dHg0Z3dtcWxFZUc2cFZVVmxLM0wyeENZdDRBT1otaWktY05DbHE0dThJUUI3SS0tMmxnd2cwODl3MXQtcG9zemduRDdlT0w1T0FVQ196UzZlUk5RdXVNMU9NQlczM2Rv?oc=5",
+          "ageMin": 749,
+          "headline": "Newport native Cooper Flagg set to appear on 'Celebrity Family Feud' - newscentermaine.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi6wFBVV95cUxNWG4wdjRsLUI1WWNZVk9HeUxHWXlhNnZXeDFZNDJNMUY0aERGX3JfVWdoNlVzY18zSm9PeHpvdG9DVWwyZnFxZy1KVHB3SDRiVldKSXJPYmh2bzl1b1VGNzVLMHFrYVJGcWxzbVRTZTBzUXhZVG9JUWNUSlEwQU9QS3lBMjdKQWg1Vm95dHg0Z3dtcWxFZUc2cFZVVmxLM0wyeENZdDRBT1otaWktY05DbHE0dThJUUI3SS0"
+        }
+      ],
+      "ageMin": 749,
+      "_cand": {
+        "key": "rss:newport-native-cooper-flagg-set-to-appear-on-celebrity-famil",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "newscentermaine.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "newscentermaine.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-who-wants-to-be-a-millionaire-season-5-returns-abc-jimmy-kimmel",
+      "slug": "who-wants-to-be-a-millionaire-season-5-returns-to-abc-with-jimmy-kimme",
+      "title": "'Who Wants to Be a Millionaire?' Season 5 Returns to ABC with Jimmy Kimmel and Celebrity Guests",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "who-wants-to-be-a-millionaire-season-5-returns-abc-jimmy-kimmel",
+      "primaryKeyword": "Who Wants to Be a Millionaire",
+      "primaryEntity": "Who Wants to Be a Millionaire?",
+      "entities": [
+        "Jimmy Kimmel",
+        "ABC"
+      ],
+      "angle": "The popular game show 'Who Wants to Be a Millionaire?' is returning for a new season with celebrity guests.",
+      "tmdbType": "movie",
+      "source": "gnews:ABC7 Bay Area",
+      "sources": [
+        {
+          "outlet": "ABC7 Bay Area",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNTndpeTl5bkVtQlRGaXZxdnp4bjVlRl9ZS0duSTZXNmFBZHhWaktWczRReGFOT1hXNWNOdV9PMVBFNzhtdldjZHExQm9Zc3VWNENRWWp5bDBNTGxvZUo3bmhvdmVGeTZOREI1T0M1WVVpTHJKNFM4SW8tNHJnRDl2X2VfNDJ4SnJxWTF5ejNPV0pPTU1FWkdvb0JBRnlISEZHNS1GLVpRX1NkTDk1U2RDZ2N6Q0ZyMmNXV01sedIBvAFBVV95cUxNTndpeTl5bkVtQlRGaXZxdnp4bjVlRl9ZS0duSTZXNmFBZHhWaktWczRReGFOT1hXNWNOdV9PMVBFNzhtdldjZHExQm9Zc3VWNENRWWp5bDBNTGxvZUo3bmhvdmVGeTZOREI1T0M1WVVpTHJKNFM4SW8tNHJnRDl2X2VfNDJ4SnJxWTF5ejNPV0pPTU1FWkdvb0JBRnlISEZHNS1GLVpRX1NkTDk1U2RDZ2N6Q0ZyMmNXV01seQ?oc=5",
+          "ageMin": 564,
+          "headline": "'Who Wants to Be a Millionaire?' Season 5 returns to ABC with Jimmy Kimmel and celebrity guests - ABC7 Bay Area",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxNTndpeTl5bkVtQlRGaXZxdnp4bjVlRl9ZS0duSTZXNmFBZHhWaktWczRReGFOT1hXNWNOdV9PMVBFNzhtdldjZHExQm9Zc3VWNENRWWp5bDBNTGxvZUo3bmhvdmVGeTZOREI1T0M1WVVpTHJKNFM4SW8tNHJnRDl2X2VfNDJ4SnJxWTF5ejNPV0pPTU1FWkdvb0JBRnlISEZHNS1GLVpRX1NkTDk1U2RDZ2N6Q0ZyMmNXV01"
+        }
+      ],
+      "ageMin": 564,
+      "_cand": {
+        "key": "rss:-who-wants-to-be-a-millionaire-season-5-returns-to-abc-with-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "ABC7 Bay Area"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "ABC7 Bay Area",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
       "slug": "timothy-olyphant-thought-adventures-of-cliff-booth-director-david-finc",
       "title": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
       "contentType": "news",
@@ -293,14 +684,14 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "timothy-olyphant-david-fincher-takes",
+      "eventSlug": "timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
       "primaryKeyword": "Timothy Olyphant David Fincher",
       "primaryEntity": "Timothy Olyphant",
       "entities": [
         "David Fincher",
         "Once Upon a Time in Hollywood"
       ],
-      "angle": "Timothy Olyphant shares his perspective on director David Fincher's meticulous approach to filming.",
+      "angle": "Timothy Olyphant found David Fincher's numerous takes on a project to be an 'unnecessary power move'.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -308,12 +699,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
-          "ageMin": 550,
+          "ageMin": 580,
           "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
           "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
         }
       ],
-      "ageMin": 550,
+      "ageMin": 580,
       "_cand": {
         "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
         "popularity": 0,
@@ -350,39 +741,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-cruz-beckham-career-advice-parents",
-      "slug": "cruz-beckham-gets-career-advice-from-famous-parents",
-      "title": "Cruz Beckham Gets Career Advice from Famous Parents",
+      "id": "news-sony-music-entertainment-lawsuit",
+      "slug": "sony-music-files-another-lawsuit-against-udio-alleges-ai-music-generat",
+      "title": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "cruz-beckham-career-advice-parents",
-      "primaryKeyword": "Cruz Beckham career advice",
-      "primaryEntity": "Cruz Beckham",
+      "eventType": "lawsuit",
+      "sensitivity": "high",
+      "eventSlug": "sony-music-entertainment-lawsuit",
+      "primaryKeyword": "Sony Music Udio lawsuit",
+      "primaryEntity": "Sony Music Entertainment",
       "entities": [
-        "Victoria Beckham",
-        "David Beckham"
+        "BEYONCÉ",
+        "Udio",
+        "Beyoncé",
+        "Harry Styles"
       ],
-      "angle": "Cruz Beckham shared insights into his music career and the advice he receives from his famous parents.",
+      "angle": "Sony Music sues AI music generator Udio for alleged copyright infringement of 30,000 songs.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/cruz-beckham-parents-solid-career-advice-1236300503/",
-          "ageMin": 62,
-          "headline": "Cruz Beckham’s Famous Parents Give Him Solid Career Advice",
-          "summary": "In a new interview, Cruz Beckham shared some insights into his new music, and revealed who gives the advice out of his mom and dad, Victoria and David Beckham."
+          "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
+          "ageMin": 544,
+          "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
+          "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
         }
       ],
-      "ageMin": 62,
+      "ageMin": 544,
       "_cand": {
-        "key": "rss:cruz-beckham-s-famous-parents-give-him-solid-career-advice",
+        "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -392,21 +784,89 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 50,
       "signals": {
-        "recency": 16,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-dixon-dern-dies",
+      "slug": "dixon-dern-dies-attorney-for-caa-cbs-tv-academy-desilu-was-97",
+      "title": "Dixon Dern Dies: Attorney For CAA, CBS, TV Academy Desilu, Was 97",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "dixon-dern-dies",
+      "primaryKeyword": "Dixon Dern death",
+      "primaryEntity": "Dixon Dern",
+      "entities": [
+        "Wheels on Meals",
+        "CAA",
+        "CBS",
+        "Desilu"
+      ],
+      "angle": "Noted entertainment attorney Dixon Dern has died at 97.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/dixon-dern-dead-entertainment-attorney-1236999762/",
+          "ageMin": 459,
+          "headline": "Dixon Dern Dies: Attorney For CAA, CBS, TV Academy Desilu, Was 97",
+          "summary": "Dixon Q. Dern, the longtime entertainment attorney who worked at CBS, Desilu and United Artists TV; who represented clients such as Desi Arnaz and the Television Academy; who often served as an arbitrator for labor disputes; who helped incorporate CAA and who was a pioneer in syndicated sales and pre-financing for TV, died on July [ ]"
+        }
+      ],
+      "ageMin": 459,
+      "_cand": {
+        "key": "rss:dixon-dern-dies-attorney-for-caa-cbs-tv-academy-desilu-was-9",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -414,7 +874,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     }
   ]
 }
