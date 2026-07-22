@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 113,
-   "at": "2026-07-22T15:33:52.998Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 114,
+   "at": "2026-07-22T16:03:51.674Z",
    "dead": true,
-   "expiresAt": "2026-07-25T15:33:52.998Z"
+   "expiresAt": "2026-07-25T16:03:51.674Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2169,16 +2169,24 @@
    "reason": "words 53 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-22T15:36:10.423Z"
+  },
+  {
+   "key": "wwe-unreal-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "wwe-unreal-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "words 87 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-22T16:08:52.843Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.28972
+  "usd": 0.31075
  },
  "pace": {
-  "tokens": 2.4802834222222225,
-  "lastMs": 1784734265786
+  "tokens": 3.044603511111111,
+  "lastMs": 1784736079672
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2195,7 +2203,8 @@
    "the ultimatum: marry or move on": 1,
    "sullivan's crossing": 1,
    "kingdom": 1,
-   "project hail mary": 1
+   "project hail mary": 1,
+   "wwe: unreal": 1
   }
  }
 }
