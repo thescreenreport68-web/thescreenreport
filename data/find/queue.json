@@ -1,80 +1,12 @@
 {
-  "runId": "run-2026-07-22T03-31-35",
-  "builtAt": "2026-07-22T03:33:05.211Z",
-  "count": 11,
+  "runId": "run-2026-07-22T05-31-35",
+  "builtAt": "2026-07-22T05:33:00.100Z",
+  "count": 6,
   "topics": [
     {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "snoop dogg biopic release date",
-      "primaryEntity": "Snoop Dogg Biopic",
-      "entities": [
-        "Snoop Dogg's Hood of Horror",
-        "Snoop Dogg",
-        "Universal",
-        "Jonathan Daviss"
-      ],
-      "angle": "Universal has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss and directed by Craig Brewer.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 362,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 362,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-monarch-legacy-of-monsters-casting",
-      "slug": "wyatt-russell-s-monsterverse-series-monarch-casts-corey-stoll-ralph-in",
-      "title": "Wyatt Russell's Monsterverse Series 'Monarch' Casts Corey Stoll, Ralph Ineson",
+      "slug": "wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-ineson",
+      "title": "Wyatt Russell's Monsterverse Series Casts Corey Stoll, Ralph Ineson",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -87,10 +19,9 @@
       "entities": [
         "Wyatt Russell",
         "Corey Stoll",
-        "Ralph Ineson",
-        "Apple TV+"
+        "Ralph Ineson"
       ],
-      "angle": "Corey Stoll and Ralph Ineson join Wyatt Russell in Apple TV+'s Monsterverse series.",
+      "angle": "Apple TV+'s Monsterverse series 'Monarch: Legacy of Monsters' adds new cast members.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -98,12 +29,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/wyatt-russell-monsterverse-series-corey-stoll-ralph-ineson-1236817481/",
-          "ageMin": 493,
+          "ageMin": 613,
           "headline": "Wyatt Russell s Monsterverse Series Casts Corey Stoll, Ralph Ineson, Nyasha Hatendi",
           "summary": "The upcoming Monarch: Legacy of Monsters spinoff at Apple TV has added three new cast members. Variety has confirmed that Corey Stoll ( Imperfect Women,” “Appropriate,” “Billions ), Ralph Inneson ( The Witch, The Fantastic Four: First Steps ), and Nyasha Hatendi (“Agatha Christie’s The Seven Dials,” “Casual”) will all appear in the new series, which was originally announced [ ]"
         }
       ],
-      "ageMin": 493,
+      "ageMin": 613,
       "_cand": {
         "key": "rss:wyatt-russell-s-monsterverse-series-casts-corey-stoll-ralph-",
         "popularity": 0,
@@ -140,140 +71,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
-      "primaryKeyword": "Snoop Dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
-      "entities": [
-        "Snoop Dogg",
-        "Universal"
-      ],
-      "angle": "Universal has set a Summer 2027 release date for the upcoming Snoop Dogg biopic.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5",
-          "ageMin": 361,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZXdJMnVEU1I1ZExzWTQtQ0IyUXBZYlBvTGZSaDJ5aFZzOW9pcm95bEVwamM2U0Z5dHdfdUhYOWx6WEZLQ2k0VGxHbnZIVzhsclJBaTNYUVJNLVhxNV9odXpZOUdKVUVnN3lzWXdXVHhwRVl0SEVRLVhjdlF4NTczMmZ4Smw2M1B1UWpocE9waGUtVTFFQWFaM0tKTUVHZzlNYms5RWJRWmZRSjQ?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 361,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal-t",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jacob-elordi-euphoria-death-scene-final-season",
-      "slug": "jacob-elordi-on-filming-euphoria-death-scene",
-      "title": "Jacob Elordi on Filming 'Euphoria' Death Scene",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "jacob-elordi-euphoria-death-scene-final-season",
-      "primaryKeyword": "Jacob Elordi Euphoria",
-      "primaryEntity": "Euphoria",
-      "entities": [
-        "Jacob Elordi"
-      ],
-      "angle": "Jacob Elordi shares details about filming his character's death scene in the final season of 'Euphoria' and his return to the show.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/jacob-elordi-filming-euphoria-death-scene-final-season-1236999828/",
-          "ageMin": 171,
-          "headline": "Jacob Elordi On Filming Euphoria Death Scene Returning For Final Season: I Think Sam Brought Me Back To Torture Me",
-          "summary": "Jacob Elordi had a gruesome death on the final season of Euphoria and is giving insight into how that scene was shot. While making an appearance on ABC s Jimmy Kimmel Live!, Elordi had a mini Euphoria reunion with co-star Colman Domingo, who is guest-hosting the late-night talk show in Kimmel s absence. Domingo brought up his [ ]"
-        }
-      ],
-      "ageMin": 171,
-      "_cand": {
-        "key": "rss:jacob-elordi-on-filming-euphoria-death-scene-returning-for-f",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "music-news-jungle-australian-tour-sports-addition",
-      "slug": "sports-added-to-jungle-s-australian-tour",
-      "title": "Sports Added to Jungle's Australian Tour",
+      "id": "music-news-kylie-minogue-snow-patrol-these-alarms-concert-video",
+      "slug": "kylie-minogue-teams-up-with-snow-patrol-for-these-alarms-concert-video",
+      "title": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -281,50 +81,51 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jungle-australian-tour-sports-addition",
-      "primaryKeyword": "jungle australian tour",
-      "primaryEntity": "Jungle",
+      "eventSlug": "kylie-minogue-snow-patrol-these-alarms-concert-video",
+      "primaryKeyword": "kylie minogue snow patrol",
+      "primaryEntity": "Kylie Minogue",
       "entities": [
-        "Sports"
+        "Snow Patrol"
       ],
-      "angle": "Indie-pop band Sports has been added to Jungle's Australian tour.",
+      "angle": "Kylie Minogue and Snow Patrol debut new song 'These Alarms' in concert video.",
       "tmdbType": "movie",
-      "source": "gnews:Sheldon Ang Media",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Sheldon Ang Media",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaW1HLUhmS2RMWXEyZHVpbW1zT2kyV2hQcEpuOEk2RTAxTllnT0MyUFNteElDdHZ2QWtWVXlmMlhpeXdfRWltNFVOV24tZUJ4Rk9IeUlpQ3g1Z1gxNF9fdXBCaTRfQ2hNMUlFRFRWNGpQR09DVkJLOFBwQy1SSm00TGI5d2NiR3dMUmlRR2FEb1F2eE1PeVp1Q1NGdno1dHVKOUdMNFdR?oc=5",
-          "ageMin": 83,
-          "headline": "Jungle Add US Indie‑Pop Band Sports to Their Australian Tour - Sheldon Ang Media",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPaW1HLUhmS2RMWXEyZHVpbW1zT2kyV2hQcEpuOEk2RTAxTllnT0MyUFNteElDdHZ2QWtWVXlmMlhpeXdfRWltNFVOV24tZUJ4Rk9IeUlpQ3g1Z1gxNF9fdXBCaTRfQ2hNMUlFRFRWNGpQR09DVkJLOFBwQy1SSm00TGI5d2NiR3dMUmlRR2FEb1F2eE1PeVp1Q1NGdno1dHVKOUdMNFdR?oc=5\" target=\"_blank\" Jung"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/kylie-minogue-snow-patrol-these-alarms-music-video-watch-1236300486/",
+          "ageMin": 21,
+          "headline": "Kylie Minogue Teams Up With Snow Patrol For ‘These Alarms’ Concert Video: Watch",
+          "summary": "Kylie joined forces with Snow Patrol on stage at Crystal Palace Park, for the debut performance of “These Alarms.\""
         }
       ],
-      "ageMin": 83,
+      "ageMin": 21,
       "_cand": {
-        "key": "rss:jungle-add-us-indie-pop-band-sports-to-their-australian-tour",
+        "key": "rss:kylie-minogue-teams-up-with-snow-patrol-for-these-alarms-con",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Sheldon Ang Media"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Sheldon Ang Media",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 63,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -334,12 +135,12 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
       "id": "news-timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
-      "slug": "timothy-olyphant-on-fincher-s-takes-for-cliff-booth-sequel",
-      "title": "Timothy Olyphant on Fincher's Takes for 'Cliff Booth' Sequel",
+      "slug": "timothy-olyphant-thought-adventures-of-cliff-booth-director-david-finc",
+      "title": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -347,13 +148,14 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "timothy-olyphant-david-fincher-takes-once-upon-a-time-in-hollywood-seq",
-      "primaryKeyword": "Timothy Olyphant David Fincher",
-      "primaryEntity": "David Fincher",
+      "primaryKeyword": "David Fincher filming methods",
+      "primaryEntity": "Once Upon a Time... in Hollywood",
       "entities": [
+        "Once Upon a Time in Hollywood",
         "Timothy Olyphant",
-        "Once Upon a Time in Hollywood"
+        "David Fincher"
       ],
-      "angle": "Timothy Olyphant found director David Fincher's numerous takes on a potential 'Once Upon a Time in Hollywood' sequel to be 'unnecessary power moves'.",
+      "angle": "Timothy Olyphant shares his perspective on David Fincher's numerous takes during the filming of a potential 'Once Upon a Time in Hollywood' sequel.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -361,12 +163,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/timothy-olyphant-david-finchers-many-takes-power-move/",
-          "ageMin": 190,
+          "ageMin": 310,
           "headline": "Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move",
           "summary": "The actor adds he \"couldn't wait\" to start working on the \"Once Upon a Time in Hollywood\" sequel The post Timothy Olyphant Thought ‘Adventures of Cliff Booth’ Director David Fincher’s Many Takes Were ‘Unnecessary’ Power Move appeared first on TheWrap ."
         }
       ],
-      "ageMin": 190,
+      "ageMin": 310,
       "_cand": {
         "key": "rss:timothy-olyphant-thought-adventures-of-cliff-booth-director-",
         "popularity": 0,
@@ -403,60 +205,61 @@
       "tierClass": "C"
     },
     {
-      "id": "news-disney-layoffs-pixar-studio",
-      "slug": "new-disney-layoffs-hit-pixar-s-bay-area-animation-studio",
-      "title": "New Disney Layoffs Hit Pixar’s Bay Area Animation Studio",
+      "id": "news-disney-layoffs-pixar-national-geographic",
+      "slug": "pixar-and-national-geographic-hit-in-latest-round-of-disney-layoffs",
+      "title": "Pixar and National Geographic Hit in Latest Round of Disney Layoffs",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "disney-layoffs-pixar-studio",
-      "primaryKeyword": "Disney Pixar layoffs",
-      "primaryEntity": "Pixar Short Films Collection: Volume 1",
+      "eventSlug": "disney-layoffs-pixar-national-geographic",
+      "primaryKeyword": "disney layoffs",
+      "primaryEntity": "Disney",
       "entities": [
+        "Pixar Short Films Collection: Volume 1",
         "Pixar",
-        "Disney"
+        "National Geographic"
       ],
-      "angle": "Disney has implemented new layoffs impacting Pixar's animation studio in the Bay Area.",
+      "angle": "Layoffs hit major animation and documentary divisions at Disney.",
       "tmdbType": "movie",
-      "source": "gnews:San Francisco Chronicle",
+      "source": "gnews:Los Angeles Times",
       "sources": [
         {
-          "outlet": "San Francisco Chronicle",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWlHNm9ENTZ5aHUyQUs1YVdLTkthcUNTTndkUXNYZ2lfUEZIX25INTZCVlIyM3JnRWhSQ0xnb0RBX25sQmtSMkE4MmtqTlFhX2FvamNSbnJEbXZsM3NWbE9rX3RjcHlrQTk1bjFyRlpLUkI5UVBJcU9VSzd3dEFpVjdPenhwZHhoUVVlRVZFem45cVNrQzk3MFo4SkZXY3hC?oc=5",
-          "ageMin": 334,
-          "headline": "New Disney layoffs hit Pixar’s Bay Area animation studio - San Francisco Chronicle",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOMWlHNm9ENTZ5aHUyQUs1YVdLTkthcUNTTndkUXNYZ2lfUEZIX25INTZCVlIyM3JnRWhSQ0xnb0RBX25sQmtSMkE4MmtqTlFhX2FvamNSbnJEbXZsM3NWbE9rX3RjcHlrQTk1bjFyRlpLUkI5UVBJcU9VSzd3dEFpVjdPenhwZHhoUVVlRVZFem45cVNrQzk3MFo4SkZXY3hC?oc=5\" target=\"_blank\" New Disney l"
+          "outlet": "Los Angeles Times",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR3QXlrUVNWNFBMTnRNa09vRFo?oc=5",
+          "ageMin": 621,
+          "headline": "Pixar and National Geographic hit in latest round of Disney layoffs - Los Angeles Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxNOGh4MzdMX240QXc0ckpFSnFhc3pUeFBmaUdnUnc0UE80Q3VnbEtvVGl0YXNZRk82VW5LckRDcXFCN3ZiNmFNNTlaSXhDdVhJQ0tLUklKRWNJYzdKRjdaeU1scEdhTHhhbUxWc25xYWdoZjdpdU1PUlR1THhYbU9MdGM5VUEwZF9WRTdFOHhTN3RPTTR0dDVXR3NUZ0RXQXAtN3g1NVUwR1I2ZVhQYi1DQUU5NThmbXZwTUR"
         }
       ],
-      "ageMin": 334,
+      "ageMin": 621,
       "_cand": {
-        "key": "rss:new-disney-layoffs-hit-pixar-s-bay-area-animation-studio-san",
+        "key": "rss:pixar-and-national-geographic-hit-in-latest-round-of-disney-",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "San Francisco Chronicle"
+          "Los Angeles Times"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "San Francisco Chronicle",
+        "attribution": "Los Angeles Times",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 51,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 4,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -469,41 +272,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-plas-johnson-dies-pink-panther-theme",
-      "slug": "plas-johnson-saxophonist-behind-iconic-the-pink-panther-theme-song-die",
-      "title": "Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94",
+      "id": "news-jacob-elordi-euphoria-death-scene-final-season",
+      "slug": "jacob-elordi-on-filming-euphoria-death-scene-returning-for-final-seaso",
+      "title": "Jacob Elordi On Filming Euphoria Death Scene & Returning For Final Season: 'I Think Sam Brought Me Back To Torture Me'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "death",
+      "eventType": "other",
       "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "plas-johnson-dies-pink-panther-theme",
-      "primaryKeyword": "Plas Johnson",
-      "primaryEntity": "Plas Johnson",
+      "eventSlug": "jacob-elordi-euphoria-death-scene-final-season",
+      "primaryKeyword": "Euphoria final season",
+      "primaryEntity": "Euphoria",
       "entities": [
-        "The Pink Panther Theme Song",
-        "The Monkees",
-        "Mannix",
-        "The Odd Couple"
+        "Jacob Elordi",
+        "Sam Levinson"
       ],
-      "angle": "Saxophonist Plas Johnson, known for the iconic 'Pink Panther' theme song, has died at 94.",
+      "angle": "Jacob Elordi provides insight into filming his character's death scene in the final season of 'Euphoria' and his return to the show.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/music/plas-johnson-dies-the-pink-panther-theme-song-saxophonist/",
-          "ageMin": 17,
-          "headline": "Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94",
-          "summary": "His other recording credits include the theme songs for “The Monkees,” “Mannix” and “The Odd Couple” The post Plas Johnson, Saxophonist Behind Iconic ‘The Pink Panther’ Theme Song, Dies at 94 appeared first on TheWrap ."
+          "url": "https://deadline.com/2026/07/jacob-elordi-filming-euphoria-death-scene-final-season-1236999828/",
+          "ageMin": 291,
+          "headline": "Jacob Elordi On Filming Euphoria Death Scene Returning For Final Season: I Think Sam Brought Me Back To Torture Me",
+          "summary": "Jacob Elordi had a gruesome death on the final season of Euphoria and is giving insight into how that scene was shot. While making an appearance on ABC s Jimmy Kimmel Live!, Elordi had a mini Euphoria reunion with co-star Colman Domingo, who is guest-hosting the late-night talk show in Kimmel s absence. Domingo brought up his [ ]"
         }
       ],
-      "ageMin": 17,
+      "ageMin": 291,
       "_cand": {
-        "key": "rss:plas-johnson-saxophonist-behind-iconic-the-pink-panther-them",
+        "key": "rss:jacob-elordi-on-filming-euphoria-death-scene-returning-for-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -513,24 +313,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "TheWrap",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 50,
       "signals": {
-        "recency": 24,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 6,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -538,83 +338,9 @@
       "tierClass": "S"
     },
     {
-      "id": "news-ron-perlman-signs-with-independent-artist-group",
-      "slug": "hellboy-actor-ron-perlman-signs-with-independent-artist-group",
-      "title": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "ron-perlman-signs-with-independent-artist-group",
-      "primaryKeyword": "ron perlman",
-      "primaryEntity": "Ron Perlman",
-      "entities": [
-        "Independent Artist Group"
-      ],
-      "angle": "Veteran actor Ron Perlman signs with a new agency.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/ron-perlman-signs-independent-artist-group-1236652667/",
-          "ageMin": 207,
-          "headline": "Hellboy Actor Ron Perlman Signs With Independent Artist Group (Exclusive)",
-          "summary": "The star is known for his frequent collaborations with Guillermo Del Toro and his work on 'Sons of Anarchy,' among many roles."
-        },
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5",
-          "ageMin": 206,
-          "headline": "‘Hellboy’ Actor Ron Perlman Signs With Independent Artist Group (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQM0xTSlZESy1VdFpjVjFzbDhWU2VqUDQyRzlkYXhpUUtkNF9BRTlQZkUzU2hNbjdpTGIzYTk5VDdBcWRaaVNobWxUa0NpMnZYWWdhRzJBN0xabkkxS1hEc2t6UW9rMzViTTFwQTJ2RDFSSlBoQnE1bDR3amRWcG1welBPLWpHUEJST0ItQV9RYVVtYzFtc2RHZnEyU19OUktETk9DNVNCYm5PZw?oc=5\" target=\"_blank"
-        }
-      ],
-      "ageMin": 206,
-      "_cand": {
-        "key": "rss:-hellboy-actor-ron-perlman-signs-with-independent-artist-gro",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "THR",
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sony-music-sues-udio-ai-music-copyright",
-      "slug": "sony-music-sues-ai-music-generator-udio-again",
-      "title": "Sony Music Sues AI Music Generator Udio Again",
+      "id": "news-sony-music-lawsuit-udio-ai-music-training",
+      "slug": "sony-music-files-another-lawsuit-against-ai-music-generator-udio",
+      "title": "Sony Music Files Another Lawsuit Against AI Music Generator Udio",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -622,8 +348,8 @@
       "eventType": "lawsuit",
       "sensitivity": "high",
       "tier": "popular",
-      "eventSlug": "sony-music-sues-udio-ai-music-copyright",
-      "primaryKeyword": "Sony Music Udio lawsuit",
+      "eventSlug": "sony-music-lawsuit-udio-ai-music-training",
+      "primaryKeyword": "Udio AI music lawsuit",
       "primaryEntity": "Sony Music Entertainment",
       "entities": [
         "BEYONCÉ",
@@ -631,7 +357,7 @@
         "Beyoncé",
         "Harry Styles"
       ],
-      "angle": "Sony Music Entertainment has filed another lawsuit against AI music generator Udio, alleging copyright infringement for training models on 30,000 songs.",
+      "angle": "Sony Music sues AI music generator Udio for allegedly training models on 30,000 copyrighted songs.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -639,12 +365,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/music/news/sony-music-new-lawsuit-udio-ai-music-generator-1236817746/",
-          "ageMin": 154,
+          "ageMin": 274,
           "headline": "Sony Music Files Another Lawsuit Against Udio, Alleges AI Music Generator Copied 30,000 Songs to Train Models",
           "summary": "Sony Music Entertainment has once again sued the AI music generator Udio, alleging the startup illegally copied more than 30,000 songs from the likes of Beyoncé, Harry Styles and Elvis Presley to train its models. Sony first brought lawsuits against Udio and its competitor Suno in June 2024 alongside labels Universal Music Group and Warner [ ]"
         }
       ],
-      "ageMin": 154,
+      "ageMin": 274,
       "_cand": {
         "key": "rss:sony-music-files-another-lawsuit-against-udio-alleges-ai-mus",
         "popularity": 0,
@@ -665,73 +391,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-cher-legal-fees-royalties-battle",
-      "slug": "cher-must-pay-1-million-in-legal-fees-for-sonny-bono-royalties-battle",
-      "title": "Cher Must Pay $1 Million in Legal Fees for Sonny Bono Royalties Battle",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "eventSlug": "cher-legal-fees-royalties-battle",
-      "primaryKeyword": "Cher legal fees",
-      "primaryEntity": "Cher",
-      "entities": [
-        "Mary Bono",
-        "Sonny Bono"
-      ],
-      "angle": "Cher ordered to pay her own legal fees despite winning royalty dispute.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/cher-1-million-legal-fees-sonny-bono-widow-mary-royalties-1235596860/",
-          "ageMin": 244,
-          "headline": "Cher Must Pay Own $1 Million Legal Tab Over Royalties Battle With Sonny Bono s Widow",
-          "summary": "Despite her victory in a legal feud over royalties with Mary Bono last year, Cher must pay the eye-watering legal fees she racked up"
-        }
-      ],
-      "ageMin": 244,
-      "_cand": {
-        "key": "rss:cher-must-pay-own-1-million-legal-tab-over-royalties-battle-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
+      "priority": 55,
       "signals": {
         "recency": 9,
         "corroboration": 12,
@@ -741,7 +401,7 @@
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "S"
