@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-23T15:01:16.448Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "tony-goldwyn-says-fans-ask-him-to-run-for-president-on-a-street-corner",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.01097,
+  "costPerPublished": 0.01097,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 9736,
+      "out": 1072,
+      "usd": 0.0056007999999999995
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 915,
+      "out": 667,
+      "usd": 0.000301366
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 14955,
+      "out": 4135,
+      "usd": 0.0041921432
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 6231,
+      "out": 631,
+      "usd": 0.0008755000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2336,
+      "out": 200,
+      "usd": 0.0012008,
+      "ms": 3272
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 915,
+      "out": 667,
+      "usd": 0.00020241,
+      "ms": 6725
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 14251,
+      "out": 3821,
+      "usd": 0.00457687,
+      "ms": 107313
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 1,
+      "in": 9238,
+      "out": 1053,
+      "usd": 0.0046562,
+      "ms": 56624
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1392,
+      "out": 162,
+      "usd": 0.000204,
+      "ms": 1073
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 704,
+      "out": 314,
+      "usd": 0.00026868,
+      "ms": 12482
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 399,
+      "out": 87,
+      "usd": 0.00007470000000000001,
+      "ms": 8417
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 209,
+      "out": 52,
+      "usd": 0.000041700000000000004,
+      "ms": 1656
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2093,
+      "out": 101,
+      "usd": 0.0002497,
+      "ms": 1518
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 300,
+      "out": 48,
+      "usd": 0.0000492,
+      "ms": 633
+    }
+  }
+}
