@@ -1730,20 +1730,20 @@
    "key": "lucky-trending-tv|TRENDING-TV",
    "eventSlug": "lucky-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 162 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-23T12:39:02.535Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T12:04:28.645Z"
+   "reason": "words 145 < 180 (owner-set ~200-word minimum) | template-heading: \"## What's Next for 'Lucky'?  \" — rewrite story-specific | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 3,
+   "at": "2026-07-23T17:02:56.271Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T17:02:56.271Z"
   },
   {
    "key": "silo-trending-tv|TRENDING-TV",
    "eventSlug": "silo-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 150 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5",
-   "tries": 3,
-   "at": "2026-07-20T01:40:17.085Z",
-   "dead": true,
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-23T17:08:31.832Z",
+   "dead": false,
    "expiresAt": "2026-07-23T01:40:17.085Z"
   },
   {
@@ -1917,9 +1917,9 @@
    "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
    "form": "NOW-STREAMING",
    "reason": "4 unverified claim(s) cut, unrecovered",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-20T16:43:06.376Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-23T16:43:06.376Z"
   },
   {
@@ -2355,10 +2355,10 @@
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 21,
-   "at": "2026-07-23T16:33:43.484Z",
+   "tries": 22,
+   "at": "2026-07-23T17:10:34.219Z",
    "dead": true,
-   "expiresAt": "2026-07-26T16:33:43.484Z"
+   "expiresAt": "2026-07-26T17:10:34.219Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2393,14 +2393,14 @@
    "at": "2026-07-23T16:06:11.243Z"
   }
  ],
- "zeroStreak": 12,
+ "zeroStreak": 13,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.30033
+  "usd": 0.34117
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784824269409
+  "lastMs": 1784826066337
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2409,13 +2409,15 @@
    "they will kill you": 3,
    "the mandalorian and grogu": 3,
    "lee cronin's the mummy": 2,
-   "lucky": 1,
+   "lucky": 2,
    "descendants: wicked wonderland": 1,
    "a day like no other": 1,
    "star trek: strange new worlds": 2,
    "ransom canyon": 2,
    "dhamaal 4": 1,
-   "masters of the universe": 1
+   "masters of the universe": 1,
+   "tom clancy's jack ryan: ghost war": 1,
+   "silo": 1
   }
  }
 }

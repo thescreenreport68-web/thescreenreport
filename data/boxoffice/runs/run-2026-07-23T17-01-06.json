@@ -1,0 +1,222 @@
+{
+ "runId": "run-2026-07-23T17-01-06",
+ "mode": "live",
+ "startedAt": "2026-07-23T17:01:06.337Z",
+ "films": 41,
+ "published": [],
+ "held": [
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "words 145 < 180 (owner-set ~200-word minimum) | template-heading: \"## What's Next for 'Lucky'?  \" — rewrite story-specific | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 40
+  },
+  {
+   "tag": "silo-trending-tv×TRENDING-TV",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "score": 80
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "masters-of-the-universe-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "they-will-kill-you-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "star-trek-strange-new-worlds-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "ransom-canyon-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 5.6,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 13,
+ "daySpend": {
+  "laDay": "2026-07-23",
+  "usd": 0.34117
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "critical": 1,
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed (amazon/nova-micro-v1, google/gemini-2.5-flash-lite): Unexpected non-whitespace character after JSON at position 228",
+    "severity": "critical",
+    "at": "2026-07-23T17:01:15.764Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Unexpected non-whitespace character after JSON at position 228",
+    "severity": "warn",
+    "at": "2026-07-23T17:01:15.764Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-23T17:10:34.222Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 19234,
+    "out": 985,
+    "usd": 0.00232,
+    "ms": 7056
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 1,
+    "in": 2066,
+    "out": 1612,
+    "usd": 0.00045,
+    "ms": 37280
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12122,
+    "out": 3844,
+    "usd": 0.011,
+    "ms": 49181
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 40999,
+    "out": 5855,
+    "usd": 0.02694,
+    "ms": 44171
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1946,
+    "out": 1000,
+    "usd": 0.00079,
+    "ms": 45184
+   }
+  },
+  "totalUsd": 0.04149
+ },
+ "openrouterTotalUsd": 0.04084
+}
