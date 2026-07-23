@@ -1,40 +1,264 @@
 {
-  "runId": "run-2026-07-23T15-31-13",
-  "builtAt": "2026-07-23T15:34:46.620Z",
-  "count": 21,
+  "runId": "run-2026-07-23T16-31-04",
+  "builtAt": "2026-07-23T16:33:59.454Z",
+  "count": 25,
   "topics": [
     {
-      "id": "news-ransom-canyon-soundtrack-season-2",
-      "slug": "ransom-canyon-season-2-soundtrack-features-new-country-needle-drops",
-      "title": "Ransom Canyon Season 2 Soundtrack Features New Country Needle Drops",
+      "id": "news-christopher-nolan-the-odyssey-oscar-buzz",
+      "slug": "oscar-voters-rave-over-christopher-nolan-s-the-odyssey-at-early-screen",
+      "title": "Oscar Voters Rave Over Christopher Nolan's 'The Odyssey' at Early Screenings",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "christopher-nolan-the-odyssey-oscar-buzz",
+      "primaryKeyword": "Christopher Nolan The Odyssey",
+      "primaryEntity": "The Odyssey",
+      "entities": [
+        "The Odyssey (film)",
+        "Christopher Nolan"
+      ],
+      "angle": "Oscar voters are buzzing about Christopher Nolan's 'The Odyssey' following early screenings, positioning it as a major awards contender.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/awards/oscars-voters-the-odyssey-reaction-screenings-1236818611/",
+          "ageMin": 1,
+          "headline": "Oscar Voters Rave Over Christopher Nolan s The Odyssey at First Academy Screenings: ‘The Definitive Filmmaker of Our Time’",
+          "summary": "“What was the song of the sirens like?” When it comes to Oscar voters, like Odysseus, the answer is: “All the things you wanted to be.” The Oscar race for 2027 seems to have found its center of gravity, and its front-runner that will be shepherded under the Universal banner. Christopher Nolan s “The Odyssey,” the [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:oscar-voters-rave-over-christopher-nolan-s-the-odyssey-at-fi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 123,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-the-morning-show-to-end-with-season-5",
+      "slug": "apple-s-the-morning-show-to-end-with-season-5",
+      "title": "Apple's 'The Morning Show' To End With Season 5",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "cancellation",
       "sensitivity": "normal",
-      "eventSlug": "ransom-canyon-soundtrack-season-2",
-      "primaryKeyword": "ransom canyon soundtrack",
-      "primaryEntity": "Ransom Canyon",
+      "eventSlug": "the-morning-show-to-end-with-season-5",
+      "primaryKeyword": "the morning show",
+      "primaryEntity": "The Morning Show",
       "entities": [
-        "Netflix"
+        "Reese Witherspoon",
+        "Jennifer Aniston",
+        "Apple TV+"
       ],
-      "angle": "The soundtrack for the second season of Netflix's 'Ransom Canyon' has been released, featuring country music needle drops.",
+      "angle": "Apple TV+ drama 'The Morning Show' will conclude with its upcoming fifth season.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/feature/ransom-canyon-soundtrack-songs-1236371141/",
-          "ageMin": 32,
-          "headline": "Ransom Canyon Soundtrack: All The Songs You ll Hear In Both Seasons Of The Netflix Western Romance Series",
-          "summary": "Ransom Canyon is back in the saddle with a second season and more country music needle drops. In addition to the show’s soundtrack, each season thus far has incorporated a live performance from musicians — Charlie Crockett in Season 1 and Thomas Rhett featuring Jordan Davis in Season 2. For Season 2, specifically, music supervisor [ ]"
+          "url": "https://deadline.com/2026/07/apples-the-morning-show-ending-season-5-1237000891/",
+          "ageMin": 31,
+          "headline": "Apple’s ‘The Morning Show’ To End With Season 5",
+          "summary": "The Morning Show is saying goodbye. Apple has revealed that the fifth season of the Reese Witherspoon and Jennifer Aniston-led drama series, which will premiere next year, will be its last. The move is not a surprise as there’s been talk that the show is heading towards the finish line. It marks the end of [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-morning-show-ends-season-5-1236654691/",
+          "ageMin": 31,
+          "headline": "The Morning Show to End With Season 5",
+          "summary": "The hit Apple drama starring Jennifer Aniston and Reese Witherspoon returns with its final season in 2027. \"We were so fortunate to craft the conclusion with intentionality, and honor these characters the way they deserve,\" says Aniston."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/the-morning-show-ending-season-5-apple/",
+          "ageMin": 31,
+          "headline": "The Morning Show to End With Season 5 on Apple TV",
+          "summary": "The Reese Witherspoon and Jennifer Aniston-led drama series returns for one last news cycle in 2027 The post The Morning Show to End With Season 5 on Apple TV appeared first on TheWrap ."
         }
       ],
-      "ageMin": 32,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:ransom-canyon-soundtrack-all-the-songs-you-ll-hear-in-both-s",
+        "key": "rss:apple-s-the-morning-show-to-end-with-season-5",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "Deadline",
+          "THR",
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 117,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 25,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-colman-domingo-elon-musk-ai-odyssey",
+      "slug": "colman-domingo-says-elon-musk-s-ai-version-of-the-odyssey-will-be-whit",
+      "title": "Colman Domingo Says Elon Musk's AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "colman-domingo-elon-musk-ai-odyssey",
+      "primaryKeyword": "colman domingo",
+      "primaryEntity": "Colman Domingo",
+      "entities": [
+        "Elon Musk",
+        "The Odyssey"
+      ],
+      "angle": "Colman Domingo criticizes Elon Musk's proposed AI-generated version of 'The Odyssey,' deeming it unlikely to be historically accurate.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/culture-lifestyle/culture/jimmy-kimmel-live-colman-domingo-elon-musk-the-odyssey-ai/",
+          "ageMin": 43,
+          "headline": "Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel",
+          "summary": "\"You can't make a 'historically accurate' version of something that is totally made the f—k up,\" the \"Jimmy Kimmel Live!\" guest host adds The post Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 43,
+      "_cand": {
+        "key": "rss:colman-domingo-says-elon-musk-s-ai-version-of-the-odyssey-wi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 101,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-the-joy-of-sex-casting-pre-sales",
+      "slug": "sharon-maguire-directing-colin-firth-julianne-moore-in-love-triangle-c",
+      "title": "Sharon Maguire Directing Colin Firth, Julianne Moore in Love Triangle Comedy 'The Joy of Sex'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "the-joy-of-sex-casting-pre-sales",
+      "primaryKeyword": "the joy of sex movie",
+      "primaryEntity": "The Joy of Sex (film)",
+      "entities": [
+        "Sharon Maguire",
+        "Colin Firth",
+        "Julianne Moore",
+        "Laura Linney"
+      ],
+      "angle": "Sharon Maguire is directing a love triangle comedy titled 'The Joy of Sex,' with a star-studded cast including Colin Firth and Julianne Moore, and has secured pre-sales.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/sharon-maguire-directs-colin-firth-julianne-moore-joy-of-sex-1237001551/",
+          "ageMin": 1,
+          "headline": "Sharon Maguire Directing Colin Firth, Julianne Moore, Laura Linney, David Tennant More In The Joy Of Sex ; Love Triangle Comedy Pre-Sells To Lionsgate, Wild Bunch More",
+          "summary": "EXCLUSIVE: Here is the official announcement that Bridget Jones’s Diary and Bridget Jones’s Baby director Sharon Maguire has found her cast for unconventional love triangle comedy The Joy Of Sex, about how the famous 1970s love-making manual came about. Maguire has been pulling this together for a while and her cast was worth the wait. Oscar-winners Colin Firth (The King’s Speech) [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:sharon-maguire-directing-colin-firth-julianne-moore-laura-li",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -53,77 +277,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 77,
+      "priority": 98,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 12
-      },
-      "radarKind": "tv-episode-today",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-jonathan-levine-direct-tom-cruise-days-of-thunder-2",
-      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-days-of-thunder-2",
-      "title": "Jonathan Levine in Talks to Direct Tom Cruise in 'Days of Thunder 2'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jonathan-levine-direct-tom-cruise-days-of-thunder-2",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2",
-      "entities": [
-        "Tom Cruise",
-        "Jonathan Levine"
-      ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the sequel 'Days of Thunder 2'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 1375,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
-        }
-      ],
-      "ageMin": 1375,
-      "_cand": {
-        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 1,
+        "recency": 30,
         "corroboration": 12,
         "status": 18,
         "type": 14,
@@ -137,9 +293,345 @@
       "tierClass": "B"
     },
     {
+      "id": "news-the-morning-show-season-5-final-season",
+      "slug": "the-morning-show-to-end-with-season-5-in-2027",
+      "title": "The Morning Show to End with Season 5 in 2027",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "the-morning-show-season-5-final-season",
+      "primaryKeyword": "the morning show",
+      "primaryEntity": "The Morning Show",
+      "entities": [
+        "Jennifer Aniston",
+        "Reese Witherspoon",
+        "2027"
+      ],
+      "angle": "The Apple TV+ drama 'The Morning Show' will conclude with its fifth season in 2027, with new cast members joining for the final run.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/breaking-news/the-morning-show-to-end-season-5-2027-1235206680/",
+          "ageMin": 31,
+          "headline": "The Morning Show to End with Season 5 in 2027",
+          "summary": "The final season will see series newcomers Jeff Daniels, Reneé Rapp, and Sean Hayes join the cast."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:the-morning-show-to-end-with-season-5-in-2027",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-todd-mcfarlane-spawn-movie-pitch",
+      "slug": "after-obsession-and-backrooms-todd-mcfarlane-says-hollywood-finally-un",
+      "title": "After Obsession and Backrooms, Todd McFarlane says Hollywood finally understands the kind of Spawn movie he's been pitching for decades",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "todd-mcfarlane-spawn-movie-pitch",
+      "primaryKeyword": "Spawn movie",
+      "primaryEntity": "Spawn",
+      "entities": [
+        "Spawn (film)",
+        "Todd McFarlane"
+      ],
+      "angle": "Filmmaker Todd McFarlane states Hollywood now understands his vision for a Spawn movie.",
+      "tmdbType": "movie",
+      "source": "gnews:Popverse",
+      "sources": [
+        {
+          "outlet": "Popverse",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxORzVuOTJCTExSMXQ0a3B1OHhrU2d1WGx5REdleEdBSVNJWGQtd20xV1Nyckw4UzVMWVZFN2wyc1VZVW5zdENna3BVY0xwdjMxU2hsUlZ1Z2Zyb3hJZGczcGVOV2Rmc0NlZ0ZmSTZTWG1udUk5QlJkd3YtcnRUcXFZcllsTmltUFc4M2paRlJ3NmJINUVTNV95aDFubzQtQQ?oc=5",
+          "ageMin": 181,
+          "headline": "After Obsession and Backrooms, Todd McFarlane says Hollywood finally understands the kind of Spawn movie he's been pitching for decades - Popverse",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxORzVuOTJCTExSMXQ0a3B1OHhrU2d1WGx5REdleEdBSVNJWGQtd20xV1Nyckw4UzVMWVZFN2wyc1VZVW5zdENna3BVY0xwdjMxU2hsUlZ1Z2Zyb3hJZGczcGVOV2Rmc0NlZ0ZmSTZTWG1udUk5QlJkd3YtcnRUcXFZcllsTmltUFc4M2paRlJ3NmJINUVTNV95aDFubzQtQQ?oc=5\" target=\"_blank\" After Obsessio"
+        }
+      ],
+      "ageMin": 181,
+      "_cand": {
+        "key": "rss:after-obsession-and-backrooms-todd-mcfarlane-says-hollywood-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Popverse"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Popverse",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 19
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "music-news-teenage-fanclub-new-album-day-in-the-sun",
+      "slug": "teenage-fanclub-announce-new-album-with-day-in-the-sun-video",
+      "title": "Teenage Fanclub Announce New Album With 'Day In The Sun' Video",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "teenage-fanclub-new-album-day-in-the-sun",
+      "primaryKeyword": "teenage fanclub new album",
+      "primaryEntity": "Teenage Fanclub",
+      "entities": [],
+      "angle": "Scottish band Teenage Fanclub has announced a new album and released a video for the single 'Day In The Sun'.",
+      "tmdbType": "movie",
+      "source": "gnews:antiMusic",
+      "sources": [
+        {
+          "outlet": "antiMusic",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdm54SjVTTDZUUVpucU03UEduYjF4a2hHdkZiRnBiZHZ6ekxVc1lGSWljWmFiVVktVWMyNl9QOFNjVlJzbV9KOWJ2SkVkR0lFS0lOVTlSSlVCWjVfNU96dVVwN1c1Nlk1QkIxMzNKUFBzT0xHTkxRNnJWQnlORWZlOFgyTkk0NTliR1JGNnVEak85dE9sNGhoeVlIY0ZydC1sZFpBTVBua2k?oc=5",
+          "ageMin": 7,
+          "headline": "Teenage Fanclub Announce New Album With 'Day In The Sun' Video - antiMusic",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdm54SjVTTDZUUVpucU03UEduYjF4a2hHdkZiRnBiZHZ6ekxVc1lGSWljWmFiVVktVWMyNl9QOFNjVlJzbV9KOWJ2SkVkR0lFS0lOVTlSSlVCWjVfNU96dVVwN1c1Nlk1QkIxMzNKUFBzT0xHTkxRNnJWQnlORWZlOFgyTkk0NTliR1JGNnVEak85dE9sNGhoeVlIY0ZydC1sZFpBTVBua2k?oc=5\" target=\"_blank\" T"
+        }
+      ],
+      "ageMin": 7,
+      "_cand": {
+        "key": "rss:teenage-fanclub-announce-new-album-with-day-in-the-sun-video",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "antiMusic"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "antiMusic",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-rings-of-power-season-3-jamie-campbell-bower-celeborn",
+      "slug": "the-rings-of-power-season-3-jamie-campbell-bower-revealed-as-celeborn",
+      "title": "‘The Rings of Power’ Season 3: Jamie Campbell Bower Revealed as Celeborn",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "rings-of-power-season-3-jamie-campbell-bower-celeborn",
+      "primaryKeyword": "rings of power",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "entities": [
+        "The Rings of Power",
+        "Jamie Campbell Bower"
+      ],
+      "angle": "Jamie Campbell Bower has been cast as Celeborn in the upcoming third season of 'The Rings of Power'.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Insider",
+      "sources": [
+        {
+          "outlet": "TV Insider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMHJfbk14SE1PMnlmMFlUcFM1Q3pkNzBTdC02MVNPRG9pZVlXSGVqdDVEWEMyd01mT2J4VWlaMVliSGU2RVVqNm9RN05yVDdnbWk0NTB0RWN2aDZDOXUySzhyR181N3V5T1N4bmZ3YldZb0RqUnNkeXd6LXoxWS14NWZ0d2o5VF9nUEFNVTNZUXRNNkliM3BtbXIzeER3eWx2MlJDTHpjTWY2M0U?oc=5",
+          "ageMin": 100,
+          "headline": "‘The Rings of Power’ Season 3: Jamie Campbell Bower Revealed as Celeborn - TV Insider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMHJfbk14SE1PMnlmMFlUcFM1Q3pkNzBTdC02MVNPRG9pZVlXSGVqdDVEWEMyd01mT2J4VWlaMVliSGU2RVVqNm9RN05yVDdnbWk0NTB0RWN2aDZDOXUySzhyR181N3V5T1N4bmZ3YldZb0RqUnNkeXd6LXoxWS14NWZ0d2o5VF9nUEFNVTNZUXRNNkliM3BtbXIzeER3eWx2MlJDTHpjTWY2M0U?oc=5\" target=\"_blan"
+        }
+      ],
+      "ageMin": 100,
+      "_cand": {
+        "key": "rss:-the-rings-of-power-season-3-jamie-campbell-bower-revealed-a",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Insider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Insider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-martin-scorsese-steven-spielberg-cape-fear-screening-zendaya-tom-holla",
+      "slug": "scorsese-spielberg-at-cape-fear-screening-zendaya-holland-promote-spid",
+      "title": "Scorsese, Spielberg at 'Cape Fear' Screening; Zendaya, Holland Promote 'Spider-Man'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "martin-scorsese-steven-spielberg-cape-fear-screening-zendaya-tom-holla",
+      "primaryKeyword": "spider-man brand new day premiere",
+      "primaryEntity": "Spider-Man: Brand New Day",
+      "entities": [
+        "Martin Scorsese",
+        "Steven Spielberg",
+        "Zendaya",
+        "Tom Holland"
+      ],
+      "angle": "Martin Scorsese and Steven Spielberg attend a screening of 'Cape Fear' while Zendaya and Tom Holland promote 'Spider-Man: Brand New Day'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
+          "ageMin": 1621,
+          "headline": "Martin Scorsese and Steven Spielberg Attend Cape Fear Screening in NYC, Zendaya and Tom Holland Promote Spider-Man: Brand New Day and More Celeb Red Carpet Photos: July 2026",
+          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
+        }
+      ],
+      "ageMin": 1621,
+      "_cand": {
+        "key": "rss:martin-scorsese-and-steven-spielberg-attend-cape-fear-screen",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
       "id": "news-law-order-season-26-reid-scott-leaving-james-badge-dale-joining",
-      "slug": "law-order-season-26-reid-scott-leaving-james-badge-dale-joining-nbc-se",
-      "title": "Law Order: Season 26; Reid Scott Leaving, James Badge Dale Joining NBC Series",
+      "slug": "law-order-season-26-sees-reid-scott-depart-james-badge-dale-arrive",
+      "title": "Law & Order: Season 26 Sees Reid Scott Depart, James Badge Dale Arrive",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -147,27 +639,27 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "law-order-season-26-reid-scott-leaving-james-badge-dale-joining",
-      "primaryKeyword": "Law & Order",
-      "primaryEntity": "Law & Order (TV series)",
+      "primaryKeyword": "Law & Order cast",
+      "primaryEntity": "Law & Order (TV Series)",
       "entities": [
         "Reid Scott",
         "James Badge Dale",
         "NBC"
       ],
-      "angle": "Reid Scott is departing 'Law & Order' while James Badge Dale is joining the NBC series for Season 26.",
+      "angle": "Reid Scott exits 'Law & Order' as James Badge Dale joins for Season 26.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
         {
           "outlet": "TV Series Finale",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWUxN0tQRTk0MlR2Y09scDEtTS0zV0hvZlVjVmo0MHBZVWZBazZrTzFTZWZ6dXoyZnpKMGg3bEs5eWpHMjhURDVkbGVQOE9FekU5M0NHUEhwOGN0b2R0eVg0Vjd2SE5MLTJSeGNTYnBEQ1o3ejVnNDRxQnJweVBCRThtLWpXZlFwMDFjbUlFMFR4dWxaSmhfRHI5QTNFTHNKWjVVbDdMaXpvYzRXSm5j0gG0AUFVX3lxTE5sWGxHUzFaQWNmaGpmTHFmT1JLbC02M2h4TG1jY2JFV1E4NE1SbWpjS2xoNDZ6NDJYMVhHS2xudklCOU9MczRZN0w5d3FLZG11eEkweEVRaF9QTXVqQi1SdmxzMXpGS1RUa3V1YnBPcUxsdURjWHBIZFM2X0t1NHhheFhtMlVMeVhCbFgya0xObVo0QVVKQ3MwYml3Z1ZEWFRCX3dBYktxejBmcjRTcmFqa1RRYQ?oc=5",
-          "ageMin": 62,
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObFhsR1MxWkFjZmhqZkxxZk9SS2wtNjNoeExtY2NiRVdRODRNUm1qY0tsaDQ2ejQyWDFYR0tsbnZJQjlPTHM0WTdMOXdxS2RtdXhJMHhFUWhfUE11akItUnZsczF6RktUVGt1dWJwT3FMbHVEY1hwSGRTNl9LdTR4YXhYbTJVTHlYQmxYMmtMTm1aNEFVSkNzMGJpd2dWRFhUQl93QWJLcXowZnI0U3JhamtUUWHSAbQBQVVfeXFMTmxYbEdTMVpBY2ZoamZMcWZPUktsLTYzaHhMbWNjYkVXUTg0TVJtamNLbGg0Nno0MlgxWEdLbG52SUI5T0xzNFk3TDl3cUtkbXV4STB4RVFoX1BNdWpCLVJ2bHMxekZLVFRrdXVicE9xTGx1RGNYcEhkUzZfS3U0eGF4WG0yVUx5WEJsWDJrTE5tWjRBVUpDczBiaXdnVkRYVEJfd0FiS3F6MGZyNFNyYWprVFFh?oc=5",
+          "ageMin": 121,
           "headline": "Law Order: Season 26; Reid Scott Leaving, James Badge Dale Joining NBC Series - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxQVWUxN0tQRTk0MlR2Y09scDEtTS0zV0hvZlVjVmo0MHBZVWZBazZrTzFTZWZ6dXoyZnpKMGg3bEs5eWpHMjhURDVkbGVQOE9FekU5M0NHUEhwOGN0b2R0eVg0Vjd2SE5MLTJSeGNTYnBEQ1o3ejVnNDRxQnJweVBCRThtLWpXZlFwMDFjbUlFMFR4dWxaSmhfRHI5QTNFTHNKWjVVbDdMaXpvYzRXSm5j0gG0AUFVX3lxTE5"
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxObFhsR1MxWkFjZmhqZkxxZk9SS2wtNjNoeExtY2NiRVdRODRNUm1qY0tsaDQ2ejQyWDFYR0tsbnZJQjlPTHM0WTdMOXdxS2RtdXhJMHhFUWhfUE11akItUnZsczF6RktUVGt1dWJwT3FMbHVEY1hwSGRTNl9LdTR4YXhYbTJVTHlYQmxYMmtMTm1aNEFVSkNzMGJpd2dWRFhUQl93QWJLcXowZnI0U3JhamtUUWHSAbQBQVV"
         }
       ],
-      "ageMin": 62,
+      "ageMin": 121,
       "_cand": {
         "key": "rss:law-order-season-26-reid-scott-leaving-james-badge-dale-join",
         "popularity": 0,
@@ -204,41 +696,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-beauty-in-black-renewed-for-season-4-netflix-reverses-cancellation",
-      "slug": "beauty-in-black-renewed-for-season-4-as-netflix-reverses-decision-to-e",
-      "title": "‘Beauty In Black’ Renewed For Season 4 As Netflix Reverses Decision To End Tyler Perry Series With Season 3",
+      "id": "news-wonder-project-international-slate-expansion",
+      "slug": "wonder-project-expands-international-slate-with-uk-and-ireland-series-",
+      "title": "Wonder Project Expands International Slate With UK and Ireland Series, Including Julia Roberts and Russell T. Davies Projects",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "high",
-      "eventSlug": "beauty-in-black-renewed-for-season-4-netflix-reverses-cancellation",
-      "primaryKeyword": "beauty in black season 4",
-      "primaryEntity": "Beauty In Black (TV series)",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "wonder-project-international-slate-expansion",
+      "primaryKeyword": "wonder project",
+      "primaryEntity": "Wonder Project",
       "entities": [
-        "Tyler Perry's Finding Joy",
-        "Tyler Perry",
-        "Netflix"
+        "Julia Roberts",
+        "Russell T. Davies"
       ],
-      "angle": "Netflix has reversed its decision to end Tyler Perry's series 'Beauty In Black' and has renewed it for a fourth season.",
+      "angle": "Wonder Project is expanding its international slate with three new series from the U.K. and Ireland, including shows featuring Julia Roberts and Russell T. Davies.",
       "tmdbType": "movie",
-      "source": "gnews:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa2F0S3U4UnJMaWl2RllyRDctUDNwYm90YkQ2VTBsZDJ3bGtPZ1J0ZmdFYjNVUUpWNmJPcTRUQ0M0TFJFaGw0M0RsOW82LUQ1c3FtbWE0S0hvU05WdFhKYVVaY3JnLTJlaXUwd1k3WTRjNkNaVUM5T2NRYmJDR2RKVU9XcTNxbmxm?oc=5",
-          "ageMin": 151,
-          "headline": "‘Beauty In Black’ Renewed For Season 4 As Netflix Reverses Decision To End Tyler Perry Series With Season 3 - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa2F0S3U4UnJMaWl2RllyRDctUDNwYm90YkQ2VTBsZDJ3bGtPZ1J0ZmdFYjNVUUpWNmJPcTRUQ0M0TFJFaGw0M0RsOW82LUQ1c3FtbWE0S0hvU05WdFhKYVVaY3JnLTJlaXUwd1k3WTRjNkNaVUM5T2NRYmJDR2RKVU9XcTNxbmxm?oc=5\" target=\"_blank\" ‘Beauty In Black’ Renewed For Season 4 As Ne"
+          "url": "https://variety.com/2026/tv/global/wonder-project-expands-international-slate-1236818463/",
+          "ageMin": 91,
+          "headline": "Wonder Project Expands International Slate With Three Series from U.K. and Ireland, Including Julia Roberts and Russell T. Davies Shows (EXCLUSIVE)",
+          "summary": "Wonder Project is expanding its investment in international scripted programming with three projects from the U.K. and Ireland. These include the Leonard and Hungry Paul, narrated by Julia Roberts, You Me, executive produced by Russell T Davies and Rewarding, a new original commission with BBC Northern Ireland. “The UK and Ireland have an incredible [ ]"
         }
       ],
-      "ageMin": 151,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:-beauty-in-black-renewed-for-season-4-as-netflix-reverses-de",
+        "key": "rss:wonder-project-expands-international-slate-with-three-series",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -246,11 +737,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
+        "sensitivity": "normal",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -268,129 +759,64 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-resident-evil-movie-hardest-scene",
-      "slug": "resident-evil-director-zach-cregger-reveals-the-movie-s-hardest-scene-",
-      "title": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "resident-evil-movie-hardest-scene",
-      "primaryKeyword": "resident evil movie",
-      "primaryEntity": "Resident Evil (film series)",
-      "entities": [
-        "Zach Cregger"
-      ],
-      "angle": "Director Zach Cregger discusses the most challenging scene to film for the 'Resident Evil' movie.",
-      "tmdbType": "movie",
-      "source": "gnews:SlashFilm",
-      "sources": [
-        {
-          "outlet": "SlashFilm",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5",
-          "ageMin": 31,
-          "headline": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot - SlashFilm",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5\" target=\"_blank\" Resident Evil Dir"
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:resident-evil-director-zach-cregger-reveals-the-movie-s-hard",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "SlashFilm"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "SlashFilm",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
       "tierClass": "B"
     },
     {
-      "id": "music-news-bau-cat-manosphere-single",
-      "slug": "north-wales-band-bau-cat-releases-new-single-inspired-by-manosphere-tr",
-      "title": "North Wales Band Bau Cat Releases New Single Inspired by 'Manosphere' Trend",
+      "id": "music-news-mgk-day-returning-2026",
+      "slug": "mgk-day-returns-in-2026-with-headlining-performance-by-mgk-and-wiz-kha",
+      "title": "MGK Day Returns in 2026 With Headlining Performance by MGK and Wiz Khalifa",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "bau-cat-manosphere-single",
-      "primaryKeyword": "bau cat new single",
-      "primaryEntity": "Black Cat",
+      "tier": "popular",
+      "eventSlug": "mgk-day-returning-2026",
+      "primaryKeyword": "mgk day",
+      "primaryEntity": "mgk",
       "entities": [
-        "Bau Cat",
-        "Nation.Cymru"
+        "Machine Gun Kelly",
+        "Wiz Khalifa"
       ],
-      "angle": "North Wales-based psych-pop band Bau Cat has released a new single reportedly inspired by the 'Manosphere' internet phenomenon.",
+      "angle": "Machine Gun Kelly Day is returning in 2026 with a headlining performance by MGK himself, joined by Wiz Khalifa.",
       "tmdbType": "movie",
-      "source": "gnews:Nation.Cymru",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Nation.Cymru",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZW5SQVBZUmUtRDctVWlmU09ENFpuNldHRlk4NUZtalFXdHJBMU43cEUwZ3lmMVZOdV9uekU4cURaSmpDSFhHNUJJd0REQTB1MTBvT25YNzZfbGhOTUhxQmRBM2VQWkVYWHFsOWdqVjBISzFyTXBMWFNycnJlT3cxcXA1NjlvOEowa1dYZEh0OFgydjNXY204TUM5Nll1MWt0RzMzc2w1cVJYbTJ1dGJoVllPcDd2dFVoczN4SnVR?oc=5",
-          "ageMin": 26,
-          "headline": "North Wales psych-pop band Bau Cat release new single inspired by 'Manosphere' internet craze - Nation.Cymru",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOZW5SQVBZUmUtRDctVWlmU09ENFpuNldHRlk4NUZtalFXdHJBMU43cEUwZ3lmMVZOdV9uekU4cURaSmpDSFhHNUJJd0REQTB1MTBvT25YNzZfbGhOTUhxQmRBM2VQWkVYWHFsOWdqVjBISzFyTXBMWFNycnJlT3cxcXA1NjlvOEowa1dYZEh0OFgydjNXY204TUM5Nll1MWt0RzMzc2w1cVJYbTJ1dGJoVllPcDd2dFVoczN"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/mgk-day-2026-headline-set-machine-gun-kelly-wiz-khalifa-1236301137/",
+          "ageMin": 90,
+          "headline": "MGK Day Is Returning for 2026 With Headlining Performance by mgk With Wiz Khalifa",
+          "summary": "Tickets are on sale at noon ET."
         }
       ],
-      "ageMin": 26,
+      "ageMin": 90,
       "_cand": {
-        "key": "rss:north-wales-psych-pop-band-bau-cat-release-new-single-inspir",
+        "key": "rss:mgk-day-is-returning-for-2026-with-headlining-performance-by",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Nation.Cymru"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Nation.Cymru",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -403,37 +829,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-paramount-plus-scottish-highlands-drama-kenneth-branagh",
-      "slug": "laird-paramount-orders-drama-set-in-scottish-highlands-starring-kennet",
-      "title": "Laird: Paramount+ Orders Drama Set in Scottish Highlands, Starring Kenneth Branagh",
+      "id": "news-mandalorian-grogu-dejarik-creatures-ilm",
+      "slug": "holograms-no-more-bringing-the-dejarik-creatures-to-life-in-the-mandal",
+      "title": "Holograms No More: Bringing the Dejarik Creatures to Life in ‘The Mandalorian and Grogu’",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "paramount-plus-scottish-highlands-drama-kenneth-branagh",
-      "primaryKeyword": "paramount plus scottish drama",
-      "primaryEntity": "Paramount+",
+      "eventSlug": "mandalorian-grogu-dejarik-creatures-ilm",
+      "primaryKeyword": "the mandalorian and grogu",
+      "primaryEntity": "The Mandalorian and Grogu",
       "entities": [
-        "Kenneth Branagh"
+        "The Mandalorian and Grogu (film)",
+        "Industrial Light & Magic",
+        "The Mandalorian"
       ],
-      "angle": "Paramount+ orders new drama series set in the Scottish Highlands starring Kenneth Branagh.",
+      "angle": "Industrial Light & Magic details the process of bringing the Dejarik creatures to life for 'The Mandalorian and Grogu'.",
       "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
+      "source": "gnews:Industrial Light Magic",
       "sources": [
         {
-          "outlet": "TV Series Finale",
+          "outlet": "Industrial Light Magic",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMmhnLUg4cTZxWHVXS09FRmp0XzEyX1NRZFczN1dhYXBoLXdFbnNpejFlN1E1T0ZhZmNNZEd5RGlDWnRCb25QNXE3WEp6RmtHUkIwZFdEeU9LeFhGN1Q2V0dUTG9TZURKcDR1ZHozWXVEbUtDWTR5Qmw0MTJVLXdLUHlnMG1hdmllcWVaZEpmdmJXMzNKZndqY1M1Tkdkb0xIU3hyZDZxY2xHMTNON1NUNkJ6NjVaZ9IBuwFBVV95cUxQWk5PeHFQU0FkVlV1enZqeWpWdVFEWFNnYzFTeFhSek5MdzQ0cHBQTVFnMzhDVEdTWEhBR0tZWDRzSk4yaE00YkxGS1JDRzA3LW5sRFdOVzZRZldsWng4cFpwTTl3dHI3dy1wdWQ4ZENEV2VVTUVaVnd6VEpyREtuTmR1RlR0SDBjZlYyZU9HNmtDUk5DX2N4MmZHSHlMTkhBSE1JREFzUWhUMG9oYS01djZGOEZBV2kwUXY4?oc=5",
-          "ageMin": 72,
-          "headline": "Laird: Paramount+ Orders Drama Set in Scottish Highlands, Starring Kenneth Branagh - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxOMmhnLUg4cTZxWHVXS09FRmp0XzEyX1NRZFczN1dhYXBoLXdFbnNpejFlN1E1T0ZhZmNNZEd5RGlDWnRCb25QNXE3WEp6RmtHUkIwZFdEeU9LeFhGN1Q2V0dUTG9TZURKcDR1ZHozWXVEbUtDWTR5Qmw0MTJVLXdLUHlnMG1hdmllcWVaZEpmdmJXMzNKZndqY1M1Tkdkb0xIU3hyZDZxY2xHMTNON1NUNkJ6NjVaZ9IBuwF"
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPOGZ5c2JsTDIyWTVnazM4LXVrQkV2bVE0cHgtS3lLZjdLZHhEb1dFWVlBa19TUmo5X01HbHZOdDJBbDlRR0ttc0gwTTZlTzd1VE1hY0wxcmM2Q2UxRjFpdG51M1NDOUpoVks0X3ZDRkZXdHJLdWJZa04xSFEyaXhvVXRWOGVCTHU4VXZ2SXhsR1hXMjg?oc=5",
+          "ageMin": 35,
+          "headline": "Holograms No More: Bringing the Dejarik Creatures to Life in ‘The Mandalorian and Grogu’ - Industrial Light Magic",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPOGZ5c2JsTDIyWTVnazM4LXVrQkV2bVE0cHgtS3lLZjdLZHhEb1dFWVlBa19TUmo5X01HbHZOdDJBbDlRR0ttc0gwTTZlTzd1VE1hY0wxcmM2Q2UxRjFpdG51M1NDOUpoVks0X3ZDRkZXdHJLdWJZa04xSFEyaXhvVXRWOGVCTHU4VXZ2SXhsR1hXMjg?oc=5\" target=\"_blank\" Holograms No More: Bringing t"
         }
       ],
-      "ageMin": 72,
+      "ageMin": 35,
       "_cand": {
-        "key": "rss:laird-paramount-orders-drama-set-in-scottish-highlands-starr",
+        "key": "rss:holograms-no-more-bringing-the-dejarik-creatures-to-life-in-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -443,19 +871,89 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TV Series Finale"
+          "Industrial Light Magic"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "TV Series Finale",
+        "attribution": "Industrial Light Magic",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 10
+      },
+      "radarKind": "movie-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-tiff-primetime-lineup-announcement",
+      "slug": "tiff-primetime-lineup-features-mike-flanagan-s-carrie-and-crystal-lake",
+      "title": "TIFF Primetime Lineup Features Mike Flanagan's 'Carrie' and 'Crystal Lake'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "tiff-primetime-lineup-announcement",
+      "primaryKeyword": "tiff primetime lineup",
+      "primaryEntity": "TIFF",
+      "entities": [
+        "Mike Flanagan",
+        "Carrie",
+        "A24",
+        "Crystal Lake"
+      ],
+      "angle": "TIFF's Primetime section announces its 2026 lineup featuring horror titles like Mike Flanagan's 'Carrie' and A24's 'Crystal Lake'.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/tiff-2026-primetime-lineup-mike-flanagan-carrie-series-1235206679/",
+          "ageMin": 151,
+          "headline": "TIFF Primetime Lineup Touts TV Horror with Mike Flanagan s Carrie, A24 s Crystal Lake",
+          "summary": "The episodic section launches with \"Below,\" starring Josh Hartnett and Mackenzie Davis, with additional premieres of Shawn Ryan's \"American Hostage\" and the new season of \"Slow Horses.\""
+        }
+      ],
+      "ageMin": 151,
+      "_cand": {
+        "key": "rss:tiff-primetime-lineup-touts-tv-horror-with-mike-flanagan-s-c",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
       "signals": {
         "recency": 16,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -468,300 +966,172 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-weapon-real-life-battlefield-use",
-      "slug": "star-wars-inspired-weapon-component-could-see-real-life-battlefield-us",
-      "title": "Star Wars-Inspired Weapon Component Could See Real-Life Battlefield Use",
+      "id": "music-news-yung-miami-signs-with-wme",
+      "slug": "yung-miami-signs-with-wme-for-worldwide-representation",
+      "title": "Yung Miami Signs With WME for Worldwide Representation",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "yung-miami-signs-with-wme",
+      "primaryKeyword": "yung miami",
+      "primaryEntity": "Yung Miami",
+      "entities": [
+        "WME",
+        "City Girls"
+      ],
+      "angle": "Rapper Yung Miami has signed with WME for worldwide representation and is set to release her solo debut on the relaunched Uptown Records.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/yung-miami-signs-with-wme-1236819319/",
+          "ageMin": 99,
+          "headline": "Music Industry Moves: Yung Miami Signs With WME; City Parks Foundation to Honor Joe Killian and Alex Blavatnik",
+          "summary": "Rapper Yung Miami has signed with WME for worldwide representation in all areas. The South Florida rapper and former member of the City Girls will release her solo debut on the relaunched Uptown Records later this year. The album’s lead single, “Spend Dat,” topped the Billboard Rap Airplay charts and is currently at No. 17 [ ]"
+        }
+      ],
+      "ageMin": 99,
+      "_cand": {
+        "key": "rss:music-industry-moves-yung-miami-signs-with-wme-city-parks-fo",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-days-of-thunder-2-jonathan-levine-tom-cruise",
+      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-days-of-thunder-2",
+      "title": "Jonathan Levine in Talks to Direct Tom Cruise in 'Days of Thunder 2'",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-weapon-real-life-battlefield-use",
-      "primaryKeyword": "Star Wars weapon",
-      "primaryEntity": "Star Wars",
-      "entities": [],
-      "angle": "A component developed in Connecticut could lead to real-life battlefield use of a weapon inspired by Star Wars technology.",
-      "tmdbType": "movie",
-      "source": "gnews:Hartford Courant",
-      "sources": [
-        {
-          "outlet": "Hartford Courant",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPT3pIdUs2ZnN2UlRMQmpJR2t4bUt5Zm1qd0Zxbm1CU3kxOGh3UFdkNHdoX2x3X2tJQTFic3FVbkdNa2xPOVZQUjFVZnBDWVllNU9aUXo1bTlsZ2cxWklYTm9TcmtrandmRWVxNWR0UWJkT2RjZzJsQnE3d0Jld0h4eVhLdHFEeVJDOGlyUFVBOHF5V0JYcTdKSkY1X3ZJbF9uQUxnTFYza1E0YTZtREEwaE52WXlzSzg?oc=5",
-          "ageMin": 150,
-          "headline": "‘Star Wars’ weapon could see more real-life battlefield use with CT-made component - Hartford Courant",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPT3pIdUs2ZnN2UlRMQmpJR2t4bUt5Zm1qd0Zxbm1CU3kxOGh3UFdkNHdoX2x3X2tJQTFic3FVbkdNa2xPOVZQUjFVZnBDWVllNU9aUXo1bTlsZ2cxWklYTm9TcmtrandmRWVxNWR0UWJkT2RjZzJsQnE3d0Jld0h4eVhLdHFEeVJDOGlyUFVBOHF5V0JYcTdKSkY1X3ZJbF9uQUxnTFYza1E0YTZtREEwaE52WXlzSzg?oc="
-        }
-      ],
-      "ageMin": 150,
-      "_cand": {
-        "key": "rss:-star-wars-weapon-could-see-more-real-life-battlefield-use-w",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Hartford Courant"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Hartford Courant",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-the-chosen-in-the-wild-bear-grylls-prime-video-preview",
-      "slug": "the-chosen-in-the-wild-with-bear-grylls-prime-video-previews-crossover",
-      "title": "The Chosen in the Wild with Bear Grylls: Prime Video Previews “Crossover” Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-chosen-in-the-wild-bear-grylls-prime-video-preview",
-      "primaryKeyword": "the chosen in the wild bear grylls",
-      "primaryEntity": "The Chosen",
-      "entities": [
-        "Bear Grylls",
-        "Prime Video"
-      ],
-      "angle": "Prime Video previews crossover series 'The Chosen in the Wild' with Bear Grylls.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSmt5YmRXRzl6QVd4cDlmd0NjU3RMNUlxZ1RQNzRoakRqWEMyNk5YM25pSDIzSXpvYnJ4SlJNV1BRaXI2RE5XT0lFV3NNWW9wQzdFOWkxUDYxNXdWUGpnd1JZaXB1X2RHeXJJQUNnRjk4U2g0bkpZc21JeGotQnRncVpucTBhU1IyMU5IVVlKb1hPWGI2UnNxRnBkcm1MV2NoZ0tGUWtFSHZYVFkzTjYwbUwyZHZlUUVO0gG4AUFVX3lxTE5Ka3liZFdHOXpBV3hwOWZ3Q2NTdEw1SXFnVFA3NGhqRGpYQzI2TlgzbmlIMjNJem9icnhKUk1XUFFpcjZETldPSUVXc01Zb3BDN0U5aTFQNjE1d1ZQamd3UllpcHVfZEd5cklBQ2dGOThTaDRuSllzbUl4ai1CdGdxWm5xMGFTUjIxTkhVWUpvWE9YYjZSc3FGcGRybUxXY2hnS0ZRa0VIdlhUWTNONjBtTDJkdmVRRU4?oc=5",
-          "ageMin": 91,
-          "headline": "The Chosen in the Wild with Bear Grylls: Prime Video Previews “Crossover” Series - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSmt5YmRXRzl6QVd4cDlmd0NjU3RMNUlxZ1RQNzRoakRqWEMyNk5YM25pSDIzSXpvYnJ4SlJNV1BRaXI2RE5XT0lFV3NNWW9wQzdFOWkxUDYxNXdWUGpnd1JZaXB1X2RHeXJJQUNnRjk4U2g0bkpZc21JeGotQnRncVpucTBhU1IyMU5IVVlKb1hPWGI2UnNxRnBkcm1MV2NoZ0tGUWtFSHZYVFkzTjYwbUwyZHZlUUVO0gG"
-        }
-      ],
-      "ageMin": 91,
-      "_cand": {
-        "key": "rss:the-chosen-in-the-wild-with-bear-grylls-prime-video-previews",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-lizzy-mcalpine-the-light-in-the-painting-single-release",
-      "slug": "lizzy-mcalpine-unveils-new-single-the-light-in-the-painting-debuts-mus",
-      "title": "Lizzy Mcalpine Unveils New Single 'The Light In The Painting,' Debuts Music Video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "lizzy-mcalpine-the-light-in-the-painting-single-release",
-      "primaryKeyword": "lizzy mcalpine new song",
-      "primaryEntity": "Lizzy McAlpine",
-      "entities": [
-        "The Light In The Painting"
-      ],
-      "angle": "Lizzy McAlpine drops new single and music video.",
-      "tmdbType": "movie",
-      "source": "gnews:BroadwayWorld",
-      "sources": [
-        {
-          "outlet": "BroadwayWorld",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOUk8xNDF5eWpjLUZ5eVBIbVhWN2NFSm1LM3JIRVBpTm5fTmU1UXRvckJIUlg3VEdhZ2x3WHZoWXJpQk5IU0xnNW1tQ213c085NmNBRWpVRVg3SHV5UF9nWXpwWTlCWDFRLURxeER3MFhlUS1WRnNaYVhQRlhQSkx4UWFnZGRPVmtVN2tfbE1rdm1mQ28zMVU5MnNONlVFU1ptUkVJU2NDUERVRi1Ldk9EeVVkbVdKRFd1MDVhU2w2WHJKdmRjNTFDU0Z6RlUzZWM?oc=5",
-          "ageMin": 66,
-          "headline": "Lizzy Mcalpine Unveils New Single 'The Light In The Painting,' Debuts Music Video - BroadwayWorld",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOUk8xNDF5eWpjLUZ5eVBIbVhWN2NFSm1LM3JIRVBpTm5fTmU1UXRvckJIUlg3VEdhZ2x3WHZoWXJpQk5IU0xnNW1tQ213c085NmNBRWpVRVg3SHV5UF9nWXpwWTlCWDFRLURxeER3MFhlUS1WRnNaYVhQRlhQSkx4UWFnZGRPVmtVN2tfbE1rdm1mQ28zMVU5MnNONlVFU1ptUkVJU2NDUERVRi1Ldk9EeVVkbVdKRFd1MDV"
-        }
-      ],
-      "ageMin": 66,
-      "_cand": {
-        "key": "rss:lizzy-mcalpine-unveils-new-single-the-light-in-the-painting-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "BroadwayWorld"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "BroadwayWorld",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "music-news-bts-arirang-world-tour-normal-live-performance-video",
-      "slug": "bts-unveils-live-performance-video-for-new-song-normal-amidst-arirang-",
-      "title": "BTS Unveils Live Performance Video for New Song 'Normal' Amidst ARIRANG World Tour",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bts-arirang-world-tour-normal-live-performance-video",
-      "primaryKeyword": "BTS new song",
-      "primaryEntity": "Bts",
-      "entities": [
-        "BTS",
-        "ARIRANG World Tour"
-      ],
-      "angle": "BTS drops a live performance video for their new song 'Normal' amidst their ARIRANG World Tour.",
-      "tmdbType": "movie",
-      "source": "gnews:NDTV",
-      "sources": [
-        {
-          "outlet": "NDTV",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSzJaWnlMOUQ0OVFsREx5OGtNZFM5a0c0Tk9pU2tvdURZek1wSVBKeGJsdUUxak1BcXFBY0FwM0I1TnE0R0dLM1VXRjVETFVXRFFZUlgwVE1ibjMtaDRCNC15cDNoeVRGVDBtVEp5a3JEUzdWcUpPU0JMUzZzT1daejJpbnduNDBORFRZaGUtRThqVkhGOGwyQzQ1QmxrSXVBa0VsT2JRRFA3NmI2ajBCWWpvYXB1ZG1BRDJ3TkhxdndNSUZwVC1iUtIB0AFBVV95cUxNeldpYnNNQy1QaWdsX0FUU2NLUTc5bjdscVdhQ05RcXdWSnRZZ014MENnNjNkWkNfOTl1QTNiNGhXUm1IelFqRGpxS2k2dDZJVlVlZlo1cFI1QmxsbmxXUER0aXZoMVd5NENzZzNfRTBZc1dLUXRaNnAxUmU5amt6VGZXb3Vkb1VZbklFdWVjN0xzWVlyRlZqaWxIM1RCa3QyMER6a0d2VnFNUVZuTHJ4NU5hZkhuUGVVSTZydk9BOWh3b0c0THB1Nl9uWTBuM3h4?oc=5",
-          "ageMin": 117,
-          "headline": "Amid ARIRANG World Tour, BTS Unveils Live Performance Video For New Song Titled Normal - NDTV",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOSzJaWnlMOUQ0OVFsREx5OGtNZFM5a0c0Tk9pU2tvdURZek1wSVBKeGJsdUUxak1BcXFBY0FwM0I1TnE0R0dLM1VXRjVETFVXRFFZUlgwVE1ibjMtaDRCNC15cDNoeVRGVDBtVEp5a3JEUzdWcUpPU0JMUzZzT1daejJpbnduNDBORFRZaGUtRThqVkhGOGwyQzQ1QmxrSXVBa0VsT2JRRFA3NmI2ajBCWWpvYXB1ZG1BRDJ"
-        }
-      ],
-      "ageMin": 117,
-      "_cand": {
-        "key": "rss:amid-arirang-world-tour-bts-unveils-live-performance-video-f",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "NDTV"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "NDTV",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-stewie-family-guy-spinoff-voice-cast",
-      "slug": "family-guy-spinoff-stewie-sets-voice-cast",
-      "title": "'Family Guy' Spinoff 'Stewie' Sets Voice Cast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "stewie-family-guy-spinoff-voice-cast",
-      "primaryKeyword": "Stewie Family Guy spinoff cast",
-      "primaryEntity": "Stewie Griffin: The Untold Story",
+      "eventSlug": "days-of-thunder-2-jonathan-levine-tom-cruise",
+      "primaryKeyword": "days of thunder 2",
+      "primaryEntity": "Days of Thunder 2",
       "entities": [
-        "Stewie",
-        "Family Guy"
+        "Tom Cruise",
+        "Jonathan Levine"
       ],
-      "angle": "The voice cast for the upcoming 'Family Guy' spinoff 'Stewie' has been announced.",
+      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the upcoming racing sequel 'Days of Thunder 2'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
+          "ageMin": 1435,
+          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
+        }
+      ],
+      "ageMin": 1435,
+      "_cand": {
+        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-criminal-minds-evolution-voit-exit-season-2-details",
+      "slug": "criminal-minds-evolution-boss-explains-voit-s-exit-shares-season-2-det",
+      "title": "'Criminal Minds: Evolution' Boss Explains Voit's Exit, Shares Season 2 Details",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "criminal-minds-evolution-voit-exit-season-2-details",
+      "primaryKeyword": "Criminal Minds: Evolution",
+      "primaryEntity": "Criminal Minds",
+      "entities": [
+        "Criminal Minds: Evolution",
+        "Shemar Moore",
+        "Joe Mantegna"
+      ],
+      "angle": "Exclusive details on the departure of a key character and insights into the upcoming season of 'Criminal Minds: Evolution'.",
       "tmdbType": "movie",
       "source": "gnews:TV Insider",
       "sources": [
         {
           "outlet": "TV Insider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5",
-          "ageMin": 390,
-          "headline": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5\" target=\"_blank\" ‘Family Guy’ Spinoff ‘Stewie’ Set"
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNMXp1aUtNS2hrdjRyN2dRS05JUkRtMFA5elF0T0M2QnhEZzJidnJ6b2hVa25MRDVodGFSNW9neDRMVmtpRkRJSTEzc2EtVlRWNTNwZEtMNjhUMmoyc3Rjd2hoTlF6ZXpnLXBjeWZKZXFPTGk1TzBWMTdCbEFuU0FQckxZTEtNWVMzQ2hHOVhSY1VMTUxYNXFmbUZNMDFWNFQzMzBRdQ?oc=5",
+          "ageMin": 211,
+          "headline": "'Criminal Minds: Evolution' Boss Explains Voit's Exit, Shares Season 20 Details (Exclusive) - TV Insider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNMXp1aUtNS2hrdjRyN2dRS05JUkRtMFA5elF0T0M2QnhEZzJidnJ6b2hVa25MRDVodGFSNW9neDRMVmtpRkRJSTEzc2EtVlRWNTNwZEtMNjhUMmoyc3Rjd2hoTlF6ZXpnLXBjeWZKZXFPTGk1TzBWMTdCbEFuU0FQckxZTEtNWVMzQ2hHOVhSY1VMTUxYNXFmbUZNMDFWNFQzMzBRdQ?oc=5\" target=\"_blank\" 'Crimi"
         }
       ],
-      "ageMin": 390,
+      "ageMin": 211,
       "_cand": {
-        "key": "rss:-family-guy-spinoff-stewie-sets-voice-cast-tv-insider",
+        "key": "rss:-criminal-minds-evolution-boss-explains-voit-s-exit-shares-s",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -780,15 +1150,84 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 66,
       "signals": {
-        "recency": 4,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 6,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "radar": 16
+      },
+      "radarKind": "tv-episode-soon",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-venice-film-festival-2026-lineup-announcement",
+      "slug": "venice-film-festival-unveils-star-studded-2026-lineup",
+      "title": "Venice Film Festival Unveils Star-Studded 2026 Lineup",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "venice-film-festival-2026-lineup-announcement",
+      "primaryKeyword": "Venice Film Festival lineup",
+      "primaryEntity": "Venice Film Festival",
+      "entities": [
+        "Danny Boyle",
+        "Martin McDonagh",
+        "Oasis"
+      ],
+      "angle": "The Venice Film Festival has revealed its full 2026 lineup, featuring new films from acclaimed directors and a documentary on the Oasis reunion tour.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/venice-film-festival-unveils-2026-lineup-1236653842/",
+          "ageMin": 451,
+          "headline": "Robert Pattinson, Penélope Cruz, Alicia Vikander and Oasis Lead All-Star Venice Lineup",
+          "summary": "New films from Martin McDonagh, Florian Zeller, Werner Herzog, and Danny Boyle are among the competition stand outs, with non-fiction highlights including a film on the Oasis reunion tour and Alex Gibney's long-gestating Elon Musk doc."
+        }
+      ],
+      "ageMin": 451,
+      "_cand": {
+        "key": "rss:robert-pattinson-pen-lope-cruz-alicia-vikander-and-oasis-lea",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -796,7 +1235,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-parasyte-the-grey-follow-up-netflix-yeon-sang-ho",
+      "id": "news-netflix-yeon-sang-ho-parasyte-tamiya-series",
       "slug": "netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
       "title": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
       "contentType": "news",
@@ -805,15 +1244,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "parasyte-the-grey-follow-up-netflix-yeon-sang-ho",
-      "primaryKeyword": "Parasyte: The Grey",
+      "eventSlug": "netflix-yeon-sang-ho-parasyte-tamiya-series",
+      "primaryKeyword": "parasyte the grey",
       "primaryEntity": "Parasyte: The Grey",
       "entities": [
-        "Netflix",
         "Yeon Sang-ho",
         "Shioli Kutsuna"
       ],
-      "angle": "Netflix is expanding its 'Parasyte' universe with a new series focusing on the character Ryoko Tamiya.",
+      "angle": "Netflix is reteaming with Yeon Sang-ho for a follow-up series to 'Parasyte: The Grey,' focusing on the character Ryoko Tamiya.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -821,12 +1259,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
-          "ageMin": 991,
+          "ageMin": 1051,
           "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
           "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
         }
       ],
-      "ageMin": 991,
+      "ageMin": 1051,
       "_cand": {
         "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
         "popularity": 0,
@@ -863,67 +1301,64 @@
       "tierClass": "C"
     },
     {
-      "id": "news-disney-espn-toy-story-athletes-unlimited-softball",
-      "slug": "disney-espn-lend-toy-story-boost-to-athletes-unlimited-softball-league",
-      "title": "Disney, ESPN Lend 'Toy Story' Boost to Athletes Unlimited Softball League",
+      "id": "news-resident-evil-director-zach-cregger-hardest-scene",
+      "slug": "resident-evil-director-zach-cregger-reveals-the-movie-s-hardest-scene-",
+      "title": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "disney-espn-toy-story-athletes-unlimited-softball",
-      "primaryKeyword": "Toy Story Athletes Unlimited Softball",
-      "primaryEntity": "Athletes Unlimited Softball League",
+      "eventSlug": "resident-evil-director-zach-cregger-hardest-scene",
+      "primaryKeyword": "resident evil",
+      "primaryEntity": "Resident Evil (film series)",
       "entities": [
-        "Walt Disney",
-        "Disney",
-        "ESPN",
-        "Toy Story"
+        "Zach Cregger"
       ],
-      "angle": "Disney and ESPN are integrating 'Toy Story' characters into broadcasts of the Athletes Unlimited Softball League championship series.",
+      "angle": "Director Zach Cregger reveals the most challenging scene to film for the 'Resident Evil' movie.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:SlashFilm",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/disney-espn-toy-story-boost-athletes-unlimited-softball-1236818681/",
+          "outlet": "SlashFilm",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5",
           "ageMin": 91,
-          "headline": "Disney, ESPN Lend Toy Story Boost to Athletes Unlimited Softball League",
-          "summary": "When ABC this Saturday shows the first game in the annual championship series of the Athletes Unlimited Softball League, it will do so with a few special guests in tow. Woody and Jessie, the famous Toy Story characters, will lead a pregame parade featuring youth softball players, and also take part in the ceremonial first [ ]"
+          "headline": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot - SlashFilm",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5\" target=\"_blank\" Resident Evil Dir"
         }
       ],
       "ageMin": 91,
       "_cand": {
-        "key": "rss:disney-espn-lend-toy-story-boost-to-athletes-unlimited-softb",
+        "key": "rss:resident-evil-director-zach-cregger-reveals-the-movie-s-hard",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "SlashFilm"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "SlashFilm",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 59,
       "signals": {
         "recency": 16,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -931,127 +1366,126 @@
       "tierClass": "C"
     },
     {
-      "id": "news-nigel-uncle-roger-ng-signs-with-caa",
-      "slug": "youtuber-nigel-uncle-roger-ng-signs-with-caa",
-      "title": "YouTuber Nigel Uncle Roger Ng Signs With CAA",
+      "id": "news-coyote-vs-acme-hollywood-saga",
+      "slug": "how-coyote-vs-acme-became-a-real-life-david-vs-goliath-hollywood-saga",
+      "title": "How 'Coyote vs. Acme' Became a Real-Life David vs. Goliath Hollywood Saga",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "nigel-uncle-roger-ng-signs-with-caa",
-      "primaryKeyword": "nigel uncle roger ng",
-      "primaryEntity": "Nigel Ng",
+      "eventSlug": "coyote-vs-acme-hollywood-saga",
+      "primaryKeyword": "Coyote vs. Acme",
+      "primaryEntity": "Coyote vs. Acme (film)",
       "entities": [
-        "Wheels on Meals",
-        "CAA"
+        "Looney Tunes: Back in Action",
+        "Warner Bros. Discovery",
+        "Looney Tunes"
       ],
-      "angle": "Digital creator Nigel Ng, known as Uncle Roger, has signed with Creative Artists Agency.",
+      "angle": "Detail the complex and dramatic journey of the film 'Coyote vs. Acme' as a Hollywood industry story.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:Den of Geek",
       "sources": [
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/business/business-news/youtuber-nigel-uncle-roger-ng-caa-1236654824/",
-          "ageMin": 47,
-          "headline": "YouTuber Nigel Uncle Roger Ng Signs With CAA (Exclusive)",
-          "summary": "The U.S.-based stand up comic and digital creator has over 26 million social media followers."
+          "outlet": "Den of Geek",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3VMdTNZWEtYV2poUlNNdDAzUmRwMm9GdEVibm5pMTcwc2RTYlJsTXA3TnpEb0pudXgyNWFzMWRPYTUxcTIzY0ZMbll5cVNNeUppMTRuaDd3X0NCY3lNbmU4OW1qcFRNUENpQUhQUFpzLXdZeXU5NmNTVVE0b1ZTa0hxck13bExqZmZjd0tvNUZpSEF4aUt3?oc=5",
+          "ageMin": 211,
+          "headline": "How Coyote vs. Acme Became a Real-Life David vs. Goliath Hollywood Saga - Den of Geek",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNR3VMdTNZWEtYV2poUlNNdDAzUmRwMm9GdEVibm5pMTcwc2RTYlJsTXA3TnpEb0pudXgyNWFzMWRPYTUxcTIzY0ZMbll5cVNNeUppMTRuaDd3X0NCY3lNbmU4OW1qcFRNUENpQUhQUFpzLXdZeXU5NmNTVVE0b1ZTa0hxck13bExqZmZjd0tvNUZpSEF4aUt3?oc=5\" target=\"_blank\" How Coyote vs. Acme Beca"
         }
       ],
-      "ageMin": 47,
+      "ageMin": 211,
       "_cand": {
-        "key": "rss:youtuber-nigel-uncle-roger-ng-signs-with-caa-exclusive-",
+        "key": "rss:how-coyote-vs-acme-became-a-real-life-david-vs-goliath-holly",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Den of Geek"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Den of Geek",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 52,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-jonathan-davis-marries-brittany-parisi",
-      "slug": "korn-s-jonathan-davis-marries-brittany-parisi",
-      "title": "Korn's Jonathan Davis Marries Brittany Parisi",
+      "id": "news-margaret-qualley-jack-antonoff-breakup-appearance",
+      "slug": "margaret-qualley-makes-first-appearance-since-jack-antonoff-breakup",
+      "title": "Margaret Qualley makes first appearance since Jack Antonoff breakup",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "marriage",
+      "eventType": "breakup",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jonathan-davis-marries-brittany-parisi",
-      "primaryKeyword": "jonathan davis wedding",
-      "primaryEntity": "Jonathan Davis",
+      "eventSlug": "margaret-qualley-jack-antonoff-breakup-appearance",
+      "primaryKeyword": "margaret qualley",
+      "primaryEntity": "Margaret Qualley",
       "entities": [
-        "Brittany Parisi",
-        "Korn"
+        "Jack Antonoff"
       ],
-      "angle": "Korn frontman Jonathan Davis has married his longtime girlfriend, jewelry designer Brittany Parisi.",
+      "angle": "Margaret Qualley makes her first public appearance following news of her breakup with Jack Antonoff.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Entertainment Weekly",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/photos/korn-jonathan-davis-wedding-brittany-parisi-photos-exclusive-1236300624/",
-          "ageMin": 31,
-          "headline": "Korn s Jonathan Davis Marries Longtime Girlfriend Brittany Parisi: See Photos From the Cliffside Wedding (Exclusive)",
-          "summary": "The rocker and jewelry designer have been dating since 2019."
+          "outlet": "Entertainment Weekly",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONnJuSVRUdnl6RjUwS1FTU09DVU0ybzlMMzRJY0MwNGJJNU1vUDR2LVUxX05sbFBjSDFxVWNZdTJEak5Ib3M5RU1QOTVWVVhaQUUtaVFsZWttMjlMS0xJTC1HSlN5MTdXSHpYQk5RV2QycGVDQVQ0bFBQaVR4UTdUX0Z2TzhKMkxyRW5mSnpmNy1PZWsycXFEdldBZ1NYcThtWjlFMm1YbUxXR1FkQ1dN?oc=5",
+          "ageMin": 58,
+          "headline": "Margaret Qualley makes first appearance since Jack Antonoff breakup - Entertainment Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxONnJuSVRUdnl6RjUwS1FTU09DVU0ybzlMMzRJY0MwNGJJNU1vUDR2LVUxX05sbFBjSDFxVWNZdTJEak5Ib3M5RU1QOTVWVVhaQUUtaVFsZWttMjlMS0xJTC1HSlN5MTdXSHpYQk5RV2QycGVDQVQ0bFBQaVR4UTdUX0Z2TzhKMkxyRW5mSnpmNy1PZWsycXFEdldBZ1NYcThtWjlFMm1YbUxXR1FkQ1dN?oc=5\" target=\""
         }
       ],
-      "ageMin": 31,
+      "ageMin": 58,
       "_cand": {
-        "key": "rss:korn-s-jonathan-davis-marries-longtime-girlfriend-brittany-p",
+        "key": "rss:margaret-qualley-makes-first-appearance-since-jack-antonoff-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Entertainment Weekly"
         ],
-        "maxTier": 7,
+        "maxTier": 6,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Entertainment Weekly",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 60,
       "signals": {
         "recency": 24,
-        "corroboration": 12,
+        "corroboration": 10,
         "status": 18,
         "type": 8,
         "pop": 0,
@@ -1064,75 +1498,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-weird-al-yankovic-turned-down-saudi-arabia-performance-offer",
-      "slug": "weird-al-yankovic-turned-down-million-dollar-offer-to-perform-in-saudi",
-      "title": "Weird Al Yankovic Turned Down Million-Dollar Offer to Perform in Saudi Arabia: I Don’t Need to Take Any Money if It Makes Me Feel Icky",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "weird-al-yankovic-turned-down-saudi-arabia-performance-offer",
-      "primaryKeyword": "weird al yankovic",
-      "primaryEntity": "'Weird Al' Yankovic",
-      "entities": [
-        "Weird Al Yankovic"
-      ],
-      "angle": "Weird Al Yankovic revealed he turned down a seven-figure offer to perform in Saudi Arabia due to ethical concerns.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/weird-al-yankovic-turned-down-million-offer-saudi-arabia-1236819281/",
-          "ageMin": 53,
-          "headline": "Weird Al Yankovic Turned Down Million-Dollar Offer to Perform in Saudi Arabia: I Don’t Need to Take Any Money if It Makes Me Feel Icky",
-          "summary": "After Weird Al Yankovic made headlines this month for backing out of an ad for AI software, the musical satirist revealed he also turned down an offer worth at least $1 million to perform at the Riyadh Comedy Festival in Saudi Arabia last year. I wish people would offer me things that I didn’t feel [ ]"
-        }
-      ],
-      "ageMin": 53,
-      "_cand": {
-        "key": "rss:weird-al-yankovic-turned-down-million-dollar-offer-to-perfor",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 2,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-shania-twain-fallon-dirty-rosie",
-      "slug": "shania-twain-performs-rousing-single-dirty-rosie-on-fallon",
-      "title": "Shania Twain Performs Rousing Single ‘Dirty Rosie’ on ‘Fallon’",
+      "id": "news-shania-twain-dirty-rosie-fallon-performance",
+      "slug": "shania-twain-performs-dirty-rosie-on-fallon",
+      "title": "Shania Twain Performs 'Dirty Rosie' on 'Fallon'",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1140,13 +1508,13 @@
       "eventType": "performance",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "shania-twain-fallon-dirty-rosie",
-      "primaryKeyword": "Shania Twain",
+      "eventSlug": "shania-twain-dirty-rosie-fallon-performance",
+      "primaryKeyword": "Shania Twain Fallon",
       "primaryEntity": "Shania Twain",
       "entities": [
         "The Tonight Show Starring Jimmy Fallon"
       ],
-      "angle": "Shania Twain delivers a powerful performance of 'Dirty Rosie' on The Tonight Show.",
+      "angle": "Shania Twain delivered a rousing performance of her new single 'Dirty Rosie' on 'The Tonight Show Starring Jimmy Fallon'.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1154,12 +1522,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/shania-twain-dirty-rosie-performance-fallon-1235597635/",
-          "ageMin": 554,
+          "ageMin": 613,
           "headline": "Shania Twain Performs Rousing Single ‘Dirty Rosie’ on ‘Fallon’",
           "summary": "The country singer also discussed opening for Harry Styles and missing Taylor Swift’s wedding"
         }
       ],
-      "ageMin": 554,
+      "ageMin": 613,
       "_cand": {
         "key": "rss:shania-twain-performs-rousing-single-dirty-rosie-on-fallon-",
         "popularity": 0,
@@ -1198,59 +1566,61 @@
       "tierClass": "A"
     },
     {
-      "id": "news-josh-duhamel-rooting-for",
-      "slug": "josh-duhamel-the-celebrity-you-can-t-help-but-root-for",
-      "title": "Josh Duhamel: The Celebrity You Can't Help But Root For",
+      "id": "news-francois-arnaud-under-armour-brand-ambassador",
+      "slug": "fran-ois-arnaud-named-global-brand-ambassador-for-under-armour",
+      "title": "François Arnaud Named Global Brand Ambassador for Under Armour",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "josh-duhamel-rooting-for",
-      "primaryKeyword": "josh duhamel",
-      "primaryEntity": "Josh Duhamel",
-      "entities": [],
-      "angle": "An article discusses actor Josh Duhamel and the public's enduring affection for him.",
+      "eventSlug": "francois-arnaud-under-armour-brand-ambassador",
+      "primaryKeyword": "francois arnaud",
+      "primaryEntity": "François Arnaud",
+      "entities": [
+        "Under Armour"
+      ],
+      "angle": "Actor François Arnaud, known for 'Heated Rivalry,' has been named the global brand ambassador for Under Armour.",
       "tmdbType": "movie",
-      "source": "gnews:Totally The Bomb",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Totally The Bomb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBkMmVqWUJkTDB0UXVZdnFhNTFVc2hZZ3ZxcEllb3huZFE5UWpGbmstdXg1R2tacmxlSkhHMlc0dERTWEtOMnhfN19ES25jVGVobU9GNVlTR1Z5VXJNZHJKSDFZNldYQUpWRU5HeE12dw?oc=5",
-          "ageMin": 22,
-          "headline": "Josh Duhamel and the celebrity you never stop quietly rooting for - Totally The Bomb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFBkMmVqWUJkTDB0UXVZdnFhNTFVc2hZZ3ZxcEllb3huZFE5UWpGbmstdXg1R2tacmxlSkhHMlc0dERTWEtOMnhfN19ES25jVGVobU9GNVlTR1Z5VXJNZHJKSDFZNldYQUpWRU5HeE12dw?oc=5\" target=\"_blank\" Josh Duhamel and the celebrity you never stop quietly rooting for /a nbsp; nbs"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/style/heated-rivalry-francois-arnaud-brand-ambassador-under-armour-1236655002/",
+          "ageMin": 91,
+          "headline": "‘Heated Rivalry’ Star François Arnaud Named Global Brand Ambassador of Under Armour",
+          "summary": "The actor is also headlining the brand’s “For When It’s Hot” campaign."
         }
       ],
-      "ageMin": 22,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:josh-duhamel-and-the-celebrity-you-never-stop-quietly-rootin",
+        "key": "rss:-heated-rivalry-star-fran-ois-arnaud-named-global-brand-amba",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Totally The Bomb"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Totally The Bomb",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 55,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1261,38 +1631,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ozzy-osbourne-death-anniversary-sharon-advice",
-      "slug": "sharon-osbourne-reveals-advice-ozzy-gave-her-to-remember-him",
-      "title": "Sharon Osbourne Reveals Advice Ozzy Gave Her to Remember Him",
+      "id": "news-jonathan-davis-brittany-parisi-wedding",
+      "slug": "korn-s-jonathan-davis-marries-brittany-parisi-in-cliffside-wedding",
+      "title": "Korn's Jonathan Davis Marries Brittany Parisi in Cliffside Wedding",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
+      "eventType": "marriage",
+      "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "ozzy-osbourne-death-anniversary-sharon-advice",
-      "primaryKeyword": "Ozzy Osbourne",
-      "primaryEntity": "Ozzy Osbourne",
+      "eventSlug": "jonathan-davis-brittany-parisi-wedding",
+      "primaryKeyword": "jonathan davis",
+      "primaryEntity": "Jonathan Davis",
       "entities": [
-        "Sharon Osbourne"
+        "Brittany Parisi",
+        "Korn"
       ],
-      "angle": "Sharon Osbourne shares poignant advice from Ozzy Osbourne on the anniversary of his death.",
+      "angle": "Korn frontman Jonathan Davis married his longtime girlfriend, jewelry designer Brittany Parisi, in a cliffside ceremony.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/sharon-osbourne-ozzy-death-anniversary-remember-him-1235597623/",
-          "ageMin": 709,
-          "headline": "Sharon Osbourne Reveals Advice Ozzy Gave Her to Remember Him",
-          "summary": "The Prince of Darkness died a year ago today at age 76"
+          "url": "https://www.billboard.com/photos/korn-jonathan-davis-wedding-brittany-parisi-photos-exclusive-1236300624/",
+          "ageMin": 91,
+          "headline": "Korn s Jonathan Davis Marries Longtime Girlfriend Brittany Parisi: See Photos From the Cliffside Wedding (Exclusive)",
+          "summary": "The rocker and jewelry designer have been dating since 2019."
         }
       ],
-      "ageMin": 709,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:sharon-osbourne-reveals-advice-ozzy-gave-her-to-remember-him",
+        "key": "rss:korn-s-jonathan-davis-marries-longtime-girlfriend-brittany-p",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1302,86 +1673,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-becca-tobin-birth",
-      "slug": "celebrity-babies-of-2026-glee-alum-becca-tobin-and-more-stars-who-expa",
-      "title": "Celebrity Babies of 2026: ‘Glee’ Alum Becca Tobin and More Stars Who Expanded Their Families",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "birth",
-      "sensitivity": "normal",
-      "eventSlug": "becca-tobin-birth",
-      "primaryKeyword": "celebrity babies 2026",
-      "primaryEntity": "Becca Tobin",
-      "entities": [
-        "Glee"
-      ],
-      "angle": "Celebrity babies born in 2026, including Glee alum Becca Tobin.",
-      "tmdbType": "movie",
-      "source": "gnews:City of Statesville",
-      "sources": [
-        {
-          "outlet": "City of Statesville",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9uWjZSaHBYR3pydGhHWUNvaFlYN1dxSEhUVHNaa05tV0pDRVN4UFN6cTJpcVZ0WF9qMEQxODhXbEItQWJWbGtYWHRBeVh0dnNzS3N6RA?oc=5",
-          "ageMin": 102,
-          "headline": "Statesville Public Power Improves Storm Readiness While Saving Taxpayer Dollars - City of Statesville",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiVEFVX3lxTE9uWjZSaHBYR3pydGhHWUNvaFlYN1dxSEhUVHNaa05tV0pDRVN4UFN6cTJpcVZ0WF9qMEQxODhXbEItQWJWbGtYWHRBeVh0dnNzS3N6RA?oc=5\" target=\"_blank\" Statesville Public Power Improves Storm Readiness While Saving Taxpayer Dollars /a nbsp; nbsp; font color=\"#6f6f6f"
-        }
-      ],
-      "ageMin": 102,
-      "_cand": {
-        "key": "rss:statesville-public-power-improves-storm-readiness-while-savi",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "City of Statesville"
-        ],
-        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "City of Statesville",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 48,
+      "priority": 54,
       "signals": {
         "recency": 16,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 6,
+        "type": 8,
         "pop": 0,
         "breakout": 0,
         "big": 0,
