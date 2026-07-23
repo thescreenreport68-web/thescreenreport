@@ -1,0 +1,74 @@
+{
+  "id": "news-toronto-film-festival-primetime-program-carrie-slow-horses-crystal-lak",
+  "slug": "mike-flanagan-s-carrie-and-crystal-lake-join-toronto-film-festival-s-p",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 201w < 220",
+        "Flesch 35 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 185w < 220",
+        "Flesch 34 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Toronto Film Festival",
+    "work": null,
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 185,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 40,
+      "avgSentence": 21,
+      "flesch": 34,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 185w < 220",
+        "Flesch 34 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 173162
+}
