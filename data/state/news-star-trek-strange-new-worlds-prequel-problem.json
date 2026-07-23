@@ -1,10 +1,62 @@
 {
   "id": "news-star-trek-strange-new-worlds-prequel-problem",
-  "slug": "star-trek-strange-new-worlds-takes-a-new-tact-to-combat-an-old-prequel",
-  "status": "rejected_editorial",
-  "stages": {},
-  "holdReason": "editorial gate: stale: not current news — The core of the article is a review/opinion piece about the creative direction and perceived problems of an ongoing TV show, not a report of a new, concrete event. While it mentions Season 5 being the final season, this is presented as an existing fact within the context of the review, not a new announcement.",
-  "ms": 2338,
+  "slug": "star-trek-strange-new-worlds-tackles-prequel-challenges-with-episodic-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Star Trek: Strange New Worlds",
+    "work": {
+      "title": "Star Trek: Strange New Worlds",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "indiewire.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 328,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 44,
+      "avgSentence": 22,
+      "flesch": 48,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 39382,
   "previousRuns": [
     {
       "id": "news-star-trek-strange-new-worlds-prequel-problem",
@@ -21,6 +73,14 @@
       "stages": {},
       "holdReason": "editorial gate: stale: not current news — The text is a review/opinion piece about an ongoing TV show, not reporting a new concrete event. It discusses the show's themes and character arcs, and mentions a future season count, but this is presented as context within the review, not as a breaking news item.",
       "ms": 3325
+    },
+    {
+      "id": "news-star-trek-strange-new-worlds-prequel-problem",
+      "slug": "star-trek-strange-new-worlds-takes-a-new-tact-to-combat-an-old-prequel",
+      "status": "rejected_editorial",
+      "stages": {},
+      "holdReason": "editorial gate: stale: not current news — The core of the article is a review/opinion piece about the creative direction and perceived problems of an ongoing TV show, not a report of a new, concrete event. While it mentions Season 5 being the final season, this is presented as an existing fact within the context of the review, not a new announcement.",
+      "ms": 2338
     }
   ]
 }
