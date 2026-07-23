@@ -1944,11 +1944,11 @@
    "key": "they-will-kill-you-now-streaming|NOW-STREAMING",
    "eventSlug": "they-will-kill-you-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 152 < 180 (owner-set ~200-word minimum) | soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 2,
-   "at": "2026-07-23T07:05:06.717Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T01:37:35.395Z"
+   "reason": "words 144 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-23T13:49:17.275Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T13:49:17.275Z"
   },
   {
    "key": "house-of-the-dragon-trending-tv|TRENDING-TV",
@@ -2354,11 +2354,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 13,
-   "at": "2026-07-23T13:33:30.788Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 14,
+   "at": "2026-07-23T13:47:29.010Z",
    "dead": true,
-   "expiresAt": "2026-07-26T13:33:30.788Z"
+   "expiresAt": "2026-07-26T13:47:29.010Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2375,28 +2375,37 @@
    "reason": "soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-23T13:42:46.332Z"
+  },
+  {
+   "key": "ransom-canyon-trending-tv|TRENDING-TV",
+   "eventSlug": "ransom-canyon-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 102 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 1,
+   "at": "2026-07-23T13:52:24.968Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.16256
+  "usd": 0.2016
  },
  "pace": {
-  "tokens": 2.2989315873015874,
-  "lastMs": 1784813471574
+  "tokens": 2.560780742857143,
+  "lastMs": 1784814313232
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
   "laDay": "2026-07-23",
   "byFilm": {
-   "they will kill you": 2,
+   "they will kill you": 3,
    "the mandalorian and grogu": 3,
    "lee cronin's the mummy": 1,
    "lucky": 1,
    "descendants: wicked wonderland": 1,
    "a day like no other": 1,
-   "star trek: strange new worlds": 1
+   "star trek: strange new worlds": 1,
+   "ransom canyon": 1
   }
  }
 }
