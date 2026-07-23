@@ -1596,11 +1596,11 @@
    "key": "off-campus-trending-tv|TRENDING-TV",
    "eventSlug": "off-campus-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T20:05:32.154Z",
-   "dead": false,
-   "expiresAt": "2026-07-22T19:39:06.282Z"
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-23T00:34:51.507Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T00:34:51.507Z"
   },
   {
    "key": "ride-or-die-trending-tv|TRENDING-TV",
@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 136,
-   "at": "2026-07-23T00:03:26.208Z",
+   "reason": "words 169 < 180 (owner-set ~200-word minimum)",
+   "tries": 137,
+   "at": "2026-07-23T00:32:48.510Z",
    "dead": true,
-   "expiresAt": "2026-07-26T00:03:26.208Z"
+   "expiresAt": "2026-07-26T00:32:48.510Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2193,14 +2193,14 @@
    "at": "2026-07-22T22:35:06.959Z"
   }
  ],
- "zeroStreak": 25,
+ "zeroStreak": 26,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.47653
+  "usd": 0.50336
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784764862541
+  "lastMs": 1784766662697
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2220,7 +2220,7 @@
    "project hail mary": 1,
    "wwe: unreal": 1,
    "star wars: the mandalorian and grogu | a special look": 1,
-   "off campus": 1,
+   "off campus": 2,
    "x-men '97": 2
   }
  }
