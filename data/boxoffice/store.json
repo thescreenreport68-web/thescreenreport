@@ -1801,9 +1801,9 @@
    "eventSlug": "house-of-the-dragon-trending-tv",
    "form": "TRENDING-TV",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-20T04:42:26.295Z",
-   "dead": true,
+   "tries": 2,
+   "at": "2026-07-23T05:09:43.570Z",
+   "dead": false,
    "expiresAt": "2026-07-23T04:42:26.295Z"
   },
   {
@@ -1865,10 +1865,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 145,
-   "at": "2026-07-23T04:32:48.046Z",
+   "tries": 146,
+   "at": "2026-07-23T05:03:03.505Z",
    "dead": true,
-   "expiresAt": "2026-07-26T04:32:48.046Z"
+   "expiresAt": "2026-07-26T05:03:03.505Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -1947,8 +1947,8 @@
    "eventSlug": "descendants-wicked-wonderland-bo-opening",
    "form": "BO-OPENING",
    "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
-   "tries": 1,
-   "at": "2026-07-21T11:35:26.064Z"
+   "tries": 2,
+   "at": "2026-07-23T05:06:02.004Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-a-special-look-trending-tv|TRENDING-TV",
@@ -2195,14 +2195,14 @@
    "expiresAt": "2026-07-26T03:08:29.248Z"
   }
  ],
- "zeroStreak": 34,
+ "zeroStreak": 35,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.5452
+  "usd": 0.56994
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784781063390
+  "lastMs": 1784782861549
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2225,7 +2225,9 @@
    "off campus": 2,
    "x-men '97": 3,
    "they will kill you": 3,
-   "spider-man: brand new day": 1
+   "spider-man: brand new day": 1,
+   "descendants: wicked wonderland": 1,
+   "house of the dragon": 1
   }
  }
 }
