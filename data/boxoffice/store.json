@@ -1860,11 +1860,11 @@
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
    "eventSlug": "lee-cronin-s-the-mummy-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 166 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-23T11:37:04.608Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T07:06:57.090Z"
+   "reason": "words 165 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-23T16:08:46.531Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T16:08:46.531Z"
   },
   {
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
@@ -2354,11 +2354,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 19,
-   "at": "2026-07-23T15:32:58.888Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 20,
+   "at": "2026-07-23T16:03:57.712Z",
    "dead": true,
-   "expiresAt": "2026-07-26T15:32:58.888Z"
+   "expiresAt": "2026-07-26T16:03:57.712Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2372,9 +2372,9 @@
    "key": "star-trek-strange-new-worlds-trending-tv|TRENDING-TV",
    "eventSlug": "star-trek-strange-new-worlds-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "soft-floor humanVoice 4 < 5",
-   "tries": 1,
-   "at": "2026-07-23T13:42:46.332Z"
+   "reason": "words 167 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 2,
+   "at": "2026-07-23T16:11:33.571Z"
   },
   {
    "key": "ransom-canyon-trending-tv|TRENDING-TV",
@@ -2383,16 +2383,24 @@
    "reason": "words 102 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
    "tries": 1,
    "at": "2026-07-23T13:52:24.968Z"
+  },
+  {
+   "key": "masters-of-the-universe-now-streaming|NOW-STREAMING",
+   "eventSlug": "masters-of-the-universe-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-23T16:06:11.243Z"
   }
  ],
- "zeroStreak": 10,
+ "zeroStreak": 11,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.21441
+  "usd": 0.28258
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784820665845
+  "lastMs": 1784822475759
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2400,13 +2408,14 @@
   "byFilm": {
    "they will kill you": 3,
    "the mandalorian and grogu": 3,
-   "lee cronin's the mummy": 1,
+   "lee cronin's the mummy": 2,
    "lucky": 1,
    "descendants: wicked wonderland": 1,
    "a day like no other": 1,
-   "star trek: strange new worlds": 1,
+   "star trek: strange new worlds": 2,
    "ransom canyon": 1,
-   "dhamaal 4": 1
+   "dhamaal 4": 1,
+   "masters of the universe": 1
   }
  }
 }
