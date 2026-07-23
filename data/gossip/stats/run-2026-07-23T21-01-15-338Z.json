@@ -1,0 +1,140 @@
+{
+  "ts": "2026-07-23T21:01:15.338Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jordyn-lucas-vs-skai-jackson-streamer-university-drama-gets-heated-then-per",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-number:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.008841,
+  "costPerPublished": 0.008841,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 4,
+      "in": 7832,
+      "out": 319,
+      "usd": 0.0031471
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 5214,
+      "out": 1715,
+      "usd": 0.0008653249999999999
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 4,
+      "in": 11450,
+      "out": 3482,
+      "usd": 0.0040287378
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5337,
+      "out": 666,
+      "usd": 0.0008001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2343,
+      "out": 197,
+      "usd": 0.0011954,
+      "ms": 1386
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 975,
+      "out": 451,
+      "usd": 0.00016893,
+      "ms": 21490
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 1,
+      "in": 10471,
+      "out": 3078,
+      "usd": 0.0026591500000000003,
+      "ms": 126586
+    },
+    "verify": {
+      "calls": 3,
+      "errors": 0,
+      "in": 5489,
+      "out": 122,
+      "usd": 0.0019517000000000002,
+      "ms": 3318
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1463,
+      "out": 307,
+      "usd": 0.00026910000000000004,
+      "ms": 3465
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 731,
+      "out": 317,
+      "usd": 0.00027591,
+      "ms": 11001
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 401,
+      "out": 124,
+      "usd": 0.0000897,
+      "ms": 910
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 209,
+      "out": 45,
+      "usd": 0.000038900000000000004,
+      "ms": 513
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2097,
+      "out": 86,
+      "usd": 0.00024410000000000002,
+      "ms": 2211
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1167,
+      "out": 104,
+      "usd": 0.0001583,
+      "ms": 2593
+    }
+  }
+}
