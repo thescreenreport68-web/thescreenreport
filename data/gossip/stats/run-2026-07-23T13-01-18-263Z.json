@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-23T13:01:18.263Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "armie-hammers-comeback-film-sparks-new-wave-of-online-trolling",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-number:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.026938,
+  "costPerPublished": 0.026938,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15616,
+      "out": 2888,
+      "usd": 0.011904800000000002
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 962,
+      "out": 718,
+      "usd": 0.00033572
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 19421,
+      "out": 6735,
+      "usd": 0.0138630575
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 5653,
+      "out": 672,
+      "usd": 0.0008340999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2322,
+      "out": 188,
+      "usd": 0.0011665999999999998,
+      "ms": 3546
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 962,
+      "out": 718,
+      "usd": 0.00021582,
+      "ms": 9261
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 18878,
+      "out": 6434,
+      "usd": 0.0065295,
+      "ms": 297482
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 13294,
+      "out": 2700,
+      "usd": 0.010738200000000002,
+      "ms": 22093
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2680,
+      "out": 413,
+      "usd": 0.0004332,
+      "ms": 2420
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 543,
+      "out": 301,
+      "usd": 0.00022723,
+      "ms": 16857
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 375,
+      "out": 82,
+      "usd": 0.00007030000000000001,
+      "ms": 628
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 191,
+      "out": 54,
+      "usd": 0.0000407,
+      "ms": 481
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2076,
+      "out": 90,
+      "usd": 0.0002436,
+      "ms": 1557
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 1,
+      "in": 331,
+      "out": 33,
+      "usd": 0.00004630000000000001,
+      "ms": 2952
+    }
+  }
+}
