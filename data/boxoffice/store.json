@@ -1850,10 +1850,10 @@
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
    "eventSlug": "descendants-wicked-wonderland-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 129 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 3,
-   "at": "2026-07-20T12:09:28.997Z",
-   "dead": true,
+   "reason": "platform: names disney+ not in confirmed providers",
+   "tries": 2,
+   "at": "2026-07-23T13:09:39.823Z",
+   "dead": false,
    "expiresAt": "2026-07-23T12:09:28.997Z"
   },
   {
@@ -2354,30 +2354,31 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "words 158 < 180 (owner-set ~200-word minimum)",
-   "tries": 11,
-   "at": "2026-07-23T12:32:38.052Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 12,
+   "at": "2026-07-23T13:03:00.800Z",
    "dead": true,
-   "expiresAt": "2026-07-26T12:32:38.052Z"
+   "expiresAt": "2026-07-26T13:03:00.800Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.12899
+  "usd": 0.14125
  },
  "pace": {
-  "tokens": 1.1780032317460318,
-  "lastMs": 1784809868590
+  "tokens": 1.741120253968254,
+  "lastMs": 1784811678609
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
   "laDay": "2026-07-23",
   "byFilm": {
    "they will kill you": 1,
-   "the mandalorian and grogu": 2,
+   "the mandalorian and grogu": 3,
    "lee cronin's the mummy": 1,
-   "lucky": 1
+   "lucky": 1,
+   "descendants: wicked wonderland": 1
   }
  }
 }
