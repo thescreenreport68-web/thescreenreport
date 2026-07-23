@@ -1864,11 +1864,11 @@
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 141,
-   "at": "2026-07-23T02:32:44.504Z",
+   "reason": "words 163 < 180 (owner-set ~200-word minimum)",
+   "tries": 142,
+   "at": "2026-07-23T03:03:14.667Z",
    "dead": true,
-   "expiresAt": "2026-07-26T02:32:44.504Z"
+   "expiresAt": "2026-07-26T03:03:14.667Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2188,19 +2188,21 @@
    "key": "x-men-97-trending-tv|TRENDING-TV",
    "eventSlug": "x-men-97-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "6 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-22T22:35:06.959Z"
+   "reason": "words 82 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-23T03:08:29.248Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T03:08:29.248Z"
   }
  ],
- "zeroStreak": 30,
+ "zeroStreak": 31,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.51491
+  "usd": 0.53601
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784773863056
+  "lastMs": 1784775661492
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2221,8 +2223,8 @@
    "wwe: unreal": 1,
    "star wars: the mandalorian and grogu | a special look": 1,
    "off campus": 2,
-   "x-men '97": 2,
-   "they will kill you": 2
+   "x-men '97": 3,
+   "they will kill you": 3
   }
  }
 }
