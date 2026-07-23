@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-23T03:01:16.506Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "noah-kahan-apologizes-for-canceled-nyc-show-vows-to-play-in-a-volcano",
+      "category": "music",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.014113,
+  "costPerPublished": 0.014113,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15987,
+      "out": 1858,
+      "usd": 0.009441100000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1022,
+      "out": 1135,
+      "usd": 0.000322616
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15361,
+      "out": 5025,
+      "usd": 0.0037256290499999996
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 6,
+      "in": 4204,
+      "out": 507,
+      "usd": 0.0006232000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4461,
+      "out": 435,
+      "usd": 0.0024258,
+      "ms": 2991
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1022,
+      "out": 1135,
+      "usd": 0.00029627999999999995,
+      "ms": 16241
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14712,
+      "out": 4710,
+      "usd": 0.004985160000000001,
+      "ms": 168325
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11526,
+      "out": 1423,
+      "usd": 0.0070153,
+      "ms": 8910
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1437,
+      "out": 162,
+      "usd": 0.0002085,
+      "ms": 968
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 649,
+      "out": 315,
+      "usd": 0.00025637,
+      "ms": 12413
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 380,
+      "out": 123,
+      "usd": 0.0000872,
+      "ms": 788
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 206,
+      "out": 55,
+      "usd": 0.0000426,
+      "ms": 477
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1575,
+      "out": 89,
+      "usd": 0.0001931,
+      "ms": 2647
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 606,
+      "out": 78,
+      "usd": 0.00009180000000000001,
+      "ms": 1072
+    }
+  }
+}
