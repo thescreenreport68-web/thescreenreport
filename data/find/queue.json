@@ -1,10 +1,85 @@
 {
-  "runId": "run-2026-07-23T21-31-09",
-  "builtAt": "2026-07-23T21:33:47.132Z",
-  "count": 28,
+  "runId": "run-2026-07-23T22-31-03",
+  "builtAt": "2026-07-23T22:32:27.944Z",
+  "count": 21,
   "topics": [
     {
-      "id": "news-zosia-mamet-joins-industry-season-5",
+      "id": "news-johnny-depp-ebenezer-scrooge-comic-con",
+      "slug": "johnny-depp-surprises-san-diego-comic-con-in-character-as-ebenezer-scr",
+      "title": "Johnny Depp Surprises San Diego Comic-Con in Character as Ebenezer Scrooge",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "johnny-depp-ebenezer-scrooge-comic-con",
+      "primaryKeyword": "Johnny Depp Ebenezer Scrooge Comic-Con",
+      "primaryEntity": "Johnny Depp",
+      "entities": [
+        "Ebenezer Scrooge",
+        "Ti West"
+      ],
+      "angle": "Johnny Depp made a surprise appearance at San Diego Comic-Con dressed as Ebenezer Scrooge for Ti West's upcoming film.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/johnny-depp-san-diego-comic-con-appearance-ebenezer/",
+          "ageMin": 30,
+          "headline": "Johnny Depp Surprises San Diego Comic-Con in Character as Ebenezer Scrooge",
+          "summary": "The actor plays the surly Charles Dickens character in Ti West's upcoming big screen adaptation The post Johnny Depp Surprises San Diego Comic-Con in Character as Ebenezer Scrooge appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/johnny-depp-comic-con-surprise-ebenezer-scrooge-1236819764/",
+          "ageMin": 33,
+          "headline": "Johnny Depp Makes Surprise Comic-Con Appearance as Ebenezer Scrooge",
+          "summary": "Johnny Depp made a surprise appearance at San Diego Comic-Con on Thursday — in his full Ebenezer Scrooge regalia. Depp plays Scrooge in the upcoming Paramount movie, Ebenezer, directed by Ti West, which debuts in theaters this November. The actor appeared outside of a shop called Scrooge and Marley in San Diego s Gaslamp district around [ ]"
+        }
+      ],
+      "ageMin": 30,
+      "_cand": {
+        "key": "rss:johnny-depp-surprises-san-diego-comic-con-in-character-as-eb",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 25,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-industry-season-5-casting-zosia-mamet",
       "slug": "zosia-mamet-joins-final-season-of-hbo-s-industry",
       "title": "Zosia Mamet Joins Final Season of HBO's 'Industry'",
       "contentType": "news",
@@ -13,37 +88,37 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "zosia-mamet-joins-industry-season-5",
-      "primaryKeyword": "Zosia Mamet Industry",
-      "primaryEntity": "Industry (TV Series)",
+      "eventSlug": "industry-season-5-casting-zosia-mamet",
+      "primaryKeyword": "industry season 5",
+      "primaryEntity": "Industry (TV series)",
       "entities": [
         "Zosia Mamet",
         "HBO"
       ],
       "angle": "Zosia Mamet joins the cast of the final season of HBO's finance drama 'Industry'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/",
-          "ageMin": 151,
-          "headline": "Zosia Mamet Joins ‘Industry’ Season 5",
-          "summary": "The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season."
-        },
         {
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/industry-season-5-cast-zosia-mamet-1236819510/",
-          "ageMin": 151,
+          "ageMin": 211,
           "headline": "Industry Season 5 Casts Zosia Mamet",
           "summary": "Zosia Mamet has joined the upcoming fifth season of Industry at HBO, Variety has learned. As previously announced, Season 5 of the British finance industry drama will be its last. Mamet will play Carmen Dame, who is described as a fitness influencer turned wellness tech founder and CEO. The series cast also includes: Myha’la, Marisa [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/",
+          "ageMin": 211,
+          "headline": "Zosia Mamet Joins ‘Industry’ Season 5",
+          "summary": "The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season."
         }
       ],
-      "ageMin": 151,
+      "ageMin": 211,
       "_cand": {
-        "key": "rss:zosia-mamet-joins-industry-season-5",
+        "key": "rss:industry-season-5-casts-zosia-mamet",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -53,19 +128,19 @@
         "tier1Owners": 1,
         "outletCount": 2,
         "outlets": [
-          "THR",
-          "Variety"
+          "Variety",
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 92,
+      "priority": 85,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 18,
         "status": 18,
         "type": 14,
@@ -79,372 +154,38 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-marvels-wolverine-story-trailer",
-      "slug": "marvel-s-wolverine-gets-a-bloody-new-story-trailer",
-      "title": "‘Marvel’s Wolverine’ Gets a Bloody New Story Trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "marvels-wolverine-story-trailer",
-      "primaryKeyword": "marvel's wolverine trailer",
-      "primaryEntity": "Deadpool & Wolverine",
-      "entities": [
-        "Marvel's Wolverine (Video Game)",
-        "PlayStation"
-      ],
-      "angle": "A new story trailer has been released for the highly anticipated video game 'Marvel's Wolverine'.",
-      "tmdbType": "movie",
-      "source": "gnews:Gizmodo",
-      "sources": [
-        {
-          "outlet": "Gizmodo",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYjZKN3lsY0JrOVpFWWNXU3hBSkhzRkFMLTVfWmRxQlJBRUQ1QzNsZDJtMm03amd0TDF3SGJ6UWZ6SWIzcWdYZ2QzN3BHdVJrODBPZElmS2szSFJFWFVHSC1NU2puSVN4c1M5SUx5bWMxOGJIM0VuRkhqa3Uwa3VEWEhDVVFpSTlac0I0?oc=5",
-          "ageMin": 5,
-          "headline": "‘Marvel’s Wolverine’ Gets a Bloody New Story Trailer - Gizmodo",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYjZKN3lsY0JrOVpFWWNXU3hBSkhzRkFMLTVfWmRxQlJBRUQ1QzNsZDJtMm03amd0TDF3SGJ6UWZ6SWIzcWdYZ2QzN3BHdVJrODBPZElmS2szSFJFWFVHSC1NU2puSVN4c1M5SUx5bWMxOGJIM0VuRkhqa3Uwa3VEWEhDVVFpSTlac0I0?oc=5\" target=\"_blank\" ‘Marvel’s Wolverine’ Gets a Bloody New S"
-        }
-      ],
-      "ageMin": 5,
-      "_cand": {
-        "key": "rss:-marvel-s-wolverine-gets-a-bloody-new-story-trailer-gizmodo",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Gizmodo"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Gizmodo",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 89,
-      "signals": {
-        "recency": 30,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ramayana-adaptation-sony-release",
-      "slug": "sony-to-release-500-million-ramayana-adaptation",
-      "title": "Sony to Release $500 Million Ramayana Adaptation",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ramayana-adaptation-sony-release",
-      "primaryKeyword": "Ramayana adaptation",
-      "primaryEntity": "Ramayana",
-      "entities": [
-        "Sony",
-        "Namit Malhotra"
-      ],
-      "angle": "Sony is set to release a VFX-heavy adaptation of the epic Hindu poem Ramayana with a massive production budget.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/ramayana-adaptation-500-million-budget-sony-release-1235206903/",
-          "ageMin": 31,
-          "headline": "VFX Spectacle Ramayana Adaptation with $500 Million Production Budget to Be Released by Sony",
-          "summary": "Producer Namit Malhotra teased footage from the epic film based on the Hindu poem at San Diego Comic Con."
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:vfx-spectacle-ramayana-adaptation-with-500-million-productio",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-indian-epic-ramayana-sony-production",
-      "slug": "indian-epic-ramayana-lands-at-sony",
-      "title": "Indian Epic ‘Ramayana’ Lands at Sony",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "indian-epic-ramayana-sony-production",
-      "primaryKeyword": "ramayana movie",
-      "primaryEntity": "Ramayana",
-      "entities": [
-        "Sony Pictures",
-        "The Hollywood Reporter"
-      ],
-      "angle": "Sony Pictures is developing a major film adaptation of the Indian epic 'Ramayana'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPd29mMGdtUlpwQnU3eFg0TDlRWXQ4cElqNWxfcDRtNjJaM21Tb1R1QzFtM3M3Q05hck13NkZlc0k3WE5yLUY1X0sxc2h4S3NfeVNYSDhWaUFCdEo0bnpWZDZuR05SVXhYTmJMblJpcXA2OTBKU2lFOUhEMkQ4WHNuV3JHV1hXQ0RTaEFoczVlVQ?oc=5",
-          "ageMin": 30,
-          "headline": "Indian Epic ‘Ramayana’ Lands at Sony - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPd29mMGdtUlpwQnU3eFg0TDlRWXQ4cElqNWxfcDRtNjJaM21Tb1R1QzFtM3M3Q05hck13NkZlc0k3WE5yLUY1X0sxc2h4S3NfeVNYSDhWaUFCdEo0bnpWZDZuR05SVXhYTmJMblJpcXA2OTBKU2lFOUhEMkQ4WHNuV3JHV1hXQ0RTaEFoczVlVQ?oc=5\" target=\"_blank\" Indian Epic ‘Ramayana’ Lands at So"
-        }
-      ],
-      "ageMin": 30,
-      "_cand": {
-        "key": "rss:indian-epic-ramayana-lands-at-sony-the-hollywood-reporter",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-fog-city-casting",
-      "slug": "cooper-koch-angus-imrie-sarah-bolger-miranda-otto-carla-gugino-cast-in",
-      "title": "Cooper Koch, Angus Imrie, Sarah Bolger, Miranda Otto, Carla Gugino Cast in Noir Drama 'Fog City'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "fog-city-casting",
-      "primaryKeyword": "fog city casting",
-      "primaryEntity": "Fog City",
-      "entities": [
-        "Cooper Koch",
-        "Angus Imrie",
-        "Sarah Bolger",
-        "Miranda Otto"
-      ],
-      "angle": "San Francisco-set noir drama 'Fog City' has announced its main cast, including Cooper Koch, Angus Imrie, Sarah Bolger, Miranda Otto, and Carla Gugino.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/fog-city-cast-cooper-koch-miranda-otto-carla-gugino-1237001462/",
-          "ageMin": 31,
-          "headline": "Cooper Koch, Angus Imrie, Sarah Bolger, Miranda Otto Carla Gugino Set For San Francisco Noir Drama Fog City From Dan Pritzker",
-          "summary": "EXCLUSIVE: Cooper Koch (Monsters: The Lyle and Erik Menendez Story), Angus Imrie (Emma.), Sarah Bolger (The Westies), Miranda Otto (The Lord of the Rings franchise), and Carla Gugino (The Adventures of Cliff Booth) have signed on to star in Fog City, a new noir drama from filmmaker Dan Pritzker. Set during the construction of the Golden Gate Bridge [ ]"
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:cooper-koch-angus-imrie-sarah-bolger-miranda-otto-carla-gugi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 86,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-lizard-music-casting-alicia-silverstone-tim-heidecker",
-      "slug": "alicia-silverstone-tim-heidecker-latest-to-join-benny-safdie-s-lizard-",
-      "title": "Alicia Silverstone, Tim Heidecker Latest To Join Benny Safdie's Lizard Music",
+      "id": "news-destin-daniel-cretton-sadie-sink-spiderman-role",
+      "slug": "secrecy-around-sadie-sink-s-role-improves-spider-man-brand-new-day-say",
+      "title": "Secrecy Around Sadie Sink's Role Improves 'Spider-Man: Brand New Day,' Says Director",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "lizard-music-casting-alicia-silverstone-tim-heidecker",
-      "primaryKeyword": "Lizard Music casting",
-      "primaryEntity": "Lizard Music",
+      "eventSlug": "destin-daniel-cretton-sadie-sink-spiderman-role",
+      "primaryKeyword": "Spider-Man: Brand New Day",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Benny Safdie",
-        "Alicia Silverstone",
-        "Tim Heidecker"
+        "Destin Daniel Cretton",
+        "Sadie Sink"
       ],
-      "angle": "Alicia Silverstone and Tim Heidecker are the latest additions to the cast of Benny Safdie's 'Lizard Music'.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/lizard-music-movie-cast-alicia-silverstone-tim-heidecker-1237001897/",
-          "ageMin": 81,
-          "headline": "Alicia Silverstone Tim Heidecker Latest To Join Benny Safdie s Lizard Music",
-          "summary": "EXCLUSIVE: Alicia Silverstone and Tim Heidecker are the latest to join Lizard Music, Benny Safdie s live-action/CGI hybrid adaptation of the novel by Daniel Pinkwater. Character details are under wraps. Earlier this week, we announced that 10-year-old Theo Clark Leber had landed the lead role opposite Dwayne Johnson, who s also producing. Safdie adapted the screenplay for Lizard Music, which [ ]"
-        }
-      ],
-      "ageMin": 81,
-      "_cand": {
-        "key": "rss:alicia-silverstone-tim-heidecker-latest-to-join-benny-safdie",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 84,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-avatar-seven-havens-series-fall-premiere",
-      "slug": "new-avatar-animated-series-seven-havens-gets-fall-premiere-date-and-te",
-      "title": "New Avatar Animated Series 'Seven Havens' Gets Fall Premiere Date and Teaser",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "avatar-seven-havens-series-fall-premiere",
-      "primaryKeyword": "Avatar Seven Havens",
-      "primaryEntity": "Avatar: Seven Havens",
-      "entities": [
-        "Paramount+",
-        "Michael Dante DiMartino",
-        "Bryan Konietzko"
-      ],
-      "angle": "Paramount+ announces a fall premiere date and releases a teaser for the new Avatar animated series.",
+      "angle": "Director Destin Daniel Cretton believes the secrecy surrounding Sadie Sink's role in 'Spider-Man: Brand New Day' enhances the film.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/avatar-animated-series-seven-havens-teaser-premiere-date-1236655385/",
-          "ageMin": 30,
-          "headline": "New Avatar Animated Series at Paramount+ Lands Fall Premiere Date, Releases Teaser",
-          "summary": "'Avatar: Seven Havens' comes from creators Michael Dante DiMartino and Bryan Konietzko."
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/spider-man-brand-new-day-sadie-sink-role-1236654512/",
+          "ageMin": 284,
+          "headline": "Destin Daniel Cretton Believes Secrecy Around Sadie Sink’s Role Makes ‘Spider-Man: Brand New Day’ a Better Movie",
+          "summary": "Five few years ago, Tobey Maguire and Andrew Garfield were kept out of the marketing for 'No Way Home.' Marvel and Sony are somewhat repeating that playbook for the 'Stranger Things' star's mystery part."
         }
       ],
-      "ageMin": 30,
+      "ageMin": 284,
       "_cand": {
-        "key": "rss:new-avatar-animated-series-at-paramount-lands-fall-premiere-",
+        "key": "rss:destin-daniel-cretton-believes-secrecy-around-sadie-sink-s-r",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -463,168 +204,36 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 89,
       "signals": {
-        "recency": 24,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-dink-premieres-apple-tv",
-      "slug": "director-josh-greenbaum-wanted-to-make-the-dink-the-best-in-show-of-pi",
-      "title": "Director Josh Greenbaum Wanted to Make 'The Dink' the Best in Show of Pickleball",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-dink-premieres-apple-tv",
-      "primaryKeyword": "The Dink",
-      "primaryEntity": "The Dink (film)",
-      "entities": [
-        "Josh Greenbaum",
-        "Jake Johnson",
-        "Apple TV+"
-      ],
-      "angle": "Director Josh Greenbaum aimed for a 'Best in Show' quality for the new pickleball movie.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/the-dink-josh-greenbaum-interview-apple-tv/",
-          "ageMin": 150,
-          "headline": "The Dink Director Josh Greenbaum Wanted to Make the Best in Show of Pickleball",
-          "summary": "The new movie starring Jake Johnson premieres Friday on Apple TV The post The Dink Director Josh Greenbaum Wanted to Make the Best in Show of Pickleball appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 150,
-      "_cand": {
-        "key": "rss:the-dink-director-josh-greenbaum-wanted-to-make-the-best-in-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 12
       },
-      "tierClass": "B"
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
     },
     {
-      "id": "music-news-hypno5e-lost-fires-trame-noire-album",
-      "slug": "hypno5e-debut-lost-fires-music-video-new-album-trame-noire-due-in-nove",
-      "title": "HYPNO5E Debut \"Lost Fires\" Music Video, New Album \"Trame Noire\" Due In November",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "hypno5e-lost-fires-trame-noire-album",
-      "primaryKeyword": "hypno5e new album",
-      "primaryEntity": "Hypno5e",
-      "entities": [
-        "HYPNO5E",
-        "Trame Noire"
-      ],
-      "angle": "French progressive metal band HYPNO5E releases a new music video and announces their upcoming album.",
-      "tmdbType": "movie",
-      "source": "gnews:Theprp.com",
-      "sources": [
-        {
-          "outlet": "Theprp.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcTNTUmJXaW5WbTcwd2huNTdaUW1LRzBzdWFRVy1GQkhpVVEtWG5xRl9mdEJPaEJDbUloYUh5djRXOXo3MThaZVRfMEwtZEdhbWhKTE5TbFJGTzQ0X1ZWbWJnVVN1QmhsRFVKSnpGeUNCcEtzNzA2c2xnX0V4QXp2NTlPbk5yX0FJMGJ1X0hCc0pKZkk4Z0V1dmRLRlF3ZXFDeWc1cU9QTmlKTXhPNmtuRmZzdEI?oc=5",
-          "ageMin": 30,
-          "headline": "HYPNO5E Debut \"Lost Fires\" Music Video, New Album \"Trame Noire\" Due In November - Theprp.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNcTNTUmJXaW5WbTcwd2huNTdaUW1LRzBzdWFRVy1GQkhpVVEtWG5xRl9mdEJPaEJDbUloYUh5djRXOXo3MThaZVRfMEwtZEdhbWhKTE5TbFJGTzQ0X1ZWbWJnVVN1QmhsRFVKSnpGeUNCcEtzNzA2c2xnX0V4QXp2NTlPbk5yX0FJMGJ1X0hCc0pKZkk4Z0V1dmRLRlF3ZXFDeWc1cU9QTmlKTXhPNmtuRmZzdEI?oc=5\" t"
-        }
-      ],
-      "ageMin": 30,
-      "_cand": {
-        "key": "rss:hypno5e-debut-lost-fires-music-video-new-album-trame-noire-d",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Theprp.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Theprp.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-myron-bolitar-series-adds-melissa-benoist-bebe-neuwith-jamie-hector-qu",
+      "id": "news-myron-bolitar-series-casting-additions",
       "slug": "melissa-benoist-bebe-neuwirth-among-10-new-cast-members-for-netflix-s-",
-      "title": "Melissa Benoist, Bebe Neuwirth Among 10 New Cast Members for Netflix's 'Myron Bolitar'",
+      "title": "Melissa Benoist, Bebe Neuwirth Among 10 New Cast Members for Netflix's 'Myron Bolitar' Series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-series-adds-melissa-benoist-bebe-neuwith-jamie-hector-qu",
-      "primaryKeyword": "Myron Bolitar series casting",
-      "primaryEntity": "Myron Bolitar (TV Series)",
+      "eventSlug": "myron-bolitar-series-casting-additions",
+      "primaryKeyword": "myron bolitar series casting",
+      "primaryEntity": "Myron Bolitar (TV series)",
       "entities": [
         "Melissa Benoist",
         "Bebe Neuwirth",
@@ -639,12 +248,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/myron-bolitar-series-cast-melissa-benoist-bebe-neuwirth-1236819436/",
-          "ageMin": 211,
+          "ageMin": 271,
           "headline": "Myron Bolitar Series Adds 10 To Cast, Including Melissa Benoist, Bebe Neuwirth, Jamie Hector, Quincy Isaiah",
           "summary": "Netflix has added ten new cast members to its Myron Bolitar series. Ra Mya Latiah Aikens ( Romeo and Juliet (Shakespeare in the Park)) has joined the show in a series regular role. In addition, the show has added nine recurring guest stars. They are: Isaiah Hill ( Swagger, One Spoon of Chocolate ), Amanda Warren ( East New York, [ ]"
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:myron-bolitar-series-adds-10-to-cast-including-melissa-benoi",
         "popularity": 0,
@@ -681,38 +290,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-nascar-movie-sequel-tom-cruise",
-      "slug": "nascar-s-most-iconic-movie-is-finally-getting-a-sequel-with-tom-cruise",
-      "title": "NASCAR’s Most Iconic Movie Is Finally Getting a Sequel With Tom Cruise",
+      "id": "news-marvel-news-san-diego-comic-con-2026",
+      "slug": "the-biggest-marvel-news-from-san-diego-comic-con-2026",
+      "title": "The Biggest Marvel News from San Diego Comic-Con 2026",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "nascar-movie-sequel-tom-cruise",
-      "primaryKeyword": "NASCAR movie sequel",
-      "primaryEntity": "NASCAR",
+      "eventSlug": "marvel-news-san-diego-comic-con-2026",
+      "primaryKeyword": "Marvel Comic-Con news",
+      "primaryEntity": "Marvel",
       "entities": [
-        "Tom Cruise",
-        "movie sequel"
+        "San Diego Comic-Con 2026"
       ],
-      "angle": "Tom Cruise is set to star in a sequel to an iconic NASCAR movie.",
+      "angle": "Marvel.com rounds up the most significant news and reveals from San Diego Comic-Con 2026, likely including updates on upcoming MCU projects.",
       "tmdbType": "movie",
-      "source": "gnews:Netflix",
+      "source": "gnews:Marvel.com",
       "sources": [
         {
-          "outlet": "Netflix",
+          "outlet": "Marvel.com",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5",
-          "ageMin": 154,
-          "headline": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5\" target=\"_blank\" Colin Woodell Will Star as Myron Bolitar in a New Harlan Cobe"
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcENNU1F6NzNScmFXb0NUcm5iMjlxTFptNkRkemtBNGp4amJBMW1HQ1hvTGh0SXVpdVJtS1dtSmFkbnpRLWJtTnRwb0JGdWQ4VnNoSDdRSF85QkpFOVUtaEpaNXFnRlJWbVVJYVNzLXdvdHc0cE5STlZYWDU1RzVPYWNYMU0yZWhVZTA0NVJ0Z1dzcDlwZDExc0FfUm4tOHRP?oc=5",
+          "ageMin": 119,
+          "headline": "The Biggest Marvel News from San Diego Comic-Con 2026 - Marvel.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOcENNU1F6NzNScmFXb0NUcm5iMjlxTFptNkRkemtBNGp4amJBMW1HQ1hvTGh0SXVpdVJtS1dtSmFkbnpRLWJtTnRwb0JGdWQ4VnNoSDdRSF85QkpFOVUtaEpaNXFnRlJWbVVJYVNzLXdvdHc0cE5STlZYWDU1RzVPYWNYMU0yZWhVZTA0NVJ0Z1dzcDlwZDExc0FfUm4tOHRP?oc=5\" target=\"_blank\" The Biggest "
         }
       ],
-      "ageMin": 154,
+      "ageMin": 119,
       "_cand": {
-        "key": "rss:colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-cob",
+        "key": "rss:the-biggest-marvel-news-from-san-diego-comic-con-2026-marvel",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -722,11 +330,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Netflix"
+          "Marvel.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Netflix",
+        "attribution": "Marvel.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -747,9 +355,9 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-wet-leg-rock-band-evolution",
-      "slug": "wet-leg-have-become-a-proper-rock-band",
-      "title": "Wet Leg have become a proper rock band",
+      "id": "music-news-beach-boys-cancel-summer-concerts",
+      "slug": "beach-boys-call-off-remainder-of-summer-concerts-to-recharge-before-re",
+      "title": "Beach Boys Call Off Remainder of Summer Concerts to Recharge Before Resuming in Fall",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -757,50 +365,51 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "wet-leg-rock-band-evolution",
-      "primaryKeyword": "wet leg band",
-      "primaryEntity": "Wet Leg",
+      "eventSlug": "beach-boys-cancel-summer-concerts",
+      "primaryKeyword": "The Beach Boys tour",
+      "primaryEntity": "The Beach Boys",
       "entities": [
-        "The Spectator"
+        "Mike Love"
       ],
-      "angle": "An analysis of the band Wet Leg's musical development and current status as a 'proper rock band'.",
+      "angle": "The touring version of The Beach Boys has canceled the remainder of their summer concerts to recharge.",
       "tmdbType": "movie",
-      "source": "gnews:The Spectator",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "The Spectator",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE53cV93RzNiWmkzSWhzOGthQnJzblViNzh1QzJ3YnlIMHpXZ2tNeTRTQXE3dGo5TVViNVNTV0ozN2xtaE45eUdXWnk3Nm85RzlLbGt1WHZlcDVOelhqbnNxeGk1RUxNNGt3SEdRQnR2dUZxNHJtUWVpMw?oc=5",
-          "ageMin": 42,
-          "headline": "Wet Leg have become a proper rock band - The Spectator",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE53cV93RzNiWmkzSWhzOGthQnJzblViNzh1QzJ3YnlIMHpXZ2tNeTRTQXE3dGo5TVViNVNTV0ozN2xtaE45eUdXWnk3Nm85RzlLbGt1WHZlcDVOelhqbnNxeGk1RUxNNGt3SEdRQnR2dUZxNHJtUWVpMw?oc=5\" target=\"_blank\" Wet Leg have become a proper rock band /a nbsp; nbsp; font color=\""
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/news/beach-boys-cancel-postpone-summer-concerts-tour-1236819730/",
+          "ageMin": 115,
+          "headline": "Beach Boys Call Off Remainder of Summer Concerts to Recharge Before Resuming in Fall",
+          "summary": "The Beach Boys endless summer has run into a hitch. The touring version of the group, led by sole remaining original member Mike Love, has called off six weeks worth of concerts scheduled for this summer, amounting to nearly 30 dates, citing the need to recharge before hitting the road again in the fall. The [ ]"
         }
       ],
-      "ageMin": 42,
+      "ageMin": 115,
       "_cand": {
-        "key": "rss:wet-leg-have-become-a-proper-rock-band-the-spectator",
+        "key": "rss:beach-boys-call-off-remainder-of-summer-concerts-to-recharge",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Spectator"
+          "Variety"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Spectator",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 51,
       "signals": {
-        "recency": 24,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -813,40 +422,37 @@
       "tierClass": "C"
     },
     {
-      "id": "news-harlan-coben-myron-bolitar-series-colin-woodell",
-      "slug": "colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-coben-series-",
-      "title": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
+      "id": "news-elon-musk-ai-odyssey-movie",
+      "slug": "elon-musk-says-his-ai-platform-will-create-historically-accurate-full-",
+      "title": "Elon Musk says his AI platform will create 'historically accurate' full-length 'Odyssey' movie",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "harlan-coben-myron-bolitar-series-colin-woodell",
-      "primaryKeyword": "Myron Bolitar series",
-      "primaryEntity": "Myron Bolitar",
+      "eventSlug": "elon-musk-ai-odyssey-movie",
+      "primaryKeyword": "elon musk odyssey movie",
+      "primaryEntity": "Odyssey (film)",
       "entities": [
-        "Harlan Coben's Shelter",
-        "Harlan Coben",
-        "Colin Woodell",
-        "Netflix"
+        "Elon Musk"
       ],
-      "angle": "Colin Woodell cast as the lead in a new Netflix series based on Harlan Coben's Myron Bolitar character.",
+      "angle": "Elon Musk announces his AI platform will create a full-length 'Odyssey' movie.",
       "tmdbType": "movie",
-      "source": "gnews:essence.com",
+      "source": "gnews:Fox News",
       "sources": [
         {
-          "outlet": "essence.com",
+          "outlet": "Fox News",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBhQ0lkLV9rS1c3YUZad0ZFUEJrTW1ydHpHOVp5WXVpSExjVm5UTUN1YXo0VzFYVWRsdURlT0pJVTcxS3JsUkRhZ2JIeU4xWVM2aWZEMzlwZUFZSThNOGRtd2VCVTRzUWxqMU1pa21QS0FZUQ?oc=5",
-          "ageMin": 91,
-          "headline": "‘Fightland,’ ‘All-American,’ ‘The Odyssey’ Premiere, And The Films And TV Shows To Watch This Month - essence.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTFBhQ0lkLV9rS1c3YUZad0ZFUEJrTW1ydHpHOVp5WXVpSExjVm5UTUN1YXo0VzFYVWRsdURlT0pJVTcxS3JsUkRhZ2JIeU4xWVM2aWZEMzlwZUFZSThNOGRtd2VCVTRzUWxqMU1pa21QS0FZUQ?oc=5\" target=\"_blank\" ‘Fightland,’ ‘All-American,’ ‘The Odyssey’ Premiere, And The Films And TV "
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVGp2OEI0TmtyVlZIWEd0VVAtTkhldVA3Y2g4S05BZVU5d09qeElqem5kLUhhWGdTRjd3cVpUZ0dMaHlic0dfQXFUVnhvVjlLd3dOVlA4dWMzYVFUMjlsTlV3Nk5acGZaOGt6TVJWQWdxTC1fa3h4amRhemEtVGRxYlMtWUhhcnRnQnpMTXpmN184NG1oQUpLT0hSb21qb3NyVVdKN3dsdmtELTNIazQycEo5VVPSAboBQVVfeXFMT0JhVWZSUGtEbV9KdVQwSGl2RWZSNm0zT0pJUEQ1MnhMZGJDRW5TN2xBT3V2c0kzZTVIU3V6MUhFSEFzV0p5V2FpYVE5RWxXUUsxemo2NlRwX2ZDRElOdjE2Sm93OFMtTjNXUElmbDAwSmtHcjg3dlBkZkR1S0xyQ2J3cTRqdU5ReUNJUWdqLXR3bXpHUFVLOVRBTzhKd3hibDBNU25KMXR5eWlLejZTV0xlcmE2VWhpTUFR?oc=5",
+          "ageMin": 245,
+          "headline": "Elon Musk says his AI platform will create 'historically accurate' full-length 'Odyssey' movie - Fox News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVGp2OEI0TmtyVlZIWEd0VVAtTkhldVA3Y2g4S05BZVU5d09qeElqem5kLUhhWGdTRjd3cVpUZ0dMaHlic0dfQXFUVnhvVjlLd3dOVlA4dWMzYVFUMjlsTlV3Nk5acGZaOGt6TVJWQWdxTC1fa3h4amRhemEtVGRxYlMtWUhhcnRnQnpMTXpmN184NG1oQUpLT0hSb21qb3NyVVdKN3dsdmtELTNIazQycEo5VVPSAboBQVV"
         }
       ],
-      "ageMin": 91,
+      "ageMin": 245,
       "_cand": {
-        "key": "rss:-fightland-all-american-the-odyssey-premiere-and-the-films-a",
+        "key": "rss:elon-musk-says-his-ai-platform-will-create-historically-accu",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -856,290 +462,19 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "essence.com"
+          "Fox News"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "essence.com",
+        "attribution": "Fox News",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 68,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-morning-show-season-5-finale",
-      "slug": "the-morning-show-to-end-with-season-5-in-2027",
-      "title": "The Morning Show to End With Season 5 in 2027",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "cancellation",
-      "sensitivity": "normal",
-      "eventSlug": "the-morning-show-season-5-finale",
-      "primaryKeyword": "the morning show",
-      "primaryEntity": "The Morning Show (TV series)",
-      "entities": [
-        "Jennifer Aniston",
-        "Reese Witherspoon",
-        "Steve Carell",
-        "Billy Crudup"
-      ],
-      "angle": "Apple TV+ drama 'The Morning Show' will conclude with its fifth season in 2027, with new cast members joining for the final run.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/the-morning-show-to-end-season-5-2027-1235206680/",
-          "ageMin": 331,
-          "headline": "The Morning Show to End with Season 5 in 2027",
-          "summary": "The final season will see series newcomers Jeff Daniels, Reneé Rapp, and Sean Hayes join the cast."
-        }
-      ],
-      "ageMin": 331,
-      "_cand": {
-        "key": "rss:the-morning-show-to-end-with-season-5-in-2027",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 11,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-destin-daniel-cretton-sadie-sink-spider-man-brand-new-day-secrecy",
-      "slug": "secrecy-around-sadie-sink-s-role-will-make-spider-man-brand-new-day-be",
-      "title": "Secrecy Around Sadie Sink's Role Will Make 'Spider-Man: Brand New Day' Better, Says Director",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "destin-daniel-cretton-sadie-sink-spider-man-brand-new-day-secrecy",
-      "primaryKeyword": "Spider-Man: Brand New Day",
-      "primaryEntity": "Spider-Man: Brand New Day",
-      "entities": [
-        "Destin Daniel Cretton",
-        "Sadie Sink"
-      ],
-      "angle": "Director Destin Daniel Cretton believes secrecy around Sadie Sink's role will enhance 'Spider-Man: Brand New Day'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-features/spider-man-brand-new-day-sadie-sink-role-1236654512/",
-          "ageMin": 224,
-          "headline": "Destin Daniel Cretton Believes Secrecy Around Sadie Sink’s Role Makes ‘Spider-Man: Brand New Day’ a Better Movie",
-          "summary": "Five few years ago, Tobey Maguire and Andrew Garfield were kept out of the marketing for 'No Way Home.' Marvel and Sony are somewhat repeating that playbook for the 'Stranger Things' star's mystery part."
-        }
-      ],
-      "ageMin": 224,
-      "_cand": {
-        "key": "rss:destin-daniel-cretton-believes-secrecy-around-sadie-sink-s-r",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 12
-      },
-      "radarKind": "movie-releasing",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-the-chi-other",
-      "slug": "how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side-of-chicag",
-      "title": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "the-chi-other",
-      "primaryKeyword": "The Chi",
-      "primaryEntity": "The Chi",
-      "entities": [
-        "Lena Waithe",
-        "Birgundi Baker",
-        "Jacob Latimore"
-      ],
-      "angle": "Creator and stars reflect on the legacy and upcoming finale of the Paramount+ series 'The Chi'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chi-series-finale-preview-lena-waithe-interview-1236654335/",
-          "ageMin": 37,
-          "headline": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
-          "summary": "Heading into the series finale, creator Lena Waithe along with stars Birgundi Baker and Jacob Latimore reflect on the Paramount+ show's legacy, and tease how it will all end."
-        }
-      ],
-      "ageMin": 37,
-      "_cand": {
-        "key": "rss:how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 65,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-snoop-dogg-biopic-summer-2027-release-universal",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release-universal",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
-      "entities": [
-        "Snoop Dogg",
-        "Jonathan Daviss",
-        "Craig Brewer"
-      ],
-      "angle": "Universal Pictures sets a Summer 2027 release for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 2881,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 2881,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -1152,74 +487,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-spider-man-brand-new-day-director-peter-yearbook",
-      "slug": "spider-man-brand-new-day-director-unsure-about-peter-s-yearbook-status",
-      "title": "Spider-Man: Brand New Day Director Unsure About Peter's Yearbook Status",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-director-peter-yearbook",
-      "primaryKeyword": "spider-man brand new day",
-      "primaryEntity": "Spider-Man: Brand New Day",
-      "entities": [
-        "Peter Parker"
-      ],
-      "angle": "The director of the upcoming Spider-Man animated film discusses a specific detail about Peter Parker's character.",
-      "tmdbType": "movie",
-      "source": "gnews:Kotaku",
-      "sources": [
-        {
-          "outlet": "Kotaku",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUVdDbzRuUmJ3cHRBMkNwVGlYb2g1V0xWcHVWRG54bEhlT21FSlFoNVlkMXRxZ08zVWtOQ0Q5VnRteTAzMzNxT2daVmFublBxRlBJTDdkc2M0OWdkUUI1cmY1Y2FxeEZ3X0xsWkREQTk5VjFaTmRnQ2lScXFFLXo1RFVPejNESlBvOWRUVGdqY1MzTXJnRUJwNEczaFc5UUZNNFgzYVNObl9PWXI2d3ZWY3ZoaHZjTWZ0dmpiS3Uzd0c4bk8zZTQ4NVVHbEpXc2VlSHcxMUZR?oc=5",
-          "ageMin": 295,
-          "headline": "Spider-Man Brand New Day Director Doesn't Know If Peter Is In His Yearbook Still - Kotaku",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxNUVdDbzRuUmJ3cHRBMkNwVGlYb2g1V0xWcHVWRG54bEhlT21FSlFoNVlkMXRxZ08zVWtOQ0Q5VnRteTAzMzNxT2daVmFublBxRlBJTDdkc2M0OWdkUUI1cmY1Y2FxeEZ3X0xsWkREQTk5VjFaTmRnQ2lScXFFLXo1RFVPejNESlBvOWRUVGdqY1MzTXJnRUJwNEczaFc5UUZNNFgzYVNObl9PWXI2d3ZWY3ZoaHZjTWZ0dmp"
-        }
-      ],
-      "ageMin": 295,
-      "_cand": {
-        "key": "rss:spider-man-brand-new-day-director-doesn-t-know-if-peter-is-i",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Kotaku"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Kotaku",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 12
-      },
-      "radarKind": "movie-releasing",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-stewie-family-guy-spin-off-casting",
+      "id": "news-stewie-casting-announced-for-family-guy-spin-off",
       "slug": "stewie-casting-announced-for-fox-s-family-guy-spin-off-series",
       "title": "Stewie: Casting Announced for FOX’s Family Guy Spin-Off Series",
       "contentType": "news",
@@ -1228,14 +496,14 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "stewie-family-guy-spin-off-casting",
-      "primaryKeyword": "family guy spin off",
+      "eventSlug": "stewie-casting-announced-for-family-guy-spin-off",
+      "primaryKeyword": "family guy spin off casting",
       "primaryEntity": "Family Guy Presents: Blue Harvest",
       "entities": [
         "Family Guy",
         "Stewie"
       ],
-      "angle": "Casting details revealed for the upcoming Family Guy spin-off series, 'Stewie'.",
+      "angle": "Casting announced for the animated spin-off series centered on Stewie",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
@@ -1243,12 +511,12 @@
           "outlet": "TV Series Finale",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQaXdVVnhYdTRwVzJMS2drTE10RzFhOU9GVVhIUXhzcnR3M0xSS0dPbTZyZ053ZkppWFFCbXd6SkpuNm5aVVRsQXhocjRONkplTldYeXViUlQ4R29rRDB0ejlQZmhkeWR4NU1KQkFteDlucF9GREk0TXlpOENjSjEzeFdZcm1FSS1vQUZfZkJ0cUhOTnhuenhadWZZNXTSAaIBQVVfeXFMTkpDd3ppUm5hOUhEdGphT1VfOUEtT1FoMm9oWHNYd2dpd2txX0JjZmpRSzJXSm5KdWlkWFpfZVkxN0JNMmN1dHg5SnFSUDhGcHJ4NFZ6dHFyeXJubTR5dDQ4MkZIYl9naUFqZFhoblRwNDNJaDdPWFE5RGlKSlVSNlFNa2JJZTcyVE5uNTZLeGFHT1F1YXJ5RHFfd29zSUtncld3?oc=5",
-          "ageMin": 452,
+          "ageMin": 512,
           "headline": "Stewie: Casting Announced for FOX’s Family Guy Spin-Off Series - TV Series Finale",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQaXdVVnhYdTRwVzJMS2drTE10RzFhOU9GVVhIUXhzcnR3M0xSS0dPbTZyZ053ZkppWFFCbXd6SkpuNm5aVVRsQXhocjRONkplTldYeXViUlQ4R29rRDB0ejlQZmhkeWR4NU1KQkFteDlucF9GREk0TXlpOENjSjEzeFdZcm1FSS1vQUZfZkJ0cUhOTnhuenhadWZZNXTSAaIBQVVfeXFMTkpDd3ppUm5hOUhEdGphT1VfOUE"
         }
       ],
-      "ageMin": 452,
+      "ageMin": 512,
       "_cand": {
         "key": "rss:stewie-casting-announced-for-fox-s-family-guy-spin-off-serie",
         "popularity": 0,
@@ -1285,9 +553,274 @@
       "tierClass": "B"
     },
     {
+      "id": "music-news-pain-of-truth-the-test-music-video-denzel-curry-cameo",
+      "slug": "pain-of-truth-drops-music-video-for-the-test-ft-denzel-curry-cameo",
+      "title": "PAIN OF TRUTH Drops Music Video for \"The Test\" Ft. Denzel Curry Cameo",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "pain-of-truth-the-test-music-video-denzel-curry-cameo",
+      "primaryKeyword": "Pain of Truth music video",
+      "primaryEntity": "Pain of Truth",
+      "entities": [
+        "Denzel Curry"
+      ],
+      "angle": "Hardcore band PAIN OF TRUTH drops a new music video for their track 'The Test,' featuring a cameo from rapper Denzel Curry.",
+      "tmdbType": "movie",
+      "source": "gnews:Lambgoat",
+      "sources": [
+        {
+          "outlet": "Lambgoat",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZmFzRmlQYkpFTVllNEJ0UGtFMkkwVjdNM1NXZXJtNVZZQVJrTjk3bV94UmdFNktBdXRUUWxUXzhnSVd4UjRJM0YxTGNFcVVwVVhjSWtXVmFZMUtRdTgyQWl4NG43UG92ZEtWcXZmZWZUcU43c2ZHU0w4MEpZVGR1UkM1bFRtT2dfMlM3M29kd2NOQ2NTeEw0ejlNQkR0cHp0WGRTWHhGSlJ4WVU?oc=5",
+          "ageMin": 109,
+          "headline": "PAIN OF TRUTH drop music video for \"The Test\" ft cameo from Denzel Curry - Lambgoat",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNZmFzRmlQYkpFTVllNEJ0UGtFMkkwVjdNM1NXZXJtNVZZQVJrTjk3bV94UmdFNktBdXRUUWxUXzhnSVd4UjRJM0YxTGNFcVVwVVhjSWtXVmFZMUtRdTgyQWl4NG43UG92ZEtWcXZmZWZUcU43c2ZHU0w4MEpZVGR1UkM1bFRtT2dfMlM3M29kd2NOQ2NTeEw0ejlNQkR0cHp0WGRTWHhGSlJ4WVU?oc=5\" target=\"_blan"
+        }
+      ],
+      "ageMin": 109,
+      "_cand": {
+        "key": "rss:pain-of-truth-drop-music-video-for-the-test-ft-cameo-from-de",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Lambgoat"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Lambgoat",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-tom-holland-fred-astaire-biopic-dancing",
+      "slug": "tom-holland-s-fred-astaire-biopic-is-next-will-do-all-of-the-dancing",
+      "title": "Tom Holland's Fred Astaire Biopic Is Next, Will Do All of the Dancing",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "tom-holland-fred-astaire-biopic-dancing",
+      "primaryKeyword": "tom holland fred astaire biopic",
+      "primaryEntity": "Fred Astaire Biopic",
+      "entities": [
+        "Captain Tsubasa Movie 05: The Most Powerful Opponent! Holland Youth",
+        "Tom Holland"
+      ],
+      "angle": "Tom Holland will perform all the dancing in his upcoming Fred Astaire biopic.",
+      "tmdbType": "movie",
+      "source": "gnews:Santa Fe New Mexican",
+      "sources": [
+        {
+          "outlet": "Santa Fe New Mexican",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRVJnOExiLXNKZm0wYmx4d3luWk9RR3ZKcUQzY2JhUmVPV3ZMTHRkR2R5bzQ5Q1pheXFlRUFzblJJeXE1STNXRTdPZUJ1LTJpeXNHRzUwaEtoUW5iX2lnYmc2UUg3UWw2SnBvcF9VVkJCV3F1ZFBSVF9MOEQ0bGVLcFhSRUZGQVd3Qml0UGxaRm5oUkRKbW5zY0lHUXNpOFo3WktkUUlpMkViX1VwLUhxVy00SlRKa29UNFRoNmdXZmw3d2hvRmZoQmlyVkp6Y1l6aXg5VzBHVWdjNkdEYmVaSllOX3A?oc=5",
+          "ageMin": 2245,
+          "headline": "Movies and TV shows casting this week in Los Angeles - Santa Fe New Mexican",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNRVJnOExiLXNKZm0wYmx4d3luWk9RR3ZKcUQzY2JhUmVPV3ZMTHRkR2R5bzQ5Q1pheXFlRUFzblJJeXE1STNXRTdPZUJ1LTJpeXNHRzUwaEtoUW5iX2lnYmc2UUg3UWw2SnBvcF9VVkJCV3F1ZFBSVF9MOEQ0bGVLcFhSRUZGQVd3Qml0UGxaRm5oUkRKbW5zY0lHUXNpOFo3WktkUUlpMkViX1VwLUhxVy00SlRKa29UNFR"
+        }
+      ],
+      "ageMin": 2245,
+      "_cand": {
+        "key": "rss:movies-and-tv-shows-casting-this-week-in-los-angeles-santa-f",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Santa Fe New Mexican"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Santa Fe New Mexican",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-the-chi-other",
+      "slug": "how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side-of-chicag",
+      "title": "How 'The Chi' Spotlighted Love, Hope and Loss on the South Side of Chicago",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "the-chi-other",
+      "primaryKeyword": "The Chi",
+      "primaryEntity": "The Chi",
+      "entities": [
+        "Lena Waithe",
+        "Birgundi Baker",
+        "Jacob Latimore"
+      ],
+      "angle": "Creator Lena Waithe and stars reflect on the legacy of 'The Chi' ahead of its series finale.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chi-series-finale-preview-lena-waithe-interview-1236654335/",
+          "ageMin": 97,
+          "headline": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
+          "summary": "Heading into the series finale, creator Lena Waithe along with stars Birgundi Baker and Jacob Latimore reflect on the Paramount+ show's legacy, and tease how it will all end."
+        }
+      ],
+      "ageMin": 97,
+      "_cand": {
+        "key": "rss:how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-charles-wesley-godwin-new-album-christian-name",
+      "slug": "charles-wesley-godwin-addresses-the-most-heartbreaking-loss-imaginable",
+      "title": "Charles Wesley Godwin Addresses the Most Heartbreaking Loss Imaginable on New Album",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "charles-wesley-godwin-new-album-christian-name",
+      "primaryKeyword": "Charles Wesley Godwin",
+      "primaryEntity": "Charles Wesley Godwin",
+      "entities": [
+        "Christian Name (album)"
+      ],
+      "angle": "Country singer Charles Wesley Godwin announces new album 'Christian Name' processing grief over stillborn son.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/charles-wesley-godwin-christian-name-family-faith-1235597742/",
+          "ageMin": 356,
+          "headline": "Charles Wesley Godwin Addresses the Most Heartbreaking Loss Imaginable",
+          "summary": "On his new album Christian Name , a record rooted in faith, the songwriter processes the grief of his stillborn son"
+        }
+      ],
+      "ageMin": 356,
+      "_cand": {
+        "key": "rss:charles-wesley-godwin-addresses-the-most-heartbreaking-loss-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
       "id": "news-star-wars-movie-prop-auction",
       "slug": "famous-star-wars-movie-prop-sells-for-nearly-4-million-at-auction",
-      "title": "Famous Star Wars Movie Prop Sells for Nearly $4 Million at Auction",
+      "title": "Famous Star Wars Movie Prop Sells For Nearly $4 Million at Auction",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
@@ -1308,12 +841,12 @@
           "outlet": "Wide Open Country",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOZGFtU2NwaFljalJvaEhYSlJjVXBwVktsX3QxbTZmM1hDUUdoMFU2cWVZMDdoQTNFSzRQTGlLQUUtQS15MFdqTl82VkM0T1FpM0NRQUhnWFMzVkxaRi1CalpDcG5SZnl6eTdUeURNcDN0Zi1zeVdQcXFqTGlfdzF1WjM3WVZiQUM0by1GV1VwZHprWEhfYWJfM1J4a21HZ1k?oc=5",
-          "ageMin": 78,
+          "ageMin": 138,
           "headline": "Famous \"Star Wars\" Movie Prop Sells For Nearly $4 Million at Auction - Wide Open Country",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxOZGFtU2NwaFljalJvaEhYSlJjVXBwVktsX3QxbTZmM1hDUUdoMFU2cWVZMDdoQTNFSzRQTGlLQUUtQS15MFdqTl82VkM0T1FpM0NRQUhnWFMzVkxaRi1CalpDcG5SZnl6eTdUeURNcDN0Zi1zeVdQcXFqTGlfdzF1WjM3WVZiQUM0by1GV1VwZHprWEhfYWJfM1J4a21HZ1k?oc=5\" target=\"_blank\" Famous \"Star "
         }
       ],
-      "ageMin": 78,
+      "ageMin": 138,
       "_cand": {
         "key": "rss:famous-star-wars-movie-prop-sells-for-nearly-4-million-at-au",
         "popularity": 0,
@@ -1350,38 +883,38 @@
       "tierClass": "C"
     },
     {
-      "id": "news-jim-henson-dark-crystal-sequel-vision",
-      "slug": "jim-henson-s-vision-for-dark-crystal-sequel-was-much-darker-than-first",
-      "title": "Jim Henson's Vision for Dark Crystal Sequel Was Much Darker Than First Movie",
+      "id": "news-ai-threat-hollywood-loop-groups",
+      "slug": "loop-groups-hollywood-s-invisible-heroes-could-be-under-threat-by-ai",
+      "title": "Loop Groups, Hollywood’s Invisible Heroes, Could Be Under Threat by AI",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "jim-henson-dark-crystal-sequel-vision",
-      "primaryKeyword": "Dark Crystal sequel vision",
-      "primaryEntity": "The Dark Crystal",
+      "eventSlug": "ai-threat-hollywood-loop-groups",
+      "primaryKeyword": "AI Hollywood loop groups",
+      "primaryEntity": "Hollywood",
       "entities": [
-        "Jim Henson",
-        "sequel"
+        "Ai Mi",
+        "AI"
       ],
-      "angle": "Details emerge about Jim Henson's original, darker vision for a Dark Crystal sequel.",
+      "angle": "An analysis of how artificial intelligence could potentially threaten the jobs of 'loop groups,' the background vocalists essential to film and TV production.",
       "tmdbType": "movie",
-      "source": "gnews:MotorBiscuit",
+      "source": "gnews:Northeastern Global News",
       "sources": [
         {
-          "outlet": "MotorBiscuit",
+          "outlet": "Northeastern Global News",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5zQm1JemhHSk1zMGlZS0lIaXk4X1dlcEloU1hMTzBjOVlic1haUTAwZjUwc0pYUVA3R3hWS1hYNWdBcFdHS01iTk1IajlVRTdmSDA3X19iUWxXS0x2RzhkdG9CZVlsSk4ybGdQeF9jN24?oc=5",
-          "ageMin": 172,
-          "headline": "NASCAR’s Most Iconic Movie Is Finally Getting a Sequel With Tom Cruise - MotorBiscuit",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE5zQm1JemhHSk1zMGlZS0lIaXk4X1dlcEloU1hMTzBjOVlic1haUTAwZjUwc0pYUVA3R3hWS1hYNWdBcFdHS01iTk1IajlVRTdmSDA3X19iUWxXS0x2RzhkdG9CZVlsSk4ybGdQeF9jN24?oc=5\" target=\"_blank\" NASCAR’s Most Iconic Movie Is Finally Getting a Sequel With Tom Cruise /a nbs"
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE12SW45Q1llcnFXRnNId090UEUwZ0EwcEstQVVROTFjWG9FdHEySnZsanhnc0xuZkhNSW81NEJ0REpZTVBxeF9XQ04zUDExaE5WY01OcW1JR3JMdWE3aGRJYzlNUjBXOG80NDlFMnJNd3hydjlmLVgzMGFn?oc=5",
+          "ageMin": 122,
+          "headline": "Loop groups, Hollywood’s invisible heroes, could be under threat by AI - Northeastern Global News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE12SW45Q1llcnFXRnNId090UEUwZ0EwcEstQVVROTFjWG9FdHEySnZsanhnc0xuZkhNSW81NEJ0REpZTVBxeF9XQ04zUDExaE5WY01OcW1JR3JMdWE3aGRJYzlNUjBXOG80NDlFMnJNd3hydjlmLVgzMGFn?oc=5\" target=\"_blank\" Loop groups, Hollywood’s invisible heroes, could be under threat"
         }
       ],
-      "ageMin": 172,
+      "ageMin": 122,
       "_cand": {
-        "key": "rss:nascar-s-most-iconic-movie-is-finally-getting-a-sequel-with-",
+        "key": "rss:loop-groups-hollywood-s-invisible-heroes-could-be-under-thre",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1391,11 +924,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "MotorBiscuit"
+          "Northeastern Global News"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "MotorBiscuit",
+        "attribution": "Northeastern Global News",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1426,12 +959,12 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "resident-evil-director-zach-cregger-hardest-scene",
-      "primaryKeyword": "resident evil zach cregger scene",
-      "primaryEntity": "Resident Evil (film)",
+      "primaryKeyword": "resident evil movie",
+      "primaryEntity": "Resident Evil (film series)",
       "entities": [
         "Zach Cregger"
       ],
-      "angle": "Director Zach Cregger discusses the most challenging scene to film for the 'Resident Evil' movie.",
+      "angle": "Resident Evil director discusses the most challenging scene to film.",
       "tmdbType": "movie",
       "source": "gnews:IMDb",
       "sources": [
@@ -1439,12 +972,12 @@
           "outlet": "IMDb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5NaGRqMFY0S2M0cllHOVhZVFNMdU1iS0tTYjFoeEN4RWVIUEI2akxsR0RiaG1XTWZ1bnlNN2VFNVdjYW5UalhRdDFDYmRuT3lQM0pkOG5wZVdVczVsUUI2bU5EZkl4MXBCdkE?oc=5",
-          "ageMin": 130,
+          "ageMin": 190,
           "headline": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot - IMDb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiakFVX3lxTE5NaGRqMFY0S2M0cllHOVhZVFNMdU1iS0tTYjFoeEN4RWVIUEI2akxsR0RiaG1XTWZ1bnlNN2VFNVdjYW5UalhRdDFDYmRuT3lQM0pkOG5wZVdVczVsUUI2bU5EZkl4MXBCdkE?oc=5\" target=\"_blank\" Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot /a nbs"
         }
       ],
-      "ageMin": 130,
+      "ageMin": 190,
       "_cand": {
         "key": "rss:resident-evil-director-zach-cregger-reveals-the-movie-s-hard",
         "popularity": 0,
@@ -1465,9 +998,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 52,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -1481,39 +1014,112 @@
       "tierClass": "C"
     },
     {
-      "id": "news-colman-domingo-roasts-elon-musk-the-odyssey-pitch",
-      "slug": "colman-domingo-roasts-elon-musk-s-the-odyssey-pitch-on-kimmel",
-      "title": "Colman Domingo Roasts Elon Musk's 'The Odyssey' Pitch on 'Kimmel'",
+      "id": "news-johnny-depp-comic-con-surprise",
+      "slug": "johnny-depp-surprises-comic-con-as-ebenezer-scrooge-for-upcoming-movie",
+      "title": "Johnny Depp Surprises Comic-Con as Ebenezer Scrooge for Upcoming Movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "johnny-depp-comic-con-surprise",
+      "primaryKeyword": "Johnny Depp Comic-Con",
+      "primaryEntity": "Johnny Depp",
+      "entities": [
+        "Comic-Con",
+        "Ebenezer"
+      ],
+      "angle": "Johnny Depp makes surprise appearance at Comic-Con dressed as Ebenezer Scrooge to promote his upcoming film.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/johnny-depp-surprises-comic-con-ebenezer-scrooge-1236654264/",
+          "ageMin": 54,
+          "headline": "Johnny Depp Surprises Comic-Con as Ebenezer Scrooge on Streets of San Diego",
+          "summary": "This marks the actor's first trip to the convention since 2018 when he was promoting 'Fantastic Beasts.'"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/johnny-depp-comic-con-ebenezer-a-christmas-carol-1237001603/",
+          "ageMin": 59,
+          "headline": "Johnny Depp Surprises At Comic-Con, Emerges As Scrooge To Promote Ebenezer Movie",
+          "summary": "Johnny Depp stole the spotlight at Comic-Con on Thursday, appearing in full Scrooge costume for his upcoming Ti West-directed movie Ebenezer. The appearance today by the three-time Oscar nominee came as part of a stunt in which the David Ellison-owned Paramount Pictures fired up a faux 1880s British Christmas village in San Diego s Gaslamp district. [ ]"
+        }
+      ],
+      "ageMin": 54,
+      "_cand": {
+        "key": "rss:johnny-depp-surprises-comic-con-as-ebenezer-scrooge-on-stree",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-michael-johnston-intentional-queer-role",
+      "slug": "michael-johnston-wants-to-play-intentional-meaningful-queer-roles",
+      "title": "Michael Johnston Wants to Play Intentional, Meaningful Queer Roles",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "colman-domingo-roasts-elon-musk-the-odyssey-pitch",
-      "primaryKeyword": "colman domingo elon musk",
-      "primaryEntity": "Colman Domingo",
+      "eventSlug": "michael-johnston-intentional-queer-role",
+      "primaryKeyword": "michael johnston",
+      "primaryEntity": "Michael Johnston",
       "entities": [
-        "Elon Musk",
-        "Jimmy Kimmel Live",
-        "The Odyssey"
+        "Obsession"
       ],
-      "angle": "Colman Domingo used his guest host spot on Jimmy Kimmel Live to playfully mock Elon Musk's recent comments about Christopher Nolan's 'The Odyssey'.",
+      "angle": "Michael Johnston, coming off a breakout role, discusses his desire to play intentional, meaningful queer characters and potentially write them himself.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/colman-domingo-roasts-elon-musk-historically-accurate-odyssey-1237001946/",
-          "ageMin": 27,
-          "headline": "Colman Domingo Roasts Elon Musk s Historically Accurate AI-Generated The Odyssey Pitch: He Means Whiter Than Christmas At Cracker Barrel",
-          "summary": "As Christopher Nolan s The Odyssey continues to dominate the box office, Colman Domingo is the latest to revel in Elon Musk s sour grapes. While guest-hosting Jimmy Kimmel Live this week, the 2x Oscar nominee noted that Homer s historical epic is totally made the f*ck up as he roasted the first-ever trillionaire s announcement that his Grok [ ]"
+          "url": "https://deadline.com/2026/07/obsession-michael-johnston-wants-play-meaningful-queer-role-1237002047/",
+          "ageMin": 18,
+          "headline": "Obsession s Michael Johnston Wants To Play Intentional, Meaningful Queer Role : Maybe I ll Write It Myself",
+          "summary": "With one of 2026 s biggest box office breakouts under his belt, Michael Johnston has some ideas for his next role. The Obsession star, who is openly gay, recently explained now that he gets to choose what I want to do, he d like to play a really meaningful and really intentional queer role in an upcoming [ ]"
         }
       ],
-      "ageMin": 27,
+      "ageMin": 18,
       "_cand": {
-        "key": "rss:colman-domingo-roasts-elon-musk-s-historically-accurate-ai-g",
+        "key": "rss:obsession-s-michael-johnston-wants-to-play-intentional-meani",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1532,7 +1138,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 89,
+      "priority": 69,
       "signals": {
         "recency": 24,
         "corroboration": 12,
@@ -1544,230 +1150,30 @@
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "radar": 30
+        "radar": 10
       },
-      "radarKind": "movie-in-theaters",
+      "radarKind": "movie-trending",
       "tierClass": "A"
     },
     {
-      "id": "news-chadwick-boseman-estate-battle",
-      "slug": "chadwick-boseman-s-estate-becomes-subject-of-legal-battle-between-pare",
-      "title": "Chadwick Boseman's Estate Becomes Subject of Legal Battle Between Parents and Widow",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "eventSlug": "chadwick-boseman-estate-battle",
-      "primaryKeyword": "chadwick boseman estate",
-      "primaryEntity": "Chadwick Boseman",
-      "entities": [
-        "Simone Ledward Boseman"
-      ],
-      "angle": "A legal dispute has emerged between the parents of the late Chadwick Boseman and his widow, Simone Ledward Boseman, over the control and distribution of his estate.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/news/general-news/chadwick-boseman-estate-battle-1236655376/",
-          "ageMin": 28,
-          "headline": "Chadwick Boseman Estate Battle Breaks Out Between His Parents and Widow Over Assets",
-          "summary": "The legal filing accuses Simone Ledward Boseman of keeping assets owed to the actor's parents and shutting them out of a company that holds his rights."
-        }
-      ],
-      "ageMin": 28,
-      "_cand": {
-        "key": "rss:chadwick-boseman-estate-battle-breaks-out-between-his-parent",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 70,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-hollywood-walk-of-fame-2026-27-honorees",
-      "slug": "karol-g-david-guetta-kate-hudson-more-getting-stars-on-hollywood-walk-",
-      "title": "Karol G, David Guetta, Kate Hudson More Getting Stars on Hollywood Walk of Fame: Full 2026-27 List",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "hollywood-walk-of-fame-2026-27-honorees",
-      "primaryKeyword": "Hollywood Walk of Fame",
-      "primaryEntity": "Hollywood Walk of Fame",
-      "entities": [
-        "Karol G: Tomorrow Was Beautiful",
-        "Karol G",
-        "David Guetta",
-        "Kate Hudson"
-      ],
-      "angle": "Karol G, David Guetta, Kate Hudson, and others are announced as recipients of stars on the Hollywood Walk of Fame for 2026-27.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/tom-holland-becomes-first-person-to-vomit-on-hot-ones/",
-          "ageMin": 48,
-          "headline": "Tom Holland Becomes First Person to Vomit on Hot Ones : You Can Use That!",
-          "summary": "“Let’s go!” his \"Spider-Man: Brand New Day\" and \"Odyssey\" co-star Jon Bernthal squeals with glee The post Tom Holland Becomes First Person to Vomit on Hot Ones : You Can Use That! appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 48,
-      "_cand": {
-        "key": "rss:tom-holland-becomes-first-person-to-vomit-on-hot-ones-you-ca",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-hawk-streaming-chart-performance",
-      "slug": "will-ferrell-s-the-hawk-climbs-streaming-charts",
-      "title": "Will Ferrell's 'The Hawk' Climbs Streaming Charts",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "the-hawk-streaming-chart-performance",
-      "primaryKeyword": "the hawk streaming",
-      "primaryEntity": "The Hawk (film)",
-      "entities": [
-        "Will Ferrell: You're Welcome America - A Final Night with George W. Bush",
-        "Will Ferrell",
-        "Netflix"
-      ],
-      "angle": "Will Ferrell's comedy 'The Hawk' sees a surge in streaming viewership, ranking second on a recent chart.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/streaming/house-of-the-dragon-the-hawk-streaming-charts/",
-          "ageMin": 58,
-          "headline": "Will Ferrell s The Hawk Shoots Up Streaming List, but It Can t Dethrone an HBO Fave Chart",
-          "summary": "The Netflix comedy is at No. 2 on this week's Samba TV report The post Will Ferrell s The Hawk Shoots Up Streaming List, but It Can t Dethrone an HBO Fave | Chart appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 58,
-      "_cand": {
-        "key": "rss:will-ferrell-s-the-hawk-shoots-up-streaming-list-but-it-can-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
       "id": "news-you-must-remember-this-libby-holman-season",
-      "slug": "karina-longworth-s-you-must-remember-this-returns-with-libby-holman-de",
-      "title": "Karina Longworth's 'You Must Remember This' Returns with Libby Holman Deep Dive",
+      "slug": "karina-longworth-s-you-must-remember-this-returns-with-deep-dive-on-bi",
+      "title": "Karina Longworth's 'You Must Remember This' Returns with Deep Dive on Bisexual Black Widow Libby Holman",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
+      "tier": "popular",
       "eventSlug": "you-must-remember-this-libby-holman-season",
-      "primaryKeyword": "you must remember this podcast",
-      "primaryEntity": "You Must Remember This (podcast)",
+      "primaryKeyword": "karina longworth podcast",
+      "primaryEntity": "You Must Remember This",
       "entities": [
-        "Karina Longworth",
         "Libby Holman",
         "Montgomery Clift"
       ],
-      "angle": "Karina Longworth's acclaimed podcast 'You Must Remember This' is launching a new season focusing on the life of bisexual Black Widow Libby Holman.",
+      "angle": "Karina Longworth's acclaimed podcast 'You Must Remember This' is returning with a new season focusing on the life of singer/actress Libby Holman.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -1775,12 +1181,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/general-news/you-must-remember-this-new-season-bisexual-libby-holman-1235206901/",
-          "ageMin": 61,
+          "ageMin": 121,
           "headline": "Karina Longworth s You Must Remember This Returns with a Dishy Deep Dive on Bisexual Black Widow Libby Holman",
           "summary": "The best classic Hollywood podcast going will now turn to forgotten singer/actress Holman, once an on-and-off lover of another bisexual, the tragically fated Montgomery Clift."
         }
       ],
-      "ageMin": 61,
+      "ageMin": 121,
       "_cand": {
         "key": "rss:karina-longworth-s-you-must-remember-this-returns-with-a-dis",
         "popularity": 0,
@@ -1818,8 +1224,8 @@
     },
     {
       "id": "news-giancarlo-esposito-signs-with-uta",
-      "slug": "giancarlo-esposito-signs-with-uta",
-      "title": "Giancarlo Esposito Signs With UTA",
+      "slug": "giancarlo-esposito-signs-with-uta-for-representation",
+      "title": "Giancarlo Esposito Signs With UTA for Representation",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1827,12 +1233,12 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "giancarlo-esposito-signs-with-uta",
-      "primaryKeyword": "giancarlo esposito",
+      "primaryKeyword": "Giancarlo Esposito",
       "primaryEntity": "Giancarlo Esposito",
       "entities": [
-        "United Talent Agency"
+        "UTA"
       ],
-      "angle": "Breaking Bad star Giancarlo Esposito signs with UTA for representation.",
+      "angle": "Giancarlo Esposito has signed with United Talent Agency for representation across all areas.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -1840,12 +1246,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/breaking-bad-giancarlo-esposito-uta-representation-caa-1236818870/",
-          "ageMin": 211,
+          "ageMin": 271,
           "headline": "Breaking Bad Star Giancarlo Esposito Signs With UTA for Representation (EXCLUSIVE)",
           "summary": "Actor, director and producer Giancarlo Esposito has signed with United Talent Agency for representation in all areas. Esposito was previously repped by CAA. The prolific star will be seen in several projects in the next few months, including Noah Segan’s The Only Living Pickpocket in New York, in which he stars with John Turturro, Steve Buscemi [ ]"
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:breaking-bad-star-giancarlo-esposito-signs-with-uta-for-repr",
         "popularity": 0,
@@ -1872,6 +1278,137 @@
         "corroboration": 12,
         "status": 18,
         "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-streaming-ratings-the-bear-slips",
+      "slug": "streaming-ratings-the-bear-slips-in-final-season-premiere",
+      "title": "Streaming Ratings: 'The Bear' Slips in Final Season Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "streaming-ratings-the-bear-slips",
+      "primaryKeyword": "the bear streaming ratings",
+      "primaryEntity": "The Bear",
+      "entities": [
+        "I Will Find You",
+        "Love Island"
+      ],
+      "angle": "Streaming viewership data shows 'The Bear' slipping in its final season premiere week, while 'I Will Find You' and 'Love Island' saw significant gains.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/streaming-ratings-june-22-28-2026-1236655341/",
+          "ageMin": 134,
+          "headline": "Streaming Ratings: The Bear Slips in Final Season Premiere, I Will Find You and Love Island Soar",
+          "summary": "The last full week of June saw six titles record more than a billion viewing minutes."
+        }
+      ],
+      "ageMin": 134,
+      "_cand": {
+        "key": "rss:streaming-ratings-the-bear-slips-in-final-season-premiere-i-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-benny-blanco-selena-gomez-birthday-dinner",
+      "slug": "watch-benny-blanco-and-selena-gomez-cook-an-italian-birthday-dinner-to",
+      "title": "Watch Benny Blanco and Selena Gomez Cook an Italian Birthday Dinner Together",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "benny-blanco-selena-gomez-birthday-dinner",
+      "primaryKeyword": "Selena Gomez Benny Blanco",
+      "primaryEntity": "Selena Gomez",
+      "entities": [
+        "Benny Blanco"
+      ],
+      "angle": "Newlyweds Benny Blanco and Selena Gomez cooked an Italian birthday dinner together.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/benny-blanco-selena-gomez-cook-italian-birthday-dinner-1236301783/",
+          "ageMin": 91,
+          "headline": "Watch Benny Blanco Selena Gomez Cook an Italian Birthday Dinner Together",
+          "summary": "The newlyweds teamed up to make a homemade meal for Gomez's 34th birthday."
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:watch-benny-blanco-selena-gomez-cook-an-italian-birthday-din",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
