@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-23T01:01:08.160Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "bijou-phillips-makes-first-public-outing-since-kidney-transplant",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012509,
+  "costPerPublished": 0.012509,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 13785,
+      "out": 1166,
+      "usd": 0.0070504999999999995
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 987,
+      "out": 1492,
+      "usd": 0.000546506
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15661,
+      "out": 5136,
+      "usd": 0.00418698105
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 5038,
+      "out": 552,
+      "usd": 0.0007246
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2380,
+      "out": 194,
+      "usd": 0.001199,
+      "ms": 1241
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 987,
+      "out": 1492,
+      "usd": 0.00035738999999999996,
+      "ms": 28178
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14911,
+      "out": 4826,
+      "usd": 0.00507037,
+      "ms": 188174
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11405,
+      "out": 972,
+      "usd": 0.0058515,
+      "ms": 6238
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1504,
+      "out": 200,
+      "usd": 0.00023040000000000002,
+      "ms": 890
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 750,
+      "out": 310,
+      "usd": 0.0002779,
+      "ms": 13387
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 386,
+      "out": 109,
+      "usd": 0.0000822,
+      "ms": 606
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 193,
+      "out": 45,
+      "usd": 0.0000373,
+      "ms": 541
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2090,
+      "out": 114,
+      "usd": 0.0002546,
+      "ms": 2363
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 865,
+      "out": 84,
+      "usd": 0.00012009999999999999,
+      "ms": 1144
+    }
+  }
+}
