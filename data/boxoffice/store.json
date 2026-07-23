@@ -978,6 +978,20 @@
    "headlineNumberRaw": 25378017,
    "filmKey": "evil dead burn",
    "chartDate": null
+  },
+  {
+   "key": "obsession-bo-update-d68|BO-UPDATE",
+   "at": "2026-07-23T08:07:52.979Z",
+   "eventSlug": "obsession-bo-update-d68",
+   "form": "BO-UPDATE",
+   "slug": "obsession-box-office-day-68-adds-440-605-as-domestic-total-hits-259-2-million",
+   "title": "Olivia Wilde's 'Obsession' Crosses $259M Domestic, Posts Historic 330x Budget Multiple",
+   "film": "Obsession",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 259187265,
+   "filmKey": "obsession",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2254,19 +2268,29 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 2,
-   "at": "2026-07-23T07:32:57.360Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-23T08:03:05.619Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T08:03:05.619Z"
+  },
+  {
+   "key": "young-washington-bo-update-d19|BO-UPDATE",
+   "eventSlug": "young-washington-bo-update-d19",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-23T08:05:52.242Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.03493
+  "usd": 0.03991
  },
  "pace": {
-  "tokens": 0.05708530158730163,
-  "lastMs": 1784791860906
+  "tokens": 0,
+  "lastMs": 1784793663867
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
