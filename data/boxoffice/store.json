@@ -922,6 +922,34 @@
    "headlineNumberRaw": null,
    "filmKey": "the ultimatum: marry or move on",
    "chartDate": null
+  },
+  {
+   "key": "moana-bo-update-d12|BO-UPDATE",
+   "at": "2026-07-23T07:10:46.178Z",
+   "eventSlug": "moana-bo-update-d12",
+   "form": "BO-UPDATE",
+   "slug": "moana-box-office-day-12-adds-4-million-as-domestic-total-hits-87-3-million",
+   "title": "Dwayne Johnson's 'Moana' Struggles to Find Its Way",
+   "film": "Moana",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 87269607,
+   "filmKey": "moana",
+   "chartDate": null
+  },
+  {
+   "key": "minions-monsters-bo-update-d21|BO-UPDATE",
+   "at": "2026-07-23T07:14:41.186Z",
+   "eventSlug": "minions-monsters-bo-update-d21",
+   "form": "BO-UPDATE",
+   "slug": "minions-monsters-box-office-day-21-adds-3-4-million-as-domestic-total-hits-141",
+   "title": "Minions & Monsters Scores $61.4M Holiday Debut — But It’s a Franchise Low",
+   "film": "Minions & Monsters",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 141583130,
+   "filmKey": "minions & monsters",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1790,9 +1818,9 @@
    "key": "they-will-kill-you-now-streaming|NOW-STREAMING",
    "eventSlug": "they-will-kill-you-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 0,
-   "at": "2026-07-20T01:37:35.395Z",
+   "reason": "words 152 < 180 (owner-set ~200-word minimum) | soft-floor readability 4 < 5 | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 2,
+   "at": "2026-07-23T07:05:06.717Z",
    "dead": false,
    "expiresAt": "2026-07-23T01:37:35.395Z"
   },
@@ -2193,41 +2221,30 @@
    "at": "2026-07-23T03:08:29.248Z",
    "dead": true,
    "expiresAt": "2026-07-26T03:08:29.248Z"
+  },
+  {
+   "key": "the-odyssey-bo-update-150m|BO-UPDATE",
+   "eventSlug": "the-odyssey-bo-update-150m",
+   "form": "BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 1,
+   "at": "2026-07-23T07:06:34.721Z"
   }
  ],
- "zeroStreak": 38,
+ "zeroStreak": 0,
  "daySpend": {
-  "laDay": "2026-07-22",
-  "usd": 0.57767
+  "laDay": "2026-07-23",
+  "usd": 0.0295
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784788262220
+  "tokens": 2,
+  "lastMs": 1784790062719
  },
- "lastAuditDay": "2026-07-22",
+ "lastAuditDay": "2026-07-23",
  "attempts": {
-  "laDay": "2026-07-22",
+  "laDay": "2026-07-23",
   "byFilm": {
-   "voicemails for isabelle": 2,
-   "the boss baby": 1,
-   "outcome": 3,
-   "the mandalorian and grogu": 3,
-   "sniper: no nation": 1,
-   "avatar: the last airbender": 1,
-   "worst neighbor ever": 1,
-   "raw": 1,
-   "the ultimatum: marry or move on": 1,
-   "sullivan's crossing": 2,
-   "kingdom": 1,
-   "project hail mary": 1,
-   "wwe: unreal": 1,
-   "star wars: the mandalorian and grogu | a special look": 1,
-   "off campus": 2,
-   "x-men '97": 3,
-   "they will kill you": 3,
-   "spider-man: brand new day": 1,
-   "descendants: wicked wonderland": 1,
-   "house of the dragon": 1
+   "they will kill you": 1
   }
  }
 }
