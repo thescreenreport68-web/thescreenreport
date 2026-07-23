@@ -1,0 +1,145 @@
+{
+  "ts": "2026-07-23T11:01:16.816Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "mark-wahlbergs-unrecognizable-look-in-by-any-means-trailer",
+      "category": "movies",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 3,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.01484,
+  "costPerPublished": 0.01484,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 15637,
+      "out": 1382,
+      "usd": 0.0081461
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 15436,
+      "out": 5329,
+      "usd": 0.005296129
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 932,
+      "out": 1079,
+      "usd": 0.0004326
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 9,
+      "in": 6753,
+      "out": 724,
+      "usd": 0.0009649
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4264,
+      "out": 376,
+      "usd": 0.0022192,
+      "ms": 3327
+    },
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 300,
+      "out": 15,
+      "usd": 0.0000741,
+      "ms": 1490
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 932,
+      "out": 1079,
+      "usd": 0.00027810000000000004,
+      "ms": 18117
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14479,
+      "out": 4955,
+      "usd": 0.005014869999999999,
+      "ms": 179573
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11373,
+      "out": 1006,
+      "usd": 0.0059269,
+      "ms": 7550
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2788,
+      "out": 375,
+      "usd": 0.0004288,
+      "ms": 2201
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 657,
+      "out": 359,
+      "usd": 0.00027317000000000004,
+      "ms": 13261
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 412,
+      "out": 94,
+      "usd": 0.00007880000000000002,
+      "ms": 692
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 210,
+      "out": 38,
+      "usd": 0.000036200000000000006,
+      "ms": 574
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2106,
+      "out": 84,
+      "usd": 0.0002442,
+      "ms": 1697
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1237,
+      "out": 133,
+      "usd": 0.00017690000000000002,
+      "ms": 2179
+    }
+  }
+}
