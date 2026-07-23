@@ -1,0 +1,144 @@
+{
+  "ts": "2026-07-23T07:01:07.868Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "naomie-olindo-marries-billy-haire-in-french-surprise-wedding",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.015935,
+  "costPerPublished": 0.015935,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 16449,
+      "out": 778,
+      "usd": 0.0068797
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 1082,
+      "out": 383,
+      "usd": 0.00031952
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 17574,
+      "out": 5182,
+      "usd": 0.0064752715
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 5139,
+      "out": 3423,
+      "usd": 0.0015379299999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5001,
+      "out": 555,
+      "usd": 0.0007221
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4573,
+      "out": 422,
+      "usd": 0.0024269,
+      "ms": 3115
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 1,
+      "in": 1863,
+      "out": 1005,
+      "usd": 0.00058383,
+      "ms": 98359
+    },
+    "writer": {
+      "calls": 8,
+      "errors": 2,
+      "in": 17094,
+      "out": 4868,
+      "usd": 0.00558674,
+      "ms": 482080
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 11876,
+      "out": 356,
+      "usd": 0.004452799999999999,
+      "ms": 5736
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1172,
+      "out": 157,
+      "usd": 0.00018,
+      "ms": 948
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 480,
+      "out": 314,
+      "usd": 0.00021716000000000001,
+      "ms": 11988
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 402,
+      "out": 98,
+      "usd": 0.0000794,
+      "ms": 656
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 192,
+      "out": 52,
+      "usd": 0.00004,
+      "ms": 534
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2095,
+      "out": 124,
+      "usd": 0.0002591,
+      "ms": 2890
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1140,
+      "out": 124,
+      "usd": 0.00016360000000000002,
+      "ms": 3156
+    }
+  }
+}
