@@ -1740,11 +1740,11 @@
    "key": "silo-trending-tv|TRENDING-TV",
    "eventSlug": "silo-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-23T17:08:31.832Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T01:40:17.085Z"
+   "reason": "words 145 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-23T22:05:53.990Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T22:05:53.990Z"
   },
   {
    "key": "off-campus-trending-tv|TRENDING-TV",
@@ -1916,11 +1916,11 @@
    "key": "tom-clancy-s-jack-ryan-ghost-war-now-streaming|NOW-STREAMING",
    "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-23T17:40:43.107Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T16:43:06.376Z"
+   "reason": "score 65 < 70",
+   "tries": 3,
+   "at": "2026-07-23T22:04:19.006Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T22:04:19.006Z"
   },
   {
    "key": "the-devil-wears-prada-2-bo-update-d82|BO-UPDATE",
@@ -2354,11 +2354,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 32,
-   "at": "2026-07-23T21:32:41.612Z",
+   "reason": "words 163 < 180 (owner-set ~200-word minimum)",
+   "tries": 33,
+   "at": "2026-07-23T22:08:25.988Z",
    "dead": true,
-   "expiresAt": "2026-07-26T21:32:41.612Z"
+   "expiresAt": "2026-07-26T22:08:25.988Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2397,14 +2397,14 @@
    "at": "2026-07-23T18:35:27.702Z"
   }
  ],
- "zeroStreak": 23,
+ "zeroStreak": 24,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.44887
+  "usd": 0.48858
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784842262190
+  "lastMs": 1784844074127
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2420,8 +2420,8 @@
    "ransom canyon": 3,
    "dhamaal 4": 1,
    "masters of the universe": 2,
-   "tom clancy's jack ryan: ghost war": 2,
-   "silo": 1,
+   "tom clancy's jack ryan: ghost war": 3,
+   "silo": 2,
    "citizen vigilante": 1
   }
  }
