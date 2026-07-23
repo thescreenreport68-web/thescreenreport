@@ -1,0 +1,147 @@
+{
+  "ts": "2026-07-23T23:01:24.644Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "megyn-kelly-calls-out-sunny-hostin-over-sons-trespassing-stop",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.027656,
+  "costPerPublished": 0.027656,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 24508,
+      "out": 5241,
+      "usd": 0.0047972364
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 28022,
+      "out": 5053,
+      "usd": 0.01942558
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 2265,
+      "out": 1147,
+      "usd": 0.0004481497
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 11,
+      "in": 16913,
+      "out": 3234,
+      "usd": 0.0029848999999999995
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 303,
+      "out": 14,
+      "usd": 0.00007445000000000001,
+      "ms": 1775
+    },
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4347,
+      "out": 351,
+      "usd": 0.0021815999999999997,
+      "ms": 2216
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2265,
+      "out": 1147,
+      "usd": 0.00041030999999999994,
+      "ms": 11640
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 23467,
+      "out": 4938,
+      "usd": 0.007076330000000001,
+      "ms": 67152
+    },
+    "verify": {
+      "calls": 10,
+      "errors": 6,
+      "in": 13388,
+      "out": 2002,
+      "usd": 0.009021399999999999,
+      "ms": 39588
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2747,
+      "out": 209,
+      "usd": 0.00035830000000000004,
+      "ms": 1276
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 738,
+      "out": 289,
+      "usd": 0.000268,
+      "ms": 13989
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 381,
+      "out": 64,
+      "usd": 0.0000637,
+      "ms": 593
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 189,
+      "out": 50,
+      "usd": 0.000038900000000000004,
+      "ms": 461
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2112,
+      "out": 108,
+      "usd": 0.00025440000000000006,
+      "ms": 1587
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1197,
+      "out": 103,
+      "usd": 0.0001609,
+      "ms": 1839
+    }
+  }
+}
