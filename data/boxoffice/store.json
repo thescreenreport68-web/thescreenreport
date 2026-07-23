@@ -1860,10 +1860,10 @@
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
    "eventSlug": "lee-cronin-s-the-mummy-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 140 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-20T07:06:57.090Z",
-   "dead": true,
+   "reason": "words 166 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 2,
+   "at": "2026-07-23T11:37:04.608Z",
+   "dead": false,
    "expiresAt": "2026-07-23T07:06:57.090Z"
   },
   {
@@ -2318,9 +2318,11 @@
    "key": "the-mandalorian-and-grogu-bo-update-d64|BO-UPDATE",
    "eventSlug": "the-mandalorian-and-grogu-bo-update-d64",
    "form": "BO-UPDATE",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-22T13:53:50.151Z"
+   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-23T11:34:44.004Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T11:34:44.004Z"
   },
   {
    "key": "kingdom-ev-opening|BO-OPENING",
@@ -2353,26 +2355,28 @@
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 9,
-   "at": "2026-07-23T11:04:16.210Z",
+   "tries": 10,
+   "at": "2026-07-23T11:33:15.798Z",
    "dead": true,
-   "expiresAt": "2026-07-26T11:04:16.210Z"
+   "expiresAt": "2026-07-26T11:33:15.798Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.06674
+  "usd": 0.10802
  },
  "pace": {
-  "tokens": 0,
-  "lastMs": 1784804464113
+  "tokens": 0.0572033650793651,
+  "lastMs": 1784806266019
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
   "laDay": "2026-07-23",
   "byFilm": {
-   "they will kill you": 1
+   "they will kill you": 1,
+   "the mandalorian and grogu": 1,
+   "lee cronin's the mummy": 1
   }
  }
 }

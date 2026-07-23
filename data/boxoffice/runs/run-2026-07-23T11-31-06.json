@@ -1,0 +1,233 @@
+{
+ "runId": "run-2026-07-23T11-31-06",
+ "mode": "live",
+ "startedAt": "2026-07-23T11:31:06.019Z",
+ "films": 40,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "score": 80
+  },
+  {
+   "tag": "the-mandalorian-and-grogu-bo-opening×BO-OPENING",
+   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
+   "score": 65
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "words 166 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "score": 40
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.06,
+  "behind": true,
+  "expected": 15.89,
+  "allow": 1
+ },
+ "queueBuilt": 12,
+ "attemptCapHit": 3,
+ "zeroStreak": 1,
+ "daySpend": {
+  "laDay": "2026-07-23",
+  "usd": 0.10802
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-23T11:37:04.610Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1046,
+    "out": 579,
+    "usd": 0.00034,
+    "ms": 2755
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3431,
+    "out": 732,
+    "usd": 0.00022,
+    "ms": 3750
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 11253,
+    "out": 673,
+    "usd": 0.00139,
+    "ms": 5198
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2375,
+    "out": 1370,
+    "usd": 0.00046,
+    "ms": 48121
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1966,
+    "out": 1134,
+    "usd": 0.00084,
+    "ms": 38255
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12799,
+    "out": 4420,
+    "usd": 0.01219,
+    "ms": 67562
+   },
+   "qa": {
+    "calls": 13,
+    "errors": 0,
+    "in": 37329,
+    "out": 6255,
+    "usd": 0.02684,
+    "ms": 41599
+   }
+  },
+  "totalUsd": 0.04228
+ },
+ "openrouterTotalUsd": 0.04128
+}
