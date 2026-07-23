@@ -1791,9 +1791,9 @@
    "eventSlug": "they-will-kill-you-now-streaming",
    "form": "NOW-STREAMING",
    "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-20T01:37:35.395Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-23T01:37:35.395Z"
   },
   {
@@ -1865,10 +1865,10 @@
    "eventSlug": "the-odyssey-bo-update-100m",
    "form": "BO-UPDATE",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 139,
-   "at": "2026-07-23T01:32:53.799Z",
+   "tries": 140,
+   "at": "2026-07-23T02:06:23.647Z",
    "dead": true,
-   "expiresAt": "2026-07-26T01:32:53.799Z"
+   "expiresAt": "2026-07-26T02:06:23.647Z"
   },
   {
    "key": "star-wars-the-mandalorian-and-grogu-bo-update-d59|BO-UPDATE",
@@ -2193,14 +2193,14 @@
    "at": "2026-07-22T22:35:06.959Z"
   }
  ],
- "zeroStreak": 28,
+ "zeroStreak": 29,
  "daySpend": {
   "laDay": "2026-07-22",
-  "usd": 0.50799
+  "usd": 0.51155
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784770268775
+  "lastMs": 1784772067004
  },
  "lastAuditDay": "2026-07-22",
  "attempts": {
@@ -2221,7 +2221,8 @@
    "wwe: unreal": 1,
    "star wars: the mandalorian and grogu | a special look": 1,
    "off campus": 2,
-   "x-men '97": 2
+   "x-men '97": 2,
+   "they will kill you": 1
   }
  }
 }
