@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-23T17:01:17.793Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "luke-wilson-shares-his-thoughts-on-the-family-stone-sequel-script",
+      "category": "movies",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.012009,
+  "costPerPublished": 0.012009,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 7,
+      "in": 13287,
+      "out": 1326,
+      "usd": 0.0073011000000000005
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 914,
+      "out": 330,
+      "usd": 0.00026376
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 18327,
+      "out": 5010,
+      "usd": 0.00408305935
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 2248,
+      "out": 340,
+      "usd": 0.0003608
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2113,
+      "out": 179,
+      "usd": 0.0010814000000000002,
+      "ms": 1562
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 1,
+      "in": 914,
+      "out": 330,
+      "usd": 0.00034272,
+      "ms": 46737
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17668,
+      "out": 4713,
+      "usd": 0.0056660600000000005,
+      "ms": 156728
+    },
+    "verify": {
+      "calls": 6,
+      "errors": 0,
+      "in": 11174,
+      "out": 1147,
+      "usd": 0.006219700000000001,
+      "ms": 8554
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1370,
+      "out": 178,
+      "usd": 0.0002082,
+      "ms": 1542
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 659,
+      "out": 297,
+      "usd": 0.00025255,
+      "ms": 10965
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 383,
+      "out": 95,
+      "usd": 0.00007630000000000001,
+      "ms": 6210
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 190,
+      "out": 40,
+      "usd": 0.000035,
+      "ms": 599
+    },
+    "image": {
+      "calls": 1,
+      "errors": 1,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 10789
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 305,
+      "out": 27,
+      "usd": 0.000041299999999999994,
+      "ms": 1321
+    }
+  }
+}
