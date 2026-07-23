@@ -1,85 +1,144 @@
 {
-  "runId": "run-2026-07-23T04-01-02",
-  "builtAt": "2026-07-23T04:02:13.366Z",
-  "count": 24,
+  "runId": "run-2026-07-23T06-01-10",
+  "builtAt": "2026-07-23T06:02:54.048Z",
+  "count": 18,
   "topics": [
     {
-      "id": "news-law-order-cast-shakeup-reid-scott-exits-james-badge-dale-joins",
-      "slug": "law-order-cast-shakeup-reid-scott-exits-as-james-badge-dale-joins-for-",
-      "title": "'Law & Order' Cast Shakeup: Reid Scott Exits as James Badge Dale Joins for Season 26",
+      "id": "news-elliot-page-discusses-role-in-the-odyssey",
+      "slug": "elliot-page-was-terrified-but-excited-for-the-odyssey-role",
+      "title": "Elliot Page Was 'Terrified' But Excited for 'The Odyssey' Role",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "law-order-cast-shakeup-reid-scott-exits-james-badge-dale-joins",
-      "primaryKeyword": "law order cast",
-      "primaryEntity": "Law & Order",
+      "eventSlug": "elliot-page-discusses-role-in-the-odyssey",
+      "primaryKeyword": "The Odyssey movie",
+      "primaryEntity": "The Odyssey",
       "entities": [
-        "Reid Scott",
-        "James Badge Dale"
+        "The Odyssey (film)",
+        "Elliot Page"
       ],
-      "angle": "Long-running procedural 'Law & Order' adds James Badge Dale and sees Reid Scott depart.",
+      "angle": "Elliot Page opens up about the 'good kind of nerves' he felt taking on the role of Sinon in the upcoming film 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/law-and-order-reid-scott-exits-james-badge-dale-joins-season-26/",
-          "ageMin": 32,
-          "headline": "‘Law Order’ Cast Shakeup: Reid Scott Exits as James Badge Dale Joins for Season 26",
-          "summary": "The “Veep” alum will wrap up his character’s story across a few episodes The post ‘Law Order’ Cast Shakeup: Reid Scott Exits as James Badge Dale Joins for Season 26 appeared first on TheWrap ."
-        },
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/pop/roxette-it-must-have-been-love-youtube-billion-views-club-1236301230/",
-          "ageMin": 49,
-          "headline": "Roxette’s ‘It Must Have Been Love’ Enters YouTube’s Billion Views Club",
-          "summary": "It's Roxette's first music video to pass one billion views on YouTube."
+          "url": "https://www.thewrap.com/creative-content/movies/elliot-page-terrified-the-odyssey-role/",
+          "ageMin": 40,
+          "headline": "Elliot Page Explains Why He Was ‘Terrified’ to Take on the Role of Sinon in ‘The Odyssey’",
+          "summary": "\"But it was the good kind of nerves, of course,” the actor adds The post Elliot Page Explains Why He Was ‘Terrified’ to Take on the Role of Sinon in ‘The Odyssey’ appeared first on TheWrap ."
         }
       ],
-      "ageMin": 32,
+      "ageMin": 40,
       "_cand": {
-        "key": "rss:-law-order-cast-shakeup-reid-scott-exits-as-james-badge-dale",
+        "key": "rss:elliot-page-explains-why-he-was-terrified-to-take-on-the-rol",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
         "outlets": [
-          "TheWrap",
-          "Billboard"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 111,
+      "priority": 122,
       "signals": {
         "recency": 24,
-        "corroboration": 18,
-        "status": 25,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-reid-scott-leaving-law-order-james-badge-dale-joining",
+      "slug": "reid-scott-exits-law-order-james-badge-dale-to-replace-him",
+      "title": "Reid Scott Exits 'Law & Order'; James Badge Dale to Replace Him",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "reid-scott-leaving-law-order-james-badge-dale-joining",
+      "primaryKeyword": "Law & Order cast change",
+      "primaryEntity": "Law & Order (TV series)",
+      "entities": [
+        "Reid Scott",
+        "James Badge Dale"
+      ],
+      "angle": "Reid Scott is departing the NBC drama 'Law & Order,' with James Badge Dale set to take over his role in the upcoming season.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/reid-scott-leaving-law-order-james-badge-dale-season-26-nbc-1237000929/",
+          "ageMin": 173,
+          "headline": "Reid Scott Leaving Law Order , James Badge Dale To Succeed Him In Season 26 Of NBC Drama",
+          "summary": "EXCLUSIVE: The police force on Law Order is undergoing some major staff turnover. Reid Scott, who has played Senior Detective Vincent Riley for the past three seasons, is leaving the venerable NBC crime drama. The Marvelous Mrs. Maisel and Veep alum will be succeeded by another high-profile name, James Badge Dale (13 Hours, 1923). He is set [ ]"
+        }
+      ],
+      "ageMin": 173,
+      "_cand": {
+        "key": "rss:reid-scott-leaving-law-order-james-badge-dale-to-succeed-him",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
+        "trending": 0,
         "spice": 4,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-richard-linklater-casting-glen-powell-as-lou-gehrig",
+      "id": "news-glen-powell-lou-gehrig-movie-casting",
       "slug": "richard-linklater-is-fulfilling-more-baseball-dreams-by-casting-glen-p",
       "title": "Richard Linklater Is Fulfilling More Baseball Dreams by Casting Glen Powell as Lou Gehrig",
       "contentType": "news",
@@ -88,15 +147,15 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "richard-linklater-casting-glen-powell-as-lou-gehrig",
-      "primaryKeyword": "glen powell lou gehrig movie",
+      "eventSlug": "glen-powell-lou-gehrig-movie-casting",
+      "primaryKeyword": "Glen Powell Lou Gehrig movie",
       "primaryEntity": "Lou Gehrig",
       "entities": [
         "Richard Linklater",
         "Glen Powell",
         "Simon Rich"
       ],
-      "angle": "Richard Linklater is set to direct Glen Powell as Lou Gehrig in a new biopic.",
+      "angle": "Glen Powell is set to portray baseball legend Lou Gehrig in an upcoming film directed by Richard Linklater.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -104,24 +163,33 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/breaking-news/richard-linklater-glen-powell-lou-gehrig-film-1235206631/",
-          "ageMin": 511,
+          "ageMin": 631,
           "headline": "Richard Linklater Is Fulfilling More Baseball Dreams by Casting Glen Powell as Lou Gehrig",
           "summary": "The untitled film is set at Universal Pictures and has Simon Rich (\"Artificial\") writing the screenplay."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/glen-powell-lou-gehrig-richard-linklater-lorne-michaels-1236654085/",
+          "ageMin": 764,
+          "headline": "Glen Powell to Star in Richard Linklater s Lou Gehrig Movie From Producer Lorne Michaels",
+          "summary": "Simon Rich is penning the script for the Universal feature that will focus on the late Yankees legend."
         }
       ],
-      "ageMin": 511,
+      "ageMin": 631,
       "_cand": {
         "key": "rss:richard-linklater-is-fulfilling-more-baseball-dreams-by-cast",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "IndieWire"
+          "IndieWire",
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -130,159 +198,23 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 86,
       "signals": {
         "recency": 4,
-        "corroboration": 12,
+        "corroboration": 18,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-glen-powell-to-star-in-richard-linklater-lou-gehrig-movie",
-      "slug": "glen-powell-to-star-in-richard-linklater-s-lou-gehrig-movie-from-produ",
-      "title": "Glen Powell to Star in Richard Linklater's Lou Gehrig Movie From Producer Lorne Michaels",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-to-star-in-richard-linklater-lou-gehrig-movie",
-      "primaryKeyword": "glen powell lou gehrig movie",
-      "primaryEntity": "Lou Gehrig",
-      "entities": [
-        "Richard Linklater",
-        "Glen Powell",
-        "Simon Rich",
-        "Lorne Michaels"
-      ],
-      "angle": "Glen Powell is attached to star as Lou Gehrig in Richard Linklater's upcoming Universal Pictures film.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/glen-powell-lou-gehrig-richard-linklater-lorne-michaels-1236654085/",
-          "ageMin": 644,
-          "headline": "Glen Powell to Star in Richard Linklater s Lou Gehrig Movie From Producer Lorne Michaels",
-          "summary": "Simon Rich is penning the script for the Universal feature that will focus on the late Yankees legend."
-        }
-      ],
-      "ageMin": 644,
-      "_cand": {
-        "key": "rss:glen-powell-to-star-in-richard-linklater-s-lou-gehrig-movie-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
-      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
-      "title": "Ridley Scott, Hugh Jackman's 'Treasure Island' Setting Sail to Sony",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony",
-      "primaryKeyword": "Treasure Island",
-      "primaryEntity": "Treasure Island",
-      "entities": [
-        "Treasure Island (film)",
-        "Ridley Scott",
-        "Hugh Jackman",
-        "Sony Pictures"
-      ],
-      "angle": "Ridley Scott and Hugh Jackman attached to 'Treasure Island' project in talks with Sony.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
-          "ageMin": 495,
-          "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
-          "summary": "The studio is in talks to acquire the package."
-        }
-      ],
-      "ageMin": 495,
-      "_cand": {
-        "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-yeon-sang-ho-parasyte-tamiya-netflix",
+      "id": "news-parasyte-tamiya-netflix-series",
       "slug": "yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starring-shioli-",
       "title": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
       "contentType": "news",
@@ -291,15 +223,15 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "yeon-sang-ho-parasyte-tamiya-netflix",
-      "primaryKeyword": "Parasyte Tamiya Netflix",
+      "eventSlug": "parasyte-tamiya-netflix-series",
+      "primaryKeyword": "Parasyte Tamiya Netflix series",
       "primaryEntity": "Parasyte: Tamiya",
       "entities": [
         "Yeon Sang-ho",
         "Shioli Kutsuna",
         "Netflix"
       ],
-      "angle": "Director Yeon Sang-ho is returning to the 'Parasyte' universe with a new live-action Netflix series, 'Parasyte: Tamiya,' starring Shioli Kutsuna.",
+      "angle": "Director Yeon Sang-ho returns to the Parasyte universe with a new live-action Netflix series, 'Parasyte: Tamiya', starring Shioli Kutsuna.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -307,14 +239,89 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/",
-          "ageMin": 301,
+          "ageMin": 421,
           "headline": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
           "summary": "Yeon Sang-ho is returning to the Parasyte universe with Parasyte: Tamiya, a new live-action series starring Shioli Kutsuna for Netflix, set to stream in 2027. The series marks another collaboration between Netflix and Yeon ( Hellbound, Parasyte: The Grey ), who developed Parasyte: Tamiya and co-wrote the script with Ryu Yong-jae. Wowpoint, the production company behind Yeon s [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
+          "ageMin": 421,
+          "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
+          "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
         }
       ],
-      "ageMin": 301,
+      "ageMin": 421,
       "_cand": {
         "key": "rss:yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 4,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-stim-sets-canary-islands-operation",
+      "slug": "vfx-studio-behind-the-wild-robot-opens-canary-islands-operation",
+      "title": "VFX Studio Behind 'The Wild Robot' Opens Canary Islands Operation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "stim-sets-canary-islands-operation",
+      "primaryKeyword": "The Wild Robot VFX",
+      "primaryEntity": "The Wild Robot",
+      "entities": [
+        "The Wild Robot (film)",
+        "STIM"
+      ],
+      "angle": "VFX studio STIM, which worked on 'The Wild Robot,' is opening a new production center in the Canary Islands, creating over 100 jobs.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/markets-festivals/stim-canary-islands-animation-studio-tenerife-zec-1236817891/",
+          "ageMin": 121,
+          "headline": "‘The Wild Robot’ VFX Studio STIM Sets Canary Islands Operation, Planning to Create More Than 100 Jobs",
+          "summary": "French animation and visual effects company STIM – whose credits include “The Wild Robot,” “The Garfield Movie” and “Coyote vs. Acme” – is opening a production center in Spain’s Canary Islands, with plans to create more than 100 jobs as it expands its European operations. STIM Tenerife is set to begin operating in August and [ ]"
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:-the-wild-robot-vfx-studio-stim-sets-canary-islands-operatio",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -333,12 +340,79 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 79,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-stewie-casting",
+      "slug": "family-guy-spinoff-stewie-sets-voice-cast",
+      "title": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "stewie-casting",
+      "primaryKeyword": "Family Guy spinoff Stewie",
+      "primaryEntity": "Stewie Griffin: The Untold Story",
+      "entities": [
+        "Stewie",
+        "Family Guy"
+      ],
+      "angle": "The voice cast for the upcoming 'Family Guy' spinoff 'Stewie' has been announced.",
+      "tmdbType": "movie",
+      "source": "gnews:Rolling Stone Australia",
+      "sources": [
+        {
+          "outlet": "Rolling Stone Australia",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWxJclUwV2RCVUN6elllbWVka3B5MFNVWEoyeUZHczRVMkpxV0VwcGo2NVpVXzBEQ2U3UGNBU3c5cmVhVm9QQ2NWSFZlRlhzd3lWY0xYWFpNUkR6a0VQV3BZUDdVQmxabnNLeVMyb0hqWEw3UHU0c0lqLWVhX3IwNzdubzBXaDRBV1NwTDQ1STNOVlV3NnJxNzdfcEZmcy1za2c?oc=5",
+          "ageMin": 174,
+          "headline": "Rosalind Eleazar Is a Hollywood Actress Fighting to Rebuild Her Life in Chris Rock's 'Misty Green' Trailer - Rolling Stone Australia",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOTWxJclUwV2RCVUN6elllbWVka3B5MFNVWEoyeUZHczRVMkpxV0VwcGo2NVpVXzBEQ2U3UGNBU3c5cmVhVm9QQ2NWSFZlRlhzd3lWY0xYWFpNUkR6a0VQV3BZUDdVQmxabnNLeVMyb0hqWEw3UHU0c0lqLWVhX3IwNzdubzBXaDRBV1NwTDQ1STNOVlV3NnJxNzdfcEZmcy1za2c?oc=5\" target=\"_blank\" Rosalind "
+        }
+      ],
+      "ageMin": 174,
+      "_cand": {
+        "key": "rss:rosalind-eleazar-is-a-hollywood-actress-fighting-to-rebuild-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone Australia"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone Australia",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -349,38 +423,114 @@
       "tierClass": "B"
     },
     {
+      "id": "news-days-of-thunder-2-jonathan-levine-directs-tom-cruise",
+      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-days-of-thunder-2",
+      "title": "Jonathan Levine in Talks to Direct Tom Cruise in 'Days of Thunder 2'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "days-of-thunder-2-jonathan-levine-directs-tom-cruise",
+      "primaryKeyword": "days of thunder 2",
+      "primaryEntity": "Days of Thunder 2",
+      "entities": [
+        "Jonathan Levine",
+        "Tom Cruise",
+        "Paramount Pictures"
+      ],
+      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the long-awaited sequel 'Days of Thunder 2' for Paramount.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/jonathan-levine-direct-days-of-thunder-2-tom-cruise-1236653926/",
+          "ageMin": 806,
+          "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount s Racing Sequel (Exclusive)",
+          "summary": "Vroom vroom."
+        },
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
+          "ageMin": 805,
+          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
+        }
+      ],
+      "ageMin": 805,
+      "_cand": {
+        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 1,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "music-news-roxette-it-must-have-been-love-youtube-billion-views",
-      "slug": "roxette-s-it-must-have-been-love-enters-youtube-s-billion-views-club",
-      "title": "Roxette’s ‘It Must Have Been Love’ Enters YouTube’s Billion Views Club",
+      "slug": "roxette-s-it-must-have-been-love-joins-youtube-s-billion-views-club",
+      "title": "Roxette's 'It Must Have Been Love' Joins YouTube's Billion Views Club",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
+      "eventType": "announcement",
+      "sensitivity": "normal",
       "tier": "popular",
       "eventSlug": "roxette-it-must-have-been-love-youtube-billion-views",
-      "primaryKeyword": "roxette it must have been love",
+      "primaryKeyword": "Roxette It Must Have Been Love",
       "primaryEntity": "Roxette",
       "entities": [
         "It Must Have Been Love"
       ],
-      "angle": "Roxette's classic hit 'It Must Have Been Love' has surpassed one billion views on YouTube.",
+      "angle": "Roxette's iconic song 'It Must Have Been Love' has surpassed one billion views on YouTube, marking a first for the band's music videos.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/sharon-osbourne-ozzy-death-anniversary-remember-him-1235597623/",
-          "ageMin": 19,
-          "headline": "Sharon Osbourne Reveals Advice Ozzy Gave Her to Remember Him",
-          "summary": "The Prince of Darkness died a year ago today at age 76"
+          "url": "https://www.billboard.com/music/pop/roxette-it-must-have-been-love-youtube-billion-views-club-1236301230/",
+          "ageMin": 169,
+          "headline": "Roxette’s ‘It Must Have Been Love’ Enters YouTube’s Billion Views Club",
+          "summary": "It's Roxette's first music video to pass one billion views on YouTube."
         }
       ],
-      "ageMin": 19,
+      "ageMin": 169,
       "_cand": {
-        "key": "rss:sharon-osbourne-reveals-advice-ozzy-gave-her-to-remember-him",
+        "key": "rss:roxette-s-it-must-have-been-love-enters-youtube-s-billion-vi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -391,21 +541,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Rolling Stone",
+        "sensitivity": "normal",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -413,290 +563,25 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
-      "id": "news-days-of-thunder-2-director-talks",
-      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-days-of-thunder-2",
-      "title": "Jonathan Levine in Talks to Direct Tom Cruise in 'Days of Thunder 2'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-director-talks",
-      "primaryKeyword": "days of thunder 2 director",
-      "primaryEntity": "Days of Thunder 2",
-      "entities": [
-        "Jonathan Levine",
-        "Tom Cruise",
-        "Paramount"
-      ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the sequel to the 1990 racing film 'Days of Thunder'.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 685,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
-        }
-      ],
-      "ageMin": 685,
-      "_cand": {
-        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-netflix-yeonsangho-parasyte-the-grey-followup",
-      "slug": "netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series-starring-",
-      "title": "Netflix Reteams With Yeon Sang-ho for 'Parasyte: Tamiya' Series Starring Shioli Kutsuna",
+      "id": "news-yaga-series-hudson-williams-first-look",
+      "slug": "amc-releases-first-look-images-for-hudson-williams-yaga-series",
+      "title": "AMC Releases First-Look Images for Hudson Williams' 'Yaga' Series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "netflix-yeonsangho-parasyte-the-grey-followup",
-      "primaryKeyword": "parasyte the grey",
-      "primaryEntity": "Parasyte: The Grey",
-      "entities": [
-        "Yeon Sang-ho",
-        "Shioli Kutsuna"
-      ],
-      "angle": "Netflix expands its 'Parasyte' universe with a new series focusing on a key manga character.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
-          "ageMin": 301,
-          "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
-          "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
-        }
-      ],
-      "ageMin": 301,
-      "_cand": {
-        "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-glen-powell-lou-gehrig-baseball-movie",
-      "slug": "glen-powell-to-play-lou-gehrig-in-richard-linklater-baseball-film",
-      "title": "Glen Powell to Play Lou Gehrig in Richard Linklater Baseball Film",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "glen-powell-lou-gehrig-baseball-movie",
-      "primaryKeyword": "glen powell lou gehrig movie",
-      "primaryEntity": "Lou Gehrig (baseball player)",
-      "entities": [
-        "Glen Powell",
-        "Richard Linklater"
-      ],
-      "angle": "Glen Powell is set to play Lou Gehrig in a new baseball film directed by Richard Linklater.",
-      "tmdbType": "movie",
-      "source": "gnews:Just Jared",
-      "sources": [
-        {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzRKdGJjc3Nlb1ph?oc=5",
-          "ageMin": 485,
-          "headline": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzR"
-        }
-      ],
-      "ageMin": 485,
-      "_cand": {
-        "key": "rss:glen-powell-to-play-lou-gehrig-in-another-baseball-movie-fro",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Just Jared"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Just Jared",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 68,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-stewie-family-guy-spinoff-voice-cast",
-      "slug": "family-guy-spinoff-stewie-announces-voice-cast",
-      "title": "'Family Guy' Spinoff 'Stewie' Announces Voice Cast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "stewie-family-guy-spinoff-voice-cast",
-      "primaryKeyword": "stewie family guy spinoff cast",
-      "primaryEntity": "Stewie Griffin: The Untold Story",
-      "entities": [
-        "Stewie (TV series)",
-        "Family Guy"
-      ],
-      "angle": "Voice cast announced for the upcoming 'Family Guy' spinoff series, 'Stewie'.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Insider",
-      "sources": [
-        {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5",
-          "ageMin": 420,
-          "headline": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5\" target=\"_blank\" ‘Family Guy’ Spinoff ‘Stewie’ Set"
-        }
-      ],
-      "ageMin": 420,
-      "_cand": {
-        "key": "rss:-family-guy-spinoff-stewie-sets-voice-cast-tv-insider",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Insider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Insider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-hudson-williams-yaga-series-first-look",
-      "slug": "amc-releases-first-look-pics-of-hudson-williams-yaga-series",
-      "title": "AMC Releases First-Look Pics of Hudson Williams’ ‘Yaga’ Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "hudson-williams-yaga-series-first-look",
+      "eventSlug": "yaga-series-hudson-williams-first-look",
       "primaryKeyword": "Yaga series",
       "primaryEntity": "Yaga (TV series)",
       "entities": [
         "Hudson Williams"
       ],
-      "angle": "AMC releases first-look images for Hudson Williams' upcoming 'Yaga' series.",
+      "angle": "AMC releases first-look images for Hudson Williams' upcoming series 'Yaga'.",
       "tmdbType": "movie",
       "source": "gnews:TV Insider",
       "sources": [
@@ -704,12 +589,12 @@
           "outlet": "TV Insider",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd3ZIdmJvTlFoLVFqVkR2bk42NmFkUTFneHIxR29zcmp1TWNYcGxtdHFhdkVvNWp1ak05aVRjbWxBWDVGMTlqMjg4QlV4b1FmUDU0d3cwV2poQ0VjOEZsdTExa0g1OEpDaDYtZ3BXeVoyYlp1aG1mU2tVWU90SEpYZXNpdWliQ3dPMndJSEd4elVtblRBR1lOZlQzcUd5VGtmYkVrU1VZdUU1YlBTa3lwY2t6bWRNRXc1S0lEbTVVQmxPLWtfRGJtZndPc0xjR1N2RTZv?oc=5",
-          "ageMin": 335,
+          "ageMin": 150,
           "headline": "AMC Releases First-Look Pics of Hudson Williams’ ‘Yaga’ Series - TV Insider",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd3ZIdmJvTlFoLVFqVkR2bk42NmFkUTFneHIxR29zcmp1TWNYcGxtdHFhdkVvNWp1ak05aVRjbWxBWDVGMTlqMjg4QlV4b1FmUDU0d3cwV2poQ0VjOEZsdTExa0g1OEpDaDYtZ3BXeVoyYlp1aG1mU2tVWU90SEpYZXNpdWliQ3dPMndJSEd4elVtblRBR1lOZlQzcUd5VGtmYkVrU1VZdUU1YlBTa3lwY2t6bWRNRXc1S0l"
         }
       ],
-      "ageMin": 335,
+      "ageMin": 150,
       "_cand": {
         "key": "rss:amc-releases-first-look-pics-of-hudson-williams-yaga-series-",
         "popularity": 0,
@@ -730,9 +615,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 69,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 9,
@@ -746,39 +631,39 @@
       "tierClass": "B"
     },
     {
-      "id": "news-jonathan-levine-in-talks-to-direct-tom-cruise-days-of-thunder-2",
-      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
-      "title": "Days of Thunder 2: Jonathan Levine in Talks to Direct Tom Cruise in Paramount's Racing Sequel (Exclusive)",
+      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony-deal",
+      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
+      "title": "Ridley Scott, Hugh Jackman's 'Treasure Island' Setting Sail to Sony",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jonathan-levine-in-talks-to-direct-tom-cruise-days-of-thunder-2",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2",
+      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony-deal",
+      "primaryKeyword": "ridley scott hugh jackman treasure island",
+      "primaryEntity": "Treasure Island",
       "entities": [
-        "Jonathan Levine",
-        "Tom Cruise",
-        "Paramount Pictures"
+        "Ridley Scott",
+        "Hugh Jackman",
+        "Sony Pictures"
       ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in a sequel to the 1990 racing film 'Days of Thunder'.",
+      "angle": "Sony Pictures in talks to acquire Ridley Scott and Hugh Jackman's 'Treasure Island' film package.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/jonathan-levine-direct-days-of-thunder-2-tom-cruise-1236653926/",
-          "ageMin": 686,
-          "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount s Racing Sequel (Exclusive)",
-          "summary": "Vroom vroom."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
+          "ageMin": 615,
+          "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
+          "summary": "The studio is in talks to acquire the package."
         }
       ],
-      "ageMin": 686,
+      "ageMin": 615,
       "_cand": {
-        "key": "rss:days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cru",
+        "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -813,139 +698,72 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sacha-baron-cohen-ali-g-movie",
-      "slug": "sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
-      "title": "Sacha Baron Cohen's Secret Ali G Movie Sets Fall Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-movie",
-      "primaryKeyword": "Ali G movie",
-      "primaryEntity": "Ali G Indahouse",
-      "entities": [
-        "Ali G",
-        "Sacha Baron Cohen",
-        "Amazon MGM Studios"
-      ],
-      "angle": "Sacha Baron Cohen is reviving his iconic character Ali G for a new feature film titled 'Who Iz I?'.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/criticism/movies/hadestown-the-musical-movie-review-1235206370/",
-          "ageMin": 601,
-          "headline": "Hadestown: The Musical Review: The Broadway Hit Remains a Bittersweet Delight in Movie Theaters",
-          "summary": "Anaïs Mitchell's retelling of the Orpheus and Eurydice myth gets a handsome staged recording featuring the original Broadway stars reprising their roles."
-        }
-      ],
-      "ageMin": 601,
-      "_cand": {
-        "key": "rss:hadestown-the-musical-review-the-broadway-hit-remains-a-bitt",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-chosen-bear-grylls-crossover",
-      "slug": "jesus-rappels-down-a-cliff-in-the-chosen-x-bear-grylls-crossover-event",
-      "title": "Jesus Rappels Down a Cliff in 'The Chosen x Bear Grylls' Crossover Event",
+      "id": "news-team-usa-hockey-players-celebrity-family-feud",
+      "slug": "gold-medal-winning-team-usa-hockey-players-to-appear-on-celebrity-fami",
+      "title": "Gold Medal-Winning Team USA Hockey Players to Appear on 'Celebrity Family Feud'",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-chosen-bear-grylls-crossover",
-      "primaryKeyword": "The Chosen Bear Grylls crossover",
-      "primaryEntity": "The Chosen",
+      "eventSlug": "team-usa-hockey-players-celebrity-family-feud",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
       "entities": [
-        "Bear Grylls"
+        "Team USA hockey players"
       ],
-      "angle": "The popular faith-based series 'The Chosen' is crossing over with survivalist Bear Grylls for a special episode.",
+      "angle": "Gold medal-winning hockey players to appear on the popular game show.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:TVGuide.com",
       "sources": [
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
-          "ageMin": 567,
-          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
-          "summary": "No word yet on how he traverses the Colorado River."
+          "outlet": "TVGuide.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcl9GSzdhLWhtdjhLcTEta2Ytd2pBcFhtYUhWRV9ObnZXOUhSMURJTTJmdEZoOWpPTzBpZF9fS21Fblc1emI2ckFMOWRzV3BsSS1oVDNORWNuaFJFeFZRLThTelduNFBkZk4wTE1Wdl8zczNQUjI1UmtGUkFGblBaWg?oc=5",
+          "ageMin": 585,
+          "headline": "Puppets, Film Noir, and Klingon Pop Songs: Inside Star Trek: Strange New Worlds Season 4 - TVGuide.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxQcl9GSzdhLWhtdjhLcTEta2Ytd2pBcFhtYUhWRV9ObnZXOUhSMURJTTJmdEZoOWpPTzBpZF9fS21Fblc1emI2ckFMOWRzV3BsSS1oVDNORWNuaFJFeFZRLThTelduNFBkZk4wTE1Wdl8zczNQUjI1UmtGUkFGblBaWg?oc=5\" target=\"_blank\" Puppets, Film Noir, and Klingon Pop Songs: Inside Star"
         }
       ],
-      "ageMin": 567,
+      "ageMin": 585,
       "_cand": {
-        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
+        "key": "rss:puppets-film-noir-and-klingon-pop-songs-inside-star-trek-str",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "TVGuide.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "TVGuide.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 61,
+      "priority": 66,
       "signals": {
         "recency": 4,
-        "corroboration": 12,
+        "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
         "trending": 0,
-        "spice": 0,
+        "spice": 4,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
@@ -955,15 +773,15 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
-      "primaryKeyword": "snoop dogg biopic",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "primaryKeyword": "Snoop Dogg biopic",
       "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
+        "Universal Pictures",
         "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal"
+        "Craig Brewer"
       ],
-      "angle": "The Snoop Dogg biopic has been given a Summer 2027 release date by Universal.",
+      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -971,12 +789,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 1831,
+          "ageMin": 1951,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1831,
+      "ageMin": 1951,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -1013,368 +831,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-sophie-thatcher-other",
-      "slug": "sophie-thatcher-says-she-s-really-ready-to-let-go-of-her-yellowjackets",
-      "title": "Sophie Thatcher Says She s ‘Really Ready to Let Go’ of Her Yellowjackets Character, Questions If She’ll Do TV Again",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "sophie-thatcher-other",
-      "primaryKeyword": "sophie thatcher yellowjackets",
-      "primaryEntity": "Sophie Thatcher",
-      "entities": [
-        "Natalie Portman",
-        "Yellowjackets",
-        "Natalie"
-      ],
-      "angle": "Sophie Thatcher discusses her readiness to move on from her 'Yellowjackets' character and questions her future in television.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/kevin-feige-wants-add-miles-morales-mcu-after-spider-verse-1237000938/",
-          "ageMin": 131,
-          "headline": "Kevin Feige Wants To Add Miles Morales Spider-Man To MCU After Spider-Verse Films End: We Definitely Have Plans",
-          "summary": "After the MCU expanded on Peter Parker s Spider-Verse, Kevin Feige hopes to have fan-favorite Miles Morales swing by the franchise. The Marvel Studios boss recently teased plans for Spider-Man s Black alter ego make a live-action appearance in a future movie, once he s done saving the world in Sony Pictures animated Spider-Verse franchise, which concludes on [ ]"
-        }
-      ],
-      "ageMin": 131,
-      "_cand": {
-        "key": "rss:kevin-feige-wants-to-add-miles-morales-spider-man-to-mcu-aft",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-incredibles-3-time-jump-comment",
-      "slug": "incredibles-3-producer-brad-bird-discusses-potential-time-jump",
-      "title": "'Incredibles 3' Producer Brad Bird Discusses Potential Time Jump",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "incredibles-3-time-jump-comment",
-      "primaryKeyword": "incredibles 3 time jump",
-      "primaryEntity": "Incredibles 3",
-      "entities": [
-        "Brad Bird",
-        "Pixar"
-      ],
-      "angle": "Producer Brad Bird commented that aging up the characters in 'Incredibles 3' with a time jump would not fit the characters.",
-      "tmdbType": "movie",
-      "source": "gnews:The Direct",
-      "sources": [
-        {
-          "outlet": "The Direct",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5",
-          "ageMin": 738,
-          "headline": "'Incredibles 3' Producer Brad Bird Admits Aging Up The Characters With A Time Jump In Pixar's Upcoming Sequel Movie Would Not Make Them 'Hipper Or Cooler Or More Like Them' (Exclusive) - The Direct",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5\" target=\"_blank\" 'Incredibles 3' Produc"
-        }
-      ],
-      "ageMin": 738,
-      "_cand": {
-        "key": "rss:-incredibles-3-producer-brad-bird-admits-aging-up-the-charac",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Direct"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Direct",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-star-wars-jedi-sequel-release-this-year",
-      "slug": "star-wars-jedi-gets-official-sequel-release-this-year",
-      "title": "‘Star Wars Jedi’ Gets Official Sequel Release This Year",
+      "id": "news-the-chosen-bear-grylls-crossover",
+      "slug": "watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of-the-summe",
+      "title": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-jedi-sequel-release-this-year",
-      "primaryKeyword": "Star Wars Jedi sequel",
-      "primaryEntity": "Star Wars: The Last Jedi",
+      "eventSlug": "the-chosen-bear-grylls-crossover",
+      "primaryKeyword": "the chosen bear grylls crossover",
+      "primaryEntity": "The Chosen",
       "entities": [
-        "Star Wars Jedi"
+        "Bear Grylls"
       ],
-      "angle": "The official sequel to the popular Star Wars game is set to release this year.",
-      "tmdbType": "movie",
-      "source": "gnews:Collider",
-      "sources": [
-        {
-          "outlet": "Collider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5",
-          "ageMin": 931,
-          "headline": "‘Star Wars Jedi’ Gets Official Sequel Release This Year - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5\" target=\"_blank\" ‘Star War"
-        }
-      ],
-      "ageMin": 931,
-      "_cand": {
-        "key": "rss:-star-wars-jedi-gets-official-sequel-release-this-year-colli",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Collider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Collider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 54,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-chuck-lorre-explains-decision-to-make-big-bang-theory-spin-off-lead-st",
-      "slug": "creator-says-big-bang-character-was-worst-choice-to-lead-spin-off-whic",
-      "title": "Creator Says Big Bang Character Was Worst Choice To Lead Spin-Off, Which Made Him The Perfect Choice",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "chuck-lorre-explains-decision-to-make-big-bang-theory-spin-off-lead-st",
-      "primaryKeyword": "big bang theory spin off",
-      "primaryEntity": "The Big Bang Theory",
-      "entities": [
-        "Chuck Lorre",
-        "Stuart"
-      ],
-      "angle": "Series co-creator Chuck Lorre discusses the casting choice for the lead of a new 'Big Bang Theory' spin-off.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/stuart-fails-to-save-the-universe-character-worst-choice-1237000918/",
-          "ageMin": 195,
-          "headline": "Stuart Fails to Save the Universe Creator Says Big Bang Character Was Worst Choice To Lead Spin-Off, Which Made Him The Perfect Choice",
-          "summary": "With the Big Bang Theory spin-off machine operating in full force after nearly 20 years, series co-creator Chuck Lorre explained the choice behind the franchise s latest lead. While discussing Stuart Fails to Save the Universe, premiering Thursday at 9pm ET on HBO Max, Lorre explained that the titular comic book store owner was the absolute [ ]"
-        }
-      ],
-      "ageMin": 195,
-      "_cand": {
-        "key": "rss:stuart-fails-to-save-the-universe-creator-says-big-bang-char",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-star-trek-strange-new-worlds-cast-co-showrunner-talk-season-4",
-      "slug": "star-trek-strange-new-worlds-cast-co-showrunner-talk-playing-with-genr",
-      "title": "Star Trek: Strange New Worlds Cast, Co-Showrunner Talk Playing With Genres in Season 4, Joyful Curiosity, and That Puppet Episode",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-trek-strange-new-worlds-cast-co-showrunner-talk-season-4",
-      "primaryKeyword": "star trek strange new worlds season 4",
-      "primaryEntity": "Star Trek: Strange New Worlds",
-      "entities": [
-        "Anson Mount"
-      ],
-      "angle": "Cast and co-showrunner of 'Star Trek: Strange New Worlds' discuss genre-bending in Season 4.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/star-trek-strange-new-worlds-season-4-92ny-1236818484/",
-          "ageMin": 352,
-          "headline": "Star Trek: Strange New Worlds Cast, Co-Showrunner Talk Playing With Genres in Season 4, Joyful Curiosity, and That Puppet Episode",
-          "summary": "The team behind Star Trek: Strange New Worlds took the stage at 92NY in New York on Tuesday to delve into what fans can expect from Season 4 of the Paramount+ series. Series stars Anson Mount (Capt. Pike), Celia Rose Gooding (Ensign Uhura), Melissa Navia (Lt. Ortegas), and Carol Kane (Cmmdr. Pelia) were joined by [ ]"
-        }
-      ],
-      "ageMin": 352,
-      "_cand": {
-        "key": "rss:star-trek-strange-new-worlds-cast-co-showrunner-talk-playing",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 50,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-travis-scott-acting-in-the-odyssey",
-      "slug": "travis-scott-says-he-was-nervous-as-f-about-acting-in-christopher-nola",
-      "title": "Travis Scott Says He Was Nervous as F About Acting in Christopher Nolan's The Odyssey",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "travis-scott-acting-in-the-odyssey",
-      "primaryKeyword": "Travis Scott acting",
-      "primaryEntity": "Travis Scott",
-      "entities": [
-        "Christopher Nolan",
-        "The Odyssey"
-      ],
-      "angle": "Travis Scott reveals nervousness about his acting role in Christopher Nolan's 'The Odyssey' and contributing a song.",
+      "angle": "A crossover event between 'The Chosen' and Bear Grylls features Jesus rappelling down a cliff.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/travis-scott-christopher-nolan-the-odyssey-acting-nerves-1236654348/",
-          "ageMin": 198,
-          "headline": "Travis Scott Says He Was Nervous as F About Acting in Christopher Nolan s The Odyssey",
-          "summary": "The rapper also recorded the original song \"When I’m Home\" for the closing credits."
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/kyle-university-manosphere-film-publicity-stunt-noah-caplan-1236653919/",
+          "ageMin": 661,
+          "headline": "Inside the Gen Z Film Publicity Stunt That Had Manosphere Poster Boy Kyle University Stationed Outside L.A., London Studios (Exclusive)",
+          "summary": "You might have seen the 7-foot muscle-head talking about being a \"high-value man\" and collecting \"aura points\" on social media. But it's all part of a marketing tactic for an anti-manosphere movie."
         }
       ],
-      "ageMin": 198,
+      "ageMin": 661,
       "_cand": {
-        "key": "rss:travis-scott-says-he-was-nervous-as-f-about-acting-in-christ",
+        "key": "rss:inside-the-gen-z-film-publicity-stunt-that-had-manosphere-po",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1393,7 +880,141 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-trek-strange-new-worlds-season-4-details",
+      "slug": "puppets-film-noir-and-klingon-pop-songs-inside-star-trek-strange-new-w",
+      "title": "Puppets, Film Noir, and Klingon Pop Songs: Inside Star Trek: Strange New Worlds Season 4",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "star-trek-strange-new-worlds-season-4-details",
+      "primaryKeyword": "Star Trek: Strange New Worlds Season 4",
+      "primaryEntity": "Star Trek: Strange New Worlds",
+      "entities": [
+        "Star Trek: Strange New Worlds Season 4"
+      ],
+      "angle": "Behind-the-scenes look at the upcoming season of the popular Star Trek series.",
+      "tmdbType": "movie",
+      "source": "gnews:Gwinnett Daily Post",
+      "sources": [
+        {
+          "outlet": "Gwinnett Daily Post",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZ1phbTZES1ZFMk5CVmtySkpwbk9LdUFYcGxyb1hXbkp6ZVYwS3F3aF9BWmVQRTI3M3otdG1QT0pjMnoyQUQ3QjhTRjR6dWFBZ0l5b0w1RUUxRTRGSW5leGR0M1NBM1JQYUZGQ0RHaWcwenhhU1dvYktGV1MzMnl5NVQ5aTlONll0Uno4RkhsRG9KdTVNY0hSQ3NnWEYyTVhUNW1JUkJYM0Z5a0hNZkk5cVc5bTlCQkw0TEctVmNIRGVuV0YzR193YTJDWWhqdkRyNEFDZmtJa1huZEw5NHBwN1RsZ0ZfX05Ra1JDNTZSWXFUZ3dhcmhZM1hn?oc=5",
+          "ageMin": 582,
+          "headline": "Wesleyan's Mary Mac Brown leads Gwinnett's 14 NCSAA soccer award-winners - Gwinnett Daily Post",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZ1phbTZES1ZFMk5CVmtySkpwbk9LdUFYcGxyb1hXbkp6ZVYwS3F3aF9BWmVQRTI3M3otdG1QT0pjMnoyQUQ3QjhTRjR6dWFBZ0l5b0w1RUUxRTRGSW5leGR0M1NBM1JQYUZGQ0RHaWcwenhhU1dvYktGV1MzMnl5NVQ5aTlONll0Uno4RkhsRG9KdTVNY0hSQ3NnWEYyTVhUNW1JUkJYM0Z5a0hNZkk5cVc5bTlCQkw0TEc"
+        }
+      ],
+      "ageMin": 582,
+      "_cand": {
+        "key": "rss:wesleyan-s-mary-mac-brown-leads-gwinnett-s-14-ncsaa-soccer-a",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Gwinnett Daily Post"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Gwinnett Daily Post",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 20
+      },
+      "radarKind": "tv-episode-today",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-will-ferrell-gene-hackman-royal-tenenbaums-set",
+      "slug": "will-ferrell-recalls-intimidating-encounter-with-gene-hackman-on-the-r",
+      "title": "Will Ferrell Recalls 'Intimidating' Encounter with Gene Hackman on 'The Royal Tenenbaums' Set",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "will-ferrell-gene-hackman-royal-tenenbaums-set",
+      "primaryKeyword": "Will Ferrell Gene Hackman",
+      "primaryEntity": "The Royal Tenenbaums",
+      "entities": [
+        "Will Ferrell",
+        "Gene Hackman",
+        "Wes Anderson"
+      ],
+      "angle": "Will Ferrell recounts a memorable and 'intimidating' chance encounter with Gene Hackman on the set of Wes Anderson's 'The Royal Tenenbaums.'",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/will-ferrell-recalls-meeting-gene-hackman-very-intimidating/",
+          "ageMin": 211,
+          "headline": "Will Ferrell Recalls Chance Encounter With ‘Very Intimidating’ Gene Hackman on ‘The Royal Tenenbaums’ Set",
+          "summary": "“He asked me if I was in the picture,” the “Saturday Night Live” alum, who was not in the Wes Anderson film, adds The post Will Ferrell Recalls Chance Encounter With ‘Very Intimidating’ Gene Hackman on ‘The Royal Tenenbaums’ Set appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 211,
+      "_cand": {
+        "key": "rss:will-ferrell-recalls-chance-encounter-with-very-intimidating",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
       "signals": {
         "recency": 9,
         "corroboration": 12,
@@ -1401,48 +1022,179 @@
         "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "C"
     },
     {
-      "id": "news-will-ferrell-gene-hackman-royal-tenenbaums-encounter",
-      "slug": "will-ferrell-recalls-chance-encounter-with-very-intimidating-gene-hack",
-      "title": "Will Ferrell Recalls Chance Encounter With ‘Very Intimidating’ Gene Hackman on ‘The Royal Tenenbaums’ Set",
+      "id": "news-who-wants-to-be-a-millionaire-returns-the-ultimatum-finale",
+      "slug": "what-to-watch-wednesday-who-wants-to-be-a-millionaire-returns-the-ulti",
+      "title": "What To Watch Wednesday: Who Wants To Be A Millionaire Returns, The Ultimatum Finale, And More",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "who-wants-to-be-a-millionaire-returns-the-ultimatum-finale",
+      "primaryKeyword": "Who Wants To Be A Millionaire",
+      "primaryEntity": "Who Wants to Be a Millionaire?",
+      "entities": [
+        "Who Wants to Be a Millionaire",
+        "The Ultimatum"
+      ],
+      "angle": "Highlights of returning game shows and season finales on television.",
+      "tmdbType": "movie",
+      "source": "gnews:Jedi News",
+      "sources": [
+        {
+          "outlet": "Jedi News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPYmh0eWM2M0ViM1NDMi1Oa1VnSHlTTWE3Rk4zS283QnJOR0xMZjdiNTdlVF9yM0R3RUhycmtRSkE3QW5UaTNkNTV0bkRuN2J3YjJCNllvTnNUdGdUVEV1dTM0OWpCVVdYTVlJUjhvM0haQWZxUXZmRDdSTEhZUnZhNVI2WXFvWlBBWllVTkNfTWxqZnBTT2s0a0tHa2RFdndBc3N1Z0hwb1ozc2c2cXhzLTM1Zk1FSlJmcXctbldXUXVjTHhKLU5RdFF3RnI1WF84cFU3d19Sc0dzYmFJTGpTQ2Mta1Zxb3FMNDJjVnFja1R1UHFWNVloeTZFUTRnYlJLcnQxZmd5NkhXb1NxSnB5djJMSDFEcTdEal9iQkhXb1N2dUFXU3lKOVkwQTN2LTdCV0hmZHJWZ0hjQzNRYXFEelNZcUh4SDNHX0llNTFfdw?oc=5",
+          "ageMin": 611,
+          "headline": "Hasbro Star Wars The Black Series Clone Trooper Load-Out Pack Revealed - Jedi News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizwJBVV95cUxPYmh0eWM2M0ViM1NDMi1Oa1VnSHlTTWE3Rk4zS283QnJOR0xMZjdiNTdlVF9yM0R3RUhycmtRSkE3QW5UaTNkNTV0bkRuN2J3YjJCNllvTnNUdGdUVEV1dTM0OWpCVVdYTVlJUjhvM0haQWZxUXZmRDdSTEhZUnZhNVI2WXFvWlBBWllVTkNfTWxqZnBTT2s0a0tHa2RFdndBc3N1Z0hwb1ozc2c2cXhzLTM1Zk1FSlJmcXc"
+        }
+      ],
+      "ageMin": 611,
+      "_cand": {
+        "key": "rss:hasbro-star-wars-the-black-series-clone-trooper-load-out-pac",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Jedi News"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Jedi News",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-lego-comic-con-activations",
+      "slug": "lego-reveals-star-wars-pok-mon-star-trek-and-donkey-kong-activations-a",
+      "title": "Lego Reveals Star Wars, Pokémon, Star Trek, and Donkey Kong Activations at Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "lego-comic-con-activations",
+      "primaryKeyword": "lego comic-con",
+      "primaryEntity": "LEGO Marvel Avengers: Mission Demolition",
+      "entities": [
+        "Lego",
+        "Star Wars",
+        "Pokémon",
+        "Star Trek"
+      ],
+      "angle": "Lego announces Star Wars and Pokémon activations, plus Star Trek and Donkey Kong sets at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/lego-comic-con-star-wars-pokemon-star-trek-donkey-kong-1236654506/",
+          "ageMin": 331,
+          "headline": "Lego at Comic-Con: Star Wars and Pokémon Activations, Star Trek and Donkey Kong Sets",
+          "summary": "Life-size brick-built Creature Cantina, anyone?"
+        }
+      ],
+      "ageMin": 331,
+      "_cand": {
+        "key": "rss:lego-at-comic-con-star-wars-and-pok-mon-activations-star-tre",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-sharon-osbourne-ozzy-advice",
+      "slug": "sharon-osbourne-reveals-advice-ozzy-gave-her-to-remember-him",
+      "title": "Sharon Osbourne Reveals Advice Ozzy Gave Her to Remember Him",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "will-ferrell-gene-hackman-royal-tenenbaums-encounter",
-      "primaryKeyword": "will ferrell gene hackman",
-      "primaryEntity": "Will Ferrell",
+      "sensitivity": "high",
+      "eventSlug": "sharon-osbourne-ozzy-advice",
+      "primaryKeyword": "Sharon Osbourne Ozzy Osbourne",
+      "primaryEntity": "Ozzy Osbourne",
       "entities": [
-        "Gene Hackman",
-        "The Royal Tenenbaums"
+        "Sharon Osbourne"
       ],
-      "angle": "Will Ferrell recounts a memorable, albeit intimidating, encounter with Gene Hackman on the set of 'The Royal Tenenbaums'.",
+      "angle": "Sharon Osbourne shares advice Ozzy gave her on how to remember him, on the anniversary of his death.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/reid-scott-leaving-law-order-james-badge-dale-season-26-nbc-1237000929/",
-          "ageMin": 53,
-          "headline": "Reid Scott Leaving Law Order , James Badge Dale To Succeed Him In Season 26 Of NBC Drama",
-          "summary": "EXCLUSIVE: The police force on Law Order is undergoing some major staff turnover. Reid Scott, who has played Senior Detective Vincent Riley for the past three seasons, is leaving the venerable NBC crime drama. The Marvelous Mrs. Maisel and Veep alum will be succeeded by another high-profile name, James Badge Dale (13 Hours, 1923). He is set [ ]"
+          "url": "https://www.rollingstone.com/music/music-news/sharon-osbourne-ozzy-death-anniversary-remember-him-1235597623/",
+          "ageMin": 139,
+          "headline": "Sharon Osbourne Reveals Advice Ozzy Gave Her to Remember Him",
+          "summary": "The Prince of Darkness died a year ago today at age 76"
         }
       ],
-      "ageMin": 53,
+      "ageMin": 139,
       "_cand": {
-        "key": "rss:reid-scott-leaving-law-order-james-badge-dale-to-succeed-him",
+        "key": "rss:sharon-osbourne-reveals-advice-ozzy-gave-her-to-remember-him",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1452,18 +1204,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 51,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -1474,141 +1226,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-kacey-musgraves-honey-music-video",
-      "slug": "watch-kacey-musgraves-serve-sultry-sweet-in-mexico-honey-music-video",
-      "title": "Watch Kacey Musgraves Serve Sultry Sweet in Mexico Honey Music Video",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "kacey-musgraves-honey-music-video",
-      "primaryKeyword": "kacey musgraves music video",
-      "primaryEntity": "Kacey Musgraves",
-      "entities": [
-        "Honey"
-      ],
-      "angle": "Kacey Musgraves releases a new music video for her song 'Honey,' filmed in Mexico.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/country/kacey-musgraves-mexico-honey-video-1236301157/",
-          "ageMin": 242,
-          "headline": "Watch Kacey Musgraves Serve Sultry Sweet in Mexico Honey Music Video",
-          "summary": "Filmed in Mexico, the romantic visual doubles as a love letter to the country that inspired the track."
-        }
-      ],
-      "ageMin": 242,
-      "_cand": {
-        "key": "rss:watch-kacey-musgraves-serve-sultry-sweet-in-mexico-honey-mus",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-gustavo-dudamel-world-cup-halftime-show",
-      "slug": "gustavo-dudamel-takes-you-inside-how-he-created-his-world-cup-halftime",
-      "title": "Gustavo Dudamel Takes You Inside How He Created His World Cup Halftime Show All Access",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "gustavo-dudamel-world-cup-halftime-show",
-      "primaryKeyword": "gustavo dudamel world cup",
-      "primaryEntity": "Gustavo Dudamel",
-      "entities": [
-        "World Cup",
-        "Chris Martin",
-        "BTS"
-      ],
-      "angle": "Gustavo Dudamel provides an all-access look at the creation of his World Cup Halftime Show segment, featuring collaborations with Chris Martin and BTS.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/video/gustavo-dudamel-takes-you-inside-world-cup-halftime-show/",
-          "ageMin": 252,
-          "headline": "Gustavo Dudamel Takes You Inside How He Created His World Cup Halftime Show All Access",
-          "summary": "Gustavo Dudamel shows you how he created his segment in the World Cup Halftime show. From working with Chris Martin to BTS, keep watching to see how it all came to life! Tetris Kelly: Gustavo Dudamel brought huge energy and surprises to the first ever World Cup halftime show, and we have the experience directly [ ]"
-        }
-      ],
-      "ageMin": 252,
-      "_cand": {
-        "key": "rss:gustavo-dudamel-takes-you-inside-how-he-created-his-world-cu",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 48,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
+      "tierClass": "S"
     }
   ]
 }
