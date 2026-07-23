@@ -2355,10 +2355,10 @@
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 20,
-   "at": "2026-07-23T16:03:57.712Z",
+   "tries": 21,
+   "at": "2026-07-23T16:33:43.484Z",
    "dead": true,
-   "expiresAt": "2026-07-26T16:03:57.712Z"
+   "expiresAt": "2026-07-26T16:33:43.484Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2380,9 +2380,9 @@
    "key": "ransom-canyon-trending-tv|TRENDING-TV",
    "eventSlug": "ransom-canyon-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 102 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 1,
-   "at": "2026-07-23T13:52:24.968Z"
+   "reason": "words 106 < 180 (owner-set ~200-word minimum) | soft-floor engagement 0 < 5",
+   "tries": 2,
+   "at": "2026-07-23T16:35:08.449Z"
   },
   {
    "key": "masters-of-the-universe-now-streaming|NOW-STREAMING",
@@ -2393,14 +2393,14 @@
    "at": "2026-07-23T16:06:11.243Z"
   }
  ],
- "zeroStreak": 11,
+ "zeroStreak": 12,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.28258
+  "usd": 0.30033
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784822475759
+  "lastMs": 1784824269409
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2413,7 +2413,7 @@
    "descendants: wicked wonderland": 1,
    "a day like no other": 1,
    "star trek: strange new worlds": 2,
-   "ransom canyon": 1,
+   "ransom canyon": 2,
    "dhamaal 4": 1,
    "masters of the universe": 1
   }
