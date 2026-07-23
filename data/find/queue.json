@@ -1,49 +1,49 @@
 {
-  "runId": "run-2026-07-23T17-31-04",
-  "builtAt": "2026-07-23T17:33:13.750Z",
-  "count": 28,
+  "runId": "run-2026-07-23T18-31-03",
+  "builtAt": "2026-07-23T18:32:45.781Z",
+  "count": 24,
   "topics": [
     {
-      "id": "news-the-morning-show-tv-series-cancellation",
-      "slug": "the-morning-show-to-end-with-season-5",
-      "title": "The Morning Show to End With Season 5",
+      "id": "news-colman-domingo-slams-elon-musk-ai-odyssey",
+      "slug": "colman-domingo-slams-elon-musk-s-ai-odyssey-plan-whiter-than-christmas",
+      "title": "Colman Domingo Slams Elon Musk's AI 'Odyssey' Plan: 'Whiter Than Christmas'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "cancellation",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "the-morning-show-tv-series-cancellation",
-      "primaryKeyword": "the morning show",
-      "primaryEntity": "The Morning Show (TV series)",
+      "eventSlug": "colman-domingo-slams-elon-musk-ai-odyssey",
+      "primaryKeyword": "colman domingo elon musk ai odyssey",
+      "primaryEntity": "Colman Domingo",
       "entities": [
-        "Jennifer Aniston",
-        "Reese Witherspoon"
+        "Elon Musk",
+        "The Odyssey"
       ],
-      "angle": "Apple TV+'s 'The Morning Show' will conclude with its fifth season.",
+      "angle": "Colman Domingo voices strong opposition to Elon Musk's AI-generated 'The Odyssey' film, criticizing its potential for historical inaccuracy and lack of diversity.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/critics-choice-association-critics-choice-creator-awards-1236654731/",
-          "ageMin": 91,
-          "headline": "Critics Choice Association Announces Inaugural Critics Choice Creator Awards",
-          "summary": "The event will honor creators in the digital space across podcasts, scripted and unscripted series, documentary and informational shows, lifestyle content, game shows and sports series."
+          "url": "https://variety.com/2026/film/news/colman-domingo-elon-musk-ai-odyssey-movie-1236819447/",
+          "ageMin": 118,
+          "headline": "Colman Domingo Rips Elon Musk s Plan for AI The Odyssey Movie: It ll Be ‘Whiter Than Christmas at Cracker Barrel’",
+          "summary": "Colman Domingo slammed Elon Musk s plan for an AI-generated version of The Odyssey. “By historically accurate, he means whiter than Christmas at Cracker Barrel,” Domingo joked during his stint as guest host on Jimmy Kimmel Live! on Wednesday night. Of course, this is all because Elon and his Musketeers are upset over the diversity casting [ ]"
         },
         {
           "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/the-morning-show-ending-season-5-apple/",
-          "ageMin": 91,
-          "headline": "The Morning Show to End With Season 5 on Apple TV",
-          "summary": "The Reese Witherspoon and Jennifer Aniston-led drama series returns for one last news cycle in 2027 The post The Morning Show to End With Season 5 on Apple TV appeared first on TheWrap ."
+          "url": "https://www.thewrap.com/culture-lifestyle/culture/jimmy-kimmel-live-colman-domingo-elon-musk-the-odyssey-ai/",
+          "ageMin": 163,
+          "headline": "Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel",
+          "summary": "\"You can't make a 'historically accurate' version of something that is totally made the f—k up,\" the \"Jimmy Kimmel Live!\" guest host adds The post Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel appeared first on TheWrap ."
         }
       ],
-      "ageMin": 91,
+      "ageMin": 118,
       "_cand": {
-        "key": "rss:critics-choice-association-announces-inaugural-critics-choic",
+        "key": "rss:colman-domingo-rips-elon-musk-s-plan-for-ai-the-odyssey-movi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -53,7 +53,7 @@
         "tier1Owners": 2,
         "outletCount": 2,
         "outlets": [
-          "THR",
+          "Variety",
           "TheWrap"
         ],
         "maxTier": 7,
@@ -63,54 +63,125 @@
         "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 96,
+      "priority": 114,
       "signals": {
         "recency": 16,
         "corroboration": 18,
         "status": 25,
-        "type": 11,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 12,
         "trending": 8,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 30
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-atari-universal-movie-deal",
-      "slug": "atari-strikes-universal-movie-deal-for-10-iconic-game-properties",
-      "title": "Atari Strikes Universal Movie Deal for 10 Iconic Game Properties",
+      "id": "news-destin-daniel-cretton-sadie-sink-spiderman-role-secrecy",
+      "slug": "destin-daniel-cretton-believes-secrecy-around-sadie-sink-s-role-makes-",
+      "title": "Destin Daniel Cretton Believes Secrecy Around Sadie Sink’s Role Makes ‘Spider-Man: Brand New Day’ a Better Movie",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "atari-universal-movie-deal",
-      "primaryKeyword": "atari movies",
-      "primaryEntity": "Atari: Game Over",
+      "eventSlug": "destin-daniel-cretton-sadie-sink-spiderman-role-secrecy",
+      "primaryKeyword": "Sadie Sink Spider-Man role",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Atari",
-        "Universal Pictures"
+        "Destin Daniel Cretton",
+        "Sadie Sink"
       ],
-      "angle": "Atari inks a major movie deal with Universal Pictures to bring ten of its iconic video game properties to the big screen.",
+      "angle": "Director discusses the strategic secrecy around Sadie Sink's role in the upcoming Spider-Man film.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-features/spider-man-brand-new-day-sadie-sink-role-1236654512/",
+          "ageMin": 44,
+          "headline": "Destin Daniel Cretton Believes Secrecy Around Sadie Sink’s Role Makes ‘Spider-Man: Brand New Day’ a Better Movie",
+          "summary": "Five few years ago, Tobey Maguire and Andrew Garfield were kept out of the marketing for 'No Way Home.' Marvel and Sony are somewhat repeating that playbook for the 'Stranger Things' star's mystery part."
+        }
+      ],
+      "ageMin": 44,
+      "_cand": {
+        "key": "rss:destin-daniel-cretton-believes-secrecy-around-sadie-sink-s-r",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 104,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-da-vinci-joins-chicago-fire",
+      "slug": "bmf-star-da-vinchi-joins-chicago-fire-for-season-15",
+      "title": "BMF Star Da Vinchi Joins Chicago Fire For Season 15",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "da-vinci-joins-chicago-fire",
+      "primaryKeyword": "chicago fire casting",
+      "primaryEntity": "Chicago Fire",
+      "entities": [
+        "Da'Vinchi",
+        "Da Vinchi",
+        "BMF"
+      ],
+      "angle": "BMF actor Da Vinchi joins the cast of NBC's Chicago Fire as a series regular.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/atari-universal-deal-10-game-ip-script-matt-reilly-carl-hampe-entertainment-360-1237001656/",
-          "ageMin": 8,
-          "headline": "Atari Makes Universal Movie Deal For 10 Iconic Game Properties; First Up Is Original Script By Matt Reilly Carl Hampe, Entertainment 360 Producing",
-          "summary": "EXCLUSIVE: Partnering with Entertainment 360, Atari has signed a deal with Universal Pictures giving the studio first look at developing ten classic Atari video game properties for the big screen. Universal has bought the first project from the new partnership, a feature film based on Atari IP which will be produced by Entertainment 360’s Guymon [ ]"
+          "url": "https://deadline.com/2026/07/davinchi-cast-chicago-fire-season-15-1237001742/",
+          "ageMin": 1,
+          "headline": "BMF Star Da Vinchi Joins Chicago Fire For Season 15",
+          "summary": "EXCLUSIVE: After playing one of the real-life crime duo, the Flenory Brothers, on Starz s BMF, Da Vinchi has joined the series regular cast of NBC s Chicago Fire. Da Vinchi joins the Chicago Fire cast: Taylor Kinney, David Eigenberg, Miranda Rae Mayo, Christian Stolte, Joe Miñoso, Jocelyn Hudon and Brandon Larracuente. The new season premieres on Wednesday, Oct. 7 at 9 p.m. [ ]"
         }
       ],
-      "ageMin": 8,
+      "ageMin": 1,
       "_cand": {
-        "key": "rss:atari-makes-universal-movie-deal-for-10-iconic-game-properti",
+        "key": "rss:bmf-star-da-vinchi-joins-chicago-fire-for-season-15",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -129,15 +200,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 93,
+      "priority": 92,
       "signals": {
         "recency": 30,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -145,39 +216,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-natasha-rothwell-cable-guy-pilot-casting",
-      "slug": "natasha-rothwell-joins-hulu-s-cable-guy-pilot",
-      "title": "Natasha Rothwell Joins Hulu's 'Cable Guy' Pilot",
+      "id": "news-myron-bolitar-series-casting",
+      "slug": "myron-bolitar-series-adds-10-to-cast-including-melissa-benoist-bebe-ne",
+      "title": "Myron Bolitar Series Adds 10 To Cast, Including Melissa Benoist, Bebe Neuwirth, Jamie Hector, Quincy Isaiah",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "natasha-rothwell-cable-guy-pilot-casting",
-      "primaryKeyword": "natasha rothwell cable guy pilot",
-      "primaryEntity": "Natasha Rothwell",
+      "eventSlug": "myron-bolitar-series-casting",
+      "primaryKeyword": "myron bolitar series casting",
+      "primaryEntity": "Myron Bolitar series",
       "entities": [
-        "The Cable Guy",
-        "Cable Guy (pilot)",
-        "Hulu"
+        "Melissa Benoist",
+        "Bebe Neuwirth",
+        "Jamie Hector",
+        "Quincy Isaiah"
       ],
-      "angle": "Natasha Rothwell joins Hulu's pilot based on the 1996 film 'Cable Guy'.",
+      "angle": "Netflix's Myron Bolitar series expands its cast with ten new additions, including notable actors.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/natasha-rothwell-cast-hulu-cable-guy-pilot-1237001665/",
+          "url": "https://variety.com/2026/tv/news/myron-bolitar-series-cast-melissa-benoist-bebe-neuwirth-1236819436/",
           "ageMin": 31,
-          "headline": "Natasha Rothwell Joins Hulu s Cable Guy Pilot",
-          "summary": "EXCLUSIVE: Natasha Rothwell (The White Lotus) has joined Hulu’s untitled Cable Guy pilot, inspired by the 1996 Jim Carrey movie of the same name, from Hulu and Sony Pictures Television. The show explores the darkly absurd side of modern-day male friendship. The project s logline: In a world of endless streaming, binging, and algorithms, old-school cable [ ]"
+          "headline": "Myron Bolitar Series Adds 10 To Cast, Including Melissa Benoist, Bebe Neuwirth, Jamie Hector, Quincy Isaiah",
+          "summary": "Netflix has added ten new cast members to its Myron Bolitar series. Ra Mya Latiah Aikens ( Romeo and Juliet (Shakespeare in the Park)) has joined the show in a series regular role. In addition, the show has added nine recurring guest stars. They are: Isaiah Hill ( Swagger, One Spoon of Chocolate ), Amanda Warren ( East New York, [ ]"
         }
       ],
       "ageMin": 31,
       "_cand": {
-        "key": "rss:natasha-rothwell-joins-hulu-s-cable-guy-pilot",
+        "key": "rss:myron-bolitar-series-adds-10-to-cast-including-melissa-benoi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -187,11 +259,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -212,40 +284,465 @@
       "tierClass": "B"
     },
     {
-      "id": "news-the-joy-of-sex-film-announcement",
-      "slug": "sharon-maguire-directing-colin-firth-julianne-moore-laura-linney-david",
-      "title": "Sharon Maguire Directing Colin Firth, Julianne Moore, Laura Linney, David Tennant More In The Joy Of Sex",
+      "id": "news-tom-holland-denies-jean-grey-in-spider-man-4",
+      "slug": "tom-holland-denies-jean-grey-s-appearance-in-spider-man-4-fuels-sadie-",
+      "title": "Tom Holland Denies Jean Grey's Appearance in 'Spider-Man 4,' Fuels Sadie Sink Casting Rumors",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "tom-holland-denies-jean-grey-in-spider-man-4",
+      "primaryKeyword": "Tom Holland Spider-Man 4",
+      "primaryEntity": "Spider-Man: Brand New Day",
+      "entities": [
+        "Spider-Man 4",
+        "Tom Holland",
+        "Sadie Sink",
+        "Jean Grey"
+      ],
+      "angle": "Tom Holland denies Jean Grey's appearance in 'Spider-Man 4,' sparking speculation about Sadie Sink's role.",
+      "tmdbType": "movie",
+      "source": "gnews:IGN Southeast Asia",
+      "sources": [
+        {
+          "outlet": "IGN Southeast Asia",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPYlZUUTh3aUFSSGRrcjN6M3dWdU00bWhjNWFwbmQ2UVM3Z0U5MUswMXRSTXNLUUFTbTN0WjQtVXJpVHVqNkdhOWh2Mm1uT1M3ZHFHSjRKanZrRGd3a000R2dXd2JLWWJZblNUc0ktRnhqSkVTR0JCUEp5TUNwUmtIVkFyNlU4Q0pVMzEyTWtLQ3h0ci1ub1JJRzNOYWYzMm52cWNwek56VVY0TDRqd2hzNXhSSDQ3SGV5WXpYX2htYlhrZW1GdlhmWmdTZHA5ejQ2OGxYSjhSQjFTTzdpUUs0Ul9PbXNUcXR5LUpVSDI0MjU?oc=5",
+          "ageMin": 76,
+          "headline": "'She's Not in This Movie': Tom Holland Insists Jean Grey Won't Appear in Spider-Man: Brand New Day — So Is He Lying, or Is Sadie Sink Really Playing Someone Else? - IGN Southeast Asia",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi8AFBVV95cUxPYlZUUTh3aUFSSGRrcjN6M3dWdU00bWhjNWFwbmQ2UVM3Z0U5MUswMXRSTXNLUUFTbTN0WjQtVXJpVHVqNkdhOWh2Mm1uT1M3ZHFHSjRKanZrRGd3a000R2dXd2JLWWJZblNUc0ktRnhqSkVTR0JCUEp5TUNwUmtIVkFyNlU4Q0pVMzEyTWtLQ3h0ci1ub1JJRzNOYWYzMm52cWNwek56VVY0TDRqd2hzNXhSSDQ3SGV5WXp"
+        }
+      ],
+      "ageMin": 76,
+      "_cand": {
+        "key": "rss:-she-s-not-in-this-movie-tom-holland-insists-jean-grey-won-t",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IGN Southeast Asia"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IGN Southeast Asia",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-shot-in-the-dark-announcement",
+      "slug": "artists-equity-hidden-content-ultraboom-media-and-icki-eneo-arlo-partn",
+      "title": "Artists Equity, Hidden Content, Ultraboom Media And Icki Eneo Arlo Partner On Doc 'Shot in the Dark,' Following First U.S. Paralympic Blind Soccer Team",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-joy-of-sex-film-announcement",
-      "primaryKeyword": "the joy of sex movie",
-      "primaryEntity": "The Joy of Sex (film)",
+      "eventSlug": "shot-in-the-dark-announcement",
+      "primaryKeyword": "shot in the dark documentary",
+      "primaryEntity": "Shot in the Dark",
       "entities": [
-        "Sharon Maguire",
-        "Colin Firth",
-        "Julianne Moore",
-        "Laura Linney"
+        "Fear & Shame",
+        "Artists Equity",
+        "Robert Pattinson"
       ],
-      "angle": "Sharon Maguire taps Firth, Moore, Linney and Tennant for new comedy 'The Joy Of Sex'.",
+      "angle": "Robert Pattinson's company Artists Equity is partnering on a new documentary about the first U.S. Paralympic blind soccer team.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/sharon-maguire-directs-colin-firth-julianne-moore-joy-of-sex-1237001551/",
-          "ageMin": 61,
-          "headline": "Sharon Maguire Directing Colin Firth, Julianne Moore, Laura Linney, David Tennant More In The Joy Of Sex ; Love Triangle Comedy Pre-Sells To Lionsgate, Wild Bunch More",
-          "summary": "EXCLUSIVE: Here is the official announcement that Bridget Jones’s Diary and Bridget Jones’s Baby director Sharon Maguire has found her cast for unconventional love triangle comedy The Joy Of Sex, about how the famous 1970s love-making manual came about. Maguire has been pulling this together for a while and her cast was worth the wait. Oscar-winners Colin Firth (The King’s Speech) [ ]"
+          "url": "https://deadline.com/2026/07/artists-equity-shot-in-the-dark-1237001576/",
+          "ageMin": 31,
+          "headline": "Artists Equity, Hidden Content, Ultraboom Media And Icki Eneo Arlo Partner On Doc Shot in the Dark , Following First U.S. Paralympic Blind Soccer Team",
+          "summary": "EXCLUSIVE: Artists Equity has partnered with Hidden Content, UltraBoom Media and Robert Pattinson’s Icki Eneo Arlo to produce the documentary Shot in the Dark. The feature follows the first U.S. Paralympic Blind Soccer team from their historic roots in 2022 to their attempt to shock the world and win gold at the 2028 Paralympic Games. [ ]"
         }
       ],
-      "ageMin": 61,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:sharon-maguire-directing-colin-firth-julianne-moore-laura-li",
+        "key": "rss:artists-equity-hidden-content-ultraboom-media-and-icki-eneo-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 89,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 2,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-tiff-primetime-lineup-carrie-american-hostage-slow-horses-crystal-lake",
+      "slug": "mike-flanagan-s-carrie-and-crystal-lake-to-premiere-at-tiff-primetime",
+      "title": "Mike Flanagan's 'Carrie' and 'Crystal Lake' to Premiere at TIFF Primetime",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "tiff-primetime-lineup-carrie-american-hostage-slow-horses-crystal-lake",
+      "primaryKeyword": "TIFF Primetime",
+      "primaryEntity": "Carrie",
+      "entities": [
+        "Carrie (TV Series)",
+        "Mike Flanagan",
+        "Shawn Ryan",
+        "American Hostage"
+      ],
+      "angle": "Mike Flanagan's 'Carrie' and A24's 'Crystal Lake' are set to premiere in the Primetime episodic program at TIFF.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/tiff-2026-tv-lineup-carrie-crystal-lake-1236654655/",
+          "ageMin": 271,
+          "headline": "Toronto: Mike Flanagan s Carrie, Shawn Ryan’s American Hostage Join Primetime 2026 Program",
+          "summary": "The episodic TV sidebar also has premieres for the latest season of ‘Slow Horses' and ‘Crystal Lake,’ the 'Friday the 13th' prequel."
+        },
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/tiff-2026-primetime-lineup-mike-flanagan-carrie-series-1235206679/",
+          "ageMin": 271,
+          "headline": "TIFF Primetime Lineup Touts TV Horror with Mike Flanagan s Carrie, A24 s Crystal Lake",
+          "summary": "The episodic section launches with \"Below,\" starring Josh Hartnett and Mackenzie Davis, with additional premieres of Shawn Ryan's \"American Hostage\" and the new season of \"Slow Horses.\""
+        }
+      ],
+      "ageMin": 271,
+      "_cand": {
+        "key": "rss:toronto-mike-flanagan-s-carrie-shawn-ryan-s-american-hostage",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR",
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-adela-announces-new-album-prima",
+      "slug": "adela-announces-debut-album-prima-releases-new-single-ain-t-in-la",
+      "title": "Adela Announces Debut Album 'Prima,' Releases New Single 'Ain't in LA'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "adela-announces-new-album-prima",
+      "primaryKeyword": "Adela new album",
+      "primaryEntity": "ADÉLA",
+      "entities": [
+        "Adela",
+        "Prima (album)"
+      ],
+      "angle": "Adela has announced her debut album 'Prima' and released a new single.",
+      "tmdbType": "movie",
+      "source": "gnews:The Fader",
+      "sources": [
+        {
+          "outlet": "The Fader",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWl94LUFNb19wVXdhY2lWcHg5SDF2Z0FoYWI4VFJUS1dqM3Q5bUROUF9IeWtreDlNblVaY1RkYThjTzFCZUU1Q2Z0YllOc1hDUEw3TGppYUF1SloyejRmUU9tRDZuWjlNQXJJUjd1dUh3QW9MZGJ3MWtfMmhvcEdvV1F2VDhaQlBEa3JzWG55SDZxN2c3QVhWRGczRHJGZw?oc=5",
+          "ageMin": 68,
+          "headline": "ADELA announces new album ‘PRIMA' - The Fader",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxOWl94LUFNb19wVXdhY2lWcHg5SDF2Z0FoYWI4VFJUS1dqM3Q5bUROUF9IeWtreDlNblVaY1RkYThjTzFCZUU1Q2Z0YllOc1hDUEw3TGppYUF1SloyejRmUU9tRDZuWjlNQXJJUjd1dUh3QW9MZGJ3MWtfMmhvcEdvV1F2VDhaQlBEa3JzWG55SDZxN2c3QVhWRGczRHJGZw?oc=5\" target=\"_blank\" ADELA announce"
+        },
+        {
+          "outlet": "universalmusic.ca",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaGRjZXo3Y1J4R0NIUXd6b0tHVHo3Nm03cGh4R0s2eC13YWZ4RmVXMy11U3l1UEUyMnZJOElxVzJXcXlBVE5lcm1aMkhnaE02M0tSOVkyX1JFRlNaWUxubE9SVmRzeXA0MzY3d1Zxcy1zYWZjOGVjNzcxYVBsUTU1MGZnVHJuYlZINlB4SlZOalZaYkRaa0VDRWFSSUwyYTJYbmFHVjN2eE9GbnlLc2sxU004LXN3SVJJX2FqWXRUNUFqWnJJNm9UT2twYVdaLTJwWTgzbUFYR1EwUUZjRkNrUg?oc=5",
+          "ageMin": 87,
+          "headline": "ADÉLA ANNOUNCES DEBUT ALBUM PRIMA DUE SEPTEMBER 4TH RELEASES NEW SINGLE AND MUSIC VIDEO “AIN’T IN LA”OUT NOW - universalmusic.ca",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi4AFBVV95cUxQaGRjZXo3Y1J4R0NIUXd6b0tHVHo3Nm03cGh4R0s2eC13YWZ4RmVXMy11U3l1UEUyMnZJOElxVzJXcXlBVE5lcm1aMkhnaE02M0tSOVkyX1JFRlNaWUxubE9SVmRzeXA0MzY3d1Zxcy1zYWZjOGVjNzcxYVBsUTU1MGZnVHJuYlZINlB4SlZOalZaYkRaa0VDRWFSSUwyYTJYbmFHVjN2eE9GbnlLc2sxU004LXN3SVJJX2F"
+        }
+      ],
+      "ageMin": 68,
+      "_cand": {
+        "key": "rss:adela-announces-new-album-prima-the-fader",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "The Fader",
+          "universalmusic.ca"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 16,
+        "corroboration": 14,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-gregg-araki-olivia-wilde-i-want-your-sex",
+      "slug": "olivia-wilde-s-i-want-your-sex-character-is-madonna-meets-mapplethorpe",
+      "title": "Olivia Wilde's 'I Want Your Sex' Character Is Madonna Meets Mapplethorpe",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "gregg-araki-olivia-wilde-i-want-your-sex",
+      "primaryKeyword": "Olivia Wilde I Want Your Sex",
+      "primaryEntity": "Olivia Wilde",
+      "entities": [
+        "Splendor",
+        "Gregg Araki",
+        "I Want Your Sex"
+      ],
+      "angle": "Director Gregg Araki discusses working with Olivia Wilde on her film.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/interviews/olivia-wilde-i-want-your-sex-character-gregg-araki-1235205577/",
+          "ageMin": 31,
+          "headline": "Olivia Wilde s I Want Your Sex Character Is Madonna Meets Mapplethorpe",
+          "summary": "Director Gregg Araki tells IndieWire about working with Wilde on one of the summer's most entertaining and provocative movies."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:olivia-wilde-s-i-want-your-sex-character-is-madonna-meets-ma",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-star-trek-strange-new-worlds-prequel-problem",
+      "slug": "star-trek-strange-new-worlds-takes-a-new-tact-to-combat-an-old-prequel",
+      "title": "Star Trek: Strange New Worlds Takes a New Tact to Combat an Old Prequel Problem",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "star-trek-strange-new-worlds-prequel-problem",
+      "primaryKeyword": "star trek strange new worlds season 4",
+      "primaryEntity": "Star Trek: Strange New Worlds",
+      "entities": [
+        "Star Trek"
+      ],
+      "angle": "Star Trek: Strange New Worlds is employing a new narrative approach to overcome challenges inherent in its prequel status.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/criticism/shows/star-trek-strange-new-worlds-season-4-review-prequel-problem-1235206620/",
+          "ageMin": 91,
+          "headline": "Star Trek: Strange New Worlds Takes a New Tact to Combat an Old Prequel Problem",
+          "summary": "As a prequel series approaching its predetermined endpoint, Season 4 faces familiar struggles. But as a return to the franchise's fun, curious, episodic storytelling, it's also making the most of the time it has left."
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:star-trek-strange-new-worlds-takes-a-new-tact-to-combat-an-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 20
+      },
+      "radarKind": "tv-episode-today",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-atari-universal-movie-deal-game-properties",
+      "slug": "atari-makes-universal-movie-deal-for-10-iconic-game-properties-first-u",
+      "title": "Atari Makes Universal Movie Deal For 10 Iconic Game Properties; First Up Is Original Script By Matt Reilly Carl Hampe, With Entertainment 360 Producing",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "atari-universal-movie-deal-game-properties",
+      "primaryKeyword": "Atari Universal movie deal",
+      "primaryEntity": "Atari: Game Over",
+      "entities": [
+        "Atari",
+        "Universal Pictures",
+        "Video Game Properties"
+      ],
+      "angle": "Atari inks a major movie deal with Universal Pictures for 10 iconic game properties.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/atari-universal-deal-10-game-ip-script-matt-reilly-carl-hampe-entertainment-360-1237001656/",
+          "ageMin": 68,
+          "headline": "Atari Makes Universal Movie Deal For 10 Iconic Game Properties; First Up Is Original Script By Matt Reilly Carl Hampe, With Entertainment 360 Producing",
+          "summary": "EXCLUSIVE: Partnering with Entertainment 360, Atari has signed a deal with Universal Pictures giving the studio the right to develop 10 classic Atari video game properties for the big screen. Universal has bought the first project from the new partnership, a feature film based on Atari IP which will be produced by Entertainment 360’s Guymon [ ]"
+        }
+      ],
+      "ageMin": 68,
+      "_cand": {
+        "key": "rss:atari-makes-universal-movie-deal-for-10-iconic-game-properti",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -280,142 +777,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-star-trek-strange-new-worlds-prequel-problem",
-      "slug": "star-trek-strange-new-worlds-tackles-prequel-challenges",
-      "title": "Star Trek: Strange New Worlds Tackles Prequel Challenges",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "star-trek-strange-new-worlds-prequel-problem",
-      "primaryKeyword": "star trek strange new worlds season 4",
-      "primaryEntity": "Star Trek: Strange New Worlds",
-      "entities": [],
-      "angle": "The series discusses how 'Star Trek: Strange New Worlds' is navigating its prequel status and approaching its endpoint.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/criticism/shows/star-trek-strange-new-worlds-season-4-review-prequel-problem-1235206620/",
-          "ageMin": 31,
-          "headline": "Star Trek: Strange New Worlds Takes a New Tact to Combat an Old Prequel Problem",
-          "summary": "As a prequel series approaching its predetermined endpoint, Season 4 faces familiar struggles. But as a return to the franchise's fun, curious, episodic storytelling, it's also making the most of the time it has left."
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:star-trek-strange-new-worlds-takes-a-new-tact-to-combat-an-o",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 85,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 20
-      },
-      "radarKind": "tv-episode-today",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-venice-film-festival-lineup-robert-pattinson-penelope-cruz-alicia-vika",
-      "slug": "robert-pattinson-pen-lope-cruz-alicia-vikander-and-oasis-to-feature-at",
-      "title": "Robert Pattinson, Penélope Cruz, Alicia Vikander, and Oasis to Feature at Venice Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "venice-film-festival-lineup-robert-pattinson-penelope-cruz-alicia-vika",
-      "primaryKeyword": "venice film festival lineup",
-      "primaryEntity": "Venice Film Festival",
-      "entities": [
-        "Fear & Shame",
-        "Robert Pattinson",
-        "Penélope Cruz",
-        "Alicia Vikander"
-      ],
-      "angle": "Robert Pattinson, Penélope Cruz, Alicia Vikander, and Oasis are among the notable names leading the lineup for the Venice Film Festival.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOVhNU2FXRGZINWhRdWg1VDV2SHJMSU0tcmltZEFpM090OUpydE1LQWpiaEc2T01SRDN1ZGd6aTJBMGxvOWoyRHFINi1ocXZuZWk1VnJfa3lXWjlhVTdjNEhlbVgwODhSWEtabFV1WWRwZTI3UnhRRDZ1OVZqUkhaSTJ6U0FaQ215Tjk2YUo4V1pEWkNiRjVIb2pITDk2WTBxT25DcURrTQ?oc=5",
-          "ageMin": 174,
-          "headline": "Robert Pattinson, Penélope Cruz, Alicia Vikander and Oasis Lead All-Star Venice Lineup - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxQOVhNU2FXRGZINWhRdWg1VDV2SHJMSU0tcmltZEFpM090OUpydE1LQWpiaEc2T01SRDN1ZGd6aTJBMGxvOWoyRHFINi1ocXZuZWk1VnJfa3lXWjlhVTdjNEhlbVgwODhSWEtabFV1WWRwZTI3UnhRRDZ1OVZqUkhaSTJ6U0FaQ215Tjk2YUo4V1pEWkNiRjVIb2pITDk2WTBxT25DcURrTQ?oc=5\" target=\"_blank\" Ro"
-        }
-      ],
-      "ageMin": 174,
-      "_cand": {
-        "key": "rss:robert-pattinson-pen-lope-cruz-alicia-vikander-and-oasis-lea",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-the-beach-boys-cancel-summer-concert-dates",
-      "slug": "the-beach-boys-cancel-remaining-summer-concerts-to-recharge",
-      "title": "The Beach Boys Cancel Remaining Summer Concerts to 'Recharge'",
+      "id": "music-news-bad-bunny-monthly-touring-report-record",
+      "slug": "bad-bunny-rules-monthly-touring-report-for-record-extending-10th-time",
+      "title": "Bad Bunny Rules Monthly Touring Report for Record-Extending 10th Time",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -423,422 +787,13 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "the-beach-boys-cancel-summer-concert-dates",
-      "primaryKeyword": "The Beach Boys tour",
-      "primaryEntity": "The Beach Boys",
-      "entities": [
-        "Mike Love"
-      ],
-      "angle": "The Beach Boys have canceled all remaining summer concert dates, citing the need for the band to 'recharge,' with reports highlighting the age and health struggles of 85-year-old Mike Love.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/beach-boys-cancel-summer-concert-dates-2026-1235597790/",
-          "ageMin": 50,
-          "headline": "The Beach Boys Pull Remaining Summer Concert Dates to ‘Recharge’",
-          "summary": "Mike Love, the last remaining original Beach Boy still in the touring lineup, is 85 years old, and has been struggling with health issues this year"
-        }
-      ],
-      "ageMin": 50,
-      "_cand": {
-        "key": "rss:the-beach-boys-pull-remaining-summer-concert-dates-to-rechar",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-beauty-in-black-season-4-renewal",
-      "slug": "beauty-in-black-renewed-for-season-4-as-netflix-reverses-decision-to-e",
-      "title": "‘Beauty In Black’ Renewed For Season 4 As Netflix Reverses Decision To End Tyler Perry Series With Season 3",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "high",
-      "eventSlug": "beauty-in-black-season-4-renewal",
-      "primaryKeyword": "Beauty in Black season 4",
-      "primaryEntity": "Beauty in Black (TV series)",
-      "entities": [
-        "Tyler Perry's Finding Joy",
-        "Tyler Perry"
-      ],
-      "angle": "Netflix has renewed Tyler Perry's 'Beauty In Black' for a fourth season, reversing an earlier decision to end it.",
-      "tmdbType": "movie",
-      "source": "gnews:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa2F0S3U4UnJMaWl2RllyRDctUDNwYm90YkQ2VTBsZDJ3bGtPZ1J0ZmdFYjNVUUpWNmJPcTRUQ0M0TFJFaGw0M0RsOW82LUQ1c3FtbWE0S0hvU05WdFhKYVVaY3JnLTJlaXUwd1k3WTRjNkNaVUM5T2NRYmJDR2RKVU9XcTNxbmxm?oc=5",
-          "ageMin": 271,
-          "headline": "‘Beauty In Black’ Renewed For Season 4 As Netflix Reverses Decision To End Tyler Perry Series With Season 3 - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxOa2F0S3U4UnJMaWl2RllyRDctUDNwYm90YkQ2VTBsZDJ3bGtPZ1J0ZmdFYjNVUUpWNmJPcTRUQ0M0TFJFaGw0M0RsOW82LUQ1c3FtbWE0S0hvU05WdFhKYVVaY3JnLTJlaXUwd1k3WTRjNkNaVUM5T2NRYmJDR2RKVU9XcTNxbmxm?oc=5\" target=\"_blank\" ‘Beauty In Black’ Renewed For Season 4 As Ne"
-        },
-        {
-          "outlet": "Netflix",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPT09fd19BajdyUkh5cjZBYUJxUlowbnJLUFYxcHpiOTltaDk4b1NBdjdqWDdDN3JmeDgwZW80Wno2c01ET29MZjBwaFgwdGc2blZ0OFJvWTNsSzVHT0RIUWd3dWdTM0QtZjJxTEh5LXJfbHllV0hja3I4UTZkc3BuMmx0clZtaGdvS2hEMkJNRQ?oc=5",
-          "ageMin": 271,
-          "headline": "Tyler Perry’s Beauty in Black Scores an Early Season 4 Renewal - Netflix",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxPT09fd19BajdyUkh5cjZBYUJxUlowbnJLUFYxcHpiOTltaDk4b1NBdjdqWDdDN3JmeDgwZW80Wno2c01ET29MZjBwaFgwdGc2blZ0OFJvWTNsSzVHT0RIUWd3dWdTM0QtZjJxTEh5LXJfbHllV0hja3I4UTZkc3BuMmx0clZtaGdvS2hEMkJNRQ?oc=5\" target=\"_blank\" Tyler Perry’s Beauty in Black Scor"
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:-beauty-in-black-renewed-for-season-4-as-netflix-reverses-de",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Deadline",
-          "Netflix"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "music-news-charles-wesley-godwin-announcement",
-      "slug": "charles-wesley-godwin-addresses-heartbreaking-loss-on-new-album-christ",
-      "title": "Charles Wesley Godwin Addresses Heartbreaking Loss on New Album 'Christian Name'",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "indie",
-      "eventSlug": "charles-wesley-godwin-announcement",
-      "primaryKeyword": "Charles Wesley Godwin Christian Name",
-      "primaryEntity": "Charles Wesley Godwin",
-      "entities": [
-        "Christian Name"
-      ],
-      "angle": "Charles Wesley Godwin is releasing a new album, 'Christian Name,' which deeply explores the grief of losing his stillborn son.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/charles-wesley-godwin-christian-name-family-faith-1235597742/",
-          "ageMin": 56,
-          "headline": "Charles Wesley Godwin Addresses the Most Heartbreaking Loss Imaginable",
-          "summary": "On his new album Christian Name , a record rooted in faith, the songwriter processes the grief of his stillborn son"
-        }
-      ],
-      "ageMin": 56,
-      "_cand": {
-        "key": "rss:charles-wesley-godwin-addresses-the-most-heartbreaking-loss-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-edinburgh-film-festival-industry-event",
-      "slug": "christine-vachon-ewan-mcgregor-kenneth-branagh-at-edinburgh-industry-e",
-      "title": "Christine Vachon, Ewan McGregor, Kenneth Branagh at Edinburgh Industry Event",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "edinburgh-film-festival-industry-event",
-      "primaryKeyword": "edinburgh film festival",
-      "primaryEntity": "Edinburgh Film Festival",
-      "entities": [
-        "Christine Vachon",
-        "Ewan McGregor",
-        "Kenneth Branagh"
-      ],
-      "angle": "Industry figures like Christine Vachon and Ewan McGregor are attending an event at the Edinburgh Film Festival focused on the UK independent film scene.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/christine-vachon-ewan-mcgregor-kenneth-branagh-edinburgh-1236654927/",
-          "ageMin": 273,
-          "headline": "Christine Vachon, Ewan McGregor, Kenneth Branagh at Edinburgh Industry Event",
-          "summary": "The Edinburgh Film Festival's industry section will include various networking events and sessions, including an inaugural UK Film Conference on the state of independent film in the U.K.."
-        }
-      ],
-      "ageMin": 273,
-      "_cand": {
-        "key": "rss:christine-vachon-ewan-mcgregor-kenneth-branagh-at-edinburgh-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-jamie-campbell-bower-revealed-as-celeborn-rings-of-power-season-3",
-      "slug": "the-rings-of-power-season-3-casts-jamie-campbell-bower-as-celeborn",
-      "title": "'The Rings of Power' Season 3 Casts Jamie Campbell Bower as Celeborn",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "jamie-campbell-bower-revealed-as-celeborn-rings-of-power-season-3",
-      "primaryKeyword": "rings of power season 3 casting",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
-      "entities": [
-        "The Rings of Power (TV series)",
-        "Jamie Campbell Bower",
-        "Celeborn"
-      ],
-      "angle": "Jamie Campbell Bower joins 'The Rings of Power' Season 3 as Celeborn.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Insider",
-      "sources": [
-        {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMHJfbk14SE1PMnlmMFlUcFM1Q3pkNzBTdC02MVNPRG9pZVlXSGVqdDVEWEMyd01mT2J4VWlaMVliSGU2RVVqNm9RN05yVDdnbWk0NTB0RWN2aDZDOXUySzhyR181N3V5T1N4bmZ3YldZb0RqUnNkeXd6LXoxWS14NWZ0d2o5VF9nUEFNVTNZUXRNNkliM3BtbXIzeER3eWx2MlJDTHpjTWY2M0U?oc=5",
-          "ageMin": 160,
-          "headline": "‘The Rings of Power’ Season 3: Jamie Campbell Bower Revealed as Celeborn - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMHJfbk14SE1PMnlmMFlUcFM1Q3pkNzBTdC02MVNPRG9pZVlXSGVqdDVEWEMyd01mT2J4VWlaMVliSGU2RVVqNm9RN05yVDdnbWk0NTB0RWN2aDZDOXUySzhyR181N3V5T1N4bmZ3YldZb0RqUnNkeXd6LXoxWS14NWZ0d2o5VF9nUEFNVTNZUXRNNkliM3BtbXIzeER3eWx2MlJDTHpjTWY2M0U?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 160,
-      "_cand": {
-        "key": "rss:-the-rings-of-power-season-3-jamie-campbell-bower-revealed-a",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Insider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Insider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-sienna-spiro-benefit-concert",
-      "slug": "sienna-spiro-plays-intimate-benefit-concert-for-north-shore-animal-lea",
-      "title": "Sienna Spiro Plays Intimate Benefit Concert for North Shore Animal League",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "sienna-spiro-benefit-concert",
-      "primaryKeyword": "Sienna Spiro",
-      "primaryEntity": "SIENNA SPIRO",
-      "entities": [
-        "Sienna Spiro",
-        "North Shore Animal League America"
-      ],
-      "angle": "Fast-rising singer Sienna Spiro performed an intimate benefit concert for the North Shore Animal League.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/music/news/sienna-spiro-plays-benefit-concert-north-shore-animal-league-1236819494/",
-          "ageMin": 20,
-          "headline": "Sienna Spiro Plays Intimate Benefit Concert for North Shore Animal League",
-          "summary": "Fast-rising British singer Sienna Spiro played a special set at New York’s intimate Soho Sessions in support of the North Shore Animal League America, a Long Island-based animal-rescue organization. The highly touted 20-year-old singer, who released her debut album “Visitor” earlier this month, played a set for an invite-only crowd of around 150 people, based [ ]"
-        }
-      ],
-      "ageMin": 20,
-      "_cand": {
-        "key": "rss:sienna-spiro-plays-intimate-benefit-concert-for-north-shore-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "music-news-bad-bunny-touring-report-record",
-      "slug": "bad-bunny-tops-touring-report-for-record-10th-month",
-      "title": "Bad Bunny Tops Touring Report for Record 10th Month",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bad-bunny-touring-report-record",
+      "eventSlug": "bad-bunny-monthly-touring-report-record",
       "primaryKeyword": "Bad Bunny tour",
       "primaryEntity": "Bad Bunny",
       "entities": [
         "Billboard"
       ],
-      "angle": "Bad Bunny's touring success continues with a record-extending tenth month at the top of the touring report.",
+      "angle": "Bad Bunny's touring success continues to break records.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -846,12 +801,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/pro/bad-bunny-monthly-touring-report-record-extending/",
-          "ageMin": 31,
+          "ageMin": 91,
           "headline": "Bad Bunny Rules Monthly Touring Report for Record-Extending 10th Time",
           "summary": "Eight shows in Madrid and another handful around Europe did the trick."
         }
       ],
-      "ageMin": 31,
+      "ageMin": 91,
       "_cand": {
         "key": "rss:bad-bunny-rules-monthly-touring-report-for-record-extending-",
         "popularity": 0,
@@ -873,12 +828,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 55,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -889,77 +844,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg Biopic",
-      "entities": [
-        "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal"
-      ],
-      "angle": "Universal sets a summer 2027 release for the Snoop Dogg biopic.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 2641,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 2641,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-law-order-season-26-casting-changes",
-      "slug": "reid-scott-departs-law-order-season-26-james-badge-dale-joins-nbc-seri",
-      "title": "Reid Scott Departs 'Law & Order' Season 26; James Badge Dale Joins NBC Series",
+      "slug": "law-order-season-26-james-badge-dale-joins-reid-scott-departs",
+      "title": "Law & Order Season 26: James Badge Dale Joins, Reid Scott Departs",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -971,10 +858,9 @@
       "primaryEntity": "Law & Order (TV Series)",
       "entities": [
         "Reid Scott",
-        "James Badge Dale",
-        "NBC"
+        "James Badge Dale"
       ],
-      "angle": "NBC's flagship procedural 'Law & Order' is undergoing significant cast changes for its upcoming 26th season with the departure of Reid Scott and the addition of James Badge Dale.",
+      "angle": "Law & Order adds James Badge Dale and loses Reid Scott for its upcoming 26th season.",
       "tmdbType": "movie",
       "source": "gnews:TV Series Finale",
       "sources": [
@@ -982,12 +868,12 @@
           "outlet": "TV Series Finale",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxObFhsR1MxWkFjZmhqZkxxZk9SS2wtNjNoeExtY2NiRVdRODRNUm1qY0tsaDQ2ejQyWDFYR0tsbnZJQjlPTHM0WTdMOXdxS2RtdXhJMHhFUWhfUE11akItUnZsczF6RktUVGt1dWJwT3FMbHVEY1hwSGRTNl9LdTR4YXhYbTJVTHlYQmxYMmtMTm1aNEFVSkNzMGJpd2dWRFhUQl93QWJLcXowZnI0U3JhamtUUWHSAbQBQVVfeXFMTmxYbEdTMVpBY2ZoamZMcWZPUktsLTYzaHhMbWNjYkVXUTg0TVJtamNLbGg0Nno0MlgxWEdLbG52SUI5T0xzNFk3TDl3cUtkbXV4STB4RVFoX1BNdWpCLVJ2bHMxekZLVFRrdXVicE9xTGx1RGNYcEhkUzZfS3U0eGF4WG0yVUx5WEJsWDJrTE5tWjRBVUpDczBiaXdnVkRYVEJfd0FiS3F6MGZyNFNyYWprVFFh?oc=5",
-          "ageMin": 181,
+          "ageMin": 241,
           "headline": "Law Order: Season 26; Reid Scott Leaving, James Badge Dale Joining NBC Series - TV Series Finale",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxObFhsR1MxWkFjZmhqZkxxZk9SS2wtNjNoeExtY2NiRVdRODRNUm1qY0tsaDQ2ejQyWDFYR0tsbnZJQjlPTHM0WTdMOXdxS2RtdXhJMHhFUWhfUE11akItUnZsczF6RktUVGt1dWJwT3FMbHVEY1hwSGRTNl9LdTR4YXhYbTJVTHlYQmxYMmtMTm1aNEFVSkNzMGJpd2dWRFhUQl93QWJLcXowZnI0U3JhamtUUWHSAbQBQVV"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 241,
       "_cand": {
         "key": "rss:law-order-season-26-reid-scott-leaving-james-badge-dale-join",
         "popularity": 0,
@@ -1024,42 +910,107 @@
       "tierClass": "B"
     },
     {
-      "id": "news-tiff-primetime-lineup-horror-tv",
-      "slug": "tiff-primetime-lineup-to-feature-tv-horror-including-mike-flanagan-s-c",
-      "title": "TIFF Primetime Lineup to Feature TV Horror, Including Mike Flanagan's 'Carrie'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-beach-boys-cancel-summer-concerts",
+      "slug": "the-beach-boys-pull-remaining-summer-concert-dates-to-recharge",
+      "title": "The Beach Boys Pull Remaining Summer Concert Dates to ‘Recharge’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "tiff-primetime-lineup-horror-tv",
-      "primaryKeyword": "tiff primetime lineup",
-      "primaryEntity": "TIFF",
+      "tier": "popular",
+      "eventSlug": "beach-boys-cancel-summer-concerts",
+      "primaryKeyword": "The Beach Boys tour",
+      "primaryEntity": "The Beach Boys",
       "entities": [
-        "Mike Flanagan",
-        "A24",
-        "Carrie",
-        "Crystal Lake"
+        "Mike Love"
       ],
-      "angle": "The Toronto International Film Festival's Primetime program will feature TV horror titles including Mike Flanagan's 'Carrie' and A24's 'Crystal Lake,' alongside other premieres.",
+      "angle": "The Beach Boys have canceled their remaining summer tour dates.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/festivals/tiff-2026-primetime-lineup-mike-flanagan-carrie-series-1235206679/",
-          "ageMin": 211,
-          "headline": "TIFF Primetime Lineup Touts TV Horror with Mike Flanagan s Carrie, A24 s Crystal Lake",
-          "summary": "The episodic section launches with \"Below,\" starring Josh Hartnett and Mackenzie Davis, with additional premieres of Shawn Ryan's \"American Hostage\" and the new season of \"Slow Horses.\""
+          "url": "https://www.rollingstone.com/music/music-news/beach-boys-cancel-summer-concert-dates-2026-1235597790/",
+          "ageMin": 110,
+          "headline": "The Beach Boys Pull Remaining Summer Concert Dates to ‘Recharge’",
+          "summary": "Mike Love, the last remaining original Beach Boy still in the touring lineup, is 85 years old, and has been struggling with health issues this year"
         }
       ],
-      "ageMin": 211,
+      "ageMin": 110,
       "_cand": {
-        "key": "rss:tiff-primetime-lineup-touts-tv-horror-with-mike-flanagan-s-c",
+        "key": "rss:the-beach-boys-pull-remaining-summer-concert-dates-to-rechar",
         "popularity": 0,
         "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-days-of-thunder-2-jonathan-levine-direct",
+      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
+      "title": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "days-of-thunder-2-jonathan-levine-direct",
+      "primaryKeyword": "Days of Thunder 2",
+      "primaryEntity": "Days of Thunder 2",
+      "entities": [
+        "Tom Cruise",
+        "Jonathan Levine"
+      ],
+      "angle": "Jonathan Levine in talks to direct Tom Cruise in the racing sequel 'Days of Thunder 2'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
+          "ageMin": 1555,
+          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
+        }
+      ],
+      "ageMin": 1555,
+      "_cand": {
+        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "popularity": 0,
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -1067,220 +1018,24 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 69,
       "signals": {
-        "recency": 9,
+        "recency": 1,
         "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-luke-skywalker-lightsaber-star-wars-auction",
-      "slug": "luke-skywalker-s-lightsaber-from-i-am-your-father-scene-sells-for-3-75",
-      "title": "Luke Skywalker’s Lightsaber from ‘I Am Your Father’ Scene Sells for $3.75 Million at Auction",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "luke-skywalker-lightsaber-star-wars-auction",
-      "primaryKeyword": "Star Wars lightsaber auction",
-      "primaryEntity": "Luke Skywalker's Lightsaber",
-      "entities": [
-        "Star Wars"
-      ],
-      "angle": "Iconic 'Star Wars' prop fetches millions at auction.",
-      "tmdbType": "movie",
-      "source": "gnews:Yahoo News New Zealand",
-      "sources": [
-        {
-          "outlet": "Yahoo News New Zealand",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWnhsVm94ck5LVHJYN1Z6bGZMOWloRll0ZDBIZHZnaDlOb3NHTlk4d2pMTmlxV01IWmFxTnpheldZVkVfUVJ6QmM5OUk2emNrVl9RbjVqc2ktV19Pejg3UWY5NkJHUllSclNZWVZKS2xmUkNzMGpzT2lWYkczWTc0U0l3?oc=5",
-          "ageMin": 76,
-          "headline": "Luke Skywalker’s Lightsaber from the Famous ‘I Am Your Father’ “Star Wars” Scene Sells for $3.75 Million at Auction - Yahoo News New Zealand",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxPWnhsVm94ck5LVHJYN1Z6bGZMOWloRll0ZDBIZHZnaDlOb3NHTlk4d2pMTmlxV01IWmFxTnpheldZVkVfUVJ6QmM5OUk2emNrVl9RbjVqc2ktV19Pejg3UWY5NkJHUllSclNZWVZKS2xmUkNzMGpzT2lWYkczWTc0U0l3?oc=5\" target=\"_blank\" Luke Skywalker’s Lightsaber from the Famous ‘I Am Yo"
-        }
-      ],
-      "ageMin": 76,
-      "_cand": {
-        "key": "rss:luke-skywalker-s-lightsaber-from-the-famous-i-am-your-father",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Yahoo News New Zealand"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Yahoo News New Zealand",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-zach-cregger-resident-evil-hardest-scene",
-      "slug": "resident-evil-director-reveals-toughest-scene-to-shoot",
-      "title": "Resident Evil Director Reveals Toughest Scene to Shoot",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "zach-cregger-resident-evil-hardest-scene",
-      "primaryKeyword": "Zach Cregger Resident Evil",
-      "primaryEntity": "Resident Evil (film series)",
-      "entities": [
-        "Zach Cregger"
-      ],
-      "angle": "Director Zach Cregger reveals the most challenging scene to film for his 'Resident Evil' project.",
-      "tmdbType": "movie",
-      "source": "gnews:Nation.Cymru",
-      "sources": [
-        {
-          "outlet": "Nation.Cymru",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOZW5SQVBZUmUtRDctVWlmU09ENFpuNldHRlk4NUZtalFXdHJBMU43cEUwZ3lmMVZOdV9uekU4cURaSmpDSFhHNUJJd0REQTB1MTBvT25YNzZfbGhOTUhxQmRBM2VQWkVYWHFsOWdqVjBISzFyTXBMWFNycnJlT3cxcXA1NjlvOEowa1dYZEh0OFgydjNXY204TUM5Nll1MWt0RzMzc2w1cVJYbTJ1dGJoVllPcDd2dFVoczN4SnVR?oc=5",
-          "ageMin": 146,
-          "headline": "North Wales psych-pop band Bau Cat release new single inspired by 'Manosphere' internet craze - Nation.Cymru",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOZW5SQVBZUmUtRDctVWlmU09ENFpuNldHRlk4NUZtalFXdHJBMU43cEUwZ3lmMVZOdV9uekU4cURaSmpDSFhHNUJJd0REQTB1MTBvT25YNzZfbGhOTUhxQmRBM2VQWkVYWHFsOWdqVjBISzFyTXBMWFNycnJlT3cxcXA1NjlvOEowa1dYZEh0OFgydjNXY204TUM5Nll1MWt0RzMzc2w1cVJYbTJ1dGJoVllPcDd2dFVoczN"
-        }
-      ],
-      "ageMin": 146,
-      "_cand": {
-        "key": "rss:north-wales-psych-pop-band-bau-cat-release-new-single-inspir",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Nation.Cymru"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Nation.Cymru",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-family-guy-spinoff-stewie-voice-cast",
-      "slug": "voice-cast-revealed-for-family-guy-spinoff-stewie",
-      "title": "Voice Cast Revealed for 'Family Guy' Spinoff 'Stewie'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "family-guy-spinoff-stewie-voice-cast",
-      "primaryKeyword": "family guy spinoff stewie voice cast",
-      "primaryEntity": "Family Guy Presents: Blue Harvest",
-      "entities": [
-        "Family Guy",
-        "Stewie"
-      ],
-      "angle": "The voice cast for the 'Family Guy' spinoff 'Stewie' has been announced.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Insider",
-      "sources": [
-        {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5",
-          "ageMin": 510,
-          "headline": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5\" target=\"_blank\" ‘Family Guy’ Spinoff ‘Stewie’ Set"
-        }
-      ],
-      "ageMin": 510,
-      "_cand": {
-        "key": "rss:-family-guy-spinoff-stewie-sets-voice-cast-tv-insider",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Insider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Insider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -1288,106 +1043,41 @@
       "tierClass": "B"
     },
     {
-      "id": "news-criminal-minds-season-19-finale-cast-exit",
-      "slug": "criminal-minds-season-19-finale-spoiler-is-gone-hear-from-the-exiting-",
-      "title": "Criminal Minds' Season 19 Finale: [Spoiler] Is Gone! Hear From The Exiting Cast Member",
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "criminal-minds-season-19-finale-cast-exit",
-      "primaryKeyword": "Criminal Minds season 19 finale",
-      "primaryEntity": "Like Minds",
-      "entities": [
-        "Criminal Minds (TV series)"
-      ],
-      "angle": "A cast member exits Criminal Minds in the season 19 finale.",
-      "tmdbType": "movie",
-      "source": "gnews:TVLine",
-      "sources": [
-        {
-          "outlet": "TVLine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcUF5cG9KNzBhbmlzTmUtVmUwUkZ4dTdydlhqZmlpNVVxVFJVTE9iZHFBR0dNSVNzdDRGdHhuUTk4TlN1ZmQ2YWc5bERESUVVQ3hpNk92QnZpQndEbkNtRXZiaWtKZjFpZ0xEVFF4UmFFM2xMZGRtMHpabVRpUnJ0OUREV1o4RElFWUpJMHJKQ1RZb2FBTm9FWXJtaHk4ZlNn?oc=5",
-          "ageMin": 271,
-          "headline": "Criminal Minds' Season 19 Finale: [Spoiler] Is Gone! Hear From The Exiting Cast Member - TVLine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPcUF5cG9KNzBhbmlzTmUtVmUwUkZ4dTdydlhqZmlpNVVxVFJVTE9iZHFBR0dNSVNzdDRGdHhuUTk4TlN1ZmQ2YWc5bERESUVVQ3hpNk92QnZpQndEbkNtRXZiaWtKZjFpZ0xEVFF4UmFFM2xMZGRtMHpabVRpUnJ0OUREV1o4RElFWUpJMHJKQ1RZb2FBTm9FWXJtaHk4ZlNn?oc=5\" target=\"_blank\" Criminal Min"
-        }
-      ],
-      "ageMin": 271,
-      "_cand": {
-        "key": "rss:criminal-minds-season-19-finale-spoiler-is-gone-hear-from-th",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TVLine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TVLine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 16
-      },
-      "radarKind": "tv-episode-soon",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-netflix-parasyte-the-grey-follow-up",
-      "slug": "netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
-      "title": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "netflix-parasyte-the-grey-follow-up",
-      "primaryKeyword": "parasyte the grey",
-      "primaryEntity": "Parasyte: The Grey",
+      "tier": "popular",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "primaryKeyword": "snoop dogg biopic",
+      "primaryEntity": "Snoop Dogg's Hood of Horror",
       "entities": [
-        "Netflix",
-        "Yeon Sang-ho",
-        "Shioli Kutsuna"
+        "Snoop Dogg",
+        "Jonathan Daviss",
+        "Craig Brewer",
+        "Universal Pictures"
       ],
-      "angle": "Netflix is developing a follow-up series to 'Parasyte: The Grey' focusing on the character Ryoko Tamiya.",
+      "angle": "Universal Pictures has announced a summer 2027 release date for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
-          "ageMin": 1111,
-          "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
-          "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 2701,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1111,
+      "ageMin": 2701,
       "_cand": {
-        "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1406,7 +1096,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 64,
       "signals": {
         "recency": 1,
         "corroboration": 12,
@@ -1414,122 +1104,49 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-colman-domingo-criticizes-elon-musk-ai-odyssey-movie",
-      "slug": "colman-domingo-slams-elon-musk-s-ai-odyssey-movie-plan-as-potentially-",
-      "title": "Colman Domingo Slams Elon Musk's AI 'Odyssey' Movie Plan as Potentially 'Whiter Than Christmas'",
+      "id": "news-celebrity-red-carpet-july-2026",
+      "slug": "scorsese-spielberg-attend-cape-fear-screening-zendaya-holland-promote-",
+      "title": "Scorsese, Spielberg Attend 'Cape Fear' Screening; Zendaya, Holland Promote 'Spider-Man'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "celebrity",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "colman-domingo-criticizes-elon-musk-ai-odyssey-movie",
-      "primaryKeyword": "Colman Domingo Elon Musk Odyssey",
-      "primaryEntity": "Colman Domingo",
+      "tier": "popular",
+      "eventSlug": "celebrity-red-carpet-july-2026",
+      "primaryKeyword": "Spider-Man Brand New Day premiere",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "Elon Musk",
-        "The Odyssey"
+        "Zendaya",
+        "Tom Holland",
+        "Martin Scorsese",
+        "Steven Spielberg"
       ],
-      "angle": "Colman Domingo has sharply criticized Elon Musk's plan for an AI-generated 'The Odyssey,' predicting it would be overly whitewashed.",
+      "angle": "Celebrities attend film premieres and events, including 'Spider-Man: Brand New Day' and a screening of 'Cape Fear'.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Variety Music",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Variety Music",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/colman-domingo-elon-musk-ai-odyssey-movie-1236819447/",
-          "ageMin": 58,
-          "headline": "Colman Domingo Rips Elon Musk s Plan for AI The Odyssey Movie: It ll Be ‘Whiter Than Christmas at Cracker Barrel’",
-          "summary": "Colman Domingo slammed Elon Musk s plan for an AI-generated version of The Odyssey. “By historically accurate, he means whiter than Christmas at Cracker Barrel,” Domingo joked during his stint as guest host on Jimmy Kimmel Live! on Wednesday night. Of course, this is all because Elon and his Musketeers are upset over the diversity casting [ ]"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/jimmy-kimmel-live-colman-domingo-elon-musk-the-odyssey-ai/",
-          "ageMin": 103,
-          "headline": "Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel",
-          "summary": "\"You can't make a 'historically accurate' version of something that is totally made the f—k up,\" the \"Jimmy Kimmel Live!\" guest host adds The post Colman Domingo Says Elon Musk s AI Version of The Odyssey Will Be Whiter Than Christmas at Cracker Barrel appeared first on TheWrap ."
+          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
+          "ageMin": 1741,
+          "headline": "Martin Scorsese and Steven Spielberg Attend Cape Fear Screening in NYC, Zendaya and Tom Holland Promote Spider-Man: Brand New Day and More Celeb Red Carpet Photos: July 2026",
+          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
         }
       ],
-      "ageMin": 58,
+      "ageMin": 1741,
       "_cand": {
-        "key": "rss:colman-domingo-rips-elon-musk-s-plan-for-ai-the-odyssey-movi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 2,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
-        "publishable": true
-      },
-      "priority": 110,
-      "signals": {
-        "recency": 24,
-        "corroboration": 18,
-        "status": 25,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-nick-kroll-cancer-benefit",
-      "slug": "nick-kroll-battles-cancer-with-annual-comedy-benefit",
-      "title": "Nick Kroll Battles Cancer with Annual Comedy Benefit",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "eventSlug": "nick-kroll-cancer-benefit",
-      "primaryKeyword": "nick kroll cancer",
-      "primaryEntity": "Nick Kroll",
-      "entities": [
-        "Comedy vs. Cancer"
-      ],
-      "angle": "Nick Kroll hosts annual benefit to raise money for cancer research.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/nick-kroll-comedy-vs-cancer-blood-cancer-research-1236653131/",
-          "ageMin": 31,
-          "headline": "Nick Kroll vs. Cancer",
-          "summary": "With his annual Comedy vs. Cancer benefit, the comedian convenes his funniest friends to raise millions for a cause that hits very close to home."
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:nick-kroll-vs-cancer",
+        "key": "rss:martin-scorsese-and-steven-spielberg-attend-cape-fear-screen",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1539,21 +1156,153 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety Music"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 60,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 12
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-resident-evil-director-zach-cregger-hardest-scene",
+      "slug": "resident-evil-director-zach-cregger-reveals-the-movie-s-hardest-scene-",
+      "title": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "resident-evil-director-zach-cregger-hardest-scene",
+      "primaryKeyword": "resident evil movie scene",
+      "primaryEntity": "Resident Evil",
+      "entities": [
+        "Zach Cregger"
+      ],
+      "angle": "Resident Evil director reveals the most challenging scene to film.",
+      "tmdbType": "movie",
+      "source": "gnews:SlashFilm",
+      "sources": [
+        {
+          "outlet": "SlashFilm",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5",
+          "ageMin": 211,
+          "headline": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot - SlashFilm",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOUk1yTVg0MnJEUGJIaEJ3MTVKcXFxZlNudTRnRHdEWDBicWZ2Wk5GMnA4R0Q1WWV2RUh4MS1QYThtZDB1cGxrZWFkd2x0Um1Hbm1XdnRZU3E1UWNnT05tXzVyUEdfRUJMakhMVDZEdXNnWEppT2hDcF9mZlhsWUc3OUU3STVUdHhtVThEeHkxb2RTdVlNQk1wNE5WVWk?oc=5\" target=\"_blank\" Resident Evil Dir"
+        }
+      ],
+      "ageMin": 211,
+      "_cand": {
+        "key": "rss:resident-evil-director-zach-cregger-reveals-the-movie-s-hard",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "SlashFilm"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "SlashFilm",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-giancarlo-esposito-signs-with-uta",
+      "slug": "breaking-bad-star-giancarlo-esposito-signs-with-uta-for-representation",
+      "title": "Breaking Bad Star Giancarlo Esposito Signs With UTA for Representation",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "giancarlo-esposito-signs-with-uta",
+      "primaryKeyword": "giancarlo esposito",
+      "primaryEntity": "Giancarlo Esposito",
+      "entities": [
+        "UTA"
+      ],
+      "angle": "Breaking Bad star Giancarlo Esposito has signed with UTA for representation in all areas.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/breaking-bad-giancarlo-esposito-uta-representation-caa-1236818870/",
+          "ageMin": 31,
+          "headline": "Breaking Bad Star Giancarlo Esposito Signs With UTA for Representation (EXCLUSIVE)",
+          "summary": "Actor, director and producer Giancarlo Esposito has signed with United Talent Agency for representation in all areas. Esposito was previously repped by CAA. The prolific star will be seen in several projects in the next few months, including Noah Segan’s The Only Living Pickpocket in New York, in which he stars with John Turturro, Steve Buscemi [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:breaking-bad-star-giancarlo-esposito-signs-with-uta-for-repr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1561,25 +1310,25 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
-      "id": "news-jose-candelita-iglesias-broadway-debut",
+      "id": "news-jose-candelita-iglesias-broadway-debut-buena-vista-social-club",
       "slug": "jos-candelita-iglesias-to-make-broadway-debut-in-buena-vista-social-cl",
       "title": "José Candelita Iglesias to Make Broadway Debut in Buena Vista Social Club",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "jose-candelita-iglesias-broadway-debut",
+      "eventSlug": "jose-candelita-iglesias-broadway-debut-buena-vista-social-club",
       "primaryKeyword": "José Candelita Iglesias",
       "primaryEntity": "José Candelita Iglesias",
       "entities": [
         "Buena Vista Social Club"
       ],
-      "angle": "Athlete and Cuban pop star José Candelita Iglesias is set to make his Broadway debut in 'Buena Vista Social Club'.",
+      "angle": "Cuban pop star and athlete José Candelita Iglesias is set to make his Broadway debut in 'Buena Vista Social Club'.",
       "tmdbType": "movie",
       "source": "rss:Billboard",
       "sources": [
@@ -1587,12 +1336,12 @@
           "outlet": "Billboard",
           "tier": 7,
           "url": "https://www.billboard.com/music/latin/jose-iglesias-broadway-debut-buena-vista-social-club-1236301412/",
-          "ageMin": 20,
+          "ageMin": 80,
           "headline": "José Candelita Iglesias to Make Broadway Debut in Buena Vista Social Club",
           "summary": "The athlete and Cuban pop star will be the first Latin MLB player to perform on the Great White Way."
         }
       ],
-      "ageMin": 20,
+      "ageMin": 80,
       "_cand": {
         "key": "rss:jos-candelita-iglesias-to-make-broadway-debut-in-buena-vista",
         "popularity": 0,
@@ -1613,12 +1362,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 60,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1629,35 +1378,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-cardi-b-response-fans-single",
-      "slug": "cardi-b-responds-to-fans-urging-her-to-be-single",
-      "title": "Cardi B Responds to Fans Urging Her to Be Single",
+      "id": "news-zale-parry-dies-at-93",
+      "slug": "zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-at-93",
+      "title": "Zale Parry, Pioneering Scuba Diver and ‘Sea Hunt’ Actress, Dies at 93",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "cardi-b-response-fans-single",
-      "primaryKeyword": "Cardi B",
-      "primaryEntity": "Cardi B",
-      "entities": [],
-      "angle": "Cardi B addresses fan suggestions that she focus on being single.",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "zale-parry-dies-at-93",
+      "primaryKeyword": "Zale Parry death",
+      "primaryEntity": "Zale Parry",
+      "entities": [
+        "Sea Hunt",
+        "Voyage to the Bottom of the Sea"
+      ],
+      "angle": "Actress Zale Parry, known for her roles in underwater films and TV, has passed away at 93.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/cardi-b-responds-fans-want-her-stay-single-1236301360/",
-          "ageMin": 40,
-          "headline": "Cardi B Has This Response to Fans Who Urge Her to Be Single Focus on Herself",
-          "summary": "\"I've been living my life. ... I've been having a ball,\" she said during a recent Spaces."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/zale-parry-dead-scuba-diver-sea-hunt-1236655098/",
+          "ageMin": 116,
+          "headline": "Zale Parry, Pioneering Scuba Diver and ‘Sea Hunt’ Actress, Dies at 93",
+          "summary": "A record-setting plunge got her on ‘You Bet Your Life’ with Groucho Marx, followed by work in ‘Boy on a Dolphin,’ ‘Underwater Warrior’ and ‘Voyage to the Bottom of the Sea.’"
         }
       ],
-      "ageMin": 40,
+      "ageMin": 116,
       "_cand": {
-        "key": "rss:cardi-b-has-this-response-to-fans-who-urge-her-to-be-single-",
+        "key": "rss:zale-parry-pioneering-scuba-diver-and-sea-hunt-actress-dies-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1667,21 +1419,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "THR"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 60,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1689,41 +1441,41 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "S"
     },
     {
-      "id": "news-adam-met-climate-advocacy",
-      "slug": "ajr-s-adam-met-turns-to-climate-advocacy",
-      "title": "AJR's Adam Met Turns to Climate Advocacy",
+      "id": "news-jose-iglesias-broadway-debut",
+      "slug": "mlb-player-and-latin-pop-singer-jos-candelita-iglesias-to-make-broadwa",
+      "title": "MLB Player and Latin Pop Singer José “Candelita” Iglesias to Make Broadway Debut",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "adam-met-climate-advocacy",
-      "primaryKeyword": "Adam Met climate advocacy",
-      "primaryEntity": "Man with a Movie Camera",
+      "eventSlug": "jose-iglesias-broadway-debut",
+      "primaryKeyword": "Jose Iglesias Broadway",
+      "primaryEntity": "José Manuel Iglesias",
       "entities": [
-        "Adam Met",
-        "AJR"
+        "José Iglesias",
+        "Broadway"
       ],
-      "angle": "AJR bassist Adam Met is leveraging his platform for climate advocacy.",
+      "angle": "MLB player and Latin pop singer José Iglesias is making his Broadway debut.",
       "tmdbType": "movie",
-      "source": "gnews:Columbia Daily Spectator",
+      "source": "gnews:TheaterMania",
       "sources": [
         {
-          "outlet": "Columbia Daily Spectator",
+          "outlet": "TheaterMania",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxNN3VFVzFuQXRudDR3VEs1a3M1Y3paWVhIN1UwMWxJa0JtYktROVJjTGJMZEViY2tybENmbUtPdHJBTnA5REJUN2RHVndta2dGWEltdUNDeFljeGsxVUVaZDBfR3hhRzJKWFFpbTFMNndlSjZGUGZUVEg1M29ZVUs0YmpDNmVqbl9pcFVtSXFJTGp6cmN4Ykp1OGVFSjJOeWtudVF4dGNFLTQ2bUdySUk5WHN5eUZEMFlFZ1U3a3FvdFVxS24yREM3UjhHdjEwXzVfODZzLU9wNkZGVE9fTE1fekxXUm9YMkRJZE5kVjgyYmxISnBIa2NSTHZZcXlFVVZhcXlMZGFqc3l1V3FLenRxZmpKQQ?oc=5",
-          "ageMin": 56,
-          "headline": "His next ‘side quest’: SIPA professor and AJR bassist Adam Met, CC ’12, takes his pop star name to the world of climate advocacy - Columbia Daily Spectator",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwJBVV95cUxNN3VFVzFuQXRudDR3VEs1a3M1Y3paWVhIN1UwMWxJa0JtYktROVJjTGJMZEViY2tybENmbUtPdHJBTnA5REJUN2RHVndta2dGWEltdUNDeFljeGsxVUVaZDBfR3hhRzJKWFFpbTFMNndlSjZGUGZUVEg1M29ZVUs0YmpDNmVqbl9pcFVtSXFJTGp6cmN4Ykp1OGVFSjJOeWtudVF4dGNFLTQ2bUdySUk5WHN5eUZEMFlFZ1U"
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbjRiYTMyUnAxUERabFpYY1A1dGFWWEw2dzd6LWZUcWdrMGx1cDU0V0ZqYWhmV0ZuU00xalhkR29heEYwbXNIRTFhOE9vaEtMVXM4VEVxYkw5Z2tPbEdYS19wVlpRZVk3dUI5VXJaM0VZb0xmTVZSSUp4NVQ1MXFKOTdhNVZVMXZYNy1VRkV6QzV6ZjQzVEJ6MlV0T0RQbXFWN1pHc2FrQnBUcElYdWhJUUxUUEZPSEE1OGc0bGZn?oc=5",
+          "ageMin": 82,
+          "headline": "MLB Player and Latin Pop Singer José “Candelita” Iglesias to Make Broadway Debut - TheaterMania",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNbjRiYTMyUnAxUERabFpYY1A1dGFWWEw2dzd6LWZUcWdrMGx1cDU0V0ZqYWhmV0ZuU00xalhkR29heEYwbXNIRTFhOE9vaEtMVXM4VEVxYkw5Z2tPbEdYS19wVlpRZVk3dUI5VXJaM0VZb0xmTVZSSUp4NVQ1MXFKOTdhNVZVMXZYNy1VRkV6QzV6ZjQzVEJ6MlV0T0RQbXFWN1pHc2FrQnBUcElYdWhJUUxUUEZPSEE1OGc"
         }
       ],
-      "ageMin": 56,
+      "ageMin": 82,
       "_cand": {
-        "key": "rss:his-next-side-quest-sipa-professor-and-ajr-bassist-adam-met-",
+        "key": "rss:mlb-player-and-latin-pop-singer-jos-candelita-iglesias-to-ma",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1733,21 +1485,21 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Columbia Daily Spectator"
+          "TheaterMania"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Columbia Daily Spectator",
+        "attribution": "TheaterMania",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 56,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1758,89 +1510,22 @@
       "tierClass": "C"
     },
     {
-      "id": "news-weird-al-yankovic-rejects-saudi-arabia-offer",
-      "slug": "weird-al-yankovic-turned-down-million-dollar-saudi-arabia-performance-",
-      "title": "Weird Al Yankovic Turned Down Million-Dollar Saudi Arabia Performance Offer",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "weird-al-yankovic-rejects-saudi-arabia-offer",
-      "primaryKeyword": "weird al yankovic",
-      "primaryEntity": "'Weird Al' Yankovic",
-      "entities": [
-        "Weird Al Yankovic",
-        "Saudi Arabia"
-      ],
-      "angle": "Musical satirist Weird Al Yankovic turned down a lucrative performance offer in Saudi Arabia, citing personal ethical reservations.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/weird-al-yankovic-turned-down-million-offer-saudi-arabia-1236819281/",
-          "ageMin": 173,
-          "headline": "Weird Al Yankovic Turned Down Million-Dollar Offer to Perform in Saudi Arabia: I Don’t Need to Take Any Money if It Makes Me Feel Icky",
-          "summary": "After Weird Al Yankovic made headlines this month for backing out of an ad for AI software, the musical satirist revealed he also turned down an offer worth at least $1 million to perform at the Riyadh Comedy Festival in Saudi Arabia last year. I wish people would offer me things that I didn’t feel [ ]"
-        }
-      ],
-      "ageMin": 173,
-      "_cand": {
-        "key": "rss:weird-al-yankovic-turned-down-million-dollar-offer-to-perfor",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 2,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-margaret-qualley-jack-antonoff-breakup",
-      "slug": "margaret-qualley-steps-out-after-jack-antonoff-split",
-      "title": "Margaret Qualley Steps Out After Jack Antonoff Split",
+      "id": "news-margaret-qualley-jack-antonoff-breakup-appearance",
+      "slug": "margaret-qualley-makes-first-appearance-since-jack-antonoff-breakup",
+      "title": "Margaret Qualley makes first appearance since Jack Antonoff breakup",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "breakup",
       "sensitivity": "normal",
-      "eventSlug": "margaret-qualley-jack-antonoff-breakup",
-      "primaryKeyword": "Margaret Qualley Jack Antonoff",
+      "eventSlug": "margaret-qualley-jack-antonoff-breakup-appearance",
+      "primaryKeyword": "margaret qualley jack antonoff",
       "primaryEntity": "Margaret Qualley",
       "entities": [
         "Jack Antonoff"
       ],
-      "angle": "Margaret Qualley makes her first public appearance following her reported breakup with Jack Antonoff.",
+      "angle": "Margaret Qualley makes her first public appearance following news of her reported breakup with Jack Antonoff.",
       "tmdbType": "movie",
       "source": "gnews:Entertainment Weekly",
       "sources": [
@@ -1848,12 +1533,12 @@
           "outlet": "Entertainment Weekly",
           "tier": 6,
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxONnJuSVRUdnl6RjUwS1FTU09DVU0ybzlMMzRJY0MwNGJJNU1vUDR2LVUxX05sbFBjSDFxVWNZdTJEak5Ib3M5RU1QOTVWVVhaQUUtaVFsZWttMjlMS0xJTC1HSlN5MTdXSHpYQk5RV2QycGVDQVQ0bFBQaVR4UTdUX0Z2TzhKMkxyRW5mSnpmNy1PZWsycXFEdldBZ1NYcThtWjlFMm1YbUxXR1FkQ1dN?oc=5",
-          "ageMin": 118,
+          "ageMin": 178,
           "headline": "Margaret Qualley makes first appearance since Jack Antonoff breakup - Entertainment Weekly",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxONnJuSVRUdnl6RjUwS1FTU09DVU0ybzlMMzRJY0MwNGJJNU1vUDR2LVUxX05sbFBjSDFxVWNZdTJEak5Ib3M5RU1QOTVWVVhaQUUtaVFsZWttMjlMS0xJTC1HSlN5MTdXSHpYQk5RV2QycGVDQVQ0bFBQaVR4UTdUX0Z2TzhKMkxyRW5mSnpmNy1PZWsycXFEdldBZ1NYcThtWjlFMm1YbUxXR1FkQ1dN?oc=5\" target=\""
         }
       ],
-      "ageMin": 118,
+      "ageMin": 178,
       "_cand": {
         "key": "rss:margaret-qualley-makes-first-appearance-since-jack-antonoff-",
         "popularity": 0,
@@ -1880,6 +1565,71 @@
         "corroboration": 10,
         "status": 18,
         "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-nick-kroll-comedy-vs-cancer-benefit",
+      "slug": "nick-kroll-vs-cancer",
+      "title": "Nick Kroll vs. Cancer",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "nick-kroll-comedy-vs-cancer-benefit",
+      "primaryKeyword": "Nick Kroll",
+      "primaryEntity": "Nick Kroll",
+      "entities": [
+        "Comedy vs. Cancer"
+      ],
+      "angle": "Nick Kroll hosts his annual 'Comedy vs. Cancer' benefit to raise money for cancer research.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/nick-kroll-comedy-vs-cancer-blood-cancer-research-1236653131/",
+          "ageMin": 91,
+          "headline": "Nick Kroll vs. Cancer",
+          "summary": "With his annual Comedy vs. Cancer benefit, the comedian convenes his funniest friends to raise millions for a cause that hits very close to home."
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:nick-kroll-vs-cancer",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
