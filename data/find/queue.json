@@ -1,121 +1,70 @@
 {
-  "runId": "run-2026-07-23T12-31-01",
-  "builtAt": "2026-07-23T12:34:34.998Z",
-  "count": 16,
+  "runId": "run-2026-07-23T13-31-16",
+  "builtAt": "2026-07-23T13:32:42.663Z",
+  "count": 17,
   "topics": [
     {
-      "id": "news-devyn-dalton-stunt-double-the-odyssey",
-      "slug": "meet-devyn-dalton-female-stunt-double-for-matt-damon-in-the-odyssey",
-      "title": "Meet Devyn Dalton, female stunt double for Matt Damon in The Odyssey",
+      "id": "news-beauty-in-black-renewed-for-season-4",
+      "slug": "netflix-renews-tyler-perry-s-beauty-in-black-for-season-4-reversing-pr",
+      "title": "Netflix Renews Tyler Perry's 'Beauty in Black' for Season 4, Reversing Previous Decision",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "devyn-dalton-stunt-double-the-odyssey",
-      "primaryKeyword": "The Odyssey",
-      "primaryEntity": "The Odyssey",
+      "eventSlug": "beauty-in-black-renewed-for-season-4",
+      "primaryKeyword": "beauty in black season 4",
+      "primaryEntity": "Beauty in Black",
       "entities": [
-        "Devyn Dalton",
-        "Matt Damon"
+        "Tyler Perry's Finding Joy",
+        "Tyler Perry",
+        "Netflix"
       ],
-      "angle": "Introduction to the female stunt double for Matt Damon on the film 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "gnews:South China Morning Post",
-      "sources": [
-        {
-          "outlet": "South China Morning Post",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPLWpwM0RsY0RBTEl2MEV0ZjVKR1hMWWlhdkp3YXoxM2w0bnFYMjNnelAzTUt3T1EydFhLMkU5Mk1kakNlTGdyRS10bEEtT2lXcWZlQUNMdXp6a0VUakw1MzF2cXA5RV9RLXlNeUV2SmxpZXZXMmoxM1dtOC1LcFBoUGRUcmQ1a0toUXUwV2VwWXg5SWxhVEw2aUpBTXR0ZlVoQUcwcTJDMm90VlBzMEZDY2ZtRlJYMExjS1EtYnNic1VXNUdGUjNFWFI4a2k5Sjk5bUpKVnUxUdIB1wFBVV95cUxOMThKNFhZTW9uY2lfdkV4TksxbEFqQUgtVmlvMm02MDNRbV9PMEhwX2xLMzhmdm5yVExvdmtqSEI5MG9UWC1IZnp4bG9YaGFkeDh6WmFCaTdxTkxRS18teE5FcE1Tb2ZJVjliSUlrenEyT2lUdUlhZXVzRUlZOVRRdFVmMlRYbGlLVVh2Q3NXS0lHRXE1cTZWckwyRXY1M2V5SG1oRDdvTEVVb21MODRjdXB1Q2tqc1lSTGdvcV9mRFlrQXJ4UFRrME16cF9RaWdpYzRONk9rRQ?oc=5",
-          "ageMin": 151,
-          "headline": "Meet Devyn Dalton, female stunt double for Matt Damon in The Odyssey - South China Morning Post",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPLWpwM0RsY0RBTEl2MEV0ZjVKR1hMWWlhdkp3YXoxM2w0bnFYMjNnelAzTUt3T1EydFhLMkU5Mk1kakNlTGdyRS10bEEtT2lXcWZlQUNMdXp6a0VUakw1MzF2cXA5RV9RLXlNeUV2SmxpZXZXMmoxM1dtOC1LcFBoUGRUcmQ1a0toUXUwV2VwWXg5SWxhVEw2aUpBTXR0ZlVoQUcwcTJDMm90VlBzMEZDY2ZtRlJYMExjS1E"
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:meet-devyn-dalton-female-stunt-double-for-matt-damon-in-the-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "South China Morning Post"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "South China Morning Post",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 110,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 30
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-robert-pattinson-primetime-theatrical-release-date",
-      "slug": "robert-pattinson-primetime-pic-from-a24-sets-early-fall-theatrical-rel",
-      "title": "Robert Pattinson Primetime Pic From A24 Sets Early Fall Theatrical Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "robert-pattinson-primetime-theatrical-release-date",
-      "primaryKeyword": "Robert Pattinson Primetime",
-      "primaryEntity": "Primetime",
-      "entities": [
-        "Fear & Shame",
-        "Robert Pattinson",
-        "A24",
-        "Venice Film Festival"
-      ],
-      "angle": "Robert Pattinson's documentary 'Primetime' is set for a nationwide theatrical release on September 25th, following its inclusion in the Venice Film Festival lineup.",
+      "angle": "Netflix reverses course on Tyler Perry's 'Beauty in Black,' renewing it for a fourth season after initially planning to end it with Season 3.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/robert-pattinson-primetime-a24-release-date-1237001008/",
+          "url": "https://deadline.com/2026/07/beauty-in-black-renewed-season-4-netflix-1237001004/",
           "ageMin": 31,
-          "headline": "Robert Pattinson Primetime Pic From A24 Sets Early Fall Theatrical Release",
-          "summary": "EXCLUSIVE: In the wake of scoring a spot on the Venice Film Festival lineup, the Robert Pattinson starring and produced Primetime will debut in theaters nationwide on Sept. 25. The movie from documentary filmmaker Lance Oppenheim follows Chris Hansen in 2006 as he sets to make TV history with To Catch a Predator. Pattinson plays [ ]"
+          "headline": "‘Beauty In Black’ Renewed For Season 4 As Netflix Reverses Decision To End Tyler Perry Series With Season 3",
+          "summary": "Netflix and Tyler Perry have committed to telling more Beauty in Black stories as the streamer has renewed the drama series for a fourth season ahead of its Season 3 premiere. In December, Netflix announced the show had been renewed for a third and final season. The renewal arrives after a successful second season, released [ ]"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/tyler-perry-beauty-in-black-renewed-season-4-netflix-1236654787/",
+          "ageMin": 31,
+          "headline": "Tyler Perry’s ‘Beauty in Black’ Renewed for Season 4 at Netflix",
+          "summary": "The drama was initially set to end with the upcoming third season."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/tyler-perrys-beauty-in-black-season-4-renewed-1236818764/",
+          "ageMin": 31,
+          "headline": "Tyler Perry s Beauty in Black Gets Surprise Season 4 Renewal After Final Season Announcement",
+          "summary": "It turns out Tyler Perry s Netflix series Beauty in Black will be back for Season 4 after all. Netflix has announced that the show is returning for a fourth season despite the fact that a third and final season was announced in December 2025. That season does not yet have a release date at the [ ]"
         }
       ],
       "ageMin": 31,
       "_cand": {
-        "key": "rss:robert-pattinson-primetime-pic-from-a24-sets-early-fall-thea",
+        "key": "rss:-beauty-in-black-renewed-for-season-4-as-netflix-reverses-de",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 3,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 3,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 3,
         "outlets": [
-          "Deadline"
+          "Deadline",
+          "THR",
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -124,391 +73,122 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 108,
       "signals": {
         "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-sdcc-2026-x-men-lanterns-supergirl-spider-man-star-wars-mandalorian-si",
-      "slug": "x-men-lanterns-supergirl-more-spotted-at-sdcc-2026-exhibit-hall",
-      "title": "X-Men, Lanterns, Supergirl & More Spotted at SDCC 2026 Exhibit Hall",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "sdcc-2026-x-men-lanterns-supergirl-spider-man-star-wars-mandalorian-si",
-      "primaryKeyword": "SDCC 2026",
-      "primaryEntity": "San Diego Comic-Con",
-      "entities": [
-        "X-Men",
-        "Green Lantern",
-        "Supergirl",
-        "Spider-Man"
-      ],
-      "angle": "Early sightings of popular franchises like X-Men, Lanterns, Supergirl, Spider-Man, and Star Wars characters hint at major reveals and panels at SDCC 2026.",
-      "tmdbType": "movie",
-      "source": "gnews:facebook.com",
-      "sources": [
-        {
-          "outlet": "facebook.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMElicENybURRY3VYcXlZVU5neUhlM0RtTE5VMEc2Tk1kTjQ5OGVCV1NES0dFRXphLWtrLXhEMXN3OV83SXNCZzNSSktwRlJVYm43N0tyVV82RjdYb2pNT2Y0emxvdXJWS3BKTDJzWEUzb29SX0JJM2NLRHdPZlU1X2J2TEVtYUltQS1yUTNPN3lEbUt3Nzl0VEdFRTh2STB3TzRRUDNQa3k3RlFwVEtpM1kwZGlLdU5GYlJ4N21oV2ZrQkRrQ2xJdUhoQ1VaeWs1ZGljTQ?oc=5",
-          "ageMin": 355,
-          "headline": "A look inside the Exhibit Hall floor at #SDCC ‘26 #XMen sightings were spotted at the Marvel Booth. In the DC booth ‘Lanterns’ and ‘Supergirl’ were featured. Also around the floor there were other favorites including ‘Spider-Man,’ ‘Star Wars’ ‘Mandalorian and - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMElicENybURRY3VYcXlZVU5neUhlM0RtTE5VMEc2Tk1kTjQ5OGVCV1NES0dFRXphLWtrLXhEMXN3OV83SXNCZzNSSktwRlJVYm43N0tyVV82RjdYb2pNT2Y0emxvdXJWS3BKTDJzWEUzb29SX0JJM2NLRHdPZlU1X2J2TEVtYUltQS1yUTNPN3lEbUt3Nzl0VEdFRTh2STB3TzRRUDNQa3k3RlFwVEtpM1kwZGlLdU5GYlJ"
-        }
-      ],
-      "ageMin": 355,
-      "_cand": {
-        "key": "rss:a-look-inside-the-exhibit-hall-floor-at-sdcc-26-xmen-sightin",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "facebook.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "facebook.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 80,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "corroboration": 24,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 0,
+        "trending": 15,
         "spice": 0,
-        "softTv": 0,
-        "radar": 18
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
       "tierClass": "A"
     },
     {
-      "id": "news-andrea-pallaoro-reviving-bernardo-bertolucci-last-screenplay",
-      "slug": "andrea-pallaoro-talks-reviving-bernardo-bertolucci-s-last-screenplay-f",
-      "title": "Andrea Pallaoro Talks Reviving Bernardo Bertolucci’s Last Screenplay For Venice Golden Lion Contender ‘The Echo Chamber’ + First Clip",
+      "id": "news-destin-daniel-cretton-spider-man-brand-new-day",
+      "slug": "how-losing-avengers-brought-destin-daniel-cretton-to-spider-man-brand-",
+      "title": "How Losing ‘Avengers’ Brought Destin Daniel Cretton to Spider-Man: Brand New Day",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "high",
-      "eventSlug": "andrea-pallaoro-reviving-bernardo-bertolucci-last-screenplay",
-      "primaryKeyword": "The Echo Chamber screenplay",
-      "primaryEntity": "The Echo Chamber (film)",
-      "entities": [
-        "Andrea Pallaoro",
-        "Bernardo Bertolucci",
-        "Venice Film Festival"
-      ],
-      "angle": "Bernardo Bertolucci's final screenplay is being revived for the Venice Film Festival.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/andrea-pallaoro-bertolucci-echo-chamber-clip-venice-1237001045/",
-          "ageMin": 51,
-          "headline": "Andrea Pallaoro Talks Reviving Bernardo Bertolucci’s Last Screenplay For Venice Golden Lion Contender ‘The Echo Chamber’ + First Clip",
-          "summary": "EXCLUSIVE: Close to eight years after Bernardo Bertolucci’s death in Rome in 2018, his final screenplay The Echo Chamber will debut in competition at the Venice Film Festival in September under the direction of Andrea Pallaoro. Working closely with Bertolucci’s co-writers Ilaria Bernardini and Ludovica Rampoldi, Pallaoro has made the tale of love, longing, absence, [ ]"
-        }
-      ],
-      "ageMin": 51,
-      "_cand": {
-        "key": "rss:andrea-pallaoro-talks-reviving-bernardo-bertolucci-s-last-sc",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 87,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-alex-gibney-elon-musk-documentary-venice-premiere",
-      "slug": "alex-gibney-s-elon-musk-documentary-to-premiere-at-venice-film-festiva",
-      "title": "Alex Gibney's Elon Musk Documentary to Premiere at Venice Film Festival",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "alex-gibney-elon-musk-documentary-venice-premiere",
-      "primaryKeyword": "elon musk documentary",
-      "primaryEntity": "Elon Musk Documentary",
-      "entities": [
-        "Alex Gibney"
-      ],
-      "angle": "Alex Gibney's nearly four-hour Elon Musk documentary is set to premiere at the Venice Film Festival, despite Musk's previous condemnation.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/alex-gibney-elon-musk-documentary-venice-premiere-4-hours-1236654815/",
-          "ageMin": 104,
-          "headline": "Alex Gibney s Elon Musk Documentary to Premiere in Venice — With a Nearly 4-Hour Runtime",
-          "summary": "Musk condemned the long-gestating doc in 2023, posting on X, \"It's a hit piece\" — to which Gibney replied: \"How would you know?\""
-        }
-      ],
-      "ageMin": 104,
-      "_cand": {
-        "key": "rss:alex-gibney-s-elon-musk-documentary-to-premiere-in-venice-wi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-family-guy-stewie-spinoff-voice-cast",
-      "slug": "family-guy-spinoff-stewie-sets-voice-cast",
-      "title": "'Family Guy' Spinoff 'Stewie' Sets Voice Cast",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "family-guy-stewie-spinoff-voice-cast",
-      "primaryKeyword": "stewie spinoff cast",
-      "primaryEntity": "Stewie Griffin: The Untold Story",
+      "eventSlug": "destin-daniel-cretton-spider-man-brand-new-day",
+      "primaryKeyword": "Destin Daniel Cretton Spider-Man",
+      "primaryEntity": "Destin Daniel Cretton",
       "entities": [
-        "Stewie (TV series)",
-        "Family Guy"
+        "Spider-Man: Brand New Day"
       ],
-      "angle": "The voice cast has been set for 'Stewie', a spinoff of 'Family Guy'.",
+      "angle": "Director Destin Daniel Cretton discusses his path to directing 'Spider-Man: Brand New Day' after parting ways with an 'Avengers' project.",
       "tmdbType": "movie",
-      "source": "gnews:TV Insider",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5",
-          "ageMin": 210,
-          "headline": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5\" target=\"_blank\" ‘Family Guy’ Spinoff ‘Stewie’ Set"
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/interviews/spider-man-brand-new-day-director-interview-1235206443/",
+          "ageMin": 31,
+          "headline": "How Losing ‘Avengers’ Brought Destin Daniel Cretton to Spider-Man: Brand New Day",
+          "summary": "The first filmmaker to direct both a Marvel and a Sony film in the Marvel Cinematic Universe tells IndieWire about the finer details of Peter Parker's current lot in life, the \"Kang\" fallout, and why this one is so personal."
         }
       ],
-      "ageMin": 210,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:-family-guy-spinoff-stewie-sets-voice-cast-tv-insider",
+        "key": "rss:how-losing-avengers-brought-destin-daniel-cretton-to-spider-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TV Insider"
+          "IndieWire"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "TV Insider",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 104,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 24,
+        "corroboration": 12,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 12
       },
-      "tierClass": "B"
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
     },
     {
-      "id": "music-news-black-eyed-peas-my-humps-1-billion-youtube-views",
-      "slug": "the-black-eyed-peas-my-humps-hits-1-billion-youtube-views",
-      "title": "The Black Eyed Peas' 'My Humps' Hits 1 Billion YouTube Views",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-imax-q2-earnings-rise-the-super-mario-galaxy-movie-the-odyssey",
+      "slug": "imax-q2-earnings-rise-ceo-calls-the-odyssey-transformational",
+      "title": "IMAX Q2 Earnings Rise, CEO Calls 'The Odyssey' Transformational",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "black-eyed-peas-my-humps-1-billion-youtube-views",
-      "primaryKeyword": "The Black Eyed Peas My Humps",
-      "primaryEntity": "Black Eyed Peas",
+      "eventSlug": "imax-q2-earnings-rise-the-super-mario-galaxy-movie-the-odyssey",
+      "primaryKeyword": "imax earnings",
+      "primaryEntity": "IMAX Hubble",
       "entities": [
-        "The Black Eyed Peas",
-        "My Humps"
+        "IMAX",
+        "The Super Mario Galaxy Movie",
+        "The Odyssey"
       ],
-      "angle": "The Black Eyed Peas' iconic 2005 hit 'My Humps' has surpassed 1 billion views on YouTube, marking their third music video to achieve this milestone.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/rb-hip-hop/the-black-eyed-peas-my-humps-1-billion-views-youtube-1236301265/",
-          "ageMin": 157,
-          "headline": "The Black Eyed Peas’ ‘My Humps’ Bounces to 1 Billion Views on YouTube",
-          "summary": "It's their third music video to reach the milestone after “Where Is the Love?” and “RITMO.”"
-        }
-      ],
-      "ageMin": 157,
-      "_cand": {
-        "key": "rss:the-black-eyed-peas-my-humps-bounces-to-1-billion-views-on-y",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-yeun-sang-ho-parasyte-tamiya-netflix-series",
-      "slug": "yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starring-shioli-",
-      "title": "Yeon Sang-ho Returns to Parasyte Universe With 'Tamiya', Starring Shioli Kutsuna, at Netflix",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "yeun-sang-ho-parasyte-tamiya-netflix-series",
-      "primaryKeyword": "Parasyte Tamiya Netflix",
-      "primaryEntity": "Parasyte: Tamiya",
-      "entities": [
-        "Yeon Sang-ho",
-        "Shioli Kutsuna",
-        "Netflix"
-      ],
-      "angle": "Director Yeon Sang-ho is returning to the Parasyte universe with a new live-action Netflix series, 'Parasyte: Tamiya', starring Shioli Kutsuna.",
+      "angle": "IMAX reports increased Q2 earnings, highlighting the success of major film releases like 'The Super Mario Galaxy Movie' and 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/",
-          "ageMin": 811,
-          "headline": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
-          "summary": "Yeon Sang-ho is returning to the Parasyte universe with Parasyte: Tamiya, a new live-action series starring Shioli Kutsuna for Netflix, set to stream in 2027. The series marks another collaboration between Netflix and Yeon ( Hellbound, Parasyte: The Grey ), who developed Parasyte: Tamiya and co-wrote the script with Ryu Yong-jae. Wowpoint, the production company behind Yeon s [ ]"
+          "url": "https://variety.com/2026/biz/news/imax-second-quarter-earnings-christopher-nolan-the-odyssey-1236819101/",
+          "ageMin": 116,
+          "headline": "Imax Second Quarter Earnings Rise as CEO Calls Christopher Nolan s The Odyssey a Transformational Event",
+          "summary": "Hits like The Super Mario Galaxy Movie and Michael helped lift Imax s second quarter earnings. During the three-month period ending in June, the big screen provider s revenues increased 12% to $102.8 million, while net income improved 30% to $15.9 million. Imax recorded adjusted earnings per share of 43 cents, a 65% improvement over the prior-year [ ]"
         }
       ],
-      "ageMin": 811,
+      "ageMin": 116,
       "_cand": {
-        "key": "rss:yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starri",
+        "key": "rss:imax-second-quarter-earnings-rise-as-ceo-calls-christopher-n",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -527,9 +207,77 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 93,
       "signals": {
-        "recency": 1,
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-matt-hastings-first-look-deal-neshama-entertainment",
+      "slug": "matt-hastings-signs-first-look-deal-with-the-way-home-producer-neshama",
+      "title": "Matt Hastings Signs First-Look Deal With 'The Way Home' Producer Neshama Entertainment",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "matt-hastings-first-look-deal-neshama-entertainment",
+      "primaryKeyword": "matt hastings deal",
+      "primaryEntity": "Matt Hastings",
+      "entities": [
+        "Neshama Entertainment",
+        "The Way Home"
+      ],
+      "angle": "Writer, director, and showrunner Matt Hastings has signed a first-look development and production agreement with Neshama Entertainment.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/matt-hastings-neshama-entertainment-first-look-deal-1237001027/",
+          "ageMin": 31,
+          "headline": "Matt Hastings Signs First-Look Deal With The Way Home Producer Neshama Entertainment",
+          "summary": "EXCLUSIVE: Canada s Neshama Entertainment has struck a first-look development and production agreement with writer, director and showrunner Matt Hastings. Under the agreement, Hastings will develop and produce original scripted and unscripted programming across TV and film for Neshama, which is known for shows such as Hallmark Channel s long-running one-hour drama The Way Home. Fox, which [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:matt-hastings-signs-first-look-deal-with-the-way-home-produc",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 81,
+      "signals": {
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -540,41 +288,42 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-richard-linklater-glen-powell-lou-gehrig-film",
-      "slug": "glen-powell-to-play-lou-gehrig-in-richard-linklater-s-next-film",
-      "title": "Glen Powell to Play Lou Gehrig in Richard Linklater's Next Film",
+      "id": "news-venice-film-festival-lineup-announced",
+      "slug": "venice-film-festival-announces-star-studded-lineup-featuring-martin-mc",
+      "title": "Venice Film Festival Announces Star-Studded Lineup Featuring Martin McDonagh, Oasis Documentary",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "richard-linklater-glen-powell-lou-gehrig-film",
-      "primaryKeyword": "Glen Powell Lou Gehrig",
-      "primaryEntity": "Lou Gehrig",
+      "eventSlug": "venice-film-festival-lineup-announced",
+      "primaryKeyword": "venice film festival",
+      "primaryEntity": "Venice Film Festival",
       "entities": [
-        "Richard Linklater",
-        "Glen Powell"
+        "Martin McDonagh",
+        "Oasis",
+        "Robert Pattinson"
       ],
-      "angle": "Richard Linklater is set to direct Glen Powell as baseball legend Lou Gehrig in a new untitled film.",
+      "angle": "The Venice Film Festival has unveiled its lineup, highlighting new films from acclaimed directors and a documentary on the Oasis reunion tour.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/breaking-news/richard-linklater-glen-powell-lou-gehrig-film-1235206631/",
-          "ageMin": 1021,
-          "headline": "Richard Linklater Is Fulfilling More Baseball Dreams by Casting Glen Powell as Lou Gehrig",
-          "summary": "The untitled film is set at Universal Pictures and has Simon Rich (\"Artificial\") writing the screenplay."
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/venice-film-festival-unveils-2026-lineup-1236653842/",
+          "ageMin": 271,
+          "headline": "Robert Pattinson, Penélope Cruz, Alicia Vikander and Oasis Lead All-Star Venice Lineup",
+          "summary": "New films from Martin McDonagh, Florian Zeller, Werner Herzog, and Danny Boyle are among the competition stand outs, with non-fiction highlights including a film on the Oasis reunion tour and Alex Gibney's long-gestating Elon Musk doc."
         }
       ],
-      "ageMin": 1021,
+      "ageMin": 271,
       "_cand": {
-        "key": "rss:richard-linklater-is-fulfilling-more-baseball-dreams-by-cast",
+        "key": "rss:robert-pattinson-pen-lope-cruz-alicia-vikander-and-oasis-lea",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -584,11 +333,77 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
+      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
+      "title": "Ridley Scott, Hugh Jackman's Treasure Island Setting Sail to Sony",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony",
+      "primaryKeyword": "treasure island movie",
+      "primaryEntity": "Treasure Island",
+      "entities": [
+        "Ridley Scott",
+        "Hugh Jackman"
+      ],
+      "angle": "Sony is in talks to acquire a 'Treasure Island' film package featuring Ridley Scott and Hugh Jackman.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/d4vd-tesla-air-fresheners-celeste-rivas-hernandez-1235597110/",
+          "ageMin": 1058,
+          "headline": "D4vd’s Tesla Was Filled With Air Fresheners When Celeste Rivas Hernandez’s Body Was Discovered",
+          "summary": "The scented products were found in the center console, back seat pockets, and trunk, an LAPD investigator testified on the second day of the singer’s preliminary hearing"
+        }
+      ],
+      "ageMin": 1058,
+      "_cand": {
+        "key": "rss:d4vd-s-tesla-was-filled-with-air-fresheners-when-celeste-riv",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -619,13 +434,14 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "netflix-yeon-sang-ho-parasyte-tamiya-series",
-      "primaryKeyword": "parasyte the grey",
+      "primaryKeyword": "parasyte tamiya series",
       "primaryEntity": "Parasyte: The Grey",
       "entities": [
         "Yeon Sang-ho",
-        "Shioli Kutsuna"
+        "Shioli Kutsuna",
+        "Netflix"
       ],
-      "angle": "Netflix expands its 'Parasyte' universe with a new series focusing on the manga's iconic villain.",
+      "angle": "Netflix is expanding the 'Parasyte' universe with a new live-action series, 'Parasyte: Tamiya,' from director Yeon Sang-ho.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -633,12 +449,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
-          "ageMin": 811,
+          "ageMin": 871,
           "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
           "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
         }
       ],
-      "ageMin": 811,
+      "ageMin": 871,
       "_cand": {
         "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
         "popularity": 0,
@@ -675,139 +491,7 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
-      "slug": "ridley-scott-hugh-jackman-treasure-island-film-package-sailing-to-sony",
-      "title": "Ridley Scott, Hugh Jackman Treasure Island Film Package Sailing to Sony",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony",
-      "primaryKeyword": "treasure island movie",
-      "primaryEntity": "Treasure Island",
-      "entities": [
-        "Treasure Island (film)",
-        "Ridley Scott",
-        "Hugh Jackman"
-      ],
-      "angle": "Ridley Scott and Hugh Jackman attached to a new 'Treasure Island' film package being developed at Sony.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
-          "ageMin": 1005,
-          "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
-          "summary": "The studio is in talks to acquire the package."
-        }
-      ],
-      "ageMin": 1005,
-      "_cand": {
-        "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-chosen-bear-grylls-crossover",
-      "slug": "jesus-rappels-down-cliff-in-the-chosen-x-bear-grylls-crossover-event",
-      "title": "Jesus Rappels Down Cliff in 'The Chosen' x Bear Grylls Crossover Event",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-chosen-bear-grylls-crossover",
-      "primaryKeyword": "the chosen bear grylls crossover",
-      "primaryEntity": "The Chosen",
-      "entities": [
-        "Bear Grylls"
-      ],
-      "angle": "The historical drama series 'The Chosen' is crossing over with survivalist Bear Grylls for a special event.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
-          "ageMin": 1077,
-          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
-          "summary": "No word yet on how he traverses the Colorado River."
-        }
-      ],
-      "ageMin": 1077,
-      "_cand": {
-        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-snoop-dogg-biopic-universal-release-date",
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
       "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
       "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
       "contentType": "news",
@@ -816,17 +500,16 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "snoop-dogg-biopic-universal-release-date",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
       "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
+      "primaryEntity": "Snoop Dogg Biopic",
       "entities": [
+        "Snoop Dogg's Hood of Horror",
         "Snoop Dogg",
         "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal"
+        "Craig Brewer"
       ],
-      "angle": "Universal sets a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
+      "angle": "The Snoop Dogg biopic has been given a Summer 2027 release date by Universal.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -834,12 +517,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 2341,
+          "ageMin": 2401,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 2341,
+      "ageMin": 2401,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -876,105 +559,41 @@
       "tierClass": "B"
     },
     {
-      "id": "news-andi-abaya-miss-behave-character",
-      "slug": "watch-andi-abaya-discussed-her-character-april-in-the-iwant-original-s",
-      "title": "WATCH: Andi Abaya discussed her character, April, in the iWant original series “Miss Behave.”",
+      "id": "news-yeon-sang-ho-parasyte-tamiya-netflix-series",
+      "slug": "yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-series-at-netfli",
+      "title": "Yeon Sang-ho Returns to 'Parasyte' Universe With 'Tamiya' Series at Netflix",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "andi-abaya-miss-behave-character",
-      "primaryKeyword": "Miss Behave",
-      "primaryEntity": "Miss Behave",
-      "entities": [
-        "Andi Abaya"
-      ],
-      "angle": "Actress Andi Abaya discusses her character April in the iWant original series 'Miss Behave'.",
-      "tmdbType": "movie",
-      "source": "gnews:facebook.com",
-      "sources": [
-        {
-          "outlet": "facebook.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZTZURmY5cHBJUm80NFE2aTJ0c0JZSTQxVEIzMk9XOVlnRU9weDdlc2pZWWFLV1EyMEFjZFRoaHJ1ZVZyUmlEaUY5RnYtLWZRYUZpOGZUOE5jd2dQb0R4UlRqamhvc0ZrV0pVTWVJdHFWd2s5dVZsaWdsOW1CRmMtcDNJc1RyVTQyNzAwNWd2UGVNLTlEYWw4M0ZYSVZtbUtpUU04WWh4RU5SZ0YwS052ZFAzN2JkSDZQNFBpOHZMZGh3eGlzMW5tcjZQN1NfM1Jqc2RPQVRtNA?oc=5",
-          "ageMin": 155,
-          "headline": "WATCH: Andi Abaya discussed her character, April, in the iWant original series “Miss Behave.” | via Anna Cerezo, ABS-CBN News - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZTZURmY5cHBJUm80NFE2aTJ0c0JZSTQxVEIzMk9XOVlnRU9weDdlc2pZWWFLV1EyMEFjZFRoaHJ1ZVZyUmlEaUY5RnYtLWZRYUZpOGZUOE5jd2dQb0R4UlRqamhvc0ZrV0pVTWVJdHFWd2s5dVZsaWdsOW1CRmMtcDNJc1RyVTQyNzAwNWd2UGVNLTlEYWw4M0ZYSVZtbUtpUU04WWh4RU5SZ0YwS052ZFAzN2JkSDZQNFB"
-        }
-      ],
-      "ageMin": 155,
-      "_cand": {
-        "key": "rss:watch-andi-abaya-discussed-her-character-april-in-the-iwant-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "facebook.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "facebook.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-days-of-thunder-2-jonathan-levine-tom-cruise",
-      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
-      "title": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-jonathan-levine-tom-cruise",
-      "primaryKeyword": "days of thunder 2",
-      "primaryEntity": "Days of Thunder 2",
+      "eventSlug": "yeon-sang-ho-parasyte-tamiya-netflix-series",
+      "primaryKeyword": "parasyte tamiya series",
+      "primaryEntity": "Parasyte: Tamiya",
       "entities": [
-        "Tom Cruise",
-        "Jonathan Levine"
+        "Yeon Sang-ho",
+        "Shioli Kutsuna",
+        "Netflix"
       ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the sequel 'Days of Thunder 2' for Paramount.",
+      "angle": "Director Yeon Sang-ho is returning to the 'Parasyte' universe with a new Netflix live-action series, 'Parasyte: Tamiya,' starring Shioli Kutsuna.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 1195,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
+          "url": "https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/",
+          "ageMin": 871,
+          "headline": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
+          "summary": "Yeon Sang-ho is returning to the Parasyte universe with Parasyte: Tamiya, a new live-action series starring Shioli Kutsuna for Netflix, set to stream in 2027. The series marks another collaboration between Netflix and Yeon ( Hellbound, Parasyte: The Grey ), who developed Parasyte: Tamiya and co-wrote the script with Ryu Yong-jae. Wowpoint, the production company behind Yeon s [ ]"
         }
       ],
-      "ageMin": 1195,
+      "ageMin": 871,
       "_cand": {
-        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "key": "rss:yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starri",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -982,16 +601,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 58,
       "signals": {
         "recency": 1,
         "corroboration": 12,
@@ -999,7 +618,138 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-the-chosen-bear-grylls-crossover",
+      "slug": "jesus-rappels-down-a-cliff-in-the-chosen-x-bear-grylls-crossover",
+      "title": "Jesus Rappels Down a Cliff in 'The Chosen' x Bear Grylls Crossover",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-chosen-bear-grylls-crossover",
+      "primaryKeyword": "the chosen bear grylls crossover",
+      "primaryEntity": "The Chosen",
+      "entities": [
+        "Bear Grylls"
+      ],
+      "angle": "The popular faith-based series 'The Chosen' is crossing over with survivalist Bear Grylls for a special episode.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
+          "ageMin": 1137,
+          "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
+          "summary": "No word yet on how he traverses the Colorado River."
+        }
+      ],
+      "ageMin": 1137,
+      "_cand": {
+        "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-sarajevo-film-fest-competition-lineup-jury",
+      "slug": "sarajevo-film-fest-unveils-51-films-in-competition-including-sandra-wo",
+      "title": "Sarajevo Film Fest Unveils 51 Films in Competition, Including Sandra Wollner's 'Everytime'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "sarajevo-film-fest-competition-lineup-jury",
+      "primaryKeyword": "sarajevo film festival",
+      "primaryEntity": "Sarajevo Film Festival",
+      "entities": [
+        "Emily Watson",
+        "Sandra Wollner"
+      ],
+      "angle": "The Sarajevo Film Festival has unveiled its competition lineup of 51 films, with actress Emily Watson set to serve as jury president.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/sarajevo-film-festival-competition-line-up-films-bosnia-1236654847/",
+          "ageMin": 136,
+          "headline": "Sarajevo Film Fest Unveils 51 Films in Competition, Including Sandra Wollner s Everytime",
+          "summary": "British actress Emily Watson will serve as jury president at the 32nd instalment of the Bosnian film festival in August."
+        }
+      ],
+      "ageMin": 136,
+      "_cand": {
+        "key": "rss:sarajevo-film-fest-unveils-51-films-in-competition-including",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -1007,7 +757,148 @@
       "tierClass": "B"
     },
     {
-      "id": "news-mark-jermin-uk-agency-law-violation-allegation",
+      "id": "news-venice-film-festival-2026-lineup",
+      "slug": "venice-film-festival-reveals-full-2026-lineup",
+      "title": "Venice Film Festival Reveals Full 2026 Lineup",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "venice-film-festival-2026-lineup",
+      "primaryKeyword": "venice film festival lineup",
+      "primaryEntity": "Venice Film Festival",
+      "entities": [
+        "Danny Boyle",
+        "Ink."
+      ],
+      "angle": "The full lineup for the 2026 Venice Film Festival has been announced, with Danny Boyle's 'Ink.' set to open the event.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/festivals/venice-film-festival-reveals-2026-lineup-1235206616/",
+          "ageMin": 160,
+          "headline": "Venice Film Festival Reveals Full 2026 Lineup",
+          "summary": "See all the films debuting this year at the Venice Film Festival — which, as previously announced, opens with Danny Boyle's \"Ink.\""
+        }
+      ],
+      "ageMin": 160,
+      "_cand": {
+        "key": "rss:venice-film-festival-reveals-full-2026-lineup",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-katy-perry-lifetimes-tour-concert-film-theatrical-release",
+      "slug": "katy-perry-s-lifetimes-tour-concert-film-set-for-worldwide-theatrical-",
+      "title": "Katy Perry's 'Lifetimes Tour' Concert Film Set for Worldwide Theatrical Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "katy-perry-lifetimes-tour-concert-film-theatrical-release",
+      "primaryKeyword": "Katy Perry concert film",
+      "primaryEntity": "Katy Perry",
+      "entities": [
+        "Lifetimes Tour Live From Paris"
+      ],
+      "angle": "Katy Perry's concert film 'Lifetimes Tour Live From Paris' is getting a worldwide limited theatrical release.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/music/katy-perry-lifetimes-tour-live-from-paris-movie-release-date/",
+          "ageMin": 31,
+          "headline": "Katy Perry Brings The Lifetimes Tour Live From Paris Concert Doc to Theaters This September",
+          "summary": "Trafalgar Releasing is handling the worldwide limited release following the documentary's premiere at the Tribeca Film Festival last month The post Katy Perry Brings The Lifetimes Tour Live From Paris Concert Doc to Theaters This September appeared first on TheWrap ."
+        },
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/culture/tv-film/katy-perry-lifetimes-tour-concert-film-theater-release-date-1236300796/",
+          "ageMin": 31,
+          "headline": "Katy Perry s Lifetimes Tour Concert Film Is Coming to Theaters Worldwide",
+          "summary": "The movie first premiered at the Tribeca Festival in June."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:katy-perry-brings-the-lifetimes-tour-live-from-paris-concert",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "TheWrap",
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-mark-jermin-uk-agency-law-violation",
       "slug": "mark-jermin-tiktok-famous-agent-who-discovered-harry-potter-wednesday-",
       "title": "Mark Jermin, TikTok-Famous Agent Who Discovered Harry Potter Wednesday Stars, May Have Broken UK Agency Law",
       "contentType": "news",
@@ -1016,15 +907,15 @@
       "subcategory": "news",
       "eventType": "legal",
       "sensitivity": "high",
-      "eventSlug": "mark-jermin-uk-agency-law-violation-allegation",
-      "primaryKeyword": "Mark Jermin",
+      "eventSlug": "mark-jermin-uk-agency-law-violation",
+      "primaryKeyword": "mark jermin",
       "primaryEntity": "Mark Jermin",
       "entities": [
         "Harry Potter and the Philosopher's Stone",
-        "Harry Potter",
-        "Hunger Games"
+        "Harry Potter (film series)",
+        "Wednesday (TV series)"
       ],
-      "angle": "TikTok-famous agent Mark Jermin, who discovered stars for 'Harry Potter' and 'Hunger Games,' may have violated UK agency law.",
+      "angle": "TikTok-famous agent who discovered 'Wednesday' stars may have broken UK agency law",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -1032,12 +923,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/mark-jermin-agent-harry-potter-wednesday-uk-agency-law-1236999479/",
-          "ageMin": 22,
+          "ageMin": 82,
           "headline": "Mark Jermin, TikTok-Famous Agent Who Discovered Harry Potter Wednesday Stars, May Have Broken UK Agency Law",
           "summary": "EXCLUSIVE: A prominent British children’s acting agency, which has helped young performers clinch roles in Harry Potter and Hunger Games, could have broken UK agency law by effectively charging actors training fees for the opportunity to secure representation, according to legal experts. In emails seen by Deadline, Mark Jermin Management (MJM) encouraged multiple young people [ ]"
         }
       ],
-      "ageMin": 22,
+      "ageMin": 82,
       "_cand": {
         "key": "rss:mark-jermin-tiktok-famous-agent-who-discovered-harry-potter-",
         "popularity": 0,
@@ -1058,9 +949,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 58,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 12,
@@ -1072,6 +963,207 @@
         "softTv": 0
       },
       "tierClass": "S"
+    },
+    {
+      "id": "news-shania-twain-fallon-performance",
+      "slug": "shania-twain-performs-dirty-rosie-on-fallon-discusses-opening-for-harr",
+      "title": "Shania Twain Performs 'Dirty Rosie' on Fallon, Discusses Opening for Harry Styles",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-fallon-performance",
+      "primaryKeyword": "Shania Twain",
+      "primaryEntity": "Shania Twain",
+      "entities": [
+        "Harry Styles",
+        "The Tonight Show Starring Jimmy Fallon"
+      ],
+      "angle": "Shania Twain performed her single 'Dirty Rosie' on The Tonight Show and discussed opening for Harry Styles.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/shania-twain-dirty-rosie-performance-fallon-1235597635/",
+          "ageMin": 434,
+          "headline": "Shania Twain Performs Rousing Single Dirty Rosie on Fallon",
+          "summary": "The country singer also discussed opening for Harry Styles and missing Taylor Swift's wedding"
+        }
+      ],
+      "ageMin": 434,
+      "_cand": {
+        "key": "rss:shania-twain-performs-rousing-single-dirty-rosie-on-fallon",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 16
+      },
+      "radarKind": "tv-episode-soon",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-peacock-first-profit-q2",
+      "slug": "peacock-turns-its-first-ever-profit-in-q2-as-nbcuniversal-split-looms",
+      "title": "Peacock Turns Its First-Ever Profit in Q2 as NBCUniversal Split Looms",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "peacock-first-profit-q2",
+      "primaryKeyword": "peacock profit",
+      "primaryEntity": "Peacock",
+      "entities": [
+        "Comcast",
+        "NBCUniversal"
+      ],
+      "angle": "NBCUniversal's streaming service Peacock has reported its first-ever profitable quarter, coinciding with the looming split of NBCUniversal.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/business/business-news/peacock-turns-a-profit-universal-parks-struggle-1236654852/",
+          "ageMin": 128,
+          "headline": "Peacock Turns Its First-Ever Profit in Q2 as NBCUniversal Split Looms",
+          "summary": "Comcast reported earnings early Thursday, with the NBCU streaming service reporting its first ever profitable quarter, but warned of softness in its theme parks business."
+        }
+      ],
+      "ageMin": 128,
+      "_cand": {
+        "key": "rss:peacock-turns-its-first-ever-profit-in-q2-as-nbcuniversal-sp",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-shania-twain-announcement",
+      "slug": "shania-twain-confirms-musical-and-biopic-are-in-the-works",
+      "title": "Shania Twain Confirms Musical and Biopic Are in the Works",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "shania-twain-announcement",
+      "primaryKeyword": "Shania Twain",
+      "primaryEntity": "Shania Twain",
+      "entities": [
+        "Taylor Swift"
+      ],
+      "angle": "Shania Twain confirms that a musical and a biopic about her life are in development.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/country/shania-twain-talks-taylor-swift-new-album-fallon-1236301256/",
+          "ageMin": 304,
+          "headline": "‘I Love Everything About Her’: Shania Twain Has Only Good Things to Say About Taylor Swift",
+          "summary": "The legendary Canadian singer and songwriter also confirmed the rumors of a musical and biopic. “It’s all real, it’s all happening.\""
+        }
+      ],
+      "ageMin": 304,
+      "_cand": {
+        "key": "rss:-i-love-everything-about-her-shania-twain-has-only-good-thin",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }
