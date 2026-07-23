@@ -1,0 +1,136 @@
+{
+  "ts": "2026-07-23T09:01:27.905Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "sukihana-welcomes-baby-girl-after-posting-raw-labor-footage",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.01381,
+  "costPerPublished": 0.01381,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 11140,
+      "out": 2008,
+      "usd": 0.008362
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1001,
+      "out": 620,
+      "usd": 0.000300294
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 19053,
+      "out": 4870,
+      "usd": 0.0035228927000000004
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 11,
+      "in": 10091,
+      "out": 1540,
+      "usd": 0.0016251000000000002
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2279,
+      "out": 165,
+      "usd": 0.0010961999999999999,
+      "ms": 2348
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1001,
+      "out": 620,
+      "usd": 0.00020169,
+      "ms": 28812
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 18420,
+      "out": 4516,
+      "usd": 0.00577204,
+      "ms": 178968
+    },
+    "verify": {
+      "calls": 9,
+      "errors": 2,
+      "in": 12492,
+      "out": 2601,
+      "usd": 0.007932100000000001,
+      "ms": 31690
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2695,
+      "out": 457,
+      "usd": 0.0004523,
+      "ms": 2369
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 633,
+      "out": 354,
+      "usd": 0.00026595000000000004,
+      "ms": 13580
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 387,
+      "out": 62,
+      "usd": 0.0000635,
+      "ms": 631
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 184,
+      "out": 51,
+      "usd": 0.0000388,
+      "ms": 551
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2073,
+      "out": 92,
+      "usd": 0.00024410000000000002,
+      "ms": 2098
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1121,
+      "out": 120,
+      "usd": 0.00016010000000000002,
+      "ms": 2477
+    }
+  }
+}
