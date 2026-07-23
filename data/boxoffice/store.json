@@ -2354,31 +2354,49 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 12,
-   "at": "2026-07-23T13:03:00.800Z",
+   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
+   "tries": 13,
+   "at": "2026-07-23T13:33:30.788Z",
    "dead": true,
-   "expiresAt": "2026-07-26T13:03:00.800Z"
+   "expiresAt": "2026-07-26T13:33:30.788Z"
+  },
+  {
+   "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "a-day-like-no-other-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-23T13:36:02.111Z"
+  },
+  {
+   "key": "star-trek-strange-new-worlds-trending-tv|TRENDING-TV",
+   "eventSlug": "star-trek-strange-new-worlds-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-23T13:42:46.332Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.14125
+  "usd": 0.16256
  },
  "pace": {
-  "tokens": 1.741120253968254,
-  "lastMs": 1784811678609
+  "tokens": 2.2989315873015874,
+  "lastMs": 1784813471574
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
   "laDay": "2026-07-23",
   "byFilm": {
-   "they will kill you": 1,
+   "they will kill you": 2,
    "the mandalorian and grogu": 3,
    "lee cronin's the mummy": 1,
    "lucky": 1,
-   "descendants: wicked wonderland": 1
+   "descendants: wicked wonderland": 1,
+   "a day like no other": 1,
+   "star trek: strange new worlds": 1
   }
  }
 }
