@@ -1,0 +1,76 @@
+{
+  "id": "trailer-ghost-mexico-city-concert-film-trailer",
+  "slug": "ghost-scare-up-first-trailer-for-mexico-city-concert-film-big-to-rig",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "body 209w < 220"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "body 208w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "2 Big to Rig",
+    "work": {
+      "title": "2 Big to Rig",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "rollingstone.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 208,
+      "h2s": 1,
+      "h2Questions": 0,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 52,
+      "avgSentence": 23,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 208w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "trailers",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w",
+      "keyword in title"
+    ]
+  },
+  "ms": 55483
+}
