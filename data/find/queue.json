@@ -1,74 +1,143 @@
 {
-  "runId": "run-2026-07-23T01-31-00",
-  "builtAt": "2026-07-23T01:32:21.663Z",
-  "count": 13,
+  "runId": "run-2026-07-23T03-01-03",
+  "builtAt": "2026-07-23T03:02:19.588Z",
+  "count": 23,
   "topics": [
     {
-      "id": "news-richard-linklater-glen-powell-lou-gehrig-film",
-      "slug": "richard-linklater-taps-glen-powell-to-play-lou-gehrig-in-new-baseball-",
-      "title": "Richard Linklater Taps Glen Powell to Play Lou Gehrig in New Baseball Film",
+      "id": "news-travis-scott-acting-christopher-nolan-odyssey",
+      "slug": "travis-scott-was-nervous-about-acting-in-christopher-nolan-s-the-odyss",
+      "title": "Travis Scott Was Nervous About Acting in Christopher Nolan's 'The Odyssey'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "travis-scott-acting-christopher-nolan-odyssey",
+      "primaryKeyword": "Travis Scott Christopher Nolan",
+      "primaryEntity": "Travis Scott",
+      "entities": [
+        "Christopher Nolan",
+        "The Odyssey"
+      ],
+      "angle": "Travis Scott discusses his nervousness about acting in Christopher Nolan's 'The Odyssey' and contributing an original song.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/travis-scott-christopher-nolan-the-odyssey-acting-nerves-1236654348/",
+          "ageMin": 139,
+          "headline": "Travis Scott Says He Was Nervous as F About Acting in Christopher Nolan s The Odyssey",
+          "summary": "The rapper also recorded the original song \"When I’m Home\" for the closing credits."
+        }
+      ],
+      "ageMin": 139,
+      "_cand": {
+        "key": "rss:travis-scott-says-he-was-nervous-as-f-about-acting-in-christ",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 30
+      },
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-glen-powell-lou-gehrig-movie-casting",
+      "slug": "richard-linklater-is-fulfilling-more-baseball-dreams-by-casting-glen-p",
+      "title": "Richard Linklater Is Fulfilling More Baseball Dreams by Casting Glen Powell as Lou Gehrig",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "richard-linklater-glen-powell-lou-gehrig-film",
-      "primaryKeyword": "Richard Linklater baseball film",
+      "eventSlug": "glen-powell-lou-gehrig-movie-casting",
+      "primaryKeyword": "Glen Powell Lou Gehrig movie",
       "primaryEntity": "Lou Gehrig",
       "entities": [
-        "Richard Linklater",
         "Glen Powell",
+        "Richard Linklater",
         "Simon Rich"
       ],
-      "angle": "Richard Linklater is set to direct Glen Powell as Lou Gehrig in an upcoming baseball film.",
+      "angle": "Glen Powell is set to portray baseball legend Lou Gehrig in an upcoming film directed by Richard Linklater.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/youtube-ad-revenue-rises-q2-2026-alphabet-billion-1237000530/",
-          "ageMin": 316,
-          "headline": "YouTube Ad Revenue Rises 13% In Q2 To Surpass $11 Billion, Boosting Parent Alphabet s Performance",
-          "summary": "YouTube ad revenue increased 13% in the second quarter compared with the same period a year ago, helping to pace parent Alphabet s financial performance. Total revenue rose 24% in the quarter to hit $119.8 billion, with Cloud revenue jumping 82%, as earnings per share nearly quadrupled to $9.11. Both top- and bottom-line metrics beat Wall [ ]"
+          "url": "https://www.indiewire.com/news/breaking-news/richard-linklater-glen-powell-lou-gehrig-film-1235206631/",
+          "ageMin": 451,
+          "headline": "Richard Linklater Is Fulfilling More Baseball Dreams by Casting Glen Powell as Lou Gehrig",
+          "summary": "The untitled film is set at Universal Pictures and has Simon Rich (\"Artificial\") writing the screenplay."
         },
         {
-          "outlet": "Just Jared",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzRKdGJjc3Nlb1ph?oc=5",
-          "ageMin": 335,
-          "headline": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzR"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/glen-powell-lou-gehrig-richard-linklater-lorne-michaels-1236654085/",
+          "ageMin": 584,
+          "headline": "Glen Powell to Star in Richard Linklater s Lou Gehrig Movie From Producer Lorne Michaels",
+          "summary": "Simon Rich is penning the script for the Universal feature that will focus on the late Yankees legend."
         }
       ],
-      "ageMin": 316,
+      "ageMin": 451,
       "_cand": {
-        "key": "rss:youtube-ad-revenue-rises-13-in-q2-to-surpass-11-billion-boos",
+        "key": "rss:richard-linklater-is-fulfilling-more-baseball-dreams-by-cast",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
         "outletCount": 2,
         "outlets": [
-          "Deadline",
-          "Just Jared"
+          "IndieWire",
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": null,
-        "framing": "plain",
-        "status": "CONFIRMED",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 86,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 18,
-        "status": 25,
+        "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
@@ -80,318 +149,58 @@
       "tierClass": "B"
     },
     {
-      "id": "news-yeon-sang-ho-parasyte-tamiya-netflix-series",
-      "slug": "yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starring-shioli-",
-      "title": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "yeon-sang-ho-parasyte-tamiya-netflix-series",
-      "primaryKeyword": "Parasyte Tamiya Netflix series",
-      "primaryEntity": "Parasyte: Tamiya",
-      "entities": [
-        "Yeon Sang-ho",
-        "Netflix",
-        "Shioli Kutsuna"
-      ],
-      "angle": "Director Yeon Sang-ho is expanding the 'Parasyte' universe with a new live-action series for Netflix.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/",
-          "ageMin": 151,
-          "headline": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
-          "summary": "Yeon Sang-ho is returning to the Parasyte universe with Parasyte: Tamiya, a new live-action series starring Shioli Kutsuna for Netflix, set to stream in 2027. The series marks another collaboration between Netflix and Yeon ( Hellbound, Parasyte: The Grey ), who developed Parasyte: Tamiya and co-wrote the script with Ryu Yong-jae. Wowpoint, the production company behind Yeon s [ ]"
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starri",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
-      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
-      "title": "Ridley Scott, Hugh Jackman's 'Treasure Island' Setting Sail to Sony",
+      "id": "news-days-of-thunder-2-directing-talks",
+      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
+      "title": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony",
-      "primaryKeyword": "Treasure Island",
-      "primaryEntity": "Treasure Island",
-      "entities": [
-        "Ridley Scott",
-        "Hugh Jackman",
-        "Sony"
-      ],
-      "angle": "Sony in talks to acquire film package for 'Treasure Island' with Ridley Scott and Hugh Jackman attached.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
-          "ageMin": 345,
-          "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
-          "summary": "The studio is in talks to acquire the package."
-        }
-      ],
-      "ageMin": 345,
-      "_cand": {
-        "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-destinys-child-remixes-coming",
-      "slug": "beyonc-s-dad-confirms-destiny-s-child-remixes-are-coming",
-      "title": "Beyoncé's Dad Confirms Destiny's Child Remixes Are Coming",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "destinys-child-remixes-coming",
-      "primaryKeyword": "destiny's child remixes",
-      "primaryEntity": "Destiny's Child",
-      "entities": [
-        "Mathew Knowles",
-        "Missy Elliott"
-      ],
-      "angle": "Beyoncé's father, Mathew Knowles, confirms that new Destiny's Child remixes are in the works, featuring artists like Missy Elliott.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/destinys-child-remixes-missy-elliott-1235597598/",
-          "ageMin": 12,
-          "headline": "Beyoncé s Dad Confirms a Bunch of Destiny s Child Remixes Are Coming",
-          "summary": "Mathew Knowles teased that Missy Elliott is among the artists on the new project"
-        }
-      ],
-      "ageMin": 12,
-      "_cand": {
-        "key": "rss:beyonc-s-dad-confirms-a-bunch-of-destiny-s-child-remixes-are",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 69,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-netflix-yeon-sang-ho-parasyte-tamiya-series",
-      "slug": "netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
-      "title": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "netflix-yeon-sang-ho-parasyte-tamiya-series",
-      "primaryKeyword": "Parasyte Tamiya Netflix series",
-      "primaryEntity": "Parasyte: Tamiya",
-      "entities": [
-        "Netflix",
-        "Yeon Sang-ho",
-        "Shioli Kutsuna"
-      ],
-      "angle": "Netflix is reteaming with Yeon Sang-ho for 'Parasyte: Tamiya,' starring Shioli Kutsuna.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
-          "ageMin": 151,
-          "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
-          "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
-        }
-      ],
-      "ageMin": 151,
-      "_cand": {
-        "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-days-of-thunder-2-jonathan-levine",
-      "slug": "jonathan-levine-in-talks-to-direct-tom-cruise-in-days-of-thunder-2",
-      "title": "Jonathan Levine in Talks to Direct Tom Cruise in 'Days of Thunder 2'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-jonathan-levine",
+      "eventSlug": "days-of-thunder-2-directing-talks",
       "primaryKeyword": "days of thunder 2",
       "primaryEntity": "Days of Thunder 2",
       "entities": [
         "Jonathan Levine",
         "Tom Cruise",
-        "Paramount Pictures"
+        "Paramount"
       ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the long-awaited sequel to the 1990 racing film 'Days of Thunder'.",
+      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the racing sequel 'Days of Thunder 2'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/jonathan-levine-direct-days-of-thunder-2-tom-cruise-1236653926/",
-          "ageMin": 536,
+          "ageMin": 626,
           "headline": "Days of Thunder 2 : Jonathan Levine in Talks to Direct Tom Cruise in Paramount s Racing Sequel (Exclusive)",
           "summary": "Vroom vroom."
+        },
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
+          "ageMin": 625,
+          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
         }
       ],
-      "ageMin": 536,
+      "ageMin": 625,
       "_cand": {
-        "key": "rss:days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cru",
+        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 1,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 1,
+        "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 1,
+        "outletCount": 2,
         "outlets": [
-          "THR"
+          "THR",
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -400,39 +209,39 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 81,
       "signals": {
         "recency": 4,
-        "corroboration": 12,
+        "corroboration": 18,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 24,
-        "trending": 0,
+        "trending": 8,
         "spice": 0,
         "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-family-guy-spinoff-stewie-voice-cast-announced",
+      "id": "news-stewie-voice-cast-announced",
       "slug": "family-guy-spinoff-stewie-sets-voice-cast",
-      "title": "'Family Guy' Spinoff 'Stewie' Sets Voice Cast",
+      "title": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "family-guy-spinoff-stewie-voice-cast-announced",
-      "primaryKeyword": "stewie family guy spinoff",
+      "eventSlug": "stewie-voice-cast-announced",
+      "primaryKeyword": "stewie family guy spinoff cast",
       "primaryEntity": "Stewie Griffin: The Untold Story",
       "entities": [
-        "Stewie",
+        "Stewie (TV series)",
         "Family Guy"
       ],
-      "angle": "Voice cast announced for upcoming 'Family Guy' spinoff.",
+      "angle": "Voice cast revealed for the upcoming 'Family Guy' spinoff series 'Stewie'.",
       "tmdbType": "movie",
       "source": "gnews:TV Insider",
       "sources": [
@@ -440,12 +249,12 @@
           "outlet": "TV Insider",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5",
-          "ageMin": 270,
+          "ageMin": 360,
           "headline": "‘Family Guy’ Spinoff ‘Stewie’ Sets Voice Cast - TV Insider",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxNNEZXNXJYb2E4S0Ztc0lPMk01SWdjeWJ2MGZCNENoTTdlcTJMZV9NbFU1UWg1eW1PMXVKS0ZBX0xzRjc5Sm9ONzQtUHhUQ0tpYjVmUmdCMThOTUhKOGY2c3JFb2lkRlJOZU5ERnZiUENPSklhWXY2R2F0T3N1MlRLNTlsaUUxTmVVUEUwN2ptMEU?oc=5\" target=\"_blank\" ‘Family Guy’ Spinoff ‘Stewie’ Set"
         }
       ],
-      "ageMin": 270,
+      "ageMin": 360,
       "_cand": {
         "key": "rss:-family-guy-spinoff-stewie-sets-voice-cast-tv-insider",
         "popularity": 0,
@@ -482,39 +291,41 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-d4vd-murder-case-celeste-rivas-hernandez-death",
-      "slug": "d4vd-murder-case-a-timeline-of-the-investigation-charges-over-celeste-",
-      "title": "D4vd Murder Case: A Timeline of the Investigation Charges Over Celeste Rivas Hernandez’s Death",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
+      "id": "news-spider-man-brand-new-day-premiere-zendaya-tom-holland",
+      "slug": "martin-scorsese-and-steven-spielberg-attend-cape-fear-screening-in-nyc",
+      "title": "Martin Scorsese and Steven Spielberg Attend Cape Fear Screening in NYC, Zendaya and Tom Holland Promote Spider-Man: Brand New Day and More Celeb Red Carpet Photos: July 2026",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "tier": "indie",
-      "eventSlug": "d4vd-murder-case-celeste-rivas-hernandez-death",
-      "primaryKeyword": "d4vd murder case",
-      "primaryEntity": "d4vd",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "spider-man-brand-new-day-premiere-zendaya-tom-holland",
+      "primaryKeyword": "Spider-Man: Brand New Day",
+      "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
-        "D4vd",
-        "Celeste Rivas Hernandez"
+        "Zendaya",
+        "Tom Holland",
+        "Martin Scorsese",
+        "Steven Spielberg"
       ],
-      "angle": "Billboard tracks the timeline of the investigation and charges against singer D4vd for the alleged murder and dismemberment of a 14-year-old.",
+      "angle": "Zendaya and Tom Holland promote 'Spider-Man: Brand New Day' at premieres, alongside other celebrity red carpet events.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "rss:Variety Music",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Variety Music",
           "tier": 7,
-          "url": "https://www.billboard.com/lists/d4vd-murder-case-timeline-celeste-rivas-hernandez-death/",
-          "ageMin": 75,
-          "headline": "D4vd Murder Case: A Timeline of the Investigation Charges Over Celeste Rivas Hernandez’s Death",
-          "summary": "Billboard is tracking developments in the singer's criminal case for allegedly killing the 14-year-old and dismembering her body."
+          "url": "https://variety.com/gallery/celebrity-pics-red-carpet-photos-july-2026/",
+          "ageMin": 811,
+          "headline": "Martin Scorsese and Steven Spielberg Attend Cape Fear Screening in NYC, Zendaya and Tom Holland Promote Spider-Man: Brand New Day and More Celeb Red Carpet Photos: July 2026",
+          "summary": "July started off strong. Following Taylor Swift s star-studded wedding extravaganza in New York City, the cast of The Odyssey dazzled at the film s premieres in London and Paris. First reactions are only upping the excitement, with audiences movie-goers eagerly awaiting the film to hit theaters. On July 7, Dwayne Johnson launched his live-action adaptation of [ ]"
         }
       ],
-      "ageMin": 75,
+      "ageMin": 811,
       "_cand": {
-        "key": "rss:d4vd-murder-case-a-timeline-of-the-investigation-charges-ove",
+        "key": "rss:martin-scorsese-and-steven-spielberg-attend-cape-fear-screen",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -524,64 +335,66 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Variety Music"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Billboard",
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 81,
       "signals": {
-        "recency": 16,
+        "recency": 1,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 12
       },
-      "tierClass": "S"
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
     },
     {
-      "id": "news-sacha-baron-cohen-ali-g-movie",
-      "slug": "sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
-      "title": "Sacha Baron Cohen's Secret Ali G Movie Sets Fall Release",
+      "id": "news-netflix-yean-sang-ho-parasyte-tamiya-series",
+      "slug": "netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
+      "title": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "sacha-baron-cohen-ali-g-movie",
-      "primaryKeyword": "sacha baron cohen ali g movie",
-      "primaryEntity": "Ali G Indahouse",
+      "eventSlug": "netflix-yean-sang-ho-parasyte-tamiya-series",
+      "primaryKeyword": "Parasyte Tamiya Netflix series",
+      "primaryEntity": "Parasyte: Tamiya",
       "entities": [
-        "Ali G",
-        "Sacha Baron Cohen",
-        "Amazon MGM Studios"
+        "Netflix",
+        "Yeon Sang-ho",
+        "Shioli Kutsuna"
       ],
-      "angle": "Sacha Baron Cohen is reviving his Ali G character for a new film.",
+      "angle": "Netflix is reteaming with director Yeon Sang-ho for a new 'Parasyte' series.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-movie-release-amazon-mgm-1236654144/",
-          "ageMin": 471,
-          "headline": "Sacha Baron Cohen s Secret Ali G Movie Sets Fall Release",
-          "summary": "The star revives the satirical character for Amazon MGM Studios' feature 'Who Iz I?'"
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/netflix-yeon-sang-ho-parasyte-tamiya-series-1236653812/",
+          "ageMin": 241,
+          "headline": "Netflix Reteams With Yeon Sang-ho for Parasyte: Tamiya Series",
+          "summary": "The 'Parasyte: The Grey' follow-up will star Japanese actress Shioli Kutsuna as the original manga's fan-favorite parasite Ryoko Tamiya — a human, a monster and something in between."
         }
       ],
-      "ageMin": 471,
+      "ageMin": 241,
       "_cand": {
-        "key": "rss:sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
+        "key": "rss:netflix-reteams-with-yeon-sang-ho-for-parasyte-tamiya-series",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -600,9 +413,75 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 67,
+      "priority": 66,
       "signals": {
-        "recency": 4,
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kevin-feige-miles-morales-mcu-plans",
+      "slug": "kevin-feige-confirms-plans-for-miles-morales-in-the-mcu",
+      "title": "Kevin Feige Confirms Plans for Miles Morales in the MCU",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "kevin-feige-miles-morales-mcu-plans",
+      "primaryKeyword": "Miles Morales MCU",
+      "primaryEntity": "Miles Morales",
+      "entities": [
+        "Kevin Feige",
+        "MCU"
+      ],
+      "angle": "Marvel Studios head Kevin Feige confirms plans to introduce Miles Morales into the MCU.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/kevin-feige-wants-add-miles-morales-mcu-after-spider-verse-1237000938/",
+          "ageMin": 71,
+          "headline": "Kevin Feige Wants To Add Miles Morales Spider-Man To MCU After Spider-Verse Films End: We Definitely Have Plans",
+          "summary": "After the MCU expanded on Peter Parker s Spider-Verse, Kevin Feige hopes to have fan-favorite Miles Morales swing by the franchise. The Marvel Studios boss recently teased plans for Spider-Man s Black alter ego make a live-action appearance in a future movie, once he s done saving the world in Sony Pictures animated Spider-Verse franchise, which concludes on [ ]"
+        }
+      ],
+      "ageMin": 71,
+      "_cand": {
+        "key": "rss:kevin-feige-wants-to-add-miles-morales-spider-man-to-mcu-aft",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -616,6 +495,139 @@
       "tierClass": "B"
     },
     {
+      "id": "news-yean-sang-ho-parasyte-tamiya-series-netflix",
+      "slug": "yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starring-shioli-",
+      "title": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "yean-sang-ho-parasyte-tamiya-series-netflix",
+      "primaryKeyword": "Parasyte Tamiya Netflix series",
+      "primaryEntity": "Parasyte: Tamiya",
+      "entities": [
+        "Netflix",
+        "Yeon Sang-ho",
+        "Shioli Kutsuna"
+      ],
+      "angle": "Director Yeon Sang-ho is returning to the 'Parasyte' universe with a new Netflix series.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/yeon-sang-ho-parasyte-tamiya-shioli-kutsuna-netflix-1236817846/",
+          "ageMin": 241,
+          "headline": "Yeon Sang-ho Returns to Parasyte Universe With Tamiya, Starring Shioli Kutsuna, at Netflix",
+          "summary": "Yeon Sang-ho is returning to the Parasyte universe with Parasyte: Tamiya, a new live-action series starring Shioli Kutsuna for Netflix, set to stream in 2027. The series marks another collaboration between Netflix and Yeon ( Hellbound, Parasyte: The Grey ), who developed Parasyte: Tamiya and co-wrote the script with Ryu Yong-jae. Wowpoint, the production company behind Yeon s [ ]"
+        }
+      ],
+      "ageMin": 241,
+      "_cand": {
+        "key": "rss:yeon-sang-ho-returns-to-parasyte-universe-with-tamiya-starri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-guitarricadelafuente-jimmy-kimmel-live-debut",
+      "slug": "watch-guitarricadelafuente-s-dreamy-television-debut-on-jimmy-kimmel-l",
+      "title": "Watch Guitarricadelafuente's Dreamy Television Debut on Jimmy Kimmel Live!",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "performance",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "guitarricadelafuente-jimmy-kimmel-live-debut",
+      "primaryKeyword": "Guitarricadelafuente Jimmy Kimmel",
+      "primaryEntity": "Guitarricadelafuente",
+      "entities": [
+        "Jimmy Kimmel Live!"
+      ],
+      "angle": "Spanish singer Guitarricadelafuente makes his U.S. television debut on Jimmy Kimmel Live!",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-latin/guitarricadelafuentes-television-debut-jimmy-kimmel-live-1235597601/",
+          "ageMin": 161,
+          "headline": "Watch Guitarricadelafuente s Dreamy Television Debut on Jimmy Kimmel Live!",
+          "summary": "The Spanish singer-songwriter played a celestial version of his song \"BABIECA!\""
+        }
+      ],
+      "ageMin": 161,
+      "_cand": {
+        "key": "rss:watch-guitarricadelafuente-s-dreamy-television-debut-on-jimm",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
       "id": "news-hudson-williams-yaga-series-first-look-pics",
       "slug": "amc-releases-first-look-pics-of-hudson-williams-yaga-series",
       "title": "AMC Releases First-Look Pics of Hudson Williams’ ‘Yaga’ Series",
@@ -626,12 +638,12 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "hudson-williams-yaga-series-first-look-pics",
-      "primaryKeyword": "yaga series",
+      "primaryKeyword": "Yaga series",
       "primaryEntity": "Yaga (TV series)",
       "entities": [
         "Hudson Williams"
       ],
-      "angle": "TV Insider shares first-look images for the upcoming 'Yaga' series.",
+      "angle": "AMC unveils first-look images for Hudson Williams' upcoming 'Yaga' series.",
       "tmdbType": "movie",
       "source": "gnews:TV Insider",
       "sources": [
@@ -639,12 +651,12 @@
           "outlet": "TV Insider",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd3ZIdmJvTlFoLVFqVkR2bk42NmFkUTFneHIxR29zcmp1TWNYcGxtdHFhdkVvNWp1ak05aVRjbWxBWDVGMTlqMjg4QlV4b1FmUDU0d3cwV2poQ0VjOEZsdTExa0g1OEpDaDYtZ3BXeVoyYlp1aG1mU2tVWU90SEpYZXNpdWliQ3dPMndJSEd4elVtblRBR1lOZlQzcUd5VGtmYkVrU1VZdUU1YlBTa3lwY2t6bWRNRXc1S0lEbTVVQmxPLWtfRGJtZndPc0xjR1N2RTZv?oc=5",
-          "ageMin": 185,
+          "ageMin": 275,
           "headline": "AMC Releases First-Look Pics of Hudson Williams’ ‘Yaga’ Series - TV Insider",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxNd3ZIdmJvTlFoLVFqVkR2bk42NmFkUTFneHIxR29zcmp1TWNYcGxtdHFhdkVvNWp1ak05aVRjbWxBWDVGMTlqMjg4QlV4b1FmUDU0d3cwV2poQ0VjOEZsdTExa0g1OEpDaDYtZ3BXeVoyYlp1aG1mU2tVWU90SEpYZXNpdWliQ3dPMndJSEd4elVtblRBR1lOZlQzcUd5VGtmYkVrU1VZdUU1YlBTa3lwY2t6bWRNRXc1S0l"
         }
       ],
-      "ageMin": 185,
+      "ageMin": 275,
       "_cand": {
         "key": "rss:amc-releases-first-look-pics-of-hudson-williams-yaga-series-",
         "popularity": 0,
@@ -681,41 +693,42 @@
       "tierClass": "B"
     },
     {
-      "id": "news-days-of-thunder-2-jonathan-levine-directing",
-      "slug": "days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cruise-in-par",
-      "title": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive)",
+      "id": "news-ridley-scott-hugh-jackman-treasure-island-sony",
+      "slug": "ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-sony",
+      "title": "Ridley Scott, Hugh Jackman’s Treasure Island Setting Sail to Sony",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-2-jonathan-levine-directing",
-      "primaryKeyword": "Days of Thunder 2",
-      "primaryEntity": "Days of Thunder 2",
+      "eventSlug": "ridley-scott-hugh-jackman-treasure-island-sony",
+      "primaryKeyword": "Ridley Scott Hugh Jackman movie",
+      "primaryEntity": "Treasure Island",
       "entities": [
-        "Tom Cruise",
-        "Jonathan Levine",
-        "Paramount"
+        "Treasure Island (film)",
+        "Ridley Scott",
+        "Hugh Jackman",
+        "Sony Pictures"
       ],
-      "angle": "Jonathan Levine is in talks to direct Tom Cruise in the sequel to 'Days of Thunder' for Paramount.",
+      "angle": "Ridley Scott and Hugh Jackman's 'Treasure Island' film package is in talks to be acquired by Sony.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5",
-          "ageMin": 535,
-          "headline": "‘Days of Thunder 2’: Jonathan Levine in Talks to Direct Tom Cruise in Paramount’s Racing Sequel (Exclusive) - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPRnFDMG1vdXIwNnJCX3p0WUJCM1A0NFNXRnRUY3EtWWN0Yi1mZDJ2djl2YndleDZTZ19hM2dKamJHVENRdzhxUVotUVRUU1JJUGxENzZNT0VONVZQYnNvS2R3TmhmcmJHaVlyRjZhRV9oVTZtNngyeUZOamNSZi14Y3pjMlZrMExRVVIta2w4UllsRy1jeXJtQnk5SGV5WklqNExyOHJDLWRGSFJjM3ZWbjUwWFNUUQ?oc=5"
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ridley-scott-hugh-jackman-treasure-island-sony-1236654295/",
+          "ageMin": 435,
+          "headline": "Ridley Scott, Hugh Jackman s Treasure Island Setting Sail to Sony",
+          "summary": "The studio is in talks to acquire the package."
         }
       ],
-      "ageMin": 535,
+      "ageMin": 435,
       "_cand": {
-        "key": "rss:-days-of-thunder-2-jonathan-levine-in-talks-to-direct-tom-cr",
+        "key": "rss:ridley-scott-hugh-jackman-s-treasure-island-setting-sail-to-",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -723,11 +736,275 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "The Hollywood Reporter"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-stuart-saves-the-universe-big-bang-theory-spinoff",
+      "slug": "stuart-saves-the-universe-producers-on-pulling-off-such-a-crazy-big-ba",
+      "title": "Stuart Saves the Universe Producers on Pulling Off Such a Crazy Big Bang Theory Spinoff After No One Really Liked the Idea",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "stuart-saves-the-universe-big-bang-theory-spinoff",
+      "primaryKeyword": "Stuart Saves the Universe Big Bang Theory spinoff",
+      "primaryEntity": "Stuart Saves the Universe",
+      "entities": [
+        "The Big Bang Theory",
+        "Chuck Lorre"
+      ],
+      "angle": "Producers discuss the challenges and origins of a Big Bang Theory spinoff that was not initially well-received.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/stuart-saves-the-universe-producers-big-bang-theory-spinoff-1236817497/",
+          "ageMin": 391,
+          "headline": "Stuart Saves the Universe Producers on Pulling Off Such a Crazy Big Bang Theory Spinoff After No One Really Liked the Idea",
+          "summary": "As his megahit CBS sitcom “The Big Bang Theory” prepared to end its run, Chuck Lorre came up with a wild pitch for a spinoff. Not “Young Sheldon” — that prequel was already, on the air and doing gangbusters. No, Lorre had something even more fantastical in mind. “I had a strange idea that there [ ]"
+        }
+      ],
+      "ageMin": 391,
+      "_cand": {
+        "key": "rss:stuart-saves-the-universe-producers-on-pulling-off-such-a-cr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-glen-powell-lou-gehrig-baseball-movie",
+      "slug": "glen-powell-to-play-lou-gehrig-in-another-baseball-movie-from-director",
+      "title": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "glen-powell-lou-gehrig-baseball-movie",
+      "primaryKeyword": "glen powell lou gehrig",
+      "primaryEntity": "Lou Gehrig (baseball player)",
+      "entities": [
+        "Glen Powell",
+        "Richard Linklater"
+      ],
+      "angle": "Glen Powell is set to play Lou Gehrig in a new baseball film directed by Richard Linklater.",
+      "tmdbType": "movie",
+      "source": "gnews:Just Jared",
+      "sources": [
+        {
+          "outlet": "Just Jared",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzRKdGJjc3Nlb1ph?oc=5",
+          "ageMin": 425,
+          "headline": "Glen Powell to Play Lou Gehrig in Another Baseball Movie from Director Richard Linklater - Just Jared",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOcUZCTU9SalNwOERPZmN1VjNaT3pSUHFhUWFKSlpfMHdCb1BZOG40YTdkR3lMeG5VTVNxLWV5OUhyUVNlNnI3dnd5TU1JWEg2c3F6dDVjSHk2Mm5HYUw1UENkWGtoSm5vckQyMW1BSGlocUVxSDdueGkyT3ppdGp5c0hVMFhkSnVpQXFKaUZXa2lVb3ZSc0IwRTd2VnhUUEY1d0pSLXdTcERoYU94bUc0aVFhYnlrcEtQMzR"
+        }
+      ],
+      "ageMin": 425,
+      "_cand": {
+        "key": "rss:glen-powell-to-play-lou-gehrig-in-another-baseball-movie-fro",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Just Jared"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Just Jared",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-pompeii-out-of-time-tom-hiddleston-documentary",
+      "slug": "pompeii-out-of-time-with-tom-hiddleston-a-rare-doc-that-could-actually",
+      "title": "Pompeii: Out of Time with Tom Hiddleston : A Rare Doc That Could Actually Attract a Young Audience",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "pompeii-out-of-time-tom-hiddleston-documentary",
+      "primaryKeyword": "Pompeii Out of Time Tom Hiddleston documentary",
+      "primaryEntity": "Pompeii: Out of Time",
+      "entities": [
+        "Tom Hiddleston",
+        "Kevin R. Wright"
+      ],
+      "angle": "Tom Hiddleston stars in a new documentary about Pompeii that aims to attract a younger audience.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/pompeii-out-of-time-tom-hiddleston-disney-plus-1236818449/",
+          "ageMin": 412,
+          "headline": "Pompeii: Out of Time with Tom Hiddleston : A Rare Doc That Could Actually Attract a Young Audience",
+          "summary": "In 2024, Loki star Tom Hiddleston reunited with the series executive producer Kevin R. Wright to create a documentary that wasn t about a salacious murder, a cult or Hiddleston’s acting career. Instead, the duo set out to make a doc about Pompeii and the attempts of three real Romans to survive the ancient city’s final [ ]"
+        }
+      ],
+      "ageMin": 412,
+      "_cand": {
+        "key": "rss:pompeii-out-of-time-with-tom-hiddleston-a-rare-doc-that-coul",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-sacha-baron-cohen-ali-g-movie-who-iz-i-release-date",
+      "slug": "sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
+      "title": "Sacha Baron Cohen’s Secret Ali G Movie Sets Fall Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "sacha-baron-cohen-ali-g-movie-who-iz-i-release-date",
+      "primaryKeyword": "ali g movie",
+      "primaryEntity": "Who Iz I? (film)",
+      "entities": [
+        "Sacha Baron Cohen",
+        "Ali G"
+      ],
+      "angle": "Sacha Baron Cohen is reviving his satirical character Ali G for a new film titled 'Who Iz I?', set for a fall release.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/sacha-baron-cohen-ali-g-movie-release-amazon-mgm-1236654144/",
+          "ageMin": 561,
+          "headline": "Sacha Baron Cohen s Secret Ali G Movie Sets Fall Release",
+          "summary": "The star revives the satirical character for Amazon MGM Studios' feature 'Who Iz I?'"
+        }
+      ],
+      "ageMin": 561,
+      "_cand": {
+        "key": "rss:sacha-baron-cohen-s-secret-ali-g-movie-sets-fall-release",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -748,9 +1025,75 @@
       "tierClass": "B"
     },
     {
+      "id": "news-gone-britbox-crime-drama",
+      "slug": "engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper-lip-to-ne",
+      "title": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "gone-britbox-crime-drama",
+      "primaryKeyword": "Gone BritBox",
+      "primaryEntity": "Gone",
+      "entities": [
+        "Gone (TV series)",
+        "BritBox"
+      ],
+      "angle": "New BritBox crime drama 'Gone' is praised for its suspenseful storytelling and exploration of complex themes.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/features/commentary/british-crime-drama-gone-britbox-1235205494/",
+          "ageMin": 481,
+          "headline": "Engrossing British Crime Drama Gone Takes the Ol Stiff Upper Lip to New Heights",
+          "summary": "The new BritBox series spends six episodes continually shifting the finger of suspicion, patiently and methodically exploring themes of control, trauma, and grief. And if a character doesn't sob through it all? Even better."
+        }
+      ],
+      "ageMin": 481,
+      "_cand": {
+        "key": "rss:engrossing-british-crime-drama-gone-takes-the-ol-stiff-upper",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "IndieWire"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-the-chosen-bear-grylls-crossover",
-      "slug": "jesus-rappels-down-a-cliff-in-the-chosen-x-bear-grylls-crossover",
-      "title": "Jesus Rappels Down a Cliff in 'The Chosen' x Bear Grylls Crossover",
+      "slug": "watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of-the-summe",
+      "title": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -758,12 +1101,12 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "the-chosen-bear-grylls-crossover",
-      "primaryKeyword": "the chosen bear grylls crossover",
+      "primaryKeyword": "The Chosen Bear Grylls crossover",
       "primaryEntity": "The Chosen",
       "entities": [
         "Bear Grylls"
       ],
-      "angle": "TV series 'The Chosen' is crossing over with survival expert Bear Grylls.",
+      "angle": "The faith-based drama 'The Chosen' is set for a unique crossover event with survival expert Bear Grylls.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -771,12 +1114,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chosen-in-the-wild-with-bear-grylls-trailer-jesus-rappels-1236654136/",
-          "ageMin": 417,
+          "ageMin": 507,
           "headline": "Watch Jesus Rappel Down a Cliff in the TV Crossover Event of the Summer: The Chosen x Bear Grylls",
           "summary": "No word yet on how he traverses the Colorado River."
         }
       ],
-      "ageMin": 417,
+      "ageMin": 507,
       "_cand": {
         "key": "rss:watch-jesus-rappel-down-a-cliff-in-the-tv-crossover-event-of",
         "popularity": 0,
@@ -832,7 +1175,7 @@
         "Jonathan Daviss",
         "Craig Brewer"
       ],
-      "angle": "The Snoop Dogg biopic has been given a Summer 2027 release date by Universal.",
+      "angle": "Universal announces a summer 2027 release date for the Snoop Dogg biopic.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -840,12 +1183,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 1681,
+          "ageMin": 1771,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 1681,
+      "ageMin": 1771,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -880,6 +1223,336 @@
         "softTv": 0
       },
       "tierClass": "B"
+    },
+    {
+      "id": "news-incredibles-3-producer-brad-bird-time-jump-comment",
+      "slug": "incredibles-3-producer-brad-bird-on-time-jumps-and-character-aging",
+      "title": "'Incredibles 3' Producer Brad Bird on Time Jumps and Character Aging",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "incredibles-3-producer-brad-bird-time-jump-comment",
+      "primaryKeyword": "incredibles 3",
+      "primaryEntity": "Incredibles 3",
+      "entities": [
+        "Brad Bird",
+        "Pixar"
+      ],
+      "angle": "Producer Brad Bird discusses the challenges of aging up characters in Pixar's 'Incredibles 3'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Direct",
+      "sources": [
+        {
+          "outlet": "The Direct",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5",
+          "ageMin": 678,
+          "headline": "'Incredibles 3' Producer Brad Bird Admits Aging Up The Characters With A Time Jump In Pixar's Upcoming Sequel Movie Would Not Make Them 'Hipper Or Cooler Or More Like Them' (Exclusive) - The Direct",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxPYnNYLXFtSDJMM29RN3FELXRvUnRIV1RtcWkwV25SelFUdzhsR3FBR29WdzVjbzA3Xzg1WVl0MHdhLTdWOXg0MkJTQmI3MmwzUmh0UFpIbFJSaGR2M0lFVHc4Q0hCWm1QOW0xZkFZcng5Y3pZVXlOYmEtLTh6UXlMRDhRa2k4R2U0eW9VbnNMcXVLcFc4SEVpMA?oc=5\" target=\"_blank\" 'Incredibles 3' Produc"
+        }
+      ],
+      "ageMin": 678,
+      "_cand": {
+        "key": "rss:-incredibles-3-producer-brad-bird-admits-aging-up-the-charac",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "The Direct"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "The Direct",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-wars-jedi-sequel-release-2024",
+      "slug": "star-wars-jedi-gets-official-sequel-release-this-year",
+      "title": "‘Star Wars Jedi’ Gets Official Sequel Release This Year",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-jedi-sequel-release-2024",
+      "primaryKeyword": "star wars jedi sequel",
+      "primaryEntity": "Star Wars: The Last Jedi",
+      "entities": [
+        "Star Wars Jedi"
+      ],
+      "angle": "The 'Star Wars Jedi' game franchise announces its official sequel release for this year.",
+      "tmdbType": "movie",
+      "source": "gnews:Collider",
+      "sources": [
+        {
+          "outlet": "Collider",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5",
+          "ageMin": 871,
+          "headline": "‘Star Wars Jedi’ Gets Official Sequel Release This Year - Collider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNWVdiM29kbTZLTHdZZEVQRDBYbmtGVjNDSHkwZ2hRd1JQZ1R3OWdlRFMySFZpeGdZM0FRczlLeFVBLUNvMTd6U3lLSmFqS3c1VGthUUJiSEVkbzF5dHJMaFZzX1Z6M05fN1h6ZnFEYUppM215Y284YlRCM1JEbFJyLXlDbW5WQ1VkWnpaRHNIQ3c2UXRDb0RDTWlzNXhuUnphZmc?oc=5\" target=\"_blank\" ‘Star War"
+        }
+      ],
+      "ageMin": 871,
+      "_cand": {
+        "key": "rss:-star-wars-jedi-gets-official-sequel-release-this-year-colli",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Collider"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Collider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 54,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-will-ferrell-gene-hackman-royal-tenenbaums",
+      "slug": "will-ferrell-recalls-intimidating-encounter-with-gene-hackman-on-royal",
+      "title": "Will Ferrell Recalls 'Intimidating' Encounter With Gene Hackman on 'Royal Tenenbaums' Set",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "will-ferrell-gene-hackman-royal-tenenbaums",
+      "primaryKeyword": "Will Ferrell Gene Hackman",
+      "primaryEntity": "Will Ferrell",
+      "entities": [
+        "Gene Hackman",
+        "The Royal Tenenbaums"
+      ],
+      "angle": "Will Ferrell shares a funny anecdote about a brief, intimidating encounter with Gene Hackman on the set of 'The Royal Tenenbaums'.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/will-ferrell-recalls-meeting-gene-hackman-very-intimidating/",
+          "ageMin": 31,
+          "headline": "Will Ferrell Recalls Chance Encounter With ‘Very Intimidating’ Gene Hackman on ‘The Royal Tenenbaums’ Set",
+          "summary": "“He asked me if I was in the picture,” the “Saturday Night Live” alum, who was not in the Wes Anderson film, adds The post Will Ferrell Recalls Chance Encounter With ‘Very Intimidating’ Gene Hackman on ‘The Royal Tenenbaums’ Set appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:will-ferrell-recalls-chance-encounter-with-very-intimidating",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-gustavo-dudamel-world-cup-halftime-show-creation",
+      "slug": "gustavo-dudamel-takes-you-inside-how-he-created-his-world-cup-halftime",
+      "title": "Gustavo Dudamel Takes You Inside How He Created His World Cup Halftime Show All Access",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "gustavo-dudamel-world-cup-halftime-show-creation",
+      "primaryKeyword": "Gustavo Dudamel World Cup Halftime Show",
+      "primaryEntity": "Gustavo Dudamel",
+      "entities": [
+        "Chris Martin",
+        "BTS"
+      ],
+      "angle": "Gustavo Dudamel provides an inside look at the creation of his World Cup Halftime Show performance.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/video/gustavo-dudamel-takes-you-inside-world-cup-halftime-show/",
+          "ageMin": 192,
+          "headline": "Gustavo Dudamel Takes You Inside How He Created His World Cup Halftime Show All Access",
+          "summary": "Gustavo Dudamel shows you how he created his segment in the World Cup Halftime show. From working with Chris Martin to BTS, keep watching to see how it all came to life! Tetris Kelly: Gustavo Dudamel brought huge energy and surprises to the first ever World Cup halftime show, and we have the experience directly [ ]"
+        }
+      ],
+      "ageMin": 192,
+      "_cand": {
+        "key": "rss:gustavo-dudamel-takes-you-inside-how-he-created-his-world-cu",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-johnny-cash-archives-belmont-university",
+      "slug": "belmont-university-to-house-johnny-cash-s-personal-archives",
+      "title": "Belmont University to House Johnny Cash s Personal Archives",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "johnny-cash-archives-belmont-university",
+      "primaryKeyword": "Johnny Cash archives",
+      "primaryEntity": "Johnny Cash",
+      "entities": [
+        "Belmont University"
+      ],
+      "angle": "Johnny Cash's personal archives will be housed at Belmont University.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/country/johnny-cash-personal-archives-belmont-university-1236300861/",
+          "ageMin": 264,
+          "headline": "Belmont University to House Johnny Cash s Personal Archives",
+          "summary": "The archives will be part of the new Johnny Cash Learning Center at Belmont University's Mike Curb College of Entertainment Music Business."
+        }
+      ],
+      "ageMin": 264,
+      "_cand": {
+        "key": "rss:belmont-university-to-house-johnny-cash-s-personal-archives",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
     }
   ]
 }
