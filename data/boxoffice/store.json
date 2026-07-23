@@ -1579,9 +1579,9 @@
    "eventSlug": "citizen-vigilante-bo-opening",
    "form": "BO-OPENING",
    "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
-   "tries": 3,
-   "at": "2026-07-19T13:09:33.901Z",
-   "dead": true,
+   "tries": 2,
+   "at": "2026-07-23T21:03:48.671Z",
+   "dead": false,
    "expiresAt": "2026-07-22T13:09:33.901Z"
   },
   {
@@ -2354,11 +2354,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 30,
-   "at": "2026-07-23T20:33:21.779Z",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 31,
+   "at": "2026-07-23T21:02:50.545Z",
    "dead": true,
-   "expiresAt": "2026-07-26T20:33:21.779Z"
+   "expiresAt": "2026-07-26T21:02:50.545Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2382,9 +2382,11 @@
    "key": "ransom-canyon-trending-tv|TRENDING-TV",
    "eventSlug": "ransom-canyon-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 106 < 180 (owner-set ~200-word minimum) | soft-floor engagement 0 < 5",
-   "tries": 2,
-   "at": "2026-07-23T16:35:08.449Z"
+   "reason": "words 98 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-23T21:05:29.409Z",
+   "dead": true,
+   "expiresAt": "2026-07-26T21:05:29.409Z"
   },
   {
    "key": "masters-of-the-universe-now-streaming|NOW-STREAMING",
@@ -2395,14 +2397,14 @@
    "at": "2026-07-23T18:35:27.702Z"
   }
  ],
- "zeroStreak": 21,
+ "zeroStreak": 22,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.42797
+  "usd": 0.44674
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784838662061
+  "lastMs": 1784840467119
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2415,11 +2417,12 @@
    "descendants: wicked wonderland": 3,
    "a day like no other": 1,
    "star trek: strange new worlds": 3,
-   "ransom canyon": 2,
+   "ransom canyon": 3,
    "dhamaal 4": 1,
    "masters of the universe": 2,
    "tom clancy's jack ryan: ghost war": 2,
-   "silo": 1
+   "silo": 1,
+   "citizen vigilante": 1
   }
  }
 }
