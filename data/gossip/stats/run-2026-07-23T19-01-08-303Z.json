@@ -1,0 +1,146 @@
+{
+  "ts": "2026-07-23T19:01:08.303Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kai-cenat-says-saucy-santanas-streamer-university-visit-was-unauthorized",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-number:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.016126,
+  "costPerPublished": 0.016126,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 9,
+      "in": 20569,
+      "out": 6579,
+      "usd": 0.006580222000000001
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 17799,
+      "out": 1046,
+      "usd": 0.0079547
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2076,
+      "out": 2569,
+      "usd": 0.0009666760000000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 5,
+      "in": 4430,
+      "out": 454,
+      "usd": 0.0006246
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 602,
+      "out": 23,
+      "usd": 0.00014628000000000002,
+      "ms": 4812
+    },
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4843,
+      "out": 420,
+      "usd": 0.0025029,
+      "ms": 2843
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2076,
+      "out": 2569,
+      "usd": 0.00064926,
+      "ms": 25268
+    },
+    "writer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 19242,
+      "out": 6210,
+      "usd": 0.00653706,
+      "ms": 163792
+    },
+    "verify": {
+      "calls": 7,
+      "errors": 0,
+      "in": 12956,
+      "out": 626,
+      "usd": 0.0054518,
+      "ms": 6443
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1436,
+      "out": 176,
+      "usd": 0.000214,
+      "ms": 967
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 725,
+      "out": 346,
+      "usd": 0.00028439,
+      "ms": 9782
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 388,
+      "out": 89,
+      "usd": 0.0000744,
+      "ms": 657
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 206,
+      "out": 45,
+      "usd": 0.0000386,
+      "ms": 500
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2109,
+      "out": 89,
+      "usd": 0.0002465,
+      "ms": 1614
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 291,
+      "out": 55,
+      "usd": 0.0000511,
+      "ms": 2204
+    }
+  }
+}
