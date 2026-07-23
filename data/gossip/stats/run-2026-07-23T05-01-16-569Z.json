@@ -1,0 +1,137 @@
+{
+  "ts": "2026-07-23T05:01:16.569Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "lindsay-hubbard-confirms-summer-house-return-says-amanda-batula-west-wilson",
+      "category": "tv",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.013679,
+  "costPerPublished": 0.013679,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12057,
+      "out": 1537,
+      "usd": 0.007459599999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1061,
+      "out": 382,
+      "usd": 0.00017885
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 18043,
+      "out": 4402,
+      "usd": 0.005265699999999999
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5337,
+      "out": 603,
+      "usd": 0.0007749
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2332,
+      "out": 210,
+      "usd": 0.0012246,
+      "ms": 1680
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1061,
+      "out": 382,
+      "usd": 0.00016425,
+      "ms": 39887
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 17344,
+      "out": 4093,
+      "usd": 0.00538074,
+      "ms": 169725
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9725,
+      "out": 1327,
+      "usd": 0.006235,
+      "ms": 8024
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1436,
+      "out": 164,
+      "usd": 0.0002092,
+      "ms": 995
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 699,
+      "out": 309,
+      "usd": 0.00026583000000000005,
+      "ms": 14113
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 387,
+      "out": 120,
+      "usd": 0.0000867,
+      "ms": 1046
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 50,
+      "usd": 0.00003940000000000001,
+      "ms": 441
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2113,
+      "out": 94,
+      "usd": 0.00024890000000000003,
+      "ms": 1950
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1207,
+      "out": 175,
+      "usd": 0.0001907,
+      "ms": 2334
+    }
+  }
+}
