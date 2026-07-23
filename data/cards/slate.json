@@ -1,217 +1,170 @@
 {
- "dateKey": "2026-07-22",
+ "dateKey": "2026-07-23",
  "topTopic": {
-  "name": "Christopher Nolan's The Odyssey Box Office Triumph & Backlash",
-  "why": "Dominant conversation across multiple outlets: box-office records, vocal online backlash, Musk/Grok AI controversy, and strong legs in India and international markets."
+  "name": "Christopher Nolan's The Odyssey shatters box-office records and dominates industry conversation",
+  "why": "The day's dominant conversation is The Odyssey, appearing in multiple independent headlines: box-office record vs Oppenheimer (Forbes), IMAX boss calls it transformational (Deadline), IMAX Q2 earnings ride the film to double-digit growth (Variety/Wrap), Imax CEO calls it transformational (Deadline), and a documentary about Nolan's film is set for theatrical release (Wrap)."
  },
  "slots": [
   {
    "story": {
-    "title": "Jason Alexander apologizes to Courtney Stodden for 2014 sketch",
-    "angle": "Seinfeld star addresses past behavior in controversy.",
+    "title": "Imax Boss Reacts as The Odyssey Shatters Box-Office Records",
+    "angle": "The News International quotes IMAX CEO on The Odyssey breaking records.",
     "entities": [
-     "Jason Alexander",
-     "Courtney Stodden"
+     "IMAX",
+     "The Odyssey"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/tv/news/jason-alexander-courtney-stodden-inappropriate-behavior-minor-1236817958/"
-    ],
-    "isTopTopic": false,
-    "viral": 3,
-    "hint": "news"
-   },
-   "slotLA": "07:06",
-   "status": "posted",
-   "swaps": 1,
-   "key": "jason-alexander-apologizes-to-courtney-stodden-for-2014-sketch"
-  },
-  {
-   "story": {
-    "title": "Dead Souls review: Alex Cox's final film ends his career in style",
-    "angle": "Roger Ebert gives Alex Cox's Dead Souls a glowing send-off.",
-    "entities": [
-     "Dead Souls",
-     "Alex Cox"
-    ],
-    "sourceLinks": [
-     "https://www.rogerebert.com/reviews/dead-souls-film-review-2026"
-    ],
-    "isTopTopic": false,
-    "viral": 2,
-    "hint": "news"
-   },
-   "slotLA": "08:35",
-   "status": "dropped",
-   "swaps": 1,
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Elon Musk's Grok Imagine will make 'historically accurate' AI Odyssey film",
-    "angle": "Musk pledges an AI-generated film version of Homer's Odyssey, backed by $100M from Mel Gibson.",
-    "entities": [
-     "Elon Musk",
-     "Grok Imagine",
-     "The Odyssey",
-     "AI film"
-    ],
-    "sourceLinks": [
-     "https://www.theguardian.com/film/2026/jul/22/elon-musk-grok-imagine-historically-accurate-ai-homers-odyssey-christopher-nolan",
-     "https://tribune.com.pk/story/2619645/elon-musk-pledges-historically-accurate-ai-generated-odyssey-film-backs-100m-mel-gibson-version"
+     "https://www.thenews.com.pk/latest/1409991-imax-boss-reacts-to-record-profit-from-christopher-nolan-epic-the-odyssey"
     ],
     "isTopTopic": true,
     "viral": 8,
-    "hint": "news"
+    "hint": "box-office"
    },
-   "slotLA": "10:09",
-   "status": "dropped",
-   "reason": "factgate: The card claims Christopher Nolan's 'The Odyssey' took $264m at the global box office in its opening weekend, but the fact pack states this was the box office for 'The Odyssey' and not Christopher Nolan's version.; The card claims Christopher Nolan's 'The Odyssey' stars Matt Damon as Odysseus and Anne Hathaway as Penelope, but the fact pack states this was for Christopher Nolan's version.; The card claims Christopher Nolan's 'The Odyssey' has a 97% audience rating on Rotten Tomatoes, but the fact pack states this was for Christopher Nolan's version."
+   "slotLA": "07:06",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey proves audiences want practical effects, real stunts",
-    "angle": "Hollywood Reporter says Nolan's approach shows audiences prefer tangible filmmaking.",
+    "title": "The Odyssey Turns IMAX Cinemas Into Summer’s Hottest Ticket",
+    "angle": "The Week analyzes how Nolan’s film is driving IMAX attendance nationally.",
     "entities": [
      "The Odyssey",
-     "practical effects",
-     "Hollywood Reporter"
+     "IMAX"
     ],
     "sourceLinks": [
-     "https://www.hollywoodreporter.com/movies/movie-news/odyssey-box-office-2026-practical-effects-1236652219/",
-     "https://www.hollywoodreporter.com/movies/movie-news/odyssey-box-office-2026-practical-effects-1236652219/"
+     "https://theweek.com/culture-life/film/how-the-odyssey-turned-imax-cinemas-into-summers-hottest-ticket"
     ],
     "isTopTopic": true,
     "viral": 7,
-    "hint": "news"
+    "hint": "box-office"
    },
-   "slotLA": "11:43",
-   "status": "dropped",
-   "reason": "factgate: The IG caption mentions 'audiences in 2026' but the fact pack states 'audiences in 2026 are sending a clear message'. The card text is missing the context that this message is being sent to filmmakers.; The IG caption mentions '#ProjectHailMary and #TheOdyssey touted practical effects & real-world filming.' The fact pack states that 'The Odyssey ($264 million and counting), Project Hail Mary ($683 million)... not only heavily relied on practical effects but communicated their old-school moviemaking efforts in their marketing.' This is a rephrasing and not a verbatim quote.; The FB caption states 'Audiences are favoring movies with practical effects and real-world filming over CGI-heavy franchises.' The fact pack states 'Several disappointing franchise films were criticized for looking overtly artificial.' This is a rephrasing and not a verbatim quote.; The FB caption states 'Five of this year's top 10 hits are original, nonfranchise films.' The fact pack states 'So far, five of the top 10 movies at the domestic box office are nonfranchise titles.' This is a rephrasing and not a verbatim quote."
+   "slotLA": "08:43",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Misty Green trailer: Chris Rock's A24 drama with Rosalind Eleazar and Adam Driver",
-    "angle": "First trailer for Chris Rock's directorial A24 drama Misty Green arrives.",
+    "title": "Hollywood stars 'devastated' by the death of 18-year-old actress, Kaylee Hottle",
+    "angle": "Yen News reports on tributes following the death of young actress Kaylee Hottle.",
     "entities": [
-     "Misty Green",
-     "Chris Rock",
-     "A24",
-     "Rosalind Eleazar",
-     "Adam Driver"
+     "Kaylee Hottle"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/film/news/misty-green-trailer-chris-rock-adam-driver-anna-kendrick-1236817801/",
-     "https://deadline.com/2026/07/misty-green-trailer-chris-rock-a24-adam-driver-1237000060/"
+     "https://yen.com.gh/entertainment/celebrities/308518-18-year-kaylee-hottles-real-character-light-hollywood-stars-send-tributes/"
+    ],
+    "isTopTopic": false,
+    "viral": 7,
+    "hint": "memoriam"
+   },
+   "slotLA": "10:26",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Check Out The First Trailer for Zach Cregger’s Resident Evil Movie",
+    "angle": "Restart.run debuts the first trailer for the new Resident Evil film.",
+    "entities": [
+     "Resident Evil",
+     "Zach Cregger"
+    ],
+    "sourceLinks": [
+     "https://www.restart.run/articles/check-out-the-first-trailer-for-zach-cregger-s-resident-evil-movie"
     ],
     "isTopTopic": false,
     "viral": 6,
     "hint": "first-look"
    },
-   "slotLA": "13:19",
-   "status": "posted",
-   "key": "misty-green-trailer-chris-rock-s-a24-drama-with-rosalind-eleazar-and-adam-driver"
+   "slotLA": "12:16",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Docuseries on serial killer Aileen Wuornos uses AI to recreate her story",
-    "angle": "ID's new docuseries leverages AI to tell the Aileen Wuornos case.",
+    "title": "The New Resident Evil Movie Trailer Makes A Direct Connection To The Games",
+    "angle": "Kotaku reports the trailer for the new Resident Evil movie links directly to the games.",
     "entities": [
-     "Aileen Wuornos",
-     "AI",
-     "docuseries"
+     "Resident Evil",
+     "Zach Cregger"
     ],
     "sourceLinks": [
-     "https://deadline.com/2026/07/serial-killer-aileen-wuornos-ai-true-crime-docuseries-id-1236998740/"
+     "https://kotaku.com/resident-evil-movie-trailer-2-zach-cregger-raccoon-city-2000718759"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "first-look"
+   },
+   "slotLA": "13:59",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Which Viewing Option for ‘The Odyssey’ is Right for You? A Definitive Guide",
+    "angle": "The Washington Post helps audiences choose how to watch The Odyssey at home.",
+    "entities": [
+     "The Odyssey"
+    ],
+    "sourceLinks": [
+     "https://www.washingtonpost.com/style/2026/07/23/which-viewing-option-odyssey-is-right-you-definitive-guide/"
     ],
     "isTopTopic": false,
     "viral": 5,
     "hint": "news"
    },
-   "slotLA": "14:58",
-   "status": "dropped",
-   "reason": "imagehunt: no Tier-A image on whitelisted carriers"
+   "slotLA": "15:49",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Rory Scovel sets new Netflix comedy special 'Show Must Go On'",
-    "angle": "Rory Scovel's upcoming Netflix special focuses on life and comedy.",
+    "title": "Google Fined $1 Billion by EU Over Search, Android Practices",
+    "angle": "The Wrap covers the EU antitrust fine against Google for search and Android practices.",
     "entities": [
-     "Rory Scovel",
-     "Netflix",
-     "special"
+     "Google",
+     "EU",
+     "antitrust"
     ],
     "sourceLinks": [
-     "https://deadline.com/2026/07/rory-scovel-netflix-special-show-must-go-on-premiere-date-1236997707/"
+     "https://www.thewrap.com/industry-news/tech/google-fined-billion-search-android-european-union-digital-markets-act/"
+    ],
+    "isTopTopic": false,
+    "viral": 5,
+    "hint": "news"
+   },
+   "slotLA": "17:40",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "What's New to Streaming this Week? (July 24, 2026)",
+    "angle": "Mashable lists new streaming titles launching the week of July 24.",
+    "entities": [
+     "streaming"
+    ],
+    "sourceLinks": [
+     "https://mashable.com/entertainment/new-to-streaming-july-24-2026"
     ],
     "isTopTopic": false,
     "viral": 4,
-    "hint": "news"
+    "hint": "streaming"
    },
-   "slotLA": "16:32",
-   "status": "dropped",
-   "reason": "imagehunt: no Tier-A image on whitelisted carriers"
+   "slotLA": "19:21",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Lily Allen documentary lands at Prime Video",
-    "angle": "Prime Video acquires Lily Allen documentary.",
+    "title": "‘They’re stuck in the past’: Four writers on the future of movies",
+    "angle": "Washington Post opinion piece features four writers discussing where movies are headed.",
     "entities": [
-     "Lily Allen",
-     "documentary",
-     "Prime Video"
+     "film industry"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/music/global/lily-allen-documentary-prime-video-1236817975/",
-     "https://deadline.com/2026/07/prime-video-lily-allen-documentary-west-end-girl-1237000031/"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
-    "hint": "news"
-   },
-   "slotLA": "18:13",
-   "status": "dropped",
-   "reason": "factgate: The documentary comes after the release of Allen's fifth album, \"West End Girl.\" is contradicted by \"Allen returned last year with the phenomenally successful \"West End Girl.\". The pack states the documentary comes after the release of Allen's fifth album, \"West End Girl.\" but also states Allen returned last year with the phenomenally successful \"West End Girl.\" This implies \"West End Girl\" is an album, not a documentary title."
-  },
-  {
-   "story": {
-    "title": "Paramount-Warner Bros. merger faces ticking fee deadline",
-    "angle": "Theaters brace as a key M&A time bomb ticks toward expiration.",
-    "entities": [
-     "Paramount",
-     "Warner Bros.",
-     "merger"
-    ],
-    "sourceLinks": [
-     "https://www.thewrap.com/industry-news/deals-ma/paramount-warner-bros-merger-ticking-fee-explained/"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
-    "hint": "news"
-   },
-   "slotLA": "19:49",
-   "status": "posted",
-   "key": "paramount-warner-bros-merger-faces-ticking-fee-deadline"
-  },
-  {
-   "story": {
-    "title": "Sundance 2026 to recruit volunteers",
-    "angle": "The festival is opening volunteer applications for the 2026 edition.",
-    "entities": [
-     "Sundance",
-     "volunteers"
-    ],
-    "sourceLinks": [
-     "https://bizwest.com/2026/07/22/sundance-film-festival-to-recruit-volunteers/"
+     "https://www.washingtonpost.com/opinions/2026/07/23/odyssey-backrooms-obsession-four-writers-discuss/"
     ],
     "isTopTopic": false,
     "viral": 3,
     "hint": "news"
    },
-   "slotLA": "21:25",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "21:06",
+   "status": "pending"
   }
  ],
  "bench": [],
- "builtAt": 1784728001785
+ "builtAt": 1784814373429
 }
