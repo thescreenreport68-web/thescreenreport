@@ -1730,10 +1730,10 @@
    "key": "lucky-trending-tv|TRENDING-TV",
    "eventSlug": "lucky-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 58 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 3,
-   "at": "2026-07-20T12:04:28.645Z",
-   "dead": true,
+   "reason": "words 162 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-23T12:39:02.535Z",
+   "dead": false,
    "expiresAt": "2026-07-23T12:04:28.645Z"
   },
   {
@@ -2354,29 +2354,30 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 10,
-   "at": "2026-07-23T11:33:15.798Z",
+   "reason": "words 158 < 180 (owner-set ~200-word minimum)",
+   "tries": 11,
+   "at": "2026-07-23T12:32:38.052Z",
    "dead": true,
-   "expiresAt": "2026-07-26T11:33:15.798Z"
+   "expiresAt": "2026-07-26T12:32:38.052Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 2,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.10802
+  "usd": 0.12899
  },
  "pace": {
-  "tokens": 0.6214886095238096,
-  "lastMs": 1784808079793
+  "tokens": 1.1780032317460318,
+  "lastMs": 1784809868590
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
   "laDay": "2026-07-23",
   "byFilm": {
    "they will kill you": 1,
-   "the mandalorian and grogu": 1,
-   "lee cronin's the mummy": 1
+   "the mandalorian and grogu": 2,
+   "lee cronin's the mummy": 1,
+   "lucky": 1
   }
  }
 }
