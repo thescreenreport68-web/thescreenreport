@@ -96,11 +96,30 @@ reactions:
   - speaker: A viewer
     date: '2026-06-01'
     quote: RT rating prediction 10% percent critics 90% audiences Wasn’t far off
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: That explains the squid game mask in the theater cover
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: >-
+      i wish they showed this scene in the cinema i was really looking forward
+      for this scene
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: >-
+      I feel like I’m in the minority of people who actually liked this movie. I
+      grew up on the Scary Movie franchise so I knew what I was getting.
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: The extended cut is WAAAAYYYY better than the original cut
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: "Scream 5,6 Final destination: bloodline Squid game Smile 2 Megan They all cooked by him\U0001F602"
 fanConsensus: >-
   A powerfully nostalgic but sharply divided reaction, with fans split between
   celebrating the return of a 2000s comedy staple and doubting its ability to
   recapture the original magic.
-updatedCount: 0
+updatedCount: 1
 trendScore: 163
 signals:
   popularity: 374
@@ -115,7 +134,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T22:31:08.152Z'
+dateModified: '2026-07-24T08:58:10.424Z'
 provenance:
   parentEventSlug: scary-movie-2026
   primaryEntity: Scary Movie
@@ -129,6 +148,7 @@ imageAlt: Scary Movie 2026 trailer screenshot Ghostface
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
+updated: '2026-07-24T08:58:10.424Z'
 ---
 
 The first trailer for the new [Scary Movie](/movies/scary-movie-2026-the-internet-is-split-between-nostalgic-cheers-and/) sequel has arrived, and the reaction was instant — and loud. For many, the sight of familiar characters and that signature 2000s slapstick felt like a time machine. But as the initial hype settled, a clear split emerged — some fans are losing it over the return, while others are convinced the magic is gone for good.

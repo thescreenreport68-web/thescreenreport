@@ -99,10 +99,36 @@ reactions:
       (and thankfully, the 4K is getting a standard release as well as a
       Steelbook) I'm disappointed the film didn't earn more, I enjoyed it a lot
       and I think if more people
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: "My big \U0001F9F5 guide of the ships from The Mandalorian and Grogu. Hope this time Bluesky doesn't delete it for no reason."
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: "The Mandalorian and Grogu (2026) I was waiting until I had the movie to make screenshots, but Mel beat me to the punch with an excellent ship thread. \U0001F525"
+  - speaker: A viewer
+    date: '2026-06-23'
+    quote: >-
+      It absolutely did what it needed to do for the franchise, it gave us a
+      visually big action filled story all while telling a smaller character
+      focused story. It’s normalising that a big film doesn’t always have to be
+      a bigger and bigger Death Star.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      The first original The Mandalorian and Grogu not in film or television
+      form is out now. Read about THE MANDALORIAN AND GROGU: DANGER IN THE DARK
+      and every other new Star Wars release this July here:
+      theholofiles.com/2026/07/01/w...
+  - speaker: A viewer
+    date: '2026-07-19'
+    quote: >-
+      This lowkey did feel like a return to the spaghetti western/criminal
+      underworld type stuff that introduced Mando to us and it honestly worked
+      really well
 fanConsensus: >-
   Overwhelmingly positive, with fans celebrating the film's action, heart, and
   practical effects, and many reporting multiple theater viewings.
-updatedCount: 0
+updatedCount: 1
 trendScore: 127
 signals:
   popularity: 227
@@ -117,7 +143,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-22T18:31:22.943Z'
+dateModified: '2026-07-24T08:58:10.424Z'
 provenance:
   parentEventSlug: the-mandalorian-and-grogu-2026
   primaryEntity: The Mandalorian and Grogu
@@ -131,6 +157,7 @@ imageAlt: The Mandalorian and Grogu movie poster Din Djarin
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-24T08:58:10.424Z'
 ---
 
 Social media had thoughts — a lot of them — and the reaction is a nearly unanimous chorus of delight.
