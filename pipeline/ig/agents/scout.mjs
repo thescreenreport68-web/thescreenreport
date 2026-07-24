@@ -8,7 +8,7 @@ import { IG } from "../config.mjs";
 import { llm } from "../models.mjs";
 import { isPosted, isHeld, isBuilt, builtTopics, topicKey, loadWeights } from "../lib/ledger.mjs";
 import { parseFrontmatter, stripMarkdown, normWords, pastDateAsUpcoming } from "../lib/util.mjs";
-import { scorePool, logDiscovery } from "./discovery.mjs";
+import { scorePool, logDiscovery, logSlate } from "./discovery.mjs";
 
 // The reaction / social-media lane is a SEPARATE automation (owner 2026-07-11): the VIDEO lane
 // builds ONLY from genuine NEWS + GOSSIP stories — never a "how fans are reacting online" piece
@@ -141,7 +141,13 @@ export async function scout({ limit = 3, candidates = null, lane = null } = {}) 
   if ((IG.discovery?.mode || "off") !== "off") {
     try {
       engineRanked = await scorePool(pool);
-      const engineBatch = interleaveBatch(engineRanked); // lane balance preserved, ranked within lanes
+      // GLOBAL TOP-BY-IMPORTANCE (owner 2026-07-24: "rank ALL the articles, choose the top 7").
+      // The old lane interleave sent the judge "top 9 news + top 9 gossip" — on a weak day for one
+      // lane its mediocre stories displaced the other lane's strong ones. The batch is now the
+      // GLOBAL top of the ranked pool (qualifiers first, then starPower); the per-category cap
+      // downstream still prevents a monoculture slate. Interleave remains only as the fail-open
+      // recency baseline.
+      const engineBatch = engineRanked.slice(0, 18);
       logDiscovery({
         mode: IG.discovery.mode, poolSize: pool.length,
         engineTop: engineBatch, recencyTop: recencyBatch,
@@ -188,5 +194,9 @@ export async function scout({ limit = 3, candidates = null, lane = null } = {}) 
     out.push(c);
     if (out.length >= limit) break;
   }
+  // RANKING RECORD (owner 2026-07-24): every run commits WHY these stories were chosen — the final
+  // slate in build order with every quantified signal (viral score, starPower, heat, fame,
+  // qualification). data/ig/discovery/<ts>-slate.json; auditable per day, feeds the learner reviews.
+  logSlate(out);
   return out;
 }

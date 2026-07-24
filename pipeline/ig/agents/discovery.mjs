@@ -231,6 +231,23 @@ export async function scorePool(candidates, deps = realDeps) {
   return scored;
 }
 
+// FINAL-SLATE ranking record (owner 2026-07-24): the chosen stories in build order, each with its
+// full quantified case — so any day's "why did THIS become a video" is answerable from one file.
+export function logSlate(slate) {
+  try {
+    if (!slate?.length) return;
+    writeJson(path.join(IG.dataDir, "discovery", `${Date.now()}-slate.json`), {
+      at: new Date().toISOString(),
+      slate: slate.map((c, i) => ({
+        rank: i + 1, slug: c.slug, category: c.category, segment: c.segment || null,
+        viralScore: c.score ?? null, starPower: c.starPower ?? null,
+        heat: c.heat ?? null, fame: c.fame ?? null, qualified: c.qualified || null,
+        signals: c.signals || null,
+      })),
+    });
+  } catch { /* logging must never break a run */ }
+}
+
 // Shadow/grading log — written EVERY run regardless of mode, into the committed data dir.
 export function logDiscovery({ mode, poolSize, engineTop, recencyTop, lookupsCached }) {
   try {
