@@ -1,0 +1,75 @@
+{
+  "id": "news-indiana-jones-sword-of-pandemonium-sdcc",
+  "slug": "indiana-jones-and-the-sword-of-pandemonium-ushers-in-a-bold-new-era-of",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 223w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 222w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "INDIANA JONES AND THE SWORD OF PANDEMONIUM",
+    "work": {
+      "title": "INDIANA JONES AND THE SWORD OF PANDEMONIUM",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "Marvel"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 222,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 31,
+      "avgSentence": 20,
+      "flesch": 53,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 7,
+      "hardBlocks": [
+        "body 222w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 3,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 73315
+}
