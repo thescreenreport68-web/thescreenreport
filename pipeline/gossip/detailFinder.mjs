@@ -16,7 +16,7 @@
 // 🔴 BOTH FAIL SOFT. Any error returns an empty result and the lane writes from what it already had.
 // 🔴 NEITHER INVENTS. Every item is verified to exist in the source text before it is kept; anything
 //    unverifiable is dropped here, so a hallucination can never reach the writer as "material".
-import { agentChat } from "./models.mjs";
+import { agentChat, AGENTS } from "./models.mjs";
 
 const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 const bundleText = (bundle) => (bundle?.sources || []).map((s) => s.text || "").join("\n\n");
@@ -44,11 +44,12 @@ const EMPTY_DETAILS = { facts: [], quotes: [], timeline: [], people: [], numbers
  * Extract every usable detail from the gathered sources. Returns EMPTY_DETAILS on any failure.
  * Nothing that cannot be traced back to the source text survives.
  */
-export async function findDetails({ bundle, topic, chatImpl } = {}) {
+export async function findDetails({ bundle, topic, chatImpl, retried = false } = {}) {
   const src = bundleText(bundle).slice(0, 14000);
   if (src.length < 400) return { ...EMPTY_DETAILS, reason: "not enough source text" };
   try {
     const { data } = await agentChat("detailFinder", {
+      ...(retried && AGENTS.detailFinder?.fallback ? { model: AGENTS.detailFinder.fallback } : {}),
       system: "You extract facts for a newsroom. You NEVER add anything not present in the text. Every item must be traceable to the source. Output strict JSON only.",
       user: `SOURCE TEXT:\n${src}\n\nSUBJECT: ${topic?.primaryEntity || ""}\n\nExtract EVERYTHING a reporter could use, as JSON:
 {
@@ -76,6 +77,13 @@ Be exhaustive — miss nothing. Invent nothing: if a field has no material, use 
     const kept = out.facts.length + out.quotes.length + out.timeline.length + out.numbers.length;
     const raw = (data.facts || []).length + (data.quotes || []).length + (data.timeline || []).length + (data.numbers || []).length;
     if (raw > kept) console.log(`[detail] dropped ${raw - kept} ungrounded item(s) — kept ${kept}`);
+    // 2026-07-25 review: one live bundle held 6,268 chars of source and came back with ZERO facts —
+    // a silent extraction miss, not a thin story, and the writer then had nothing to build 800 words
+    // from. A substantial corpus that yields nothing is a model failure worth one retry.
+    if (!out.facts.length && src.length >= 2500 && !retried) {
+      console.log(`[detail] 0 facts from ${src.length} chars — retrying once on the fallback model`);
+      return findDetails({ bundle, topic, chatImpl, retried: true });
+    }
     return out;
   } catch (e) {
     return { ...EMPTY_DETAILS, reason: `detail finder unavailable: ${String(e?.message || e).slice(0, 50)}` };

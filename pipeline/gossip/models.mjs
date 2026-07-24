@@ -43,6 +43,9 @@ export const AGENTS = {
   // NEW 2026-07-25 — the "sub-finder": pulls EVERY distinct fact/quote/date out of gathered source text so
   // the writer has enough real material for 800 words. Bake-off: qwen3.5-flash extracted 56 usable items
   // vs 47 for gemini-flash-lite, with 7/7 quotes verbatim and zero invented numbers — and costs less.
+  // 2026-07-25 — reads the sources and the article side by side and reports UNSUPPORTED prose. Same
+  // model family that won the extraction bake-off; temperature 0 because this is a judgement, not prose.
+  claimAudit: { model: "qwen/qwen3.5-flash-02-23", fallback: "qwen/qwen3-30b-a3b-instruct-2507", temperature: 0, maxTokens: 1800, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },
   detailFinder: { model: "qwen/qwen3.5-flash-02-23", fallback: "qwen/qwen3-30b-a3b-instruct-2507", temperature: 0, maxTokens: 2600, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },
   // NEW 2026-07-25 — the "how we got here" agent: timeline, prior statements, who these people are.
   background: { model: "qwen/qwen3.5-flash-02-23", fallback: "google/gemini-2.5-flash-lite", temperature: 0.1, maxTokens: 2000, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },

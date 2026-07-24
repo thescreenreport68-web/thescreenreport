@@ -35,6 +35,8 @@ import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
 import { dedupeSentences, ensureTakeaways, ensureFaq, cutFlagged, cutSentencesWith, trimIncomplete, applyCorrections, scrubStructuredFields } from "./polish.mjs";
+import { cutUngroundedClaims, cutInventedObservation, claimFixIssues } from "./claimGuard.mjs";
+import { auditClaims, auditFixIssues } from "./claimAudit.mjs";
 import { GOSSIP_AUTHOR_SLUG, AI_DISCLOSURE, routeBySubject, MONITOR_WINDOW_HOURS } from "./config.gossip.mjs";
 
 // The ABSOLUTE red lines — the ONLY things that block a story (they're illegal + can't be corrected into a
@@ -123,7 +125,10 @@ export async function runGossip(topic, {
   detailImpl = findDetails,
   backgroundImpl = findBackground,
   priorCoverage = [],        // our own past articles on this subject — free, already-verified background
+  claimAudit = false,        // semantic check of UNQUOTED prose against the sources (live-on)
+  auditImpl = auditClaims,
 } = {}) {
+  let claimAuditReport = null;
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
   // REJECTED_THIN candidate no longer costs the corroboration search + extra extractions.
@@ -291,9 +296,13 @@ export async function runGossip(topic, {
   const disc = frame.needsDisclaimer && frame.disclaimerText ? [frame.disclaimerText] : [];
   const scaf = cutScaffolding(article.body, disc);
   const absc = cutAbsenceClaims(scaf.body, disc);
-  article.body = absc.body;
+  // 2026-07-25 review fix: invented public reaction and phantom-outlet attribution are cut here with the
+  // rest. Invented OBSERVATION is deliberately NOT cut yet — it usually lives in the lede, and a repaired
+  // lede beats a deleted one, so it is flagged for the surgical pass below and cut only if it survives.
+  const clm = cutUngroundedClaims(absc.body, bundle, disc);
+  article.body = clm.body;
   if (disc.length && !article.body.includes(disc[0])) article.body = (article.body.trim() + "\n\n" + disc[0]).trim();
-  const guardCuts = [...scaf.cut, ...absc.cut];
+  const guardCuts = [...scaf.cut, ...absc.cut, ...clm.cut];
   article.keyTakeaways = ensureTakeaways(article);
   article.faq = dropAbsenceFaq(article.faq || []).faq;
   article.faq = ensureFaq(article);
@@ -321,6 +330,16 @@ export async function runGossip(topic, {
     if (bareMonth) fixIssues.push(`The body says "${bareMonth}" with no YEAR. A bare month reads as the current year — if the source says it was a previous year, state that year explicitly (e.g. "in February 2025").`);
     const firstSentence = (article.body || "").trim().split(/(?<=[.!?])\s/)[0] || "";
     if (/\?\s*$/.test(firstSentence)) fixIssues.push("The lede opens with a rhetorical question — a banned template. Rewrite the opening to lead with the concrete event (who did what, when).");
+    // UNQUOTED-PROSE FABRICATION (2026-07-25 review). Deterministic shapes first — a described face or
+    // voice we never saw, an outlet we never gathered — then the semantic auditor for the swaps no
+    // pattern can see ("in treatment" published as "in therapy"). Both feed this one surgical pass.
+    fixIssues.push(...claimFixIssues(article.body, bundle));
+    if (claimAudit) {
+      const audit = await auditImpl({ bundle, article });
+      claimAuditReport = audit;
+      if (audit.unsupported?.length) console.log(`[claim-audit] ${audit.unsupported.length} unsupported of ${audit.checked} sentence(s)`);
+      fixIssues.push(...auditFixIssues(audit));
+    }
   }
   if (fixIssues.length) {
     try {
@@ -336,6 +355,7 @@ export async function runGossip(topic, {
         if (vrFix) verifyResult = vrFix;
         fixed.body = trimIncomplete(dedupeSentences(fixed.body));
         fixed.body = cutAbsenceClaims(cutScaffolding(fixed.body, disc).body, disc).body;
+        fixed.body = cutUngroundedClaims(fixed.body, bundle, disc).body;
         if (disc.length && !fixed.body.includes(disc[0])) fixed.body = (fixed.body.trim() + "\n\n" + disc[0]).trim();
         fixed.keyTakeaways = ensureTakeaways(fixed);
         fixed.faq = dropAbsenceFaq(fixed.faq || []).faq;
@@ -343,6 +363,18 @@ export async function runGossip(topic, {
         article = fixed;
       }
     } catch { /* surgical fix is best-effort; the original (guarded) article stands */ }
+  }
+
+  // Last resort: the surgical pass had its chance to rebuild these from real material. Whatever is still
+  // an ungrounded observation gets cut — a shorter honest article beats a vivid invented one, and the
+  // depth pass below will rebuild the length from verified facts.
+  {
+    const obs = cutInventedObservation(article.body, bundle, disc);
+    if (obs.cut.length) {
+      article.body = obs.body;
+      guardCuts.push(...obs.cut);
+      console.log(`[claim-guard] cut ${obs.cut.length} invented observation(s) the surgical pass did not repair`);
+    }
   }
 
   // Stage 6c2 — VOICE PASS (Phase 4, flagged): quote-masked native-register polish; deterministic guards
@@ -416,15 +448,20 @@ export async function runGossip(topic, {
       if (t.length < 15) return false;
       const probe = t.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").slice(0, 40);
       return probe && !body.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").includes(probe);
-    }).slice(0, 18);
+    });
+    // 2026-07-25 review fix: the old code sliced the FIRST 18 every round, so pass 2 re-offered almost
+    // the same list and material past #18 was never shown at all — and the log printed the CAP (always
+    // "18"), which read as "the writer absorbed nothing". Rotate the window instead, and log the truth.
+    const totalUnused = unused.length;
+    const offer = unused.length > 18 ? unused.slice(depthPass * 18 % unused.length).concat(unused).slice(0, 18) : unused;
     const unusedQuotes = ((bundle?.details?.quotes) || [])
       .filter((q) => q?.text && !body.includes(String(q.text).slice(0, 30))).slice(0, 5);
 
-    if (unused.length >= 4 || unusedQuotes.length >= 2) {
+    if (offer.length >= 4 || unusedQuotes.length >= 2) {
       try {
         const issues = [
           `You left verified material unused. This article covers ${(String(article.body || "").match(/^##\s/gm) || []).length} section(s); the material below supports MORE. Work every item in where it belongs and OPEN THE SECTIONS it unlocks ("## How We Got Here" for the timeline and history, "## The Other Side" for denials or the counter-claim, "## The Reaction" for what others said, "## What Happens Next" for anything upcoming). Keep every existing fact and quote exactly as they are. Do NOT pad, speculate, or repeat yourself — expand ONLY by using the listed material:`,
-          ...unused.map((u) => `UNUSED FACT: ${u}`),
+          ...offer.map((u) => `UNUSED FACT: ${u}`),
           ...unusedQuotes.map((q) => `UNUSED QUOTE (${q.speaker || "source"}): "${q.text}"`),
         ];
         const deeper = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues, rewrite: false, brief, anchors });
@@ -436,13 +473,14 @@ export async function runGossip(topic, {
         if (qcD.ok && !rcD.redLine && rcD.legalPass !== false && subD.words > sub.words) {
           deeper.body = trimIncomplete(dedupeSentences(deeper.body));
           deeper.body = cutAbsenceClaims(cutScaffolding(deeper.body, disc).body, disc).body;
+          deeper.body = cutInventedObservation(cutUngroundedClaims(deeper.body, bundle, disc).body, bundle, disc).body;
           if (disc.length && !deeper.body.includes(disc[0])) deeper.body = (deeper.body.trim() + "\n\n" + disc[0]).trim();
           deeper.keyTakeaways = ensureTakeaways(deeper);
           deeper.faq = dropAbsenceFaq(deeper.faq || []).faq;
           deeper.faq = ensureFaq(deeper);
           article = deeper;
           sub = substanceCheck(article, bundle);
-          console.log(`[depth ${depthPass + 1}] worked in ${unused.length} unused fact(s) + ${unusedQuotes.length} quote(s) → ${sub.words}w`);
+          console.log(`[depth ${depthPass + 1}] offered ${offer.length} of ${totalUnused} unused fact(s) + ${unusedQuotes.length} quote(s) → ${sub.words}w`);
         }
       } catch { /* depth pass is best-effort — the original article stands */ }
     }

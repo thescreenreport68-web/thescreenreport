@@ -177,7 +177,7 @@ export async function gossipRun({
             .sort((a, b) => Date.parse(b.date || 0) - Date.parse(a.date || 0)).slice(0, 6);
         }
       } catch { /* archive lookup is best-effort */ }
-      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true, craftFix: true, substance: true, enrich: true, priorCoverage, voice: REVIEW ? true : process.env.GOSSIP_VOICE === "1" });
+      r = await runImpl(t, { verify, judge, ledeStyle, synth: true, headline: true, craftFix: true, substance: true, enrich: true, claimAudit: true, priorCoverage, voice: REVIEW ? true : process.env.GOSSIP_VOICE === "1" });
     } catch (e) {
       report.blocked.push({ id: t.id, category: cat, status: "ERROR", reason: String(e?.message || e).slice(0, 140) });
       continue;
