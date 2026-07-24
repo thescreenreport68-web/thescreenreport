@@ -1,123 +1,34 @@
 {
-  "runId": "run-2026-07-24T21-31-19",
-  "builtAt": "2026-07-24T21:32:44.148Z",
-  "count": 19,
+  "runId": "run-2026-07-24T22-32-26",
+  "builtAt": "2026-07-24T22:34:06.055Z",
+  "count": 28,
   "topics": [
     {
-      "id": "news-john-leguizamo-ice-supporters-the-odyssey",
-      "slug": "john-leguizamo-tells-ice-supporters-don-t-watch-my-movies",
-      "title": "John Leguizamo Tells ICE Supporters Don't Watch My Movies",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "john-leguizamo-ice-supporters-the-odyssey",
-      "primaryKeyword": "John Leguizamo The Odyssey",
-      "primaryEntity": "John Leguizamo",
-      "entities": [
-        "The Odyssey",
-        "The Odyssey (film)"
-      ],
-      "angle": "John Leguizamo leverages the success of 'The Odyssey' to publicly denounce ICE supporters.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/john-leguizamo-tells-ice-supporters-dont-watch-my-movies-1237002904/",
-          "ageMin": 41,
-          "headline": "John Leguizamo Tells ICE Supporters Don t Watch My Movies",
-          "summary": "While The Odyssey approaches $200M domestic after its first week, John Leguizamo is drawing a line for the movie s fandom. The Golden Globe nominee recently called out ICE supporters on social media, telling them don t watch my movies if they advocate for the actions of U.S. Immigration and Customs Enforcement. If you follow ICE, unfollow [ ]"
-        }
-      ],
-      "ageMin": 41,
-      "_cand": {
-        "key": "rss:john-leguizamo-tells-ice-supporters-don-t-watch-my-movies",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 121,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 8,
-        "radar": 26
-      },
-      "demandImpressions": 35,
-      "demandQuery": "the odyssey",
-      "demandPosition": 1,
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-interview-with-the-vampire-renewed-for-season-4-rebranded-queen-of-the",
-      "slug": "interview-with-the-vampire-renewed-for-season-4-titled-queen-of-the-da",
-      "title": "'Interview With the Vampire' Renewed for Season 4, Titled 'Queen of the Damned'",
+      "id": "news-interview-with-the-vampire-renewed-for-season-4",
+      "slug": "interview-with-the-vampire-renewed-for-season-4-with-rebrand-to-queen-",
+      "title": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-renewed-for-season-4-rebranded-queen-of-the",
+      "eventSlug": "interview-with-the-vampire-renewed-for-season-4",
       "primaryKeyword": "interview with the vampire season 4",
       "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Anne Rice's Interview with the Vampire",
-        "AMC",
-        "Queen of the Damned"
+        "Interview with the Vampire (TV series)",
+        "Anne Rice"
       ],
-      "angle": "AMC's 'Interview With the Vampire' is renewed for a fourth season and will rebrand as 'Anne Rice's Queen of the Damned'.",
+      "angle": "AMC's Anne Rice adaptation lands a fourth season ahead of its third season finale.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:Variety",
       "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/queen-of-the-damned-trailer-interview-with-vampire-fourth-season-1237002689/",
-          "ageMin": 75,
-          "headline": "AMC s Anne Rice Interview With The Vampire Series Gets Fourth Season With Queen Of The Damned ; Watch Trailer Comic-Con",
-          "summary": "On Friday during AMC s The Vampire Lestat Hall H session at Comic-Con, it was announced that Anne Rice s Interview with the Vampire anthology is getting a fourth season, titled Anne Rice’s Queen of the Damned. The crowd erupted after the teaser above was dropped. Watch it above. The renewal closely follows Sunday’s finale of Season [ ]"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/tv-shows/queen-of-the-damned-interview-with-the-vampire-season-4-renewed/",
-          "ageMin": 76,
-          "headline": "Interview With the Vampire Renewed for Season 4 With a New Showrunner",
-          "summary": "\"The Vampire Lestat\" producer Hannah Moscovitch takes over for the next installment, which rebrands again to \"Anne Rice's Queen of the Damned\" The post Interview With the Vampire Renewed for Season 4 With a New Showrunner appeared first on TheWrap ."
-        },
         {
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/interview-with-vampire-season-4-queen-of-damned-1236819972/",
-          "ageMin": 76,
+          "ageMin": 137,
           "headline": "Interview With the Vampire Renewed for Season 4, Titled Queen of the Damned",
           "summary": "Anne Rice s Interview With the Vampire has been renewed for Season 4, titled Queen of the Damned. The renewal was announced at San Diego Comic Con and comes ahead of the Season 3 finale on Sunday for The Vampire Lestat. Series executive producers Mark Johnson and Hannah Moscovitch and stars Jacob Anderson, Assad Zaman, Eric [ ]"
         },
@@ -125,27 +36,34 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/interview-with-vampire-renewed-season-4-queen-of-the-damned-1236656159/",
-          "ageMin": 76,
-          "headline": "‘Interview With The Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
+          "ageMin": 137,
+          "headline": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
           "summary": "Hannah Moscovitch, an executive producer on 'The Vampire Lestat,' will take over as showrunner."
+        },
+        {
+          "outlet": "Disney Tourist Blog",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOUzRPU1hOV3ItRlFfVEJGRXNDSmVVdmdqQVh2TWJGMHA3cUZPUlh3a0Zjd2Z2b0pBd0JpVGo0ckV5V202Wl9RYnJDZWNDWlI3WGJWSDNXWVhNZUFHb0lKQkVWZUtxeVpvbTE0MGR2aTVsMHpUTGVxVmFKcHJwd1MxaTZTVkJ5OFJBQW44SWl5djVBbUViTXMtZ2ZaZTg4RWw4R2xtSFFDb19fWVU5?oc=5",
+          "ageMin": 136,
+          "headline": "Six Ravens Restaurant Opening Soon at Disney World: Full Menu with Prices, Hours Details! - Disney Tourist Blog",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOUzRPU1hOV3ItRlFfVEJGRXNDSmVVdmdqQVh2TWJGMHA3cUZPUlh3a0Zjd2Z2b0pBd0JpVGo0ckV5V202Wl9RYnJDZWNDWlI3WGJWSDNXWVhNZUFHb0lKQkVWZUtxeVpvbTE0MGR2aTVsMHpUTGVxVmFKcHJwd1MxaTZTVkJ5OFJBQW44SWl5djVBbUViTXMtZ2ZaZTg4RWw4R2xtSFFDb19fWVU5?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 75,
+      "ageMin": 137,
       "_cand": {
-        "key": "rss:amc-s-anne-rice-interview-with-the-vampire-series-gets-fourt",
+        "key": "rss:interview-with-the-vampire-renewed-for-season-4-titled-queen",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 4,
+      "corroborationCount": 3,
       "verification": {
-        "tier1Count": 4,
-        "tier1Owners": 2,
-        "outletCount": 4,
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 3,
         "outlets": [
-          "Deadline",
-          "TheWrap",
           "Variety",
-          "THR"
+          "THR",
+          "Disney Tourist Blog"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
@@ -154,10 +72,10 @@
         "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 107,
+      "priority": 106,
       "signals": {
         "recency": 16,
-        "corroboration": 25,
+        "corroboration": 24,
         "status": 25,
         "type": 9,
         "pop": 0,
@@ -171,116 +89,79 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-the-rings-of-power-season-3-trailer-simon-pegg-joins-cast",
-      "slug": "the-rings-of-power-season-3-trailer-is-full-of-middle-earth-action-sim",
-      "title": "The Rings of Power Season 3 Trailer Is Full of Middle-earth Action, Simon Pegg Joins Cast",
+      "id": "trailer-the-lord-of-the-rings-the-rings-of-power-season-3-trailer-simon-pegg-c",
+      "slug": "rings-of-power-season-3-trailer-drops-simon-pegg-joins-cast",
+      "title": "‘Rings of Power’ Season 3 Trailer Drops; Simon Pegg Joins Cast",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
-      "sensitivity": "high",
-      "eventSlug": "the-rings-of-power-season-3-trailer-simon-pegg-joins-cast",
-      "primaryKeyword": "the rings of power season 3 trailer",
+      "sensitivity": "normal",
+      "eventSlug": "the-lord-of-the-rings-the-rings-of-power-season-3-trailer-simon-pegg-c",
+      "primaryKeyword": "rings of power season 3 trailer",
       "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
-        "The Lord of the Rings: The Rings of Power",
-        "Prime Video",
+        "The Lord of the Rings: The Rings of Power (TV Series)",
         "Simon Pegg",
-        "Sauron"
+        "Prime Video"
       ],
-      "angle": "The first trailer for 'The Rings of Power' Season 3 has dropped, featuring Middle-earth action and revealing Simon Pegg has joined the cast.",
+      "angle": "The Season 3 trailer for 'The Lord of the Rings: The Rings of Power' has been released, alongside news of Simon Pegg joining the cast.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/rings-of-power-season-3-trailer-premiere-date-1236655955/",
-          "ageMin": 180,
+          "ageMin": 242,
           "headline": "The Rings of Power Season 3 Trailer Is Full of Middle-earth Action, Simon Pegg Joins Cast",
           "summary": "Sauron forges the One Ring and the forces of Middle-earth go to war in this first look at the new season of the Prime Video fantasy hit."
         },
         {
-          "outlet": "101.9fm The MIX - WTMX Chicago",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZEd1eHNCWXBiQVF1WFdWSmFpVWw0Q2p5UnBMNVJxbFBXWXZySFlYalVjSW9QNnBWek5hOFBrMWgwYUNoMFFPV3VaQjFWY2hFU1lWZGQyZlFlX2RGRk80SFNBRlFpZG5yV1ZSMzYtUGlmQmVRTVhGdEpHT1FybFg3VVE0bGdEYmJwQTVvN3hJR3llNHM?oc=5",
-          "ageMin": 91,
-          "headline": "‘The Lord of the Rings: The Rings of Power’ debuts season 3 teaser trailer - 101.9fm The MIX - WTMX Chicago",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNZEd1eHNCWXBiQVF1WFdWSmFpVWw0Q2p5UnBMNVJxbFBXWXZySFlYalVjSW9QNnBWek5hOFBrMWgwYUNoMFFPV3VaQjFWY2hFU1lWZGQyZlFlX2RGRk80SFNBRlFpZG5yV1ZSMzYtUGlmQmVRTVhGdEpHT1FybFg3VVE0bGdEYmJwQTVvN3hJR3llNHM?oc=5\" target=\"_blank\" ‘The Lord of the Rings: The R"
-        },
-        {
-          "outlet": "TheFutonCritic.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxNem1NMXUtdmQzMUg0MG10WncwUlBPdHhHa01iZk9DNEJTWGJ4YklSeEZSaEU2WjhzZ3o1OGpHakp1VUJzSktsbDFJU0FFeVo0bzhNdGJCMVhkalVhQU0zNl9QTjRNRF9GWmRUSS10bVAyeWdUeXk0LXFqU2QyM19BR3I1N1FaT1o0Z0pTNU9tMklvbGJwNDlSQWRBdWprTHdxMGpPeWZ4cXhfdC1HUF9MZmJZU1FrQjI5VFk5Rk9uNkZwYzFCVFJ3VHVBWWVsa0wwUkhRU3ZMQjNhYlQxUk8zY0NyZUY5LW9jb3NWUkt6S1lFZkFINGRXYXR6b2JVdkVVaFEwMGItM1lkcEtBek9VVnpIME4tSWY1VFoxMXRVenF1b1pXRElKc3JENWVRVUh4bm5sM2s5blp5WmpqVE5kSVAxekk4ZnFieXRFdzVZdVJyNzg1Y1c3RmY2WmNlUWp5SUVTU1lna1RlWUhY?oc=5",
-          "ageMin": 130,
-          "headline": "Video: Prime Video's \"The Lord of the Rings: The Rings of Power\" Brings an Epic New Season Three Teaser Trailer, Exciting News and Lots of Surprises to San Diego Comic-Con's Iconic Hall H | TheFutonCritic.com - TheFutonCritic.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7AJBVV95cUxNem1NMXUtdmQzMUg0MG10WncwUlBPdHhHa01iZk9DNEJTWGJ4YklSeEZSaEU2WjhzZ3o1OGpHakp1VUJzSktsbDFJU0FFeVo0bzhNdGJCMVhkalVhQU0zNl9QTjRNRF9GWmRUSS10bVAyeWdUeXk0LXFqU2QyM19BR3I1N1FaT1o0Z0pTNU9tMklvbGJwNDlSQWRBdWprTHdxMGpPeWZ4cXhfdC1HUF9MZmJZU1FrQjI5VFk"
-        },
-        {
-          "outlet": "Deadline",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVZrYnRROVFScTBfNXpRMHczajNsWkFKM29rbnpsLU5NanJmQlBKY2hKRGNFay15aVVlbjhuVlkzeEd1MmR6dDhra3RtUFdqY1hTclBqd2Q3SzFMOWNwOHVRcW1WT25nZjhPc3RkUGU4OEpCdUE2d19VTnBsSnNYN1ZfZFZnanhyWnhBY3Jmbmw?oc=5",
-          "ageMin": 180,
-          "headline": "'The Rings of Power' Season 3 Trailer, Simon Pegg Cast, More: Comic-Con - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVZrYnRROVFScTBfNXpRMHczajNsWkFKM29rbnpsLU5NanJmQlBKY2hKRGNFay15aVVlbjhuVlkzeEd1MmR6dDhra3RtUFdqY1hTclBqd2Q3SzFMOWNwOHVRcW1WT25nZjhPc3RkUGU4OEpCdUE2d19VTnBsSnNYN1ZfZFZnanhyWnhBY3Jmbmw?oc=5\" target=\"_blank\" 'The Rings of Power' Season 3 Tra"
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVBIRWhaa2VweGM4WDJnOHBUTWZNaVJGbUVEQ2lNaElyQlg4X3dHSUQ1U0ZWTlRTMjRQVjBVc0FqemZ2bVNUU01WY0Q3Qm5DMURFQVBLUHdDa0dYb1hDYVY2dnY4NENTTzNCcmZvbnFNdzJQNlNmZTJOeVdTOC1LTDREb0dBcWxoZ3hTckl0Z3g3MXhNTV8xR0NPR3VwSUJUd0IxeA?oc=5",
+          "ageMin": 225,
+          "headline": "‘The Rings of Power’ Season 3 Trailer Is Full of Middle-earth Action, Simon Pegg Joins Cast - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVBIRWhaa2VweGM4WDJnOHBUTWZNaVJGbUVEQ2lNaElyQlg4X3dHSUQ1U0ZWTlRTMjRQVjBVc0FqemZ2bVNUU01WY0Q3Qm5DMURFQVBLUHdDa0dYb1hDYVY2dnY4NENTTzNCcmZvbnFNdzJQNlNmZTJOeVdTOC1LTDREb0dBcWxoZ3hTckl0Z3g3MXhNTV8xR0NPR3VwSUJUd0IxeA?oc=5\" target=\"_blank\" ‘The R"
         },
         {
           "outlet": "Variety",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5",
-          "ageMin": 181,
+          "ageMin": 242,
           "headline": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog - Variety",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5\" target=\"_blank\" ‘Rings of Power’ Deb"
-        },
-        {
-          "outlet": "TheWrap",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5",
-          "ageMin": 181,
-          "headline": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War - TheWrap",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5\" target=\""
-        },
-        {
-          "outlet": "Entertainment Weekly",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5",
-          "ageMin": 181,
-          "headline": "See the first teaser trailer for ‘The Lord of the Rings: The Rings of Power’ season 3 - Entertainment Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5\" target=\"_blank\" See the f"
         }
       ],
-      "ageMin": 180,
+      "ageMin": 225,
       "_cand": {
-        "key": "rss:the-rings-of-power-season-3-trailer-is-full-of-middle-earth-",
+        "key": "rss:-the-rings-of-power-season-3-trailer-is-full-of-middle-earth",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "corroborationCount": 7,
+      "corroborationCount": 3,
       "verification": {
         "tier1Count": 3,
         "tier1Owners": 1,
-        "outletCount": 7,
+        "outletCount": 3,
         "outlets": [
           "THR",
-          "101.9fm The MIX - WTMX Chicago",
-          "TheFutonCritic.com",
-          "Deadline",
-          "Variety",
-          "TheWrap",
-          "Entertainment Weekly"
+          "The Hollywood Reporter",
+          "Variety"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 106,
+      "priority": 98,
       "signals": {
-        "recency": 16,
-        "corroboration": 25,
+        "recency": 9,
+        "corroboration": 24,
         "status": 18,
         "type": 15,
         "pop": 0,
@@ -291,12 +172,174 @@
         "softTv": 0,
         "learned": -1
       },
-      "tierClass": "S"
+      "tierClass": "A"
+    },
+    {
+      "id": "news-crutch-canceled-paramount-plus",
+      "slug": "paramount-cancels-tracy-morgan-comedy-crutch-after-one-season",
+      "title": "Paramount+ Cancels Tracy Morgan Comedy 'Crutch' After One Season",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "cancellation",
+      "sensitivity": "normal",
+      "eventSlug": "crutch-canceled-paramount-plus",
+      "primaryKeyword": "crutch tv show",
+      "primaryEntity": "Crutch (TV series)",
+      "entities": [
+        "Tracy Morgan: Staying Alive",
+        "Paramount+",
+        "Tracy Morgan"
+      ],
+      "angle": "Paramount+ cancels Tracy Morgan comedy 'Crutch' after one season.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/crutch-canceled-paramount-plus-1236809888/",
+          "ageMin": 32,
+          "headline": "Crutch Canceled After One Season at Paramount+",
+          "summary": "The Paramount+ multi-cam comedy Crutch is done after just one season, Variety has learned. The series, which starred Tracy Morgan in the title role, originally debuted on Paramount+ back in November 2025. News of the series ending comes as little surprise, as it failed to find a significant audience upon its debut and considering Morgan s [ ]"
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/tracy-morgan-crutch-canceled-paramount-plus-1237002691/",
+          "ageMin": 32,
+          "headline": "Tracy Morgan Comedy Crutch Is Officially Done At Paramount+ After 1 Season Amid Programming Shift",
+          "summary": "To the surprise of noone, there will be no second season of Paramount+ s multi-camera comedy series Crutch starring Tracy Morgan. This is not new development. The eight-episode first season, which was taped in front of a live audience in fall 2024, was released on the streamer Nov. 3, 2025. The options on the cast expired [ ]"
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:crutch-canceled-after-one-season-at-paramount-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 96,
+      "signals": {
+        "recency": 24,
+        "corroboration": 18,
+        "status": 18,
+        "type": 11,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-the-lord-of-the-rings-the-rings-of-power-season-3-trailer",
+      "slug": "rings-of-power-season-3-trailer-features-5-year-time-jump-sauron-at-wa",
+      "title": "'Rings of Power' Season 3 Trailer Features 5-Year Time Jump, Sauron at War",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "the-lord-of-the-rings-the-rings-of-power-season-3-trailer",
+      "primaryKeyword": "rings of power season 3 trailer",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "entities": [
+        "The Lord of the Rings: The Rings of Power (TV Series)",
+        "Prime Video"
+      ],
+      "angle": "The Season 3 trailer for 'The Lord of the Rings: The Rings of Power' reveals a five-year time jump and shows Sauron at war.",
+      "tmdbType": "movie",
+      "source": "gnews:TheWrap",
+      "sources": [
+        {
+          "outlet": "101.9fm The MIX - WTMX Chicago",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZEd1eHNCWXBiQVF1WFdWSmFpVWw0Q2p5UnBMNVJxbFBXWXZySFlYalVjSW9QNnBWek5hOFBrMWgwYUNoMFFPV3VaQjFWY2hFU1lWZGQyZlFlX2RGRk80SFNBRlFpZG5yV1ZSMzYtUGlmQmVRTVhGdEpHT1FybFg3VVE0bGdEYmJwQTVvN3hJR3llNHM?oc=5",
+          "ageMin": 152,
+          "headline": "‘The Lord of the Rings: The Rings of Power’ debuts season 3 teaser trailer - 101.9fm The MIX - WTMX Chicago",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxNZEd1eHNCWXBiQVF1WFdWSmFpVWw0Q2p5UnBMNVJxbFBXWXZySFlYalVjSW9QNnBWek5hOFBrMWgwYUNoMFFPV3VaQjFWY2hFU1lWZGQyZlFlX2RGRk80SFNBRlFpZG5yV1ZSMzYtUGlmQmVRTVhGdEpHT1FybFg3VVE0bGdEYmJwQTVvN3hJR3llNHM?oc=5\" target=\"_blank\" ‘The Lord of the Rings: The R"
+        },
+        {
+          "outlet": "TheFutonCritic.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi7AJBVV95cUxNem1NMXUtdmQzMUg0MG10WncwUlBPdHhHa01iZk9DNEJTWGJ4YklSeEZSaEU2WjhzZ3o1OGpHakp1VUJzSktsbDFJU0FFeVo0bzhNdGJCMVhkalVhQU0zNl9QTjRNRF9GWmRUSS10bVAyeWdUeXk0LXFqU2QyM19BR3I1N1FaT1o0Z0pTNU9tMklvbGJwNDlSQWRBdWprTHdxMGpPeWZ4cXhfdC1HUF9MZmJZU1FrQjI5VFk5Rk9uNkZwYzFCVFJ3VHVBWWVsa0wwUkhRU3ZMQjNhYlQxUk8zY0NyZUY5LW9jb3NWUkt6S1lFZkFINGRXYXR6b2JVdkVVaFEwMGItM1lkcEtBek9VVnpIME4tSWY1VFoxMXRVenF1b1pXRElKc3JENWVRVUh4bm5sM2s5blp5WmpqVE5kSVAxekk4ZnFieXRFdzVZdVJyNzg1Y1c3RmY2WmNlUWp5SUVTU1lna1RlWUhY?oc=5",
+          "ageMin": 191,
+          "headline": "Video: Prime Video's \"The Lord of the Rings: The Rings of Power\" Brings an Epic New Season Three Teaser Trailer, Exciting News and Lots of Surprises to San Diego Comic-Con's Iconic Hall H | TheFutonCritic.com - TheFutonCritic.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi7AJBVV95cUxNem1NMXUtdmQzMUg0MG10WncwUlBPdHhHa01iZk9DNEJTWGJ4YklSeEZSaEU2WjhzZ3o1OGpHakp1VUJzSktsbDFJU0FFeVo0bzhNdGJCMVhkalVhQU0zNl9QTjRNRF9GWmRUSS10bVAyeWdUeXk0LXFqU2QyM19BR3I1N1FaT1o0Z0pTNU9tMklvbGJwNDlSQWRBdWprTHdxMGpPeWZ4cXhfdC1HUF9MZmJZU1FrQjI5VFk"
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5",
+          "ageMin": 242,
+          "headline": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War - TheWrap",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5\" target=\""
+        }
+      ],
+      "ageMin": 242,
+      "_cand": {
+        "key": "rss:-lord-of-the-rings-the-rings-of-power-season-3-trailer-5-yea",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 3,
+        "outlets": [
+          "101.9fm The MIX - WTMX Chicago",
+          "TheFutonCritic.com",
+          "TheWrap"
+        ],
+        "maxTier": 6,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 96,
+      "signals": {
+        "recency": 9,
+        "corroboration": 22,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "A"
     },
     {
       "id": "trailer-blade-runner-2099-trailer",
-      "slug": "animated-family-action-comedy-the-kung-fu-kid-kicks-off-with-new-trail",
-      "title": "Animated Family Action-Comedy ‘The Kung Fu Kid’ Kicks Off with New Trailer",
+      "slug": "blade-runner-2099-unveils-first-trailer-starring-hunter-schafer",
+      "title": "'Blade Runner 2099' Unveils First Trailer Starring Hunter Schafer",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
@@ -308,9 +351,10 @@
       "primaryEntity": "Blade Runner",
       "entities": [
         "Blade Runner 2099 (TV Series)",
+        "Amazon Prime Video",
         "Hunter Schafer"
       ],
-      "angle": "Amazon's sci-fi sequel series 'Blade Runner 2099' has released its first trailer, starring Hunter Schafer.",
+      "angle": "The first trailer has been unveiled for Amazon's 'Blade Runner 2099' series, starring Hunter Schafer.",
       "tmdbType": "movie",
       "source": "gnews:The Hollywood Reporter",
       "sources": [
@@ -318,7 +362,7 @@
           "outlet": "The Hollywood Reporter",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQXzZPdE1OLUdjZmxGU2tOMk92QUtXY1lWVEZYb3VaOTVISWN0cnlkUHVCazhNWUpaRlZHRU5WWEd4b29vbEVMTGZmaHZuVXBxbU1kYlBKbG9kcHdGS19oY29YS1M4ZERRTXZ3N2ZqUWNlbVZla29uclM1ejNSenJGUGZBSF9YQW9jelE?oc=5",
-          "ageMin": 223,
+          "ageMin": 284,
           "headline": "‘Blade Runner 2099’ Unveils First Trailer for Amazon’s Sci-Fi Sequel Starring Hunter Schafer - The Hollywood Reporter",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQXzZPdE1OLUdjZmxGU2tOMk92QUtXY1lWVEZYb3VaOTVISWN0cnlkUHVCazhNWUpaRlZHRU5WWEd4b29vbEVMTGZmaHZuVXBxbU1kYlBKbG9kcHdGS19oY29YS1M4ZERRTXZ3N2ZqUWNlbVZla29uclM1ejNSenJGUGZBSF9YQW9jelE?oc=5\" target=\"_blank\" ‘Blade Runner 2099’ Unveils First Trailer"
         },
@@ -326,12 +370,12 @@
           "outlet": "Animation Magazine",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQRzE5YUlOUmJsRmpLalJDTVBmQTVsTzNEeDBNOGdJM3NGdWlFUGdCazIzaXNFakhYXzdQNnBDUG8zeGpLS01RTVZJZmlNRTRZSzEya2NMcnFHY1BFTXF2TjRTbkZBUlVzUjlUVVZ0algwRlVxUkUybmFlX3RLQ0hGUWYybkZWN1JhalJsOTdyQWFwMkNaM010N0RSbXdjVHZkNnlVZGdlWkQ4OGI0QXZ1blZLbjg3Zw?oc=5",
-          "ageMin": 239,
+          "ageMin": 300,
           "headline": "Animated Family Action-Comedy ‘The Kung Fu Kid’ Kicks Off with New Trailer - Animation Magazine",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxQRzE5YUlOUmJsRmpLalJDTVBmQTVsTzNEeDBNOGdJM3NGdWlFUGdCazIzaXNFakhYXzdQNnBDUG8zeGpLS01RTVZJZmlNRTRZSzEya2NMcnFHY1BFTXF2TjRTbkZBUlVzUjlUVVZ0algwRlVxUkUybmFlX3RLQ0hGUWYybkZWN1JhalJsOTdyQWFwMkNaM010N0RSbXdjVHZkNnlVZGdlWkQ4OGI0QXZ1blZLbjg3Zw?oc=5"
         }
       ],
-      "ageMin": 223,
+      "ageMin": 284,
       "_cand": {
         "key": "rss:-blade-runner-2099-unveils-first-trailer-for-amazon-s-sci-fi",
         "popularity": 0,
@@ -370,159 +414,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-hbo-max-emmy-nominations-lead",
-      "slug": "hbo-max-leads-the-emmy-drama-and-comedy-races-for-the-first-time-since",
-      "title": "HBO Max Leads the Emmy Drama and Comedy Races for the First Time Since 2017",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "hbo-max-emmy-nominations-lead",
-      "primaryKeyword": "HBO Max Emmy nominations",
-      "primaryEntity": "HBO Max",
-      "entities": [
-        "The Daytime Emmy Awards",
-        "Emmy Awards"
-      ],
-      "angle": "HBO Max leads Emmy nominations for drama and comedy, aiming for a strong showing.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/hbo-max-the-pitt-hacks-emmys-history-1236820629/",
-          "ageMin": 1,
-          "headline": "HBO Max Leads the Emmy Drama and Comedy Races for the First Time Since 2017. How Often Do Both Frontrunners Win?",
-          "summary": "HBO Max wants it all. The most-nominated network enters Phase 2 of the Emmy race with the year s two most-nominated series, giving the platform a rare opportunity to capture television s top drama and comedy prizes, and potentially make history across three major program categories. The Pitt, the sophomore season of the breakout medical drama, leads [ ]"
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:hbo-max-leads-the-emmy-drama-and-comedy-races-for-the-first-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 91,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "awards-just-for-laughs-awards-gabriel-iglesias",
-      "slug": "gabriel-fluffy-iglesias-says-comedy-is-about-making-people-smile-makin",
-      "title": "Gabriel “Fluffy” Iglesias Says Comedy Is About Making People Smile, Making People Laugh",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "just-for-laughs-awards-gabriel-iglesias",
-      "primaryKeyword": "Just For Laughs awards",
-      "primaryEntity": "Gabriel Iglesias: I'm Sorry for What I Said When I Was Hungry",
-      "entities": [
-        "Gabriel Iglesias",
-        "Just For Laughs"
-      ],
-      "angle": "Gabriel 'Fluffy' Iglesias honored at the Just For Laughs comedy festival awards.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/gabriel-fluffy-iglesias-comedy-1236656272/",
-          "ageMin": 6,
-          "headline": "Gabriel “Fluffy” Iglesias Says Comedy Is About Making People Smile, Making People Laugh",
-          "summary": "Comedians Lisa Gilroy, Chris Fleming and Atsuko Okasuka were also feted at the Just For Laughs comedy festival's awards show on Friday in Montreal."
-        }
-      ],
-      "ageMin": 6,
-      "_cand": {
-        "key": "rss:gabriel-fluffy-iglesias-says-comedy-is-about-making-people-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-cape-janet-yang-short-film-grants",
-      "slug": "cape-and-janet-yang-productions-launch-short-film-challenge-with-auli-",
-      "title": "CAPE and Janet Yang Productions Launch Short Film Challenge with Auli‘i Cravalho on Jury",
+      "id": "news-coalition-of-asian-pacifics-in-entertainment-janet-yang-productions-sh",
+      "slug": "cape-and-janet-yang-productions-unveil-short-film-challenge-grants-wit",
+      "title": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants With Auli'i Cravalho and Anora Producer on Jury",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "cape-janet-yang-short-film-grants",
-      "primaryKeyword": "short film grants",
-      "primaryEntity": "Coalition of Asian Pacifics in Entertainment",
+      "eventSlug": "coalition-of-asian-pacifics-in-entertainment-janet-yang-productions-sh",
+      "primaryKeyword": "short film challenge grants",
+      "primaryEntity": "Julia S. Gouw Short Film Challenge",
       "entities": [
         "Auliʻi Cravalho",
-        "Janet Yang Productions",
-        "Auli‘i Cravalho",
-        "Anora"
+        "Auli'i Cravalho",
+        "Janet Yang Productions"
       ],
-      "angle": "The Coalition of Asian Pacifics in Entertainment and Janet Yang Productions have launched a short film challenge, awarding grants to four filmmakers with a jury including Auli‘i Cravalho and the producer of 'Anora.'",
+      "angle": "Asian Pacifics in Entertainment and Janet Yang Productions award grants to filmmakers.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -530,12 +439,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/cape-janet-yang-productions-filmmaker-grants-short-film-challenge-1236819620/",
-          "ageMin": 76,
+          "ageMin": 137,
           "headline": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants With Auli‘i Cravalho and Anora Producer on Jury (EXCLUSIVE)",
           "summary": "The Coalition of Asian Pacifics in Entertainment and Janet Yang Productions have granted four filmmakers $25,000 to produce their films as part of the Julia S. Gouw Short Film Challenge. The filmmakers include Keshni Kashyap Nilsson ( The Shoe Burglars ), Nayon Cho ( Stigma ), Patricia Lee ( Wasted Resources ) and Tiffany Lin ( Hunger ). The Short Film Challenge s jury [ ]"
         }
       ],
-      "ageMin": 76,
+      "ageMin": 137,
       "_cand": {
         "key": "rss:cape-and-janet-yang-productions-unveil-short-film-challenge-",
         "popularity": 0,
@@ -572,23 +481,232 @@
       "tierClass": "B"
     },
     {
-      "id": "news-onslaught-the-guest-universe-connection",
-      "slug": "director-confirms-onslaught-shares-universe-with-the-guest-new-posters",
-      "title": "Director Confirms 'Onslaught' Shares Universe With 'The Guest,' New Posters Revealed",
+      "id": "news-backyard-baseball-animated-tv-series-tiffany-haddish",
+      "slug": "backyard-baseball-to-be-adapted-as-an-animated-tv-series-starring-tiff",
+      "title": "Backyard Baseball to Be Adapted as an Animated TV Series Starring Tiffany Haddish",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "backyard-baseball-animated-tv-series-tiffany-haddish",
+      "primaryKeyword": "Backyard Baseball animated series",
+      "primaryEntity": "Backyard Baseball",
+      "entities": [
+        "Tiffany Haddish",
+        "Arturo Castro"
+      ],
+      "angle": "The classic video game 'Backyard Baseball' is being adapted into an animated TV series starring Tiffany Haddish.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/backyard-baseball-cartoon-news-who-is-pablo-sanchez-1236655323/",
+          "ageMin": 32,
+          "headline": "Backyard Baseball to Be Adapted as an Animated TV Series Starring Tiffany Haddish",
+          "summary": "Arturo Castro, the AT T guy, will voice Pablo Sanchez."
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:backyard-baseball-to-be-adapted-as-an-animated-tv-series-sta",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 2,
+        "learned": -1
+      },
+      "demandImpressions": 1,
+      "demandQuery": "tom hanks new baseball movie",
+      "demandPosition": 43,
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-cypress-hill-first-all-spanish-album-dios-bendiga",
+      "slug": "cypress-hill-embrace-latin-roots-on-first-all-spanish-album-dios-bendi",
+      "title": "Cypress Hill Embrace Latin Roots on First All-Spanish Album Dios Bendiga : It’s a Prayer for the Culture",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "cypress-hill-first-all-spanish-album-dios-bendiga",
+      "primaryKeyword": "Cypress Hill Spanish album",
+      "primaryEntity": "Cypress Hill",
+      "entities": [
+        "Montevideo, God Bless You!",
+        "Dios Bendiga",
+        "Trueno",
+        "Alemán"
+      ],
+      "angle": "Legendary hip-hop group Cypress Hill is releasing their first all-Spanish album, 'Dios Bendiga', embracing their Latin roots.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/latin/cypress-hill-dios-bendiga-latin-rap-spanish-album-interview-1236302580/",
+          "ageMin": 35,
+          "headline": "Cypress Hill Embrace Latin Roots on First All-Spanish Album Dios Bendiga : It’s a Prayer for the Culture",
+          "summary": "The legendary hip-hop group talk about making the LP, feat. Trueno, Alemán and more, and why now was the right time to do it."
+        }
+      ],
+      "ageMin": 35,
+      "_cand": {
+        "key": "rss:cypress-hill-embrace-latin-roots-on-first-all-spanish-album-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-genesis-house-gotham-shorts-fellowship-winners",
+      "slug": "genesis-house-and-gotham-shorts-fellowship-unveils-inaugural-winners-f",
+      "title": "Genesis House and Gotham Shorts Fellowship Unveils Inaugural Winners, Featuring Dìdi and All Dirt Roads Taste of Salt Directors as Mentors",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "onslaught-the-guest-universe-connection",
-      "primaryKeyword": "onslaught movie",
+      "eventSlug": "genesis-house-gotham-shorts-fellowship-winners",
+      "primaryKeyword": "genesis house gotham shorts fellowship",
+      "primaryEntity": "Genesis House and Gotham Shorts Fellowship",
+      "entities": [
+        "Dìdi (弟弟)",
+        "The Gotham Film Media Institute",
+        "Shanice",
+        "Dìdi"
+      ],
+      "angle": "The inaugural Genesis House and Gotham Shorts Fellowship has announced its winners, with notable directors serving as mentors.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/genesis-house-gotham-shorts-fellowship-winners-1236820432/",
+          "ageMin": 302,
+          "headline": "Genesis House and Gotham Shorts Fellowship Unveils Inaugural Winners, Featuring Dìdi and All Dirt Roads Taste of Salt Directors as Mentors (EXCLUSIVE)",
+          "summary": "As part of Genesis House and The Gotham Film Media Institute s inaugural shorts fellowship program, three emerging New York City-based filmmakers have been chosen to receive $10,000, including Shanice Brette ( Mumma ), Annie Ning ( The Only Man to Ever Exist ) and April Wen ( A Natural History ). In addition to the stipend going toward finishing funds for [ ]"
+        }
+      ],
+      "ageMin": 302,
+      "_cand": {
+        "key": "rss:genesis-house-and-gotham-shorts-fellowship-unveils-inaugural",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-onslaught-the-guest-universe-connection-new-posters",
+      "slug": "onslaught-director-confirms-movie-is-set-in-the-same-universe-as-the-g",
+      "title": "Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Released",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "onslaught-the-guest-universe-connection-new-posters",
+      "primaryKeyword": "Onslaught movie",
       "primaryEntity": "Onslaught (film)",
       "entities": [
         "The Guest",
         "The Guest (film)"
       ],
-      "angle": "Director confirms 'Onslaught' shares a universe with 'The Guest', with new posters released.",
+      "angle": "Director confirms 'Onslaught' is set in the same universe as 'The Guest', with new posters released.",
       "tmdbType": "movie",
       "source": "gnews:IMDb",
       "sources": [
@@ -596,12 +714,12 @@
           "outlet": "IMDb",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zZUg0U0xBQUVTN3hfcFYzWGVDVmVxVFRnX1hEclI5R21MOWs4T0JhNUpObko0TU50a1pUbkR2dWhYRi1GMVhKcmdmSF84djlXRlo5M19mNWU4M0xFVjhteQ?oc=5",
-          "ageMin": 119,
+          "ageMin": 181,
           "headline": "Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Released - IMDb",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE8zZUg0U0xBQUVTN3hfcFYzWGVDVmVxVFRnX1hEclI5R21MOWs4T0JhNUpObko0TU50a1pUbkR2dWhYRi1GMVhKcmdmSF84djlXRlo5M19mNWU4M0xFVjhteQ?oc=5\" target=\"_blank\" Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Released"
         }
       ],
-      "ageMin": 119,
+      "ageMin": 181,
       "_cand": {
         "key": "rss:onslaught-director-confirms-movie-is-set-in-the-same-univers",
         "popularity": 0,
@@ -622,9 +740,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 75,
+      "priority": 68,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 8,
         "status": 18,
         "type": 9,
@@ -638,41 +756,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-broadway-coachella-festival",
-      "slug": "new-festival-aims-to-be-coachella-for-broadway",
-      "title": "New Festival Aims to Be 'Coachella for Broadway'",
+      "id": "news-interview-with-the-vampire-season-4-announced",
+      "slug": "amc-renews-interview-with-the-vampire-for-season-4",
+      "title": "AMC Renews 'Interview With the Vampire' for Season 4",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "broadway-coachella-festival",
-      "primaryKeyword": "Broadway festival",
-      "primaryEntity": "The Festival",
+      "eventType": "renewal",
+      "sensitivity": "high",
+      "eventSlug": "interview-with-the-vampire-season-4-announced",
+      "primaryKeyword": "interview with the vampire season 4",
+      "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Lizze Broadway",
-        "Broadway",
-        "Coachella"
+        "Interview with the Vampire (TV series)",
+        "AMC"
       ],
-      "angle": "A new festival, dubbed 'The Festival,' aims to replicate the Coachella experience for Broadway enthusiasts, featuring Tony winners and cast reunions.",
+      "angle": "AMC announces a fourth season for its hit series 'Interview With the Vampire'.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Deadline",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.billboard.com/music/pop/the-festival-coachella-for-broadway-feature-1236302505/",
-          "ageMin": 93,
-          "headline": "‘Wouldn’t It Be Fun If There Were a Coachella for Broadway?’ Now There Is",
-          "summary": "With Tony-winning headliners, campfire singalongs, an original Rent cast reunion and a destination venue, The Festival will bring Broadway crowds way north of Times Square this summer."
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5",
+          "ageMin": 137,
+          "headline": "'Queen of the Damned' Is 4th Season of AMC's 'Interview With the Vampire' - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5\" target=\"_blank\" '"
         }
       ],
-      "ageMin": 93,
+      "ageMin": 137,
       "_cand": {
-        "key": "rss:-wouldn-t-it-be-fun-if-there-were-a-coachella-for-broadway-n",
+        "key": "rss:-queen-of-the-damned-is-4th-season-of-amc-s-interview-with-t",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -680,11 +797,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "sensitivity": "high",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -703,10 +820,10 @@
         "softTv": 0,
         "learned": -1
       },
-      "tierClass": "B"
+      "tierClass": "S"
     },
     {
-      "id": "trailer-blade-runner-2099-teaser-michelle-yeoh-cyberpunk",
+      "id": "trailer-blade-runner-2099-teaser",
       "slug": "blade-runner-2099-teaser-michelle-yeoh-goes-cyberpunk-in-new-tv-spinof",
       "title": "Blade Runner 2099 Teaser: Michelle Yeoh Goes Cyberpunk in New TV Spinoff",
       "contentType": "trailer",
@@ -715,16 +832,15 @@
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "blade-runner-2099-teaser-michelle-yeoh-cyberpunk",
-      "primaryKeyword": "blade runner 2099 trailer",
+      "eventSlug": "blade-runner-2099-teaser",
+      "primaryKeyword": "blade runner 2099 teaser",
       "primaryEntity": "Blade Runner",
       "entities": [
         "Blade Runner 2099",
-        "Amazon Prime Video",
         "Michelle Yeoh",
-        "Hunter Schafer"
+        "Amazon Prime Video"
       ],
-      "angle": "The first teaser trailer for Amazon Prime Video's 'Blade Runner 2099' spinoff, starring Michelle Yeoh, has premiered.",
+      "angle": "Michelle Yeoh stars in the first teaser for the upcoming Amazon Prime Video series.",
       "tmdbType": "movie",
       "source": "rss:IndieWire",
       "sources": [
@@ -732,12 +848,12 @@
           "outlet": "IndieWire",
           "tier": 7,
           "url": "https://www.indiewire.com/news/trailers/blade-runner-2099-teaser-michelle-yeoh-1235206668/",
-          "ageMin": 209,
+          "ageMin": 271,
           "headline": "Blade Runner 2099 Teaser: Michelle Yeoh Goes Cyberpunk in New TV Spinoff",
           "summary": "The trailer for the highly anticipated Amazon Prime show premiered at San Diego Comic-Con on Friday."
         }
       ],
-      "ageMin": 209,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:blade-runner-2099-teaser-michelle-yeoh-goes-cyberpunk-in-new",
         "popularity": 0,
@@ -775,366 +891,24 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-bad-bunny-dtmf-world-tour-wrap",
-      "slug": "bad-bunny-wraps-record-breaking-467-million-world-tour",
-      "title": "Bad Bunny Wraps Record-Breaking $467 Million World Tour",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "bad-bunny-dtmf-world-tour-wrap",
-      "primaryKeyword": "bad bunny tour",
-      "primaryEntity": "Bad Bunny",
-      "entities": [
-        "DTMF World Tour"
-      ],
-      "angle": "Bad Bunny has concluded his record-breaking DTMF World Tour, which grossed $467 million and spanned five continents.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/lists/bad-bunny-record-breaking-world-tour/",
-          "ageMin": 62,
-          "headline": "Bad Bunny Wraps Record-Breaking $467 Million World Tour: By the Numbers",
-          "summary": "The DTMF World Tour drew to a close after shows on five continents."
-        }
-      ],
-      "ageMin": 62,
-      "_cand": {
-        "key": "rss:bad-bunny-wraps-record-breaking-467-million-world-tour-by-th",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "breakoutVelocity": 0,
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-will-ferrell-talladega-nights-impact",
-      "slug": "will-ferrell-on-talladega-nights-broad-appeal",
-      "title": "Will Ferrell on 'Talladega Nights' Broad Appeal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "will-ferrell-talladega-nights-impact",
-      "primaryKeyword": "Will Ferrell Talladega Nights",
-      "primaryEntity": "Will Ferrell: You're Welcome America - A Final Night with George W. Bush",
-      "entities": [
-        "Will Ferrell",
-        "Talladega Nights"
-      ],
-      "angle": "Will Ferrell reflects on the widespread appeal of the comedy 'Talladega Nights,' noting its success in connecting with both Midwestern and coastal audiences.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/culture-lifestyle/culture/will-ferrell-talladega-nights-satisfied-everyone-the-hawk/",
-          "ageMin": 90,
-          "headline": "Will Ferrell Marvels at How Talladega Nights Managed to Satisfy Both the Midwest and the Coasts",
-          "summary": "\"It was so fun to kind of split the difference,\" the \"Hawk\" star says while dishing on that iconic dinner table scene The post Will Ferrell Marvels at How Talladega Nights Managed to Satisfy Both the Midwest and the Coasts appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 90,
-      "_cand": {
-        "key": "rss:will-ferrell-marvels-at-how-talladega-nights-managed-to-sati",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 73,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 6,
-        "striking": 4
-      },
-      "demandImpressions": 7,
-      "demandQuery": "i will find you logan browning",
-      "demandPosition": 11.2,
-      "strikingSlug": "logan-browning-talks-i-will-find-you-action-and-sam-worthington-s-gun-tutor",
-      "strikingPosition": 9,
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-vampire-lestat-tv-series-renewal",
-      "slug": "the-vampire-lestat-renewed-with-major-change-akasha-arrives-in-new-tea",
-      "title": "‘The Vampire Lestat’ Renewed With Major Change: Akasha Arrives in New Teaser",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "the-vampire-lestat-tv-series-renewal",
-      "primaryKeyword": "the vampire lestat renewal",
-      "primaryEntity": "The Vampire Lestat",
-      "entities": [
-        "The Vampire Lestat (TV series)",
-        "Akasha"
-      ],
-      "angle": "The Anne Rice universe series 'The Vampire Lestat' has been renewed for a second season, with a teaser hinting at the arrival of Akasha.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd0VNWUZ6RzEycjNQVTdPZG5HS0s1UXZUYjROQndodDZxV0cyNW0yemRrckZYUnRhcHBvd0puY29Bbzltb0dxYzZZM3hzTUNscEtJU2l3NU8tSWs0NXdFMjdWMHF5U005TEpFamFDOHBBYlNvMGh4UG1hTWpsRmFyTW5HZTVubFRRSTZVX1VTanBWQnFpOEV0cUhoX2Q1bGhfUFdVdFRoTmE?oc=5",
-          "ageMin": 68,
-          "headline": "‘The Odyssey’ Holding Strong for Big Second Weekend in $84.5M Range - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxNd0VNWUZ6RzEycjNQVTdPZG5HS0s1UXZUYjROQndodDZxV0cyNW0yemRrckZYUnRhcHBvd0puY29Bbzltb0dxYzZZM3hzTUNscEtJU2l3NU8tSWs0NXdFMjdWMHF5U005TEpFamFDOHBBYlNvMGh4UG1hTWpsRmFyTW5HZTVubFRRSTZVX1VTanBWQnFpOEV0cUhoX2Q1bGhfUFdVdFRoTmE?oc=5\" target=\"_blank\" ‘"
-        }
-      ],
-      "ageMin": 68,
-      "_cand": {
-        "key": "rss:-the-odyssey-holding-strong-for-big-second-weekend-in-84-5m-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 72,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-blade-runner-2099-trailer-hunter-schafer",
-      "slug": "blade-runner-2099-unveils-first-trailer-for-amazon-s-sci-fi-sequel-sta",
-      "title": "Blade Runner 2099 Unveils First Trailer for Amazon’s Sci-Fi Sequel Starring Hunter Schafer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "blade-runner-2099-trailer-hunter-schafer",
-      "primaryKeyword": "blade runner 2099 trailer",
-      "primaryEntity": "Blade Runner",
-      "entities": [
-        "Blade Runner 2099",
-        "Prime Video",
-        "Hunter Schafer",
-        "Ridley Scott"
-      ],
-      "angle": "Prime Video has unveiled the first trailer for its live-action 'Blade Runner 2099' sequel series, starring Hunter Schafer.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/blade-runner-2099-trailer-1236655934/",
-          "ageMin": 224,
-          "headline": "Blade Runner 2099 Unveils First Trailer for Amazon’s Sci-Fi Sequel Starring Hunter Schafer",
-          "summary": "First look at Prime Video's live-action sequel to Ridley Scott's future-shock classics."
-        }
-      ],
-      "ageMin": 224,
-      "_cand": {
-        "key": "rss:blade-runner-2099-unveils-first-trailer-for-amazon-s-sci-fi-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-zach-top-new-song-good-girls-cowgirls",
-      "slug": "zach-top-says-country-music-became-too-perfect-some-of-the-soul-got-le",
-      "title": "Zach Top Says Country Music Became Too Perfect: Some of the Soul Got Left Behind",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "zach-top-new-song-good-girls-cowgirls",
-      "primaryKeyword": "Zach Top",
-      "primaryEntity": "Zach Top",
-      "entities": [
-        "Good Girls Cowgirls"
-      ],
-      "angle": "Rising country artist Zach Top discusses the evolution of country music and announces his new song 'Good Girls Cowgirls'.",
-      "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
-      "sources": [
-        {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-features/zach-top-good-girls-and-cowgirls-interview-1235598583/",
-          "ageMin": 161,
-          "headline": "Zach Top Says Country Music Became Too Perfect: Some of the Soul Got Left Behind",
-          "summary": "The rising star, whose career is rooted in bluegrass, will release the new song \"Good Girls Cowgirls\" in August"
-        }
-      ],
-      "ageMin": 161,
-      "_cand": {
-        "key": "rss:zach-top-says-country-music-became-too-perfect-some-of-the-s",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Rolling Stone"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Rolling Stone",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-lucas-museum-comic-con-programming",
-      "slug": "lucas-museum-reveals-film-programming-including-star-wars-series-at-co",
-      "title": "Lucas Museum Reveals Film Programming, Including Star Wars Series at Comic-Con",
+      "id": "news-lucas-museum-comic-con-star-wars-animation-screening",
+      "slug": "lucas-museum-at-comic-con-star-wars-animated-series-detours-to-finally",
+      "title": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "lucas-museum-comic-con-programming",
-      "primaryKeyword": "lucas museum",
+      "eventSlug": "lucas-museum-comic-con-star-wars-animation-screening",
+      "primaryKeyword": "Lucas Museum Comic-Con",
       "primaryEntity": "Lucas Museum",
       "entities": [
+        "Comic-Con Episode IV: A Fan's Hope",
+        "Comic-Con",
         "Star Wars"
       ],
-      "angle": "The Lucas Museum announces its film programming, including a screening of a Star Wars animated series at Comic-Con.",
+      "angle": "The Lucas Museum announces its programming at Comic-Con, including a Star Wars animated series screening.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1142,12 +916,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/lucas-museum-comic-con-star-wars-animated-series-detours-1236655674/",
-          "ageMin": 356,
+          "ageMin": 417,
           "headline": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
           "summary": "\"We’ve lived long enough to see all the stuff that we were beaten for loving become the fine art of our day,\" said show creator Seth Green."
         }
       ],
-      "ageMin": 356,
+      "ageMin": 417,
       "_cand": {
         "key": "rss:lucas-museum-at-comic-con-star-wars-animated-series-detours-",
         "popularity": 0,
@@ -1168,9 +942,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 72,
+      "priority": 67,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -1184,38 +958,106 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-johnny-marr-ophelia-video-release",
-      "slug": "johnny-marr-debuts-new-and-single-video-ophelia",
-      "title": "Johnny Marr debuts new and single video \"Ophelia\"",
+      "id": "music-news-bad-bunny-dtmf-world-tour-wrap-up",
+      "slug": "bad-bunny-wraps-record-breaking-467-million-world-tour-by-the-numbers",
+      "title": "Bad Bunny Wraps Record-Breaking $467 Million World Tour: By the Numbers",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "johnny-marr-ophelia-video-release",
-      "primaryKeyword": "Johnny Marr Ophelia video",
-      "primaryEntity": "Johnny Marr",
+      "eventSlug": "bad-bunny-dtmf-world-tour-wrap-up",
+      "primaryKeyword": "bad bunny tour",
+      "primaryEntity": "Bad Bunny",
       "entities": [
-        "Ophelia"
+        "DTMF World Tour"
       ],
-      "angle": "Johnny Marr has released a new music video for his single.",
+      "angle": "Bad Bunny's record-breaking 'DTMF World Tour' concludes, grossing $467 million.",
       "tmdbType": "movie",
-      "source": "gnews:Northern Transmissions",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Northern Transmissions",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNb00xSFNnb0ZTb2gyMW5ZZUlYd3VrWnI0U01pTlRTLWhSYW5ZWGJwU2JsazhDQVk0OThzVkRONFRKZTNaSlpobkhDazN4d1BCbUgtTmc4STgxZVMzLVFnWTdwOEN3RVljYmVGZzhiamU1WTFIeFJCeXpaRl9DYTUzZlh1ZEZnZ0RqM3c?oc=5",
-          "ageMin": 334,
-          "headline": "Johnny Marr debuts new and single video \"Ophelia\" - Northern Transmissions",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNb00xSFNnb0ZTb2gyMW5ZZUlYd3VrWnI0U01pTlRTLWhSYW5ZWGJwU2JsazhDQVk0OThzVkRONFRKZTNaSlpobkhDazN4d1BCbUgtTmc4STgxZVMzLVFnWTdwOEN3RVljYmVGZzhiamU1WTFIeFJCeXpaRl9DYTUzZlh1ZEZnZ0RqM3c?oc=5\" target=\"_blank\" Johnny Marr debuts new and single video \""
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/my-little-pony-forever-friendship-premiere-date-youtube/",
+          "ageMin": 122,
+          "headline": "New My Little Pony Series Forever Friendship Will Premiere on YouTube in 2027",
+          "summary": "The show follows Twilight Sparkle, Pinkie Pie, Rainbow Dash and Fluttershy and builds on the legacy of \"My Little Pony: Friendship Is Magic\" The post New My Little Pony Series Forever Friendship Will Premiere on YouTube in 2027 appeared first on TheWrap ."
         }
       ],
-      "ageMin": 334,
+      "ageMin": 122,
       "_cand": {
-        "key": "rss:johnny-marr-debuts-new-and-single-video-ophelia-northern-tra",
+        "key": "rss:new-my-little-pony-series-forever-friendship-will-premiere-o",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-lanterns-villain-reveal",
+      "slug": "hbo-s-lanterns-reveals-its-true-alien-threat-with-major-villain-reveal",
+      "title": "HBO's Lanterns Reveals Its True Alien Threat With Major Villain Reveals",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "lanterns-villain-reveal",
+      "primaryKeyword": "lanterns hbo villain",
+      "primaryEntity": "Lanterns (TV series)",
+      "entities": [
+        "LEGO DC Comics Super Heroes: Justice League - Attack of the Legion of Doom!",
+        "DC Comics"
+      ],
+      "angle": "HBO's 'Lanterns' series teases its primary alien antagonist.",
+      "tmdbType": "movie",
+      "source": "gnews:Polygon.com",
+      "sources": [
+        {
+          "outlet": "Polygon.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ0ZMUDZRRndaVFgxc2FFLUF5UUZKM1NGQnZnSDVDNDRPNTFQQUg3YXJQMkhIZXMwMnNrR08zUlJwODF4WktlaTVoTk5hLWFuUkJ1TDNMS2Uxb3MtNHRyUVlmbFF1bXpuUmtKU0tzNlliN3llTC1jYXdhN0h0RDFYNVQ5WHkzdUk?oc=5",
+          "ageMin": 63,
+          "headline": "HBO's Lanterns reveals its true alien threat with major villain reveals - Polygon.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ0ZMUDZRRndaVFgxc2FFLUF5UUZKM1NGQnZnSDVDNDRPNTFQQUg3YXJQMkhIZXMwMnNrR08zUlJwODF4WktlaTVoTk5hLWFuUkJ1TDNMS2Uxb3MtNHRyUVlmbFF1bXpuUmtKU0tzNlliN3llTC1jYXdhN0h0RDFYNVQ5WHkzdUk?oc=5\" target=\"_blank\" HBO's Lanterns reveals its true alien threat "
+        }
+      ],
+      "ageMin": 63,
+      "_cand": {
+        "key": "rss:hbo-s-lanterns-reveals-its-true-alien-threat-with-major-vill",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1225,18 +1067,85 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Northern Transmissions"
+          "Polygon.com"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Northern Transmissions",
+        "attribution": "Polygon.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 56,
+      "priority": 68,
       "signals": {
-        "recency": 9,
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-protomartyr-new-album-tour-sounds-we-cannot-hear",
+      "slug": "protomartyr-announce-new-album-and-tour-share-video-for-new-song-sound",
+      "title": "Protomartyr Announce New Album and Tour, Share Video for New Song “Sounds We Cannot Hear”",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "indie",
+      "eventSlug": "protomartyr-new-album-tour-sounds-we-cannot-hear",
+      "primaryKeyword": "Protomartyr",
+      "primaryEntity": "Protomartyr",
+      "entities": [
+        "Sounds We Cannot Hear (song)"
+      ],
+      "angle": "Indie band Protomartyr announces a new album and tour, releasing a new single.",
+      "tmdbType": "movie",
+      "source": "gnews:Under the Radar Magazine",
+      "sources": [
+        {
+          "outlet": "Under the Radar Magazine",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ2JBVUdISjFnbEhnYWNwMXFZaEtrQTN2WjVHb3Bna3JWVExoNXpsdF9hYmQtLUgwRlc2SW9KM2VIb3RuNVZJUnRxQmJsakQxY0FHaVFTODk1YzVza2VsU1V3djNEcEJKSkFwRjFJY1F6RVZ3R2xNUEs0Y3BZd0hMZWtkRTFOVGUySGVoYVRBOW9RNUFzYVQ2dFE0YjFGcVJHS25Eb244WGhiWXBheTZzN1Z3?oc=5",
+          "ageMin": 114,
+          "headline": "Protomartyr Announce New Album and Tour, Share Video for New Song “Sounds We Cannot Hear” - Under the Radar Magazine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ2JBVUdISjFnbEhnYWNwMXFZaEtrQTN2WjVHb3Bna3JWVExoNXpsdF9hYmQtLUgwRlc2SW9KM2VIb3RuNVZJUnRxQmJsakQxY0FHaVFTODk1YzVza2VsU1V3djNEcEJKSkFwRjFJY1F6RVZ3R2xNUEs0Y3BZd0hMZWtkRTFOVGUySGVoYVRBOW9RNUFzYVQ2dFE0YjFGcVJHS25Eb244WGhiWXBheTZzN1Z3?oc=5\" targ"
+        }
+      ],
+      "ageMin": 114,
+      "_cand": {
+        "key": "rss:protomartyr-announce-new-album-and-tour-share-video-for-new-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Under the Radar Magazine"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Under the Radar Magazine",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 9,
@@ -1246,32 +1155,628 @@
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "demand": 8,
         "learned": 4
       },
-      "demandImpressions": 430,
-      "demandQuery": "johnny galecki acting return",
-      "demandPosition": 1,
       "tierClass": "C"
     },
     {
-      "id": "news-netflix-considered-pulling-michael-jackson-the-verdict-docuseries",
-      "slug": "netflix-executives-considered-pulling-michael-jackson-the-verdict-docu",
-      "title": "Netflix Executives Considered Pulling Michael Jackson: The Verdict Docuseries a Week Before Its Release (EXCLUSIVE)",
+      "id": "news-damson-idris-f1-the-movie-sequel",
+      "slug": "damson-idris-teases-f1-the-movie-sequel-possibility",
+      "title": "Damson Idris Teases 'F1 The Movie' Sequel Possibility",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "damson-idris-f1-the-movie-sequel",
+      "primaryKeyword": "F1 The Movie sequel",
+      "primaryEntity": "F1",
+      "entities": [
+        "F1 The Movie",
+        "Damson Idris"
+      ],
+      "angle": "Damson Idris hints at potential sequel for 'F1 The Movie' after 'exciting conversations'.",
+      "tmdbType": "movie",
+      "source": "gnews:Motorsport.com",
+      "sources": [
+        {
+          "outlet": "Motorsport.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
+          "ageMin": 842,
+          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
+        }
+      ],
+      "ageMin": 842,
+      "_cand": {
+        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Motorsport.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Motorsport.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 65,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-zach-top-says-country-music-became-too-perfect",
+      "slug": "zach-top-says-country-music-became-too-perfect-some-of-the-soul-got-le",
+      "title": "Zach Top Says Country Music Became Too Perfect: Some of the Soul Got Left Behind",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "zach-top-says-country-music-became-too-perfect",
+      "primaryKeyword": "zach top new song",
+      "primaryEntity": "Zach Top",
+      "entities": [
+        "Good Girls Cowgirls"
+      ],
+      "angle": "Rising country artist Zach Top discusses the evolution of country music and announces a new song.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-features/zach-top-good-girls-and-cowgirls-interview-1235598583/",
+          "ageMin": 223,
+          "headline": "Zach Top Says Country Music Became Too Perfect: Some of the Soul Got Left Behind",
+          "summary": "The rising star, whose career is rooted in bluegrass, will release the new song \"Good Girls Cowgirls\" in August"
+        }
+      ],
+      "ageMin": 223,
+      "_cand": {
+        "key": "rss:zach-top-says-country-music-became-too-perfect-some-of-the-s",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-netflix-reverses-cancellation-tyler-perry-show",
+      "slug": "netflix-reverses-cancellation-of-tyler-perry-s-show",
+      "title": "Netflix Reverses Cancellation of Tyler Perry's Show",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "netflix-reverses-cancellation-tyler-perry-show",
+      "primaryKeyword": "tyler perry show netflix",
+      "primaryEntity": "Netflix",
+      "entities": [
+        "Tyler Perry's Duplicity",
+        "Tyler Perry"
+      ],
+      "angle": "Netflix reverses its decision to cancel Tyler Perry's show, opting for a renewal.",
+      "tmdbType": "movie",
+      "source": "gnews:AOL.com",
+      "sources": [
+        {
+          "outlet": "AOL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBkN3ZmNXF6dEs1eXdSWGx5dmRSMkVyS183MWkxeU1jUGhDdTM3bUQ1OTlQN01ZcUd0VWN0XzVjbDFhUXAwN080dWhPalQ1U1BoRlRESUpNMFBfWEsxQ3VEUkx3WWRTWXlGN0ZIOExlN24tUjJxbXpLLVlB?oc=5",
+          "ageMin": 191,
+          "headline": "Netflix makes U-turn on Tyler Perry’s prematurely canceled show - AOL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTFBkN3ZmNXF6dEs1eXdSWGx5dmRSMkVyS183MWkxeU1jUGhDdTM3bUQ1OTlQN01ZcUd0VWN0XzVjbDFhUXAwN080dWhPalQ1U1BoRlRESUpNMFBfWEsxQ3VEUkx3WWRTWXlGN0ZIOExlN24tUjJxbXpLLVlB?oc=5\" target=\"_blank\" Netflix makes U-turn on Tyler Perry’s prematurely canceled show "
+        }
+      ],
+      "ageMin": 191,
+      "_cand": {
+        "key": "rss:netflix-makes-u-turn-on-tyler-perry-s-prematurely-canceled-s",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "AOL.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "AOL.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-robin-williams-cameo-underappreciated-sci-fi-movie",
+      "slug": "robin-williams-had-a-cameo-in-this-underappreciated-sci-fi-movie",
+      "title": "Robin Williams Had A Cameo In This Underappreciated Sci-Fi Movie",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "robin-williams-cameo-underappreciated-sci-fi-movie",
+      "primaryKeyword": "Robin Williams",
+      "primaryEntity": "Robin Williams: Come Inside My Mind",
+      "entities": [
+        "Robin Williams"
+      ],
+      "angle": "A lesser-known sci-fi film featured a cameo from the late Robin Williams.",
+      "tmdbType": "movie",
+      "source": "gnews:bgr.com",
+      "sources": [
+        {
+          "outlet": "bgr.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQa01EVF84NEk2WW1jZkExWGhrUUlFbWxhZmt3dHVtcllFMGU3b1NwM3NFNDZ4cW1qX2pYUmJNSm5iX3lFaHA5cG05bmNmZ2NCUXZqaVpMVktmV21uYWowLVk3VWVXd1ZJUnRNYzFTU210THZlTk5VTzVUZmFsYzh1eTRNVVA4VVNGdVZLTXRPei0wS09BcGN3OVFXSlZtQ09JekE?oc=5",
+          "ageMin": 135,
+          "headline": "Robin Williams Had A Cameo In This Underappreciated Sci-Fi Movie - bgr.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxQa01EVF84NEk2WW1jZkExWGhrUUlFbWxhZmt3dHVtcllFMGU3b1NwM3NFNDZ4cW1qX2pYUmJNSm5iX3lFaHA5cG05bmNmZ2NCUXZqaVpMVktmV21uYWowLVk3VWVXd1ZJUnRNYzFTU210THZlTk5VTzVUZmFsYzh1eTRNVVA4VVNGdVZLTXRPei0wS09BcGN3OVFXSlZtQ09JekE?oc=5\" target=\"_blank\" Robin Wil"
+        }
+      ],
+      "ageMin": 135,
+      "_cand": {
+        "key": "rss:robin-williams-had-a-cameo-in-this-underappreciated-sci-fi-m",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "bgr.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "bgr.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-scrapped-star-wars-series-screening-lucas-museum",
+      "slug": "sdcc-scrapped-star-wars-series-from-robot-chicken-creators-to-screen-a",
+      "title": "SDCC: Scrapped 'Star Wars' Series from 'Robot Chicken' Creators to Screen at Lucas Museum",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "netflix-considered-pulling-michael-jackson-the-verdict-docuseries",
-      "primaryKeyword": "Michael Jackson: The Verdict",
+      "eventSlug": "scrapped-star-wars-series-screening-lucas-museum",
+      "primaryKeyword": "Star Wars series",
+      "primaryEntity": "Star Wars",
+      "entities": [
+        "Robot Chicken",
+        "Lucas Museum"
+      ],
+      "angle": "A previously unproduced Star Wars series from the creators of Robot Chicken will be screened.",
+      "tmdbType": "movie",
+      "source": "gnews:Animation Magazine",
+      "sources": [
+        {
+          "outlet": "Animation Magazine",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1JMQmc0aE1hVGhWRVlOanRsOHNVdFNLVml5SmFRYTctSEswMzJwZFdFVVFwMUJVaURWNG5tVW5hTFItYmh6TkpvbHo4VFJzcWhORnBQdE5ybE84aEZ2S3N6Q3FRNmxHYmVaU3NTVjJyRmtGNEw5dndPcU5zWmNOZ2JmSmJwc1ExQkJoTzFPLUFGZzAyNGF4TzVvd1FOd2NsekRucU04OW9xeFA1Vkgtb3M2SHMwdUEzbFY2bGptY0ZJLUs2T0E?oc=5",
+          "ageMin": 224,
+          "headline": "SDCC: Scrapped 'Star Wars' Series from 'Robot Chicken' Creators to Screen at Lucas Museum - Animation Magazine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1JMQmc0aE1hVGhWRVlOanRsOHNVdFNLVml5SmFRYTctSEswMzJwZFdFVVFwMUJVaURWNG5tVW5hTFItYmh6TkpvbHo4VFJzcWhORnBQdE5ybE84aEZ2S3N6Q3FRNmxHYmVaU3NTVjJyRmtGNEw5dndPcU5zWmNOZ2JmSmJwc1ExQkJoTzFPLUFGZzAyNGF4TzVvd1FOd2NsekRucU04OW9xeFA1Vkgtb3M2SHMwdUEzbFY"
+        }
+      ],
+      "ageMin": 224,
+      "_cand": {
+        "key": "rss:sdcc-scrapped-star-wars-series-from-robot-chicken-creators-t",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Animation Magazine"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Animation Magazine",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 49,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-giulia-be-brazilian-pop-star-hannah-montana",
+      "slug": "giulia-be-the-brazilian-pop-star-who-manifested-her-dream-life-inspire",
+      "title": "Giulia Be: The Brazilian Pop Star Who Manifested Her Dream Life Inspired by Hannah Montana",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "giulia-be-brazilian-pop-star-hannah-montana",
+      "primaryKeyword": "Giulia Be Hannah Montana",
+      "primaryEntity": "Giulia Be",
+      "entities": [
+        "Hannah Montana 20th Anniversary Special",
+        "Hannah Montana"
+      ],
+      "angle": "Brazilian pop star Giulia Be discusses how watching 'Hannah Montana' inspired her career.",
+      "tmdbType": "movie",
+      "source": "gnews:People.com",
+      "sources": [
+        {
+          "outlet": "People.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcVlPal91aFNjd0IyN3VDemhqQks1X0ozbTMyMEFJWGdvR2dKSDFNTUNtU0sxbExsZ2dDNVRjU19Vam5WSVlqeTBMQ1F1RVRuSElGWmZteEE4NzFuWW5URzZhaUFMVGJ2ZWd6UWlwMWJvRXhva05zZF9HbzMxcVNHWEZGNEFUejBzTnNKVVgtTlJYNnJTVjBDb2JTU1h3UzBJOWFV?oc=5",
+          "ageMin": 12,
+          "headline": "Meet GIULIA BE: the Brazilian Pop Star Who Manifested Her Dream Life by Watching Hannah Montana (Exclusive) - People.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxNcVlPal91aFNjd0IyN3VDemhqQks1X0ozbTMyMEFJWGdvR2dKSDFNTUNtU0sxbExsZ2dDNVRjU19Vam5WSVlqeTBMQ1F1RVRuSElGWmZteEE4NzFuWW5URzZhaUFMVGJ2ZWd6UWlwMWJvRXhva05zZF9HbzMxcVNHWEZGNEFUejBzTnNKVVgtTlJYNnJTVjBDb2JTU1h3UzBJOWFV?oc=5\" target=\"_blank\" Meet GIU"
+        }
+      ],
+      "ageMin": 12,
+      "_cand": {
+        "key": "rss:meet-giulia-be-the-brazilian-pop-star-who-manifested-her-dre",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "People.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "People.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-niall-horan-ella-bright-cover-song-duet",
+      "slug": "watch-niall-horan-surprise-off-campus-star-ella-bright-by-turning-her-",
+      "title": "Watch Niall Horan Surprise Off Campus Star Ella Bright by Turning Her Cover Song Into a Duet",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "niall-horan-ella-bright-cover-song-duet",
+      "primaryKeyword": "Niall Horan Ella Bright",
+      "primaryEntity": "Niall Horan",
+      "entities": [
+        "Ella Bright"
+      ],
+      "angle": "Niall Horan surprised 'Off Campus' star Ella Bright by turning her cover song into a duet.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/culture/tv-film/niall-horan-off-campus-ella-bright-duet-1236302656/",
+          "ageMin": 22,
+          "headline": "Watch Niall Horan Surprise Off Campus Star Ella Bright by Turning Her Cover Song Into a Duet",
+          "summary": "\"Oh my god, this is so wild,\" the shocked actress exclaimed."
+        }
+      ],
+      "ageMin": 22,
+      "_cand": {
+        "key": "rss:watch-niall-horan-surprise-off-campus-star-ella-bright-by-tu",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-cooper-flagg-ace-flagg-celebrity-family-feud",
+      "slug": "cooper-flagg-and-ace-flagg-take-on-fast-money-on-celebrity-family-feud",
+      "title": "Cooper Flagg and Ace Flagg Take On FAST MONEY on CELEBRITY FAMILY FEUD",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "cooper-flagg-ace-flagg-celebrity-family-feud",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Cooper Flagg",
+        "Ace Flagg"
+      ],
+      "angle": "Basketball player Cooper Flagg and his brother Ace compete on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:BroadwayWorld",
+      "sources": [
+        {
+          "outlet": "BroadwayWorld",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQT3diYXNOLTlUNUQ1dGNtZmRKRjVHS2xYanZSVUlaT3AzcEl5MzRtS2NZRXhIeHM4dm5obXFmRjZfSmgxdFpQWFE3T0VkekJJdUxuTERLQjQxQVZIQVF5S0x3Rks0a292ZE1KbXJZNVFDOGZxZ2FMR1BDRDgxbkJRRkwzYnViQUVEQjhJbHJlY2pjdE55MkQ2aVE0RHlKZWluVmhlWmZSS3VEaXl5QjZVZ09RMF9LcEcxWlk3YktuajM?oc=5",
+          "ageMin": 95,
+          "headline": "Cooper Flagg and Ace Flagg Take On FAST MONEY on CELEBRITY FAMILY FEUD - BroadwayWorld",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxQT3diYXNOLTlUNUQ1dGNtZmRKRjVHS2xYanZSVUlaT3AzcEl5MzRtS2NZRXhIeHM4dm5obXFmRjZfSmgxdFpQWFE3T0VkekJJdUxuTERLQjQxQVZIQVF5S0x3Rks0a292ZE1KbXJZNVFDOGZxZ2FMR1BDRDgxbkJRRkwzYnViQUVEQjhJbHJlY2pjdE55MkQ2aVE0RHlKZWluVmhlWmZSS3VEaXl5QjZVZ09RMF9LcEcxWlk"
+        }
+      ],
+      "ageMin": 95,
+      "_cand": {
+        "key": "rss:cooper-flagg-and-ace-flagg-take-on-fast-money-on-celebrity-f",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BroadwayWorld"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BroadwayWorld",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-connor-hellebuyck-griffin-lamarre-celebrity-family-feud",
+      "slug": "connor-hellebuyck-and-griffin-lamarre-play-fast-money-on-celebrity-fam",
+      "title": "Connor Hellebuyck and Griffin LaMarre Play Fast Money on CELEBRITY FAMILY FEUD",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "connor-hellebuyck-griffin-lamarre-celebrity-family-feud",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Connor Hellebuyck",
+        "Griffin LaMarre"
+      ],
+      "angle": "Hockey player Connor Hellebuyck and Griffin LaMarre compete on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:BroadwayWorld",
+      "sources": [
+        {
+          "outlet": "BroadwayWorld",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNUUNVeXpIeXZQM3NFWnZNb1JvVE4xT2FManZBSHl6amJ0VG9RUnI1bThLT29aaF9RdkNoUFpNMF9kV1NuYkpRWWoxMTBLZHlhbXJxYm5MVGpVMXcxQmFFbThYS2pMMEI1UDFnUlNXYmFqSEVqdGFZRVRPRkZvUW9GRlBBbHEtZ2dQMkxWU293bGFpQ25yNi1sazA4cjI5TTRnQkVxenFIWjNhdUZ4ZzdZRF91aVBjYkNad1NwREY0V0xzajhwMFhoWDNZaw?oc=5",
+          "ageMin": 95,
+          "headline": "Connor Hellebuyck and Griffin LaMarre Play Fast Money on CELEBRITY FAMILY FEUD - BroadwayWorld",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxNUUNVeXpIeXZQM3NFWnZNb1JvVE4xT2FManZBSHl6amJ0VG9RUnI1bThLT29aaF9RdkNoUFpNMF9kV1NuYkpRWWoxMTBLZHlhbXJxYm5MVGpVMXcxQmFFbThYS2pMMEI1UDFnUlNXYmFqSEVqdGFZRVRPRkZvUW9GRlBBbHEtZ2dQMkxWU293bGFpQ25yNi1sazA4cjI5TTRnQkVxenFIWjNhdUZ4ZzdZRF91aVBjYkNad1N"
+        }
+      ],
+      "ageMin": 95,
+      "_cand": {
+        "key": "rss:connor-hellebuyck-and-griffin-lamarre-play-fast-money-on-cel",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BroadwayWorld"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BroadwayWorld",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-michael-jackson-the-verdict-docuseries-almost-pulled-by-netflix",
+      "slug": "netflix-executives-considered-pulling-michael-jackson-docuseries-a-wee",
+      "title": "Netflix Executives Considered Pulling Michael Jackson Docuseries a Week Before Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "michael-jackson-the-verdict-docuseries-almost-pulled-by-netflix",
+      "primaryKeyword": "michael jackson docuseries netflix",
       "primaryEntity": "Michael Jackson: The Verdict",
       "entities": [
-        "Netflix",
-        "Michael Jackson"
+        "Netflix"
       ],
-      "angle": "Netflix executives reportedly considered pulling the Michael Jackson docuseries 'The Verdict' shortly before its release due to fear of reprisal.",
+      "angle": "Netflix executives considered pulling the Michael Jackson docuseries before its release due to fear of reprisal.",
       "tmdbType": "movie",
       "source": "rss:Variety Music",
       "sources": [
@@ -1279,12 +1784,12 @@
           "outlet": "Variety Music",
           "tier": 7,
           "url": "https://variety.com/2026/tv/global/michael-jackson-docuseries-netflix-considered-pulling-1236817368/",
-          "ageMin": 174,
+          "ageMin": 235,
           "headline": "Netflix Executives Considered Pulling Michael Jackson: The Verdict Docuseries a Week Before Its Release (EXCLUSIVE)",
           "summary": "Netflix almost pulled the streamer s recent documentary “Michael Jackson: The Verdict” a week before its release for fear of reprisal, Variety has learned. The three-part docuseries re-examines Jackson’s 2005 criminal trial, which saw the pop superstar acquitted of all charges, including child molestation. It ultimately ran as planned, premiering on June 3. “It would have [ ]"
         }
       ],
-      "ageMin": 174,
+      "ageMin": 235,
       "_cand": {
         "key": "rss:netflix-executives-considered-pulling-michael-jackson-the-ve",
         "popularity": 0,
@@ -1305,20 +1810,20 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 51,
       "signals": {
-        "recency": 16,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
         "demand": 2,
-        "learned": -1
+        "learned": 1
       },
       "demandImpressions": 1,
       "demandQuery": "how much was jafar paid for michael",
@@ -1326,35 +1831,39 @@
       "tierClass": "C"
     },
     {
-      "id": "news-sean-combs-solitary-confinement-brawl",
-      "slug": "sean-combs-reportedly-in-solitary-confinement-after-prison-brawl",
-      "title": "Sean Combs Reportedly in Solitary Confinement After Prison Brawl",
+      "id": "news-billie-joe-armstrong-bruce-dickinson-cover-song",
+      "slug": "billie-joe-armstrong-enlists-iron-maiden-s-bruce-dickinson-for-surpris",
+      "title": "Billie Joe Armstrong Enlists Iron Maiden’s Bruce Dickinson for Surprise Cover",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "legal",
-      "sensitivity": "high",
-      "eventSlug": "sean-combs-solitary-confinement-brawl",
-      "primaryKeyword": "sean combs",
-      "primaryEntity": "Sean Combs",
-      "entities": [],
-      "angle": "Sean Combs reportedly placed in solitary confinement after an altercation with another inmate.",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "billie-joe-armstrong-bruce-dickinson-cover-song",
+      "primaryKeyword": "billie joe armstrong bruce dickinson cover",
+      "primaryEntity": "Billie Joe Armstrong",
+      "entities": [
+        "Bruce Dickinson",
+        "Mott the Hoople"
+      ],
+      "angle": "Billie Joe Armstrong surprised fans by enlisting Bruce Dickinson for a cover of Mott the Hoople's 'All the Young Dudes'.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/sean-combs-solitary-confinement-after-prison-fight-1235597168/",
-          "ageMin": 352,
-          "headline": "Sean Combs Placed in Solitary Confinement After Brawl With Fellow Inmate: Reports",
-          "summary": "An inmate at the low-security federal prison in New Jersey allegedly taunted Sean Combs, who reportedly lashed out at the man, according to multiple reports"
+          "url": "https://www.rollingstone.com/music/music-news/iron-maiden-bruce-dickinson-billie-joe-armstrong-perform-1235598444/",
+          "ageMin": 236,
+          "headline": "Billie Joe Armstrong Enlists Iron Maiden’s Bruce Dickinson for Surprise Cover",
+          "summary": "Dickinson surprised guests at Fandom's Comic-Con party to cover Mott the Hoople’s “All the Young Dudes”"
         }
       ],
-      "ageMin": 352,
+      "ageMin": 236,
       "_cand": {
-        "key": "rss:sean-combs-placed-in-solitary-confinement-after-brawl-with-f",
+        "key": "rss:billie-joe-armstrong-enlists-iron-maiden-s-bruce-dickinson-f",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1367,18 +1876,18 @@
           "Rolling Stone"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
+        "sensitivity": "normal",
         "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 49,
       "signals": {
         "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 12,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -1387,7 +1896,75 @@
         "softTv": 0,
         "learned": 1
       },
-      "tierClass": "S"
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ella-bright-niall-horan-baby-now-that-i-found-you",
+      "slug": "off-campus-star-ella-bright-had-no-idea-niall-horan-recorded-baby-now-",
+      "title": "‘Off Campus’ Star Ella Bright Had No Idea Niall Horan Recorded ‘Baby Now That I Found You’ Duet",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ella-bright-niall-horan-baby-now-that-i-found-you",
+      "primaryKeyword": "ella bright niall horan",
+      "primaryEntity": "Ella Bright",
+      "entities": [
+        "Niall Horan",
+        "Baby Now That I Found You"
+      ],
+      "angle": "Actress Ella Bright was unaware that Niall Horan recorded a duet of 'Baby Now That I Found You'.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/niall-horan-off-campus-baby-now-that-i-found-you-duet-1235598428/",
+          "ageMin": 262,
+          "headline": "‘Off Campus’ Star Ella Bright Had No Idea Niall Horan Recorded ‘Baby Now That I Found You’ Duet",
+          "summary": "The actress compared it to “This Town,” the debut solo single from Horan from the early post-One Direction days"
+        }
+      ],
+      "ageMin": 262,
+      "_cand": {
+        "key": "rss:-off-campus-star-ella-bright-had-no-idea-niall-horan-recorde",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 49,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
     }
   ]
 }
