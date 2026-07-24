@@ -1,0 +1,82 @@
+{
+ "runId": "run-2026-07-24T11-01-03",
+ "mode": "live",
+ "startedAt": "2026-07-24T11:01:03.604Z",
+ "films": 41,
+ "published": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "slug": "the-odyssey-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-odyssey-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.29,
+  "behind": true,
+  "expected": 19.86,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.06344
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "info": 1
+  },
+  "faults": [
+   {
+    "stage": "model:synthesizer",
+    "message": "malformed JSON from deepseek/deepseek-v4-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T11:02:30.111Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-24T11:03:22.516Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3422,
+    "out": 857,
+    "usd": 0.00024,
+    "ms": 16706
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3117,
+    "out": 459,
+    "usd": 0.0005,
+    "ms": 1643
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 854,
+    "out": 821,
+    "usd": 0.00022,
+    "ms": null
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2165,
+    "out": 1109,
+    "usd": 0.00088,
+    "ms": 48475
+   }
+  },
+  "totalUsd": 0.00184
+ },
+ "openrouterTotalUsd": 0.0028
+}

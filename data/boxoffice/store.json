@@ -1174,6 +1174,20 @@
    "headlineNumberRaw": 115212710,
    "filmKey": "disclosure day",
    "chartDate": null
+  },
+  {
+   "key": "the-odyssey-bo-update-150m|BO-UPDATE",
+   "at": "2026-07-24T11:03:22.512Z",
+   "eventSlug": "the-odyssey-bo-update-150m",
+   "form": "BO-UPDATE",
+   "slug": "the-odyssey-box-office-tracker",
+   "title": "Matt Damon's 'The Odyssey' Sails to $304M Global — Nolan's Biggest Opening Ever",
+   "film": "The Odyssey",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 181746315,
+   "filmKey": "the odyssey",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2451,16 +2465,6 @@
    "expiresAt": "2026-07-26T03:08:29.248Z"
   },
   {
-   "key": "the-odyssey-bo-update-150m|BO-UPDATE",
-   "eventSlug": "the-odyssey-bo-update-150m",
-   "form": "BO-UPDATE",
-   "reason": "scope: non-Hollywood box-office language in body",
-   "tries": 58,
-   "at": "2026-07-24T10:32:44.630Z",
-   "dead": true,
-   "expiresAt": "2026-07-27T10:32:44.630Z"
-  },
-  {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
    "eventSlug": "a-day-like-no-other-ev-streaming-arrival",
    "form": "NOW-STREAMING",
@@ -2517,14 +2521,14 @@
    "expiresAt": "2026-07-27T10:34:38.187Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.06064
+  "usd": 0.06344
  },
  "pace": {
-  "tokens": 0.21407654761904762,
-  "lastMs": 1784889065848
+  "tokens": 0,
+  "lastMs": 1784890863604
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
