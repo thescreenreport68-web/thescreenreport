@@ -38,7 +38,7 @@ export async function metaEnqueue({ slug, videoUrl, coverUrl, igCaption, firstCo
     // one item per slug — a re-enqueue for the same slug replaces (never duplicates)
     q.items = q.items.filter((i) => i.slug !== slug);
     q.items.push({
-      slug, whenISO, slot, day, videoUrl,
+      slug, whenISO, slot, day, videoUrl, coverUrl: coverUrl || null, igCaption: igCaption || "",
       igContainerId: containerId, firstComment: firstComment || null,
       fb: { videoUrl, description: fbDescription || igCaption || "" },
       enqueuedAt: new Date().toISOString(), attempts: 0, done: { ig: null, fb: null },
@@ -68,7 +68,23 @@ export async function metaDrain({ log = console.log } = {}) {
     item.attempts++;
     // Instagram
     if (!item.done.ig) {
-      const r = await igPublish(item.igContainerId);
+      // SELF-HEAL (2026-07-24 token-block incident): containers die after ~24h. If this one expired
+      // while we waited (e.g. Meta access was blocked), mint a FRESH container from the stored
+      // videoUrl and keep going — a queued reel survives any outage shorter than the retry budget.
+      let r = await igPublish(item.igContainerId);
+      if (!r.ok && /EXPIRED/i.test(r.error || "")) {
+        // pre-selfheal queue items lack igCaption/coverUrl — recover them from committed built-meta
+        if (!item.igCaption) {
+          const bm = readJson(path.join(IG.dataDir, "built-meta", `${item.slug}.json`), null);
+          if (bm) { item.igCaption = bm.caption?.full || ""; item.coverUrl = item.coverUrl || bm.coverUrl || null; }
+        }
+        const fresh = await igCreateContainer({ videoUrl: item.videoUrl, caption: item.igCaption || "", coverUrl: item.coverUrl || null });
+        if (fresh.ok) {
+          item.igContainerId = fresh.containerId;
+          log(`  ♻ meta: container expired for ${item.slug} — recreated (${fresh.containerId})`);
+          r = await igPublish(fresh.containerId);
+        }
+      }
       if (r.ok) {
         item.done.ig = r.mediaId;
         updateRow(item.slug, "instagram", { postId: r.mediaId, published: true, queued: false, error: null });
