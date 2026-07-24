@@ -130,10 +130,37 @@ reactions:
     quote: >-
       This didn't deserve to fail at the box office, like Last Action Hero
       before it, history will look at it differently.
+  - speaker: Jamie Smart
+    date: '2026-07-23'
+    quote: >-
+      I’m 100% convinced we could trick Musk into committing to making a
+      historically accurate Masters Of The Universe.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Masters of the Universe is out to stream at home today. Super fun movie
+      that that knows exactly what it's doing. Loved it!
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      Streaming Masters of the Universe again with the TV off. This is the most
+      use this old PS4 has gotten in a while. Anyway, let's keep
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Initially I thought you were talking about the new Masters of the Universe
+      film, but now I am disappointed because you are not. I felt the new film
+      was a celebration of He-Man and sword and sorcery.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Watched Masters of the Universe for the second time tonight, first day
+      streaming on Prime. It's such a fun movie, I'm disappointed it didn't do
+      better in theatres. I hope they make the sequel!
 fanConsensus: >-
   A fun, nostalgic film beloved by those who saw it, but its legacy is
   overshadowed by box office disappointment and a rushed move to streaming.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   popularity: 235
@@ -148,7 +175,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T08:31:02.488Z'
+dateModified: '2026-07-24T14:31:02.937Z'
 provenance:
   parentEventSlug: masters-of-the-universe-2026
   primaryEntity: Masters of the Universe
@@ -162,7 +189,7 @@ imageAlt: Masters of the Universe 2026 movie poster Skeletor
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2840
 imageHeight: 1598
-updated: '2026-07-24T08:31:02.488Z'
+updated: '2026-07-24T14:31:02.937Z'
 ---
 
 The movie that fans who saw it largely adored is the same film the box office largely ignored. Now, with its quick debut on Prime Video just weeks after its theatrical run, the conversation has reignited, and the internet went into full meltdown over the divide between genuine love and commercial disappointment.
