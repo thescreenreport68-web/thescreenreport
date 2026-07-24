@@ -1,0 +1,119 @@
+{
+  "ts": "2026-07-24T11:01:10.275Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [],
+  "topics": 10,
+  "held": 7,
+  "rejected": 1,
+  "skipped": 2,
+  "blocked": 0,
+  "costUSD": 0.10804,
+  "costPerPublished": null,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 47,
+      "in": 97231,
+      "out": 12193,
+      "usd": 0.05912314000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 7,
+      "in": 7421,
+      "out": 9606,
+      "usd": 0.0032755376
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 41,
+      "in": 115919,
+      "out": 36169,
+      "usd": 0.04283447585
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 22,
+      "in": 15426,
+      "out": 2380,
+      "usd": 0.0024945999999999996
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 1,
+      "in": 1060,
+      "out": 394,
+      "usd": 0.0003121
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 8,
+      "errors": 0,
+      "in": 19921,
+      "out": 1575,
+      "usd": 0.0099138,
+      "ms": 11603
+    },
+    "synthesizer": {
+      "calls": 8,
+      "errors": 1,
+      "in": 7342,
+      "out": 6883,
+      "usd": 0.00213696,
+      "ms": 253526
+    },
+    "writer": {
+      "calls": 31,
+      "errors": 0,
+      "in": 110500,
+      "out": 33924,
+      "usd": 0.03694916,
+      "ms": 1080595
+    },
+    "verify": {
+      "calls": 39,
+      "errors": 0,
+      "in": 77310,
+      "out": 10618,
+      "usd": 0.049737999999999984,
+      "ms": 63559
+    },
+    "judge": {
+      "calls": 8,
+      "errors": 0,
+      "in": 11737,
+      "out": 1519,
+      "usd": 0.0017813,
+      "ms": 7821
+    },
+    "headline": {
+      "calls": 7,
+      "errors": 0,
+      "in": 4507,
+      "out": 2207,
+      "usd": 0.0017869900000000002,
+      "ms": 81336
+    },
+    "headlineJudge": {
+      "calls": 7,
+      "errors": 1,
+      "in": 2310,
+      "out": 560,
+      "usd": 0.000455,
+      "ms": 6555
+    },
+    "seoAuditor": {
+      "calls": 7,
+      "errors": 0,
+      "in": 1379,
+      "out": 301,
+      "usd": 0.0002583,
+      "ms": 3345
+    },
+    "dedup": {
+      "calls": 3,
+      "errors": 0,
+      "in": 912,
+      "out": 38,
+      "usd": 0.00022268,
+      "ms": 5656
+    }
+  }
+}
