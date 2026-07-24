@@ -1628,6 +1628,28 @@ await ta("NO-REWRITE: the lane can create a new article but REFUSES to overwrite
   fs.rmSync(dirW, { recursive: true, force: true });
 });
 
+await ta("a role WITH a fallback degrades (warn); a role WITHOUT one is critical — the false-alarm fix", async () => {
+  // The owner's "not posting" emails came from boxoffice-drip.yml failing the job on report.degraded,
+  // which was set by ANY role exhausting its models. finder has a deterministic fallback and chart
+  // candidates never touch it, so its failure is a quality degrade, not a dead tick. Measured before the
+  // fix: 34 of 44 ticks "degraded" on a day the lane published its entire available supply.
+  const boom = async () => { throw new Error("empty completion"); };
+  resetFaultsX();
+  await agentChatX("finder", { system: "s", user: "u" }, { chatImpl: boom }).catch(() => {});
+  const finderFaults = faultReportX().faults.filter((f) => f.stage === "model:finder");
+  assert.equal(finderFaults.length, 1);
+  assert.notEqual(finderFaults[0].severity, "critical", "finder has a fallback => must NOT fail the job");
+
+  resetFaultsX();
+  await agentChatX("writer", { system: "s", user: "u" }, { chatImpl: boom }).catch(() => {});
+  const writerFaults = faultReportX().faults.filter((f) => f.stage === "model:writer");
+  assert.equal(writerFaults[0].severity, "critical", "no writer => no article => genuinely critical");
+
+  // and the message must name BOTH models' errors, not just the fallback's
+  assert.ok(/amazon\/nova-micro-v1/.test(finderFaults[0].message) && /gemini/.test(finderFaults[0].message),
+    "both models reported: " + finderFaults[0].message);
+});
+
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);
 if (fail) process.exit(1);

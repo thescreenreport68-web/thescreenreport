@@ -155,6 +155,7 @@ export async function agentChat(role, { system, user, images = null, json = true
   const temperature = surgical && cfg.surgicalTemperature != null ? cfg.surgicalTemperature : cfg.temperature;
   const models = [cfg.model, cfg.fallback].filter(Boolean);
   let lastErr = null;
+  const errsByModel = [];
   for (const model of models) {
     try {
       const t0 = Date.now();
@@ -180,12 +181,24 @@ export async function agentChat(role, { system, user, images = null, json = true
         } catch { /* silent-ok: salvage is best-effort; the outer fallback/fault path still runs */ }
       }
       lastErr = e;
+      errsByModel.push({ model, err: String(e?.message || e).slice(0, 90) });
       METER.push({ role, model, error: String(e?.message || e).slice(0, 120) });
     }
   }
   // Every model for this role failed. Bug #8 (retries=0 → zero requests) made this happen on EVERY call
   // at $0 cost, which read as a quiet news day. It is now a recorded CRITICAL fault before it throws.
-  fault(`model:${role}`, `all models failed (${models.join(", ")}): ${String(lastErr?.message || lastErr).slice(0, 120)}`, { severity: SEV.CRITICAL });
+  // SEVERITY BY CONSEQUENCE, not by stage. `finder` has a deterministic fallback (agents/finder.mjs) and
+  // the chart candidates never touch it at all, so its failure degrades ranking quality — it does not
+  // void the tick. Marking it CRITICAL failed the GitHub job on ~78% of ticks and produced the owner's
+  // "not posting" email storm on days the lane published its entire available supply. CRITICAL is now
+  // reserved for roles whose loss actually stops an article being written.
+  const HAS_FALLBACK = new Set(["finder", "categorize", "image"]);
+  const severity = HAS_FALLBACK.has(role) ? SEV.WARN : SEV.CRITICAL;
+  // Report BOTH models' errors: lastErr is overwritten each iteration, so the message used to show only
+  // the fallback's error while listing both names — which made three distinct failure classes look
+  // identical for five days.
+  const detail = errsByModel.map((e) => `${e.model}: ${e.err}`).join(" | ");
+  fault(`model:${role}`, `all models failed — ${detail}`, { severity });
   throw lastErr || new Error(`${role}: all models failed`);
 }
 
