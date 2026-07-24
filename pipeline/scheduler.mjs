@@ -86,7 +86,10 @@ export async function tick({ now = new Date() } = {}) {
   const ageStr = ageH === Infinity ? "∞" : ageH.toFixed(1);
   if (backlog < MIN_BACKLOG || ageH > QUEUE_STALE_HOURS) {
     console.log(`[news-scheduler] fresh backlog ${backlog}, queue age ${ageStr}h → running FIND top-up (trigger: backlog<${MIN_BACKLOG} or age>${QUEUE_STALE_HOURS}h)…`);
-    try { runNode("find/findrun.mjs", [`--candidates=${FIND_CANDIDATES}`, `--queue=${FIND_QUEUE}`], { FIND_SKIP_RECHECK: process.env.FIND_KEEP_RECHECK ? "" : "1" }); }
+    // ECHO the child's stdout (2026-07-24): runNode PIPES stdout, so FIND's entire log — including the
+    // GSC demand/learning stages — was captured and silently discarded. Tick #524 looked like GSC had
+    // never run when in fact it was simply invisible. The MAKE step is echoed for the same reason.
+    try { const findOut = runNode("find/findrun.mjs", [`--candidates=${FIND_CANDIDATES}`, `--queue=${FIND_QUEUE}`], { FIND_SKIP_RECHECK: process.env.FIND_KEEP_RECHECK ? "" : "1" }); if (findOut) console.log(findOut); }
     catch (e) { console.error(`[news-scheduler] FIND top-up failed: ${String(e?.message || e).slice(0, 160)}`); }
   } else {
     console.log(`[news-scheduler] fresh backlog ${backlog} (>= ${MIN_BACKLOG}), queue age ${ageStr}h (<= ${QUEUE_STALE_HOURS}h) → publishing from existing queue.`);

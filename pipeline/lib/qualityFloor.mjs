@@ -26,12 +26,19 @@
 // itself disqualifying — a THIN one is. A lone outlet must therefore carry noticeably more real text
 // before it can support a publishable piece.
 export const CFG = {
-  // absolute minimum extracted source text (chars) for any story
+  // absolute minimum extracted source text (chars) when 2+ outlets contributed
   MIN_CHARS: Number(process.env.QUALITY_MIN_CHARS ?? 1500),
-  // a story resting on ONE outlet must be richer than that — this is the "no single-source shorts" rule
-  MIN_CHARS_SINGLE: Number(process.env.QUALITY_MIN_CHARS_SINGLE ?? 2200),
+  // a story resting on ONE outlet must be richer — the "no single-source shorts" rule
+  MIN_CHARS_SINGLE: Number(process.env.QUALITY_MIN_CHARS_SINGLE ?? 1800),
   // hard word floor for anything that publishes; never relaxed, for any format, for any reason
   MIN_WORDS: Number(process.env.QUALITY_MIN_WORDS ?? 250),
+  // Require at least one FULL-TEXT extraction. This is the decisive rule, learned from live tick #524:
+  // the content finder either extracts the outlet's real article OR falls back to the RSS blurb, and
+  // "0 full-text, 1 summary" (300 chars) is precisely the thin single-source brief the owner banned —
+  // there is no honest 250-word article inside a 300-char blurb, only padding. Meanwhile a genuinely
+  // extracted 2130-char article was being cut by a blunt char threshold for the sake of 70 characters.
+  // Judge the KIND of material first, then its size.
+  REQUIRE_FULLTEXT: process.env.QUALITY_REQUIRE_FULLTEXT !== "0",
 };
 
 // Measure the real material behind a topic. Returns a decision + the numbers that drove it, so every
@@ -47,16 +54,28 @@ export function assessGrounding(bundle, cfg = CFG) {
   // No bundle at all → not our call. Structured grounding may still carry it; the gate is the backstop.
   if (!bundle || !sources.length) return { ok: true, skip: false, reason: "no bundle (structured grounding may carry it)", chars, sources: sources.length, quotes };
 
+  // RSS-BLURB-ONLY ⇒ SKIP. `extractedCount` counts real article extractions, `inlineCount` counts feed
+  // summaries. Zero extractions means we never got the outlet's actual reporting — writing 250 words
+  // from a 300-character blurb can only be padding, which is exactly how fabrication gets in.
+  // (undefined counts = an older/other bundle shape → fall through to the size checks, never guess.)
+  const extracted = Number(bundle.extractedCount);
+  if (cfg.REQUIRE_FULLTEXT && Number.isFinite(extracted) && extracted === 0) {
+    return {
+      ok: false, skip: true, chars, sources: sources.length, quotes, owners, extracted,
+      reason: `no full-text extraction — ${chars} chars of feed summary only (a blurb cannot support a real article)`,
+    };
+  }
+
   const need = single ? cfg.MIN_CHARS_SINGLE : cfg.MIN_CHARS;
   if (chars < need) {
     return {
-      ok: false, skip: true, chars, sources: sources.length, quotes, owners, need,
+      ok: false, skip: true, chars, sources: sources.length, quotes, owners, need, extracted,
       reason: single
         ? `single-source short: ${chars} chars from 1 outlet < ${need} required (no thin single-source briefs)`
         : `thin material: ${chars} chars across ${sources.length} outlets < ${need} required`,
     };
   }
-  return { ok: true, skip: false, chars, sources: sources.length, quotes, owners, need, reason: `sufficient material (${chars} chars, ${sources.length} src, ${quotes} quotes)` };
+  return { ok: true, skip: false, chars, sources: sources.length, quotes, owners, need, extracted, reason: `sufficient material (${chars} chars, ${sources.length} src, ${Number.isFinite(extracted) ? extracted + " full-text, " : ""}${quotes} quotes)` };
 }
 
 // Grounding-aware STRUCTURAL allowances. A genuinely shorter (but properly sourced) piece may carry

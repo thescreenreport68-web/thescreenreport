@@ -12,20 +12,26 @@ let pass = 0, fail = 0;
 const ok = (c, m) => { if (c) { pass++; console.log("  ✓ " + m); } else { fail++; console.log("  ✗ FAIL: " + m); } };
 const bundle = (texts, quotes = []) => ({ sources: texts.map((t, i) => ({ text: "x".repeat(t), quotes: quotes[i] || [] })) });
 
-console.log("=== 1. QUALITY FLOOR — thin stories are skipped, not shrunk ===");
+console.log("=== 1. QUALITY FLOOR — calibrated on LIVE tick #524, which skipped 4 of 4 ===");
 {
-  // the exact shape that flooded the site: one outlet, a few hundred chars, published as a ~220w brief
-  const thin = assessGrounding(bundle([600]));
-  ok(thin.skip, `single-source 600 chars → SKIP (${thin.reason})`);
-  const midSingle = assessGrounding(bundle([1800]));
-  ok(midSingle.skip, "single-source 1800 chars → SKIP (a lone outlet must be RICH: 'no single-source shorts')");
-  const richSingle = assessGrounding(bundle([4000]));
-  ok(!richSingle.skip, "single-source 4000 chars → allowed (one outlet, but real material)");
-  const twoThin = assessGrounding(bundle([700, 500]));
-  ok(twoThin.skip, "two outlets but 1200 chars total → SKIP (still too thin to write properly)");
-  const twoOk = assessGrounding(bundle([1200, 900]));
-  ok(!twoOk.skip, "two outlets, 2100 chars → allowed");
-  ok(thin.chars === 600 && thin.sources === 1, "assessment reports the real numbers (so skips are explainable + tunable)");
+  // 🔴 THE DECISIVE RULE: did we get the outlet's real article, or only its RSS blurb?
+  // Live #524 skipped both of these identically; only the first deserved it.
+  const blurb = assessGrounding({ ...bundle([300]), extractedCount: 0, inlineCount: 1 });
+  ok(blurb.skip && /full-text/.test(blurb.reason), `300-char feed summary → SKIP (${blurb.reason.slice(0, 58)})`);
+  const realArticle = { ...bundle([2130]), extractedCount: 1, inlineCount: 0 };
+  ok(!assessGrounding(realArticle).skip, "2130-char EXTRACTED article → allowed (was wrongly cut for 70 chars)");
+  // a blurb stays skipped no matter how long it is — kind of material first, size second
+  ok(assessGrounding({ ...bundle([9000]), extractedCount: 0, inlineCount: 3 }).skip, "even a LONG summary-only bundle is skipped (no real reporting behind it)");
+
+  // size still matters once we have real text
+  const thin = assessGrounding({ ...bundle([600]), extractedCount: 1 });
+  ok(thin.skip, "single-source 600 chars of real text → still SKIP (too little to write 250 honest words)");
+  ok(!assessGrounding({ ...bundle([4000]), extractedCount: 1 }).skip, "single-source 4000 chars → allowed");
+  ok(assessGrounding({ ...bundle([700, 500]), extractedCount: 2 }).skip, "two outlets, 1200 chars → SKIP (still too thin)");
+  ok(!assessGrounding({ ...bundle([1200, 900]), extractedCount: 2 }).skip, "two outlets, 2100 chars → allowed");
+  ok(thin.chars === 600 && thin.sources === 1, "assessment reports the real numbers (skips stay explainable + tunable)");
+  // unknown bundle shape must not be guessed into the bin
+  ok(!assessGrounding(bundle([3000])).skip, "bundle with no extraction counts → judged on size alone, never guessed");
 }
 
 console.log("=== 2. NO BUNDLE ⇒ we do not guess a story into the bin (fail-safe direction) ===");
