@@ -2093,8 +2093,10 @@
    "eventSlug": "spider-man-brand-new-day-bo-opening",
    "form": "BO-OPENING",
    "reason": "under floor: no opening/weekend/gross figure in the report",
-   "tries": 2,
-   "at": "2026-07-23T04:34:45.661Z"
+   "tries": 3,
+   "at": "2026-07-24T00:35:42.478Z",
+   "dead": true,
+   "expiresAt": "2026-07-27T00:35:42.478Z"
   },
   {
    "key": "descendants-wicked-wonderland-bo-opening|BO-OPENING",
@@ -2355,10 +2357,10 @@
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
    "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 37,
-   "at": "2026-07-24T00:03:34.023Z",
+   "tries": 38,
+   "at": "2026-07-24T00:32:58.847Z",
    "dead": true,
-   "expiresAt": "2026-07-27T00:03:34.023Z"
+   "expiresAt": "2026-07-27T00:32:58.847Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2399,14 +2401,14 @@
    "expiresAt": "2026-07-26T23:05:18.855Z"
   }
  ],
- "zeroStreak": 28,
+ "zeroStreak": 29,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.52925
+  "usd": 0.53361
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784851277043
+  "lastMs": 1784853067113
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2424,7 +2426,8 @@
    "masters of the universe": 3,
    "tom clancy's jack ryan: ghost war": 3,
    "silo": 2,
-   "citizen vigilante": 1
+   "citizen vigilante": 1,
+   "spider-man: brand new day": 1
   }
  }
 }
