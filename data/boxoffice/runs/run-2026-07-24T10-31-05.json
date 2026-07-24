@@ -1,0 +1,129 @@
+{
+ "runId": "run-2026-07-24T10-31-05",
+ "mode": "live",
+ "startedAt": "2026-07-24T10:31:05.848Z",
+ "films": 26,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "score": 50
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "words 140 < 180 (owner-set ~200-word minimum)",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.21,
+  "behind": true,
+  "expected": 19.71,
+  "allow": 1
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 3,
+ "zeroStreak": 3,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.06064
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "warn": 1
+  },
+  "faults": [
+   {
+    "stage": "netflix",
+    "message": "Top 10 fetch/parse failed — streaming supply will be empty: fetch failed",
+    "severity": "warn",
+    "at": "2026-07-24T10:31:11.592Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-24T10:35:48.492Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1012,
+    "out": 522,
+    "usd": 0.00031,
+    "ms": 3029
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3422,
+    "out": 645,
+    "usd": 0.00021,
+    "ms": 2214
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 7691,
+    "out": 508,
+    "usd": 0.00097,
+    "ms": 3894
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1459,
+    "out": 2152,
+    "usd": 0.00052,
+    "ms": 23191
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3964,
+    "out": 1917,
+    "usd": 0.00157,
+    "ms": 68914
+   }
+  },
+  "totalUsd": 0.00358
+ },
+ "openrouterTotalUsd": 0.00336
+}
