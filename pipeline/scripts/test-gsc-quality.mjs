@@ -1,0 +1,107 @@
+// DEV-ONLY unit test (no network, no spend): the 2026-07-24 recovery-mode build.
+//   Suite 1 — QUALITY FLOOR: thin / single-source-short stories are SKIPPED, never degraded.
+//   Suite 2 — the backwards branch is gone (a weak story no longer earns a lower bar).
+//   Suite 3 — DEMAND matching precision, built from the REAL false positives found on the live queue.
+//   Suite 4 — demand points are bounded + fail-open.
+//   Suite 5 — STRIKING DISTANCE is advisory and cannot fold unrelated stories into one ranking page.
+import { assessGrounding, structuralFloors, CFG } from "../lib/qualityFloor.mjs";
+import { demandForTopic, demandPoints, strikingMatch, DEMAND_CAP } from "../find/gscDemand.mjs";
+
+let pass = 0, fail = 0;
+const ok = (c, m) => { if (c) { pass++; console.log("  ✓ " + m); } else { fail++; console.log("  ✗ FAIL: " + m); } };
+const bundle = (texts, quotes = []) => ({ sources: texts.map((t, i) => ({ text: "x".repeat(t), quotes: quotes[i] || [] })) });
+
+console.log("=== 1. QUALITY FLOOR — thin stories are skipped, not shrunk ===");
+{
+  // the exact shape that flooded the site: one outlet, a few hundred chars, published as a ~220w brief
+  const thin = assessGrounding(bundle([600]));
+  ok(thin.skip, `single-source 600 chars → SKIP (${thin.reason})`);
+  const midSingle = assessGrounding(bundle([1800]));
+  ok(midSingle.skip, "single-source 1800 chars → SKIP (a lone outlet must be RICH: 'no single-source shorts')");
+  const richSingle = assessGrounding(bundle([4000]));
+  ok(!richSingle.skip, "single-source 4000 chars → allowed (one outlet, but real material)");
+  const twoThin = assessGrounding(bundle([700, 500]));
+  ok(twoThin.skip, "two outlets but 1200 chars total → SKIP (still too thin to write properly)");
+  const twoOk = assessGrounding(bundle([1200, 900]));
+  ok(!twoOk.skip, "two outlets, 2100 chars → allowed");
+  ok(thin.chars === 600 && thin.sources === 1, "assessment reports the real numbers (so skips are explainable + tunable)");
+}
+
+console.log("=== 2. NO BUNDLE ⇒ we do not guess a story into the bin (fail-safe direction) ===");
+{
+  ok(!assessGrounding(null).skip, "missing bundle → NOT skipped here (structured grounding may carry it; gate is the backstop)");
+  ok(!assessGrounding({ sources: [] }).skip, "empty sources → NOT skipped here either");
+}
+
+console.log("=== 3. THE BACKWARDS BRANCH IS GONE — a weak story never earns a lower bar ===");
+{
+  const base = { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
+  const lean = structuralFloors(base, assessGrounding(bundle([2000, 200])));
+  ok(lean.words >= CFG.MIN_WORDS, `lean story word floor ${lean.words} >= ${CFG.MIN_WORDS} (was 220 — the bug)`);
+  const rich = structuralFloors(base, assessGrounding(bundle([5000, 4000])));
+  ok(rich.words === 400, "well-sourced story keeps its full 400-word format floor");
+  ok(structuralFloors({ ...base, words: 220 }, assessGrounding(bundle([5000]))).words === CFG.MIN_WORDS,
+    `a format asking for 220 is RAISED to ${CFG.MIN_WORDS} — nothing publishes under the floor, ever`);
+  // structural allowances are still permitted for a genuinely leaner (but sufficiently sourced) piece
+  ok(lean.h2 <= base.h2 && lean.faq <= base.faq, "structural allowances survive for a leaner piece (that was never the problem)");
+}
+
+console.log("=== 4. DEMAND MATCHING — the REAL false positives from the live queue ===");
+{
+  const demand = { ok: true, queries: [
+    { q: "the odyssey", impressions: 35, clicks: 1, position: 1 },
+    { q: "universal trojan horse odyssey premiere", impressions: 3, clicks: 0, position: 5.8 },
+    { q: "2025 academy award winners", impressions: 3, clicks: 0, position: 59 },
+    { q: "christopher nolan movies ranked by tomatometer", impressions: 3, clicks: 0, position: 8.7 },
+  ], strikingPages: [], pages: [] };
+
+  // ❌ was matching on the single generic 8-letter token "premiere"
+  const boyle = demandForTopic({ primaryEntity: "Ink (film)", primaryKeyword: "Danny Boyle Ink", title: "Danny Boyle's Ink Sells to Netflix Ahead of Venice Premiere" }, demand);
+  ok(boyle.impressions === 0, "Danny Boyle/Ink no longer matches an Odyssey query via the word 'premiere'");
+
+  // ❌ was matching "award"+"winners" — generic industry words
+  const bafta = demandForTopic({ primaryEntity: "BAFTA Student Awards", primaryKeyword: "BAFTA Student Awards", title: "BAFTA Student Award Winners Announced in Los Angeles" }, demand);
+  ok(bafta.impressions === 0, "BAFTA Student Awards no longer matches '2025 academy award winners'");
+
+  // ✅ genuine subject match must still work
+  const odyssey = demandForTopic({ primaryEntity: "The Odyssey", primaryKeyword: "the odyssey premiere", title: "Zendaya Dons Angel Wings at 'The Odyssey' Premiere" }, demand);
+  ok(odyssey.impressions > 0 && odyssey.bestQuery === "the odyssey", `a real Odyssey story still matches (${odyssey.impressions} impr via "${odyssey.bestQuery}")`);
+
+  // title-only overlap is not enough — the SUBJECT must coincide
+  const titleOnly = demandForTopic({ primaryEntity: "Some Other Film", primaryKeyword: "some other film", title: "A story that merely mentions the odyssey in passing" }, demand);
+  ok(titleOnly.impressions === 0, "incidental title mention does NOT create demand (subject overlap required)");
+  ok(demandForTopic({ primaryEntity: "", primaryKeyword: "" }, demand).impressions === 0, "no subject → no demand");
+}
+
+console.log("=== 5. DEMAND POINTS — bounded, log-scaled, fail-open ===");
+{
+  ok(demandPoints({ impressions: 0 }) === 0, "zero impressions → zero points (never negative, never a gate)");
+  ok(demandPoints({ impressions: 100000 }) <= DEMAND_CAP, `huge demand still capped at ${DEMAND_CAP} (tie-breaker, not a takeover)`);
+  ok(demandPoints({ impressions: 200 }) > demandPoints({ impressions: 5 }), "more demand → more points (monotonic)");
+  const off = { ok: false, queries: [] };
+  ok(demandForTopic({ primaryEntity: "X", primaryKeyword: "x" }, off).impressions === 0, "GSC unavailable → 0, lane ranks exactly as before (FAIL OPEN)");
+  ok(demandForTopic({ primaryEntity: "X" }, null).impressions === 0, "null demand object is safe");
+}
+
+console.log("=== 6. STRIKING DISTANCE — advisory, and cannot swallow unrelated stories ===");
+{
+  // THE LIVE INCIDENT: 5 unrelated topics all pointed at one ranking page via the lone token "odyssey".
+  const demand = { ok: true, queries: [], pages: [], strikingPages: [
+    { slug: "christopher-nolan-addresses-the-odyssey-backlash", impressions: 3, position: 26.3 },
+  ] };
+  const mine = new Set(["christopher-nolan-addresses-the-odyssey-backlash"]);
+  const unrelated = [
+    { primaryEntity: "Teyana Taylor", primaryKeyword: "teyana taylor world cup" },
+    { primaryEntity: "Samantha Morton", primaryKeyword: "samantha morton circe" },
+    { primaryEntity: "Tom Holland", primaryKeyword: "tom holland pattinson" },
+  ];
+  ok(unrelated.every((t) => !strikingMatch(t, demand, mine)),
+    "3 unrelated stories no longer all point at the same ranking page (1 shared word is not enough)");
+  const real = strikingMatch({ primaryEntity: "Christopher Nolan", primaryKeyword: "christopher nolan odyssey" }, demand, mine);
+  ok(!!real && real.advisory === true, "a genuine 2-token subject match IS returned, flagged advisory (never an authority to rewrite)");
+  ok(!strikingMatch({ primaryEntity: "Christopher Nolan", primaryKeyword: "christopher nolan odyssey" }, demand, new Set(["someone-elses-page"])),
+    "a page this lane does not own is invisible to striking distance");
+}
+
+console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
+process.exit(fail ? 1 : 0);

@@ -5,6 +5,7 @@ import { verifyGroundTruth } from "../lib/verifyEngine.mjs";
 import { verifyGate } from "../lib/verifyGate.mjs";
 import { verifyQuotes } from "../lib/quoteGuard.mjs";
 import { specificsGuard } from "../lib/specificsGuard.mjs";
+import { assessGrounding, structuralFloors } from "../lib/qualityFloor.mjs";
 
 // PHASE C — classify a gate hardBlock string. BLOCK = an accuracy/grounding/must-have failure that must NEVER be
 // auto-published (a fabrication, a contradicted fact, an ungrounded stray the writer left in, a missing
@@ -131,15 +132,13 @@ export function deterministic(article, topic) {
   };
   // Fallback (should be unreachable now that all 8 news forms are explicit) keeps the strict rank-#1 default.
   const base = PROFILE[topic.formatTag] || { words: 400, faq: 3, h2: 2, kt: 3, ext: 2, sources: true };
-  // C3 — GROUNDING-AWARE FLOORS: when the verified grounding is THIN (few sources / little real text), a SHORTER,
-  // fully-grounded brief is the CORRECT output (Phase B tells the writer to write short, never pad/fabricate). Relax
-  // the length/section/link floors so "accurate but short" is a legal, non-blocked outcome instead of a pad-or-block.
-  const bsrc = (topic._bundle && topic._bundle.sources) || [];
-  const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
-  const thinGrounding = bsrc.length < 2 || groundChars < 1500;
-  const p = thinGrounding
-    ? { ...base, words: Math.min(base.words, 220), h2: Math.min(base.h2, 1), faq: Math.min(base.faq, 2), kt: 0, ext: 0, sources: false }
-    : base;
+  // C3 — GROUNDING-AWARE FLOORS, RECOVERY MODE (owner 2026-07-24). This branch used to run BACKWARDS: the
+  // thinner the grounding, the LOWER the bar (words 400→220, no takeaways/links/Sources) — so the weakest
+  // stories published the most easily. That is the thin-brief flood Google punished. Structural allowances
+  // for a genuinely leaner (but properly sourced) piece survive; the WORD FLOOR never drops below 250, and a
+  // story with too little material is now SKIPPED upstream in run.mjs before any model is paid.
+  const assessment = assessGrounding(topic._bundle);
+  const p = structuralFloors(base, assessment);
 
   const hardBlocks = [];
   if (!article.title || !String(article.title).trim()) hardBlocks.push("no title"); // trim: a whitespace-only title slugifies to "" (audit 2026-07-06) — hold it as broken so it never reaches assemble

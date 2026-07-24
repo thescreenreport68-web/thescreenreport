@@ -14,6 +14,7 @@ import { canonicalize } from "./find/categorize.mjs";
 import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store.mjs";
 import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
 import { findSameStory, myRecentArticles } from "./find/sameStory.mjs";
+import { assessGrounding } from "./lib/qualityFloor.mjs";
 import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
@@ -191,6 +192,25 @@ async function processTopic(topic, i) {
       }
     } catch (e) {
       console.log("  ⚠ content finder error:", e.message);
+    }
+
+    // ── RECOVERY-MODE QUALITY FLOOR (owner 2026-07-24) — the CHEAPEST possible rejection point.
+    // "No thin stories, no single-source shorts... skip those stories completely." Assessed on the material the
+    // content finder actually extracted, BEFORE the editorial gate / writer / judge / image are paid for. The old
+    // behaviour published these as sub-250-word briefs (the gate LOWERED its bar for them); measured result was 138
+    // such articles in one week earning ZERO Google impressions. Skipping here is both the quality fix and the
+    // single biggest cost saving in the lane. Every decision logs its numbers so the thresholds can be tuned from
+    // the observed distribution instead of guesswork.
+    {
+      const q = assessGrounding(topic._bundle);
+      console.log(`  quality floor: ${q.chars} chars · ${q.sources} src · ${q.quotes || 0} quotes → ${q.skip ? "SKIP" : "ok"} (${q.reason})`);
+      if (q.skip) {
+        rec.status = "rejected_thin"; rec.holdReason = `quality floor: ${q.reason}`;
+        console.log(`  ⛔ SKIPPED (recovery-mode quality floor) — no model spend on this story`);
+        rec.ms = Date.now() - t0;
+        try { fs.writeFileSync(path.join(STATE, topic.id + ".json"), JSON.stringify(rec, null, 2)); } catch { /* best effort */ }
+        return rec;
+      }
     }
 
     // ── EDITORIAL GATE (Stage 3.5, 2026-07-03 — the gossip automation's wrong-subject killer, news-scoped).

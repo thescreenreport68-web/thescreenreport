@@ -69,6 +69,7 @@ jobs:
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           JINA_API_KEY: ${{ secrets.JINA_API_KEY }}
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}   # real search demand at FIND time (one cached call/12h; fails open)
           # RELEASE-DAY SURGE (owner 2026-07-17, The Odyssey): governor target raised — "even a hundred, I
           # don't care" — the quality bar still meters actual output; dial back after the release wave.
           PACE_TARGET: "90"

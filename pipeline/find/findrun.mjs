@@ -11,6 +11,8 @@ import { scoreTopics, selectDiverse } from "./score.mjs";
 import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 import { buildRadar, loadRadar, radarBoost } from "./radar.mjs";
+import { loadDemand, demandForTopic, demandPoints, strikingMatch } from "./gscDemand.mjs";
+import { myPublishedSlugs } from "./sameStory.mjs";
 import { load as paceLoad, save as paceSave, recordCandidates } from "../lib/pacing.mjs";
 
 const arg = (k, d) => Number((process.argv.find((a) => a.startsWith(`--${k}=`)) || "").split("=")[1]) || d;
@@ -195,11 +197,46 @@ if (!radar) {
   try { radar = await buildRadar(); monitor.stage("radar", `rebuilt — ${radar.hotEntities.length} hot entities (top: ${radar.hotEntities.slice(0, 5).join(", ")})`); }
   catch (e) { monitor.stage("radar", `rebuild failed (${String(e?.message || e).slice(0, 80)}) — continuing without boosts`); }
 }
+// ── REAL SEARCH DEMAND (owner 2026-07-24) — the feedback loop this lane never had ────────────────
+// ONE cached GSC call per refresh (12h TTL), never per topic. Prefers stories people actually search
+// for over zero-demand trade briefs, and records the winning query so the writer can phrase the
+// headline in searchers' own words. Bounded (+8 max) and FAIL-OPEN: while the site is crawl-parked
+// the data is sparse, so this must behave as a tie-breaker, never as a gate that buries a big story
+// with no search history. `strikingMatch` is ADVISORY only — it raises priority near a page we
+// half-rank for; the decision to rewrite a live URL stays with sameStory.findSameStory in run.mjs.
+let demand = { ok: false };
+try {
+  demand = await loadDemand();
+  monitor.stage("demand", demand.ok
+    ? `GSC ${demand.cached ? `cache (${demand.ageH}h old)` : "fetched"} — ${demand.queries.length} queries, ${demand.strikingPages.length} striking-distance pages`
+    : `unavailable (${demand.reason}) — ranking unchanged`);
+} catch (e) { monitor.stage("demand", `skipped (${String(e?.message || e).slice(0, 60)})`); }
+const _mySlugs = demand.ok ? myPublishedSlugs() : null;
+let _withDemand = 0;
 for (const t of verified) {
+  if (demand.ok) {
+    const d = demandForTopic(t, demand);
+    const pts = demandPoints(d);
+    if (pts > 0) {
+      _withDemand++;
+      t.priority = (t.priority || 0) + pts;
+      (t.signals ||= {}).demand = pts;
+      t.demandImpressions = d.impressions;
+      // the searcher's own words — generate.mjs may use this for PHRASING only, never for new facts
+      if (d.bestQuery) { t.demandQuery = d.bestQuery; t.demandPosition = d.bestPosition; }
+    }
+    const sd = strikingMatch(t, demand, _mySlugs);
+    if (sd) { t.priority = (t.priority || 0) + 4; (t.signals ||= {}).striking = 4; t.strikingSlug = sd.slug; t.strikingPosition = sd.position; }
+  }
   const rb = radarBoost(t, radar);
   if (rb) { t.priority = (t.priority || 0) + rb.boost; (t.signals ||= {}).radar = rb.boost; t.radarKind = rb.kind; }
   const sType = t.sensitivity === "high" || /death|arrest|lawsuit|divorce|legal/.test(String(t.eventType || ""));
   t.tierClass = sType ? "S" : (rb || (t.verification?.outletCount || 0) >= 3) ? "A" : (t.priority || 0) >= 60 ? "B" : "C";
+}
+if (demand.ok) {
+  // re-rank so the demand/striking boosts actually change selection order, not just the stored numbers
+  verified.sort((a, b) => (b.priority || 0) - (a.priority || 0));
+  monitor.stage("demand", `${_withDemand}/${verified.length} candidates carry measurable search demand (rest unaffected — tie-breaker only)`);
 }
 // PACING GOVERNOR window feed (Phase 4): every sweep's scored, eligible candidates enter the rolling 24h
 // quantile window (max-score-per-event — dedup/hygiene handled inside recordCandidates). This is what lets the

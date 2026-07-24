@@ -192,6 +192,11 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
   const bsrc = (topic._bundle && topic._bundle.sources) || [];
   const groundChars = bsrc.reduce((n, s) => n + (s.text || "").length, 0);
   const thinGrounding = bsrc.length < 2 || groundChars < 1500;
+  // RECOVERY MODE (owner 2026-07-24): nothing below this publishes, so the writer must never be TOLD to aim
+  // lower. The old thin-grounding budget asked for ~230 words — under the floor, so the piece was written,
+  // paid for, and then hard-blocked. Genuinely thin stories are now skipped upstream in run.mjs before any
+  // model runs; what reaches the writer has the material to clear the floor honestly.
+  const QUALITY_MIN_WORDS = Number(process.env.QUALITY_MIN_WORDS ?? 250);
   // SANITY floor only (2026-07-04, NEWS_AUTOMATION_SPEC §3): NOT a padding target. The old 220/350 floor forced the
   // writer to pad a thin source up to a length — and padding IS how invention gets in. A faithful rewrite of a top
   // outlet's story is naturally long enough; a genuinely thin source becomes a SHORT, tight, fully-grounded brief and
@@ -237,10 +242,11 @@ CATEGORY / SUBCATEGORY: ${topic.category} / ${topic.subcategory}
 PRIMARY KEYWORD: ${topic.primaryKeyword} — work its main words into the TITLE, naturally (REQUIRED — the title must contain them, e.g. a casting story leads with the star + project), and use it once early in the body. Do NOT force the exact phrase into a subheading or repeat it through the article.
 ANGLE: ${topic.angle || "the most interesting TRUE angle"}${niche ? "\nNICHE STYLE: " + niche.guide : ""}${subShape ? "\nCATEGORY CRAFT: " + subShape : ""}${tierPreset ? "\nMUSIC LANE: " + tierPreset : ""}
 STORY STATUS: ${topic.verification?.status || topic.storyStatus || "n/a"} — CONFIRMED = state it plainly; DEVELOPING = attribute the core claim by NAME ("according to [outlet]"), do not present it as independently confirmed; RUMOR/HOLD = hedge heavily, never assert it as fact.
-SENSITIVITY: ${topic.sensitivity || "normal"} — if "high" (death / legal / health / allegation) use STRICTLY neutral verbs (reportedly, confirmed, announced) and BAN any playful, speculative, or sensational phrasing.
+SENSITIVITY: ${topic.sensitivity || "normal"} — if "high" (death / legal / health / allegation) use STRICTLY neutral verbs (reportedly, confirmed, announced) and BAN any playful, speculative, or sensational phrasing.${topic.demandQuery ? `
+SEARCHERS' OWN WORDS: real people reached this site searching "${topic.demandQuery}". Where it fits NATURALLY and TRUTHFULLY, prefer that vocabulary and word order in the title and metaTitle — it is how your reader actually phrases this subject. ⛔ STRICT LIMITS: this supplies PHRASING ONLY, never facts. Do NOT introduce any name, work, number, claim or angle from that query that the REFERENCE FACTS below do not state — a search phrase is not a source. If the query implies something the facts don't support (a ranking, a rumour, a different film), IGNORE it completely. Accuracy outranks phrasing every time.` : ""}
 
 WORD BUDGET: ${thinGrounding
-    ? "the gathered grounding is THIN — write a TIGHT, fully-grounded ~230-320-word brief. Do NOT stretch toward a \"full\" article length by adding background, career history, or franchise context the sources below don't contain — padding beyond the sources is exactly how fabrications happen. Short and 100% grounded is the CORRECT outcome here."
+    ? `the grounding is on the leaner side — write a TIGHT, fully-grounded ${QUALITY_MIN_WORDS}-380-word piece. It MUST clear ${QUALITY_MIN_WORDS} words (anything shorter is not publishable at all), but reach that length ONLY from what the sources below actually contain — never by adding background, career history or franchise context they don't state. Padding beyond the sources is exactly how fabrications happen: if the material genuinely cannot support ${QUALITY_MIN_WORDS} grounded words, write what IS supported and let it be rejected rather than inventing to fill the gap.`
     : "solid grounding — write the form's natural length (~450-650 words), every fact from the sources below."}
 
 ⛔ NUMBERS & NAMED SPECIFICS — the #1 rule (this is what gets articles held): NEVER state a NUMBER or hard specific
