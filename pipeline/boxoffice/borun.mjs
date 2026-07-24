@@ -325,6 +325,14 @@ export async function boRun({
         hold(out.scaffold.slice(0, 3).join(" | "), { score: job.qa?.score });
         continue;
       }
+      // NO-REWRITE (owner directive): assemble refused to overwrite a live article. Branch on
+      // refusedRewrite specifically, NOT on !out.written — a dryRun legitimately returns written:false.
+      // Without this the refusal was still booked as a publish: it ratcheted the tracker baseline past a
+      // number that never went live (which then BLOCKS the genuine republish) and dispatched a deploy.
+      if (out.refusedRewrite) {
+        hold(`refused rewrite (already published): ${out.slug}`, { park: false, score: job.qa?.score });
+        continue;
+      }
       written++;
       if ((FORMS[angle.form] || {}).streaming) streamWritten++;
       if (!dryRun) {
