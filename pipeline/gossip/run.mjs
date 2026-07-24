@@ -337,7 +337,10 @@ export async function runGossip(topic, {
     if (claimAudit) {
       const audit = await auditImpl({ bundle, article });
       claimAuditReport = audit;
-      if (audit.unsupported?.length) console.log(`[claim-audit] ${audit.unsupported.length} unsupported of ${audit.checked} sentence(s)`);
+      if (audit.unsupported?.length) {
+        console.log(`[claim-audit] ${audit.unsupported.length} unsupported of ${audit.checked} sentence(s)`);
+        for (const u of audit.unsupported.slice(0, 6)) console.log(`   ↳ ${u.why} — "${String(u.sentence).slice(0, 90)}"`);
+      }
       fixIssues.push(...auditFixIssues(audit));
     }
   }

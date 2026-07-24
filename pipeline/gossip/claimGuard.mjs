@@ -76,20 +76,20 @@ const CALLSIGN_RE = /\b[WK][A-Z]{2,4}(?:-TV)?\b/g;
 const MASTHEAD_RE = /\b(?:TMZ|People|PEOPLE|Page Six|Us Weekly|E! News|Variety|Deadline|Billboard|Rolling Stone|The Sun|Daily Mail|Hollywood Reporter|Entertainment Tonight|ET Online|Complex|Pitchfork|Vulture|HuffPost|BuzzFeed|Reuters|AP|Associated Press|CNN|NBC|ABC|CBS|Fox News|BBC)\b/g;
 const ATTRIBUTION_CTX = /\b(?:told|per|reports?|reported|according to|echoed|confirmed to|first reported|writes|noted|cited|citing|and other outlets)\b/i;
 
-function outletsInBundle(bundle) {
-  const set = new Set();
-  for (const s of bundle?.sources || []) {
-    for (const piece of [s.outlet, s.url]) {
-      if (piece) set.add(norm(piece).replace(/ /g, ""));
-    }
-  }
-  return set;
+// 2026-07-25 — a live run flagged "Page Six" as unsourced when Page Six WAS the source. Exact-match
+// lookup could not see it: the outlet arrives as a URL ("pagesix.com/2026/...") as often as a display
+// name, and "pagesixcom2026" never equals "pagesix". Match as a SUBSTRING of everything we know about
+// the sources instead. A false positive here deletes real attribution, so this side must be generous.
+function outletHaystack(bundle) {
+  const parts = [];
+  for (const s of bundle?.sources || []) for (const piece of [s.outlet, s.url, s.title]) if (piece) parts.push(String(piece));
+  return norm(parts.join(" ")).replace(/ /g, "");
 }
 
 /** Outlet names asserted in prose that we never actually gathered. */
 export function unsourcedOutlets(body, bundle) {
-  const known = outletsInBundle(bundle);
-  const corpus = corpusOf(bundle);
+  const known = outletHaystack(bundle);
+  const corpus = corpusOf(bundle).replace(/ /g, "");
   const hits = new Map();
   for (const para of String(body || "").split(/\n{2,}/)) {
     if (/^#{1,6}\s/.test(para.trim())) continue;
@@ -98,8 +98,8 @@ export function unsourcedOutlets(body, bundle) {
       const masked = unit.replace(/["“][^"”]*["”]/g, " ");   // never judge inside a quote
       for (const m of [...(masked.match(CALLSIGN_RE) || []), ...(masked.match(MASTHEAD_RE) || [])]) {
         const key = norm(m).replace(/ /g, "");
-        if (!key || known.has(key)) continue;
-        if (corpus.replace(/ /g, "").includes(key)) continue;               // present in gathered text
+        if (!key || known.includes(key)) continue;      // it IS one of our sources
+        if (corpus.includes(key)) continue;              // named inside the text we gathered
         if (!hits.has(m)) hits.set(m, unit.trim().slice(0, 140));
       }
     }

@@ -92,11 +92,29 @@ export function wordRangeFor(bundle, anchors = []) {
   const bg = (bundle?.background?.timeline || []).length + (bundle?.background?.priorStatements || []).length;
   // a "depth score" — how much genuinely distinct material the writer has to work with
   const depth = chars / 1000 + facts * 0.6 + quotes * 0.8 + bg * 0.9;
-  if (depth >= 22) return { lo: 800, hi: 1000, label: "800\u20131000 words" };
-  if (depth >= 15) return { lo: 650, hi: 850, label: "650\u2013850 words" };
-  if (depth >= 9)  return { lo: 500, hi: 700, label: "500\u2013700 words" };
-  if (depth >= 5)  return { lo: 350, hi: 550, label: "350\u2013550 words" };
-  return { lo: 250, hi: 400, label: "250\u2013400 words" };
+  // 🔴 2026-07-25 — THE CALIBRATION BUG BEHIND THE INVENTED PROSE. The score above double-counts: the
+  // extracted facts ARE the source text, re-indexed. A 2,323-char story (about 420 words of reporting)
+  // scored 23 on 20 extracted facts and was handed an 800–1000 target — so the writer, with nothing
+  // left to report, filled the gap with atmosphere it could not source ("caught in the act of being
+  // together", "a fleeting, genuine moment"). That is the padding rule failing in the one place it
+  // matters. Extraction re-organises material; it does not create it.
+  //
+  // So the honest ceiling is set by how much REPORTING we actually hold. A story can legitimately run
+  // longer than its sources — structure, attribution, context and background all cost words — but not
+  // several times longer. Archive background is the one genuinely additive input, so it lifts the cap.
+  const sourceWords = chars / 5.5;                       // ~5.5 chars per word incl. spaces
+  const archiveBg = bundle?.background?.usedArchive ? bg : 0;   // only our own past coverage is additive
+  const ceiling = Math.round(sourceWords * 1.7 + archiveBg * 12);
+  const band = depth >= 22 ? { lo: 800, hi: 1000 }
+             : depth >= 15 ? { lo: 650, hi: 850 }
+             : depth >= 9  ? { lo: 500, hi: 700 }
+             : depth >= 5  ? { lo: 350, hi: 550 }
+             :               { lo: 250, hi: 400 };
+  if (ceiling >= band.hi) return { ...band, label: `${band.lo}\u2013${band.hi} words` };
+  // Not enough reporting to support the band the score suggested — shrink to what the material holds.
+  const hi = Math.max(250, Math.min(band.hi, ceiling));
+  const lo = Math.max(200, Math.round(hi * 0.75));
+  return { lo, hi, label: `${lo}\u2013${hi} words`, capped: true };
 }
 
 export function buildGossipPrompt(bundle, frame, topic, corrections = null, ledeStyle = "scene", brief = null, anchors = []) {
@@ -110,6 +128,25 @@ export function buildGossipPrompt(bundle, frame, topic, corrections = null, lede
     ? anchors.map((a) => `${a.id} (${a.outlet}): "${a.text}"`).join("\n")
     : ((bundle.quotes || []).map((q) => `• "${q}"`).join("\n") || "(no verbatim quotes available — paraphrase only, invent nothing)");
   const range = wordRangeFor(bundle, anchors);
+  // EXTRACTED MATERIAL (2026-07-25). The enrichment agents mine the sources for every distinct fact,
+  // date and background beat — but until now that material only reached the writer in a DEPTH PASS,
+  // i.e. after a short draft had already been written and paid for. The writer was left to re-mine
+  // several thousand characters of raw source on its own, and it consistently used a fraction of it.
+  // Showing the distilled list up front is the honest way to reach length: it is the SAME facts,
+  // already ground-checked against the sources, just no longer buried.
+  const dFacts = [...((bundle?.details?.facts) || []),
+                  ...((bundle?.details?.timeline) || []).map((t) => `${t.when ? `${t.when}: ` : ""}${t.what || ""}`.trim())].filter(Boolean);
+  const bgItems = [...((bundle?.background?.timeline) || []).map((t) => `${t.when ? `${t.when}: ` : ""}${t.what || ""}`.trim()),
+                   ...((bundle?.background?.priorStatements) || []).map((p) => `${p.who || "They"} previously: ${p.what || ""}`.trim()),
+                   ...((bundle?.background?.whoTheyAre) || []),
+                   ...((bundle?.background?.whatsNext) || [])].filter(Boolean);
+  const materialBlock = (dFacts.length || bgItems.length) ? `
+EXTRACTED MATERIAL — every one of these was pulled from the sources above and checked back against them.
+This is NOT extra information: it is the same reporting, itemised so you do not miss any of it. Use as much
+as genuinely belongs in the piece, and put each fact where it makes sense. Do not repeat an item twice, and
+do not stretch one into a paragraph — if an item does not fit the story you are telling, leave it out.
+${dFacts.slice(0, 40).map((x) => `• ${x}`).join("\n")}${bgItems.length ? `\n\nBACKGROUND (how we got here — same rules):\n${bgItems.slice(0, 20).map((x) => `• ${x}`).join("\n")}` : ""}
+` : "";
 
   const user = `${topic.isUpdate ? `⚠ FOLLOW-UP: we already covered this story's earlier chapter. LEAD with the NEW development${topic.updateFact ? ` (${topic.updateFact})` : ""}; recap the background in ONE sentence mid-piece, never as the opener.\n` : ""}${topic.angle ? `THE STORY (the content-verified angle — write THIS): ${topic.angle}\n` : ""}DISCOVERY HEADLINE (UNVERIFIED — may be clickbait or overstated; do NOT treat it as fact, verify every specific against the bundle): ${topic.title || ""}
 ABOUT: ${topic.primaryEntity || bundle.entity || ""}
@@ -117,6 +154,7 @@ ABOUT: ${topic.primaryEntity || bundle.entity || ""}
 THE VERIFIED BUNDLE — the ONLY facts and quotes you may use:
 ${sourceBlock || "(no source text)"}
 
+${materialBlock}
 ${anchors.length ? `QUOTE CARDS — to include a quote, write its TOKEN like ⟦Q1⟧ exactly where the quote belongs (the system replaces the token with the exact quote text; NEVER type quote words yourself; attribute the speaker in the surrounding sentence). Use 1–3 of the strongest; skip weak ones:` : `VERBATIM QUOTES you may use (copy exactly; attribute them):`}
 ${quoteBlock}
 ${brief ? `

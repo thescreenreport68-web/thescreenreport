@@ -38,6 +38,30 @@ function groundedOnly(items, corpusNorm, { key = null, minLen = 12 } = {}) {
   return out;
 }
 
+// 2026-07-25 — with the token budget raised, the extractor swung the other way: 203 "facts" out of a
+// 900-word source, most of them the same statement re-sliced. That is not depth, and it is actively
+// harmful twice over — wordRangeFor scores facts, so every story would look 800-word-rich, and a writer
+// handed 40 near-identical lines will repeat itself. Collapse them to genuinely distinct items.
+function dedupeItems(items, { key = null, cap = 60 } = {}) {
+  const out = [], seen = [];
+  for (const it of items || []) {
+    const t = norm(key ? it?.[key] : it);
+    if (!t) continue;
+    const toks = new Set(t.split(" ").filter((w) => w.length > 3));
+    if (!toks.size) continue;
+    const dup = seen.some((prev) => {
+      let hit = 0;
+      for (const w of toks) if (prev.has(w)) hit++;
+      return hit / Math.min(toks.size, prev.size) >= 0.8;   // same statement, re-sliced
+    });
+    if (dup) continue;
+    seen.push(toks);
+    out.push(it);
+    if (out.length >= cap) break;
+  }
+  return out;
+}
+
 const EMPTY_DETAILS = { facts: [], quotes: [], timeline: [], people: [], numbers: [], openQuestions: [] };
 
 /**
@@ -53,29 +77,30 @@ export async function findDetails({ bundle, topic, chatImpl, retried = false } =
       system: "You extract facts for a newsroom. You NEVER add anything not present in the text. Every item must be traceable to the source. Output strict JSON only.",
       user: `SOURCE TEXT:\n${src}\n\nSUBJECT: ${topic?.primaryEntity || ""}\n\nExtract EVERYTHING a reporter could use, as JSON:
 {
- "facts": ["each distinct factual statement, one per item"],
+ "facts": ["each distinct factual statement, one per item — include every figure, age, date and amount WITH its context"],
  "quotes": [{"speaker":"who said it","text":"verbatim words exactly as written"}],
- "timeline": [{"when":"date or relative time","what":"what happened"}],
- "people": [{"name":"...","role":"who they are in this story"}],
- "numbers": ["every figure, age, date, amount WITH its context"],
- "openQuestions": ["what the source explicitly says is unknown or unconfirmed"]
+ "timeline": [{"when":"date or relative time","what":"what happened"}]
 }
-Be exhaustive — miss nothing. Invent nothing: if a field has no material, use an empty array.`,
+Cover everything the source establishes. Invent nothing: if a field has no material, use an empty array.
+LIMITS — a truncated reply is worse than a terse one, and a re-sliced duplicate is not a second fact:
+ • at most 40 facts, 20 quotes, 15 timeline entries
+ • ONE sentence per item
+ • never list the same statement twice in different words — merge it into a single, complete item`,
       json: true,
     }, chatImpl ? { chatImpl } : {});
     if (!data || typeof data !== "object") return { ...EMPTY_DETAILS, reason: "no data" };
     const c = norm(src);
     const out = {
-      facts: groundedOnly(data.facts, c),
-      quotes: groundedOnly(data.quotes, c, { key: "text", minLen: 15 }),
-      timeline: groundedOnly(data.timeline, c, { key: "what" }),
-      people: (data.people || []).filter((p) => p?.name && c.includes(norm(p.name))).slice(0, 12),
-      numbers: groundedOnly(data.numbers, c, { minLen: 4 }),
-      openQuestions: groundedOnly(data.openQuestions, c),
+      facts: dedupeItems(groundedOnly(data.facts, c), { cap: 45 }),
+      quotes: dedupeItems(groundedOnly(data.quotes, c, { key: "text", minLen: 15 }), { key: "text", cap: 20 }),
+      timeline: dedupeItems(groundedOnly(data.timeline, c, { key: "what" }), { key: "what", cap: 15 }),
+      people: [],
+      numbers: [],        // kept for shape stability; nothing reads these and asking cost us the facts
+      openQuestions: [],
       reason: "",
     };
-    const kept = out.facts.length + out.quotes.length + out.timeline.length + out.numbers.length;
-    const raw = (data.facts || []).length + (data.quotes || []).length + (data.timeline || []).length + (data.numbers || []).length;
+    const kept = out.facts.length + out.quotes.length + out.timeline.length;
+    const raw = (data.facts || []).length + (data.quotes || []).length + (data.timeline || []).length;
     if (raw > kept) console.log(`[detail] dropped ${raw - kept} ungrounded item(s) — kept ${kept}`);
     // 2026-07-25 review: one live bundle held 6,268 chars of source and came back with ZERO facts —
     // a silent extraction miss, not a thin story, and the writer then had nothing to build 800 words
@@ -86,11 +111,18 @@ Be exhaustive — miss nothing. Invent nothing: if a field has no material, use 
     }
     return out;
   } catch (e) {
-    return { ...EMPTY_DETAILS, reason: `detail finder unavailable: ${String(e?.message || e).slice(0, 50)}` };
+    // A truncated JSON array throws here. That used to end as "0 facts" in the log with no hint that
+    // anything had failed — and the writer then had nothing to build 800 honest words from.
+    const msg = String(e?.message || e);
+    if (!retried) {
+      console.log(`[detail] extraction failed (${msg.slice(0, 60)}) — retrying once on the fallback model`);
+      return findDetails({ bundle, topic, chatImpl, retried: true });
+    }
+    return { ...EMPTY_DETAILS, reason: `detail finder unavailable: ${msg.slice(0, 50)}` };
   }
 }
 
-const EMPTY_BG = { timeline: [], priorStatements: [], whoTheyAre: [], whatsNext: [] };
+const EMPTY_BG = { timeline: [], priorStatements: [], whoTheyAre: [], whatsNext: [], usedArchive: false };
 
 /**
  * The "how we got here" layer. Draws ONLY on the gathered sources plus our own past coverage
@@ -119,10 +151,13 @@ ONLY what the material supports. Empty arrays where you have nothing. Never spec
     if (!data || typeof data !== "object") return { ...EMPTY_BG, reason: "no data" };
     const c = norm(src + "\n" + archive);
     return {
-      timeline: groundedOnly(data.timeline, c, { key: "what" }),
-      priorStatements: groundedOnly(data.priorStatements, c, { key: "what" }),
-      whoTheyAre: groundedOnly(data.whoTheyAre, c),
-      whatsNext: groundedOnly(data.whatsNext, c),
+      // Only background drawn from our ARCHIVE is genuinely new material; background re-derived from the
+      // current sources is the same reporting reorganised, and must not inflate the word target.
+      usedArchive: (priorCoverage || []).length > 0,
+      timeline: dedupeItems(groundedOnly(data.timeline, c, { key: "what" }), { key: "what", cap: 12 }),
+      priorStatements: dedupeItems(groundedOnly(data.priorStatements, c, { key: "what" }), { key: "what", cap: 8 }),
+      whoTheyAre: dedupeItems(groundedOnly(data.whoTheyAre, c), { cap: 6 }),
+      whatsNext: dedupeItems(groundedOnly(data.whatsNext, c), { cap: 6 }),
       reason: "",
     };
   } catch (e) {
