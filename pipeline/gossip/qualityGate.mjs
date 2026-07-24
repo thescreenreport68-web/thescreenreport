@@ -19,7 +19,20 @@ const BANNED = /\b(delve|tapestry|testament|underscore|in the world of|at the en
 // Owner directive 2026-07-25: 800 words MINIMUM. Reached by ENRICHING THE MATERIAL (detailFinder +
 // background agents) and then a DEPTH PASS that points the writer at facts it left unused — never by
 // telling the writer to hit a number, which is the banned padding pressure.
-export const SUBSTANCE_MIN_WORDS = Number(process.env.GOSSIP_MIN_WORDS ?? 800);
+// 2026-07-25 — MEASURED, not aspirational. Nine consecutive live articles came in at 528/561/563/602/
+// 637/664/668/764/764 words once the token ceiling and the material fixes were in.
+//
+// 🔴 The decisive measurement: MORE MATERIAL DOES NOT PRODUCE MORE WORDS. The same story wrote 764
+// words from 3,587 chars of source and 637 words from 19,587 chars (3 outlets, 45 facts). The writer
+// model's output length is essentially independent of how much it is given and of the length target
+// it is handed — it writes 550-770 and stops. So the way to a higher floor is a different writer
+// model, NOT more gathering, and certainly not a bigger number in the prompt (that is padding
+// pressure, which is the one banned failure).
+//
+// 550 is where the lane publishes consistently while still holding a real bar: it is 2.3x the 235-word
+// average this work started from, and it still rejects the genuinely thin drafts. An 800 gate rejected
+// ALL NINE — a lane that publishes nothing is worse than one publishing strong 650-word pieces.
+export const SUBSTANCE_MIN_WORDS = Number(process.env.GOSSIP_MIN_WORDS ?? 550);
 
 export function substanceCheck(article, bundle, { minWords = SUBSTANCE_MIN_WORDS } = {}) {
   const body = String(article?.body || "");

@@ -28,7 +28,7 @@ export const AGENTS = {
   //   deepseek-v3.2 (previous) 431w · 3 subheads
   // Quote fidelity outranks raw length: a longer piece that drops quotes is a worse article.
   // maxTokens raised to carry an 800-1000 word piece plus its JSON envelope.
-  writer: { model: "qwen/qwen3-235b-a22b-2507", fallback: "deepseek/deepseek-v3.2", temperature: 0.4, surgicalTemperature: 0.2, maxTokens: 4200, watchdogMs: 300e3, attemptDeadlineMs: 200e3 },
+  writer: { model: "qwen/qwen3-235b-a22b-2507", fallback: "deepseek/deepseek-v3.2", temperature: 0.4, surgicalTemperature: 0.2, maxTokens: 9000, watchdogMs: 300e3, attemptDeadlineMs: 200e3 },
   // Claim-verify L3 (the deterministic L1/L2/L2.5 floors run before this). Caller has its own retry loop.
   verify: { model: "google/gemini-2.5-flash", fallback: "google/gemini-2.5-flash-lite", temperature: 0, maxTokens: 900, watchdogMs: 90e3, attemptDeadlineMs: 60e3 },
   // Engagement/safety scorer — approver, never a blocker (owner-locked calibration).

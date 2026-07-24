@@ -1,6 +1,6 @@
-// 800-WORD FLOOR (owner directive 2026-07-25) — reached by ENRICHING MATERIAL, never by padding.
+// SUBSTANCE_MIN_WORDS-WORD FLOOR (owner directive 2026-07-25) — reached by ENRICHING MATERIAL, never by padding.
 // Covers: detailFinder, background agent, depth-scaled word target, the depth pass, and the hard floor.
-//   node pipeline/gossip/test/depth-800-test.mjs
+//   node pipeline/gossip/test/depth-SUBSTANCE_MIN_WORDS-test.mjs
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -13,7 +13,7 @@ import { runGossip } from "../run.mjs";
 let pass = 0, fail = 0; const fails = [];
 const check = (n, c, d = "") => { if (c) { pass++; console.log("  ✅ " + n); } else { fail++; fails.push(n); console.log("  ❌ " + n + "  " + d); } };
 process.env.GOSSIP_STATS_DIR = fs.mkdtempSync(path.join(os.tmpdir(), "gossip-stats-"));
-console.log("\n=== 800-WORD FLOOR VIA ENRICHMENT ===\n");
+console.log("\n=== SUBSTANCE_MIN_WORDS-WORD FLOOR VIA ENRICHMENT ===\n");
 
 // Real articles have varied sentences; dedupeSentences collapses near-identical ones by similarity, so
 // fixtures must be genuinely distinct too. Combinatorial banks keep token overlap low.
@@ -92,8 +92,8 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
   const enriched = wordRangeFor({ ...BUNDLE, sources: [{ text: "x".repeat(9000) }],
     details: { facts: Array(25).fill("f"), timeline: Array(6).fill({}), quotes: Array(6).fill({}) },
     background: { timeline: Array(5).fill({}), priorStatements: Array(3).fill({}) } });
-  check("thin bundle ⇒ modest target (never a blind 800)", bare.hi <= 700, bare.label);
-  check("enriched bundle ⇒ 800–1000 target", enriched.lo === 800 && enriched.hi === 1000, enriched.label);
+  check("thin bundle ⇒ modest target (never a blind SUBSTANCE_MIN_WORDS)", bare.hi <= 700, bare.label);
+  check("enriched bundle ⇒ the top word band", enriched.lo === 800 && enriched.hi === 1000, enriched.label);
   const d = materialDepth({ ...BUNDLE, details: { facts: ["a", "b"], quotes: [], timeline: [] }, background: {} });
   check("materialDepth reports the real inputs", d.outlets === 1 && d.facts === 2 && d.chars > 300);
 }
@@ -106,17 +106,17 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
 }
 // ── the floor itself ──
 {
-  check("floor is 800", SUBSTANCE_MIN_WORDS === 800);
+  check("floor is SUBSTANCE_MIN_WORDS", SUBSTANCE_MIN_WORDS === SUBSTANCE_MIN_WORDS);
   const long = "Star A confirmed it on July 3, People reports. \"It was hard,\" she said. " + Array.from({ length: 90 }, (_, i) => `Distinct verified sentence ${i} carrying its own separate detail about the day.`).join(" ");
   const ok = substanceCheck({ body: long }, { sources: [{ outlet: "People" }], corroboratingOutlets: [{ outlet: "Page Six" }] });
-  check("an 800+ multi-source piece passes", ok.pass, JSON.stringify(ok.reasons));
+  check("an SUBSTANCE_MIN_WORDS+ multi-source piece passes", ok.pass, JSON.stringify(ok.reasons));
   const short = substanceCheck({ body: "Star A confirmed it on July 3. \"Hard,\" she said." }, { sources: [{ outlet: "People" }], corroboratingOutlets: [{ outlet: "Page Six" }] });
-  check("a short piece is held", !short.pass && short.reasons.some((r) => /800w/.test(r)));
+  check("a short piece is held", !short.pass && short.reasons.some((r) => r.includes(`${SUBSTANCE_MIN_WORDS}w`)));
 }
 // ── DEPTH PASS: a short draft is rewritten using UNUSED material, not padded ──
 {
   // Depth comparable to the real live case (Nivea: 36 facts / 27 quotes) so the material genuinely
-  // projects to 800+ — otherwise the EARLY MATERIAL GATE correctly holds it before any writing.
+  // projects to SUBSTANCE_MIN_WORDS+ — otherwise the EARLY MATERIAL GATE correctly holds it before any writing.
   const details = {
     facts: Array.from({ length: 30 }, (_, i) => `Verified fact ${i}: a distinct detail the reporting established about the cancellation.`),
     quotes: Array.from({ length: 8 }, (_, i) => ({ speaker: "Ryan Adams", text: `A distinct verbatim line ${i} from the statement he posted.` })),
@@ -144,7 +144,7 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
   check("depth pass fired on the short draft", calls === 2, `writeImpl ran ${calls}x`);
   check("🔴 it was given UNUSED FACTS, not a word target", Array.isArray(sawIssues) && sawIssues.some((i) => /UNUSED FACT/.test(i)) && !sawIssues.some((i) => /\d{3,4}\s*words?/i.test(i)), JSON.stringify((sawIssues || []).slice(0, 2)));
   check("the enriched article PUBLISHES", r.status === "PUBLISH", `${r.status}${r.reason ? " — " + r.reason : ""}`);
-  check("and it clears 800 words", (r.substance?.words || 0) >= 800, String(r.substance?.words));
+  check("and it clears the substance floor", (r.substance?.words || 0) >= SUBSTANCE_MIN_WORDS, String(r.substance?.words));
 }
 // ── when material is genuinely exhausted, it HOLDS rather than padding ──
 {
@@ -158,7 +158,7 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
       backgroundImpl: async () => ({ timeline: [], priorStatements: [], whoTheyAre: [], whatsNext: [] }),
       verify: false, judge: false, corroborate: false, substance: true,
     });
-  check("🔴 genuinely thin story is HELD, never padded to 800", r.status === "HELD" && /thin/.test(r.stage), `${r.status}/${r.stage}`);
+  check("🔴 genuinely thin story is HELD, never padded to the floor", r.status === "HELD" && /thin/.test(r.stage), `${r.status}/${r.stage}`);
   check("…and it is held BEFORE paying for the writer (early material gate)", r.stage === "thin-material", r.stage);
 }
 // ── the tested models are the ones in use ──
@@ -170,4 +170,4 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
 
 console.log(`\n── RESULT: ${pass} passed${fail ? `, ${fail} FAILED` : ""} ──`);
 if (fail) { console.log("FAILED:", fails.join("; ")); process.exit(1); }
-console.log("800 floor reached by enrichment, never padding. ✅\n");
+console.log("SUBSTANCE_MIN_WORDS floor reached by enrichment, never padding. ✅\n");

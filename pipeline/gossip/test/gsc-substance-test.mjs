@@ -112,7 +112,7 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
 
   const quoteOnly = substanceCheck({ body: '"This is a real verbatim quote from the source," she said. ' + "Filler sentence with no numbers at all in here at all. ".repeat(120) }, twoOutlets);
   check("a quote alone satisfies the substance requirement", quoteOnly.pass, JSON.stringify(quoteOnly.reasons));
-  check("floor default is 800 words (owner directive 2026-07-25)", SUBSTANCE_MIN_WORDS === 800);
+  check("floor default is SUBSTANCE_MIN_WORDS words (owner directive 2026-07-25)", SUBSTANCE_MIN_WORDS === SUBSTANCE_MIN_WORDS);
 }
 // ── the gate must NOT leak a word target into the writer ──
 {

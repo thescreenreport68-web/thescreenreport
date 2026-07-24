@@ -177,7 +177,7 @@ ${frame.writerDirective}
 ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its own sentence in the body:\n"${frame.disclaimerText}"` : ""}
 ${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
-LENGTH: write ${range.label} — the target matches how much VERIFIED material the bundle actually holds. Never pad past the material: a thin bundle means a SHORT, punchy, legal piece (padding invents facts — the one unforgivable error). Keep individual SENTENCES tight and develop what the bundle supports: the trigger, the who/what/when/where, the reaction, the what-we-know-vs-unconfirmed, the relevant timeline/context. More RELEVANT specifics = a stronger story.
+LENGTH: write ${range.label} — the target matches how much VERIFIED material the bundle actually holds. You have ample room to write it in full: never cut the article short to leave space for the JSON fields that follow it. Never pad past the material: a thin bundle means a SHORT, punchy, legal piece (padding invents facts — the one unforgivable error). Keep individual SENTENCES tight and develop what the bundle supports: the trigger, the who/what/when/where, the reaction, the what-we-know-vs-unconfirmed, the relevant timeline/context. More RELEVANT specifics = a stronger story.
 STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question.
 Then build the piece from the sections below. This is a MENU, NOT A FORM — include a section ONLY when the material genuinely supports it, and skip any you cannot fill from the sources. An omitted section is correct; an invented one is a failure. Use "## " subheads to break the piece up: 2–3 for a short piece, and 4–6 once it runs past ~600 words — a long article under four subheads is a wall of text. Never invent a section just to hit the count; if you have the material for a section, give it a subhead.
   • What was said — the quotes in full, with who said them and where
@@ -217,7 +217,7 @@ Return STRICT JSON:
   "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
   "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... 2 to 5 FAQ — pick the count by how much the story SUPPORTS (a rich, multi-fact story → 4–5; a thin one → 2), never pad to a fixed number. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
   "claims": [{"text":"the claim","sourceQuote":"the verbatim bundle text that supports it"}],
-  "_claimsRule": "REQUIRED — self-verify: for EVERY date, number, place name, person name, and work title (album/show/movie/song/book/tour) in the article, add a claims[] entry whose sourceQuote is the EXACT bundle text proving THAT specific attached to THAT thing. If the bundle has no text for a specific, do NOT write that specific.",
+  "_claimsRule": "REQUIRED — self-verify the RISKIEST specifics: every date, number, age, money amount, and work title (album/show/movie/song/book/tour), plus any person name you did NOT take straight from the sources. Give each a claims[] entry whose sourceQuote is the EXACT bundle text proving THAT specific attached to THAT thing. Cap this at 14 entries — pick the ones a reader could most easily check. This list is a CHECK on the article, never a substitute for it: never shorten the body to make room for it. If the bundle has no text for a specific, do NOT write that specific.",
   "whatWeKnow": ["confirmed/attributed points — only facts the bundle supports"],
   "whatWeDont": ["genuine open questions about THIS story's CORE development only — do NOT list basic attributes (the date/place/amount) of a DIFFERENT event you only mention as context, and NEVER list as 'unknown' anything you state as known"],
   "denial": "the subject/rep denial if any, else null",
@@ -270,7 +270,8 @@ export async function writeGossip({ bundle, frame, topic, model = null, correcti
   const { system, user } = useSurgical
     ? buildCorrectionPrompt(bundle, frame, topic, priorArticle, issues || corrections)
     : buildGossipPrompt(bundle, frame, topic, rewrite ? null : corrections, ledeStyle, brief, anchors);
-  // token budget lives in models.mjs (writer.maxTokens): an 800-1000-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
+  // 2026-07-25: 4200 could not hold an 800-1000w body PLUS claims[]/faq/the lists, and the BODY was what
+  // gave way (live: 602-668w with 50 verified facts unused). 9000 in models.mjs. An 800-1000-word body + dek + pull-quote + 3 takeaways + FAQ + claims + whatWeKnow/Dont must all fit
   // in the JSON, or the output truncates mid-sentence (the cause of an incomplete published article).
   const { data } = await agentChat("writer", { model: model || undefined, system, user, json: true, surgical: !!useSurgical });
   return data;

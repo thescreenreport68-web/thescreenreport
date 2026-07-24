@@ -157,7 +157,16 @@ export async function runGossip(topic, {
 
   // Step 4 — corroboration, AFTER the editorial gate kept the story (fail-safe enrichment; the frame below
   // tiers off the corroborated bundle exactly as before — only the spend order changed).
-  if (corroborate) { try { await corroborateBundle(topic, bundle, { ...(fetchImpl ? { fetchImpl } : {}) }); } catch { /* enrichment only */ } }
+  if (corroborate) {
+    const before = (bundle.sources || []).length;
+    try {
+      await corroborateBundle(topic, bundle, { ...(fetchImpl ? { fetchImpl } : {}) });
+      const gained = (bundle.sources || []).length - before;
+      console.log(`[corroborate] ${before} → ${(bundle.sources || []).length} source(s)` + (gained ? "" : " — NO second outlet found"));
+    } catch (e) {
+      console.log(`[corroborate] FAILED: ${String(e?.message || e).slice(0, 90)}`);
+    }
+  }
 
   // Step 4b — ENRICHMENT (2026-07-25). The owner's 800-word floor is met by giving the writer MORE REAL
   // MATERIAL, never by demanding more words of thin input. detailFinder mines every distinct fact/quote
@@ -463,7 +472,7 @@ export async function runGossip(topic, {
     if (offer.length >= 4 || unusedQuotes.length >= 2) {
       try {
         const issues = [
-          `You left verified material unused. This article covers ${(String(article.body || "").match(/^##\s/gm) || []).length} section(s); the material below supports MORE. Work every item in where it belongs and OPEN THE SECTIONS it unlocks ("## How We Got Here" for the timeline and history, "## The Other Side" for denials or the counter-claim, "## The Reaction" for what others said, "## What Happens Next" for anything upcoming). Keep every existing fact and quote exactly as they are. Do NOT pad, speculate, or repeat yourself — expand ONLY by using the listed material:`,
+          `You left verified material unused. This article is ${(String(article.body || "").match(/^##\s/gm) || []).length} section(s) long and ${totalUnused} of the facts below never made it in. A piece at this length needs 4–6 "## " sections; give each block of related material its own section rather than stacking everything under one. The sections available to you: "## What Was Said" (the quotes), "## How We Got Here" (timeline and history), "## The Other Side" (denial or counter-claim), "## The Reaction" (what others actually said), "## What Happens Next" (anything upcoming). Use the ones the material below actually fills — an empty section is a failure, but so is burying five facts in a wall of text. Keep every existing fact and quote exactly as they are. Do NOT pad, speculate, or repeat yourself — expand ONLY by using the listed material:`,
           ...offer.map((u) => `UNUSED FACT: ${u}`),
           ...unusedQuotes.map((q) => `UNUSED QUOTE (${q.speaker || "source"}): "${q.text}"`),
         ];
