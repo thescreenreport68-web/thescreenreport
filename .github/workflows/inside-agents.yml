@@ -66,6 +66,11 @@ jobs:
           # story's own trailer/announcement video are the reaction co-spine (X is permanently dead).
           # ~12% of the free daily quota at 12 stories/day. Absent = fail-soft (bsky + pages carry).
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          # GOOGLE SEARCH CONSOLE — read-only visibility signal (owner 2026-07-24, stages 1+2).
+          # OBSERVE ONLY: it never influences which story is published. Its job is the smoke
+          # alarm — the site went dark on 07-15 and nobody noticed for ~5 days. Absent or
+          # broken = the tick runs exactly as before and simply reports 'unavailable'.
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
           # Reddit OFFICIAL OAuth (REV 3): keyless reddit is 403 from runner IPs; with these set,
           # discovery + fan-comment anchors go through oauth.reddit.com. Absent = keyless fallback.
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}

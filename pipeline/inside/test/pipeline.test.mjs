@@ -319,6 +319,30 @@ await check("image agent returns null → held 'no >=1200px…' + parked", async
 });
 
 // ── 12) DEDUP second run ──────────────────────────────────────────────────────────────────────────
+// ── GSC is OBSERVATION ONLY — it must never be able to change or break publishing ────────────────
+await check("gsc: a broken/slow/absent GSC never stops the lane publishing", async () => {
+  for (const impl of [
+    async () => { throw new Error("GSC exploded"); },
+    async () => ({ ok: false, reason: "HTTP 500" }),
+    null, // disabled entirely
+  ]) {
+    const store = freshStore();
+    const r = await agentRun(baseImpls({ storeImpl: store, gscImpl: impl }));
+    assert.equal(r.published.length, 1, "publishing is unaffected by the monitoring feature");
+    assert.ok(r.gsc, "and the report still records WHY it had no data");
+    assert.equal(r.gsc.available, false);
+  }
+});
+
+await check("gsc: the alarm rides along on a normal tick without touching its decisions", async () => {
+  const store = freshStore();
+  const rows = [{ keys: ["https://thescreenreport.com/movies/whatever/", "2026-07-04"], impressions: 3, clicks: 0, position: 12 }];
+  const r = await agentRun(baseImpls({ storeImpl: store, gscImpl: async () => ({ ok: true, rows, window: { startDate: "2026-06-28", endDate: "2026-07-05" } }) }));
+  assert.equal(r.published.length, 1, "same publish behaviour as without GSC");
+  assert.equal(r.gsc.available, true);
+  assert.ok(["DARK", "TOO_EARLY", "VISIBLE"].includes(r.gsc.status));
+});
+
 await check("dedup: second run never mints a second URL for the same story×form", async () => {
   const store = freshStore();
   const r1 = await agentRun(baseImpls({ storeImpl: store }));

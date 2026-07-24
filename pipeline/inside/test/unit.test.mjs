@@ -22,6 +22,7 @@ import { cleanTitle } from "../assemble.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
 import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey, recentDuplicate, isWorkScoped, PUBLISH_COOLDOWN_H, PARK_REVIVE_H, updateTarget, updateBlockedReason, UPDATE_WINDOW_H, MAX_ARTICLE_UPDATES, UPDATE_MIN_GAP_H } from "../store.mjs";
 import { freshReactions, applyReactionUpdate, quoteKey, MIN_FRESH_REACTIONS } from "../updateArticle.mjs";
+import { assessVisibility, alarmBanner, gscAccessToken, gscPageDays, _resetGscMemo, ymd } from "../gsc.mjs";
 import os from "node:os";
 import fs from "node:fs";
 import path from "node:path";
@@ -1790,6 +1791,126 @@ await check("merge: one straggler is not an update (no churn on a live URL)", ()
   assert.equal(res.ok, false);
   assert.equal(fs.readFileSync(path.join(dir, "a.md"), "utf8"), before, "file byte-identical — nothing written");
   fs.rmSync(dir, { recursive: true, force: true });
+});
+
+// ── GOOGLE SEARCH CONSOLE: the smoke alarm (owner 2026-07-24, stages 1+2) ───────────────────────
+// The site went dark on 07-15 and nobody noticed for ~5 days. These pin the alarm's judgement AND
+// its fail-soft guarantee: a monitoring feature must never be able to hurt the thing it monitors.
+const DAY = 864e5;
+const NOWMS = Date.parse("2026-07-24T12:00:00Z");
+const rec = (slug, daysAgo, extra = {}) => ({ slug, at: new Date(NOWMS - daysAgo * DAY).toISOString(), ...extra });
+const row = (slug, date, impressions = 1, clicks = 0, position = 20) =>
+  ({ keys: [`https://thescreenreport.com/movies/${slug}/`, date], impressions, clicks, position });
+
+await check("gsc alarm: DARK when mature articles exist and none was ever shown", () => {
+  const v = assessVisibility({
+    publishedRecords: [rec("a", 6), rec("b", 5), rec("c", 4)],
+    gscRows: [row("someone-elses-page", "2026-07-21", 3)],
+    now: NOWMS,
+  });
+  assert.equal(v.status, "DARK");
+  assert.equal(v.matureCount, 3);
+  assert.equal(v.seenCount, 0);
+  assert.match(alarmBanner(v), /🔴🔴 GOOGLE VISIBILITY ALARM/);
+});
+
+await check("gsc alarm: does NOT cry wolf over articles too new to have data", () => {
+  // Google's newest data is 07-21; these were published after that, so they CANNOT have data yet.
+  const v = assessVisibility({
+    publishedRecords: [rec("fresh-1", 1), rec("fresh-2", 0)],
+    gscRows: [row("other", "2026-07-21", 2)],
+    now: NOWMS,
+  });
+  assert.equal(v.status, "TOO_EARLY", "an alarm that fires every tick is an alarm nobody reads");
+  assert.equal(v.matureCount, 0);
+  assert.equal(v.lagDays, 3);
+});
+
+await check("gsc alarm: VISIBLE reports which pages were shown, with totals", () => {
+  const v = assessVisibility({
+    publishedRecords: [rec("seen-one", 5), rec("seen-two", 4), rec("unseen", 6)],
+    gscRows: [
+      row("seen-one", "2026-07-20", 4, 1, 12),
+      row("seen-one", "2026-07-21", 2, 0, 18),
+      row("seen-two", "2026-07-21", 1, 0, 40),
+    ],
+    now: NOWMS,
+  });
+  assert.equal(v.status, "VISIBLE");
+  assert.equal(v.seenCount, 2);
+  assert.equal(v.matureCount, 3);
+  assert.equal(v.impressions, 7);
+  assert.equal(v.clicks, 1);
+  assert.equal(v.pages[0].slug, "seen-one", "sorted by impressions");
+  assert.match(alarmBanner(v), /🟢 Google visibility: 2\/3/);
+});
+
+await check("gsc alarm: striking-distance pages (pos 8-30) are singled out for stage 3", () => {
+  const v = assessVisibility({
+    publishedRecords: [rec("near", 5), rec("far", 5)],
+    gscRows: [row("near", "2026-07-21", 5, 0, 14), row("far", "2026-07-21", 5, 0, 71)],
+    now: NOWMS,
+  });
+  assert.deepEqual(v.strikingDistance.map((p) => p.slug), ["near"]);
+});
+
+await check("gsc alarm: review-only records and out-of-window articles are never judged", () => {
+  const v = assessVisibility({
+    publishedRecords: [rec("preview", 5, { review: true }), rec("ancient", 40)],
+    gscRows: [],
+    now: NOWMS,
+  });
+  assert.equal(v.status, "TOO_EARLY");
+  assert.equal(v.matureCount, 0, "a preview was never live and a 40-day-old piece is out of scope");
+});
+
+await check("gsc alarm: an empty GSC response is DARK, not a crash", () => {
+  const v = assessVisibility({ publishedRecords: [rec("a", 5)], gscRows: [], now: NOWMS });
+  assert.equal(v.status, "DARK");
+  assert.equal(v.mostRecentDataDate, null);
+  assert.equal(v.lagDays, 3, "falls back to the assumed lag when Google returned nothing");
+});
+
+await check("gsc client: no credentials → null token, never throws", async () => {
+  assert.equal(await gscAccessToken({ keyJson: "", fetchImpl: () => { throw new Error("must not be called"); } }), null);
+  assert.equal(await gscAccessToken({ keyJson: "not json", fetchImpl: () => { throw new Error("must not be called"); } }), null);
+  assert.equal(await gscAccessToken({ keyJson: JSON.stringify({ client_email: "x" }), fetchImpl: () => { throw new Error("no") } }), null);
+});
+
+await check("gsc client: every network failure is soft — { ok:false }, never a throw", async () => {
+  for (const impl of [
+    () => { throw new Error("network down"); },
+    async () => ({ ok: false, status: 403 }),
+    async () => { const e = new Error("timeout"); throw e; },
+  ]) {
+    _resetGscMemo();
+    const r = await gscPageDays({ keyJson: JSON.stringify({ client_email: "a@b.c", private_key: "bad" }), fetchImpl: impl, now: NOWMS });
+    assert.equal(r.ok, false);
+    assert.ok(r.reason, "a failure must always say why");
+  }
+  _resetGscMemo();
+});
+
+await check("gsc client: ONE call per tick (memoized)", async () => {
+  _resetGscMemo();
+  let calls = 0;
+  const impl = async (url) => {
+    calls++;
+    if (String(url).includes("oauth2")) return { ok: true, json: async () => ({ access_token: "t" }) };
+    return { ok: true, json: async () => ({ rows: [row("x", "2026-07-21")] }) };
+  };
+  const key = JSON.stringify({ client_email: "a@b.c", private_key: "k" });
+  // signing will fail with a bogus key → soft failure, but the memo must still hold
+  const a = await gscPageDays({ keyJson: key, fetchImpl: impl, now: NOWMS });
+  const before = calls;
+  const b = await gscPageDays({ keyJson: key, fetchImpl: impl, now: NOWMS });
+  assert.equal(calls, before, "second call in the same tick must not hit the network again");
+  assert.deepEqual(a, b);
+  _resetGscMemo();
+});
+
+await check("gsc: ymd is UTC and stable", () => {
+  assert.equal(ymd(Date.parse("2026-07-24T23:59:59Z")), "2026-07-24");
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);

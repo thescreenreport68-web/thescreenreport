@@ -34,6 +34,7 @@ import { addInternalLinks } from "../lib/internalLinks.mjs";
 import { norm } from "./reactionFinder.mjs";
 import { costReport } from "../lib/openrouter.mjs";
 import { ytBudget } from "./youtube.mjs";
+import { gscPageDays, assessVisibility, alarmBanner } from "./gsc.mjs";
 
 const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 // REVIEW MODE (owner preview-first rule): articles land in a holding dir (uploaded as a workflow
@@ -90,6 +91,7 @@ export async function agentRun({
   qaWebCheckImpl = qa.webCheck,
   publishImpl = writeInsideArticle,
   storeImpl = null,
+  gscImpl = undefined,   // injectable for tests; null disables the GSC read entirely
   hero = true,
   webVerify = WEB_VERIFY,
   dryRun = false,
@@ -106,15 +108,30 @@ export async function agentRun({
   const report = { runId, startedAt: new Date(now).toISOString(), stories: 0, published: [], updated: [], held: [], rejected: [], skipped: [], blocked: [] };
   meterReset();
 
+  // ── GOOGLE VISIBILITY (observe only — owner 2026-07-24, stages 1+2) ──
+  // Fired now, awaited at the very end, so the network round-trip overlaps the pipeline and costs the
+  // tick no wall-clock time. gscPageDays never throws, so this promise always resolves — it can't
+  // produce an unhandled rejection, and nothing downstream waits on it.
+  const gscOff = process.env.INSIDE_GSC === "0" || (gscImpl === null);
+  const gscPending = gscOff ? Promise.resolve({ ok: false, reason: "disabled" }) : (gscImpl || gscPageDays)({ now });
+  const gscSummary = async () => {
+    try {
+      const res = await gscPending;
+      if (!res?.ok) return { available: false, reason: res?.reason || "unavailable" };
+      const v = assessVisibility({ publishedRecords: store.published, gscRows: res.rows, now });
+      return { available: true, window: res.window, ...v };
+    } catch (e) { return { available: false, reason: String(e?.message || e).slice(0, 80) }; }
+  };
+
   // ── 24/7 guards ──
-  if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun); }
+  if (fs.existsSync(PAUSED_FILE)) { report.paused = true; return finish(report, dryRun, await gscSummary()); }
   // Probes only on REAL runs: injected finders mean an offline test — the suite must never touch
   // the network even with INSIDE_DIAG exported in the shell (adversarial review 2026-07-10).
   if (process.env.INSIDE_DIAG === "1" && !dryRun && findImpl === findStories) await diagProbes();
   // Baseline BEFORE this run publishes anything — records land in the store mid-run, so counting
   // live would tally each new article twice (baseline+written is correct in both wet and dry runs).
   const baseToday = publishedToday(store, now);
-  if (baseToday >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = baseToday; return finish(report, dryRun); }
+  if (baseToday >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = baseToday; return finish(report, dryRun, await gscSummary()); }
 
   // ── FINDER ──
   let found = [];
@@ -122,7 +139,7 @@ export async function agentRun({
   // always has a reacted-to story in reach (owner 2026-07-12: publish at EVERY slot, no matter the cancels).
   const POOL = Number(process.env.INSIDE_CANDIDATE_POOL) || Math.max(limit * 12, 30);
   try { found = await withTimeout(findImpl({ limit: POOL, nowMs: now }), AGENTS.finder.watchdogMs + 90e3, "finder"); }
-  catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun); }
+  catch (e) { report.blocked.push({ stage: "finder", reason: String(e?.message || e).slice(0, 140) }); return finish(report, dryRun, await gscSummary()); }
   if (onlyStory) found = found.filter((f) => f.story.parentEventSlug === onlyStory);
   report.stories = found.length;
 
@@ -359,11 +376,12 @@ export async function agentRun({
       report.blocked.push({ tag, reason: String(e?.message || e).slice(0, 140) });
     }
   }
-  return finish(report, dryRun);
+  return finish(report, dryRun, await gscSummary());
 }
 
-function finish(report, dryRun) {
+function finish(report, dryRun, gsc = null) {
   report.finishedAt = new Date().toISOString();
+  if (gsc) report.gsc = gsc;
   report.meter = meterReport();
   report.openrouterTotalUsd = Number((costReport()?.total || 0).toFixed(5));
   // YouTube quota is a SHARED resource (AUTOMATION_REGISTRY §3.25) and this lane is its only
@@ -393,6 +411,37 @@ if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   console.log(`SKIPPED ${report.skipped.length}`); report.skipped.forEach((p) => console.log(line(p)));
   console.log(`BLOCKED ${report.blocked.length}`); report.blocked.forEach((p) => console.log(line(p)));
   console.log(`cost: $${report.openrouterTotalUsd} · per-agent:`, JSON.stringify(report.meter.byRole));
+
+  // ── GOOGLE VISIBILITY ALARM — must be impossible to miss (owner 2026-07-24) ──
+  // Three surfaces, because a tick log scrolls past and nobody reads it: the console, a GitHub
+  // Actions annotation (turns the run red/yellow in the UI), and the run-page summary panel.
+  const g = report.gsc;
+  if (g) {
+    const banner = alarmBanner(g.available ? g : { status: "UNAVAILABLE", message: g.reason });
+    const bar = "━".repeat(78);
+    console.log(`\n${bar}\n${banner}\n${bar}`);
+    if (g.available && g.pages?.length) {
+      for (const pg of g.pages.slice(0, 5)) console.log(`   ${String(pg.impressions).padStart(4)} impressions  pos ${String(pg.position).padStart(5)}  ${pg.slug.slice(0, 54)}`);
+    }
+    if (process.env.GITHUB_ACTIONS) {
+      // ::error:: paints the run red in the Actions list — the alarm should be as loud as a failure
+      // WITHOUT failing the job (a dark week must never stop the lane from publishing).
+      if (g.available && g.status === "DARK") console.log(`::error title=Google visibility alarm::${g.message}`);
+      else if (!g.available) console.log(`::warning title=Google visibility unavailable::${g.reason}`);
+      const sum = process.env.GITHUB_STEP_SUMMARY;
+      if (sum) {
+        const rows = (g.pages || []).map((p) => `| ${p.slug} | ${p.impressions} | ${p.clicks} | ${p.position} |`).join("\n");
+        fs.appendFileSync(sum,
+          `## ${banner}\n\n` +
+          (g.available
+            ? `Google's data ends **${g.mostRecentDataDate || "?"}** (~${g.lagDays}d behind). ` +
+              `Judged **${g.matureCount}** inside articles old enough to have data; **${g.seenCount}** appeared.\n\n` +
+              (rows ? `| page | impressions | clicks | position |\n|---|---|---|---|\n${rows}\n` : "") +
+              (g.strikingDistance?.length ? `\n**${g.strikingDistance.length} page(s) just off page one** (position 8-30) — candidates for fresh-reaction top-ups.\n` : "")
+            : `Reason: ${g.reason}\n`) + `\n`);
+      }
+    }
+  }
   // GitHub Actions outputs (the cloud workflow's commit/deploy steps key off these).
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT,
