@@ -6,6 +6,7 @@
 //   Suite 5 — STRIKING DISTANCE is advisory and cannot fold unrelated stories into one ranking page.
 import { assessGrounding, structuralFloors, CFG } from "../lib/qualityFloor.mjs";
 import { demandForTopic, demandPoints, strikingMatch, DEMAND_CAP } from "../find/gscDemand.mjs";
+import { learnPoints, evergreenOpportunities, LEARN_CAP } from "../find/learn.mjs";
 
 let pass = 0, fail = 0;
 const ok = (c, m) => { if (c) { pass++; console.log("  ✓ " + m); } else { fail++; console.log("  ✗ FAIL: " + m); } };
@@ -101,6 +102,43 @@ console.log("=== 6. STRIKING DISTANCE — advisory, and cannot swallow unrelated
   ok(!!real && real.advisory === true, "a genuine 2-token subject match IS returned, flagged advisory (never an authority to rewrite)");
   ok(!strikingMatch({ primaryEntity: "Christopher Nolan", primaryKeyword: "christopher nolan odyssey" }, demand, new Set(["someone-elses-page"])),
     "a page this lane does not own is invisible to striking distance");
+}
+
+console.log("=== 7. LEARNING LOOP — bounded, sample-gated, and it cannot run away ===");
+{
+  const perf = {
+    ok: true, baseline: 0.2, sample: 274, buckets: {
+      "category:music": { n: 34, earners: 10, hitRate: 0.29, lift: 1.45, enough: true },
+      "category:tv": { n: 68, earners: 11, hitRate: 0.16, lift: 0.8, enough: true },
+      "category:dead": { n: 40, earners: 1, hitRate: 0.025, lift: 0.12, enough: true },
+      "category:tiny": { n: 3, earners: 3, hitRate: 1, lift: 5, enough: false },   // great rate, no sample
+    },
+  };
+  ok(learnPoints({ category: "music" }, perf) > 0, "a category that genuinely over-performs gets a small boost");
+  ok(learnPoints({ category: "dead" }, perf) < 0, "a category that reliably earns nothing gets a small penalty");
+  ok(learnPoints({ category: "tiny" }, perf) === 0, "a 3-article bucket biases NOTHING (sample gate) — no learning from noise");
+  ok(Math.abs(learnPoints({ category: "dead", formatTag: "dead" }, perf)) <= LEARN_CAP, `bias stays within ±${LEARN_CAP} even when every signal agrees`);
+  ok(learnPoints({ category: "music" }, { ok: false }) === 0, "no performance data → no bias (fail-open)");
+  ok(learnPoints({ category: "never-published" }, perf) === 0, "an unseen category is neutral, not punished");
+}
+
+console.log("=== 8. EVERGREEN OPPORTUNITIES — found from our OWN search data ===");
+{
+  const demand = { ok: true, pages: [{ slug: "best-a24-movies-ranked", impressions: 136, position: 34.4 }], queries: [
+    { q: "best a24 films", impressions: 5, clicks: 1, position: 40 },
+    { q: "best a24 movies", impressions: 8, clicks: 0, position: 25 },
+    { q: "best movie trilogy", impressions: 4, clicks: 0, position: 16 },
+    { q: "best trilogy movies", impressions: 3, clicks: 0, position: 18 },
+    { q: "zendaya cast in the odyssey", impressions: 40, clicks: 2, position: 1 },  // NEWS, not evergreen
+  ] };
+  const ops = evergreenOpportunities(demand);
+  ok(ops.length > 0, `found ${ops.length} evergreen cluster(s) from real query shapes`);
+  ok(!ops.some((o) => /zendaya/i.test(o.queries.join(" "))), "a pure NEWS query is not mistaken for evergreen demand");
+  const a24 = ops.find((o) => o.queries.some((q) => /a24/.test(q)));
+  ok(a24 && a24.variants >= 2, "near-identical phrasings collapse into ONE cluster (not two thin pages)");
+  ok(a24 && a24.existingPage === "best-a24-movies-ranked", "correctly reports we ALREADY have that page → improve it, never a second URL");
+  const trilogy = ops.find((o) => o.queries.some((q) => /trilogy/.test(q)));
+  ok(trilogy && trilogy.existingPage === null, "a cluster with no page of ours is flagged as a NEW-page candidate");
 }
 
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);

@@ -12,6 +12,7 @@ import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 import { buildRadar, loadRadar, radarBoost } from "./radar.mjs";
 import { loadDemand, demandForTopic, demandPoints, strikingMatch } from "./gscDemand.mjs";
+import { performance, learnPoints, savePerformance } from "./learn.mjs";
 import { myPublishedSlugs } from "./sameStory.mjs";
 import { load as paceLoad, save as paceSave, recordCandidates } from "../lib/pacing.mjs";
 
@@ -212,6 +213,15 @@ try {
     : `unavailable (${demand.reason}) — ranking unchanged`);
 } catch (e) { monitor.stage("demand", `skipped (${String(e?.message || e).slice(0, 60)})`); }
 const _mySlugs = demand.ok ? myPublishedSlugs() : null;
+// WHAT ACTUALLY WORKED (step 4): join GSC to our own ledger and nudge selection toward the kinds of
+// story that genuinely earn impressions. Deliberately small (±5) and sample-gated (≥8 per bucket) —
+// while the site is crawl-parked "earned nothing" often reflects Google's crawling, not the story,
+// and a strong loop would collapse coverage onto one category.
+let perf = { ok: false };
+if (demand.ok) {
+  try { perf = performance(demand); if (perf.ok) { savePerformance(perf); monitor.stage("learn", `baseline ${(perf.baseline * 100).toFixed(0)}% of ${perf.sample} published articles earned impressions`); } }
+  catch (e) { monitor.stage("learn", `skipped (${String(e?.message || e).slice(0, 60)})`); }
+}
 let _withDemand = 0;
 for (const t of verified) {
   if (demand.ok) {
@@ -227,6 +237,10 @@ for (const t of verified) {
     }
     const sd = strikingMatch(t, demand, _mySlugs);
     if (sd) { t.priority = (t.priority || 0) + 4; (t.signals ||= {}).striking = 4; t.strikingSlug = sd.slug; t.strikingPosition = sd.position; }
+  }
+  if (perf.ok) {
+    const lp = learnPoints(t, perf);
+    if (lp) { t.priority = (t.priority || 0) + lp; (t.signals ||= {}).learned = lp; }
   }
   const rb = radarBoost(t, radar);
   if (rb) { t.priority = (t.priority || 0) + rb.boost; (t.signals ||= {}).radar = rb.boost; t.radarKind = rb.kind; }
