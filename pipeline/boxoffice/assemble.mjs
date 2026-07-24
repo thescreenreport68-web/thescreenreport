@@ -11,6 +11,7 @@ import { createRequire } from "node:module";
 import { CONTENT_DIR, BOXOFFICE_AUTHOR_SLUG, EVENT_TYPE, FORMS, SEO } from "./config.bo.mjs";
 import { fault, SEV } from "./health.mjs";
 import { normMoney, canonicalFigures, numberConsistencyGate } from "./moneyGuard.mjs";
+import { loadFrozen, saveFrozen, resolveFrozen } from "./seoFrozen.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
@@ -405,6 +406,16 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
   }
   // Chart updates share ONE stable per-film URL (the tracker); everything else keeps a title-derived slug.
   const slug = isChart ? trackerSlug(film) : slugify(title);
+  // FROZEN TRACKER SEO: a tracker's headline + standfirst are set ONCE (evergreen, figure-free) and then
+  // reused verbatim forever. Without this, buildMetaTitle regenerates the headline from the day's figures
+  // on EVERY update — i.e. the title churn that preceded the 96% impressions collapse.
+  let frozenSeo = null;
+  if (isChart) {
+    const map = loadFrozen();
+    const r = resolveFrozen(map, slug, film.title);
+    if (r.created) saveFrozen(map);
+    frozenSeo = r;
+  }
   const boxOffice = buildBoxOffice(canon, gathered);
   // Records: a chart UPDATE carries ONLY the system milestone claim (stale opening-phase records were
   // recycling into day-N updates — "second-best AND third-best" in one article). Features keep gathered records.
@@ -445,8 +456,12 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     // updates, not a re-dated one. A brand-new tracker has no priorDate, so date = now.
     date: (isChart && priorDate) ? priorDate : dateISO,
     ...(isChart ? { updated: dateISO, boxOfficeTracker: true } : {}),
-    dek: article.dek || "",
-    ...seoFinish({ metaTitle: buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form, canon }), metaDescription: chartMetaDesc || article.metaDescription || article.dek || "" }),
+    dek: frozenSeo ? frozenSeo.dek : (article.dek || ""),
+    // A frozen tracker headline bypasses buildMetaTitle entirely — it must ship byte-for-byte, forever.
+    ...seoFinish({
+      metaTitle: frozenSeo ? frozenSeo.metaTitle : buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form, canon }),
+      metaDescription: chartMetaDesc || article.metaDescription || article.dek || "",
+    }),
     tags: ensureTags(article, { film, form, gathered }),
     keyTakeaways: takeaways,
     faq: ensureFaq(article, { canon, gathered, boxData, film, form }),
