@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { CONTENT_DIR, BOXOFFICE_AUTHOR_SLUG, EVENT_TYPE, FORMS, SEO } from "./config.bo.mjs";
+import { fault, SEV } from "./health.mjs";
 import { normMoney, canonicalFigures, numberConsistencyGate } from "./moneyGuard.mjs";
 
 const require = createRequire(import.meta.url);
@@ -467,6 +468,18 @@ export function writeBoxOfficeArticle({ article, trigger, angle, film, gathered,
   // The consistency + scaffold gates are HARD walls: a self-contradicting or scaffold-broken article is
   // never written to disk, not even in review mode — the caller receives the violations and holds.
   if (!out.consistency.ok || out.scaffold.length) return { ...out, path: path.join(dir, out.slug + ".md"), written: false };
+  // ── NO-REWRITE GUARD (owner directive 2026-07-24) ────────────────────────────────────────────────
+  // "No more mass rewrites of already-published articles — improvements apply to NEW articles only.
+  //  Republishing existing files creates churn signals while Google is still building trust."
+  // fs.writeFileSync happily overwrites, and this lane's slugs are deterministic, so a repeated
+  // film+day+figure would silently REPLACE a live article and re-date it in the deploy. The lane may
+  // now only CREATE. An existing path is refused, reported, and counted as a publish that did not happen
+  // (materiality upstream should have caught it — so this firing is itself a signal worth seeing).
+  const target = path.join(dir, out.slug + ".md");
+  if (!dryRun && fs.existsSync(target)) {
+    fault("assemble:no-rewrite", `refused to overwrite an already-published article: ${out.slug}.md`, { severity: SEV.WARN });
+    return { ...out, path: target, written: false, refusedRewrite: true };
+  }
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, out.slug + ".md"), out.md);

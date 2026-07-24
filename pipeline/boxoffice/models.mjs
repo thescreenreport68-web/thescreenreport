@@ -13,7 +13,12 @@ export const AGENTS = {
     model: "amazon/nova-micro-v1",
     fallback: "google/gemini-2.5-flash-lite",
     temperature: 0.2,
-    maxTokens: 900,
+    // 900 was sized for a 6-8 film pool. The volume work grew the pool to ~43, and each pick serialises
+    // to ~60 tokens (i/form/workingTitle/star/2 queries), so the reply needs ~2600 — the JSON array was
+    // being TRUNCATED mid-element on EVERY call, on BOTH models:
+    //   "Expected ',' or ']' after array element in JSON at position 2459 / 3041"
+    // The lane silently ran on deterministic fallback picks for days. Sized with real headroom.
+    maxTokens: 4000,
     watchdogMs: 60e3,
   },
   // FIND categorize — ONE batched call per FIND run turns raw trade/gnews headlines into typed box-office
@@ -98,6 +103,52 @@ export const METER = [];
 // ⚠ MUST BE 1, NOT 0. `chat()` loops `for (let a = 0; a < retries; a++)`, so `retries` is an ATTEMPT COUNT,
 // not a retry count — retries=0 makes ZERO requests and every call fails ("all models failed"). Verified
 // live: retries=0 FAILED, retries=2 succeeded. 1 = exactly one bounded attempt. Shared lib untouched.
+// ── JSON SALVAGE (lane-local; the shared lib is owned by other lanes and must not be edited) ─────────
+// pipeline/lib/openrouter.mjs parseJson() falls back to slicing indexOf("{")..lastIndexOf("}"). When a
+// model emits TWO objects, or one object followed by prose containing a brace, that slice is valid JSON
+// PLUS trailing content and JSON.parse throws:
+//     "Unexpected non-whitespace character after JSON at position 244"
+// Reproduced exactly. This fired on EVERY finder call — both models — so the lane silently ran on
+// deterministic fallback picks for days. Extract the FIRST BALANCED object instead (string- and
+// escape-aware, so a brace inside a quoted title cannot end it early).
+export function firstJsonObject(text) {
+  const t = String(text ?? "");
+  const fence = t.match(/```(?:json)?\s*([\s\S]*?)```/);
+  const s = (fence ? fence[1] : t).trim();
+  const start = s.indexOf("{");
+  if (start < 0) return null;
+  // Walk the structure tracking the open bracket stack, so we can both (a) stop at the first COMPLETE
+  // object when there is trailing junk, and (b) REPAIR a response the model ran out of tokens mid-write.
+  const stack = [];
+  let inStr = false, esc = false, lastComplete = -1, openAtComplete = null;
+  for (let i = start; i < s.length; i++) {
+    const c = s[i];
+    if (esc) { esc = false; continue; }
+    if (c === "\\") { esc = true; continue; }
+    if (c === '"') { inStr = !inStr; continue; }
+    if (inStr) continue;
+    if (c === "{" || c === "[") stack.push(c);
+    else if (c === "}" || c === "]") {
+      stack.pop();
+      if (stack.length === 0) { try { return JSON.parse(s.slice(start, i + 1)); } catch { return null; } }
+      // We just closed an element that sits INSIDE an array (stack top is now "[") — that is a clean
+      // truncation point. Depth is 2 here for the common {"picks":[ {...}, {...} ]} shape, not 1.
+      if (stack.length && stack[stack.length - 1] === "[") { lastComplete = i; openAtComplete = stack.slice(); }
+    }
+  }
+  // TRUNCATED (the live finder failure): the model was cut off mid-array. Rewind to the last element
+  // that closed cleanly and shut the remaining brackets, so we keep the picks that DID arrive instead of
+  // throwing the whole response away. Never invents a value — it only drops an incomplete tail.
+  if (stack.length && lastComplete > start) {
+    // Close the brackets that were open AT the truncation point — not the final stack, which also holds
+    // the half-written element opened after it (that extra "{" produced an unbalanced repair).
+    const closers = (openAtComplete || stack).slice().reverse().map((b) => (b === "{" ? "}" : "]")).join("");
+    try { return JSON.parse(s.slice(start, lastComplete + 1) + closers); } catch { /* fall through */ }
+  }
+  return null;
+}
+const isJsonParseError = (e) => /JSON|non-whitespace|Unexpected token|could not parse/i.test(String(e?.message || e));
+
 export async function agentChat(role, { system, user, images = null, json = true, surgical = false, maxTokens = null, retries = 1 } = {}, { chatImpl = chat } = {}) {
   const cfg = AGENTS[role];
   if (!cfg) throw new Error(`unknown agent role: ${role}`);
@@ -114,6 +165,20 @@ export async function agentChat(role, { system, user, images = null, json = true
       METER.push({ role, model, ms: Date.now() - t0, in: res?.usage?.prompt_tokens ?? 0, out: res?.usage?.completion_tokens ?? 0 });
       return res;
     } catch (e) {
+      // JSON-SHAPE SALVAGE: the model answered, we just could not parse it. Re-ask this SAME model for
+      // raw text and extract the first balanced object rather than burning the fallback model (and then
+      // the whole call) on what is a parsing problem, not a model problem.
+      if (json && isJsonParseError(e)) {
+        try {
+          const raw = await chatImpl({ model, system, user, images, json: false, maxTokens: maxTokens ?? cfg.maxTokens, temperature, retries: 1 });
+          const salvaged = firstJsonObject(raw?.text ?? raw?.content ?? raw?.data ?? raw);
+          if (salvaged) {
+            fault(`model:${role}`, `malformed JSON from ${model} — salvaged the first balanced object`, { severity: SEV.INFO });
+            METER.push({ role, model, salvaged: true, in: raw?.usage?.prompt_tokens ?? 0, out: raw?.usage?.completion_tokens ?? 0 });
+            return { ...(raw || {}), data: salvaged };
+          }
+        } catch { /* silent-ok: salvage is best-effort; the outer fallback/fault path still runs */ }
+      }
       lastErr = e;
       METER.push({ role, model, error: String(e?.message || e).slice(0, 120) });
     }
