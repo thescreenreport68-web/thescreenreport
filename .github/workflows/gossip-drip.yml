@@ -69,6 +69,8 @@ jobs:
           # if the key is ever recharged — the code path auto-revives.
           INTERVAL_MIN: "115"
           GOSSIP_DIAG: "1"
+          # Google Search Console (read-only). Absent/invalid ⇒ the lane runs exactly as before (fail-soft).
+          GSC_KEY_JSON: ${{ secrets.GSC_KEY_JSON }}
           GOSSIP_REVIEW_DIR: ${{ github.event.inputs.review == 'true' && 'data/gossip/review' || '' }}
         run: node pipeline/gossip/scheduler.mjs --limit=${{ github.event.inputs.limit || '1' }} ${{ github.event.inputs.force == 'true' && '--force' || '' }}
 

@@ -15,6 +15,7 @@ import { fileURLToPath } from "node:url";
 import { gossipFind, enqueue, loadQueue, peekTopScore } from "./find.mjs";
 import { gossipRun, reviewDir } from "./gossiprun.mjs";
 import { runProbes } from "./probes.mjs";
+import { getSearchSignals, buildDemandMap, strikingDistance } from "./gscSignals.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCHED_PATH = path.resolve(__dirname, "../../data/gossip/schedule.json");
@@ -59,6 +60,25 @@ export async function tick({ now = new Date(), findImpl = gossipFind, runImpl = 
   }
   // Dependency probes (Phase 0): GOSSIP_DIAG=1 logs one status line per free dependency (dead feed ≠ quiet day).
   if (process.env.GOSSIP_DIAG === "1") { try { await runProbes(); } catch { /* diag never blocks */ } }
+
+  // GOOGLE SEARCH SIGNALS — STEP 1 (owner-approved 2026-07-24): fetch + cache + LOG ONLY.
+  // Nothing downstream consumes this yet. It runs every tick so the cache warms and we can watch the
+  // recovery, and it is wrapped so a GSC failure can never affect publishing. Steps 2–4 (demand-nudged
+  // selection, query-phrased headlines, striking-distance updates) stay OFF until impressions recover —
+  // the whole site earned 21 impressions in the 7 days to 2026-07-24, which is noise, not signal.
+  try {
+    const gsc = await getSearchSignals({ now: now.getTime() });
+    if (gsc.ok || (gsc.queries || []).length) {
+      const imps = (gsc.queries || []).reduce((a, q) => a + (Number(q.impressions) || 0), 0);
+      const names = buildDemandMap(gsc).size;
+      const sd = strikingDistance(gsc).length;
+      console.log(`[gsc] ${imps} impressions / ${(gsc.queries || []).length} queries (7d) · ${names} name(s) with demand · ${sd} page(s) at pos 8–30${gsc.cached ? " (cached)" : ""} — informational only, selection unchanged`);
+    } else {
+      console.log(`[gsc] unavailable — ${gsc.reason}. Lane continues exactly as before.`);
+    }
+  } catch (e) {
+    console.log(`[gsc] skipped: ${String(e?.message || e).slice(0, 60)} — never blocks a tick`);
+  }
   const sched = loadSchedule(schedPath);
   const since = minsSinceLastPost(now, sched);
   let burst = false, burstTopicId = null;

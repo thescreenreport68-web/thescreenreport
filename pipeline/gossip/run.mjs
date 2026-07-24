@@ -26,7 +26,7 @@ import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchore
 import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
-import { qualityCheck } from "./qualityGate.mjs";
+import { qualityCheck, substanceCheck } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
@@ -114,6 +114,7 @@ export async function runGossip(topic, {
   headline = false, headlineImpl = refineHeadline,
   voice = false, voiceImpl = voicePass,
   craftFix = false, // deterministic quality triggers → one surgical rewrite (live-on, like synth/headline)
+  substance = false, // recovery-mode publish/no-publish verdict on the FINISHED article (live-on)
 } = {}) {
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
@@ -352,5 +353,12 @@ export async function runGossip(topic, {
     verifyDegraded, // true ⇒ the claim-verify ran at L1-only this run (L2 errored); surfaced for the monitor/owner
     sources: bundle.sources.map((s) => ({ outlet: s.outlet, url: s.url, tier: s.tier })),
   };
-  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic, voice: voiceReport, guardCuts, surgicalFixes: fixIssues };
+  // RECOVERY-MODE SUBSTANCE GATE (owner-approved, Option A). LAST thing before publishing, after every
+  // repair pass — so nothing is held for a defect the pipeline would have fixed. The writer was never
+  // given a word target (the no-padding rule stands); this only judges the finished piece.
+  const sub = substanceCheck(article, bundle);
+  if (substance && !sub.pass) {
+    return { status: "HELD", frame, article, stage: "thin", reason: `substance gate: ${sub.reasons.join("; ")}`, substance: sub };
+  }
+  return { status: "PUBLISH", article, frame, provenance, route, bundle, auto, editorial: ed, brief: brief ? true : false, headline: headlineReport, seoSemantic, voice: voiceReport, guardCuts, surgicalFixes: fixIssues, substance: sub };
 }

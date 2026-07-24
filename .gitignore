@@ -39,3 +39,6 @@ data/inside/review/
 data/gossip/review/
 search-index.sql
 public/_redirects
+
+# gossip: GSC signal cache is a runtime artifact (refetched on TTL) — never commit it
+data/gossip/gsc-cache.json
