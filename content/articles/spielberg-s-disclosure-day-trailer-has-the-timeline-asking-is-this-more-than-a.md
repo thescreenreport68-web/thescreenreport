@@ -105,12 +105,37 @@ reactions:
     quote: >-
       So is this how disclosure actually happens. Spielberg makes a movie and
       then we get home and turn on the news and it's all true
+  - speaker: lindsey romain
+    date: '2026-07-10'
+    quote: >-
+      i wrote about disclosure day, steven spielberg, and human compassion as
+      sci-fi for @brightwalldarkroom.com
+  - speaker: A viewer
+    date: '2026-06-06'
+    quote: >-
+      PLOT TWIST: Steven Spielberg is about to DISCLOSE himself as an ALIEN
+      BEING.
+  - speaker: A viewer
+    date: '2026-06-10'
+    quote: another alien movie where we wont see alien for 99% of the screen time
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Yep, the misery of Disclosure Day made me want to watch something amazing.
+      Sheep Detectives and Kid Detective sounds like a really solid double bill!
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Tested the optimal way of where to put my wifi to stream a movie, so I
+      watched 4 movies today and caught up with new ghost in the shell episode.
+      Movies were, Masters of the universe, Fire in the sky, The Running Man
+      (wright) and
 fanConsensus: >-
   The reaction is sharply divided between viewers who are enthralled by the
   meta-speculation that the film could be a vehicle for real disclosure, and
   those focused on critiquing or celebrating it as a traditional Spielberg
   blockbuster.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   popularity: 632
@@ -125,7 +150,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T12:31:09.399Z'
+dateModified: '2026-07-24T06:31:03.398Z'
 provenance:
   parentEventSlug: disclosure-day-2026
   primaryEntity: Disclosure Day
@@ -139,6 +164,7 @@ imageAlt: Steven Spielberg Disclosure Day trailer screenshot
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-24T06:31:03.398Z'
 ---
 
 The first trailer for [Steven Spielberg](/movies/disclosure-day-how-spielberg-s-new-film-is-blurring-the-line-between-movie-and/)'s *Disclosure Day* has dropped, and the timeline did not stay calm for long. While the footage promises classic Spielbergian spectacle, a dominant thread of online conversation is fixated on one question: is this a work of fiction or a cleverly orchestrated 'soft opening' for the real thing?

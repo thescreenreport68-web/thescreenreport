@@ -77,11 +77,22 @@ reactions:
   - speaker: A viewer
     date: '2026-07-20'
     quote: "i was asking myself \"why does one minion is called dick\U0001F62D\""
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: "If you pause the trailer like this 1:08 , it looks like the minion is dog-like\U0001F602 I love the Minions - they are adorable!❤\U0001F389\U0001F60A"
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: I've just watched this movie today and it was amazing
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: >-
+      I’m excited to see this in action even though GRU isn’t gunna be in the
+      movie i still want to see it
 fanConsensus: >-
   Audiences are celebrating Minions & Monsters as a hilarious and unexpectedly
   heartfelt box office smash, with much of the conversation focused on a
   crudely-named character and the perceived gay romance between the leads.
-updatedCount: 0
+updatedCount: 1
 trendScore: 164
 signals:
   popularity: 374
@@ -96,7 +107,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T14:31:08.317Z'
+dateModified: '2026-07-24T06:31:03.398Z'
 provenance:
   parentEventSlug: minions-monsters-2026
   primaryEntity: Minions & Monsters
@@ -111,6 +122,7 @@ imageAlt: Minions and Monsters movie poster characters
 imageCredit: Photo via goodhousekeeping.com
 imageWidth: 1200
 imageHeight: 900
+updated: '2026-07-24T06:31:03.398Z'
 ---
 
 But for audiences watching *[Minions](/movies/minions-monsters-box-office-day-20-adds-1-8-million-as-domestic-total-hits-138/) & Monsters*, the real story isn't the financial triumph—it's the film's unexpected blend of crass humor, potential queer representation, and genuine heart that has viewers buzzing.
