@@ -107,11 +107,45 @@ reactions:
       Went to go see SUPERGIRL. I enjoyed myself, though not as much as with
       last year’s Superman film. Still, these DC projects recently feel fresh
       after I was burnt out by the MCU.
+  - speaker: Milly Alcock
+    platform: interview
+    quote: >-
+      I looked at myself in the mirror, and I was like, ‘Who am I to turn down
+      this opportunity? I knew that it was what I needed to do, because it
+      scared me. And I thought, ‘Well, I get one big, bad, beautiful life. Why
+      not fucking go for it?’ Just fucking go for it! What are you, scared? Get
+      over yourself.
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      The "Supergirl" movie's message is that it doesn't matter if you're
+      unprepared and narcissistic; you win because you are strong and the stars
+      align for you. This is an American way of seeing things. Our disastrous
+      war in Iran has been fought on these principles.
+  - speaker: A viewer
+    date: '2026-07-02'
+    quote: >-
+      The movie was very good. It was very accurate to her comics and the
+      character development was 10/10. It wasn’t the best superhero movie ever
+      but just the fact that it was very accurate to the comics and her
+      development throughout the movie was amazing
+  - speaker: A viewer
+    date: '2026-06-06'
+    quote: >-
+      Wonder if they'll add the episode from the comic where she was trapped on
+      a planet with a red sun... Would be cool
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: >-
+      Good, hope more Supergirl movies are made. The transcripts gave us the
+      impression the movie was considered a flop. The blame directed at people
+      not wanting to see a woman lead hero. Story was amazing, soundtrack was
+      good and the feels hit from the beginning.
 fanConsensus: >-
   Audiences are passionately divided, with one side loving the film's gritty,
   fresh feel and Jason Momoa's Lobo, while the other side condemns it as a
   derivative John Wick clone with a cruel plot point involving Krypto.
-updatedCount: 0
+updatedCount: 1
 trendScore: 167
 signals:
   popularity: 388
@@ -126,7 +160,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-22T10:31:08.472Z'
+dateModified: '2026-07-24T10:31:04.753Z'
 provenance:
   parentEventSlug: supergirl-2026
   primaryEntity: Supergirl
@@ -140,6 +174,7 @@ imageAlt: Milly Alcock Supergirl 2026 movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-24T10:31:04.753Z'
 ---
 
 From its grimy, sweat-stained aesthetic to a plot point that has dog lovers on high alert, the film has sparked a fierce and immediate divide.

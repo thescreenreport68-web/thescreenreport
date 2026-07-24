@@ -106,10 +106,33 @@ reactions:
   - speaker: A viewer
     date: '2026-06-10'
     quote: '"It''s true, I have beautiful hair." I see what you did there, Disney.'
+  - speaker: Jakejames Lugo
+    date: '2026-07-10'
+    quote: Here's my review of the live-action
+  - speaker: A viewer
+    date: '2026-07-09'
+    quote: >-
+      " The Rock's acting range is as thin as paper itself, which does make
+      sense... cutz it's a thing that defeats The Rock. " this made me crackle
+      lmao
+  - speaker: A viewer
+    date: '2026-07-14'
+    quote: >-
+      That soulless Lion King remake made well over a billion dollars. In this
+      rare occasion, I blame the audience for all these shitty live-action
+      remakes.
+  - speaker: A viewer
+    date: '2026-07-09'
+    quote: When "we have Moana at home" is the better version
+  - speaker: A viewer
+    date: '2026-07-09'
+    quote: >-
+      Rock needs to stop pretending he cares about his Samoan culture when he is
+      busy making bank of these souless adaptations
 fanConsensus: >-
   Overwhelmingly negative, viewing the trailer as a pointless, visually inferior
   carbon copy that epitomizes Disney's creatively exhausted remake strategy.
-updatedCount: 0
+updatedCount: 1
 trendScore: 225
 signals:
   popularity: 620
@@ -124,7 +147,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T20:31:07.569Z'
+dateModified: '2026-07-24T10:31:04.753Z'
 provenance:
   parentEventSlug: moana-2026
   primaryEntity: Moana
@@ -138,6 +161,7 @@ imageAlt: live action Moana trailer screenshot Dwayne Johnson Maui
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
+updated: '2026-07-24T10:31:04.753Z'
 ---
 
 Disney finally released that live-action [Moana](/movies/catherine-laga-aia-and-dwayne-johnson-lead-moana-live-action-cast/) trailer, and cue the meltdown — but not the nostalgic kind. The internet's reaction is a masterclass in déjà vu fatigue, with exhaustion and open mockery dominating the conversation. Audiences are questioning why this remake exists at all, while a handful of defenders clutch at the promise of a familiar song.
