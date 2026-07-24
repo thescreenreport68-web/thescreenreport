@@ -1,0 +1,115 @@
+{
+ "runId": "run-2026-07-24T15-01-04",
+ "mode": "live",
+ "startedAt": "2026-07-24T15:01:04.767Z",
+ "films": 42,
+ "published": [],
+ "held": [],
+ "rejected": [
+  {
+   "tag": "pressure-ev-streaming-arrival×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming' (try 1)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 4.2,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 6,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.10645
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "info": 1
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "malformed JSON from google/gemini-2.5-flash-lite — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T15:01:56.270Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-24T15:05:58.843Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3544,
+    "out": 3529,
+    "usd": 0.00062,
+    "ms": 7423
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 21490,
+    "out": 997,
+    "usd": 0.00255,
+    "ms": null
+   }
+  },
+  "totalUsd": 0.00317
+ },
+ "openrouterTotalUsd": 0.00317
+}

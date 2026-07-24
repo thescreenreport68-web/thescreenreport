@@ -2539,16 +2539,24 @@
    "reason": "under floor: streaming original — no theatrical box office (belongs in a streaming form)",
    "tries": 1,
    "at": "2026-07-24T14:35:08.886Z"
+  },
+  {
+   "key": "pressure-ev-streaming-arrival|NOW-STREAMING",
+   "eventSlug": "pressure-ev-streaming-arrival",
+   "form": "NOW-STREAMING",
+   "reason": "under floor: no subscription-streaming platform — rent/buy is not 'now streaming'",
+   "tries": 1,
+   "at": "2026-07-24T15:05:58.839Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.10328
+  "usd": 0.10645
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784903471055
+  "lastMs": 1784905264767
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2558,7 +2566,8 @@
    "kentucky flood recovery documentary": 1,
    "masters of the universe": 1,
    "malcolm in the middle: life's still unfair": 1,
-   "the last duel": 1
+   "the last duel": 1,
+   "pressure": 1
   }
  }
 }
