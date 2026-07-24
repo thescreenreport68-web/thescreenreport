@@ -269,6 +269,19 @@ source has few numbers = a SHORT, tight, engaging brief built around ONLY those 
 a faithful 230-word brief than to invent one figure and get the whole piece held. Same for QUOTES: only quotation-
 mark a phrase that is verbatim in the facts. When unsure whether a specific is in the source — leave it out.
 
+${LONGFORM.ON && topic._longform ? `
+⚖ RESOLVING AN APPARENT CONFLICT (read this last — it decides the length question). The rules above repeatedly
+tell you to write SHORT and never pad. Those rules exist for THIN sources, and they were written when this story
+would have had one outlet and a few hundred words of material. THIS story is different: the facts below come from
+MULTIPLE outlets plus verified structured databases (full credits, dates, filmographies). For THIS article:
+  • "Never invent, never state a fact absent from the facts below" — STILL ABSOLUTE. Nothing relaxes that. Ever.
+  • "Keep it short / don't pad" — means do not inflate with EMPTY words. It does NOT mean leave verified material
+    unused. Leaving real, relevant, sourced detail on the table is the failure mode HERE.
+So: write ${LONGFORM.CFG.MIN_WORDS}-${LONGFORM.CFG.TARGET_WORDS} words by USING more of the material below — the
+people's real credits, the project's confirmed specifics, the fuller context — not by stretching the same points.
+If after genuinely mining the facts you still cannot reach ${LONGFORM.CFG.MIN_WORDS} grounded words, write the
+honest shorter piece: an accurate 500 words beats 800 padded ones, and padding is detected and rejected.
+` : ""}
 REFERENCE FACTS — ground EVERY factual claim ONLY in these; add NOTHING from your own memory, no matter how well-known it seems (an independent verifier re-checks every claim against these exact facts and CUTS or BLOCKS anything not found here):
 ${facts}
 
@@ -298,7 +311,9 @@ ${corrections}` : ""}`;
     const extra =
       attempt === 0
         ? ""
-        : `\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=${thinGrounding ? 2 : 3} items (new follow-ups, not body restatements); a complete body with the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items. Do NOT pad to reach any length — a short, fully-grounded brief is the correct outcome when the source is thin; only add material that is actually in the REFERENCE FACTS.`;
+        : `\n\nYOUR PREVIOUS ATTEMPT WAS INCOMPLETE. Return COMPLETE valid JSON with: faq >=${thinGrounding ? 2 : 3} items (new follow-ups, not body restatements); a complete body with the form's H2 headings (a reader-question H2 where it fits) AND a '## Sources' section ONLY if genuinely-relevant external links exist; keyTakeaways with 3-5 items. ${LONGFORM.ON && topic._longform
+        ? `The previous draft was TOO SHORT: it must reach ${LONGFORM.CFG.MIN_WORDS}+ words. You have abundant material below (multiple outlets + verified structured facts) that the draft left UNUSED — go back to it and COVER MORE OF IT: the people's actual credits, the project's confirmed details, the fuller context. Do not repeat yourself and do not add anything absent from the facts.`
+        : `Do NOT pad to reach any length — a short, fully-grounded brief is the correct outcome when the source is thin; only add material that is actually in the REFERENCE FACTS.`}`;
     const { data, usage, raw } = await chat({
       model,
       system: SYSTEM,

@@ -15,6 +15,7 @@ import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store
 import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
 import { findSameStory, myRecentArticles } from "./find/sameStory.mjs";
 import { assessGrounding } from "./lib/qualityFloor.mjs";
+import { ON as LF_ON } from "./lib/longform.mjs";
 import * as LONGFORM from "./lib/longform.mjs";
 import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
@@ -23,7 +24,7 @@ import { cutArticle } from "./lib/cutter.mjs";
 import { dedupeSentences, trimIncomplete, dropOrphanHeadings } from "./lib/polish.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
-import { getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
+import { getPersonFacts, personFactsBlock, getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
 import { omdb, omdbFactBlock } from "./lib/omdb.mjs";
 import { getAuthoritativeAwards, awardsFactBlock, personAwards, personAwardsBlock } from "./lib/awardsCache.mjs";
 import { cacheTweets, reactionFactBlock } from "./lib/tweets.mjs";
@@ -317,6 +318,39 @@ async function processTopic(topic, i) {
       if (tf && tfOk) {
         topic._titleFacts = tf;
         topic.facts.unshift({ title: "AUTHORITATIVE TITLE FACTS", extract: titleFactBlock(tf) });
+        // LONGFORM (2026-07-24): also ground the PERSON at the centre of the story. Measured material for a
+        // film/TV news story: source article ~2,100 chars + title facts ~1,300 = ~3,400 — short of the 6,000
+        // an 800-word piece needs. Person facts add ~2,400 (Colman Domingo, measured), which closes the gap
+        // WITHOUT another outlet — the only lever that works on a genuinely single-source story. This is real
+        // verified filmography/credits for the "who is this" section of the shape, never invented background.
+        // Gated: the live lane's grounding is unchanged until the owner connects longform.
+        if (LF_ON) {
+          // Ground the PEOPLE, not the film. First cut used topic.primaryEntity, which for a film story IS the
+          // film ("The Odyssey"), so getPersonFacts found nobody and the block never fired — the measured reason
+          // the first 800-word test landed at 563 words. The humans live in topic.entities (["The Odyssey (film)",
+          // "Tom Holland", "Christopher Nolan", "Robert Pattinson"]), so take up to 2 of those, skipping the work
+          // itself. Each adds ~2,400 chars of real credits — the material an 800-word piece needs when only one
+          // outlet covered the story.
+          const workNames = new Set([topic.primaryEntity, topic._titleFacts?.title].filter(Boolean).map((x) => String(x).toLowerCase()));
+          const people = (topic.entities || [])
+            .map((e) => String(e || "").replace(/\s*\((film|movie|tv series|series|album|song)\)\s*$/i, "").trim())
+            .filter((e) => e.length > 2 && !workNames.has(e.toLowerCase()));
+          let added = 0;
+          for (const name of people) {
+            if (added >= 2) break;
+            try {
+              const pf = await getPersonFacts(name);
+              const pb = pf ? personFactsBlock(pf) : null;
+              if (pb) {
+                if (!topic._person) topic._person = pf;
+                topic.facts.push({ title: `AUTHORITATIVE PERSON FACTS — ${name}`, extract: pb });
+                console.log(`  longform: +${pb.length} chars person facts (${name})`);
+                added++;
+              }
+            } catch { /* person grounding is additive — never fail the article for it */ }
+          }
+          if (!added) console.log("  longform: no person facts resolved (story has no named person in TMDB)");
+        }
         if (tf.imdbId) {
           const o = await omdb(tf.imdbId);
           if (o) { topic._omdb = o; const b = omdbFactBlock(o); if (b) topic.facts.unshift({ title: "AUTHORITATIVE RATINGS & BOX OFFICE", extract: b }); }

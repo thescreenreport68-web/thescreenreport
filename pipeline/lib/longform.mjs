@@ -26,7 +26,12 @@ export const CFG = {
   // The enforced floor. Staged during testing (400 → 600 → 800) via LONGFORM_MIN_WORDS so we can prove
   // each rung before demanding the next; 800 is the owner's stated bare minimum for going live.
   MIN_WORDS: Number(process.env.LONGFORM_MIN_WORDS ?? 800),
-  TARGET_WORDS: Number(process.env.LONGFORM_TARGET_WORDS ?? 950),
+  // The writer is asked for TARGET, not MIN, and TARGET carries deliberate MARGIN above the floor.
+  // Measured: the fidelity guard runs AFTER the writer and cuts every sentence it cannot trace to the
+  // sources — 6 cuts on the 800-word test, landing a genuinely good draft at 798 and failing it by two
+  // words. Asking for the floor exactly guarantees that outcome. ~25% margin absorbs a normal trim, and
+  // any margin that survives is real sourced material, not padding (the padding detector still judges it).
+  TARGET_WORDS: Number(process.env.LONGFORM_TARGET_WORDS ?? Math.round(Number(process.env.LONGFORM_MIN_WORDS ?? 800) * 1.25)),
   MIN_H2: Number(process.env.LONGFORM_MIN_H2 ?? 4),
   MIN_BULLETS: Number(process.env.LONGFORM_MIN_BULLETS ?? 4),   // total list items, not lists
   // Source material needed before we may even ASK for the long form. ~6 chars/word, and a faithful

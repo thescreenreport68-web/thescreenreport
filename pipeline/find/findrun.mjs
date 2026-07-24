@@ -12,6 +12,8 @@ import { detectBreakouts } from "./sources/breakout.mjs";
 import { expandInsideStories, TIER_S } from "./expand.mjs";
 import { buildRadar, loadRadar, radarBoost } from "./radar.mjs";
 import { loadDemand, demandForTopic, demandPoints, strikingMatch } from "./gscDemand.mjs";
+import { harvestCorroboration } from "./sources/rss.mjs";
+import { ON as LF_ON } from "../lib/longform.mjs";
 import { performance, learnPoints, savePerformance } from "./learn.mjs";
 import { myPublishedSlugs } from "./sameStory.mjs";
 import { load as paceLoad, save as paceSave, recordCandidates } from "../lib/pacing.mjs";
@@ -257,6 +259,14 @@ if (demand.ok) {
 // scheduler's bar float with the day's real volume instead of a fixed percentile.
 try { const _ps = paceLoad(); recordCandidates(_ps, verified); paceSave(_ps); monitor.stage("pacing", `window fed with ${verified.length} scored candidates`); }
 catch (e) { monitor.stage("pacing", `window feed failed (non-fatal): ${String(e?.message || e).slice(0, 100)}`); }
+// LONGFORM CORROBORATION HARVEST (owner 2026-07-24): attach same-story coverage from the corroboration-only
+// feeds so a chosen story carries enough material for 800 honest words. Costs ZERO LLM calls and hits no search
+// API, so it cannot be rate-limited the way the Google-News path was. It ONLY adds sources to topics already
+// selected by the top trades — it never seeds, reorders or changes what we cover. Gated OFF for the live lane.
+if (LF_ON) {
+  try { await harvestCorroboration(verified, { log: (m) => monitor.stage("corroborate", m) }); }
+  catch (e) { monitor.stage("corroborate", `skipped (${String(e?.message || e).slice(0, 70)})`); }
+}
 let queue = selectDiverse(verified, { n: QUEUE_N, publishableOnly: true, floor: SELECT_FLOOR, minKeep: 3 });
 // NEVER PUBLISH 0 (owner 2026-07-06): our niche ALWAYS has something trending — a movie, TV show, musician/music, or
 // celebrity story. So the automation must never skip a tick for lack of content. If the strict newsworthiness floor +
