@@ -1,0 +1,75 @@
+{
+  "id": "news-dave-clark-announcement",
+  "slug": "dave-clark-s-ai-studio-promise-aims-for-films-hollywood-can-release",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 268w < 300",
+        "Flesch 31 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 11,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 191w < 300",
+        "a 57-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 3,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Dave Clark",
+    "work": null,
+    "outlet": "crisismagazine.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 191,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 57,
+      "avgSentence": 24,
+      "flesch": 41,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 191w < 300",
+        "a 57-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "body ≥ 220w",
+      "key takeaways"
+    ]
+  },
+  "ms": 57102
+}

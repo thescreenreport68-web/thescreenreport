@@ -1,146 +1,12 @@
 {
-  "runId": "run-2026-07-24T11-01-02",
-  "builtAt": "2026-07-24T11:02:36.345Z",
-  "count": 23,
+  "runId": "run-2026-07-24T12-01-07",
+  "builtAt": "2026-07-24T12:02:52.921Z",
+  "count": 19,
   "topics": [
-    {
-      "id": "news-kabul-series-eric-dane-bbc",
-      "slug": "bbc-buys-war-drama-kabul-featuring-eric-dane-in-one-of-his-last-roles",
-      "title": "BBC Buys War Drama ‘Kabul,’ Featuring Eric Dane in One of His Last Roles",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "kabul-series-eric-dane-bbc",
-      "primaryKeyword": "Kabul series",
-      "primaryEntity": "Kabul (TV series)",
-      "entities": [
-        "Eric Dane",
-        "BBC"
-      ],
-      "angle": "The BBC has acquired the thriller series 'Kabul,' which features the late Eric Dane in one of his final roles.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/global/bbc-war-drama-kabul-eric-dane-1236820165/",
-          "ageMin": 45,
-          "headline": "BBC Buys War Drama ‘Kabul,’ Featuring Eric Dane in One of His Last Roles",
-          "summary": "The BBC has acquired thriller series Kabul, starring the late Eric Dane and Tehran s Shervin Alenabi, from Mediawan Rights. The six-part show, which is against the backdrop of U.S. troops’ withdrawal from Afghanistan amid the Taliban’s return to Kabul, follows the chaotic evacuation of various characters including diplomats, soldiers and civilians. The synopsis reads: “Kabul, [ ]"
-        }
-      ],
-      "ageMin": 45,
-      "_cand": {
-        "key": "rss:bbc-buys-war-drama-kabul-featuring-eric-dane-in-one-of-his-l",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 85,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-marvel-wolverine-story-trailer-comic-con-2026",
-      "slug": "marvel-s-wolverine-official-story-trailer-comic-con-2026",
-      "title": "Marvel’s Wolverine - Official Story Trailer | Comic Con 2026",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "marvel-wolverine-story-trailer-comic-con-2026",
-      "primaryKeyword": "wolverine trailer",
-      "primaryEntity": "Deadpool & Wolverine",
-      "entities": [
-        "Marvel's Wolverine",
-        "Comic Con 2026"
-      ],
-      "angle": "A story trailer for Marvel's Wolverine has been released.",
-      "tmdbType": "movie",
-      "source": "gnews:IGN Benelux",
-      "sources": [
-        {
-          "outlet": "IGN Benelux",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQaUpXbmxpbjVpdTFBZ0JMR2lQUDNNSjNQOVBPY1JUM3Z1bEdpSHhDYWY5V2dta25neGdhQ084M1FId0d0YmhUMWhTSzYydm5Pbnp5STBDemJKY0g2NmQyQzNkbmpNWkpveGdDV3VMWDBGVnBnenBuakdJUFlGNmNMLTFXSkZHWENYRkNRdGZFZy02YUs3N2dVeVE4aHlSd09P?oc=5",
-          "ageMin": 28,
-          "headline": "Marvel’s Wolverine - Official Story Trailer | Comic Con 2026 - IGN Benelux",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxQaUpXbmxpbjVpdTFBZ0JMR2lQUDNNSjNQOVBPY1JUM3Z1bEdpSHhDYWY5V2dta25neGdhQ084M1FId0d0YmhUMWhTSzYydm5Pbnp5STBDemJKY0g2NmQyQzNkbmpNWkpveGdDV3VMWDBGVnBnenBuakdJUFlGNmNMLTFXSkZHWENYRkNRdGZFZy02YUs3N2dVeVE4aHlSd09P?oc=5\" target=\"_blank\" Marvel’s Wol"
-        }
-      ],
-      "ageMin": 28,
-      "_cand": {
-        "key": "rss:marvel-s-wolverine-official-story-trailer-comic-con-2026-ign",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IGN Benelux"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IGN Benelux",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 82,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
     {
       "id": "news-zosia-mamet-industry-season-5",
       "slug": "zosia-mamet-joins-industry-season-5",
-      "title": "Zosia Mamet Joins ‘Industry’ Season 5",
+      "title": "Zosia Mamet Joins 'Industry' Season 5",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -148,12 +14,14 @@
       "eventType": "casting",
       "sensitivity": "normal",
       "eventSlug": "zosia-mamet-industry-season-5",
-      "primaryKeyword": "Zosia Mamet Industry",
+      "primaryKeyword": "industry season 5",
       "primaryEntity": "Industry (TV series)",
       "entities": [
-        "Zosia Mamet"
+        "Zosia Mamet",
+        "HBO",
+        "BBC"
       ],
-      "angle": "Zosia Mamet is set to join the cast of HBO and BBC's 'Industry' for its upcoming final season.",
+      "angle": "Zosia Mamet joins the cast of HBO/BBC's 'Industry' for its fifth and final season.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -161,7 +29,7 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/",
-          "ageMin": 961,
+          "ageMin": 1021,
           "headline": "Zosia Mamet Joins ‘Industry’ Season 5",
           "summary": "The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season."
         },
@@ -169,12 +37,12 @@
           "outlet": "Yahoo",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZk5rTDR2dWN6QXBzY2w1Z3paTEtabDRHR0gyV2VDYVpTVVZvOHJUS19lR0Y1RHBwenQ3N01GWm02bWlUa0Q0eFdTd2hheE4xS2lKYjNrNnVuQ1RiakZ5czZkaHhaTDFrWm5MclpsR2JJVVhIdXZkbWJNc0tPNmlwbkFlZUlvT2dvcDh2Xzd1ZUk?oc=5",
-          "ageMin": 945,
+          "ageMin": 1005,
           "headline": "‘Industry’ Casts Zosia Mamet in Final Season - Yahoo",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPZk5rTDR2dWN6QXBzY2w1Z3paTEtabDRHR0gyV2VDYVpTVVZvOHJUS19lR0Y1RHBwenQ3N01GWm02bWlUa0Q0eFdTd2hheE4xS2lKYjNrNnVuQ1RiakZ5czZkaHhaTDFrWm5MclpsR2JJVVhIdXZkbWJNc0tPNmlwbkFlZUlvT2dvcDh2Xzd1ZUk?oc=5\" target=\"_blank\" ‘Industry’ Casts Zosia Mamet in F"
         }
       ],
-      "ageMin": 961,
+      "ageMin": 1021,
       "_cand": {
         "key": "rss:zosia-mamet-joins-industry-season-5",
         "popularity": 0,
@@ -213,25 +81,499 @@
       "tierClass": "B"
     },
     {
-      "id": "news-na-hong-jin-hope-comic-con-debut",
-      "slug": "director-na-hong-jin-makes-comic-con-debut-with-frightening-new-hope-f",
-      "title": "Director Na Hong-Jin Makes Comic-Con Debut With Frightening New Hope Footage, Says Casting Hoyeon Was His Best Decision",
+      "id": "trailer-marvel-wolverine-story-trailer-jean-grey",
+      "slug": "marvel-s-wolverine-just-got-a-new-story-trailer-spotlighting-jean-grey",
+      "title": "Marvel's Wolverine just got a new story trailer spotlighting Jean Grey, The Hand, and... is that Troy Baker?",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "marvel-wolverine-story-trailer-jean-grey",
+      "primaryKeyword": "marvel wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine (video game)",
+        "Jean Grey",
+        "The Hand",
+        "Troy Baker"
+      ],
+      "angle": "New story trailer for Marvel's Wolverine game released, featuring Jean Grey and The Hand.",
+      "tmdbType": "movie",
+      "source": "gnews:TechRadar",
+      "sources": [
+        {
+          "outlet": "TechRadar",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPdkxEb3JoR3VjMU53S3pEUFZtekJwdkJnZHVvUktCSWV5LXFIQ3A2VTNFRVJ6NkdRVi02dlBqWWYyV0k3eklZdXVOX3JOLUp5dk80S3FhMG1wWmc3WHUzdzIxcGdQaTVNQUVJYXdtRmllTDlMSjNVdEQyb0VUbi1uZ0Yta1F4Y3pDallJTkZ3Zm1uZ0xxbHI5QjBuQjN5MTJOZUgtcEUzM19tVGlQeG5xMnU5NVRWQjBXcGx4LXFJeEwtZmtETHV5MlBDY0lWYnM?oc=5",
+          "ageMin": 40,
+          "headline": "Marvel's Wolverine just got a new story trailer spotlighting Jean Grey, The Hand, and... is that Troy Baker? - TechRadar",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPdkxEb3JoR3VjMU53S3pEUFZtekJwdkJnZHVvUktCSWV5LXFIQ3A2VTNFRVJ6NkdRVi02dlBqWWYyV0k3eklZdXVOX3JOLUp5dk80S3FhMG1wWmc3WHUzdzIxcGdQaTVNQUVJYXdtRmllTDlMSjNVdEQyb0VUbi1uZ0Yta1F4Y3pDallJTkZ3Zm1uZ0xxbHI5QjBuQjN5MTJOZUgtcEUzM19tVGlQeG5xMnU5NVRWQjBXcGx"
+        }
+      ],
+      "ageMin": 40,
+      "_cand": {
+        "key": "rss:marvel-s-wolverine-just-got-a-new-story-trailer-spotlighting",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TechRadar"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TechRadar",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-dave-clark-announcement",
+      "slug": "dave-clark-s-ai-studio-promise-aims-for-films-hollywood-can-release",
+      "title": "Dave Clark’s AI Studio Promise Aims For Films Hollywood Can Release",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "na-hong-jin-hope-comic-con-debut",
-      "primaryKeyword": "na hong jin hope comic con",
+      "eventSlug": "dave-clark-announcement",
+      "primaryKeyword": "AI film production",
+      "primaryEntity": "Dave Clark",
+      "entities": [
+        "Ai Mi",
+        "AI"
+      ],
+      "angle": "An AI studio founded by Dave Clark is planning to produce films for Hollywood release.",
+      "tmdbType": "movie",
+      "source": "gnews:Crisis Magazine",
+      "sources": [
+        {
+          "outlet": "Crisis Magazine",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9lYXlDcFNGUnBjODA1RVQycVpaOERLd2I5Nzc5ajJIZkl0QndUOUpLWnhvamhSaGRJQkFnWWlIaUZXNUNkbU5FZkZnTnBSczVqQmVtSFpjVDBEZ2d1X1FKT21RQVhUWHMyS1FDNnN3?oc=5",
+          "ageMin": 171,
+          "headline": "Why I Won’t See The Odyssey - Crisis Magazine",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE9lYXlDcFNGUnBjODA1RVQycVpaOERLd2I5Nzc5ajJIZkl0QndUOUpLWnhvamhSaGRJQkFnWWlIaUZXNUNkbU5FZkZnTnBSczVqQmVtSFpjVDBEZ2d1X1FKT21RQVhUWHMyS1FDNnN3?oc=5\" target=\"_blank\" Why I Won’t See The Odyssey /a nbsp; nbsp; font color=\"#6f6f6f\" Crisis Magazine "
+        }
+      ],
+      "ageMin": 171,
+      "_cand": {
+        "key": "rss:why-i-won-t-see-the-odyssey-crisis-magazine",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Crisis Magazine"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Crisis Magazine",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 3
+      },
+      "demandImpressions": 2,
+      "demandQuery": "craig gillespie supergirl production issues",
+      "demandPosition": 1,
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-marvel-wolverine-story-trailer",
+      "slug": "marvel-s-wolverine-gets-a-new-story-trailer",
+      "title": "Marvel’s Wolverine Gets a New Story Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "marvel-wolverine-story-trailer",
+      "primaryKeyword": "marvel wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine (video game)"
+      ],
+      "angle": "A new story trailer has been released for Marvel's Wolverine.",
+      "tmdbType": "movie",
+      "source": "gnews:PlayDayOne",
+      "sources": [
+        {
+          "outlet": "PlayDayOne",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5",
+          "ageMin": 60,
+          "headline": "Marvel’s Wolverine Gets a New Story Trailer - PlayDayOne",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5\" target=\"_blank\" Marvel’s Wolverine Gets a New Story Trailer /a nbsp; nbsp"
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:marvel-s-wolverine-gets-a-new-story-trailer-playdayone",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "PlayDayOne"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "PlayDayOne",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 82,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-oliver-tree-announcement",
+      "slug": "oliver-tree-celebration-of-life-event-to-feature-diplo-tribute-videos",
+      "title": "Oliver Tree Celebration of Life Event to Feature Diplo, Tribute Videos",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "oliver-tree-announcement",
+      "primaryKeyword": "Oliver Tree",
+      "primaryEntity": "Oliver Tree",
+      "entities": [
+        "Diplo",
+        "Santa Cruz"
+      ],
+      "angle": "Oliver Tree to be honored with a 'Celebration of Life' event featuring Diplo and tribute videos.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/international-insider-venice-film-festival-lineup-1237002349/",
+          "ageMin": 1,
+          "headline": "International Insider: Venice Lineup Analysis; Rebel Wilson Legal Victory; Lisa Nandy, Troublemaker-In-Chief",
+          "summary": "We re back again, Insiders. Greetings from Europe, where the traditionally quiet period for the industry feels anything but this year. Jesse Whittock on the buttons. Sign up for the full, expanded Insider newsletter experience here. Venice Line-Up Analysis Studios stay away (again): The summer slowdown may be upon us in Europe and the U.S., but [ ]"
+        }
+      ],
+      "ageMin": 1,
+      "_cand": {
+        "key": "rss:international-insider-venice-lineup-analysis-rebel-wilson-le",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 73,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-snoop-dogg-biopic-casting-jonathan-daviss",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "snoop-dogg-biopic-casting-jonathan-daviss",
+      "primaryKeyword": "snoop dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic (2027 film)",
+      "entities": [
+        "Jonathan Daviss",
+        "Craig Brewer",
+        "Universal"
+      ],
+      "angle": "Jonathan Daviss cast as Snoop Dogg in upcoming biopic.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 3751,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
+        }
+      ],
+      "ageMin": 3751,
+      "_cand": {
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-rings-of-power-season-3-trailer-launch",
+      "slug": "the-rings-of-power-season-3-trailer-launch-live",
+      "title": "'The Rings of Power' Season 3 Trailer Launch Live",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "rings-of-power-season-3-trailer-launch",
+      "primaryKeyword": "rings of power trailer",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "entities": [
+        "The Rings of Power (TV series)",
+        "Amazon Prime Video"
+      ],
+      "angle": "Amazon Prime Video is launching the trailer for the third season of The Rings of Power.",
+      "tmdbType": "movie",
+      "source": "gnews:TechRadar",
+      "sources": [
+        {
+          "outlet": "TechRadar",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNEo4R3pDVXA4cE9yaGtRNFBHa2ZWdElRdHlVakJiUkRkMXdiQlJMcDI1LURad0pKVjRSU2tLVzh1dFd1ekpxOEFOck9wMlFZY3BXb0hoUUdZclpDcExjVlRHS3FEOTdJWXQ1MmR3dzhMWlRYT0JqMkxMQ3Z2eFRPY2VUSjk?oc=5",
+          "ageMin": 91,
+          "headline": "'The Rings of Power' season 3 trailer launch live — all of the build-up to the release of the Amazon Prime Video TV show's next teaser - TechRadar",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPNEo4R3pDVXA4cE9yaGtRNFBHa2ZWdElRdHlVakJiUkRkMXdiQlJMcDI1LURad0pKVjRSU2tLVzh1dFd1ekpxOEFOck9wMlFZY3BXb0hoUUdZclpDcExjVlRHS3FEOTdJWXQ1MmR3dzhMWlRYT0JqMkxMQ3Z2eFRPY2VUSjk?oc=5\" target=\"_blank\" 'The Rings of Power' season 3 trailer launch live"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:-the-rings-of-power-season-3-trailer-launch-live-all-of-the-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TechRadar"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TechRadar",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 74,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-dungeon-crawler-carl-casts-jeff-hays",
+      "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
+      "title": "Peacock's 'Dungeon Crawler Carl' Series Casts Audiobook Narrator Jeff Hays",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "dungeon-crawler-carl-casts-jeff-hays",
+      "primaryKeyword": "dungeon crawler carl series",
+      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "entities": [
+        "Jeff Hays",
+        "Peacock"
+      ],
+      "angle": "Jeff Hays, the audiobook narrator for 'Dungeon Crawler Carl,' has been cast in the Peacock series adaptation to voice the character Princess Donut.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
+          "ageMin": 781,
+          "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+          "summary": "He'll voice the key character of Princess Donut, a talking cat."
+        }
+      ],
+      "ageMin": 781,
+      "_cand": {
+        "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 62,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-na-hong-jin-debuts-hope-footage-at-comic-con",
+      "slug": "director-na-hong-jin-makes-comic-con-debut-with-new-hope-footage-prais",
+      "title": "Director Na Hong-Jin Makes Comic-Con Debut With New 'Hope' Footage, Praises Casting of Hoyeon",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "na-hong-jin-debuts-hope-footage-at-comic-con",
+      "primaryKeyword": "na hong-jin hope",
       "primaryEntity": "Hope",
       "entities": [
-        "Hope (2024 film)",
-        "Na Hong-jin",
-        "Hoyeon Jung",
-        "Neon"
+        "Hope (film)",
+        "Na Hong-Jin",
+        "Comic-Con",
+        "Hoyeon"
       ],
-      "angle": "South Korean director Na Hong-jin debuts his new film 'Hope' at Comic-Con with new footage and casting praise.",
+      "angle": "South Korean director Na Hong-Jin made his Comic-Con debut to preview his upcoming alien action movie 'Hope,' calling casting Hoyeon his best decision.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
@@ -239,12 +581,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/film/news/na-hong-jin-comic-con-hope-footage-hoyeon-1236819530/",
-          "ageMin": 454,
+          "ageMin": 514,
           "headline": "Director Na Hong-Jin Makes Comic-Con Debut With Frightening New Hope Footage, Says Casting Hoyeon Was His Best Decision",
           "summary": "South Korean director Na Hong-Jin made his San Diego Comic-Con debut to preview his latest film, Neon s alien action movie “Hope. Before the action auteur took the stage in Ballroom 20, a sizzle reel of his previous work — from his 2008 debut “The Chaser” to “The Yellow Sea” and “The Wailing, all set to Ozzy [ ]"
         }
       ],
-      "ageMin": 454,
+      "ageMin": 514,
       "_cand": {
         "key": "rss:director-na-hong-jin-makes-comic-con-debut-with-frightening-",
         "popularity": 0,
@@ -281,155 +623,23 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-marvel-wolverine-story-trailer-drama",
-      "slug": "marvel-s-wolverine-big-new-story-trailer-is-being-overshadowed-by-dram",
-      "title": "Marvel's Wolverine big new story trailer is being overshadowed by drama",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "marvel-wolverine-story-trailer-drama",
-      "primaryKeyword": "Marvel Wolverine trailer",
-      "primaryEntity": "Deadpool & Wolverine",
-      "entities": [
-        "Marvel's Wolverine",
-        "Marvel"
-      ],
-      "angle": "A new story trailer for Marvel's Wolverine is generating buzz, but also overshadowed by behind-the-scenes drama.",
-      "tmdbType": "movie",
-      "source": "gnews:Polygon.com",
-      "sources": [
-        {
-          "outlet": "Polygon.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTFJ0d0phd2I1N0FhbkszR3d3Z0s2Uy1Kc05lZmNSb3BYRlpHWjA3amFGR0QtN2ZhSHVmanBqRDNta2Z5NC1MeDF2V3dfWnpBbF9SS3VMSjV4empnMGszb2RMNExlZ2d0MXhFbW9HRGp1RFdvQS1oSzZRNGZTOEI3TVkzQkRFYzhy?oc=5",
-          "ageMin": 957,
-          "headline": "Marvel's Wolverine big new story trailer is being overshadowed by drama - Polygon.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTFJ0d0phd2I1N0FhbkszR3d3Z0s2Uy1Kc05lZmNSb3BYRlpHWjA3amFGR0QtN2ZhSHVmanBqRDNta2Z5NC1MeDF2V3dfWnpBbF9SS3VMSjV4empnMGszb2RMNExlZ2d0MXhFbW9HRGp1RFdvQS1oSzZRNGZTOEI3TVkzQkRFYzhy?oc=5\" target=\"_blank\" Marvel's Wolverine big new story trailer is "
-        }
-      ],
-      "ageMin": 957,
-      "_cand": {
-        "key": "rss:marvel-s-wolverine-big-new-story-trailer-is-being-overshadow",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Polygon.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Polygon.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-marvel-wolverine-new-story-trailer",
-      "slug": "marvel-s-wolverine-gets-a-new-story-trailer",
-      "title": "Marvel's Wolverine gets a new story trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "marvel-wolverine-new-story-trailer",
-      "primaryKeyword": "wolverine trailer",
-      "primaryEntity": "Deadpool & Wolverine",
-      "entities": [
-        "Marvel's Wolverine"
-      ],
-      "angle": "A new story trailer for Marvel's Wolverine has been released.",
-      "tmdbType": "movie",
-      "source": "gnews:Instant Gaming News",
-      "sources": [
-        {
-          "outlet": "Instant Gaming News",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNT09BbVI2eUo3TmlIdWRrWmUtbW4wZDhSSWg1dEw2MExsc2o0MG5CNzdNVGlHZXpqVi1MYmhpWFd1OXdrM04xSHZyUG9Ub0c5bUxIR2hKWnJlNUxoOWUwLWt0bV8ycWpfbnJUWmdFVW9jU1RHeWQwS2ZRTEpPX0h2UVF5b0VGNUYzcFdBRmRzYk1CdEJfYWZXZA?oc=5",
-          "ageMin": 186,
-          "headline": "Marvel's Wolverine gets a new story trailer - Instant Gaming News",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxNT09BbVI2eUo3TmlIdWRrWmUtbW4wZDhSSWg1dEw2MExsc2o0MG5CNzdNVGlHZXpqVi1MYmhpWFd1OXdrM04xSHZyUG9Ub0c5bUxIR2hKWnJlNUxoOWUwLWt0bV8ycWpfbnJUWmdFVW9jU1RHeWQwS2ZRTEpPX0h2UVF5b0VGNUYzcFdBRmRzYk1CdEJfYWZXZA?oc=5\" target=\"_blank\" Marvel's Wolverine get"
-        }
-      ],
-      "ageMin": 186,
-      "_cand": {
-        "key": "rss:marvel-s-wolverine-gets-a-new-story-trailer-instant-gaming-n",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Instant Gaming News"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Instant Gaming News",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-zach-cregger-weapons-prequel-hype",
+      "id": "news-zach-cregger-hypes-weapons-prequel",
       "slug": "zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-things-await-gl",
-      "title": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
+      "title": "Zach Cregger Hypes 'Weapons' Prequel: 'Mysteries and Crazy Things' Await Gladys Origin Story",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "zach-cregger-weapons-prequel-hype",
-      "primaryKeyword": "zach cregger weapons prequel",
+      "eventSlug": "zach-cregger-hypes-weapons-prequel",
+      "primaryKeyword": "weapons prequel",
       "primaryEntity": "Weapons",
       "entities": [
         "Weapons (film)",
         "Zach Cregger"
       ],
-      "angle": "Director Zach Cregger discusses the ongoing development of a prequel for his upcoming film 'Weapons'.",
+      "angle": "Director Zach Cregger is actively developing a prequel for his upcoming film 'Weapons,' promising 'mysteries and crazy things' in the origin story of the character Gladys.",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -437,12 +647,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/zach-cregger-weapons-prequel-gladys-script-update/",
-          "ageMin": 476,
+          "ageMin": 537,
           "headline": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
           "summary": "\"The script is in progress now, but we’re taking that super seriously,\" the director adds The post Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story appeared first on TheWrap ."
         }
       ],
-      "ageMin": 476,
+      "ageMin": 537,
       "_cand": {
         "key": "rss:zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-thing",
         "popularity": 0,
@@ -479,164 +689,24 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-lewis-capaldi-raye-spilt-milk-fest-2026",
-      "slug": "lewis-capaldi-and-raye-to-headline-australia-s-2026-spilt-milk-fest",
-      "title": "Lewis Capaldi and RAYE to Headline Australia’s 2026 Spilt Milk Fest",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "lewis-capaldi-raye-spilt-milk-fest-2026",
-      "primaryKeyword": "Spilt Milk Fest 2026",
-      "primaryEntity": "Spilt Milk Fest",
-      "entities": [
-        "Lewis Capaldi",
-        "RAYE"
-      ],
-      "angle": "Lewis Capaldi and RAYE announced as headliners for Australia's 2026 Spilt Milk Festival.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/concerts/lewis-capaldi-raye-headline-australia-2026-spilt-milk-1236302204/",
-          "ageMin": 104,
-          "headline": "Lewis Capaldi and RAYE to Headline Australia’s 2026 Spilt Milk Fest",
-          "summary": "The 2026 edition will visit Canberra, Gold Coast, Geelong and Perth this December, the start of the southern summer."
-        }
-      ],
-      "ageMin": 104,
-      "_cand": {
-        "key": "rss:lewis-capaldi-and-raye-to-headline-australia-s-2026-spilt-mi",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-george-michael-faith-tour-concert-film-acquisition",
-      "slug": "george-michael-the-faith-tour-concert-film-acquired-by-bleecker-street",
-      "title": "George Michael: The Faith Tour Concert Film Acquired by Bleecker Street, Universal Pictures Content Group",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "george-michael-faith-tour-concert-film-acquisition",
-      "primaryKeyword": "George Michael Faith Tour film",
-      "primaryEntity": "George Michael: Faith Tour",
-      "entities": [
-        "George Michael: Freedom",
-        "George Michael",
-        "Bleecker Street",
-        "Universal Pictures Content Group"
-      ],
-      "angle": "The concert film 'George Michael: The Faith Tour' has been acquired by Bleecker Street and Universal Pictures Content Group for distribution.",
-      "tmdbType": "movie",
-      "source": "rss:Variety Music",
-      "sources": [
-        {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/george-michael-the-faith-tour-concert-film-bleecker-street-1236818602/",
-          "ageMin": 1366,
-          "headline": "George Michael: The Faith Tour Concert Film Acquired by Bleecker Street, Universal Pictures Content Group",
-          "summary": "The concert film George Michael: The Faith Tour has been acquired by Universal Pictures Content Group and Bleecker Street’s event cinema division Crosswalk. Universal Pictures Content Group will release the film internationally, and Bleecker Street s Crosswalk will release the film in North America. Shot at the Palais Omnisports de Paris-Bercy during the European leg of [ ]"
-        }
-      ],
-      "ageMin": 1366,
-      "_cand": {
-        "key": "rss:george-michael-the-faith-tour-concert-film-acquired-by-bleec",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety Music"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety Music",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 2
-      },
-      "demandImpressions": 1,
-      "demandQuery": "how much was jafar paid for michael",
-      "demandPosition": 30,
-      "tierClass": "B"
-    },
-    {
-      "id": "news-myron-bolitar-series-casting",
-      "slug": "colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-coben-series-",
-      "title": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
+      "id": "news-colin-woodell-myron-bolitar-harlan-coben-netflix-series",
+      "slug": "colin-woodell-to-star-as-myron-bolitar-in-new-harlan-coben-series-for-",
+      "title": "Colin Woodell to Star as Myron Bolitar in New Harlan Coben Series for Netflix",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "myron-bolitar-series-casting",
+      "eventSlug": "colin-woodell-myron-bolitar-harlan-coben-netflix-series",
       "primaryKeyword": "myron bolitar series",
-      "primaryEntity": "Myron Bolitar (TV series)",
+      "primaryEntity": "Myron Bolitar",
       "entities": [
         "Colin Woodell",
         "Harlan Coben",
         "Netflix"
       ],
-      "angle": "Colin Woodell cast as the lead in new Netflix series based on Harlan Coben's character.",
+      "angle": "Colin Woodell cast as the lead in Netflix's adaptation of Harlan Coben's Myron Bolitar series.",
       "tmdbType": "movie",
       "source": "gnews:Netflix",
       "sources": [
@@ -644,12 +714,12 @@
           "outlet": "Netflix",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5",
-          "ageMin": 602,
+          "ageMin": 269,
           "headline": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5\" target=\"_blank\" Colin Woodell Will Star as Myron Bolitar in a New Harlan Cobe"
         }
       ],
-      "ageMin": 602,
+      "ageMin": 269,
       "_cand": {
         "key": "rss:colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-cob",
         "popularity": 0,
@@ -672,207 +742,6 @@
       },
       "priority": 61,
       "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-jennie-less-than-a-lover-music-video",
-      "slug": "jennie-drops-music-video-for-solo-track-less-than-a-lover",
-      "title": "Jennie Drops Music Video for Solo Track 'Less than a Lover'",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jennie-less-than-a-lover-music-video",
-      "primaryKeyword": "jennie music video",
-      "primaryEntity": "Jennie",
-      "entities": [
-        "Less than a Lover"
-      ],
-      "angle": "Blackpink's Jennie drops a new music video for her solo track 'Less than a Lover'.",
-      "tmdbType": "movie",
-      "source": "gnews:Interaksyon",
-      "sources": [
-        {
-          "outlet": "Interaksyon",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOLUZNbmg4YnhHbnBVWWZ0VWxITnQ4c3ZkMlhLRngxdEYyRXZiZHp4TExCSnc2XzhzZFJIaUZpQUZrUVM5b20xNTN2aGFBTHBmRTU2X29wOUtOSWdIRm1JX1g1SHdnZ0J0QUYyZ0tLS2Q4YUhSNVdabWlHX0J1VHEwMktnOU53TmVoZG4wWE8yeGE5a3dxVTNZWFZ6d1NOZEFhamY2VXZ1bm0wUFQzQkNDQUthalZubUVaTTdSSUVSU3hMRmVf0gHKAUFVX3lxTFBUY1hpRFRJVUNWWUZBdGUwQ2xsczM5VEx6LVMyVWFpQktvZ1FsRXI3aXczWGFwTXQ5MnJ5SWFubEgxdFN6UWk2SnVYSEg4UjlxY3FzYURoQXQ1LXJMS01pcmlmQ1lORFNLSVdQM09LaUJUYnY1blhUalp3QWpBeGRxb2pfdXhGM05oZUMxTlN2R25DaDQtUWRXVUVEbkd5OFM1MEpLeFZlYlFWYy10dGxqYkFFbUlxclRpcUlwTXlITWpBM0M0emgtcFE?oc=5",
-          "ageMin": 125,
-          "headline": "Jennie steps into a new world in ‘Less than a Lover’ music video - Interaksyon",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOLUZNbmg4YnhHbnBVWWZ0VWxITnQ4c3ZkMlhLRngxdEYyRXZiZHp4TExCSnc2XzhzZFJIaUZpQUZrUVM5b20xNTN2aGFBTHBmRTU2X29wOUtOSWdIRm1JX1g1SHdnZ0J0QUYyZ0tLS2Q4YUhSNVdabWlHX0J1VHEwMktnOU53TmVoZG4wWE8yeGE5a3dxVTNZWFZ6d1NOZEFhamY2VXZ1bm0wUFQzQkNDQUthalZubUVaTTd"
-        }
-      ],
-      "ageMin": 125,
-      "_cand": {
-        "key": "rss:jennie-steps-into-a-new-world-in-less-than-a-lover-music-vid",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Interaksyon"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Interaksyon",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
-      "entities": [
-        "Snoop Dogg",
-        "Jonathan Daviss",
-        "Craig Brewer",
-        "Universal"
-      ],
-      "angle": "Universal sets a summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 3691,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 3691,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-seth-green-star-wars-detours-release",
-      "slug": "seth-green-s-star-wars-detours-will-finally-see-the-light-of-day",
-      "title": "Seth Green’s Star Wars: Detours Will Finally See the Light of Day",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "seth-green-star-wars-detours-release",
-      "primaryKeyword": "Seth Green Star Wars Detours",
-      "primaryEntity": "Star Wars: Detours",
-      "entities": [
-        "Seth Green"
-      ],
-      "angle": "Seth Green's animated Star Wars series 'Detours' is finally set to be released.",
-      "tmdbType": "movie",
-      "source": "gnews:IGN",
-      "sources": [
-        {
-          "outlet": "IGN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTGJvLTFoWl9UYm92SG1SeU9RY0w0a1BtdXZqb25vUTJiX2lIYkQzeEZTWFpjRUMtM0dhdTdPY05pdEkyMUgxdTcyYmI5dlJ3eW9yMi0xZG9ULUxGYTZpUXBLTndxeFB2d205UWI1Q0JkYXg5OUk2c0ZaNW5fRTZSWHZrdW0tMjNPSlB6UEdPMHAxNUV2dDdn?oc=5",
-          "ageMin": 352,
-          "headline": "Seth Green’s Star Wars: Detours Will Finally See the Light of Day - IGN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxOTGJvLTFoWl9UYm92SG1SeU9RY0w0a1BtdXZqb25vUTJiX2lIYkQzeEZTWFpjRUMtM0dhdTdPY05pdEkyMUgxdTcyYmI5dlJ3eW9yMi0xZG9ULUxGYTZpUXBLTndxeFB2d205UWI1Q0JkYXg5OUk2c0ZaNW5fRTZSWHZrdW0tMjNPSlB6UEdPMHAxNUV2dDdn?oc=5\" target=\"_blank\" Seth Green’s Star Wars: "
-        }
-      ],
-      "ageMin": 352,
-      "_cand": {
-        "key": "rss:seth-green-s-star-wars-detours-will-finally-see-the-light-of",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "IGN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "IGN",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
         "recency": 9,
         "corroboration": 8,
         "status": 18,
@@ -888,9 +757,9 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-beartooth-eyes-closed-music-video",
-      "slug": "beartooth-unveils-music-video-for-new-single-eyes-closed",
-      "title": "BEARTOOTH Unveils Music Video for New Single 'Eyes Closed'",
+      "id": "music-news-vassy-tomorrowland-performance-day-n-night-single",
+      "slug": "vassy-talks-tomorrowland-performance-and-new-single-day-n-night",
+      "title": "VASSY Talks Tomorrowland Performance and New Single 'DAY N NIGHT'",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -898,50 +767,51 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "beartooth-eyes-closed-music-video",
-      "primaryKeyword": "Beartooth Eyes Closed music video",
-      "primaryEntity": "Beartooth",
+      "eventSlug": "vassy-tomorrowland-performance-day-n-night-single",
+      "primaryKeyword": "vassy",
+      "primaryEntity": "VASSY",
       "entities": [
-        "Eyes Closed"
+        "Tomorrowland",
+        "DAY N NIGHT"
       ],
-      "angle": "Rock band Beartooth releases a music video for their latest single 'Eyes Closed'.",
+      "angle": "VASSY discusses her return to Tomorrowland and premiere of new single 'DAY N NIGHT'.",
       "tmdbType": "movie",
-      "source": "gnews:Lambgoat",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Lambgoat",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWXh1RkdRWFFNYjJkckRYY2hVM1B6YVNFVEF2WEJmdXd5aFBWZ2FpbjB0X2NhOUlSeGpCZk5XYjBDQTY2d0xGVEp1Qkl2YnhGc2U3dHRwbkFhckhSa3Z4QXdFdWEwQVhQWmhUMGNlNHhENE5TU09pX012X19fOW02cTRUQ3ZTa1BfVE42dDJ1Z0F2OHZtWFFDaTI2LUp3eUZGVXpNc1NvaV9xbnFqbTY5emdfbks?oc=5",
-          "ageMin": 144,
-          "headline": "BEARTOOTH reveal music video for fourth new single off upcoming album, \"Eyes Closed\" - Lambgoat",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOWXh1RkdRWFFNYjJkckRYY2hVM1B6YVNFVEF2WEJmdXd5aFBWZ2FpbjB0X2NhOUlSeGpCZk5XYjBDQTY2d0xGVEp1Qkl2YnhGc2U3dHRwbkFhckhSa3Z4QXdFdWEwQVhQWmhUMGNlNHhENE5TU09pX012X19fOW02cTRUQ3ZTa1BfVE42dDJ1Z0F2OHZtWFFDaTI2LUp3eUZGVXpNc1NvaV9xbnFqbTY5emdfbks?oc=5\" t"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/vassy-interview-tomorrowland-day-n-night-1236302186/",
+          "ageMin": 267,
+          "headline": "‘Feels Like a Full-Circle Moment’: VASSY Talks Tomorrowland Performance and Fresh Tune ‘DAY N NIGHT’",
+          "summary": "VASSY is returning to Tomorrowland \"as a new mum to premiere the first single of an entirely new chapter,\" she tells Billboard."
         }
       ],
-      "ageMin": 144,
+      "ageMin": 267,
       "_cand": {
-        "key": "rss:beartooth-reveal-music-video-for-fourth-new-single-off-upcom",
+        "key": "rss:-feels-like-a-full-circle-moment-vassy-talks-tomorrowland-pe",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Lambgoat"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Lambgoat",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 52,
       "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "recency": 9,
+        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -955,78 +825,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-spider-man-director-sadie-sink-character-secrecy",
-      "slug": "spider-man-director-on-secrecy-surrounding-sadie-sink-s-character",
-      "title": "Spider-Man director on secrecy surrounding Sadie Sink's character",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "spider-man-director-sadie-sink-character-secrecy",
-      "primaryKeyword": "spider-man director sadie sink character secrecy",
-      "primaryEntity": "Spider-Man",
-      "entities": [
-        "Sadie Sink"
-      ],
-      "angle": "The director of a Spider-Man film reveals details about keeping a specific character's role under wraps.",
-      "tmdbType": "movie",
-      "source": "gnews:femalefirst.co.uk",
-      "sources": [
-        {
-          "outlet": "femalefirst.co.uk",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQNW02TklhWnhaTS1HUlpoQ2xYa2FWV3NkRWlWUnFGdDRmLVllMnpjN3BxVXZfZFN6RGZDT3FKdkhTVzhndnB6d0F4QW9xRW0zbkh0VVRMMDQ4eklNVzVUY0MzbUdwa1kwOTdnTUltZFZ3N1JxcS0zODlBUzZEbUNGN3Joakl0OFcyYno1alFwZUFYVTBqaGtYMHNOeDVPNXEwMUo5NGFaSERScWU5azZrb1hzOVRsdVVWQ0g3T2ZoOA?oc=5",
-          "ageMin": 121,
-          "headline": "Spider-Man director on secrecy surrounding Sadie Sink's character - femalefirst.co.uk",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQNW02TklhWnhaTS1HUlpoQ2xYa2FWV3NkRWlWUnFGdDRmLVllMnpjN3BxVXZfZFN6RGZDT3FKdkhTVzhndnB6d0F4QW9xRW0zbkh0VVRMMDQ4eklNVzVUY0MzbUdwa1kwOTdnTUltZFZ3N1JxcS0zODlBUzZEbUNGN3Joakl0OFcyYno1alFwZUFYVTBqaGtYMHNOeDVPNXEwMUo5NGFaSERScWU5azZrb1hzOVRsdVVWQ0g"
-        }
-      ],
-      "ageMin": 121,
-      "_cand": {
-        "key": "rss:spider-man-director-on-secrecy-surrounding-sadie-sink-s-char",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "femalefirst.co.uk"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "femalefirst.co.uk",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 2
-      },
-      "demandImpressions": 1,
-      "demandQuery": "spider man movies with zendaya in order",
-      "demandPosition": 91,
-      "tierClass": "B"
-    },
-    {
       "id": "news-dungeon-crawler-carl-tv-series-casting",
       "slug": "dungeon-crawler-carl-tv-series-casts-princess-donut-in-major-comic-con",
-      "title": "‘Dungeon Crawler Carl’ TV series casts Princess Donut in major Comic-Con announcement - Entertainment Weekly",
+      "title": "‘Dungeon Crawler Carl’ TV series casts Princess Donut in major Comic-Con announcement",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -1041,7 +842,7 @@
         "Princess Donut",
         "Comic-Con"
       ],
-      "angle": "Princess Donut cast in the upcoming TV adaptation.",
+      "angle": "Princess Donut has been cast in the upcoming 'Dungeon Crawler Carl' TV series.",
       "tmdbType": "movie",
       "source": "gnews:Entertainment Weekly",
       "sources": [
@@ -1049,12 +850,12 @@
           "outlet": "Entertainment Weekly",
           "tier": 6,
           "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBvX2YwS1BHZUhiTmVjbHRsTGpvNldJS2lxUWZSUDlHZTJjbC1Ka1lrbDFubElrQU1zOEdFRE8ySGhCMXJxaXBKNUo4VkY5ZmthRFJWbG1vOWVacGp2YmoxSlZkWUZmS2lsOTJ1eTR2QUYtb1UzelhV?oc=5",
-          "ageMin": 739,
+          "ageMin": 799,
           "headline": "‘Dungeon Crawler Carl’ TV series casts Princess Donut in major Comic-Con announcement - Entertainment Weekly",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTFBvX2YwS1BHZUhiTmVjbHRsTGpvNldJS2lxUWZSUDlHZTJjbC1Ka1lrbDFubElrQU1zOEdFRE8ySGhCMXJxaXBKNUo4VkY5ZmthRFJWbG1vOWVacGp2YmoxSlZkWUZmS2lsOTJ1eTR2QUYtb1UzelhV?oc=5\" target=\"_blank\" ‘Dungeon Crawler Carl’ TV series casts Princess Donut in major Comic"
         }
       ],
-      "ageMin": 739,
+      "ageMin": 799,
       "_cand": {
         "key": "rss:-dungeon-crawler-carl-tv-series-casts-princess-donut-in-majo",
         "popularity": 0,
@@ -1092,39 +893,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-karina-longworth-you-must-remember-this-libby-holman",
-      "slug": "karina-longworth-s-you-must-remember-this-returns-with-libby-holman-de",
-      "title": "Karina Longworth's 'You Must Remember This' Returns with Libby Holman Deep Dive",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
+      "id": "music-news-jennie-debuts-single-less-than-a-lover",
+      "slug": "blackpink-s-jennie-debuts-new-single-less-than-a-lover",
+      "title": "Blackpink's Jennie Debuts New Single 'Less Than a Lover'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "karina-longworth-you-must-remember-this-libby-holman",
-      "primaryKeyword": "You Must Remember This podcast",
-      "primaryEntity": "You Must Remember This",
+      "tier": "popular",
+      "eventSlug": "jennie-debuts-single-less-than-a-lover",
+      "primaryKeyword": "jennie less than a lover",
+      "primaryEntity": "Jennie",
       "entities": [
-        "Karina Longworth",
-        "Libby Holman",
-        "Montgomery Clift"
+        "Blackpink",
+        "Odd Atelier",
+        "Ruby"
       ],
-      "angle": "Karina Longworth's acclaimed podcast 'You Must Remember This' returns with a new season focusing on the life of singer and actress Libby Holman.",
+      "angle": "Blackpink's Jennie releases new single 'Less Than a Lover'.",
       "tmdbType": "movie",
-      "source": "rss:IndieWire",
+      "source": "rss:Rolling Stone",
       "sources": [
         {
-          "outlet": "IndieWire",
+          "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.indiewire.com/news/general-news/you-must-remember-this-new-season-bisexual-libby-holman-1235206901/",
-          "ageMin": 871,
-          "headline": "Karina Longworth s You Must Remember This Returns with a Dishy Deep Dive on Bisexual Black Widow Libby Holman",
-          "summary": "The best classic Hollywood podcast going will now turn to forgotten singer/actress Holman, once an on-and-off lover of another bisexual, the tragically fated Montgomery Clift."
+          "url": "https://www.rollingstone.com/music/music-news/blackpink-jennie-less-than-a-lover-solo-single-1235598273/",
+          "ageMin": 329,
+          "headline": "Blackpink s Jennie Debuts Wistful Single Less Than a Lover",
+          "summary": "The singer's debut solo album, Ruby , was released last year via her own record label Odd Atelier"
         }
       ],
-      "ageMin": 871,
+      "ageMin": 329,
       "_cand": {
-        "key": "rss:karina-longworth-s-you-must-remember-this-returns-with-a-dis",
+        "key": "rss:blackpink-s-jennie-debuts-wistful-single-less-than-a-lover",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1134,119 +936,116 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "IndieWire"
+          "Rolling Stone"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "IndieWire",
+        "attribution": "Rolling Stone",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 59,
+      "priority": 52,
       "signals": {
-        "recency": 1,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "demand": 2,
-        "learned": -1
+        "learned": 4
       },
-      "demandImpressions": 1,
-      "demandQuery": "sam esmail podcast",
-      "demandPosition": 5,
       "tierClass": "C"
     },
     {
-      "id": "news-marvelous-mrs-maisel-set-designer-fatally-stabbed",
-      "slug": "marvelous-mrs-maisel-set-designer-fatally-stabbed-in-apparent-spousal-",
-      "title": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide",
+      "id": "news-damson-idris-f1-the-movie-sequel-conversations",
+      "slug": "damson-idris-teases-f1-the-movie-sequel-buzz",
+      "title": "Damson Idris Teases 'F1 The Movie' Sequel Buzz",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "marvelous-mrs-maisel-set-designer-fatally-stabbed",
-      "primaryKeyword": "marvelous mrs. maisel",
-      "primaryEntity": "The Marvelous Mrs. Maisel",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "damson-idris-f1-the-movie-sequel-conversations",
+      "primaryKeyword": "F1 The Movie sequel",
+      "primaryEntity": "F1",
       "entities": [
-        "Mary Kate Golding"
+        "F1 The Movie",
+        "Damson Idris"
       ],
-      "angle": "Set designer for 'The Marvelous Mrs. Maisel' was fatally stabbed in an apparent murder-suicide.",
+      "angle": "Damson Idris hints at potential sequel discussions for 'F1 The Movie'.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "gnews:Motorsport.com",
       "sources": [
         {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/marvelous-mrs-maisel-set-designer-murdered-mary-kate-golding/",
-          "ageMin": 630,
-          "headline": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide",
-          "summary": "Mary Kate Golding was found dead in her New York home on Tuesday The post ‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide appeared first on TheWrap ."
+          "outlet": "Motorsport.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
+          "ageMin": 1092,
+          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
         }
       ],
-      "ageMin": 630,
+      "ageMin": 1092,
       "_cand": {
-        "key": "rss:-marvelous-mrs-maisel-set-designer-fatally-stabbed-in-appare",
+        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Motorsport.com"
         ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "TheWrap",
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Motorsport.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 53,
+      "priority": 60,
       "signals": {
-        "recency": 4,
-        "corroboration": 12,
+        "recency": 1,
+        "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "learned": -1
+        "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
-      "id": "news-the-chi-other",
-      "slug": "how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side-of-chicag",
-      "title": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
+      "id": "news-the-chi-tv-series-other",
+      "slug": "the-chi-stars-and-creator-reflect-on-series-legacy-ahead-of-finale",
+      "title": "The Chi Stars and Creator Reflect on Series Legacy Ahead of Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "the-chi-other",
-      "primaryKeyword": "The Chi",
-      "primaryEntity": "The Chi",
+      "eventSlug": "the-chi-tv-series-other",
+      "primaryKeyword": "the chi series finale",
+      "primaryEntity": "The Chi (TV series)",
       "entities": [
         "Lena Waithe",
-        "Paramount+"
+        "Birgundi Baker",
+        "Jacob Latimore"
       ],
-      "angle": "Creator and stars reflect on the legacy of 'The Chi' ahead of its series finale.",
+      "angle": "Creator and stars reflect on the Paramount+ series' legacy ahead of its series finale.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1254,12 +1053,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chi-series-finale-preview-lena-waithe-interview-1236654335/",
-          "ageMin": 847,
+          "ageMin": 907,
           "headline": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
           "summary": "Heading into the series finale, creator Lena Waithe along with stars Birgundi Baker and Jacob Latimore reflect on the Paramount+ show's legacy, and tease how it will all end."
         }
       ],
-      "ageMin": 847,
+      "ageMin": 907,
       "_cand": {
         "key": "rss:how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side",
         "popularity": 0,
@@ -1299,7 +1098,7 @@
       "tierClass": "A"
     },
     {
-      "id": "news-wisconsin-greats-represent-team-usa-hockey-on-celebrity-family-feud",
+      "id": "news-wisconsin-greats-appear-on-celebrity-family-feud",
       "slug": "wisconsin-greats-represent-team-usa-hockey-on-celebrity-family-feud",
       "title": "Wisconsin Greats Represent Team USA Hockey on Celebrity Family Feud",
       "contentType": "news",
@@ -1308,13 +1107,13 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "wisconsin-greats-represent-team-usa-hockey-on-celebrity-family-feud",
-      "primaryKeyword": "Celebrity Family Feud",
+      "eventSlug": "wisconsin-greats-appear-on-celebrity-family-feud",
+      "primaryKeyword": "celebrity family feud",
       "primaryEntity": "Celebrity Family Feud",
       "entities": [
         "Team USA Hockey"
       ],
-      "angle": "Former Wisconsin athletes appear on 'Celebrity Family Feud' representing Team USA Hockey.",
+      "angle": "Former Wisconsin athletes are set to appear on the popular game show.",
       "tmdbType": "movie",
       "source": "gnews:Badgers Wire",
       "sources": [
@@ -1322,12 +1121,12 @@
           "outlet": "Badgers Wire",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQLV9QUk42dzZYQWlSS01YOVhDZmItandqUjZRZERyWmVkaHdpOGNWbGNJaGlDN0ZVcV9EYlVBYWtPWlNnc01OMW54MVBvbmxGeG01MDBFeTdQR0ljSzVJUlZMaXlIX3k4ZElwX1pHYzdsNDQzdnc1TFhkbGFSdDMyUFpwbV9Ob0VubXM2QllfcVVsdEZMdHNBZ0NTYkx5STRtZ1paa1UyMWJqbTU5MEFpb2xXcE1Ha1hoQlZIRURYZDVWMkNJSlJCbGU3WHlMSkVNMXlLSw?oc=5",
-          "ageMin": 55,
+          "ageMin": 115,
           "headline": "Wisconsin greats represent Team USA Hockey on Celebrity Family Feud - Badgers Wire",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQLV9QUk42dzZYQWlSS01YOVhDZmItandqUjZRZERyWmVkaHdpOGNWbGNJaGlDN0ZVcV9EYlVBYWtPWlNnc01OMW54MVBvbmxGeG01MDBFeTdQR0ljSzVJUlZMaXlIX3k4ZElwX1pHYzdsNDQzdnc1TFhkbGFSdDMyUFpwbV9Ob0VubXM2QllfcVVsdEZMdHNBZ0NTYkx5STRtZ1paa1UyMWJqbTU5MEFpb2xXcE1Ha1hoQlZ"
         }
       ],
-      "ageMin": 55,
+      "ageMin": 115,
       "_cand": {
         "key": "rss:wisconsin-greats-represent-team-usa-hockey-on-celebrity-fami",
         "popularity": 0,
@@ -1348,9 +1147,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 60,
+      "priority": 52,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 8,
         "status": 18,
         "type": 5,
@@ -1362,84 +1161,79 @@
         "softTv": 0,
         "learned": 1
       },
-      "tierClass": "B"
+      "tierClass": "C"
     },
     {
-      "id": "news-george-kittle-taylor-swift-travis-kelce-wedding-details",
-      "slug": "george-kittle-shares-new-details-about-fantastic-and-fun-taylor-swift-",
-      "title": "George Kittle Shares New Details About ‘Fantastic’ and ‘Fun’ Taylor Swift and Travis Kelce Wedding",
+      "id": "news-twilight-alumni-dua-lipa-jack-antonoff-attend-comic-con",
+      "slug": "twilight-alumni-ashley-greene-and-peter-facinelli-vamp-at-comic-con-pl",
+      "title": "'Twilight' Alumni Ashley Greene and Peter Facinelli Vamp at Comic-Con, Plus Dua Lipa, Jack Antonoff and More",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "marriage",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "george-kittle-taylor-swift-travis-kelce-wedding-details",
-      "primaryKeyword": "Taylor Swift Travis Kelce wedding",
-      "primaryEntity": "Travis Kelce",
+      "eventSlug": "twilight-alumni-dua-lipa-jack-antonoff-attend-comic-con",
+      "primaryKeyword": "Comic-Con",
+      "primaryEntity": "Comic-Con Episode IV: A Fan's Hope",
       "entities": [
-        "Taylor Swift",
-        "George Kittle"
+        "Comic-Con",
+        "Ashley Greene",
+        "Peter Facinelli",
+        "Dua Lipa"
       ],
-      "angle": "George Kittle shares new details about Taylor Swift and Travis Kelce's wedding.",
+      "angle": "Notable figures from 'Twilight' and the music world made appearances at Comic-Con.",
       "tmdbType": "movie",
-      "source": "gnews:Us Weekly",
+      "source": "gnews:Los Angeles Times",
       "sources": [
         {
-          "outlet": "Us Weekly",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWGVySUdnc3U3eVRob2hvcUt2M3B0U0FMTklFOWdEaU54a1Z6akVLWGU5QnA3THYwVVdOMng4ekpONHBCMXI2Rkg3UXlROEpsaWl3VmR4VXBkem9UQnhkUVIzM1hMVWkzNlFDeEhQV2U1dWplUHJKVG5mcDVqdkNMSTlxR0dvVG9Va2hKSXhJX0dLZERhMmtOLU5OZ0U4bkVvMlFGV0tvQTFnOTg?oc=5",
-          "ageMin": 322,
-          "headline": "George Kittle Shares New Details About ‘Fantastic’ and ‘Fun’ Taylor Swift and Travis Kelce Wedding - Us Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWGVySUdnc3U3eVRob2hvcUt2M3B0U0FMTklFOWdEaU54a1Z6akVLWGU5QnA3THYwVVdOMng4ekpONHBCMXI2Rkg3UXlROEpsaWl3VmR4VXBkem9UQnhkUVIzM1hMVWkzNlFDeEhQV2U1dWplUHJKVG5mcDVqdkNMSTlxR0dvVG9Va2hKSXhJX0dLZERhMmtOLU5OZ0U4bkVvMlFGV0tvQTFnOTg?oc=5\" target=\"_blan"
+          "outlet": "Los Angeles Times",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNTk1hakJkSE1ZOGR5Tno5NHlYRHRBbG05WE5xR1Fwd05YQ2kzOGZNZHZfLVVrenRfNjQ2eFNYWlhvRkRick5jYU1vVkFpNUtoZ2t3YUdSSEVMc3BaLUh4eGpLQWtGbG4zaWo1X3BZQXVoTUpTZ2V0OFdvdENRcVRZbEVLQnBlYXZhM1J4Wi1wNEJNdTlpLTBEbjAweDdDSVR0ZTJILVNPUWZRR2JQVWZJakpPdzk?oc=5",
+          "ageMin": 121,
+          "headline": "‘The Odyssey’ is great but Imax 70mm snobbery is not the answer to Hollywood’s woes - Los Angeles Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNTk1hakJkSE1ZOGR5Tno5NHlYRHRBbG05WE5xR1Fwd05YQ2kzOGZNZHZfLVVrenRfNjQ2eFNYWlhvRkRick5jYU1vVkFpNUtoZ2t3YUdSSEVMc3BaLUh4eGpLQWtGbG4zaWo1X3BZQXVoTUpTZ2V0OFdvdENRcVRZbEVLQnBlYXZhM1J4Wi1wNEJNdTlpLTBEbjAweDdDSVR0ZTJILVNPUWZRR2JQVWZJakpPdzk?oc=5\" t"
         }
       ],
-      "ageMin": 322,
+      "ageMin": 121,
       "_cand": {
-        "key": "rss:george-kittle-shares-new-details-about-fantastic-and-fun-tay",
+        "key": "rss:-the-odyssey-is-great-but-imax-70mm-snobbery-is-not-the-answ",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Us Weekly"
+          "Los Angeles Times"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Us Weekly",
+        "attribution": "Los Angeles Times",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 55,
+      "priority": 52,
       "signals": {
-        "recency": 9,
-        "corroboration": 8,
+        "recency": 16,
+        "corroboration": 12,
         "status": 18,
-        "type": 8,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "demand": 7,
-        "striking": 4,
         "learned": 1
       },
-      "demandImpressions": 9,
-      "demandQuery": "travis kelce wife",
-      "demandPosition": 53.4,
-      "strikingSlug": "taylor-swift-s-toy-story-5-soundtrack-debuts-at-no-1-on-billboard-kid-album",
-      "strikingPosition": 26.2,
       "tierClass": "C"
     },
     {
-      "id": "news-chris-affleck-dies-at-83",
+      "id": "news-chris-affleck-dies-83",
       "slug": "chris-affleck-mother-of-ben-and-casey-affleck-dies-at-83",
       "title": "Chris Affleck, Mother of Ben and Casey Affleck, Dies at 83",
       "contentType": "news",
@@ -1448,15 +1242,14 @@
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "chris-affleck-dies-at-83",
-      "primaryKeyword": "Chris Affleck death",
+      "eventSlug": "chris-affleck-dies-83",
+      "primaryKeyword": "chris Affleck",
       "primaryEntity": "Chris Affleck",
       "entities": [
         "Ben Affleck",
         "Casey Affleck"
       ],
-      "angle": "The mother of Oscar-winning actors Ben and Casey Affleck has passed away.",
+      "angle": "The mother of Oscar-winning actors Ben and Casey Affleck, Chris Affleck, has passed away at the age of 83.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1464,12 +1257,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/chris-anne-affleck-dead-ben-affleck-casey-affleck-mother-1236655678/",
-          "ageMin": 400,
+          "ageMin": 460,
           "headline": "Chris Affleck, Mother of Oscar Winners Ben and Casey Affleck, Dies at 83",
           "summary": "A schoolteacher, she was recently diagnosed with pancreatic cancer and died June 2, her family announced."
         }
       ],
-      "ageMin": 400,
+      "ageMin": 460,
       "_cand": {
         "key": "rss:chris-affleck-mother-of-oscar-winners-ben-and-casey-affleck-",
         "popularity": 0,
@@ -1505,75 +1298,6 @@
         "learned": 1
       },
       "tierClass": "S"
-    },
-    {
-      "id": "news-ashley-greene-peter-facinelli-dua-lipa-jack-comic-con",
-      "slug": "twilight-alumni-ashley-greene-and-peter-facinelli-vamp-at-comic-con-pl",
-      "title": "‘Twilight’ Alumni Ashley Greene and Peter Facinelli Vamp at Comic-Con, Plus Dua Lipa, Jack Antonoff and More",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "appearance",
-      "sensitivity": "normal",
-      "eventSlug": "ashley-greene-peter-facinelli-dua-lipa-jack-comic-con",
-      "primaryKeyword": "ashley greene peter facinelli dua lipa jack antonoff comic-con",
-      "primaryEntity": "Comic-Con Episode IV: A Fan's Hope",
-      "entities": [
-        "Comic-Con",
-        "Ashley Greene",
-        "Peter Facinelli",
-        "Dua Lipa"
-      ],
-      "angle": "Twilight and pop music stars mingle at San Diego Comic-Con.",
-      "tmdbType": "movie",
-      "source": "gnews:People.com",
-      "sources": [
-        {
-          "outlet": "People.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNTHlLM3FSYnZyNzZlVWh3TlRJc0RTRnB4cUI1MkFqaTZ4UUtxWTFXSzZRSWVCYWR0ZV85eUFyRWxMVkVDWGYyTlY4ZzJpaDhlR1JXTi1xckk5OE5ERmZtSl9NdVZMNmxUN2o2Nm83TTM4YnhOemQ4WVc0Z3ZYSU9OcGYxUEJLY3dlbHdjbl9aajcyeEloM21RN1lR?oc=5",
-          "ageMin": 61,
-          "headline": "‘Twilight’ Alumni Ashley Greene and Peter Facinelli Vamp at Comic-Con, Plus Dua Lipa, Jack Antonoff and More - People.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxNTHlLM3FSYnZyNzZlVWh3TlRJc0RTRnB4cUI1MkFqaTZ4UUtxWTFXSzZRSWVCYWR0ZV85eUFyRWxMVkVDWGYyTlY4ZzJpaDhlR1JXTi1xckk5OE5ERmZtSl9NdVZMNmxUN2o2Nm83TTM4YnhOemQ4WVc0Z3ZYSU9OcGYxUEJLY3dlbHdjbl9aajcyeEloM21RN1lR?oc=5\" target=\"_blank\" ‘Twilight’ Alumni As"
-        }
-      ],
-      "ageMin": 61,
-      "_cand": {
-        "key": "rss:-twilight-alumni-ashley-greene-and-peter-facinelli-vamp-at-c",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "People.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "People.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 6,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 1
-      },
-      "tierClass": "C"
     }
   ]
 }
