@@ -1,0 +1,143 @@
+{
+ "runId": "run-2026-07-24T16-36-30",
+ "mode": "live",
+ "startedAt": "2026-07-24T16:36:30.329Z",
+ "films": 41,
+ "published": [],
+ "held": [
+  {
+   "tag": "masters-of-the-universe-bo-opening×BO-OPENING",
+   "reason": "consistency: title: \"$170M\" is not a canonical figure for this film | dek: \"$170 million\" is not a canonical figure for this film | metaDescription: \"$170M\" is not a canonical figure for this film",
+   "score": 78
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 5.6,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "attemptCapHit": 4,
+ "zeroStreak": 9,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.15291
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-24T16:40:25.386Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1070,
+    "out": 514,
+    "usd": 0.00031,
+    "ms": 2795
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3621,
+    "out": 978,
+    "usd": 0.00026,
+    "ms": 2528
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 14259,
+    "out": 748,
+    "usd": 0.00173,
+    "ms": 3906
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 840,
+    "out": 1108,
+    "usd": 0.00028,
+    "ms": 20925
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6475,
+    "out": 2197,
+    "usd": 0.00611,
+    "ms": 28571
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 23191,
+    "out": 2538,
+    "usd": 0.0133,
+    "ms": 18527
+   }
+  },
+  "totalUsd": 0.02198
+ },
+ "openrouterTotalUsd": 0.02168
+}
