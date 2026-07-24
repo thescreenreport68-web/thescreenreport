@@ -81,6 +81,12 @@ export type Article = {
   // ---- celebrity / short news ----
   newsType?: string; // birthday | relationship | red-carpet | controversy | general
   pullQuote?: { text: string; attribution?: string }; // the quote that triggered the story
+  // ---- celebrity-statements lane (formatTag: statement) ----
+  speaker?: string; // who said it (verified speaker — anti-dilution rule applies)
+  exactQuote?: string; // the statement VERBATIM, unsoftened
+  target?: string; // who/what the statement addresses
+  venue?: string; // where it was said (podcast, premiere, X post, court filing…)
+  qualifiers?: string[]; // context qualifiers (e.g. "later deleted", "via spokesperson")
   // ---- box office ----
   boxOffice?: {
     domestic?: string;
@@ -297,6 +303,12 @@ export function getAllArticles(): Article[] {
       consensus: data.consensus,
       newsType: data.newsType,
       pullQuote: data.pullQuote,
+      // celebrity-statements lane pass-through (formatTag: statement)
+      speaker: data.speaker,
+      exactQuote: data.exactQuote,
+      target: data.target,
+      venue: data.venue,
+      qualifiers: data.qualifiers,
       boxOffice: data.boxOffice,
       records: data.records ?? [],
       awardsType: data.awardsType,

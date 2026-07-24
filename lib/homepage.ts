@@ -39,7 +39,7 @@ export const HOMEPAGE = {
 
   HERO_AGE_LADDER_H: [24, 48, 72], // widen the window on slow days
   HERO_MIN_IMAGE_WIDTH: 1200,
-  HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer", "inside"]),
+  HERO_FORMS: new Set(["news", "box-office", "awards", "music-news", "music-awards", "trailer", "inside", "statement"]),
   // Anti-freeze: if the news lane goes quiet, the featured slot must NOT stay stuck
   // on days-old news. Within this window the hero is the hottest story of ANY
   // category/format (incl. gossip) — heat's category weight still keeps it movies-led
