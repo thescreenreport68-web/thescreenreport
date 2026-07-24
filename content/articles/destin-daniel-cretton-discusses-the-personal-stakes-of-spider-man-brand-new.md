@@ -1,56 +1,58 @@
 ---
-title: >-
-  Destin Daniel Cretton Discusses the Personal Stakes of 'Spider-Man: Brand New
-  Day'
+title: 'Seth Green Reveals ‘Star Wars: Detours’ Will Finally Screen at Lucas Museum'
 slug: destin-daniel-cretton-discusses-the-personal-stakes-of-spider-man-brand-new
 category: movies
 subcategory: news
 author: editorial-team
 date: '2026-07-20T14:31:51.771Z'
 dek: >-
-  The director reveals his personal connection to Peter Parker's isolation and
-  details the film's focus on creating a visceral sense of vertigo in the
-  web-swinging scenes.
-metaTitle: 'Destin Daniel Cretton on Making Spider-Man: Brand New Day'
+  The long-lost comedy series, shelved after Disney's Lucasfilm buyout, will be
+  exhibited when the Los Angeles museum opens in September.
+metaTitle: 'Star Wars: Detours Animated Series Set for Lucas Museum'
 metaDescription: >-
-  The film picks up from the ending of Spider-Man: No Way Home , where Peter
-  Parker’s identity was magically erased from everyone's memory.
+  Seth Green announced at Comic-Con that the shelved 'Star Wars: Detours' series
+  will be displayed at the new Lucas Museum of Narrative Art this fall.
 tags:
-  - spider-man brand new day
-  - destin daniel cretton
-  - 'spider-man: brand new day'
-  - sadie sink
-  - tom holland
-  - rolling stone
-targetKeyword: spider-man brand new day
+  - 'star wars: detours'
+targetKeyword: star wars detours seth green reveals
 keyTakeaways:
   - >-
-    Director Destin Daniel Cretton says he connected to Peter Parker's isolation
-    after the events of 'No Way Home'.
+    The 'Star Wars: Detours' animated series will be exhibited at the Lucas
+    Museum of Narrative Art starting in September.
   - >-
-    Sadie Sink's role is being kept secret, though Cretton acknowledges fan
-    theories about her character.
+    The project was created with direct involvement from George Lucas but
+    shelved after Disney's acquisition.
   - >-
-    The film is a theatrical sequel starring Tom Holland, Zendaya, and Jon
-    Bernthal's Punisher.
+    Thirty-nine episodes of the comedy series, set between 'Revenge of the Sith'
+    and 'A New Hope', were completed.
+  - >-
+    The show was put on hold as Lucasfilm focused on the theatrical sequel
+    trilogy.
 faq:
-  - q: 'Is ''Spider-Man: Brand New Day'' connected to ''No Way Home''?'
+  - q: >-
+      Will 'Star Wars: Detours' be released on Disney+ or another streaming
+      service?
     a: >-
-      Yes, the film is a direct sequel. It picks up from the ending of
-      Spider-Man: No Way Home, where Peter Parker is living in a world where no
-      one remembers his secret identity, leaving him isolated and focused solely
-      on his work as Spider-Man.
-  - q: What is the runtime and rating?
+      There is no announcement regarding a streaming release. The current plan,
+      as revealed by Seth Green, is solely for a curated exhibition of episodes
+      at the Lucas Museum of Narrative Art starting in September 2026.
+  - q: 'Who created ''Star Wars: Detours''?'
     a: >-
-      According to verified data, Spider-Man: Brand New Day has a runtime of 145
-      minutes and is rated PG-13.
-  - q: Will there be a Shang-Chi sequel?
+      The series was created by Seth Green and Matthew Senreich, the team behind
+      Robot Chicken, at the personal invitation of George Lucas. Lucas was
+      heavily involved in the project's development.
+  - q: 'How many episodes of ''Star Wars: Detours'' were made?'
     a: >-
-      In the same interview, Cretton addressed the status of a Shang-Chi sequel,
-      confirming that the project is still in development within Marvel Studios.
+      A total of 39 episodes were completed before the series was shelved
+      following Disney's acquisition of Lucasfilm.
+  - q: What characters appear in the series?
+    a: >-
+      The series features key characters from across the franchise. Voice actors
+      Anthony Daniels (C-3PO), Billy Dee Williams (Lando Calrissian), and Ahmed
+      Best (Jar Jar Binks) reprised their iconic roles.
 about:
-  - name: 'Spider-Man: Brand New Day'
-    type: Movie
+  - name: 'Star Wars: Detours'
+    type: TV Show
 imageAlt: >-
   Destin Daniel Cretton Discusses the Personal Stakes of 'Spider-Man: Brand New
   Day'
@@ -60,10 +62,10 @@ image: >-
 imageWidth: 1600
 imageHeight: 900
 formatTag: news
-trendScore: 75
+trendScore: 85
 signals:
   recency: 16
-  corroboration: 12
+  corroboration: 8
   status: 18
   type: 5
   pop: 0
@@ -72,56 +74,69 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-  radar: 12
-eventSlug: making-of-spider-man-brand-new-day
-eventType: other
+  demand: 2
+  radar: 24
+eventSlug: star-wars-detours-seth-green-reveals
+eventType: news
 outletCount: 1
 provenance:
-  eventSlug: making-of-spider-man-brand-new-day
-  primaryEntity: Destin Daniel Cretton
+  eventSlug: spider-man-brand-new-day-director-praises-sadie-sink-secrecy
+  primaryEntity: 'Spider-Man: Brand New Day'
   eventType: other
   sensitivity: normal
   status: DEVELOPING
-  attribution: rollingstone.com
+  attribution: goldderby.com
   outlets:
-    - Rolling Stone
-  publishedAt: '2026-07-20T14:31:51.771Z'
-dateModified: '2026-07-20T14:31:51.771Z'
+    - Gold Derby
+  publishedAt: '2026-07-24T18:29:30.517Z'
+dateModified: '2026-07-24T18:35:54.360Z'
 storyStatus: DEVELOPING
-infoCard:
-  director: Destin Daniel Cretton
-  cast:
-    - Tom Holland
-    - Zendaya
-    - Jon Bernthal
-  releaseYear: '2026'
-  genre: 'Science Fiction, Action, Adventure'
-  whereToWatch: Theaters
 newsType: general
 pullQuote:
   text: >-
-    "I’ve been in that place in life. I know what that feels like to trick
-    yourself into thinking that is your destiny to be alone and to work."
-  attribution: Director Destin Daniel Cretton to Rolling Stone
+    "This is something we got to make with George, and he had his hands all over
+    it."
+  attribution: 'Matthew Senreich, speaking at San Diego Comic-Con'
 keyPoints:
   - >-
-    Director Destin Daniel Cretton revealed new details about 'Spider-Man: Brand
-    New Day' in an interview.
-  - >-
-    He connected personally to Peter Parker's post-'No Way Home' isolation,
-    which drives the film's story.
+    The lost 'Star Wars: Detours' series will be publicly exhibited for the
+    first time.
+  - George Lucas was directly involved in creating the comedy show.
+  - Thirty-nine episodes were made before Disney shelved the project.
+seriesContext:
+  network: ''
+  premiere: ''
+  status: ''
+  seasons: ''
+  creator: ''
+  cast: []
+  whereToWatch: ''
+seriesStatus:
+  show: ''
+  network: ''
+  status: ''
+  season: ''
+  window: ''
+  castAdded: []
+updateCount: 1
 ---
 
-Director Destin Daniel Cretton has detailed the personal connection he found to guide his upcoming Marvel film, *[Spider-Man: Brand New Day](/movies/new-spider-man-brand-new-day-trailer-drops-exclusively-in-theaters/)*, in an interview with Rolling Stone. Cretton, who previously directed *Shang-Chi and the Legend of the Ten Rings*, returns to the MCU with the fourth Tom Holland-led Spider-Man movie, set for release on July 31, 2026.
+Seth Green announced at San Diego Comic-Con on Thursday that the previously unreleased animated series *[Star Wars](/tv/disney-s-2026-star-wars-slate-leaves-out-a-live-action-series-staple/): Detours* will finally be exhibited at the Lucas Museum of Narrative Art when it opens this September.
 
-The film picks up from the ending of *[Spider-Man](/movies/fans-embrace-a-darker-joking-spider-man-in-brand-new-day-but-some-are-tired-of/): No Way Home*, where Peter Parker’s identity was magically erased from everyone's memory. Cretton told Rolling Stone that this isolated, work-obsessed version of Peter was the key to his involvement. "I’ve been in that place in life," Cretton said. "I know what that feels like to trick yourself into thinking that is your destiny to be alone and to work."
+The show is one of the legendarily "lost" *Star Wars* projects, according to a report from Gold Derby. Green and his producing partner Matthew Senreich made the announcement during a panel touting the new Los Angeles museum.
 
-## What is the film's new approach to action?
+## What is 'Star Wars: Detours'?
 
-Cretton explained they studied real-world footage to capture a true sense of vertigo and speed. "We’re primarily looking at GoPro footage on YouTube," Cretton said.
+The series was a comedic take on the galaxy far, far away, born from Green and Senreich's work on the Emmy-winning *Robot Chicken*. George Lucas personally approached the duo to create it, with Senreich noting, "This is something we got to make with George, and he had his hands all over it." Green elaborated that Lucas wanted to make "*[The Simpsons](/tv/fox-sets-fall-2026-tv-schedule-with-the-simpsons-season-38-animal-control/)* in the *Star Wars* universe."
 
-## Who else is in the cast?
+Set between *Revenge of the Sith* and *A New Hope*, the completed series featured 39 episodes with voice actors like Anthony Daniels (C-3PO), Billy Dee Williams (Lando Calrissian), and Ahmed Best (Jar Jar Binks) reprising their roles.
 
-The film features the return of [Tom Holland](/movies/spider-man-brand-new-day-trailer-drops-teasing-a-world-without-recogni/) as Peter Parker, Zendaya as MJ, and Jacob Batalon as Ned Leeds. It also introduces new characters, including Jon Bernthal as Frank Castle, the Punisher, and Mark Ruffalo as Bruce Banner. Sadie Sink also stars in a role that has been kept under wraps, with Cretton acknowledging widespread fan speculation about her character's identity.
+## Why was the series shelved?
 
-Cretton's philosophy is to find an intimate, personal story within the larger superhero framework, a approach he carried from smaller films like *Short Term 12*. *Spider-Man: Brand New Day* is produced by Tom Holland and represents Cretton's next major MCU project following the Disney+ series *Wonder Man*.
+*Star Wars: Detours* was shelved following Disney's acquisition of Lucasfilm. According to the report, Lucasfilm president Kathleen Kennedy told the creators the company wanted to focus on relaunching the franchise with the sequel films and felt a comedic cartoon would undermine that strategy.
+
+As recently as last year, Green expressed doubt the series would ever be released, citing the cost of updating it for modern streaming. The new plan circumvents that hurdle by presenting it as a museum exhibit.
+
+## When and where can it be seen?
+
+"There's going to be a curation of episodes from that show on display for the public," Green said at the panel.

@@ -1,75 +1,160 @@
 {
-  "runId": "run-2026-07-24T17-31-02",
-  "builtAt": "2026-07-24T17:32:26.085Z",
-  "count": 23,
+  "runId": "run-2026-07-24T18-31-03",
+  "builtAt": "2026-07-24T18:32:29.877Z",
+  "count": 30,
   "topics": [
     {
-      "id": "trailer-blade-runner-2099-trailer-drops",
-      "slug": "blade-runner-2099-trailer-drops-featuring-michelle-yeoh-and-hunter-sch",
-      "title": "Blade Runner 2099 Trailer Drops, Featuring Michelle Yeoh and Hunter Schafer",
+      "id": "trailer-blade-runner-2099-trailer-drop",
+      "slug": "blade-runner-2099-trailer-hunter-schafer-teams-up-with-a-replicant-mic",
+      "title": "Blade Runner 2099 Trailer: Hunter Schafer Teams Up With a Replicant Michelle Yeoh",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "blade-runner-2099-trailer-drops",
-      "primaryKeyword": "blade runner 2099 trailer",
+      "eventSlug": "blade-runner-2099-trailer-drop",
+      "primaryKeyword": "Blade Runner 2099 trailer",
       "primaryEntity": "Blade Runner",
       "entities": [
         "Blade Runner 2099",
-        "Michelle Yeoh",
         "Hunter Schafer",
+        "Michelle Yeoh",
         "Ridley Scott"
       ],
-      "angle": "First trailer for Prime Video's Blade Runner 2099 series released, featuring Michelle Yeoh and Hunter Schafer.",
+      "angle": "First trailer for Ridley Scott's 'Blade Runner 2099' series drops, featuring Michelle Yeoh and Hunter Schafer.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:TheWrap",
       "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/blade-runner-2099-trailer-hunter-schafer-michelle-yeoh/",
+          "ageMin": 54,
+          "headline": "Blade Runner 2099 Trailer: Hunter Schafer Teams Up With a Replicant Michelle Yeoh",
+          "summary": "The series from executive producer Ridley Scott hits Prime Video the day before Thanksgiving The post Blade Runner 2099 Trailer: Hunter Schafer Teams Up With a Replicant Michelle Yeoh appeared first on TheWrap ."
+        },
         {
           "outlet": "Variety",
           "tier": 7,
           "url": "https://variety.com/2026/tv/news/blade-runner-2099-trailer-michelle-yeoh-hunter-schafer-1236806977/",
-          "ageMin": 4,
+          "ageMin": 64,
           "headline": "Blade Runner 2099 Trailer: Michelle Yeoh and Hunter Schafer Bring Ridley Scott s Sci-Fi World to TV",
           "summary": "Prime Video has released the first trailer for Blade Runner 2099, marking the return of Ridley Scott s sci-fi franchise nine years after the film Blade Runner 2049. Starring Oscar winner Michelle Yeoh and Euphoria breakout star Hunter Schafer as its leads, Blade Runner 2099 is a limited series taking place after the events of both [ ]"
         },
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 4081,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
+          "outlet": "Consequence of Sound",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8tckZCdnNKRVFXYTRKdktvSHlMcjhMaVRHREdnVWxiQzBRNUEwdzhidDdpTHFCeE8tVXVMdHBlNmFaZ0ZJZE5OZFZwVWsxZHp5WlNmVU0wMThmcm5IbklKYkNXeWVZWDhuMllXVWdkS0ZTWE9Oa0FQZkxZZDQ?oc=5",
+          "ageMin": 55,
+          "headline": "Michelle Yeoh’s a Dying Robot In New Blade Runner 2099 Trailer: Watch - Consequence of Sound",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8tckZCdnNKRVFXYTRKdktvSHlMcjhMaVRHREdnVWxiQzBRNUEwdzhidDdpTHFCeE8tVXVMdHBlNmFaZ0ZJZE5OZFZwVWsxZHp5WlNmVU0wMThmcm5IbklKYkNXeWVZWDhuMllXVWdkS0ZTWE9Oa0FQZkxZZDQ?oc=5\" target=\"_blank\" Michelle Yeoh’s a Dying Robot In New Blade Runner 2099 Traile"
         }
       ],
-      "ageMin": 4,
+      "ageMin": 54,
       "_cand": {
-        "key": "rss:blade-runner-2099-trailer-michelle-yeoh-and-hunter-schafer-b",
+        "key": "rss:blade-runner-2099-trailer-hunter-schafer-teams-up-with-a-rep",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 3,
+        "outlets": [
+          "TheWrap",
+          "Variety",
+          "Consequence of Sound"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 120,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 25,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "trailer-rings-of-power-season-3-trailer",
+      "slug": "the-rings-of-power-season-3-trailer-is-full-of-epic-middle-earth-actio",
+      "title": "The Rings of Power Season 3 Trailer Is Full of Epic Middle-earth Action",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "rings-of-power-season-3-trailer",
+      "primaryKeyword": "rings of power season 3 trailer",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "entities": [
+        "The Lord of the Rings: The Rings of Power (TV Series)",
+        "Prime Video"
+      ],
+      "angle": "First trailer for the upcoming season of Prime Video's fantasy series drops, showcasing epic action and Sauron's war.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/rings-of-power-season-3-trailer-premiere-date-1236655955/",
+          "ageMin": 0,
+          "headline": "The Rings of Power Season 3 Trailer Is Full of Epic Middle-earth Action",
+          "summary": "Sauron forges the One Ring and the forces of Middle-earth go to war in this first look at the new season of the Prime Video fantasy hit."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/tv-shows/lord-of-the-rings-rings-of-power-season-3-trailer-comic-con/",
+          "ageMin": 1,
+          "headline": "Lord of the Rings: The Rings of Power Season 3 Trailer: 5-Year Time Jump Shows Sauron at War",
+          "summary": "The Prime Video series jumps forward five years to the height of the War of the Elves and Sauron -- with Simon Pegg joining the cast as the voice of The Balrog The post Lord of the Rings: The Rings of Power Season 3 Trailer: 5-Year Time Jump Shows Sauron at War appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 0,
+      "_cand": {
+        "key": "rss:the-rings-of-power-season-3-trailer-is-full-of-epic-middle-e",
         "popularity": 0,
         "kind": "rss-news"
       },
       "corroborationCount": 2,
       "verification": {
         "tier1Count": 2,
-        "tier1Owners": 1,
+        "tier1Owners": 2,
         "outletCount": 2,
         "outlets": [
-          "Variety",
-          "THR"
+          "THR",
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
         "publishable": true
       },
-      "priority": 106,
+      "priority": 113,
       "signals": {
         "recency": 30,
         "corroboration": 18,
-        "status": 18,
+        "status": 25,
         "type": 15,
         "pop": 0,
         "breakout": 0,
@@ -82,37 +167,123 @@
       "tierClass": "B"
     },
     {
-      "id": "news-spider-man-brand-new-day-sadie-sink-casting-secret",
-      "slug": "spider-man-brand-new-day-director-commends-secrecy-around-sadie-sink-s",
-      "title": "'Spider-Man: Brand New Day' Director Commends Secrecy Around Sadie Sink's Casting",
+      "id": "trailer-blade-runner-2099-trailer",
+      "slug": "blade-runner-2099-teaser-michelle-yeoh-goes-cyberpunk-in-new-tv-spinof",
+      "title": "Blade Runner 2099 Teaser: Michelle Yeoh Goes Cyberpunk in New TV Spinoff",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "blade-runner-2099-trailer",
+      "primaryKeyword": "blade runner 2099 trailer",
+      "primaryEntity": "Blade Runner",
+      "entities": [
+        "Blade Runner 2099 (TV Series)",
+        "Amazon Prime Video",
+        "Michelle Yeoh"
+      ],
+      "angle": "First trailer for the upcoming Amazon Prime Video sci-fi series Blade Runner 2099, starring Michelle Yeoh, has premiered.",
+      "tmdbType": "movie",
+      "source": "rss:IndieWire",
+      "sources": [
+        {
+          "outlet": "IndieWire",
+          "tier": 7,
+          "url": "https://www.indiewire.com/news/trailers/blade-runner-2099-teaser-michelle-yeoh-1235206668/",
+          "ageMin": 29,
+          "headline": "Blade Runner 2099 Teaser: Michelle Yeoh Goes Cyberpunk in New TV Spinoff",
+          "summary": "The trailer for the highly anticipated Amazon Prime show premiered at San Diego Comic-Con on Friday."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/blade-runner-2099-trailer-1236655934/",
+          "ageMin": 43,
+          "headline": "Blade Runner 2099 Unveils First Trailer for Amazon’s Sci-Fi Sequel Starring Hunter Schafer",
+          "summary": "First look at Prime Video's live-action sequel to Ridley Scott's future-shock classics."
+        },
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/blade-runner-2099-premiere-date-trailer-1237002595/",
+          "ageMin": 54,
+          "headline": "Blade Runner 2099 Sequel Series Sets Late Fall Prime Video Premiere; First Trailer Lifts Off At Comic-Con",
+          "summary": "Prime Video and Alcon Entertainment are aware that there s a cult fanship for Blade Runner, particularly the 2017 sequel Blade Runner 2049, and are meeting that demand with the new limited series Blade Runner 2099, which takes place 50 years after that movie. On Friday morning at Comic-Con, Prime Video dropped the first trailer to [ ]"
+        }
+      ],
+      "ageMin": 29,
+      "_cand": {
+        "key": "rss:blade-runner-2099-teaser-michelle-yeoh-goes-cyberpunk-in-new",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "IndieWire",
+          "THR",
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "IndieWire",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 113,
+      "signals": {
+        "recency": 24,
+        "corroboration": 24,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "A"
+    },
+    {
+      "id": "news-spider-man-brand-new-day-director-praises-sadie-sink-secrecy",
+      "slug": "spider-man-brand-new-day-director-praises-keeping-sadie-sink-s-role-se",
+      "title": "'Spider-Man: Brand New Day' Director Praises Keeping Sadie Sink's Role Secret",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-sadie-sink-casting-secret",
-      "primaryKeyword": "Spider-Man Brand New Day Sadie Sink",
+      "eventSlug": "spider-man-brand-new-day-director-praises-sadie-sink-secrecy",
+      "primaryKeyword": "Spider-Man Brand New Day",
       "primaryEntity": "Spider-Man: Brand New Day",
       "entities": [
         "Sadie Sink"
       ],
-      "angle": "The director of 'Spider-Man: Brand New Day' praises the successful effort to keep Sadie Sink's casting under wraps.",
+      "angle": "The director of 'Spider-Man: Brand New Day' commends the effort to keep Sadie Sink's involvement a secret.",
       "tmdbType": "movie",
-      "source": "gnews:Pajiba",
+      "source": "gnews:Gold Derby",
       "sources": [
         {
-          "outlet": "Pajiba",
+          "outlet": "Gold Derby",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPbGpTSjNIRFZONEVIcmx5M0djNG1DMzR4YkU3Mk9oaGtyN1NxNjVzNUJjVC0xb0NzdEJDUEtHeVFpTFprRkM4bFJNRkdFODh0ZGo5bFkwQThjZFVJUENDQXNQZndxRVYtT0poYWdSeUxyeV9WSm1raGFMQ3dYM0Fjdl93aXNMdEpPZDVnMjgyMFQ4YmZ1RDZaYnFvU1hyUUE?oc=5",
-          "ageMin": 116,
-          "headline": "‘Spider-Man: Brand New Day’ Director Praises Keeping Sadie Sink Secret - Pajiba",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPbGpTSjNIRFZONEVIcmx5M0djNG1DMzR4YkU3Mk9oaGtyN1NxNjVzNUJjVC0xb0NzdEJDUEtHeVFpTFprRkM4bFJNRkdFODh0ZGo5bFkwQThjZFVJUENDQXNQZndxRVYtT0poYWdSeUxyeV9WSm1raGFMQ3dYM0Fjdl93aXNMdEpPZDVnMjgyMFQ4YmZ1RDZaYnFvU1hyUUE?oc=5\" target=\"_blank\" ‘Spider-Man: "
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRUFiaE9QNjJxX2lwTzNON29EcElHODRWYTdaV0p3VzQ4SjlDdHpvZnZSaFNqa29HYlNmSDRyMU5xcVBjNjA4Z2xTd0VKS1p5OG82M1k2NkZLVlFTQk1GZmhjSFhGMWEzZkVqUk9YQVdkWnVOY1hQY0JhNjhxZkdBb3RNLU1pQkYzNWFvYTQybUhlMEhrQThVMVloM2JpQQ?oc=5",
+          "ageMin": 165,
+          "headline": "Seth Green reveals long-lost ‘Star Wars: Detours’ animated series will finally be released… in an unusual way - Gold Derby",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNRUFiaE9QNjJxX2lwTzNON29EcElHODRWYTdaV0p3VzQ4SjlDdHpvZnZSaFNqa29HYlNmSDRyMU5xcVBjNjA4Z2xTd0VKS1p5OG82M1k2NkZLVlFTQk1GZmhjSFhGMWEzZkVqUk9YQVdkWnVOY1hQY0JhNjhxZkdBb3RNLU1pQkYzNWFvYTQybUhlMEhrQThVMVloM2JpQQ?oc=5\" target=\"_blank\" Seth Green rev"
         }
       ],
-      "ageMin": 116,
+      "ageMin": 165,
       "_cand": {
-        "key": "rss:-spider-man-brand-new-day-director-praises-keeping-sadie-sin",
+        "key": "rss:seth-green-reveals-long-lost-star-wars-detours-animated-seri",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -122,24 +293,24 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Pajiba"
+          "Gold Derby"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Pajiba",
+        "attribution": "Gold Derby",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 106,
+      "priority": 85,
       "signals": {
         "recency": 16,
         "corroboration": 8,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
@@ -153,172 +324,38 @@
       "tierClass": "A"
     },
     {
-      "id": "news-hbo-stuart-fails-to-save-the-universe-big-bang-theory-costume",
-      "slug": "hbo-s-stuart-fails-to-save-the-universe-is-a-stoner-comedy-wearing-a-b",
-      "title": "HBO's 'Stuart Fails to Save the Universe' Is a Stoner Comedy Wearing a 'Big Bang Theory' Costume",
+      "id": "news-happy-old-year-netflix-series-adaptation",
+      "slug": "netflix-adapts-marcelo-rubens-paiva-s-happy-old-year-into-series",
+      "title": "Netflix Adapts Marcelo Rubens Paiva's 'Happy Old Year' Into Series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "review",
-      "sensitivity": "normal",
-      "eventSlug": "hbo-stuart-fails-to-save-the-universe-big-bang-theory-costume",
-      "primaryKeyword": "stuart fails to save the universe",
-      "primaryEntity": "Stuart Fails to Save the Universe",
-      "entities": [
-        "HBO"
-      ],
-      "angle": "A review likens HBO's 'Stuart Fails to Save the Universe' to a stoner comedy with 'The Big Bang Theory' elements.",
-      "tmdbType": "movie",
-      "source": "gnews:Pajiba",
-      "sources": [
-        {
-          "outlet": "Pajiba",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPei1oU0xoS184MDBNQU14cE9qX2hvdDFvNGdJTmNVZHdIZUs0UFB6Z280TWprMW41cjM0QXg2bFlBTjlUbWNYX1N4RVFPbTZITGx4akQzOG1UMU9mUWEzSGdXeHpRSDFDRVVTZkhTQ3kxYXJsR1A0V2pIaG4zZ0x0UjM3Qk9wSTRRVnItVmRTcXB5cmphMWVYLUhUekwzdHRRbUxzelQ0bXJTdk95d2JOU18xZHZyc0lvMG52TUtVOG5HeHU3cGRqb2VMZ1dTOXY5WlE?oc=5",
-          "ageMin": 26,
-          "headline": "HBO's 'Stuart Fails to Save the Universe' Is a Stoner Comedy Wearing a 'Big Bang Theory' Costume - Pajiba",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi0gFBVV95cUxPei1oU0xoS184MDBNQU14cE9qX2hvdDFvNGdJTmNVZHdIZUs0UFB6Z280TWprMW41cjM0QXg2bFlBTjlUbWNYX1N4RVFPbTZITGx4akQzOG1UMU9mUWEzSGdXeHpRSDFDRVVTZkhTQ3kxYXJsR1A0V2pIaG4zZ0x0UjM3Qk9wSTRRVnItVmRTcXB5cmphMWVYLUhUekwzdHRRbUxzelQ0bXJTdk95d2JOU18xZHZyc0lvMG5"
-        }
-      ],
-      "ageMin": 26,
-      "_cand": {
-        "key": "rss:hbo-s-stuart-fails-to-save-the-universe-is-a-stoner-comedy-w",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Pajiba"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Pajiba",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1,
-        "radar": 16
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-emilia-perez-director-jacques-audiard-netflix-horror-film",
-      "slug": "emilia-p-rez-director-jacques-audiard-reunites-with-netflix-for-horror",
-      "title": "‘Emilia Pérez’ Director Jacques Audiard Reunites With Netflix for Horror Film (EXCLUSIVE)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "emilia-perez-director-jacques-audiard-netflix-horror-film",
-      "primaryKeyword": "jacques audiard",
-      "primaryEntity": "Jacques Audiard",
-      "entities": [
-        "Netflix",
-        "Emilia Pérez"
-      ],
-      "angle": "Director Jacques Audiard is reuniting with Netflix for a new horror film.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONWNjZU1JZVNoLWJieGJPcEJoQi1LN3RNTEM2ZTh5b2o0b0FLYjNZQ3JpRVNMTURhOE1RNzhYcEFEMV9lWHp2Rl9yY2l1RnhlcXI0Slh0YVFnZDN1YmpGQmF0dTluWTFVX19jLTlsanRLRkFqTGpSRGFhVDAxeUJUVmJpYUpTeFhldjdYMjV6c0thRzRyWThtTk96OHA2ZTQ?oc=5",
-          "ageMin": 42,
-          "headline": "‘Emilia Pérez’ Director Jacques Audiard Reunites With Netflix for Horror Film (EXCLUSIVE) - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxONWNjZU1JZVNoLWJieGJPcEJoQi1LN3RNTEM2ZTh5b2o0b0FLYjNZQ3JpRVNMTURhOE1RNzhYcEFEMV9lWHp2Rl9yY2l1RnhlcXI0Slh0YVFnZDN1YmpGQmF0dTluWTFVX19jLTlsanRLRkFqTGpSRGFhVDAxeUJUVmJpYUpTeFhldjdYMjV6c0thRzRyWThtTk96OHA2ZTQ?oc=5\" target=\"_blank\" ‘Emilia Pérez"
-        }
-      ],
-      "ageMin": 42,
-      "_cand": {
-        "key": "rss:-emilia-p-rez-director-jacques-audiard-reunites-with-netflix",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-baton-soccer-drama-mls-partnership",
-      "slug": "major-league-soccer-boards-danny-ramirez-soccer-drama-baton-as-key-par",
-      "title": "Major League Soccer Boards Danny Ramirez Soccer Drama 'Baton' as Key Partner",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "baton-soccer-drama-mls-partnership",
-      "primaryKeyword": "Baton movie",
-      "primaryEntity": "Baton (film)",
+      "eventSlug": "happy-old-year-netflix-series-adaptation",
+      "primaryKeyword": "Happy Old Year Netflix series",
+      "primaryEntity": "Happy Old Year",
       "entities": [
-        "Danny Ramirez",
-        "Major League Soccer"
+        "Netflix",
+        "Marcelo Rubens Paiva"
       ],
-      "angle": "The upcoming soccer drama film 'Baton,' written and directed by Danny Ramirez, has formed a significant partnership with Major League Soccer.",
+      "angle": "Netflix is adapting Marcelo Rubens Paiva's novel 'Happy Old Year' into a new series.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/mls-danny-ramirez-baton-1237002561/",
-          "ageMin": 16,
-          "headline": "Major League Soccer Boards Danny Ramirez Soccer Drama Baton As Key Partner",
-          "summary": "EXCLUSIVE: The feature film Baton, written and directed by Danny Ramirez, has entered into a strategic partnership with Major League Soccer, marking the pro league s most significant collaboration with a motion picture to date. The partnership comes as Baton enters post production. The film follows a soccer player pursuing his dream of playing professionally after [ ]"
+          "url": "https://deadline.com/2026/07/happy-old-year-marcelo-rubens-paiva-netflix-series-1237002651/",
+          "ageMin": 31,
+          "headline": "‘Happy Old Year,’ From ‘I’m Still Here’ Author Marcelo Rubens Paiva, Being Adapted As Netflix Series",
+          "summary": "EXCLUSIVE: Happy Old Year, by Marcelo Rubens Paiva, the author of I’m Still Here, is being adapted by Netflix. I’m Still Here was adapted as a movie to much acclaim, while Happy Old Year will be a series. Considered a foundational story in the canon of late 20th-century Brazilian literature, Happy Old Year (original Portuguese [ ]"
         }
       ],
-      "ageMin": 16,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:major-league-soccer-boards-danny-ramirez-soccer-drama-baton-",
+        "key": "rss:-happy-old-year-from-i-m-still-here-author-marcelo-rubens-pa",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -337,7 +374,7 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 80,
       "signals": {
         "recency": 24,
         "corroboration": 12,
@@ -345,68 +382,68 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "learned": -1
       },
       "tierClass": "B"
     },
     {
-      "id": "news-jacques-audiard-reunites-netflix-horror-film",
-      "slug": "emilia-p-rez-director-jacques-audiard-reunites-with-netflix-for-horror",
-      "title": "Emilia Pérez Director Jacques Audiard Reunites With Netflix for Horror Film (EXCLUSIVE)",
+      "id": "news-star-trek-reboot-setting-tease",
+      "slug": "star-trek-movie-writers-tease-drastic-new-setting-for-reboot",
+      "title": "Star Trek Movie Writers Tease Drastic New Setting for Reboot",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "jacques-audiard-reunites-netflix-horror-film",
-      "primaryKeyword": "jacques audiard",
-      "primaryEntity": "Jacques Audiard",
+      "eventSlug": "star-trek-reboot-setting-tease",
+      "primaryKeyword": "star trek reboot setting",
+      "primaryEntity": "Star Trek",
       "entities": [
-        "Netflix",
-        "Emilia Pérez"
+        "Star Trek (film series)"
       ],
-      "angle": "Director Jacques Audiard is set to make a horror film with Netflix after 'Emilia Pérez' success.",
+      "angle": "Writers hint at a significant shift in the setting for the upcoming Star Trek reboot.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:Polygon.com",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/global/emilia-perez-jacques-audiard-horror-movie-netflix-1236820297/",
-          "ageMin": 42,
-          "headline": "Emilia Pérez Director Jacques Audiard Reunites With Netflix for Horror Film (EXCLUSIVE)",
-          "summary": "After Emilia Pérez scored a best picture nomination at last year s Oscars, Netflix is reuniting with French director Jacques Audiard on his next project, which will be an elevated horror film. Netflix has optioned La Nuit ravagée — a critically acclaimed horror novel by Jean-Baptiste Del Amo — and has tapped Audiard to develop a [ ]"
+          "outlet": "Polygon.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBQQWt4d2xmNnZIRnNKT3E0SlNEWHNGVlhqRVN1d09DNElCUkZuV3FoZDcyUktyWjRDVVhYbV9oUGZjbTFxOTYxemtXY29sR3R4OGc3SmtYaVJudzhrWGloYlJGdkVzUmdOSm1KTlhzSWt4U0RfZDRXeVFWTVc?oc=5",
+          "ageMin": 87,
+          "headline": "Star Trek movie writers tease a drastic new setting for the reboot - Polygon.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBQQWt4d2xmNnZIRnNKT3E0SlNEWHNGVlhqRVN1d09DNElCUkZuV3FoZDcyUktyWjRDVVhYbV9oUGZjbTFxOTYxemtXY29sR3R4OGc3SmtYaVJudzhrWGloYlJGdkVzUmdOSm1KTlhzSWt4U0RfZDRXeVFWTVc?oc=5\" target=\"_blank\" Star Trek movie writers tease a drastic new setting for the r"
         }
       ],
-      "ageMin": 42,
+      "ageMin": 87,
       "_cand": {
-        "key": "rss:emilia-p-rez-director-jacques-audiard-reunites-with-netflix-",
+        "key": "rss:star-trek-movie-writers-tease-a-drastic-new-setting-for-the-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Polygon.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Polygon.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 87,
+      "priority": 77,
       "signals": {
-        "recency": 24,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -414,12 +451,16 @@
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "demand": 2
       },
+      "demandImpressions": 1,
+      "demandQuery": "new girl reboot",
+      "demandPosition": 14,
       "tierClass": "B"
     },
     {
-      "id": "trailer-marvels-wolverine-new-story-trailer",
+      "id": "trailer-marvel-wolverine-new-story-trailer",
       "slug": "marvel-s-wolverine-gets-a-new-story-trailer",
       "title": "Marvel’s Wolverine Gets a New Story Trailer",
       "contentType": "trailer",
@@ -428,15 +469,15 @@
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "marvels-wolverine-new-story-trailer",
-      "primaryKeyword": "Marvel's Wolverine trailer",
+      "eventSlug": "marvel-wolverine-new-story-trailer",
+      "primaryKeyword": "wolverine trailer",
       "primaryEntity": "Deadpool & Wolverine",
       "entities": [
-        "Marvel's Wolverine (video game)",
-        "Marvel Comics",
-        "Insomniac Games"
+        "Marvel's Wolverine",
+        "Marvel",
+        "Wolverine"
       ],
-      "angle": "A new story trailer has been released for Marvel's Wolverine video game.",
+      "angle": "A new story trailer has been released for the upcoming Marvel video game 'Wolverine'.",
       "tmdbType": "movie",
       "source": "gnews:PlayDayOne",
       "sources": [
@@ -444,12 +485,12 @@
           "outlet": "PlayDayOne",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5",
-          "ageMin": 390,
+          "ageMin": 450,
           "headline": "Marvel’s Wolverine Gets a New Story Trailer - PlayDayOne",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5\" target=\"_blank\" Marvel’s Wolverine Gets a New Story Trailer /a nbsp; nbsp"
         }
       ],
-      "ageMin": 390,
+      "ageMin": 450,
       "_cand": {
         "key": "rss:marvel-s-wolverine-gets-a-new-story-trailer-playdayone",
         "popularity": 0,
@@ -486,41 +527,42 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-record",
-      "slug": "sam-fender-olivia-dean-s-rein-me-in-ties-all-time-record-with-18th-wee",
-      "title": "Sam Fender & Olivia Dean's 'Rein Me In' Ties All-Time Record with 18th Week as U.K. No. 1 Single",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "other",
+      "id": "trailer-blade-runner-2099-trailer-comic-con",
+      "slug": "blade-runner-2099-unveils-fantastical-first-trailer-at-comic-con",
+      "title": "'Blade Runner 2099' Unveils Fantastical First Trailer at Comic-Con",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-record",
-      "primaryKeyword": "Sam Fender Olivia Dean Rein Me In",
-      "primaryEntity": "Sam Fender",
+      "eventSlug": "blade-runner-2099-trailer-comic-con",
+      "primaryKeyword": "Blade Runner 2099 trailer",
+      "primaryEntity": "Blade Runner",
       "entities": [
-        "Olivia Dean",
-        "Rein Me In"
+        "Blade Runner 2099",
+        "Michelle Yeoh",
+        "Hunter Schafer",
+        "Amazon Prime Video"
       ],
-      "angle": "Sam Fender and Olivia Dean's song 'Rein Me In' ties the all-time record for most weeks at No. 1 on the UK singles chart.",
+      "angle": "The first trailer for Amazon's 'Blade Runner 2099' sci-fi sequel was unveiled at Comic-Con, showcasing a fantastical world.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "Billboard",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/sam-fender-olivia-dean-rein-me-in-all-time-record-uk-number-1-1236302219/",
-          "ageMin": 31,
-          "headline": "Sam Fender Olivia Dean’s ‘Rein Me In’ Ties All-Time Record with 18th Week as U.K. No. 1 Single",
-          "summary": "The song is level with Frankie Laine's 1953 song \"I Believe.\""
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQXzZPdE1OLUdjZmxGU2tOMk92QUtXY1lWVEZYb3VaOTVISWN0cnlkUHVCazhNWUpaRlZHRU5WWEd4b29vbEVMTGZmaHZuVXBxbU1kYlBKbG9kcHdGS19oY29YS1M4ZERRTXZ3N2ZqUWNlbVZla29uclM1ejNSenJGUGZBSF9YQW9jelE?oc=5",
+          "ageMin": 43,
+          "headline": "‘Blade Runner 2099’ Unveils Fantastical First Trailer for Amazon’s Sci-Fi Sequel at Comic-Con - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxQXzZPdE1OLUdjZmxGU2tOMk92QUtXY1lWVEZYb3VaOTVISWN0cnlkUHVCazhNWUpaRlZHRU5WWEd4b29vbEVMTGZmaHZuVXBxbU1kYlBKbG9kcHdGS19oY29YS1M4ZERRTXZ3N2ZqUWNlbVZla29uclM1ejNSenJGUGZBSF9YQW9jelE?oc=5\" target=\"_blank\" ‘Blade Runner 2099’ Unveils Fantastical F"
         }
       ],
-      "ageMin": 31,
+      "ageMin": 43,
       "_cand": {
-        "key": "rss:sam-fender-olivia-dean-s-rein-me-in-ties-all-time-record-wit",
+        "key": "rss:-blade-runner-2099-unveils-fantastical-first-trailer-for-ama",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -528,63 +570,63 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 86,
       "signals": {
         "recency": 24,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "learned": 4
+        "learned": -1
       },
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-detours-animated-series-to-be-released",
-      "slug": "seth-green-s-lost-star-wars-detours-animated-series-gets-unusual-relea",
-      "title": "Seth Green's Lost 'Star Wars: Detours' Animated Series Gets Unusual Release",
+      "id": "news-ma-2-sequel-update-octavia-spencer",
+      "slug": "is-a-ma-2-movie-happening-octavia-spencer-shares-update-on-ma-sequel",
+      "title": "Is a ‘Ma 2’ Movie Happening? Octavia Spencer Shares Update on ‘Ma’ Sequel",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-detours-animated-series-to-be-released",
-      "primaryKeyword": "Star Wars Detours release",
-      "primaryEntity": "Star Wars: Detours",
+      "eventSlug": "ma-2-sequel-update-octavia-spencer",
+      "primaryKeyword": "ma 2 sequel",
+      "primaryEntity": "Ma 2",
       "entities": [
-        "Seth Green"
+        "Octavia Spencer"
       ],
-      "angle": "Seth Green's long-lost animated series 'Star Wars: Detours' is finally set for release through an unconventional method.",
+      "angle": "Octavia Spencer provides an update on the potential 'Ma' sequel.",
       "tmdbType": "movie",
-      "source": "gnews:Gold Derby",
+      "source": "gnews:Decider",
       "sources": [
         {
-          "outlet": "Gold Derby",
+          "outlet": "Decider",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNRUFiaE9QNjJxX2lwTzNON29EcElHODRWYTdaV0p3VzQ4SjlDdHpvZnZSaFNqa29HYlNmSDRyMU5xcVBjNjA4Z2xTd0VKS1p5OG82M1k2NkZLVlFTQk1GZmhjSFhGMWEzZkVqUk9YQVdkWnVOY1hQY0JhNjhxZkdBb3RNLU1pQkYzNWFvYTQybUhlMEhrQThVMVloM2JpQQ?oc=5",
-          "ageMin": 105,
-          "headline": "Seth Green reveals long-lost ‘Star Wars: Detours’ animated series will finally be released… in an unusual way - Gold Derby",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxNRUFiaE9QNjJxX2lwTzNON29EcElHODRWYTdaV0p3VzQ4SjlDdHpvZnZSaFNqa29HYlNmSDRyMU5xcVBjNjA4Z2xTd0VKS1p5OG82M1k2NkZLVlFTQk1GZmhjSFhGMWEzZkVqUk9YQVdkWnVOY1hQY0JhNjhxZkdBb3RNLU1pQkYzNWFvYTQybUhlMEhrQThVMVloM2JpQQ?oc=5\" target=\"_blank\" Seth Green rev"
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE94WU9kYTJCdURvRS1XZktqamNDYXFMRTIwODVkenJReGROWi0tZlYxWHBOZVNNVHdPemNyZ0dxalFxdkgwWkNEM20tdVpVMGpIc18xdmpqRXBmZGxzb0JWTUdBaDc3Z1ZVcmQtRnJ1LXNQcncwZFlB?oc=5",
+          "ageMin": 151,
+          "headline": "Is A ‘Ma 2’ Movie Happening? Octavia Spencer Shares Update On ‘Ma’ Sequel - Decider",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE94WU9kYTJCdURvRS1XZktqamNDYXFMRTIwODVkenJReGROWi0tZlYxWHBOZVNNVHdPemNyZ0dxalFxdkgwWkNEM20tdVpVMGpIc18xdmpqRXBmZGxzb0JWTUdBaDc3Z1ZVcmQtRnJ1LXNQcncwZFlB?oc=5\" target=\"_blank\" Is A ‘Ma 2’ Movie Happening? Octavia Spencer Shares Update On ‘Ma’ S"
         }
       ],
-      "ageMin": 105,
+      "ageMin": 151,
       "_cand": {
-        "key": "rss:seth-green-reveals-long-lost-star-wars-detours-animated-seri",
+        "key": "rss:is-a-ma-2-movie-happening-octavia-spencer-shares-update-on-m",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -594,11 +636,76 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Gold Derby"
+          "Decider"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Gold Derby",
+        "attribution": "Decider",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-wars-detours-announcement",
+      "slug": "seth-green-s-lost-star-wars-detours-animated-series-finally-set-for-re",
+      "title": "Seth Green's Lost 'Star Wars: Detours' Animated Series Finally Set for Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "star-wars-detours-announcement",
+      "primaryKeyword": "Star Wars Detours",
+      "primaryEntity": "Star Wars: Detours",
+      "entities": [
+        "Seth Green"
+      ],
+      "angle": "Seth Green announces the long-lost 'Star Wars: Detours' animated series will finally be released.",
+      "tmdbType": "movie",
+      "source": "gnews:Northern Transmissions",
+      "sources": [
+        {
+          "outlet": "Northern Transmissions",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNb00xSFNnb0ZTb2gyMW5ZZUlYd3VrWnI0U01pTlRTLWhSYW5ZWGJwU2JsazhDQVk0OThzVkRONFRKZTNaSlpobkhDazN4d1BCbUgtTmc4STgxZVMzLVFnWTdwOEN3RVljYmVGZzhiamU1WTFIeFJCeXpaRl9DYTUzZlh1ZEZnZ0RqM3c?oc=5",
+          "ageMin": 153,
+          "headline": "Johnny Marr debuts new and single video \"Ophelia\" - Northern Transmissions",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxNb00xSFNnb0ZTb2gyMW5ZZUlYd3VrWnI0U01pTlRTLWhSYW5ZWGJwU2JsazhDQVk0OThzVkRONFRKZTNaSlpobkhDazN4d1BCbUgtTmc4STgxZVMzLVFnWTdwOEN3RVljYmVGZzhiamU1WTFIeFJCeXpaRl9DYTUzZlh1ZEZnZ0RqM3c?oc=5\" target=\"_blank\" Johnny Marr debuts new and single video \""
+        }
+      ],
+      "ageMin": 153,
+      "_cand": {
+        "key": "rss:johnny-marr-debuts-new-and-single-video-ophelia-northern-tra",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Northern Transmissions"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Northern Transmissions",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -620,186 +727,52 @@
       "tierClass": "B"
     },
     {
-      "id": "news-lucas-museum-comic-con-star-wars-animation",
-      "slug": "lucas-museum-to-screen-star-wars-animation-at-comic-con",
-      "title": "Lucas Museum to Screen Star Wars Animation at Comic-Con",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "lucas-museum-comic-con-star-wars-animation",
-      "primaryKeyword": "lucas museum comic con",
-      "primaryEntity": "Lucas Museum",
-      "entities": [
-        "Star Wars",
-        "Seth Green"
-      ],
-      "angle": "The Lucas Museum announces Star Wars animated series screenings and film programming at Comic-Con.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/lucas-museum-comic-con-star-wars-animated-series-detours-1236655674/",
-          "ageMin": 116,
-          "headline": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
-          "summary": "\"We’ve lived long enough to see all the stuff that we were beaten for loving become the fine art of our day,\" said show creator Seth Green."
-        }
-      ],
-      "ageMin": 116,
-      "_cand": {
-        "key": "rss:lucas-museum-at-comic-con-star-wars-animated-series-detours-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-monster-ed-gein-story-ian-brennan-interview",
-      "slug": "monster-the-ed-gein-story-showrunner-on-our-fascination-with-serial-ki",
-      "title": "‘Monster: The Ed Gein Story’ Showrunner On Our Fascination With Serial Killers",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "monster-ed-gein-story-ian-brennan-interview",
-      "primaryKeyword": "Monster The Ed Gein Story",
-      "primaryEntity": "Monster: The Ed Gein Story",
-      "entities": [
-        "Ian Brennan",
-        "Jack the Ripper"
-      ],
-      "angle": "Showrunner Ian Brennan discusses the enduring fascination with serial killers and their influence on horror.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/monster-the-ed-gein-story-ian-brennan-charlie-hunnam-laurie-metcalf-1237001754/",
-          "ageMin": 31,
-          "headline": "‘Monster: The Ed Gein Story’ Showrunner Ian Brennan On Our Enduring Fascination With The Psycho Who Changed The Face Of Movie Horror",
-          "summary": "Watchmen writer Alan Moore’s 1989 graphic novel From Hell used the 1888-1891 crimes of London’s Jack the Ripper as a bloody overture to the coming violence of the 20th century, and even now the serial killer’s trail of carnage seems hard to top. Well, it was until November 16, 1957, when Wisconsin farmer Edward Theodore [ ]"
-        }
-      ],
-      "ageMin": 31,
-      "_cand": {
-        "key": "rss:-monster-the-ed-gein-story-showrunner-ian-brennan-on-our-end",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-the-revivalists-new-album-and-tour",
-      "slug": "the-revivalists-release-new-album-and-hit-the-road-on-tour",
-      "title": "The Revivalists Release New Album and Hit the Road on Tour",
+      "id": "music-news-sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
+      "slug": "sam-fender-olivia-dean-s-rein-me-in-ties-all-time-record-with-18th-wee",
+      "title": "Sam Fender Olivia Dean’s ‘Rein Me In’ Ties All-Time Record with 18th Week as U.K. No. 1 Single",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "the-revivalists-new-album-and-tour",
-      "primaryKeyword": "the revivalists new album tour",
-      "primaryEntity": "the Revivalists",
+      "eventSlug": "sam-fender-olivia-dean-rein-me-in-uk-no-1-record",
+      "primaryKeyword": "sam fender olivia dean",
+      "primaryEntity": "Olivia Dean",
       "entities": [
-        "The Revivalists",
-        "BroadwayWorld"
+        "Sam Fender"
       ],
-      "angle": "The Revivalists have announced the release of their new album and an accompanying tour.",
+      "angle": "Sam Fender and Olivia Dean's song 'Rein Me In' ties UK No. 1 single record.",
       "tmdbType": "movie",
-      "source": "gnews:BroadwayWorld",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "BroadwayWorld",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNY2FiMUxuRWRjbnJXUmRacVV1eWtHYl9pbmxlQlNOdUZoSkc5eFRSVUtiSnlXYUNGdEhCandoNUdyaGFSTmhsUGJaNEUwRWMwYUdqbWJ2T2gzQmsxbFNwazdxbVQ3bUNvQ3pQVDhpVmVILURMSWhueWsyTElPLU40YnJ5MnBScFIwSG9YV0JVaFoxeGtlODBPaHlNRUFCTF9kUW9XVmpicVlFOTVESFczZkhmQ2w?oc=5",
-          "ageMin": 157,
-          "headline": "The Revivalists Release New Album and Hit the Road on Tour - BroadwayWorld",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxNY2FiMUxuRWRjbnJXUmRacVV1eWtHYl9pbmxlQlNOdUZoSkc5eFRSVUtiSnlXYUNGdEhCandoNUdyaGFSTmhsUGJaNEUwRWMwYUdqbWJ2T2gzQmsxbFNwazdxbVQ3bUNvQ3pQVDhpVmVILURMSWhueWsyTElPLU40YnJ5MnBScFIwSG9YV0JVaFoxeGtlODBPaHlNRUFCTF9kUW9XVmpicVlFOTVESFczZkhmQ2w?oc=5\" t"
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/chart-beat/sam-fender-olivia-dean-rein-me-in-all-time-record-uk-number-1-1236302219/",
+          "ageMin": 91,
+          "headline": "Sam Fender Olivia Dean’s ‘Rein Me In’ Ties All-Time Record with 18th Week as U.K. No. 1 Single",
+          "summary": "The song is level with Frankie Laine's 1953 song \"I Believe.\""
         }
       ],
-      "ageMin": 157,
+      "ageMin": 91,
       "_cand": {
-        "key": "rss:the-revivalists-release-new-album-and-hit-the-road-on-tour-b",
+        "key": "rss:sam-fender-olivia-dean-s-rein-me-in-ties-all-time-record-wit",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "BroadwayWorld"
+          "Billboard"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "BroadwayWorld",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -807,9 +780,9 @@
       "priority": 55,
       "signals": {
         "recency": 16,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
@@ -821,109 +794,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ebenezer-johnny-depp-sdcc-trailer-reveal",
-      "slug": "ebenezer-johnny-depp-makes-surprise-appearance-at-sdcc-introduces-new-",
-      "title": "EBENEZER: Johnny Depp Makes Surprise Appearance at SDCC, Introduces New Trailer",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "ebenezer-johnny-depp-sdcc-trailer-reveal",
-      "primaryKeyword": "Ebenezer Johnny Depp SDCC",
-      "primaryEntity": "Ebenezer (film)",
-      "entities": [
-        "Johnny Depp"
-      ],
-      "angle": "Johnny Depp made a surprise appearance at San Diego Comic-Con to introduce the new trailer for 'Ebenezer'.",
-      "tmdbType": "movie",
-      "source": "gnews:BroadwayWorld",
-      "sources": [
-        {
-          "outlet": "BroadwayWorld",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZUlXUWdGcndwdGJEQ0lId1lqOThNX3hLNWFRWVdGc3JlS0I2LWhpa19wbGo2MElQSFdRazBONGE2cDAzdEh0aDRTdHJzalU2bEVOa285ZVZ5XzBDN2h2YVdRNlV4LVljcncyRUhCLTdJU1Y0dXg0WUVjTURsVE5GYktfYWh0TFp5WnBUdW9Wcmhidlo2bExoOEI1aTRSdThTUVloNlNyMTFnODdjWUI5RXFHNDNwbFl1cXBfeFFIZzJEN2NhQUs5NW5B?oc=5",
-          "ageMin": 341,
-          "headline": "EBENEZER: Johnny Depp Makes Surprise Appearance at SDCC, Introduces New Trailer - BroadwayWorld",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxPZUlXUWdGcndwdGJEQ0lId1lqOThNX3hLNWFRWVdGc3JlS0I2LWhpa19wbGo2MElQSFdRazBONGE2cDAzdEh0aDRTdHJzalU2bEVOa285ZVZ5XzBDN2h2YVdRNlV4LVljcncyRUhCLTdJU1Y0dXg0WUVjTURsVE5GYktfYWh0TFp5WnBUdW9Wcmhidlo2bExoOEI1aTRSdThTUVloNlNyMTFnODdjWUI5RXFHNDNwbFl1cXB"
-        }
-      ],
-      "ageMin": 341,
-      "_cand": {
-        "key": "rss:ebenezer-johnny-depp-makes-surprise-appearance-at-sdcc-intro",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "BroadwayWorld"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "BroadwayWorld",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 76,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 8
-      },
-      "demandImpressions": 430,
-      "demandQuery": "johnny galecki acting return",
-      "demandPosition": 1,
-      "tierClass": "B"
-    },
-    {
-      "id": "news-dungeon-crawler-carl-series-casting",
-      "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
-      "title": "Peacock's Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+      "id": "news-dungeon-crawler-carl-peacock-series-jeff-hays-casting",
+      "slug": "dungeon-crawler-carl-peacock-series-casts-audiobook-narrator-jeff-hays",
+      "title": "'Dungeon Crawler Carl' Peacock Series Casts Audiobook Narrator Jeff Hays",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "dungeon-crawler-carl-series-casting",
-      "primaryKeyword": "Dungeon Crawler Carl series casting",
+      "eventSlug": "dungeon-crawler-carl-peacock-series-jeff-hays-casting",
+      "primaryKeyword": "dungeon crawler carl series",
       "primaryEntity": "Dungeon Crawler Carl",
       "entities": [
         "Jeff Hays",
         "Peacock"
       ],
-      "angle": "Jeff Hays, the audiobook narrator for 'Dungeon Crawler Carl,' has been cast in the Peacock series adaptation.",
+      "angle": "Jeff Hays, the narrator of the 'Dungeon Crawler Carl' audiobooks, has been cast in the upcoming Peacock series adaptation.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:The Hollywood Reporter",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "The Hollywood Reporter",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
-          "ageMin": 1111,
-          "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
-          "summary": "He'll voice the key character of Princess Donut, a talking cat."
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVjRsV3JQZm5OR2tXSDBnQk5NSFlRMG1HUnZxQi1IemRJMXZma2tGXzZpdUpsd2Y1MGlBaGUyVXlLMXpkMFdpRzNYM24wLTRzN2V4ck03WU5VdW1BdW1WQ0t1MmFMalBJbXBaMnNTQ3N6V3k1c0xmZUpUYUNCbFgtX2xwOVBLM05SMXpIRmR6czg2QUNIZWo0aWlQVWFrM1h6Q3AtVWpkMzVCd0dOVmR6WjByelE?oc=5",
+          "ageMin": 1171,
+          "headline": "'Dungeon Crawler Carl' Peacock Series Casts Audiobook Narrator Jeff Hays - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVjRsV3JQZm5OR2tXSDBnQk5NSFlRMG1HUnZxQi1IemRJMXZma2tGXzZpdUpsd2Y1MGlBaGUyVXlLMXpkMFdpRzNYM24wLTRzN2V4ck03WU5VdW1BdW1WQ0t1MmFMalBJbXBaMnNTQ3N6V3k1c0xmZUpUYUNCbFgtX2xwOVBLM05SMXpIRmR6czg2QUNIZWo0aWlQVWFrM1h6Q3AtVWpkMzVCd0dOVmR6WjByelE?oc=5\" t"
         }
       ],
-      "ageMin": 1111,
+      "ageMin": 1171,
       "_cand": {
-        "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
+        "key": "rss:-dungeon-crawler-carl-peacock-series-casts-audiobook-narrato",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -931,11 +835,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "The Hollywood Reporter"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "The Hollywood Reporter",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -957,7 +861,276 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-kelsea-ballerini-patrick-droney-math-of-us-single",
+      "id": "music-news-gracie-abrams-daughter-from-hell-uk-no-1",
+      "slug": "gracie-abrams-scores-second-u-k-no-1-lp-with-daughter-from-hell",
+      "title": "Gracie Abrams Scores Second U.K. No. 1 LP with Daughter From Hell",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "gracie-abrams-daughter-from-hell-uk-no-1",
+      "primaryKeyword": "gracie abrams",
+      "primaryEntity": "Gracie Abrams",
+      "entities": [
+        "Daughter From Hell"
+      ],
+      "angle": "Gracie Abrams scores her second UK No. 1 album with 'Daughter From Hell'.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/chart-beat/gracie-abrams-daughter-from-hell-uk-number-one-album-1236302265/",
+          "ageMin": 91,
+          "headline": "Gracie Abrams Scores Second U.K. No. 1 LP with Daughter From Hell",
+          "summary": "Abrams' 2024 album The Story of U s also hit the top spot."
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:gracie-abrams-scores-second-u-k-no-1-lp-with-daughter-from-h",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-snoop-dogg-biopic-universal-release-date",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-date",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release Date",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "snoop-dogg-biopic-universal-release-date",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic (2027)",
+      "entities": [
+        "Snoop Dogg's Hood of Horror",
+        "Snoop Dogg",
+        "Jonathan Daviss",
+        "Craig Brewer"
+      ],
+      "angle": "Universal Pictures has set a Summer 2027 release date for the Snoop Dogg biopic, starring Jonathan Daviss and directed by Craig Brewer.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 4141,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
+        }
+      ],
+      "ageMin": 4141,
+      "_cand": {
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-irish-language-tv-series-casting-call",
+      "slug": "casting-call-announced-for-cork-based-irish-language-tv-series",
+      "title": "Casting call announced for Cork-based Irish-language TV series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "irish-language-tv-series-casting-call",
+      "primaryKeyword": "irish language tv series casting",
+      "primaryEntity": "Irish-language TV series",
+      "entities": [
+        "Marin Ireland",
+        "Ireland"
+      ],
+      "angle": "A casting call has been announced for a new Irish-language television series being filmed in Cork.",
+      "tmdbType": "movie",
+      "source": "gnews:IFTN",
+      "sources": [
+        {
+          "outlet": "IFTN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNkd3eG0xMU1XcW10Y1JpbmlUYkw0T3dXYTR1N2xKVC05a3k0WUJlMi1lMDNUWXl1NnZXakM0VDQ0bjlhbVFhdDExbko4TUw3Vk90M3VsV2ZIMktzb2hGWGc4M0JEZGhsN1BwMHBkcmczVmJ1U05YcC1zaFBiajhFVXo0MDlBVFhPaU82Sw?oc=5",
+          "ageMin": 459,
+          "headline": "Casting call announced for Cork-based Irish-language TV series - IFTN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijAFBVV95cUxQNkd3eG0xMU1XcW10Y1JpbmlUYkw0T3dXYTR1N2xKVC05a3k0WUJlMi1lMDNUWXl1NnZXakM0VDQ0bjlhbVFhdDExbko4TUw3Vk90M3VsV2ZIMktzb2hGWGc4M0JEZGhsN1BwMHBkcmczVmJ1U05YcC1zaFBiajhFVXo0MDlBVFhPaU82Sw?oc=5\" target=\"_blank\" Casting call announced for Cork-based "
+        }
+      ],
+      "ageMin": 459,
+      "_cand": {
+        "key": "rss:casting-call-announced-for-cork-based-irish-language-tv-seri",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IFTN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IFTN",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-the-hu-debut-horsemen-music-video-new-album",
+      "slug": "the-hu-debut-horsemen-music-video-new-album-out-now",
+      "title": "THE HU Debut “Horsemen” Music Video; New Album Out Now",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "the-hu-debut-horsemen-music-video-new-album",
+      "primaryKeyword": "The Hu",
+      "primaryEntity": "The Hunger Games: Mockingjay - Part 1",
+      "entities": [
+        "The Hu"
+      ],
+      "angle": "The Hu debut a new music video and release their new album.",
+      "tmdbType": "movie",
+      "source": "gnews:BraveWords",
+      "sources": [
+        {
+          "outlet": "BraveWords",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTWxBMUxrdGFZUldVdVZIUGhNajNGSlFvYzNDUkR6VDIxQm9kZVo3aVlfek5lODM3Ry1DZ0xTU3M1b1Znb2FIMW55YVBvR2lYSHZUUDJVZ0dZc2tJaHZyZVZxRjE0VzdiWUpSeE5PM0JJNEJTX3dGRXNQYlRkemp3T0VHNlhSNW5tdVNYb1J2a9IBjwFBVV95cUxQTWxBMUxrdGFZUldVdVZIUGhNajNGSlFvYzNDUkR6VDIxQm9kZVo3aVlfek5lODM3Ry1DZ0xTU3M1b1Znb2FIMW55YVBvR2lYSHZUUDJVZ0dZc2tJaHZyZVZxRjE0VzdiWUpSeE5PM0JJNEJTX3dGRXNQYlRkemp3T0VHNlhSNW5tdVNYb1J2aw?oc=5",
+          "ageMin": 113,
+          "headline": "THE HU Debut “Horsemen” Music Video; New Album Out Now - BraveWords",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijwFBVV95cUxQTWxBMUxrdGFZUldVdVZIUGhNajNGSlFvYzNDUkR6VDIxQm9kZVo3aVlfek5lODM3Ry1DZ0xTU3M1b1Znb2FIMW55YVBvR2lYSHZUUDJVZ0dZc2tJaHZyZVZxRjE0VzdiWUpSeE5PM0JJNEJTX3dGRXNQYlRkemp3T0VHNlhSNW5tdVNYb1J2a9IBjwFBVV95cUxQTWxBMUxrdGFZUldVdVZIUGhNajNGSlFvYzNDUkR6VDI"
+        }
+      ],
+      "ageMin": 113,
+      "_cand": {
+        "key": "rss:the-hu-debut-horsemen-music-video-new-album-out-now-bravewor",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "BraveWords"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "BraveWords",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-kelsea-ballerini-patrick-droney-new-single-math-of-us",
       "slug": "kelsea-ballerini-and-patrick-droney-duet-on-tender-new-single-math-of-",
       "title": "Kelsea Ballerini and Patrick Droney Duet on Tender New Single ‘Math of Us’",
       "contentType": "music-news",
@@ -967,30 +1140,30 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "kelsea-ballerini-patrick-droney-math-of-us-single",
-      "primaryKeyword": "Kelsea Ballerini new song",
+      "eventSlug": "kelsea-ballerini-patrick-droney-new-single-math-of-us",
+      "primaryKeyword": "kelsea ballerini new song",
       "primaryEntity": "Kelsea Ballerini",
       "entities": [
         "Patrick Droney"
       ],
-      "angle": "Kelsea Ballerini releases new single with Patrick Droney.",
+      "angle": "Country star Kelsea Ballerini releases a new duet with Patrick Droney.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "gnews:Rolling Stone",
       "sources": [
         {
           "outlet": "Rolling Stone",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/kelsea-ballerini-patrick-droney-duet-math-of-us-video-1235598266/",
-          "ageMin": 211,
-          "headline": "Kelsea Ballerini and Patrick Droney Duet on Tender New Single ‘Math of Us’",
-          "summary": "Droney’s new album, Made You Look , is out now"
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcHE5dm5qcVU0MHRqNU5BREs2RXIzZzE0ZERnT0RFa0ZHYXI0Z3dpeWZ1dlVISExsT3ZkTGhYZ1Q5b3lXYlhha0RFU0JsOTBsRFQtSVRRRzJQOGQ0bVRjNnZ3a0RDR01yc082X3pkSk5BeU1MU0tnNmhKSkxIclpFcDFNWFl5b2V3NVRKZEwwWUJVNloxdGh0ZG00UmVSM1A2S3ZPT1BqRG1lTFVtM01pZw?oc=5",
+          "ageMin": 271,
+          "headline": "Kelsea Ballerini and Patrick Droney Duet on Tender New Single ‘Math of Us’ - Rolling Stone",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOcHE5dm5qcVU0MHRqNU5BREs2RXIzZzE0ZERnT0RFa0ZHYXI0Z3dpeWZ1dlVISExsT3ZkTGhYZ1Q5b3lXYlhha0RFU0JsOTBsRFQtSVRRRzJQOGQ0bVRjNnZ3a0RDR01yc082X3pkSk5BeU1MU0tnNmhKSkxIclpFcDFNWFl5b2V3NVRKZEwwWUJVNloxdGh0ZG00UmVSM1A2S3ZPT1BqRG1lTFVtM01pZw?oc=5\" target"
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:kelsea-ballerini-and-patrick-droney-duet-on-tender-new-singl",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
@@ -1024,174 +1197,40 @@
       "tierClass": "C"
     },
     {
-      "id": "news-karina-longworth-you-must-remember-this-libby-holman",
-      "slug": "karina-longworth-s-you-must-remember-this-returns-with-libby-holman-de",
-      "title": "Karina Longworth's 'You Must Remember This' Returns with Libby Holman Deep Dive",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "karina-longworth-you-must-remember-this-libby-holman",
-      "primaryKeyword": "you must remember this podcast",
-      "primaryEntity": "You Must Remember This",
-      "entities": [
-        "Karina Longworth",
-        "Libby Holman",
-        "Montgomery Clift"
-      ],
-      "angle": "Karina Longworth's acclaimed classic Hollywood podcast 'You Must Remember This' returns with a new season focusing on the life of singer and actress Libby Holman.",
-      "tmdbType": "movie",
-      "source": "rss:IndieWire",
-      "sources": [
-        {
-          "outlet": "IndieWire",
-          "tier": 7,
-          "url": "https://www.indiewire.com/news/general-news/you-must-remember-this-new-season-bisexual-libby-holman-1235206901/",
-          "ageMin": 1261,
-          "headline": "Karina Longworth s You Must Remember This Returns with a Dishy Deep Dive on Bisexual Black Widow Libby Holman",
-          "summary": "The best classic Hollywood podcast going will now turn to forgotten singer/actress Holman, once an on-and-off lover of another bisexual, the tragically fated Montgomery Clift."
-        }
-      ],
-      "ageMin": 1261,
-      "_cand": {
-        "key": "rss:karina-longworth-s-you-must-remember-this-returns-with-a-dis",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "IndieWire"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "IndieWire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 59,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 2,
-        "learned": -1
-      },
-      "demandImpressions": 1,
-      "demandQuery": "sam esmail podcast",
-      "demandPosition": 5,
-      "tierClass": "C"
-    },
-    {
-      "id": "news-marilyn-monroe-some-like-it-hot-story",
-      "slug": "marilyn-monroe-and-the-story-behind-some-like-it-hot",
-      "title": "Marilyn Monroe and the Story Behind 'Some Like It Hot'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "marilyn-monroe-some-like-it-hot-story",
-      "primaryKeyword": "Some Like It Hot Marilyn Monroe",
-      "primaryEntity": "Some Like It Hot",
-      "entities": [
-        "Marilyn Monroe"
-      ],
-      "angle": "The story behind the classic film 'Some Like It Hot' and Marilyn Monroe's involvement.",
-      "tmdbType": "movie",
-      "source": "gnews:Times of San Diego",
-      "sources": [
-        {
-          "outlet": "Times of San Diego",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaEVJVHVWQ2t5MDQ2cGRKaDVvVzZvT005TUdrYmVpNUwwOW9JVnhkdTNUblYtVXFCRlFtUmpFVElpM1FVZlV5WFV6dGlUNmJyZWVmVDU5MFBuZjBnR0JUdkIxc1oxOWExQTNadzd2c0xhTU42N00wdUZQT1BMeU5zaGRB?oc=5",
-          "ageMin": 211,
-          "headline": "Marilyn Monroe comes to Coronado: The story behind ‘Some Like It Hot’ - Times of San Diego",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiggFBVV95cUxOaEVJVHVWQ2t5MDQ2cGRKaDVvVzZvT005TUdrYmVpNUwwOW9JVnhkdTNUblYtVXFCRlFtUmpFVElpM1FVZlV5WFV6dGlUNmJyZWVmVDU5MFBuZjBnR0JUdkIxc1oxOWExQTNadzd2c0xhTU42N00wdUZQT1BMeU5zaGRB?oc=5\" target=\"_blank\" Marilyn Monroe comes to Coronado: The story behind ‘"
-        }
-      ],
-      "ageMin": 211,
-      "_cand": {
-        "key": "rss:marilyn-monroe-comes-to-coronado-the-story-behind-some-like-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Times of San Diego"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Times of San Diego",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-chris-fleming-hbo-special-haircut-movie-offers",
-      "slug": "as-chris-fleming-basks-in-after-glow-of-hbo-special-he-s-taken-a-hairc",
-      "title": "As Chris Fleming Basks in After-Glow of HBO Special, He s Taken a Haircut For Success",
+      "id": "news-jake-shears-kevin-mchale-rocky-horror-broadway-casting",
+      "slug": "jake-shears-lorna-courtney-kevin-mchale-to-join-broadway-s-the-rocky-h",
+      "title": "Jake Shears, Lorna Courtney Kevin McHale To Join Broadway s The Rocky Horror Show",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "chris-fleming-hbo-special-haircut-movie-offers",
-      "primaryKeyword": "Chris Fleming",
-      "primaryEntity": "Chris Fleming",
+      "tier": "popular",
+      "eventSlug": "jake-shears-kevin-mchale-rocky-horror-broadway-casting",
+      "primaryKeyword": "Jake Shears The Rocky Horror Show",
+      "primaryEntity": "Jake Shears",
       "entities": [
-        "HBO"
+        "The Rocky Horror Show",
+        "Kevin McHale",
+        "Lorna Courtney"
       ],
-      "angle": "Following the success of his HBO special, comedian Chris Fleming is changing his signature look due to a surge in movie offers.",
+      "angle": "Scissor Sisters frontman Jake Shears and 'Glee' star Kevin McHale join the Broadway cast of 'The Rocky Horror Show'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/chris-fleming-hbo-special-career-movie-1236655913/",
-          "ageMin": 56,
-          "headline": "As Chris Fleming Basks in After-Glow of HBO Special, He s Taken a Haircut For Success",
-          "summary": "A flood of movie offers has meant shedding his signature wolf cut, at least for now, to play a \"normie\" husband in an upcoming gig."
+          "url": "https://deadline.com/2026/07/jake-shears-lorna-courtney-kevin-mchale-rocky-horror-broadway-1237002593/",
+          "ageMin": 55,
+          "headline": "Jake Shears, Lorna Courtney Kevin McHale To Join Broadway s The Rocky Horror Show",
+          "summary": "Scissor Sisters frontman Jake Shears, Juliet s Lorna Courtney and Glee s Kevin McHale will soon join the Broadway cast of The Rocky Horror Show taking over roles originally played by the departing Luke Evans, Stephanie Hsu and Andrew Durand. The castings were announced by producers today. Shears will begin playing Frank-N-Furter, the sweet transvestite from [ ]"
         }
       ],
-      "ageMin": 56,
+      "ageMin": 55,
       "_cand": {
-        "key": "rss:as-chris-fleming-basks-in-after-glow-of-hbo-special-he-s-tak",
+        "key": "rss:jake-shears-lorna-courtney-kevin-mchale-to-join-broadway-s-t",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1201,11 +1240,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -1227,9 +1266,414 @@
       "tierClass": "B"
     },
     {
+      "id": "news-chris-brown-pleads-guilty-affray",
+      "slug": "chris-brown-pleads-guilty-to-lesser-charge-of-affray-in-london-assault",
+      "title": "Chris Brown Pleads Guilty to Lesser Charge of Affray in London Assault Case",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "legal",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "chris-brown-pleads-guilty-affray",
+      "primaryKeyword": "chris brown london assault",
+      "primaryEntity": "Chris Brown: Welcome to My Life",
+      "entities": [
+        "Chris Brown"
+      ],
+      "angle": "Chris Brown has pleaded guilty to a lesser charge of affray in connection with a 2023 London club assault case, leading to the dismissal of more serious charges.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/business/legal/chris-brown-pleads-guilty-lesser-charge-affray-london-assault-1236302428/",
+          "ageMin": 21,
+          "headline": "Chris Brown Pleads Guilty to Lesser Charge of Affray in 2023 London Club Assault Case",
+          "summary": "The singer's plea led to the dropping of more serious charges of assault and suspicion of grievous bodily harm."
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:chris-brown-pleads-guilty-to-lesser-charge-of-affray-in-2023",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 2,
+        "learned": 1
+      },
+      "demandImpressions": 1,
+      "demandQuery": "trojan horse london",
+      "demandPosition": 17,
+      "tierClass": "S"
+    },
+    {
+      "id": "news-alycia-debnam-carey-signs-with-gersh",
+      "slug": "alycia-debnam-carey-signs-with-gersh",
+      "title": "Alycia Debnam-Carey Signs With Gersh",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "alycia-debnam-carey-signs-with-gersh",
+      "primaryKeyword": "alycia debnam-carey",
+      "primaryEntity": "Alycia Debnam-Carey",
+      "entities": [
+        "Fear the Walking Dead"
+      ],
+      "angle": "Actress Alycia Debnam-Carey signs with new representation.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/alycia-debnam-carey-gersh-agency-1237002565/",
+          "ageMin": 91,
+          "headline": "Alycia Debnam-Carey Signs With Gersh",
+          "summary": "EXCLUSIVE: Alycia Debnam-Carey has signed with Gersh for representation in all areas. Debnam-Carey is best known for her role as Alicia Clark across seven seasons of the AMC series Fear the Walking Dead, a spinoff of the network s hit series The Walking Dead, and The CW s The 100, playing Lexa. Her TV credits also include [ ]"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:alycia-debnam-carey-signs-with-gersh",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 61,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-ella-bright-niall-horan-song-comment",
+      "slug": "ella-bright-had-no-idea-niall-horan-recorded-duet-for-off-campus",
+      "title": "Ella Bright Had No Idea Niall Horan Recorded Duet for 'Off Campus'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ella-bright-niall-horan-song-comment",
+      "primaryKeyword": "niall horan baby now that i found you",
+      "primaryEntity": "Niall Horan",
+      "entities": [
+        "Ella Bright"
+      ],
+      "angle": "Actress Ella Bright reveals she was unaware Niall Horan recorded a duet of his song 'Baby Now That I Found You' while she was filming 'Off Campus.'",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/niall-horan-off-campus-baby-now-that-i-found-you-duet-1235598428/",
+          "ageMin": 20,
+          "headline": "Off Campus Star Ella Bright Had No Idea Niall Horan Recorded Baby Now That I Found You Duet",
+          "summary": "The actress compared it to \"This Town,\" the debut solo single from Horan from the early post-One Direction days"
+        }
+      ],
+      "ageMin": 20,
+      "_cand": {
+        "key": "rss:off-campus-star-ella-bright-had-no-idea-niall-horan-recorded",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-atsuko-okatsuka-hbo-special-global-reach",
+      "slug": "atsuko-okatsuka-s-hbo-special-breaks-barriers-for-asian-american-comed",
+      "title": "Atsuko Okatsuka's HBO Special Breaks Barriers for Asian-American Comedians",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "atsuko-okatsuka-hbo-special-global-reach",
+      "primaryKeyword": "Atsuko Okatsuka HBO special",
+      "primaryEntity": "Atsuko Okatsuka",
+      "entities": [
+        "HBO"
+      ],
+      "angle": "Atsuko Okatsuka's HBO comedy special breaks barriers for Asian-American female comedians.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/atsuko-okatsuka-social-media-internet-just-for-laughs-1236655988/",
+          "ageMin": 27,
+          "headline": "After Atsuko Okatsuka Came to America, Social Media Knocked Down Barriers to Global Reach",
+          "summary": "She's only the second Asian-American female comedian to have an HBO comedy special after Margaret Cho's nearly 30 years earlier: \"That’s way too long.\""
+        }
+      ],
+      "ageMin": 27,
+      "_cand": {
+        "key": "rss:after-atsuko-okatsuka-came-to-america-social-media-knocked-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-charli-xcx-top-five-songs",
+      "slug": "charli-xcx-ranks-her-top-five-career-songs",
+      "title": "Charli XCX Ranks Her Top Five Career Songs",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "charli-xcx-top-five-songs",
+      "primaryKeyword": "Charli XCX songs",
+      "primaryEntity": "Charli xcx",
+      "entities": [
+        "Charli XCX"
+      ],
+      "angle": "Charli XCX reveals her personal top five songs she has ever released.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/pop/charli-xcx-favorite-songs-1236302342/",
+          "ageMin": 38,
+          "headline": "Charli xcx Reveals the Top Five Songs She s Ever Released",
+          "summary": "Charli on Charli."
+        }
+      ],
+      "ageMin": 38,
+      "_cand": {
+        "key": "rss:charli-xcx-reveals-the-top-five-songs-she-s-ever-released",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-david-cronenberg-charli-xcx-album",
+      "slug": "david-cronenberg-s-connection-to-charli-xcx-s-latest-album-explored",
+      "title": "David Cronenberg's Connection to Charli XCX's Latest Album Explored",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "david-cronenberg-charli-xcx-album",
+      "primaryKeyword": "David Cronenberg Charli XCX",
+      "primaryEntity": "Charli xcx",
+      "entities": [
+        "Charli XCX",
+        "David Cronenberg"
+      ],
+      "angle": "Director David Cronenberg's involvement with Charli XCX's music, fashion, and film is explored.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/music/columns/david-cronenberg-charli-xcx-feature-album-meaning-1236820139/",
+          "ageMin": 48,
+          "headline": "Why David Cronenberg s Feature on Charli xcx s Music, Fashion, Film Gets to the Heart of What the Album Is Really About",
+          "summary": "It s no secret that Charli xcx is a cinephile, so it wasn t a shock when the avant-garde pop star revealed that her latest album would feature iconic horror auteur David Cronenberg — especially considering its title is “Music, Fashion, Film.” But what is surprising is just how impactful his contribution is to the wider meaning [ ]"
+        }
+      ],
+      "ageMin": 48,
+      "_cand": {
+        "key": "rss:why-david-cronenberg-s-feature-on-charli-xcx-s-music-fashion",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-sean-combs-solitary-confinement-brawl",
-      "slug": "sean-combs-reportedly-in-solitary-confinement-after-prison-brawl",
-      "title": "Sean Combs Reportedly in Solitary Confinement After Prison Brawl",
+      "slug": "sean-combs-reportedly-placed-in-solitary-confinement-after-prison-braw",
+      "title": "Sean Combs Reportedly Placed in Solitary Confinement After Prison Brawl",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1237,10 +1681,10 @@
       "eventType": "arrest",
       "sensitivity": "high",
       "eventSlug": "sean-combs-solitary-confinement-brawl",
-      "primaryKeyword": "sean combs arrest",
+      "primaryKeyword": "Sean Combs",
       "primaryEntity": "Sean Combs",
       "entities": [],
-      "angle": "Sean Combs reportedly placed in solitary confinement after an altercation with a fellow inmate.",
+      "angle": "Sean Combs reportedly placed in solitary confinement after an altercation in prison.",
       "tmdbType": "movie",
       "source": "rss:Rolling Stone",
       "sources": [
@@ -1248,12 +1692,12 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/sean-combs-solitary-confinement-after-prison-fight-1235597168/",
-          "ageMin": 112,
+          "ageMin": 172,
           "headline": "Sean Combs Placed in Solitary Confinement After Brawl With Fellow Inmate: Reports",
           "summary": "An inmate at the low-security federal prison in New Jersey allegedly taunted Sean Combs, who reportedly lashed out at the man, according to multiple reports"
         }
       ],
-      "ageMin": 112,
+      "ageMin": 172,
       "_cand": {
         "key": "rss:sean-combs-placed-in-solitary-confinement-after-brawl-with-f",
         "popularity": 0,
@@ -1291,171 +1735,103 @@
       "tierClass": "S"
     },
     {
-      "id": "news-nate-bargatze-comedy-boxscore-no-1",
-      "slug": "nate-bargatze-lands-milestone-no-1-on-monthly-comedy-boxscore-recap-by",
-      "title": "Nate Bargatze Lands Milestone No. 1 on Monthly Comedy Boxscore Recap: By the Numbers",
+      "id": "news-cooper-flagg-family-feud",
+      "slug": "cooper-flagg-and-family-featured-on-celebrity-family-feud",
+      "title": "Cooper Flagg and Family Featured on Celebrity Family Feud",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "nate-bargatze-comedy-boxscore-no-1",
-      "primaryKeyword": "Nate Bargatze",
-      "primaryEntity": "Nate Bargatze",
-      "entities": [],
-      "angle": "Nate Bargatze has achieved a milestone No. 1 ranking on the monthly comedy boxscore, highlighting the success of touring comedians.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/lists/nate-bargatze-june-comedy-boxscore-2026/",
-          "ageMin": 72,
-          "headline": "Nate Bargatze Lands Milestone No. 1 on Monthly Comedy Boxscore Recap: By the Numbers",
-          "summary": "A detailed breakdown of the biggest touring comedians of the month."
-        }
-      ],
-      "ageMin": 72,
-      "_cand": {
-        "key": "rss:nate-bargatze-lands-milestone-no-1-on-monthly-comedy-boxscor",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-jack-white-chris-robinson-free-cover",
-      "slug": "jack-white-and-chris-robinson-cover-free-s-i-m-a-mover",
-      "title": "Jack White and Chris Robinson Cover Free's 'I'm a Mover'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "jack-white-chris-robinson-free-cover",
-      "primaryKeyword": "jack white chris robinson",
-      "primaryEntity": "Jack White",
+      "eventSlug": "cooper-flagg-family-feud",
+      "primaryKeyword": "Cooper Flagg Celebrity Family Feud",
+      "primaryEntity": "Cooper Flagg",
       "entities": [
-        "Chris Robinson",
-        "The Black Crowes",
-        "Free"
+        "Celebrity Family Feud"
       ],
-      "angle": "Jack White brought out Chris Robinson of The Black Crowes to perform a cover of Free's 'I'm a Mover'.",
+      "angle": "Highlighting the appearance of Cooper Flagg and his family on the game show.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "gnews:Duke Wire",
       "sources": [
         {
-          "outlet": "Rolling Stone",
-          "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/jack-white-the-black-crowes-chris-robinson-surprise-guest-1235598308/",
-          "ageMin": 168,
-          "headline": "Jack White Brings Out Black Crowes’ Chris Robinson to Tear Up Free’s ‘I’m a Mover’",
-          "summary": "The two rockers covered the Seventies deep cut during White’s show in Chicago"
+          "outlet": "Duke Wire",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPR2hrNV96bE85eTVrdDNpSEVaR0N0bmI1TFYwWk11bFZWTGdTcW5QaGNTQk91VFFMUFhRVGJmWXRGVWpvLU0tVnlJbEw0Y2tsYkpoTkVDYXYxaXpxV0o1OUx0YV9GTHZTQmZtbzlIVFdvMm1hcFg4RGlCMEdzZWV2T1hyV25RQUIxdkd6dmhfazhQaWZ1OUkzd2xXUkltWnZXMXJIc3JWcnZCMDc0aXpmdWNBc0p2S1lrVElIN25fWGgzazd4aDE2WnUxSE10QjJKQmVtZjlYaw?oc=5",
+          "ageMin": 31,
+          "headline": "Cooper Flagg and his family dominate Celebrity Family Feud - Duke Wire",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPR2hrNV96bE85eTVrdDNpSEVaR0N0bmI1TFYwWk11bFZWTGdTcW5QaGNTQk91VFFMUFhRVGJmWXRGVWpvLU0tVnlJbEw0Y2tsYkpoTkVDYXYxaXpxV0o1OUx0YV9GTHZTQmZtbzlIVFdvMm1hcFg4RGlCMEdzZWV2T1hyV25RQUIxdkd6dmhfazhQaWZ1OUkzd2xXUkltWnZXMXJIc3JWcnZCMDc0aXpmdWNBc0p2S1lrVEl"
         }
       ],
-      "ageMin": 168,
+      "ageMin": 31,
       "_cand": {
-        "key": "rss:jack-white-brings-out-black-crowes-chris-robinson-to-tear-up",
+        "key": "rss:cooper-flagg-and-his-family-dominate-celebrity-family-feud-d",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Duke Wire"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Duke Wire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 60,
       "signals": {
-        "recency": 16,
-        "corroboration": 12,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
         "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 0,
+        "spice": 4,
         "softTv": 0,
         "learned": 1
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-chris-brown-pleads-guilty-london-attack",
-      "slug": "chris-brown-pleads-guilty-in-london-nightclub-attack",
-      "title": "Chris Brown Pleads Guilty in London Nightclub Attack",
+      "id": "news-tom-holland-pukes-hot-ones",
+      "slug": "tom-holland-pukes-on-hot-ones-i-m-vomiting-help",
+      "title": "Tom Holland Pukes on Hot Ones: 'I'm Vomiting! Help!'",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
-      "eventType": "legal",
+      "eventType": "health",
       "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "chris-brown-pleads-guilty-london-attack",
-      "primaryKeyword": "Chris Brown legal",
-      "primaryEntity": "Chris Brown: Welcome to My Life",
+      "eventSlug": "tom-holland-pukes-hot-ones",
+      "primaryKeyword": "tom holland hot ones",
+      "primaryEntity": "Tom Holland",
       "entities": [
-        "Chris Brown"
+        "Hot Ones"
       ],
-      "angle": "Singer pleads guilty to assault charges in London.",
+      "angle": "Tom Holland experiences a physical reaction while filming the popular web series.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/chris-brown-pleads-guilty-affray-london-nightclub-attack-1235598310/",
-          "ageMin": 213,
-          "headline": "Chris Brown Pleads Guilty in London Nightclub Attack",
-          "summary": "Singer and co-defendant Omololu “Hoody Baby” Akinlolu face up to three years in prison when sentenced in October"
+          "url": "https://variety.com/2026/film/news/tom-holland-vomits-hot-ones-youtube-1236820437/",
+          "ageMin": 61,
+          "headline": "Tom Holland Pukes on Hot Ones : I m Vomiting! Help!",
+          "summary": "Tom Holland may be ready to rule Ithaca, but it turns out he s not the master of his own stomach. So much so that The Odyssey star, who appeared on the latest episode of Hot Ones, ended up vomiting after consuming the show s signature fiery chicken wings. Holland made an appearance on the YouTube show [ ]"
         }
       ],
-      "ageMin": 213,
+      "ageMin": 61,
       "_cand": {
-        "key": "rss:chris-brown-pleads-guilty-in-london-nightclub-attack",
+        "key": "rss:tom-holland-pukes-on-hot-ones-i-m-vomiting-help-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1465,18 +1841,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Rolling Stone",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 59,
       "signals": {
-        "recency": 9,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 12,
@@ -1491,37 +1867,104 @@
       "tierClass": "S"
     },
     {
-      "id": "news-ryan-whitney-viral-moment-celebrity-family-feud",
-      "slug": "ryan-whitney-goes-viral-after-embarrassing-act-on-celebrity-family-feu",
-      "title": "Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud",
+      "id": "news-chris-fleming-haircut-hbo-special",
+      "slug": "chris-fleming-ditches-signature-hairstyle-after-hbo-special-success",
+      "title": "Chris Fleming Ditches Signature Hairstyle After HBO Special Success",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "ryan-whitney-viral-moment-celebrity-family-feud",
-      "primaryKeyword": "ryan whitney celebrity family feud",
-      "primaryEntity": "Ryan Whitney",
+      "eventSlug": "chris-fleming-haircut-hbo-special",
+      "primaryKeyword": "Chris Fleming",
+      "primaryEntity": "Chris Fleming",
       "entities": [
-        "Celebrity Family Feud"
+        "HBO"
       ],
-      "angle": "Ryan Whitney has gone viral for an embarrassing moment on 'Celebrity Family Feud'.",
+      "angle": "Comedian Chris Fleming changes his look following success of his HBO special.",
       "tmdbType": "movie",
-      "source": "gnews:Markerzone.com",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Markerzone.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZZmtDbElkVVNGNUJEYTRxN3V1ODdISkxEQmNsLW9rSFV5Y18tNGJjUjZ2VFVFWklVNktLTGRvZ1R6elVHYlNaRzV5a3NFd084MTY4ZjlZUGhYbUFMNDFuWg?oc=5",
-          "ageMin": 161,
-          "headline": "Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud - Markerzone.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZZmtDbElkVVNGNUJEYTRxN3V1ODdISkxEQmNsLW9rSFV5Y18tNGJjUjZ2VFVFWklVNktLTGRvZ1R6elVHYlNaRzV5a3NFd084MTY4ZjlZUGhYbUFMNDFuWg?oc=5\" target=\"_blank\" Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud /a nbsp; nbsp; font color="
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/chris-fleming-hbo-special-career-movie-1236655913/",
+          "ageMin": 116,
+          "headline": "As Chris Fleming Basks in Afterglow of HBO Special, He’s Taken a Haircut for Success",
+          "summary": "A flood of movie offers has meant shedding his signature wolf cut, at least for now, to play a “normie” husband in an upcoming gig."
         }
       ],
-      "ageMin": 161,
+      "ageMin": 116,
       "_cand": {
-        "key": "rss:ryan-whitney-goes-viral-after-embarrassing-act-on-celebrity-",
+        "key": "rss:as-chris-fleming-basks-in-afterglow-of-hbo-special-he-s-take",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-female-pop-stars-owning-careers",
+      "slug": "female-pop-stars-take-ownership-of-their-careers-from-hilary-duff-to-o",
+      "title": "Female Pop Stars Take Ownership of Their Careers: From Hilary Duff to Olivia Dean",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "female-pop-stars-owning-careers",
+      "primaryKeyword": "female pop stars careers",
+      "primaryEntity": "Olivia Dean",
+      "entities": [
+        "Hilary Duff"
+      ],
+      "angle": "Examining how female pop stars have taken control of their careers, featuring insights from artists like Olivia Dean and Hilary Duff.",
+      "tmdbType": "movie",
+      "source": "gnews:Star Tribune",
+      "sources": [
+        {
+          "outlet": "Star Tribune",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPY1NMR19JTUtPc2xIZDBjbWZDV0F6VHBfeDRrejFLcVE3a0hQY3MtWkhzODNKc1Z5aE42WnQwZnhYc2dGeFRZNVV6RWs1czBNakpZczdDX2hIZDd6U2ZJWmhCRElPZnlSWUxpY3NENWhGU2hzR1lLVkxqLVZwSDlvOTA3UTFtckM1SG9xSS1hVkJZMnVlakx1LV9WZlZCMEtscU55aTdHcUhwODctbVhGazdCRlVFb2pDNEVTNThkSE5NT2dSQmJFdTdOYXNtdw?oc=5",
+          "ageMin": 121,
+          "headline": "From Hilary Duff to Olivia Dean: How female pop stars came to own their careers - Star Tribune",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizgFBVV95cUxPY1NMR19JTUtPc2xIZDBjbWZDV0F6VHBfeDRrejFLcVE3a0hQY3MtWkhzODNKc1Z5aE42WnQwZnhYc2dGeFRZNVV6RWs1czBNakpZczdDX2hIZDd6U2ZJWmhCRElPZnlSWUxpY3NENWhGU2hzR1lLVkxqLVZwSDlvOTA3UTFtckM1SG9xSS1hVkJZMnVlakx1LV9WZlZCMEtscU55aTdHcUhwODctbVhGazdCRlVFb2pDNEV"
+        }
+      ],
+      "ageMin": 121,
+      "_cand": {
+        "key": "rss:from-hilary-duff-to-olivia-dean-how-female-pop-stars-came-to",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1531,16 +1974,16 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Markerzone.com"
+          "Star Tribune"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Markerzone.com",
+        "attribution": "Star Tribune",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 48,
       "signals": {
         "recency": 16,
         "corroboration": 8,
@@ -1550,7 +1993,73 @@
         "breakout": 0,
         "big": 0,
         "trending": 0,
-        "spice": 4,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-a-toxic-love-story-netflix-villain-twist",
+      "slug": "the-twist-villain-in-netflix-s-a-toxic-love-story-is-the-point",
+      "title": "The Twist Villain in Netflix's 'A Toxic Love Story' is the Point",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "a-toxic-love-story-netflix-villain-twist",
+      "primaryKeyword": "A Toxic Love Story Netflix",
+      "primaryEntity": "A Toxic Love Story",
+      "entities": [
+        "Netflix"
+      ],
+      "angle": "The article explores the unexpected nature of the antagonist in Netflix's 'A Toxic Love Story'.",
+      "tmdbType": "movie",
+      "source": "gnews:Pajiba",
+      "sources": [
+        {
+          "outlet": "Pajiba",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOTTVCREpqYmlWUUZKcFljeERybXIxR1g5VEsxYWtwajhUd1V6UU42eEtZLVpJbUFDdHJvQUJqT1lrTE9nNWQ3ZEJVLUxJUkQ0X0FPQ3ZjaWw0LTZRdm5ubkJrUVBuZmZveGZ5SDJJRXlsajRzdEdZX0g2X3RxeEo1RmtadzlnTFdJcEp0YmQ5TjNUNUhoWVRsNXMxRmxBazBBc1ZsTndhcUFULU1Kb2NvenFOaEJIWTNWUGp0eU5DelFwb1VqNDUwVUk0ZTFXWUk?oc=5",
+          "ageMin": 146,
+          "headline": "The Villain of Netflix's 'A Toxic Love Story' Is Not Who You Think, And That's the Whole Point - Pajiba",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxOTTVCREpqYmlWUUZKcFljeERybXIxR1g5VEsxYWtwajhUd1V6UU42eEtZLVpJbUFDdHJvQUJqT1lrTE9nNWQ3ZEJVLUxJUkQ0X0FPQ3ZjaWw0LTZRdm5ubkJrUVBuZmZveGZ5SDJJRXlsajRzdEdZX0g2X3RxeEo1RmtadzlnTFdJcEp0YmQ5TjNUNUhoWVRsNXMxRmxBazBBc1ZsTndhcUFULU1Kb2NvenFOaEJIWTNWUGp"
+        }
+      ],
+      "ageMin": 146,
+      "_cand": {
+        "key": "rss:the-villain-of-netflix-s-a-toxic-love-story-is-not-who-you-t",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Pajiba"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Pajiba",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
         "softTv": 0,
         "learned": 1
       },

@@ -1,0 +1,78 @@
+{
+  "id": "news-spider-man-brand-new-day-director-praises-sadie-sink-secrecy",
+  "slug": "spider-man-brand-new-day-director-praises-keeping-sadie-sink-s-role-se",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "primary keyword not in title",
+        "body 292w < 600",
+        "a 82-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "primary keyword not in title",
+        "body 292w < 600",
+        "a 82-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Spider-Man: Brand New Day",
+    "work": null,
+    "outlet": "goldderby.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 292,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 82,
+      "avgSentence": 22,
+      "flesch": 54,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 292w < 600",
+        "a 82-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "updatedSlug": "destin-daniel-cretton-discusses-the-personal-stakes-of-spider-man-brand-new",
+  "audit": {
+    "ok": false,
+    "internalLinks": 3,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 128549
+}
