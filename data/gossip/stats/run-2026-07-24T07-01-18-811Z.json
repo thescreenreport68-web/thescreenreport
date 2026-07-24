@@ -1,0 +1,129 @@
+{
+  "ts": "2026-07-24T07:01:18.811Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "paul-wesley-shares-sweet-story-of-being-brittany-snows-first-kiss",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.010544,
+  "costPerPublished": 0.010544,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12166,
+      "out": 529,
+      "usd": 0.0049723
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 996,
+      "out": 662,
+      "usd": 0.00022736
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 15172,
+      "out": 4451,
+      "usd": 0.0047660615
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 4,
+      "in": 4162,
+      "out": 406,
+      "usd": 0.0005786000000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2433,
+      "out": 171,
+      "usd": 0.0011574,
+      "ms": 1614
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 996,
+      "out": 662,
+      "usd": 0.0002088,
+      "ms": 7158
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 14550,
+      "out": 4141,
+      "usd": 0.0047544399999999995,
+      "ms": 153056
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9733,
+      "out": 358,
+      "usd": 0.0038148999999999995,
+      "ms": 4751
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1479,
+      "out": 145,
+      "usd": 0.00020590000000000002,
+      "ms": 891
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 622,
+      "out": 310,
+      "usd": 0.00024846,
+      "ms": 16091
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 400,
+      "out": 125,
+      "usd": 0.00009,
+      "ms": 1172
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 197,
+      "out": 47,
+      "usd": 0.0000385,
+      "ms": 529
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2086,
+      "out": 89,
+      "usd": 0.0002442,
+      "ms": 1926
+    }
+  }
+}
