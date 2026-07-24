@@ -23,6 +23,7 @@ import { categorize, cluster } from "../find/events.mjs";
 import { scoreEvent } from "../find/score.mjs";
 import { readQueue, markConsumed } from "../find/findrun.mjs";
 import { PACE, refill, expectedByNow, allowance, debit } from "../pacing.mjs";
+import { firstJsonObject as firstJsonObjectX, agentChat as agentChatX } from "../models.mjs";
 import { fault as faultX, assertCount as assertCountX, faultReport as faultReportX, resetFaults as resetFaultsX, loadJsonState as loadJsonStateX } from "../health.mjs";
 import { loadStore as loadStoreX } from "../store.mjs";
 import { KIND_FORM, isPlausibleFilmTitle } from "../find/events.mjs";
@@ -1550,6 +1551,81 @@ t("NO NEW SILENT CATCHES on supply/accuracy paths — the guard that keeps this 
   assert.equal(scanned, WATCHED.length, `guard scanned ${scanned} of ${WATCHED.length} watched files`);
   assert.equal(offenders.length, 0,
     "silent catch(es) on a supply/accuracy path — route through health.fault(): " + offenders.join(", "));
+});
+
+t("firstJsonObject salvages the EXACT shapes that broke every finder call in production", () => {
+  // Live symptom, every tick for days: model:finder all models failed —
+  //   "Unexpected non-whitespace character after JSON at position 244"
+  // Cause: pipeline/lib/openrouter.mjs parseJson() falls back to indexOf("{")..lastIndexOf("}"), so a
+  // response holding TWO objects (or one object then prose containing a brace) becomes valid JSON PLUS
+  // trailing content. Reproduced character-for-character before writing this.
+  assert.deepEqual(firstJsonObjectX('{"picks":[{"i":0}]}\n{"picks":[{"i":1}]}'), { picks: [{ i: 0 }] });
+  assert.deepEqual(firstJsonObjectX('{"picks":[{"i":0}]}\nNote: chose films {see chart}.'), { picks: [{ i: 0 }] });
+  assert.deepEqual(firstJsonObjectX('```json\n{"picks":[{"i":2}]}\n```\nWant more?'), { picks: [{ i: 2 }] });
+  // a brace INSIDE a quoted string must not end the object early
+  assert.deepEqual(firstJsonObjectX('{"t":"Weird } Title","i":3}\njunk'), { t: "Weird } Title", i: 3 });
+  // escaped quote must not flip string state
+  assert.deepEqual(firstJsonObjectX('{"t":"a \\" b"}\njunk'), { t: 'a " b' });
+  assert.equal(firstJsonObjectX("no json here"), null);
+  assert.equal(firstJsonObjectX('{"unterminated": '), null);
+
+  // THE ACTUAL LIVE FAILURE (confirmed by running the real finder): finder maxTokens was 900, sized for
+  // a 6-8 film pool, while the volume work grew the pool to ~43 films (~60 tokens per pick). The JSON
+  // array was TRUNCATED mid-element on BOTH models every single tick:
+  //   "Expected ',' or ']' after array element in JSON at position 2459 / 3041"
+  // maxTokens is now 4000 (the real fix); this salvages a truncated reply rather than losing it all.
+  const truncated = '{"picks":[{"i":0,"workingTitle":"A","queries":["a","b"]},'
+    + '{"i":1,"workingTitle":"B","queries":["c","d"]},{"i":2,"form":"BO-UPD';
+  const salv = firstJsonObjectX(truncated);
+  assert.equal(salv.picks.length, 2, "keeps the picks that arrived complete");
+  assert.deepEqual(salv.picks.map((p) => p.workingTitle), ["A", "B"]);
+  assert.ok(!salv.picks.some((p) => p.i === 2), "drops the half-written element — never invents one");
+  // nothing complete yet => nothing to salvage (must NOT fabricate an empty success)
+  assert.equal(firstJsonObjectX('{"picks":[{"i":0'), null);
+});
+
+await ta("agentChat SALVAGES a malformed-JSON response instead of failing the whole call", async () => {
+  // The first chat() call throws exactly as the shared parseJson does; the salvage re-asks the SAME
+  // model with json:false and extracts the first balanced object. Before this, one unparseable response
+  // burned the primary AND the fallback and returned nothing.
+  let calls = 0;
+  const chatImpl = async ({ json }) => {
+    calls++;
+    if (json) throw new Error("Unexpected non-whitespace character after JSON at position 244");
+    return { text: '{"picks":[{"i":0,"form":"BO-UPDATE"}]}\nTrailing commentary {oops}.', usage: {} };
+  };
+  const res = await agentChatX("finder", { system: "s", user: "u" }, { chatImpl });
+  assert.deepEqual(res.data, { picks: [{ i: 0, form: "BO-UPDATE" }] });
+  assert.equal(calls, 2, "one failed JSON attempt then one raw-text salvage on the SAME model");
+});
+
+await ta("NO-REWRITE: the lane can create a new article but REFUSES to overwrite a published one", async () => {
+  // Owner directive 2026-07-24: improvements apply to NEW articles only; republishing existing files
+  // creates churn while Google builds trust. writeBoxOfficeArticle used fs.writeFileSync with no
+  // existence check, and slugs here are deterministic — so a repeat would have silently replaced a live
+  // article and re-dated it on deploy.
+  const dirW = fs.mkdtempSync(path.join(os.tmpdir(), "bo-norewrite-"));
+  const para = "A full opening paragraph carrying real substance about the film, its cast, its premise and how "
+    + "it performed in theaters over the past week, written at enough length to clear the floor comfortably "
+    + "for any reader who wants to understand what happened and why the studio behind it cares. ";
+  const args = {
+    article: { title: "Test Film Box Office Day 5", metaTitle: "T", dek: "d", metaDescription: "m",
+      body: para + para + para, keyTakeaways: ["a", "b", "c"], faq: [{ q: "x", a: "y" }, { q: "z", a: "w" }], about: [], tags: ["t"] },
+    trigger: { eventSlug: "t-bo-update", title: "Test Film" }, angle: { form: "BO-UPDATE" },
+    film: { title: "Test Film", dailyChart: { cume: "$100,000,000", dailyGross: "$1,000,000", theaters: "3,000", dayInRelease: "Day 5" } },
+    gathered: { cume: "$100,000,000", numbers: ["$100,000,000"], sources: [] },
+    boxData: { worldwide: "$200 million", budget: "$50 million" },
+    image: null, dateISO: new Date().toISOString(), dir: dirW,
+  };
+  const first = writeBoxOfficeArticle(args);
+  assert.equal(first.written, true, "a NEW article writes normally: " + JSON.stringify(first.scaffold || []));
+  const before = fs.readFileSync(first.path, "utf8");
+
+  const second = writeBoxOfficeArticle({ ...args, article: { ...args.article, body: para + para + para + "CHANGED." } });
+  assert.equal(second.written, false, "the second write is REFUSED");
+  assert.equal(second.refusedRewrite, true);
+  assert.equal(fs.readFileSync(first.path, "utf8"), before, "the published file is byte-identical — untouched");
+  fs.rmSync(dirW, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
