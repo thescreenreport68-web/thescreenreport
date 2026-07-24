@@ -107,7 +107,7 @@ jobs:
           else
             git add content/articles data/inside data/tweets
           fi
-          git commit -m "inside: tick — ${{ steps.tick.outputs.slugs || 'lane state (park/dedup)' }}" || { echo "nothing to commit"; exit 0; }
+          git commit -m "inside: tick — ${{ steps.tick.outputs.slugs || (steps.tick.outputs.updatedSlugs && format('updated {0}', steps.tick.outputs.updatedSlugs)) || 'lane state (park/dedup)' }}" || { echo "nothing to commit"; exit 0; }
           # CONFLICT-PROOF PUSH (ported from news-drip 2026-07-19 — AUTOMATION_REGISTRY §3.25/§3.1).
           # The old loop was a bare pull-rebase-push ×5 with no `rebase --abort`. A conflict on a
           # regenerable state file left the rebase IN PROGRESS, so every later retry hit "unmerged
@@ -139,7 +139,9 @@ jobs:
 
       - name: Deploy live (dispatch deploy-live)
         # review mode never deploys — the article exists only as the run artifact until the owner approves
-        if: github.event.inputs.review != 'true' && steps.tick.outputs.published != '0' && steps.tick.outputs.published != ''
+        # An UPDATE (one-story-one-URL) rewrites a live article's reaction cards, so it must reach the
+        # site exactly like a publish does — gate on either.
+        if: github.event.inputs.review != 'true' && ((steps.tick.outputs.published != '0' && steps.tick.outputs.published != '') || (steps.tick.outputs.updated != '0' && steps.tick.outputs.updated != ''))
         run: |
           curl -sS -X POST \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \

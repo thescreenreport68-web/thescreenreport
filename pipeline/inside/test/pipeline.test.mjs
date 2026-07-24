@@ -319,13 +319,17 @@ await check("image agent returns null → held 'no >=1200px…' + parked", async
 });
 
 // ── 12) DEDUP second run ──────────────────────────────────────────────────────────────────────────
-await check("dedup: second run skips already-published story×form", async () => {
+await check("dedup: second run never mints a second URL for the same story×form", async () => {
   const store = freshStore();
   const r1 = await agentRun(baseImpls({ storeImpl: store }));
   assert.equal(r1.published.length, 1);
   const r2 = await agentRun(baseImpls({ storeImpl: store }));
-  assert.equal(r2.published.length, 0);
-  assert.ok(r2.skipped.some((s) => /already published/.test(s.reason)));
+  // THE invariant: one story keeps one URL. (Since 2026-07-20 the candidate is routed to
+  // update-mode rather than dead-skipped — and here the article was published moments ago, so the
+  // anti-churn gap blocks the update too. Either way: no second article, and nothing rewritten.)
+  assert.equal(r2.published.length, 0, "must never publish a second slug for the same story");
+  assert.equal(r2.updated.length, 0, "and must not re-stamp a page it just published");
+  assert.ok(r2.skipped.some((s) => /already published|update /.test(s.reason)), `skip reason was: ${JSON.stringify(r2.skipped.map((s) => s.reason))}`);
 });
 
 // ── 13) DRY-RUN writes nothing (but DOES run in-memory cuts since 2026-07-10) ─────────────────────

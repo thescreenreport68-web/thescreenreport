@@ -15,6 +15,7 @@ import { CONTENT_DIR, DATA_DIR, INSIDE_FORMAT_TAG, MONITOR_WINDOW_HOURS } from "
 import { costReport } from "../lib/openrouter.mjs";
 import { loadStore, bumpUpdated } from "./store.mjs";
 import { harvestReactions, norm } from "./reactionFinder.mjs";
+import { freshReactions, quoteKey, MIN_FRESH_REACTIONS } from "./updateArticle.mjs";
 import { getTweet } from "react-tweet/api";
 
 const require = createRequire(import.meta.url);
@@ -115,19 +116,18 @@ export async function monitorInside({
       if (rec?.angle && rec?.trigger) {
         const h = await harvestImpl(rec.trigger, rec.angle).catch(() => ({ ok: false }));
         if (h.ok) {
-          const have = new Set([
-            ...(rec.harvestQuoteKeys || []),
-            ...(fm.reactions || []).map((r) => norm(r.quote).slice(0, 90)),
-          ]);
-          const fresh = [...h.factBlock.reactions, ...h.factBlock.aggregateFans]
-            .filter((r) => r.quote && !have.has(norm(r.quote).slice(0, 90)))
-            .slice(0, 5)
-            .map((r) => ({ speaker: r.speaker || "A viewer", ...(r.connection ? { connection: r.connection } : {}), ...(r.platform ? { platform: r.platform } : {}), ...(r.date ? { date: r.date } : {}), quote: r.quote }));
-          if (fresh.length >= 2) { // one straggler isn't an update; a real new wave is
+          // Same merge rules as the orchestrator's update-mode — shared so one story can never be
+          // folded two different ways (updateArticle.mjs).
+          const fresh = freshReactions({
+            existingReactions: fm.reactions || [],
+            harvestQuoteKeys: rec.harvestQuoteKeys || [],
+            candidates: [...h.factBlock.reactions, ...h.factBlock.aggregateFans],
+          });
+          if (fresh.length >= MIN_FRESH_REACTIONS) { // one straggler isn't an update; a real new wave is
             {
               fm.reactions = [...(fm.reactions || []), ...fresh];
               fm.updatedCount = (fm.updatedCount || 0) + 1;
-              rec.harvestQuoteKeys = [...(rec.harvestQuoteKeys || []), ...fresh.map((r) => norm(r.quote).slice(0, 90))];
+              rec.harvestQuoteKeys = [...(rec.harvestQuoteKeys || []), ...fresh.map((r) => quoteKey(r.quote))];
               actions.push(`+${fresh.length} new posts`);
             }
           }

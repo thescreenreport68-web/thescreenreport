@@ -20,7 +20,11 @@ import { xSearchIds } from "../xsearch.mjs";
 import { norm, quoteIsVerbatim, meetsFloor, fallbackQueries, isMediaHandle, looksLikeSpam, cleanQuote, isOutletSpeaker, reliableProvenance, isMediaVoice, unwrapQuote, isSocialSrc, hasHandle, trimScar } from "../reactionFinder.mjs";
 import { cleanTitle } from "../assemble.mjs";
 import { routeForStory, MAX_EMBEDS } from "../config.inside.mjs";
-import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey, recentDuplicate, isWorkScoped, PUBLISH_COOLDOWN_H, PARK_REVIVE_H } from "../store.mjs";
+import { loadStore, alreadyPublished, recordInsidePublished, parkAngle, parkedTries, clearParked, insideKey, recentDuplicate, isWorkScoped, PUBLISH_COOLDOWN_H, PARK_REVIVE_H, updateTarget, updateBlockedReason, UPDATE_WINDOW_H, MAX_ARTICLE_UPDATES, UPDATE_MIN_GAP_H } from "../store.mjs";
+import { freshReactions, applyReactionUpdate, quoteKey, MIN_FRESH_REACTIONS } from "../updateArticle.mjs";
+import os from "node:os";
+import fs from "node:fs";
+import path from "node:path";
 import {
   NOW, tmp, Q, SRC_A, NAMED, statsFor,
   fakeTrigger, fakeAngle, fakeFactBlock, fakeArticle, fakeImage, fakeJob,
@@ -1621,6 +1625,171 @@ await check("yt: no key stays free and never counts against the budget", async (
   ytBudgetReset();
   assert.deepEqual(await ytSearchVideos("q", { key: "", fetchImpl: async () => { throw new Error("must not fetch"); } }), []);
   assert.equal(ytBudget().spent, 0);
+});
+
+// ── ONE STORY = ONE URL (owner directive 2026-07-20) ─────────────────────────────────────────────
+// A same-subject/same-event candidate must be folded into the live article that already owns the
+// story instead of minting a second slug.
+const HH = (h) => 3600e3 * h;
+const oneStore = () => ({ published: [], parked: [], file: "/dev/null" });
+const ODY = {
+  primaryEntity: "The Odyssey",
+  parentEventSlug: "the-odyssey-trailer",
+  parentTitle: "‘The Odyssey’ trailer has the comment section at war",
+};
+
+await check("one-url: a same-event candidate resolves to the live article, not a new slug", () => {
+  const st = oneStore(); const t0 = new Date("2026-07-19T04:30:00Z");
+  recordInsidePublished(st, {
+    parentEventSlug: "the-odyssey-trailer", form: "audience-reaction", slug: "odyssey-trailer-comment-war",
+    primaryEntity: "The Odyssey", title: "The Odyssey's Trailer Dropped — and the Comment Section Went to War",
+  }, { now: t0 });
+  // same event, 20h later, differently worded headline
+  const later = new Date(+t0 + HH(20));
+  const target = updateTarget(st, {
+    primaryEntity: "The Odyssey", parentEventSlug: "odyssey-trailer-reactions",
+    parentTitle: "Nolan's Odyssey trailer still has the comment section arguing",
+  }, "audience-reaction", { now: later });
+  assert.equal(target?.slug, "odyssey-trailer-comment-war", "must route to the URL that owns the story");
+  assert.equal(updateBlockedReason(target, { now: later }), null, "and be eligible to take the update");
+});
+
+await check("one-url: the exact event×form record routes to update instead of 'already published'", () => {
+  const st = oneStore(); const t0 = new Date("2026-07-19T04:30:00Z");
+  recordInsidePublished(st, { ...ODY, form: "audience-reaction", slug: "odyssey-a", title: "t" }, { now: t0 });
+  const later = new Date(+t0 + HH(30));
+  assert.equal(alreadyPublished(st, ODY.parentEventSlug, "audience-reaction", { now: later }), true,
+    "the old guard still says 'published'…");
+  assert.equal(updateTarget(st, ODY, "audience-reaction", { now: later })?.slug, "odyssey-a",
+    "…but one-story-one-URL claims it for an update instead of a dead skip");
+});
+
+await check("one-url: window is 7 days — older stories are NOT claimed", () => {
+  const st = oneStore(); const t0 = new Date("2026-07-10T00:00:00Z");
+  recordInsidePublished(st, { ...ODY, form: "audience-reaction", slug: "odyssey-old", title: "The Odyssey trailer war" }, { now: t0 });
+  const inside = new Date(+t0 + HH(UPDATE_WINDOW_H - 2));
+  const outside = new Date(+t0 + HH(UPDATE_WINDOW_H + 2));
+  assert.equal(updateTarget(st, ODY, "audience-reaction", { now: inside })?.slug, "odyssey-old");
+  assert.equal(updateTarget(st, ODY, "audience-reaction", { now: outside }), null, "past 7 days it is a new story");
+});
+
+await check("one-url: a DIFFERENT event about the same subject is not claimed after the 48h band", () => {
+  const st = oneStore(); const t0 = new Date("2026-07-12T00:00:00Z");
+  recordInsidePublished(st, {
+    parentEventSlug: "odyssey-ai-budget", form: "audience-reaction", slug: "ai-odyssey",
+    primaryEntity: "Odyssey", title: "A Few Thousand Bucks vs. $250 Million: The AI 'Odyssey' Splitting the Internet",
+  }, { now: t0 });
+  // 5 days later: box-office opening — same film, clearly a different event (2 shared tokens only)
+  const t5 = new Date(+t0 + HH(120));
+  assert.equal(updateTarget(st, {
+    primaryEntity: "The Odyssey", parentEventSlug: "odyssey-opening",
+    parentTitle: "'The Odyssey' Slaying With $120M U.S. Opening, A CinemaScore Best For Christopher Nolan",
+  }, "audience-reaction", { now: t5 }), null, "aged band demands a 3rd shared token — this is a new story, new URL");
+});
+
+await check("one-url: churn caps — 3 updates max, and never twice inside 6h", () => {
+  const now = new Date("2026-07-19T12:00:00Z");
+  assert.equal(updateBlockedReason({ slug: "a", at: new Date(+now - HH(30)).toISOString(), updatedCount: MAX_ARTICLE_UPDATES }, { now }),
+    `update cap ${MAX_ARTICLE_UPDATES} reached`);
+  assert.equal(updateBlockedReason({ slug: "a", at: new Date(+now - HH(30)).toISOString(), updatedCount: 1, updatedAt: new Date(+now - HH(1)).toISOString() }, { now }),
+    `updated <${UPDATE_MIN_GAP_H}h ago`);
+  assert.equal(updateBlockedReason({ slug: "a", at: new Date(+now - HH(30)).toISOString(), updatedCount: 1, updatedAt: new Date(+now - HH(9)).toISOString() }, { now }),
+    null, "a genuine new wave 9h later is allowed");
+  assert.equal(updateBlockedReason({ slug: "a", at: new Date(+now - HH(2)).toISOString(), updatedCount: 0 }, { now }),
+    `updated <${UPDATE_MIN_GAP_H}h ago`, "a just-published article is not re-stamped minutes later");
+});
+
+await check("one-url: a review-mode record never claims a story (nothing is live)", () => {
+  const st = oneStore(); const t0 = new Date("2026-07-19T04:00:00Z");
+  recordInsidePublished(st, { ...ODY, form: "audience-reaction", slug: "odyssey-preview", title: "t", review: true }, { now: t0 });
+  assert.equal(updateTarget(st, ODY, "audience-reaction", { now: new Date(+t0 + HH(3)) }), null);
+});
+
+await check("merge: only genuinely new quotes are appended; ledger + page both dedup", () => {
+  const fresh = freshReactions({
+    existingReactions: [{ quote: "This trailer broke me." }],
+    harvestQuoteKeys: [quoteKey("Nolan never misses.")],
+    candidates: [
+      { quote: "This trailer broke me.", speaker: "A viewer" },      // already on the page
+      { quote: "Nolan never misses.", speaker: "A viewer" },          // already in the ledger
+      { quote: "The yogurt shot is unhinged and I love it.", speaker: "A viewer", platform: "Bluesky" },
+      { quote: "The yogurt shot is unhinged and I love it.", speaker: "Someone else" }, // dup within batch
+      { quote: "Ten years of my life for this runtime, worth it.", speaker: "A viewer" },
+    ],
+  });
+  assert.equal(fresh.length, 2, "two genuinely new posts");
+  assert.deepEqual(fresh.map((r) => r.quote), [
+    "The yogurt shot is unhinged and I love it.",
+    "Ten years of my life for this runtime, worth it.",
+  ]);
+  assert.equal(fresh[0].platform, "Bluesky", "platform attribution is carried over");
+});
+
+await check("merge: writing appends cards + stamps updated, and NEVER touches body/title/SEO", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "one-url-"));
+  const md = [
+    "---",
+    "title: The Odyssey's Trailer Dropped",
+    "slug: odyssey-trailer-comment-war",
+    "category: movies",
+    "metaTitle: 'The Odyssey 2026: Nolan Epic Sparks War'",
+    "metaDescription: The trailer comment section became a meme.",
+    "formatTag: inside",
+    "reactions:",
+    "  - speaker: A viewer",
+    "    quote: This trailer broke me.",
+    "---",
+    "",
+    "The first trailer detonated a cultural bomb.",
+    "",
+  ].join("\n");
+  fs.writeFileSync(path.join(dir, "odyssey-trailer-comment-war.md"), md);
+  const now = Date.parse("2026-07-20T09:00:00Z");
+  const res = applyReactionUpdate({
+    slug: "odyssey-trailer-comment-war", dir, now,
+    fresh: [{ speaker: "A viewer", quote: "The yogurt shot is unhinged." }, { speaker: "A viewer", quote: "Worth the runtime." }],
+  });
+  assert.equal(res.ok, true); assert.equal(res.added, 2);
+  const after = fs.readFileSync(path.join(dir, "odyssey-trailer-comment-war.md"), "utf8");
+  assert.match(after, /The yogurt shot is unhinged\./);
+  assert.match(after, /This trailer broke me\./, "the original card survives");
+  assert.match(after, /updatedCount: 1/);
+  assert.match(after, /updated: '2026-07-20T09:00:00\.000Z'/);
+  // the freeze: nothing indexed may be rewritten
+  assert.match(after, /title: The Odyssey's Trailer Dropped/);
+  assert.match(after, /metaTitle: 'The Odyssey 2026: Nolan Epic Sparks War'/);
+  assert.match(after, /metaDescription: The trailer comment section became a meme\./);
+  assert.match(after, /The first trailer detonated a cultural bomb\./, "body untouched");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+await check("merge: a quote already on the page can never be double-posted, even if the ledger forgot", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "one-url-"));
+  fs.writeFileSync(path.join(dir, "a.md"), ["---", "slug: a", "reactions:", "  - speaker: A viewer", "    quote: Already here.", "---", "", "body", ""].join("\n"));
+  const res = applyReactionUpdate({ slug: "a", dir, fresh: [{ speaker: "A viewer", quote: "Already here." }, { speaker: "A viewer", quote: "Also already here." }, { speaker: "A viewer", quote: "Also already here." }] });
+  assert.equal(res.ok, false, "after page-dedup there is < 2 genuinely new — no write at all");
+  assert.match(res.reason, /after page dedup/);
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+await check("merge: a missing or retracted article is skipped, never created", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "one-url-"));
+  const two = [{ speaker: "A viewer", quote: "one" }, { speaker: "A viewer", quote: "two" }];
+  assert.equal(applyReactionUpdate({ slug: "nope", dir, fresh: two }).reason, "article file missing");
+  assert.equal(fs.existsSync(path.join(dir, "nope.md")), false, "must not create a file");
+  fs.writeFileSync(path.join(dir, "r.md"), ["---", "slug: r", "retracted: true", "---", "", "b", ""].join("\n"));
+  assert.equal(applyReactionUpdate({ slug: "r", dir, fresh: two }).reason, "retracted");
+  fs.rmSync(dir, { recursive: true, force: true });
+});
+
+await check("merge: one straggler is not an update (no churn on a live URL)", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "one-url-"));
+  fs.writeFileSync(path.join(dir, "a.md"), ["---", "slug: a", "---", "", "body", ""].join("\n"));
+  const before = fs.readFileSync(path.join(dir, "a.md"), "utf8");
+  const res = applyReactionUpdate({ slug: "a", dir, fresh: [{ speaker: "A viewer", quote: "lone reply" }] });
+  assert.equal(res.ok, false);
+  assert.equal(fs.readFileSync(path.join(dir, "a.md"), "utf8"), before, "file byte-identical — nothing written");
+  fs.rmSync(dir, { recursive: true, force: true });
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);

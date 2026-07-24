@@ -106,6 +106,47 @@ export function recentDuplicate(store, story, { now = new Date(), windowH = 48, 
   return null;
 }
 
+// ── ONE STORY = ONE URL (owner directive 2026-07-20) ────────────────────────────────────────────
+// A same-subject/same-event candidate is no longer a dead skip: it is folded into the article that
+// already owns the story. That turns the duplicate-kill from a pure loss into an update, and it is
+// what keeps a developing reaction wave on ONE indexable URL instead of spawning near-identical ones.
+export const UPDATE_WINDOW_H = 168;   // 7 days — the owner's stated horizon for "same story"
+export const MAX_ARTICLE_UPDATES = 3; // churn ceiling per URL; beyond this the story is skipped, never re-published
+export const UPDATE_MIN_GAP_H = 6;    // never touch the same URL twice inside one news cycle
+
+// Beyond the 48h publish cooldown, two articles about one subject are far more likely to be genuinely
+// DIFFERENT events (The Odyssey's trailer vs its opening weekend), so the older band demands a third
+// shared token before it may claim the candidate. Wrong-direction errors differ in cost: a missed
+// update publishes a second URL (recoverable), a wrong update appends foreign reactions to a live
+// article (a correctness bug on a page readers already see).
+const AGED_MIN_SHARED = 3;
+
+/**
+ * The live article this candidate belongs to, or null to publish a new one.
+ * Checks the exact event×form record first (the `alreadyPublished` case), then the near-duplicate
+ * matcher over a 7-day window. Returns only records that still name a real slug.
+ */
+export function updateTarget(store, story, form, { now = new Date(), windowH = UPDATE_WINDOW_H } = {}) {
+  const nowMs = +now;
+  const inWindow = (r) => r?.at && nowMs - +new Date(r.at) <= windowH * 3600e3;
+  const exact = store.published.find((r) => r.key === insideKey(story.parentEventSlug, form));
+  if (exact?.slug && !exact.review && inWindow(exact)) return exact;
+  const near = recentDuplicate(store, story, { now, windowH });
+  if (!near?.slug || near.review) return null;
+  // Inside the proven 48h band keep the 2-token rule; past it require the stronger match.
+  if (nowMs - +new Date(near.at) <= PUBLISH_COOLDOWN_H * 3600e3) return near;
+  return recentDuplicate(store, story, { now, windowH, minShared: AGED_MIN_SHARED });
+}
+
+/** null when the target may be updated, else the reason it may not (candidate is then skipped). */
+export function updateBlockedReason(rec, { now = new Date() } = {}) {
+  if (!rec) return "no target";
+  if ((rec.updatedCount || 0) >= MAX_ARTICLE_UPDATES) return `update cap ${MAX_ARTICLE_UPDATES} reached`;
+  const last = rec.updatedAt || rec.at;
+  if (last && +now - +new Date(last) < UPDATE_MIN_GAP_H * 3600e3) return `updated <${UPDATE_MIN_GAP_H}h ago`;
+  return null;
+}
+
 // rec: { parentEventSlug, form, slug, title, primaryEntity, eventType, at, angle, trigger }
 // angle+trigger snapshots are stored so monitor.mjs can re-run the exact same harvest for top-ups.
 export function recordInsidePublished(store, rec, { now = new Date() } = {}) {

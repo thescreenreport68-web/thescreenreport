@@ -6,6 +6,10 @@
 //   FINDER → per story: GATHERER → EMBED → SYNTHESIZER → WRITER ⇄ QA (corrections) → webCheck →
 //   IMAGE (mandatory) → internal links → ASSEMBLE → publish → record
 //
+//   ONE STORY = ONE URL (owner 2026-07-20): when a candidate is the same subject+event as an inside
+//   article from the last 7 days, the run stops after GATHERER and APPENDS the new reactions to that
+//   article instead of publishing a second slug.
+//
 // Run: cd "/Users/sivajithcu/Movie News site" && set -a; . ./.env; set +a; \
 //      node site/pipeline/inside/agentrun.mjs [--limit=N] [--dry-run] [--story=<slug>]
 import fs from "node:fs";
@@ -20,7 +24,8 @@ import * as voiceAgent from "./agents/voice.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import * as qa from "./agents/qa.mjs";
 import { writeInsideArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recentDuplicate, recordInsidePublished, parkAngle, parkedTries, clearParked, subjectTokens } from "./store.mjs";
+import { loadStore, alreadyPublished, recentDuplicate, recordInsidePublished, parkAngle, parkedTries, clearParked, subjectTokens, updateTarget, updateBlockedReason, bumpUpdated } from "./store.mjs";
+import { freshReactions, applyReactionUpdate, quoteKey } from "./updateArticle.mjs";
 import { bannedHooksFrom, hookHit } from "./seo.mjs";
 import { ACCEPT_FLOOR, MAX_ATTEMPTS, GATE, DATA_DIR } from "./config.inside.mjs";
 import { cutArticle } from "../lib/cutter.mjs";
@@ -37,6 +42,9 @@ const PAUSED_FILE = path.join(DATA_DIR, "PAUSED");
 // (read per-run inside agentRun so the offline suite can exercise review mode)
 const RUNS_DIR = path.join(DATA_DIR, "runs");
 const MAX_ARTICLES_PER_DAY = Number(process.env.MAX_ARTICLES_PER_DAY) || 30;
+// Updates are cheap (gatherer only) and additive, so they do NOT consume the publish slot — but they
+// DO touch live URLs, so the number of live pages one tick may re-stamp is bounded.
+const MAX_UPDATES_PER_RUN = Number(process.env.INSIDE_MAX_UPDATES_PER_RUN) || 2;
 const MAX_RUN_COST_USD = Number(process.env.MAX_RUN_COST_USD) || 0.75; // funds ~40 cheap floor-fails + several full pipelines to LAND one publish per slot (owner: keep trying until it publishes)
 const WEB_VERIFY = process.env.WEB_VERIFY !== "0";
 
@@ -95,7 +103,7 @@ export async function agentRun({
   const runId = `run-${new Date(now).toISOString().replace(/[:.]/g, "-").slice(0, 19)}`;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const store = storeImpl || loadStore();
-  const report = { runId, startedAt: new Date(now).toISOString(), stories: 0, published: [], held: [], rejected: [], skipped: [], blocked: [] };
+  const report = { runId, startedAt: new Date(now).toISOString(), stories: 0, published: [], updated: [], held: [], rejected: [], skipped: [], blocked: [] };
   meterReset();
 
   // ── 24/7 guards ──
@@ -118,7 +126,7 @@ export async function agentRun({
   if (onlyStory) found = found.filter((f) => f.story.parentEventSlug === onlyStory);
   report.stories = found.length;
 
-  let written = 0;
+  let written = 0, updatedThisRun = 0;
   for (const { story, angle } of found) {
     if (written >= limit) break;
     if (baseToday + written >= MAX_ARTICLES_PER_DAY) { report.dailyCapHit = true; break; }
@@ -128,13 +136,24 @@ export async function agentRun({
     const tag = `${story.parentEventSlug}×${angle.form}`;
     const job = { story, angle };
     try {
-      // dedup + parked-dead (never repost; a ripple that never materialized stops retrying)
-      if (alreadyPublished(store, story.parentEventSlug, angle.form, { now })) { report.skipped.push({ tag, reason: "already published" }); continue; }
-      // NEAR-DUPLICATE guard (owner 2026-07-16): a re-report of an event we already covered under a
-      // different headline/slug within the last 48h — skip BEFORE any paid work so we never publish
-      // "The Batman 2 Delayed" and "The Batman Part II Delayed" twice.
-      const dup = recentDuplicate(store, story, { now });
-      if (dup) { report.skipped.push({ tag, reason: `near-duplicate of ${dup.slug} (${(dup.at || "").slice(0, 10)})` }); console.log(`  ⃠ skipped near-duplicate of ${dup.slug}`); continue; }
+      // ── ONE STORY = ONE URL (owner 2026-07-20) ──
+      // A same-subject/same-event candidate used to be a dead skip. It now resolves to the live
+      // article that already owns the story and folds the new reactions into it, so a developing
+      // wave stays on ONE indexable URL. The 07-16 duplicate-kill still runs — it just routes to an
+      // update instead of a loss. Everything OUTSIDE the 7-day window keeps the old hard blocks.
+      let pendingUpdate = updateTarget(store, story, angle.form, { now });
+      if (pendingUpdate) {
+        const blocked = updateBlockedReason(pendingUpdate, { now });
+        // Blocked means "this story already has a URL and that URL can't take more right now" —
+        // so we skip. Publishing a second URL instead is exactly what the directive forbids.
+        if (blocked) { report.skipped.push({ tag, reason: `update ${pendingUpdate.slug}: ${blocked}` }); continue; }
+        if (updatedThisRun >= MAX_UPDATES_PER_RUN) { report.skipped.push({ tag, reason: `update budget ${MAX_UPDATES_PER_RUN}/run spent` }); continue; }
+      } else {
+        // No live article owns it (out of window / review-only record) — the pre-existing guards.
+        if (alreadyPublished(store, story.parentEventSlug, angle.form, { now })) { report.skipped.push({ tag, reason: "already published" }); continue; }
+        const dup = recentDuplicate(store, story, { now });
+        if (dup) { report.skipped.push({ tag, reason: `near-duplicate of ${dup.slug} (${(dup.at || "").slice(0, 10)})` }); console.log(`  ⃠ skipped near-duplicate of ${dup.slug}`); continue; }
+      }
       if (parkedTries(store, story.parentEventSlug, angle.form, { now }) === Infinity) { report.skipped.push({ tag, reason: "parked dead" }); continue; }
       if (paceMs && (report.published.length + report.rejected.length + report.held.length + report.blocked.length)) await sleep(paceMs);
       console.log(`\n■ ${tag} (heat ${story.priority}, ${story.via})`);
@@ -155,6 +174,35 @@ export async function agentRun({
         continue;
       }
       console.log(`  ✓ gathered: ${job.gatherStats.namedVoices} named + ${job.gatherStats.fanPosts} audience anchors`);
+
+      // ── UPDATE MODE — fold into the URL that already owns this story, then stop ──
+      // Deliberately ends here: no writer, no QA, no image. We APPEND reaction cards and stamp
+      // `updated`; the body, title and every SEO field are left exactly as indexed. That keeps this
+      // inside the no-mass-rewrite freeze (it adds substance, it does not re-litigate a live page)
+      // and costs a gatherer call (~$0.002) instead of a full pipeline (~$0.017).
+      if (pendingUpdate) {
+        const candidates = [...(job.factBlock?.reactions || []), ...(job.factBlock?.aggregateFans || [])];
+        const fresh = freshReactions({
+          // applyReactionUpdate re-checks the page itself; this pass filters against the ledger so
+          // we don't pay to assemble cards that are already known.
+          harvestQuoteKeys: pendingUpdate.harvestQuoteKeys || [],
+          candidates,
+        });
+        const res = applyReactionUpdate({ slug: pendingUpdate.slug, fresh, now, dryRun, ...(REVIEW_DIR ? { dir: REVIEW_DIR } : {}) });
+        if (!res.ok) {
+          report.skipped.push({ tag, reason: `update ${pendingUpdate.slug}: ${res.reason}` });
+          console.log(`  ⃠ no update: ${res.reason}`);
+          continue;
+        }
+        updatedThisRun++;
+        if (!dryRun) {
+          pendingUpdate.harvestQuoteKeys = [...(pendingUpdate.harvestQuoteKeys || []), ...(res.added_quotes || [])];
+          bumpUpdated(store, pendingUpdate.slug, { now: new Date(now) });
+        }
+        report.updated.push({ tag, slug: pendingUpdate.slug, added: res.added });
+        console.log(`  ♻️  updated: ${pendingUpdate.slug} (+${res.added} reactions — one story, one URL)`);
+        continue;
+      }
 
       // ── EMBED (best-effort, never blocks) ──
       await withTimeout(embedImpl(job), AGENTS.embed.watchdogMs, `embed ${tag}`).catch(() => { job.embeds = { tweetIds: job.factBlock?.tweetIds || [], instagramUrls: [] }; });
@@ -339,6 +387,7 @@ if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   const line = (x) => `  ${x.tag || x.stage || ""} — ${x.reason || x.slug || ""}${x.score != null ? ` (score ${x.score})` : ""}`;
   console.log(`\n━━ AGENT RUN ${report.runId} ━━ stories ${report.stories}${report.paused ? " · PAUSED" : ""}${report.dailyCapHit ? " · DAILY CAP" : ""}${report.costCapHit ? " · COST CAP" : ""}`);
   console.log(`PUBLISHED ${report.published.length}`); report.published.forEach((p) => console.log(line(p)));
+  console.log(`UPDATED ${report.updated.length}`); report.updated.forEach((p) => console.log(`  ${p.slug} — +${p.added} reactions`));
   console.log(`HELD ${report.held.length}`); report.held.forEach((p) => console.log(line(p)));
   console.log(`REJECTED ${report.rejected.length}`); report.rejected.forEach((p) => console.log(line(p)));
   console.log(`SKIPPED ${report.skipped.length}`); report.skipped.forEach((p) => console.log(line(p)));
@@ -347,6 +396,8 @@ if (import.meta.url === new URL(`file://${process.argv[1]}`).href) {
   // GitHub Actions outputs (the cloud workflow's commit/deploy steps key off these).
   if (process.env.GITHUB_OUTPUT) {
     fs.appendFileSync(process.env.GITHUB_OUTPUT,
-      `published=${report.published.length}\nslugs=${report.published.map((p) => p.slug).join(" ")}\n`);
+      `published=${report.published.length}\nslugs=${report.published.map((p) => p.slug).join(" ")}\n` +
+      // An update changes a LIVE page, so it must reach the site — the deploy step gates on this too.
+      `updated=${report.updated.length}\nupdatedSlugs=${report.updated.map((p) => p.slug).join(" ")}\n`);
   }
 }
