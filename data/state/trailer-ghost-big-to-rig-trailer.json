@@ -1,0 +1,65 @@
+{
+  "id": "trailer-ghost-big-to-rig-trailer",
+  "slug": "ghost-drops-trailer-for-mexico-city-concert-film-2-big-to-rig",
+  "status": "error",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "body 186w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/trailers",
+      "format": [
+        "body 186w < 220"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "2 Big to Rig",
+    "work": {
+      "title": "2 Big to Rig",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "rollingstone.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 186,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 33,
+      "avgSentence": 18,
+      "flesch": 58,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 186w < 220"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "error": "YAMLException: unacceptable kind of an object to dump [object Undefined]\n    at writeNode (/home/runner/work/thescreenreport/thescreenreport/node_modules/js-yaml/lib/js-yaml/dumper.js:779:13)\n    at writeBlockMapping (/home/runner/work/thescreenreport/thescreenreport/node_modules/js-yaml/lib/js-yaml"
+}
