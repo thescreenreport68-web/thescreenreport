@@ -1,0 +1,109 @@
+{
+ "runId": "run-2026-07-24T08-31-02",
+ "mode": "live",
+ "startedAt": "2026-07-24T08:31:02.873Z",
+ "films": 42,
+ "published": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "slug": "obsession-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/obsession-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.07,
+  "behind": true,
+  "expected": 19.43,
+  "allow": 1
+ },
+ "queueBuilt": 8,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.04374
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-24T08:34:36.532Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1029,
+    "out": 502,
+    "usd": 0.0003,
+    "ms": 2673
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 1153,
+    "usd": 0.00029,
+    "ms": 2686
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6068,
+    "out": 669,
+    "usd": 0.00087,
+    "ms": 3722
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1593,
+    "out": 749,
+    "usd": 0.00028,
+    "ms": 19437
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4050,
+    "out": 2191,
+    "usd": 0.00168,
+    "ms": 92150
+   }
+  },
+  "totalUsd": 0.00342
+ },
+ "openrouterTotalUsd": 0.00411
+}

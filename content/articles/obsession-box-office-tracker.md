@@ -1,40 +1,39 @@
 ---
 title: >-
-  Obsession Box Office Day 68: Adds $440,605 as Domestic Total Hits $259.2
+  Obsession Box Office Day 69: Adds $369,115 as Domestic Total Hits $259.6
   Million
 slug: obsession-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-17T06:31:24.072Z'
-dek: >-
-  The micro-budget horror film starring Michael Johnston continues its
-  unprecedented box office run, posting the highest-grossing fourth weekend ever
-  for a horror movie.
-metaTitle: '''Obsession'' Climbs to $259M at the Domestic Box Office'
+updated: '2026-07-24T08:31:02.873Z'
+boxOfficeTracker: true
+dek: '## The Movie'
+metaTitle: '''Obsession'' Climbs to $260M at the Domestic Box Office'
 metaDescription: >-
-  Obsession has grossed $259,187,265 at the domestic box office through day 68,
-  adding $440,605 in its latest daily haul.
+  Obsession has grossed $259,556,380 at the domestic box office through day 69,
+  adding $369,115 in its latest daily haul.
 tags:
-  - Obsession 2026
-  - box office
-  - horror movie
-  - micro-budget
-  - Olivia Wilde
+  - Obsession 2026 box office milestone
+  - Michael Johnston
+  - Inde Navarrette
+  - indie horror
+  - box office hit
   - Peacock
-  - streaming
-  - record
+  - Curry Barker
+  - low budget success
 keyTakeaways:
   - >-
-    'Obsession' has grossed $259,187,265 at the domestic box office through day
-    68.
-  - 'It added $440,605 in its most recent day, playing in 1,524 theaters.'
+    'Obsession' has grossed $259,556,380 at the domestic box office through day
+    69.
+  - 'It added $369,115 in its most recent day, playing in 1,524 theaters.'
   - The worldwide total stands at $443 million.
   - Michael Johnston leads the cast for director Curry Barker.
 faq:
   - q: How much has 'Obsession' made at the box office?
     a: >-
-      'Obsession' has grossed $259,187,265 domestically, with $443 million
+      'Obsession' has grossed $259,556,380 domestically, with $443 million
       worldwide.
   - q: What is the production budget of 'Obsession'?
     a: >-
@@ -44,18 +43,18 @@ faq:
     a: '''Obsession'' is currently playing across 1,524 theaters.'
   - q: How long has 'Obsession' been in theaters?
     a: >-
-      'Obsession' is 68 days into its theatrical run, adding $440,605 in its
+      'Obsession' is 69 days into its theatrical run, adding $369,115 in its
       most recent day.
 about:
   - name: Obsession
     type: Movie
-  - name: Olivia Wilde
+  - name: Michael Johnston
     type: Person
   - name: Curry Barker
     type: Person
 formatTag: box-office
 boxOffice:
-  domestic: '$259,187,265'
+  domestic: '$259,556,380'
   worldwide: $443 million
   budget: '$750,000'
   theaters: '1,524'
@@ -71,33 +70,28 @@ signals:
   breakout: 0
   corroboration: 5
   type: 6
-eventSlug: obsession-bo-update-d68
+eventSlug: obsession-bo-update-d69
 eventType: boxoffice
 outletCount: 5
 storyStatus: CONFIRMED
 image: 'https://image.tmdb.org/t/p/original/r013C8Me2bZ0pUi0OWJRh0h7MzT.jpg'
-imageAlt: Obsession — Olivia Wilde Obsession 2026 film poster
+imageAlt: Obsession — Michael Johnston Obsession 2026 movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-23T08:01:03.867Z'
-boxOfficeTracker: true
 ---
 
+The film stars Johnston and Inde Navarrette in a chilling tale of desire gone wrong.
 
-Olivia Wilde's latest project, *[Obsession](/movies/obsession-box-office-day-67-adds-359-520-as-domestic-total-hits-258-7-million/)*, is a chilling horror-thriller that twists the classic wish-fulfillment trope into a nightmare. Directed by Curry Barker, the 109-minute film follows a hopeless romantic who breaks the mysterious "One Wish Willow" to win his crush's heart, only to discover that some desires come at a dark and sinister price.
+Directed by Curry Barker, '[Obsession](/movies/obsession-box-office-day-68-adds-440-605-as-domestic-total-hits-259-2-million/)' is a 109-minute horror-thriller. Its premise follows a hopeless romantic who breaks the mysterious "One Wish Willow" to win his crush's heart. He gets exactly what he asked for, but soon discovers that some desires come at a dark, sinister price, plunging him into a nightmare.
 
-The film's ensemble cast brings this eerie premise to life. Michael Johnston stars as Bear, the lovelorn protagonist, alongside Inde Navarrette as his object of affection, Nikki. Cooper Tomlinson plays Ian, with Megan Lawless as Sarah. The supporting cast includes Andy Richter as Carter, Haley Fitzgerald as Viola, Darin Toonder as Harry, and Anthony Pavone as Reggie, each adding layers to the film's suspenseful narrative. *Obsession* proves that a sharp concept and compelling performances can captivate audiences far beyond the horror genre's traditional bounds.
+The cast is led by Michael Johnston as Bear, the romantic at the center of the supernatural bargain. Inde Navarrette plays Nikki, the object of his affection. They are joined by Cooper Tomlinson as Ian, Megan Lawless as Sarah, Andy Richter as Carter, Haley Fitzgerald as Viola, Darin Toonder as Harry, and Anthony Pavone as Reggie. Together, they navigate the film's escalating terror.
 
-## The Box Office Run
-
-The box office performance of *Obsession* is nothing short of historic.
-
-This success is even more staggering considering its micro-budget origins. It is now available for streaming on Peacock Premium and Peacock Premium Plus.
+'Obsession' is a tightly wound thriller that has captivated audiences with its simple yet effective scares.
 
 ## At the Box Office
 
-Obsession has grossed $259,187,265 at the domestic box office, 68 days into its theatrical run, while playing across 1,524 theaters. The film added $440,605 in its most recent day of release. Worldwide, it has taken in $443 million. It carries a reported production budget of $750,000.
+Obsession has grossed $259,556,380 at the domestic box office, 69 days into its theatrical run, while playing across 1,524 theaters. The film added $369,115 in its most recent day of release. Worldwide, it has taken in $443 million. It carries a reported production budget of $750,000.
 
 ## Daily Tracking
 
@@ -110,3 +104,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 66 | 2026-07-20 | — | $258.5 Million |
 | 67 | 2026-07-22 | — | $258.7 Million |
 | 68 | 2026-07-23 | — | $259.2 Million |
+| 69 | 2026-07-24 | $369,115 | $259.6 Million |
