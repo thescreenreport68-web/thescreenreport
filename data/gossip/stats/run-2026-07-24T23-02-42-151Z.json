@@ -1,0 +1,188 @@
+{
+  "ts": "2026-07-24T23:02:42.151Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "meghan-markle-reclaims-the-narrative-with-a-joyful-social-media-return",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaTitle-contract:repaired",
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 4,
+  "held": 1,
+  "rejected": 1,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.080761,
+  "costPerPublished": 0.080761,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 16,
+      "in": 39275,
+      "out": 9171,
+      "usd": 0.03471
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 19,
+      "in": 26101,
+      "out": 5730,
+      "usd": 0.0049020999999999995
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 4,
+      "in": 5860,
+      "out": 46279,
+      "usd": 0.01241344
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2025,
+      "out": 1491,
+      "usd": 0.0004536516
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 14,
+      "in": 59361,
+      "out": 30412,
+      "usd": 0.027283059999999998
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 4,
+      "in": 2418,
+      "out": 638,
+      "usd": 0.0008175319999999999
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 1,
+      "in": 1785,
+      "out": 8,
+      "usd": 0.0001809
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 7233,
+      "out": 552,
+      "usd": 0.0035499,
+      "ms": 3830
+    },
+    "background": {
+      "calls": 3,
+      "errors": 1,
+      "in": 2452,
+      "out": 9543,
+      "usd": 0.0005115,
+      "ms": 96652
+    },
+    "detailFinder": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2589,
+      "out": 25379,
+      "usd": 0,
+      "ms": 135971
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2025,
+      "out": 1491,
+      "usd": 0.00045063,
+      "ms": 26877
+    },
+    "writer": {
+      "calls": 14,
+      "errors": 0,
+      "in": 59361,
+      "out": 30412,
+      "usd": 0.027107460000000007,
+      "ms": 846786
+    },
+    "verify": {
+      "calls": 19,
+      "errors": 6,
+      "in": 32042,
+      "out": 6643,
+      "usd": 0.015890499999999995,
+      "ms": 59530
+    },
+    "judge": {
+      "calls": 3,
+      "errors": 0,
+      "in": 5333,
+      "out": 857,
+      "usd": 0.0008761000000000001,
+      "ms": 3789
+    },
+    "claimAudit": {
+      "calls": 3,
+      "errors": 1,
+      "in": 3807,
+      "out": 12343,
+      "usd": 0,
+      "ms": 134880
+    },
+    "headline": {
+      "calls": 2,
+      "errors": 0,
+      "in": 1851,
+      "out": 606,
+      "usd": 0.00063177,
+      "ms": 19237
+    },
+    "headlineJudge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 756,
+      "out": 139,
+      "usd": 0.0001312,
+      "ms": 1114
+    },
+    "seoAuditor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 384,
+      "out": 109,
+      "usd": 0.00008200000000000001,
+      "ms": 1052
+    },
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 567,
+      "out": 32,
+      "usd": 0.00014129,
+      "ms": 5884
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1570,
+      "out": 97,
+      "usd": 0.00019580000000000002,
+      "ms": 1590
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1159,
+      "out": 126,
+      "usd": 0.00016630000000000003,
+      "ms": 3628
+    }
+  }
+}
