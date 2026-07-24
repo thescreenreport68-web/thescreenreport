@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "baseline": 0.10344827586206896,
+  "sample": 551,
+  "earners": 57,
+  "buckets": {
+    "category:movies": {
+      "n": 217,
+      "earners": 19,
+      "impressions": 215,
+      "hitRate": 0.08755760368663594,
+      "enough": true,
+      "lift": 0.8463901689708141
+    },
+    "format:news": {
+      "n": 454,
+      "earners": 41,
+      "impressions": 775,
+      "hitRate": 0.09030837004405286,
+      "enough": true,
+      "lift": 0.8729809104258442
+    },
+    "category:awards": {
+      "n": 10,
+      "earners": 2,
+      "impressions": 6,
+      "hitRate": 0.2,
+      "enough": true,
+      "lift": 1.9333333333333336
+    },
+    "format:awards": {
+      "n": 10,
+      "earners": 2,
+      "impressions": 6,
+      "hitRate": 0.2,
+      "enough": true,
+      "lift": 1.9333333333333336
+    },
+    "category:tv": {
+      "n": 162,
+      "earners": 11,
+      "impressions": 68,
+      "hitRate": 0.06790123456790123,
+      "enough": true,
+      "lift": 0.6563786008230452
+    },
+    "category:celebrity": {
+      "n": 104,
+      "earners": 15,
+      "impressions": 520,
+      "hitRate": 0.14423076923076922,
+      "enough": true,
+      "lift": 1.3942307692307692
+    },
+    "format:trailer": {
+      "n": 26,
+      "earners": 3,
+      "impressions": 8,
+      "hitRate": 0.11538461538461539,
+      "enough": true,
+      "lift": 1.1153846153846154
+    },
+    "category:music": {
+      "n": 57,
+      "earners": 10,
+      "impressions": 126,
+      "hitRate": 0.17543859649122806,
+      "enough": true,
+      "lift": 1.695906432748538
+    },
+    "format:music-news": {
+      "n": 55,
+      "earners": 9,
+      "impressions": 123,
+      "hitRate": 0.16363636363636364,
+      "enough": true,
+      "lift": 1.5818181818181818
+    },
+    "format:box-office": {
+      "n": 4,
+      "earners": 2,
+      "impressions": 23,
+      "hitRate": 0.5,
+      "enough": false,
+      "lift": 1
+    },
+    "format:music-awards": {
+      "n": 1,
+      "earners": 0,
+      "impressions": 0,
+      "hitRate": 0,
+      "enough": false,
+      "lift": 1
+    },
+    "category:streaming": {
+      "n": 1,
+      "earners": 0,
+      "impressions": 0,
+      "hitRate": 0,
+      "enough": false,
+      "lift": 1
+    },
+    "format:watchguide": {
+      "n": 1,
+      "earners": 0,
+      "impressions": 0,
+      "hitRate": 0,
+      "enough": false,
+      "lift": 1
+    }
+  },
+  "computedAt": "2026-07-24T10:02:44.616Z"
+}
