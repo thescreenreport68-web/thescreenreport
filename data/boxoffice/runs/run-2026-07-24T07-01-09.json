@@ -1,0 +1,241 @@
+{
+ "runId": "run-2026-07-24T07-01-09",
+ "mode": "live",
+ "startedAt": "2026-07-24T07:01:09.635Z",
+ "films": 41,
+ "published": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "slug": "moana-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/moana-box-office-tracker.md",
+   "score": 80
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "masters-of-the-universe-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "stuart-fails-to-save-the-universe-trending-tv×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "star-trek-strange-new-worlds-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "ransom-canyon-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "silo-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.29,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "audit": {
+  "day": "2026-07-23",
+  "sampled": [],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.02909
+ },
+ "faults": {
+  "count": 3,
+  "bySeverity": {
+   "info": 3
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "malformed JSON from amazon/nova-micro-v1 — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T07:01:34.803Z"
+   },
+   {
+    "stage": "model:qa",
+    "message": "malformed JSON from google/gemini-2.5-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T07:04:55.086Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "malformed JSON from deepseek/deepseek-v4-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T07:06:53.524Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-24T07:11:24.549Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 22688,
+    "out": 2929,
+    "usd": 0.00344,
+    "ms": 14486
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3603,
+    "out": 3638,
+    "usd": 0.00064,
+    "ms": null
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 3165,
+    "out": 2601,
+    "usd": 0.00075,
+    "ms": null
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 5919,
+    "out": 2266,
+    "usd": 0.00599,
+    "ms": 33361
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 22704,
+    "out": 3196,
+    "usd": 0.0148,
+    "ms": null
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6021,
+    "out": 3195,
+    "usd": 0.00247,
+    "ms": 121061
+   }
+  },
+  "totalUsd": 0.0281
+ },
+ "openrouterTotalUsd": 0.02909
+}

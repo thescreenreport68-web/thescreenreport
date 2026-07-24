@@ -1076,6 +1076,34 @@
    "headlineNumberRaw": 108044772,
    "filmKey": "scary movie",
    "chartDate": null
+  },
+  {
+   "key": "moana-bo-update-d13|BO-UPDATE",
+   "at": "2026-07-24T07:09:47.055Z",
+   "eventSlug": "moana-bo-update-d13",
+   "form": "BO-UPDATE",
+   "slug": "moana-box-office-tracker",
+   "title": "Catherine Lagaʻia’s ‘Moana’ Opens to $43M — Vies With ‘Snow White’ for Lowest Disney Live-Action Remake Debut",
+   "film": "Moana",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 89793206,
+   "filmKey": "moana",
+   "chartDate": null
+  },
+  {
+   "key": "minions-monsters-bo-update-d22|BO-UPDATE",
+   "at": "2026-07-24T07:11:24.539Z",
+   "eventSlug": "minions-monsters-bo-update-d22",
+   "form": "BO-UPDATE",
+   "slug": "minions-monsters-box-office-tracker",
+   "title": "Jeff Bridges' 'Minions & Monsters' Posts Franchise-Low $62M Domestic Opening, But Global Haul Tops $364M",
+   "film": "Minions & Monsters",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 143860945,
+   "filmKey": "minions & monsters",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -1850,11 +1878,11 @@
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
    "eventSlug": "descendants-wicked-wonderland-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "platform: names disney+ not in confirmed providers",
-   "tries": 2,
-   "at": "2026-07-23T13:09:39.823Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T12:09:28.997Z"
+   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-24T07:05:25.804Z",
+   "dead": true,
+   "expiresAt": "2026-07-27T07:05:25.804Z"
   },
   {
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
@@ -2356,11 +2384,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "consistency: dek: \"$1 billion\" is not a canonical figure for this film | metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 50,
-   "at": "2026-07-24T06:32:40.699Z",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "tries": 51,
+   "at": "2026-07-24T07:07:36.805Z",
    "dead": true,
-   "expiresAt": "2026-07-27T06:32:40.699Z"
+   "expiresAt": "2026-07-27T07:07:36.805Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2409,34 +2437,20 @@
    "at": "2026-07-24T06:32:40.778Z"
   }
  ],
- "zeroStreak": 41,
+ "zeroStreak": 0,
  "daySpend": {
-  "laDay": "2026-07-23",
-  "usd": 0.56633
+  "laDay": "2026-07-24",
+  "usd": 0.02909
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784874664117
+  "tokens": 2,
+  "lastMs": 1784876469635
  },
- "lastAuditDay": "2026-07-23",
+ "lastAuditDay": "2026-07-24",
  "attempts": {
-  "laDay": "2026-07-23",
+  "laDay": "2026-07-24",
   "byFilm": {
-   "they will kill you": 3,
-   "the mandalorian and grogu": 3,
-   "lee cronin's the mummy": 2,
-   "lucky": 2,
-   "descendants: wicked wonderland": 3,
-   "a day like no other": 1,
-   "star trek: strange new worlds": 3,
-   "ransom canyon": 3,
-   "dhamaal 4": 1,
-   "masters of the universe": 3,
-   "tom clancy's jack ryan: ghost war": 3,
-   "silo": 2,
-   "citizen vigilante": 1,
-   "spider-man: brand new day": 1,
-   "stuart fails to save the universe": 2
+   "descendants: wicked wonderland": 1
   }
  }
 }

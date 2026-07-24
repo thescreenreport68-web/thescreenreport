@@ -1,35 +1,36 @@
 ---
-title: 'Moana Box Office Day 12: Adds $4 Million as Domestic Total Hits $87.3 Million'
+title: >-
+  Moana Box Office Day 13: Adds $2.5 Million as Domestic Total Hits $89.8
+  Million
 slug: moana-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T06:08:30.477Z'
-dek: >-
-  Disney's live-action remake, starring Dwayne Johnson and Catherine Lagaʻaia,
-  voyages into theaters with a costly journey. The film's performance is a
-  central story in the Moana 2026 box office narrative.
-metaTitle: '''Moana'' Climbs to $87M at the Domestic Box Office'
+updated: '2026-07-24T07:01:09.635Z'
+boxOfficeTracker: true
+dek: '## The Movie'
+metaTitle: '''Moana'' Climbs to $90M at the Domestic Box Office'
 metaDescription: >-
-  Moana has grossed $87,269,607 at the domestic box office through day 12,
-  adding $4,030,564 in its latest daily haul.
+  Moana has grossed $89,793,206 at the domestic box office through day 13,
+  adding $2,523,599 in its latest daily haul.
 tags:
   - Moana
   - Box Office
   - Disney
   - Live-Action Remake
   - Dwayne Johnson
-  - Film Flop
-  - 2026 Movies
-  - Family Film
+  - Catherine Lagaʻia
+  - Thomas Kail
+  - 2026 Films
 keyTakeaways:
-  - '''Moana'' has grossed $87,269,607 at the domestic box office through day 12.'
-  - 'It added $4,030,564 in its most recent day, playing in 4,200 theaters.'
-  - The worldwide total stands at $116 million.
+  - '''Moana'' has grossed $89,793,206 at the domestic box office through day 13.'
+  - 'It added $2,523,599 in its most recent day, playing in 4,200 theaters.'
+  - The worldwide total stands at $184 million.
   - Catherine Lagaʻaia leads the cast for director Thomas Kail.
 faq:
   - q: How much has 'Moana' made at the box office?
-    a: '''Moana'' has grossed $87,269,607 domestically, with $116 million worldwide.'
+    a: '''Moana'' has grossed $89,793,206 domestically, with $184 million worldwide.'
   - q: What is the production budget of 'Moana'?
     a: >-
       'Moana' was produced on a reported budget of $250 million before
@@ -38,19 +39,19 @@ faq:
     a: '''Moana'' is currently playing across 4,200 theaters.'
   - q: How long has 'Moana' been in theaters?
     a: >-
-      'Moana' is 12 days into its theatrical run, adding $4,030,564 in its most
+      'Moana' is 13 days into its theatrical run, adding $2,523,599 in its most
       recent day.
 about:
   - name: Moana (2026 film)
     type: Movie
-  - name: Dwayne Johnson
+  - name: Catherine Lagaʻia
     type: Person
-  - name: The Walt Disney Company
+  - name: Walt Disney Studios Motion Pictures
     type: Organization
 formatTag: box-office
 boxOffice:
-  domestic: '$87,269,607'
-  worldwide: $116 million
+  domestic: '$89,793,206'
+  worldwide: $184 million
   budget: $250 million
   theaters: '4,200'
 trendScore: 92
@@ -58,33 +59,31 @@ signals:
   recency: 3
   pop: 2
   breakout: 0
-  corroboration: 5
+  corroboration: 4
   type: 6
-eventSlug: moana-bo-update-d12
+eventSlug: moana-bo-update-d13
 eventType: boxoffice
-outletCount: 5
+outletCount: 4
 storyStatus: CONFIRMED
-image: 'https://i.insider.com/6a54e275d9d92978fe6a6a33?width=1600&format=jpeg'
-imageAlt: Moana — Dwayne Johnson Catherine Lagaʻaia Moana 2026 movie poster
-imageCredit: Photo via businessinsider.com
+image: >-
+  https://www.deseret.com/resizer/v2/I2JDOOJQDBH2RNRKNHNVKS7YCY.jpg?focal=0%2C0&auth=04b2329be9ae93fd9f9c9010b9bc9de7c3b0a2d16a10bc635aecc6cfd9b5a42f&width=1600&height=841
+imageAlt: Moana — Catherine Lagaia Dwayne Johnson Moana 2026 premiere
+imageCredit: Photo via deseret.com
 imageWidth: 1600
-imageHeight: 800
-updated: '2026-07-23T07:01:02.719Z'
-boxOfficeTracker: true
+imageHeight: 841
 ---
 
+Catherine Lagaʻia takes the helm of the iconic canoe in Disney's live-action remake of '[Moana](/movies/moana-box-office-day-12-adds-4-million-as-domestic-total-hits-87-3-million/),' bringing the adventurous teenager to life for a new generation. Directed by Thomas Kail, this 115-minute family fantasy adventure comedy retells the beloved story of Moana, who answers the Ocean's call and voyages beyond the reef of her island, Motunui, on a quest to restore prosperity to her people.
 
-The Voyage of 'Moana' (2026)
+Lagaʻia stars as the determined voyager Moana, joined by Dwayne Johnson, who reprises his voice role as the charismatic and infamous demigod Maui. The supporting cast is rich with talent: Rena Owen portrays the wise Gramma Tala, John Tui is Chief Tui, and Frankie Adams plays Sina. Jemaine Clement returns as the scene-stealing crab Tamatoa, with Emma Puahi-Shapazian and Amaya Masoli also featured as Moana. It's a fresh cast bringing a classic journey back to the big screen.
 
-Dwayne Johnson returns to the role of the charismatic demigod Maui, this time in live-action, joined by newcomer Catherine Lagaʻaia as the adventurous teenager [Moana](/movies/moana-box-office-day-11-adds-2-2-million-as-domestic-total-hits-83-2-million/) in Disney's latest remake.
+## The Box Office Story
 
-**What Is the Live-Action 'Moana'?** Directed by Thomas Kail, this 115-minute film is a Family, Fantasy, Comedy, and Adventure retelling of the 2016 animated hit. The premise follows teenage Moana as she answers the Ocean's call, voyaging beyond the reef of her island, Motunui, for the first time. She teams up with the infamous demigod Maui on a quest to restore prosperity to her people.
-
-**Who Stars in the Cast?** Catherine Lagaʻaia takes on the lead role of Moana, the determined daughter of Chief Tui (played by John Tui). Dwayne Johnson reprises his voice role as the shape-shifting, boastful demigod Maui in live-action form. The supporting cast includes Rena Owen as the wise Gramma Tala, Frankie Adams as Moana's mother Sina, and Jemaine Clement returning as the villainous crab Tamatoa. Emma Puahi-Shapazian and Amaya Masoli are also credited as Moana.
+With such a high cost to produce, the film is on a clear track toward a significant financial loss unless it demonstrates extraordinary staying power in the weeks to come. The **Moana 2026 box office opening disaster** is a stark reminder of the risks inherent in remaking animated classics.
 
 ## At the Box Office
 
-Moana has grossed $87,269,607 at the domestic box office, 12 days into its theatrical run, while playing across 4,200 theaters. The film added $4,030,564 in its most recent day of release. Worldwide, it has taken in $116 million. It carries a reported production budget of $250 million.
+Moana has grossed $89,793,206 at the domestic box office, 13 days into its theatrical run, while playing across 4,200 theaters. The film added $2,523,599 in its most recent day of release. Worldwide, it has taken in $184 million. It carries a reported production budget of $250 million.
 
 ## Daily Tracking
 
@@ -98,3 +97,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 10 | 2026-07-20 | $5.9 Million | $82.1 Million |
 | 11 | 2026-07-22 | $2.2 Million | $83.2 Million |
 | 12 | 2026-07-23 | $4 Million | $87.3 Million |
+| 13 | 2026-07-24 | $2.5 Million | $89.8 Million |
