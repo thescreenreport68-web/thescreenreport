@@ -1,8 +1,74 @@
 {
-  "runId": "run-2026-07-24T02-31-09",
-  "builtAt": "2026-07-24T02:32:32.760Z",
-  "count": 25,
+  "runId": "run-2026-07-24T03-31-02",
+  "builtAt": "2026-07-24T03:32:27.640Z",
+  "count": 21,
   "topics": [
+    {
+      "id": "news-na-hong-jin-previews-alien-invasion-movie-hope",
+      "slug": "director-na-hong-jin-previews-alien-invasion-movie-hope-at-comic-con",
+      "title": "Director Na Hong-jin Previews Alien Invasion Movie 'Hope' at Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "na-hong-jin-previews-alien-invasion-movie-hope",
+      "primaryKeyword": "Na Hong-jin Hope movie",
+      "primaryEntity": "Hope",
+      "entities": [
+        "Hope (film)",
+        "Na Hong-jin"
+      ],
+      "angle": "Director Na Hong-jin previewed his upcoming alien invasion film 'Hope' at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "gnews:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZlJfZ2RnaDhIN3pZSVE3bDZFckl4Nm1feGVIVGhoekVrWVFEbE9NVmxxVWpoZnNVTEtLTWFIblNIa09vOTlvNkx6ZF9HRzVENkRBOGNxNlFydUFvNTZ3NmsybURHRDgyOElXR29rcjZFc1VGbzg4eGhhNE8zNzVfRUxJcGpVZ1lfYnpLY0xudmpZQQ?oc=5",
+          "ageMin": 4,
+          "headline": "Director Na Hong-Jin Previews Alien Invasion Movie 'Hope' at Comic-Con - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNZlJfZ2RnaDhIN3pZSVE3bDZFckl4Nm1feGVIVGhoekVrWVFEbE9NVmxxVWpoZnNVTEtLTWFIblNIa09vOTlvNkx6ZF9HRzVENkRBOGNxNlFydUFvNTZ3NmsybURHRDgyOElXR29rcjZFc1VGbzg4eGhhNE8zNzVfRUxJcGpVZ1lfYnpLY0xudmpZQQ?oc=5\" target=\"_blank\" Director Na Hong-Jin Previews "
+        }
+      ],
+      "ageMin": 4,
+      "_cand": {
+        "key": "rss:director-na-hong-jin-previews-alien-invasion-movie-hope-at-c",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 93,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
     {
       "id": "news-john-leguizamo-the-odyssey-blind-role",
       "slug": "john-leguizamo-could-not-see-for-12-to-14-hours-a-day-playing-blind-th",
@@ -11,7 +77,7 @@
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
+      "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "john-leguizamo-the-odyssey-blind-role",
       "primaryKeyword": "john leguizamo the odyssey",
@@ -19,7 +85,7 @@
       "entities": [
         "The Odyssey"
       ],
-      "angle": "John Leguizamo describes the immersive experience of playing a blind character in Christopher Nolan's 'The Odyssey'.",
+      "angle": "John Leguizamo describes the physical challenge of playing a blind character for extended periods in 'The Odyssey'.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -27,12 +93,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/john-leguizamo-could-not-see-playing-blind-the-odyssey-role-1237002217/",
-          "ageMin": 89,
+          "ageMin": 149,
           "headline": "John Leguizamo Could Not See For 12 To 14 Hours A Day Playing Blind The Odyssey Role",
           "summary": "As John Leguizamo joined the cast of Christopher Nolan s The Odyssey, he found himself immersed in the role in one major way. The Golden Globe nominee recalled that he could not see for up to 14 hours a day on the set of the blockbuster, which is now playing in theaters, due to the contact [ ]"
         }
       ],
-      "ageMin": 89,
+      "ageMin": 149,
       "_cand": {
         "key": "rss:john-leguizamo-could-not-see-for-12-to-14-hours-a-day-playin",
         "popularity": 0,
@@ -53,15 +119,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 114,
+      "priority": 93,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 12,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
@@ -71,409 +137,133 @@
       "tierClass": "A"
     },
     {
-      "id": "news-destin-daniel-cretton-sadie-sink-spider-man-brand-new-day",
-      "slug": "destin-daniel-cretton-secrecy-around-sadie-sink-s-role-makes-spider-ma",
-      "title": "Destin Daniel Cretton: Secrecy Around Sadie Sink's Role Makes 'Spider-Man: Brand New Day' Better",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
+      "id": "reaction-avatar-the-last-airbender-soars-above-release",
+      "slug": "avatar-aang-the-last-airbender-soars-above-its-troubled-release",
+      "title": "'Avatar Aang: The Last Airbender' Soars Above Its Troubled Release",
+      "contentType": "reaction",
+      "formatTag": "reaction",
+      "category": "tv",
+      "subcategory": "reactions",
+      "eventType": "reaction",
       "sensitivity": "normal",
-      "eventSlug": "destin-daniel-cretton-sadie-sink-spider-man-brand-new-day",
-      "primaryKeyword": "Sadie Sink Spider-Man",
-      "primaryEntity": "Spider-Man: Brand New Day",
+      "eventSlug": "avatar-the-last-airbender-soars-above-release",
+      "primaryKeyword": "Avatar The Last Airbender",
+      "primaryEntity": "Avatar Aang: The Last Airbender",
       "entities": [
-        "Destin Daniel Cretton",
-        "Sadie Sink"
+        "Avatar: The Last Airbender (TV series)",
+        "Netflix"
       ],
-      "angle": "Director Destin Daniel Cretton discusses how the secrecy surrounding Sadie Sink's role enhances the upcoming Spider-Man film.",
+      "angle": "Netflix's live-action 'Avatar: The Last Airbender' is overcoming its troubled production and release with positive audience reception.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "gnews:Inverse",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNUNOZE9mSjBvbEdfcXBUakNTak5rQlpMcVE3RzBwWXdLcjdtUmNzQVZBV3g2LTJvNnFpWWVYWkVRdU1UMWhia19QUEhNWTJKODhEeTdfQzJaUXNzQU1NODVDZC11NFg4OEZPYVBQUUZSV01BWDVFaE4wdk1PWlJUdVg1XzJfQXphRDBYZkpBRzlRVGJ6Wk9lakxWN1dXa0M4WWNmbFJkMDlITEFD?oc=5",
-          "ageMin": 524,
-          "headline": "Destin Daniel Cretton Believes Secrecy Around Sadie Sink’s Role Makes ‘Spider-Man: Brand New Day’ a Better Movie - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNNUNOZE9mSjBvbEdfcXBUakNTak5rQlpMcVE3RzBwWXdLcjdtUmNzQVZBV3g2LTJvNnFpWWVYWkVRdU1UMWhia19QUEhNWTJKODhEeTdfQzJaUXNzQU1NODVDZC11NFg4OEZPYVBQUUZSV01BWDVFaE4wdk1PWlJUdVg1XzJfQXphRDBYZkpBRzlRVGJ6Wk9lakxWN1dXa0M4WWNmbFJkMDlITEFD?oc=5\" target=\"_bla"
+          "outlet": "Inverse",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONUJ0elIzUlNWZDZ0bk5YT3Frbl82bUk1ZHlEeFdQY3B1Zm1ycHUwUEpFV1I1T1Y1aENKR3FoQmxfWDNwQkp1NEZvd0JLanlBMmt4Y29WZG8yRTAycDdtdFB0MS02VkJlSjVvM1FwS2o1a185NkxLZm9qSmJWY3ZTVQ?oc=5",
+          "ageMin": 331,
+          "headline": "'Avatar Aang: The Last Airbender' Soars Above Its Troubled Release - Inverse",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxONUJ0elIzUlNWZDZ0bk5YT3Frbl82bUk1ZHlEeFdQY3B1Zm1ycHUwUEpFV1I1T1Y1aENKR3FoQmxfWDNwQkp1NEZvd0JLanlBMmt4Y29WZG8yRTAycDdtdFB0MS02VkJlSjVvM1FwS2o1a185NkxLZm9qSmJWY3ZTVQ?oc=5\" target=\"_blank\" 'Avatar Aang: The Last Airbender' Soars Above Its Trou"
         }
       ],
-      "ageMin": 524,
+      "ageMin": 331,
       "_cand": {
-        "key": "rss:destin-daniel-cretton-believes-secrecy-around-sadie-sink-s-r",
+        "key": "rss:-avatar-aang-the-last-airbender-soars-above-its-troubled-rel",
         "popularity": 0,
         "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 98,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-releasing",
-      "tierClass": "A"
-    },
-    {
-      "id": "trailer-resident-evil-movie-trailer-release",
-      "slug": "new-resident-evil-movie-trailer-released-promises-fan-service",
-      "title": "New Resident Evil Movie Trailer Released, Promises Fan Service",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "resident-evil-movie-trailer-release",
-      "primaryKeyword": "resident evil movie trailer",
-      "primaryEntity": "Resident Evil",
-      "entities": [
-        "Resident Evil (film series)"
-      ],
-      "angle": "A new trailer for the upcoming Resident Evil movie has been released, aiming to appease long-time fans of the franchise.",
-      "tmdbType": "movie",
-      "source": "gnews:Den of Geek",
-      "sources": [
-        {
-          "outlet": "Den of Geek",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOUGQxbGY5cHZacXI3RmFWd3RZSU1sRUV5dlpvUXNVVG1Hdlk2TDduUzR5cHUybmZuOVY1ZDhjSGtLSDEzT1lSN2ZLWVU3RVRHcVFLQ0JJTF9nUW81bmh6MEkzTDY3MEQxc0Znak5WZURMdU9mRTd3a3JYOVFwSklDTy1jTk8?oc=5",
-          "ageMin": 348,
-          "headline": "New Resident Evil Movie Trailer Confirms OG Fans Are at the Wheel - Den of Geek",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOUGQxbGY5cHZacXI3RmFWd3RZSU1sRUV5dlpvUXNVVG1Hdlk2TDduUzR5cHUybmZuOVY1ZDhjSGtLSDEzT1lSN2ZLWVU3RVRHcVFLQ0JJTF9nUW81bmh6MEkzTDY3MEQxc0Znak5WZURMdU9mRTd3a3JYOVFwSklDTy1jTk8?oc=5\" target=\"_blank\" New Resident Evil Movie Trailer Confirms OG Fans "
-        },
-        {
-          "outlet": "Siliconera",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVGh2OVVvWTI5Ym9wSG42NGZZZWpzSER5YlFrbF90QnB0T1gzaW9NdHktR0lTQnpRVVB0endwczlTSHNVaTJqMEFoakpuV0ZiVkZNV0wxSC1OMThDMGNtQU1PUG9PTGZhSzluSkVFRmlyV1BmSXp4cFVpeGRzQl9STVJrX2o?oc=5",
-          "ageMin": 391,
-          "headline": "Sony Shares New Resident Evil Reboot Movie Trailer - Siliconera",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQVGh2OVVvWTI5Ym9wSG42NGZZZWpzSER5YlFrbF90QnB0T1gzaW9NdHktR0lTQnpRVVB0endwczlTSHNVaTJqMEFoakpuV0ZiVkZNV0wxSC1OMThDMGNtQU1PUG9PTGZhSzluSkVFRmlyV1BmSXp4cFVpeGRzQl9STVJrX2o?oc=5\" target=\"_blank\" Sony Shares New Resident Evil Reboot Movie Traile"
-        }
-      ],
-      "ageMin": 348,
-      "_cand": {
-        "key": "rss:new-resident-evil-movie-trailer-confirms-og-fans-are-at-the-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
-          "Den of Geek",
-          "Siliconera"
+          "Inverse"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "multiple outlets",
+        "attribution": "Inverse",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 88,
+      "priority": 79,
       "signals": {
         "recency": 9,
-        "corroboration": 14,
+        "corroboration": 8,
         "status": 18,
-        "type": 15,
+        "type": 11,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 8,
+        "big": 18,
+        "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "radar": 15
       },
-      "tierClass": "B"
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
     },
     {
-      "id": "news-devon-allman-acting-role-thunder-road",
-      "slug": "devon-allman-lands-first-major-acting-role-in-amc-s-nascar-drama-thund",
-      "title": "Devon Allman Lands First Major Acting Role in AMC's NASCAR Drama 'Thunder Road'",
+      "id": "news-colin-woodell-to-star-as-myron-bolitar-netflix-series",
+      "slug": "colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-coben-series-",
+      "title": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "devon-allman-acting-role-thunder-road",
-      "primaryKeyword": "Devon Allman",
-      "primaryEntity": "Devon Allman",
+      "eventSlug": "colin-woodell-to-star-as-myron-bolitar-netflix-series",
+      "primaryKeyword": "myron bolitar series",
+      "primaryEntity": "Myron Bolitar (character)",
       "entities": [
-        "Thunder Road",
-        "AMC"
+        "Colin Woodell",
+        "Harlan Coben",
+        "Netflix"
       ],
-      "angle": "Musician Devon Allman secures his first major acting role in AMC's NASCAR drama 'Thunder Road'.",
+      "angle": "Colin Woodell has been cast as the lead in a new Netflix series based on Harlan Coben's Myron Bolitar character.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Netflix",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/devon-allman-cast-amc-nascar-drama-series-thunder-road-1237002131/",
-          "ageMin": 118,
-          "headline": "Devon Allman Says Hot Damn To Landing First Major Acting Role In AMC s NASCAR Drama Thunder Road",
-          "summary": "EXCLUSIVE: Devon Allman is headed to Hollywood. The musician has been cast in AMC s NASCAR drama series Thunder Road from creator John Fusco (Young Guns, The Highwaymen). He will star opposite Dennis Quaid, Chase Stokes, Michael Rooker, Matt Barr, Maggie Grace and West Duchovny. The series is set to begin production this summer and will debut [ ]"
+          "outlet": "Netflix",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5",
+          "ageMin": 152,
+          "headline": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5\" target=\"_blank\" Colin Woodell Will Star as Myron Bolitar in a New Harlan Cobe"
         }
       ],
-      "ageMin": 118,
+      "ageMin": 152,
       "_cand": {
-        "key": "rss:devon-allman-says-hot-damn-to-landing-first-major-acting-rol",
+        "key": "rss:colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-cob",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Netflix"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 78,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "awards-opetaia-foai-we-know-the-way-billions-award",
-      "slug": "opetaia-foa-i-receives-billions-award-for-moana-ballad-we-know-the-way",
-      "title": "Opetaia Foa’i Receives Billions Award For ‘Moana’ Ballad ‘We Know The Way’",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "opetaia-foai-we-know-the-way-billions-award",
-      "primaryKeyword": "Opetaia Foa'i",
-      "primaryEntity": "Opetaia Foa'i",
-      "entities": [
-        "Moana",
-        "We Know The Way"
-      ],
-      "angle": "Opetaia Foa'i receives a Billions Award for his 'Moana' ballad 'We Know The Way'.",
-      "tmdbType": "movie",
-      "source": "rss:Billboard",
-      "sources": [
-        {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/awards/opetaia-foai-billions-award-moana-we-know-the-way-1236302129/",
-          "ageMin": 4,
-          "headline": "Opetaia Foa’i Receives Billions Award For ‘Moana’ Ballad ‘We Know The Way’",
-          "summary": "Foa’I was on hand Thursday night, July 23 at APRA AMCOS’s Sydney headquarters for the award presentation."
-        }
-      ],
-      "ageMin": 4,
-      "_cand": {
-        "key": "rss:opetaia-foa-i-receives-billions-award-for-moana-ballad-we-kn",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Billboard"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Netflix",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 74,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 16,
+        "corroboration": 8,
         "status": 18,
         "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-spider-man-brand-new-day-director-song-tone",
-      "slug": "spider-man-brand-new-day-director-reveals-the-song-that-sets-the-whole",
-      "title": "Spider-Man: Brand New Day Director Reveals the Song That Sets the Whole Movie's Tone",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "spider-man-brand-new-day-director-song-tone",
-      "primaryKeyword": "Spider-Man: Brand New Day",
-      "primaryEntity": "Spider-Man: Brand New Day",
-      "entities": [
-        "MovieWeb"
-      ],
-      "angle": "Director of upcoming Spider-Man film discusses a key song choice.",
-      "tmdbType": "movie",
-      "source": "gnews:MovieWeb",
-      "sources": [
-        {
-          "outlet": "MovieWeb",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1sX2hvdU5waFZhUncwcG5HZHFkbkdPcEdoQ01BTXp3M2xtQXIzZHNRa29TdFdrVVYzRGMzcXZncEVWTmtOaGo3YTdqRk1QTGtLdWw3Y0gyVFBoTl83QUxLV3JkMzNNcW5nMHZR?oc=5",
-          "ageMin": 148,
-          "headline": "'Spider-Man: Brand New Day' Director Reveals the Song That Sets the Whole Movie's Tone - MovieWeb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE1sX2hvdU5waFZhUncwcG5HZHFkbkdPcEdoQ01BTXp3M2xtQXIzZHNRa29TdFdrVVYzRGMzcXZncEVWTmtOaGo3YTdqRk1QTGtLdWw3Y0gyVFBoTl83QUxLV3JkMzNNcW5nMHZR?oc=5\" target=\"_blank\" 'Spider-Man: Brand New Day' Director Reveals the Song That Sets the Whole Movie's To"
-        }
-      ],
-      "ageMin": 148,
-      "_cand": {
-        "key": "rss:-spider-man-brand-new-day-director-reveals-the-song-that-set",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "MovieWeb"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "MovieWeb",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 85,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 26
-      },
-      "radarKind": "movie-releasing",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-rei-ami-ken-jeong-k-pop-shark-heroes",
-      "slug": "rei-ami-crafts-k-pop-anthem-for-ken-jeong-s-shark-week-special",
-      "title": "Rei Ami Crafts K-Pop Anthem for Ken Jeong's Shark Week Special",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rei-ami-ken-jeong-k-pop-shark-heroes",
-      "primaryKeyword": "K-pop Shark Heroes",
-      "primaryEntity": "Shark Week",
-      "entities": [
-        "Arthur the King",
-        "Rei Ami",
-        "Ken Jeong"
-      ],
-      "angle": "K-pop artist Rei Ami creates a song for Discovery's Shark Week special featuring Ken Jeong.",
-      "tmdbType": "movie",
-      "source": "gnews:WSVN",
-      "sources": [
-        {
-          "outlet": "WSVN",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdGhzbzRJZXlfOHhfVkU4VWw3eG5lLTZ0SzdjT19od0dIamdQc3dFbHpaVktjV2pfT01PaUdtb3ZRQ3ZHQ1dIQ0VTVFdZZXZWV1d5MGNyZzF4MDFiajNOZ0Z2X2U2clZBa1dVVS1wbDVvdjd2NGpCb3J4TzlpX245T2Rucjl0SWwtdXMxNXA5TzBBdVE0cy1LaGlIY3RWXzBlRG5OOW9nR2llclZBYzZwNi1ESTZHeEVwbDNjc1o3dnFWN3RqaWNFRjJjZVA2dzRnMnRCdA?oc=5",
-          "ageMin": 52,
-          "headline": "Rei Ami crafts K-pop anthem to help Ken Jeong redefine sharks in Shark Week’s ‘K-pop Shark Heroes’ - WSVN",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdGhzbzRJZXlfOHhfVkU4VWw3eG5lLTZ0SzdjT19od0dIamdQc3dFbHpaVktjV2pfT01PaUdtb3ZRQ3ZHQ1dIQ0VTVFdZZXZWV1d5MGNyZzF4MDFiajNOZ0Z2X2U2clZBa1dVVS1wbDVvdjd2NGpCb3J4TzlpX245T2Rucjl0SWwtdXMxNXA5TzBBdVE0cy1LaGlIY3RWXzBlRG5OOW9nR2llclZBYzZwNi1ESTZHeEVwbDN"
-        }
-      ],
-      "ageMin": 52,
-      "_cand": {
-        "key": "rss:rei-ami-crafts-k-pop-anthem-to-help-ken-jeong-redefine-shark",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "WSVN"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "WSVN",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 77,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
         "big": 18,
         "trending": 0,
         "spice": 0,
@@ -482,38 +272,38 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-marvel-s-wolverine-trailer",
+      "id": "trailer-marvels-wolverine-story-trailer",
       "slug": "marvel-s-wolverine-gets-a-bloody-new-story-trailer",
       "title": "‘Marvel’s Wolverine’ Gets a Bloody New Story Trailer",
       "contentType": "trailer",
       "formatTag": "trailer",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "marvel-s-wolverine-trailer",
-      "primaryKeyword": "Marvel's Wolverine trailer",
+      "eventSlug": "marvels-wolverine-story-trailer",
+      "primaryKeyword": "wolverine trailer",
       "primaryEntity": "Deadpool & Wolverine",
       "entities": [
-        "Marvel's Wolverine",
+        "Marvel's Wolverine (video game)",
         "Marvel"
       ],
-      "angle": "A new, bloody story trailer has been released for 'Marvel's Wolverine'.",
+      "angle": "A new story trailer for Marvel's Wolverine has been released.",
       "tmdbType": "movie",
-      "source": "gnews:GeekTyrant",
+      "source": "gnews:Gizmodo",
       "sources": [
         {
-          "outlet": "GeekTyrant",
+          "outlet": "Gizmodo",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQajBwd251LUJud256SEpvS3V2bUd1aW1ISXdvTlBucTVZM0JhVG5nWGRxQ0dsY1Fnc19KdV9XckQzTS1tdlNSNnBOd2JKdTVJVWRrQnJ6UUh5dC1nbXJpVXl2ZWNEY0MyWHNJeGlBa01LdDJpcERIQmF6alZVTkoxYm1UdnNsakhrbF8wbmEydEFFdTcxajlnQzRlcGkyT20tWkthczE0a05NQQ?oc=5",
-          "ageMin": 276,
-          "headline": "First AVATAR: SEVEN HAVENS Teaser Trailer Unveils a Dark New Era for the Avatar - GeekTyrant",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQajBwd251LUJud256SEpvS3V2bUd1aW1ISXdvTlBucTVZM0JhVG5nWGRxQ0dsY1Fnc19KdV9XckQzTS1tdlNSNnBOd2JKdTVJVWRrQnJ6UUh5dC1nbXJpVXl2ZWNEY0MyWHNJeGlBa01LdDJpcERIQmF6alZVTkoxYm1UdnNsakhrbF8wbmEydEFFdTcxajlnQzRlcGkyT20tWkthczE0a05NQQ?oc=5\" target=\"_blank"
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYjZKN3lsY0JrOVpFWWNXU3hBSkhzRkFMLTVfWmRxQlJBRUQ1QzNsZDJtMm03amd0TDF3SGJ6UWZ6SWIzcWdYZ2QzN3BHdVJrODBPZElmS2szSFJFWFVHSC1NU2puSVN4c1M5SUx5bWMxOGJIM0VuRkhqa3Uwa3VEWEhDVVFpSTlac0I0?oc=5",
+          "ageMin": 365,
+          "headline": "‘Marvel’s Wolverine’ Gets a Bloody New Story Trailer - Gizmodo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYjZKN3lsY0JrOVpFWWNXU3hBSkhzRkFMLTVfWmRxQlJBRUQ1QzNsZDJtMm03amd0TDF3SGJ6UWZ6SWIzcWdYZ2QzN3BHdVJrODBPZElmS2szSFJFWFVHSC1NU2puSVN4c1M5SUx5bWMxOGJIM0VuRkhqa3Uwa3VEWEhDVVFpSTlac0I0?oc=5\" target=\"_blank\" ‘Marvel’s Wolverine’ Gets a Bloody New S"
         }
       ],
-      "ageMin": 276,
+      "ageMin": 365,
       "_cand": {
-        "key": "rss:first-avatar-seven-havens-teaser-trailer-unveils-a-dark-new-",
+        "key": "rss:-marvel-s-wolverine-gets-a-bloody-new-story-trailer-gizmodo",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -523,24 +313,24 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "GeekTyrant"
+          "Gizmodo"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "GeekTyrant",
+        "attribution": "Gizmodo",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 68,
+      "priority": 69,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
         "type": 15,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -548,237 +338,40 @@
       "tierClass": "B"
     },
     {
-      "id": "news-seth-green-simpsons-style-star-wars-series-lucas-museum",
-      "slug": "seth-green-s-shelved-simpsons-style-star-wars-series-to-premiere-at-lu",
-      "title": "Seth Green's Shelved Simpsons-Style Star Wars Series to Premiere at Lucas Museum",
+      "id": "news-godhead-fantasia-premiere",
+      "slug": "creepy-twins-religious-fanaticism-and-a-loaded-gun-collide-in-tense-ch",
+      "title": "Creepy Twins, Religious Fanaticism and a Loaded Gun Collide in Tense Chamber Drama Godhead — Fantasia",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "seth-green-simpsons-style-star-wars-series-lucas-museum",
-      "primaryKeyword": "The Simpsons Star Wars series",
-      "primaryEntity": "The Simpsons Movie",
+      "eventSlug": "godhead-fantasia-premiere",
+      "primaryKeyword": "godhead film",
+      "primaryEntity": "Godhead",
       "entities": [
-        "The Simpsons",
-        "Star Wars",
-        "Lucas Museum"
+        "Mark H. Rapaport",
+        "Fantasia"
       ],
-      "angle": "Seth Green's shelved Simpsons-style Star Wars series is set to premiere at the Lucas Museum.",
+      "angle": "Mark H. Rapaport's new film 'Godhead' is premiering at the Fantasia festival, noted for its tense atmosphere.",
       "tmdbType": "movie",
-      "source": "gnews:Entertainment Weekly",
-      "sources": [
-        {
-          "outlet": "Entertainment Weekly",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQ0o4a0V1bHVtZVJsaHBKRGVDdzI0NEZKblRlRGtXc3YwZHBZZDh6SUJWcUR2LW80a2hRVWRfa2VfUkpiT1UzTk1ldERPS1JDQ2FjRWZ6NmN1bS1iODNubHhndkZESGE3NXBUeFpiWFRXSHQ3bUxQVGVBdmJZTk5PbjE4V0pTUXpqbGdPU2pCMXNpN3hwdEZzUjRYcnZqQQ?oc=5",
-          "ageMin": 65,
-          "headline": "Seth Green says shelved Simpsons -style Star Wars series will finally premiere at Lucas Museum - Entertainment Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMingFBVV95cUxPQ0o4a0V1bHVtZVJsaHBKRGVDdzI0NEZKblRlRGtXc3YwZHBZZDh6SUJWcUR2LW80a2hRVWRfa2VfUkpiT1UzTk1ldERPS1JDQ2FjRWZ6NmN1bS1iODNubHhndkZESGE3NXBUeFpiWFRXSHQ3bUxQVGVBdmJZTk5PbjE4V0pTUXpqbGdPU2pCMXNpN3hwdEZzUjRYcnZqQQ?oc=5\" target=\"_blank\" Seth Green say"
-        }
-      ],
-      "ageMin": 65,
-      "_cand": {
-        "key": "rss:seth-green-says-shelved-simpsons-style-star-wars-series-will",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Entertainment Weekly"
-        ],
-        "maxTier": 6,
-        "sensitivity": "normal",
-        "attribution": "Entertainment Weekly",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 81,
-      "signals": {
-        "recency": 16,
-        "corroboration": 10,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-stuart-fails-to-save-the-universe-comic-con-return",
-      "slug": "big-bang-theory-franchise-returns-to-comic-con-stuart-fails-to-save-th",
-      "title": "Big Bang Theory Franchise Returns to Comic-Con, Stuart Fails To Save The Universe Panel Teases DC Episode and OG Return",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "stuart-fails-to-save-the-universe-comic-con-return",
-      "primaryKeyword": "stuart fails to save the universe",
-      "primaryEntity": "Stuart Fails To Save The Universe (TV Series)",
-      "entities": [
-        "The Big Bang Theory"
-      ],
-      "angle": "The Big Bang Theory franchise returns to Comic-Con with the cast of its spinoff teasing a DC episode and an OG character's return.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/stuart-fails-to-save-the-universe-comiccon-og-returns-dc-1237002141/",
-          "ageMin": 118,
-          "headline": "Stuart Fails To Save The Universe Panel Teases DC Episode, OG Returns As Big Bang Theory Franchise Makes Comic-Con Return",
-          "summary": "Eight years after the cast of The Big Bang Theory made their last Comic-Con appearance ahead of the hit CBS sitcom s 12th and final season, several Big Bang actors were back at the comic book convention with spinoff Stuart Fails To Save the Universe. The single-camera offshoot s leads, Kevin Sussman (Stuart), Lauren Lapkus (Denise), John [ ]"
-        }
-      ],
-      "ageMin": 118,
-      "_cand": {
-        "key": "rss:stuart-fails-to-save-the-universe-panel-teases-dc-episode-og",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 75,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 18
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "trailer-resident-evil-trailer",
-      "slug": "resident-evil-s-new-trailer-revealed-and-packed-with-easter-eggs",
-      "title": "Resident Evil's new trailer revealed and packed with Easter eggs",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "resident-evil-trailer",
-      "primaryKeyword": "Resident Evil trailer",
-      "primaryEntity": "Resident Evil",
-      "entities": [],
-      "angle": "A new trailer has been released for 'Resident Evil'.",
-      "tmdbType": "movie",
-      "source": "gnews:MacRumors",
-      "sources": [
-        {
-          "outlet": "MacRumors",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0zb1BHbTFvR1NEREtybjc1ZXR5NEN2WUFiZXZsYTh4R1RXcVgtSWFkdWRDelZJWEhiZ3hOUFVRMkpWempvT1JudmdsbnNyZE5MYXY4RXd1REpTZjk2TjVudFpwVVlHaDVVSUM2cVFGcGlKZw?oc=5",
-          "ageMin": 760,
-          "headline": "Apple Watch Series 11 GPS Models Now $100 Off on Amazon - MacRumors",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMickFVX3lxTE0zb1BHbTFvR1NEREtybjc1ZXR5NEN2WUFiZXZsYTh4R1RXcVgtSWFkdWRDelZJWEhiZ3hOUFVRMkpWempvT1JudmdsbnNyZE5MYXY4RXd1REpTZjk2TjVudFpwVVlHaDVVSUM2cVFGcGlKZw?oc=5\" target=\"_blank\" Apple Watch Series 11 GPS Models Now $100 Off on Amazon /a nbsp; nbsp; fon"
-        }
-      ],
-      "ageMin": 760,
-      "_cand": {
-        "key": "rss:apple-watch-series-11-gps-models-now-100-off-on-amazon-macru",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "MacRumors"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "MacRumors",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-colman-domingo-criticizes-elon-musk-ai-movie-plan",
-      "slug": "colman-domingo-slams-elon-musk-s-ai-movie-plan-whiter-than-christmas-a",
-      "title": "Colman Domingo Slams Elon Musk's AI Movie Plan: 'Whiter Than Christmas at Cracker Barrel'",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "colman-domingo-criticizes-elon-musk-ai-movie-plan",
-      "primaryKeyword": "Colman Domingo Elon Musk AI movie",
-      "primaryEntity": "Colman Domingo",
-      "entities": [
-        "Elon Musk",
-        "The Odyssey"
-      ],
-      "angle": "Actor Colman Domingo criticizes Elon Musk's proposed AI-generated film project 'The Odyssey'.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
+      "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRlVoZEtxRVJRX1JrdlpHWkpYTGM0SkJvcHNTRzZSYzE2ck1DRUZvTU1FdFZnbjhvQmdmRWxpaVYwSHBuRGc4V2VZMHRDTDR1WGpITkZyZHlnYmZWVkFtODBOVnZCSkxOeWJLcVJUWnV4ZXFySTAzdHZfMlc3ZEhuV2Z5YUJ0TmVtbGd3TDcxaGt3Zw?oc=5",
-          "ageMin": 599,
-          "headline": "Colman Domingo Rips Elon Musk’s Plan for AI ‘The Odyssey’ Movie: ‘It’ll Be ‘Whiter Than Christmas at Cracker Barrel’ - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxQRlVoZEtxRVJRX1JrdlpHWkpYTGM0SkJvcHNTRzZSYzE2ck1DRUZvTU1FdFZnbjhvQmdmRWxpaVYwSHBuRGc4V2VZMHRDTDR1WGpITkZyZHlnYmZWVkFtODBOVnZCSkxOeWJLcVJUWnV4ZXFySTAzdHZfMlc3ZEhuV2Z5YUJ0TmVtbGd3TDcxaGt3Zw?oc=5\" target=\"_blank\" Colman Domingo Rips Elon Musk’"
+          "url": "https://variety.com/2026/film/features/godhead-fantasia-festival-thriller-evil-twins-religious-1236819934/",
+          "ageMin": 109,
+          "headline": "Creepy Twins, Religious Fanaticism and a Loaded Gun Collide in Tense Chamber Drama Godhead — Fantasia",
+          "summary": "Mark H. Rapaport s new film “Godhead” is a master-class in ratcheting up tension. Shot in black-and-white with camerawork that makes the audience feel like a voyeur uncovering perverse secrets, the film blends faith, sex, lies and discomfort into an unknowable dance between its leads. The premise begins simply: A rural Catholic priest (Al Warren) is [ ]"
         }
       ],
-      "ageMin": 599,
+      "ageMin": 109,
       "_cand": {
-        "key": "rss:colman-domingo-rips-elon-musk-s-plan-for-ai-the-odyssey-movi",
+        "key": "rss:creepy-twins-religious-fanaticism-and-a-loaded-gun-collide-i",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
@@ -795,41 +388,39 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 79,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "radar": 30
+        "softTv": 0
       },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
+      "tierClass": "B"
     },
     {
-      "id": "news-dungeon-crawler-carl-jeff-hays-casting",
+      "id": "news-dungeon-crawler-carl-peacock-jeff-hays-casting",
       "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
-      "title": "Peacock's Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+      "title": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "dungeon-crawler-carl-jeff-hays-casting",
-      "primaryKeyword": "dungeon crawler carl",
-      "primaryEntity": "Dungeon Crawler Carl (TV Series)",
+      "eventSlug": "dungeon-crawler-carl-peacock-jeff-hays-casting",
+      "primaryKeyword": "dungeon crawler carl series",
+      "primaryEntity": "Dungeon Crawler Carl (TV series)",
       "entities": [
         "Peacock",
         "Jeff Hays"
       ],
-      "angle": "Jeff Hays, the audiobook narrator for 'Dungeon Crawler Carl,' has been cast in the Peacock series adaptation.",
+      "angle": "Jeff Hays, the narrator of the 'Dungeon Crawler Carl' audiobook, has been cast in the upcoming Peacock series adaptation.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -837,12 +428,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
-          "ageMin": 211,
+          "ageMin": 271,
           "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
           "summary": "He'll voice the key character of Princess Donut, a talking cat."
         }
       ],
-      "ageMin": 211,
+      "ageMin": 271,
       "_cand": {
         "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
         "popularity": 0,
@@ -879,38 +470,174 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-jonathan-bree-new-single-game-double-album",
-      "slug": "jonathan-bree-drops-new-single-game-ahead-of-double-album-don-t-call-i",
-      "title": "Jonathan Bree Drops New Single 'Game' Ahead of Double Album 'Don't Call It Love'",
+      "id": "news-marc-maron-in-memoriam-indie-street-film-festival",
+      "slug": "marc-maron-starrer-in-memoriam-to-kick-off-11th-annual-indie-street-fi",
+      "title": "Marc Maron Starrer ‘In Memoriam’ to Kick Off 11th Annual Indie Street Film Festival; Full Lineup Revealed",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "marc-maron-in-memoriam-indie-street-film-festival",
+      "primaryKeyword": "Marc Maron In Memoriam",
+      "primaryEntity": "In Memoriam",
+      "entities": [
+        "Marc Maron: End Times Fun",
+        "Marc Maron",
+        "Indie Street Film Festival"
+      ],
+      "angle": "Marc Maron starrer to open the Indie Street Film Festival.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVXBaT1ZoLWczTXUxV1pRTmJtT0NrWVRtZEMxcUtsaHFEOEFvalpPRzNiZGwxV1RtZHhIUkRTc09iZ2VtWW1wRHJBakVONVNzT0dkZXgtV2wxbE92cnotX1B5V3hXeXFjT1VGLWktRG5VUHNUbGRRNzA0X3lDOEhIZ0podmpDckQ4UHdTeWFQTWpuWkZWbWplXzFJQlQxZDd6cVJyUGMyWGdNZG0yZ1dGNkFMdWY?oc=5",
+          "ageMin": 180,
+          "headline": "Marc Maron Starrer ‘In Memoriam’ to Kick Off 11th Annual Indie Street Film Festival; Full Lineup Revealed (Exclusive) - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVXBaT1ZoLWczTXUxV1pRTmJtT0NrWVRtZEMxcUtsaHFEOEFvalpPRzNiZGwxV1RtZHhIUkRTc09iZ2VtWW1wRHJBakVONVNzT0dkZXgtV2wxbE92cnotX1B5V3hXeXFjT1VGLWktRG5VUHNUbGRRNzA0X3lDOEhIZ0podmpDckQ4UHdTeWFQTWpuWkZWbWplXzFJQlQxZDd6cVJyUGMyWGdNZG0yZ1dGNkFMdWY?oc=5\" t"
+        }
+      ],
+      "ageMin": 180,
+      "_cand": {
+        "key": "rss:marc-maron-starrer-in-memoriam-to-kick-off-11th-annual-indie",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-d4vd-dna-trash-bag-murder-teen-victim",
+      "slug": "d4vd-s-dna-allegedly-found-on-trash-bag-linked-to-teen-victim-s-blood",
+      "title": "D4vd’s DNA Allegedly Found on Trash Bag Linked to Teen Victim’s Blood",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
       "subcategory": "news",
+      "eventType": "arrest",
+      "sensitivity": "high",
+      "tier": "indie",
+      "eventSlug": "d4vd-dna-trash-bag-murder-teen-victim",
+      "primaryKeyword": "D4vd",
+      "primaryEntity": "d4vd",
+      "entities": [
+        "D4vd",
+        "Celeste Rivas Hernandez"
+      ],
+      "angle": "Indie singer D4vd faces murder charges in connection with a teen victim's death.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/d4vd-celeste-rivas-hernandez-murder-case-trash-bag-blood-1235597771/",
+          "ageMin": 161,
+          "headline": "D4vd’s DNA Allegedly Found on Trash Bag Linked to Teen Victim’s Blood",
+          "summary": "The singer is facing charges he murdered Celeste Rivas Hernandez to cover up his sexual abuse of the 14-year-old girl"
+        }
+      ],
+      "ageMin": 161,
+      "_cand": {
+        "key": "rss:d4vd-s-dna-allegedly-found-on-trash-bag-linked-to-teen-victi",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 13,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-ken-jeong-shark-week-k-pop-heroes",
+      "slug": "rei-ami-crafts-k-pop-anthem-for-ken-jeong-s-shark-week-special",
+      "title": "Rei Ami Crafts K-Pop Anthem for Ken Jeong's Shark Week Special",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "jonathan-bree-new-single-game-double-album",
-      "primaryKeyword": "Jonathan Bree new single",
-      "primaryEntity": "Jonathan Bree",
+      "eventSlug": "ken-jeong-shark-week-k-pop-heroes",
+      "primaryKeyword": "ken jeong shark week",
+      "primaryEntity": "Shark Week",
       "entities": [
-        "Don't Call It Love"
+        "Ken Jeong: You Complete Me, Ho",
+        "Ken Jeong",
+        "Rei Ami"
       ],
-      "angle": "Musician Jonathan Bree releases a new single ahead of his upcoming double album.",
+      "angle": "A K-pop artist contributes to a Shark Week special featuring Ken Jeong.",
       "tmdbType": "movie",
-      "source": "gnews:Noise11.com",
+      "source": "gnews:WSVN",
       "sources": [
         {
-          "outlet": "Noise11.com",
+          "outlet": "WSVN",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMU94b0hmOVBoYUdZN1kxenhzZ0xsdG1aN3BtNW5FREgyYW5yZjB5RFprRzNDY2dLZHMtamdJZGdQVDlfLUZTZWJTVWVOZUtHQTRDTEkyeDdKeUMxVUZXQjFwQjc1ZV96UFZ2TjRveXBES2hrZWFsaTlxVzhMeFNKT2pxU1diel82a01nbXB3?oc=5",
-          "ageMin": 102,
-          "headline": "Jonathan Bree Reveals New Single ‘Game’ Ahead of Double Album Don’t Call It Love - Noise11.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQMU94b0hmOVBoYUdZN1kxenhzZ0xsdG1aN3BtNW5FREgyYW5yZjB5RFprRzNDY2dLZHMtamdJZGdQVDlfLUZTZWJTVWVOZUtHQTRDTEkyeDdKeUMxVUZXQjFwQjc1ZV96UFZ2TjRveXBES2hrZWFsaTlxVzhMeFNKT2pxU1diel82a01nbXB3?oc=5\" target=\"_blank\" Jonathan Bree Reveals New Single ‘Ga"
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdGhzbzRJZXlfOHhfVkU4VWw3eG5lLTZ0SzdjT19od0dIamdQc3dFbHpaVktjV2pfT01PaUdtb3ZRQ3ZHQ1dIQ0VTVFdZZXZWV1d5MGNyZzF4MDFiajNOZ0Z2X2U2clZBa1dVVS1wbDVvdjd2NGpCb3J4TzlpX245T2Rucjl0SWwtdXMxNXA5TzBBdVE0cy1LaGlIY3RWXzBlRG5OOW9nR2llclZBYzZwNi1ESTZHeEVwbDNjc1o3dnFWN3RqaWNFRjJjZVA2dzRnMnRCdA?oc=5",
+          "ageMin": 112,
+          "headline": "Rei Ami crafts K-pop anthem to help Ken Jeong redefine sharks in Shark Week’s ‘K-pop Shark Heroes’ - WSVN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxOdGhzbzRJZXlfOHhfVkU4VWw3eG5lLTZ0SzdjT19od0dIamdQc3dFbHpaVktjV2pfT01PaUdtb3ZRQ3ZHQ1dIQ0VTVFdZZXZWV1d5MGNyZzF4MDFiajNOZ0Z2X2U2clZBa1dVVS1wbDVvdjd2NGpCb3J4TzlpX245T2Rucjl0SWwtdXMxNXA5TzBBdVE0cy1LaGlIY3RWXzBlRG5OOW9nR2llclZBYzZwNi1ESTZHeEVwbDN"
         }
       ],
-      "ageMin": 102,
+      "ageMin": 112,
       "_cand": {
-        "key": "rss:jonathan-bree-reveals-new-single-game-ahead-of-double-album-",
+        "key": "rss:rei-ami-crafts-k-pop-anthem-to-help-ken-jeong-redefine-shark",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -920,152 +647,19 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Noise11.com"
+          "WSVN"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Noise11.com",
+        "attribution": "WSVN",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 51,
+      "priority": 69,
       "signals": {
         "recency": 16,
         "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "awards-emmys-award",
-      "slug": "emmys-shake-up-tv-academy-moves-five-categories-out-of-telecast",
-      "title": "Emmys Shake-Up: TV Academy Moves Five Categories Out of Telecast",
-      "contentType": "awards",
-      "formatTag": "awards",
-      "category": "awards",
-      "subcategory": "winners",
-      "eventType": "award",
-      "sensitivity": "normal",
-      "eventSlug": "emmys-award",
-      "primaryKeyword": "Emmys",
-      "primaryEntity": "Emmys",
-      "entities": [
-        "HBO Max",
-        "Richard Gadd"
-      ],
-      "angle": "The TV Academy is attempting to shake up the Emmys by moving categories out of the main telecast.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/emmys-shake-up-telecast-move-categories-tv-academy-trying-1236819841/",
-          "ageMin": 226,
-          "headline": "Shaking Up the Emmys By Moving Five Categories Out of the Telecast Might Not Work, But at Least the TV Academy Is Trying Something",
-          "summary": "Richard Gadd, change your flight plans. The creator and star of HBO Max’s “Half Man” wound up with the series’ only Emmy nomination this year — via his supporting actor in a limited/anthology series or movie nod. But as of last week, that category will no longer be presented during NBC’s Emmy telecast on Sept. [ ]"
-        }
-      ],
-      "ageMin": 226,
-      "_cand": {
-        "key": "rss:shaking-up-the-emmys-by-moving-five-categories-out-of-the-te",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-avatar-seven-havens-premiere-date-teaser",
-      "slug": "new-avatar-animated-series-at-paramount-lands-fall-premiere-date-relea",
-      "title": "New Avatar Animated Series at Paramount+ Lands Fall Premiere Date, Releases Teaser",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "avatar-seven-havens-premiere-date-teaser",
-      "primaryKeyword": "avatar animated series",
-      "primaryEntity": "Avatar: Seven Havens (TV Series)",
-      "entities": [
-        "Paramount+",
-        "Michael Dante DiMartino",
-        "Bryan Konietzko"
-      ],
-      "angle": "The new Avatar animated series on Paramount+ has set a fall premiere date and released a teaser.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/avatar-animated-series-seven-havens-teaser-premiere-date-1236655385/",
-          "ageMin": 330,
-          "headline": "New Avatar Animated Series at Paramount+ Lands Fall Premiere Date, Releases Teaser",
-          "summary": "'Avatar: Seven Havens' comes from creators Michael Dante DiMartino and Bryan Konietzko."
-        }
-      ],
-      "ageMin": 330,
-      "_cand": {
-        "key": "rss:new-avatar-animated-series-at-paramount-lands-fall-premiere-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -1078,7 +672,72 @@
       "tierClass": "B"
     },
     {
-      "id": "news-industry-season-5-casting-zosia-mamet",
+      "id": "news-spider-man-brand-new-day-director-song-choice",
+      "slug": "spider-man-brand-new-day-director-reveals-the-song-that-sets-the-whole",
+      "title": "'Spider-Man: Brand New Day' Director Reveals the Song That Sets the Whole Movie's Tone",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "spider-man-brand-new-day-director-song-choice",
+      "primaryKeyword": "Spider-Man: Brand New Day director song",
+      "primaryEntity": "Spider-Man: Brand New Day",
+      "entities": [],
+      "angle": "Director discusses the song that defines the tone of the film.",
+      "tmdbType": "movie",
+      "source": "gnews:MovieWeb",
+      "sources": [
+        {
+          "outlet": "MovieWeb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1sX2hvdU5waFZhUncwcG5HZHFkbkdPcEdoQ01BTXp3M2xtQXIzZHNRa29TdFdrVVYzRGMzcXZncEVWTmtOaGo3YTdqRk1QTGtLdWw3Y0gyVFBoTl83QUxLV3JkMzNNcW5nMHZR?oc=5",
+          "ageMin": 208,
+          "headline": "'Spider-Man: Brand New Day' Director Reveals the Song That Sets the Whole Movie's Tone - MovieWeb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE1sX2hvdU5waFZhUncwcG5HZHFkbkdPcEdoQ01BTXp3M2xtQXIzZHNRa29TdFdrVVYzRGMzcXZncEVWTmtOaGo3YTdqRk1QTGtLdWw3Y0gyVFBoTl83QUxLV3JkMzNNcW5nMHZR?oc=5\" target=\"_blank\" 'Spider-Man: Brand New Day' Director Reveals the Song That Sets the Whole Movie's To"
+        }
+      ],
+      "ageMin": 208,
+      "_cand": {
+        "key": "rss:-spider-man-brand-new-day-director-reveals-the-song-that-set",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "MovieWeb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "MovieWeb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 78,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "radar": 26
+      },
+      "radarKind": "movie-releasing",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-zosia-mamet-industry-season-5",
       "slug": "zosia-mamet-joins-industry-season-5",
       "title": "Zosia Mamet Joins ‘Industry’ Season 5",
       "contentType": "news",
@@ -1087,15 +746,13 @@
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "industry-season-5-casting-zosia-mamet",
-      "primaryKeyword": "Industry season 5",
-      "primaryEntity": "Industry (TV series)",
+      "eventSlug": "zosia-mamet-industry-season-5",
+      "primaryKeyword": "zosia mamet industry",
+      "primaryEntity": "Industry",
       "entities": [
-        "Zosia Mamet",
-        "HBO",
-        "BBC"
+        "Zosia Mamet"
       ],
-      "angle": "Zosia Mamet joins the cast of HBO and BBC's 'Industry' for its fifth and final season.",
+      "angle": "Zosia Mamet is set to join the cast of HBO and BBC's 'Industry' for its upcoming final season.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1103,12 +760,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/",
-          "ageMin": 451,
+          "ageMin": 511,
           "headline": "Zosia Mamet Joins ‘Industry’ Season 5",
           "summary": "The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season."
         }
       ],
-      "ageMin": 451,
+      "ageMin": 511,
       "_cand": {
         "key": "rss:zosia-mamet-joins-industry-season-5",
         "popularity": 0,
@@ -1145,62 +802,125 @@
       "tierClass": "B"
     },
     {
-      "id": "news-george-michael-faith-tour-concert-film-acquisition",
-      "slug": "george-michael-faith-tour-concert-film-acquired-by-bleecker-street-and",
-      "title": "George Michael 'Faith Tour' Concert Film Acquired by Bleecker Street and Universal",
+      "id": "music-news-jonathan-bree-new-single-game",
+      "slug": "jonathan-bree-reveals-new-single-game-ahead-of-double-album-don-t-call",
+      "title": "Jonathan Bree Reveals New Single ‘Game’ Ahead of Double Album Don’t Call It Love",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jonathan-bree-new-single-game",
+      "primaryKeyword": "Jonathan Bree new single",
+      "primaryEntity": "Jonathan Bree",
+      "entities": [
+        "Don't Call It Love"
+      ],
+      "angle": "Jonathan Bree announces a new single and upcoming double album.",
+      "tmdbType": "movie",
+      "source": "gnews:Noise11.com",
+      "sources": [
+        {
+          "outlet": "Noise11.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMU94b0hmOVBoYUdZN1kxenhzZ0xsdG1aN3BtNW5FREgyYW5yZjB5RFprRzNDY2dLZHMtamdJZGdQVDlfLUZTZWJTVWVOZUtHQTRDTEkyeDdKeUMxVUZXQjFwQjc1ZV96UFZ2TjRveXBES2hrZWFsaTlxVzhMeFNKT2pxU1diel82a01nbXB3?oc=5",
+          "ageMin": 161,
+          "headline": "Jonathan Bree Reveals New Single ‘Game’ Ahead of Double Album Don’t Call It Love - Noise11.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQMU94b0hmOVBoYUdZN1kxenhzZ0xsdG1aN3BtNW5FREgyYW5yZjB5RFprRzNDY2dLZHMtamdJZGdQVDlfLUZTZWJTVWVOZUtHQTRDTEkyeDdKeUMxVUZXQjFwQjc1ZV96UFZ2TjRveXBES2hrZWFsaTlxVzhMeFNKT2pxU1diel82a01nbXB3?oc=5\" target=\"_blank\" Jonathan Bree Reveals New Single ‘Ga"
+        }
+      ],
+      "ageMin": 161,
+      "_cand": {
+        "key": "rss:jonathan-bree-reveals-new-single-game-ahead-of-double-album-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Noise11.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Noise11.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 51,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-marvel-sdcc-news-2026",
+      "slug": "the-biggest-marvel-news-from-san-diego-comic-con-2026",
+      "title": "The Biggest Marvel News from San Diego Comic-Con 2026",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "george-michael-faith-tour-concert-film-acquisition",
-      "primaryKeyword": "george michael faith tour concert film",
-      "primaryEntity": "George Michael: Faith Tour (concert film)",
+      "eventSlug": "marvel-sdcc-news-2026",
+      "primaryKeyword": "marvel san diego comic-con",
+      "primaryEntity": "Marvel",
       "entities": [
-        "George Michael: Freedom",
-        "George Michael",
-        "Bleecker Street",
-        "Universal Pictures Content Group"
+        "San Diego Comic-Con 2026"
       ],
-      "angle": "A concert film documenting George Michael's iconic 'Faith Tour' has been acquired for distribution by Bleecker Street and Universal Pictures Content Group.",
+      "angle": "Marvel.com rounds up the biggest news revealed at San Diego Comic-Con 2026.",
       "tmdbType": "movie",
-      "source": "rss:Variety Music",
+      "source": "gnews:Marvel.com",
       "sources": [
         {
-          "outlet": "Variety Music",
-          "tier": 7,
-          "url": "https://variety.com/2026/film/news/george-michael-the-faith-tour-concert-film-bleecker-street-1236818602/",
-          "ageMin": 856,
-          "headline": "George Michael: The Faith Tour Concert Film Acquired by Bleecker Street, Universal Pictures Content Group",
-          "summary": "The concert film George Michael: The Faith Tour has been acquired by Universal Pictures Content Group and Bleecker Street’s event cinema division Crosswalk. Universal Pictures Content Group will release the film internationally, and Bleecker Street s Crosswalk will release the film in North America. Shot at the Palais Omnisports de Paris-Bercy during the European leg of [ ]"
+          "outlet": "Marvel.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcENNU1F6NzNScmFXb0NUcm5iMjlxTFptNkRkemtBNGp4amJBMW1HQ1hvTGh0SXVpdVJtS1dtSmFkbnpRLWJtTnRwb0JGdWQ4VnNoSDdRSF85QkpFOVUtaEpaNXFnRlJWbVVJYVNzLXdvdHc0cE5STlZYWDU1RzVPYWNYMU0yZWhVZTA0NVJ0Z1dzcDlwZDExc0FfUm4tOHRP?oc=5",
+          "ageMin": 305,
+          "headline": "The Biggest Marvel News from San Diego Comic-Con 2026 - Marvel.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOcENNU1F6NzNScmFXb0NUcm5iMjlxTFptNkRkemtBNGp4amJBMW1HQ1hvTGh0SXVpdVJtS1dtSmFkbnpRLWJtTnRwb0JGdWQ4VnNoSDdRSF85QkpFOVUtaEpaNXFnRlJWbVVJYVNzLXdvdHc0cE5STlZYWDU1RzVPYWNYMU0yZWhVZTA0NVJ0Z1dzcDlwZDExc0FfUm4tOHRP?oc=5\" target=\"_blank\" The Biggest "
         }
       ],
-      "ageMin": 856,
+      "ageMin": 305,
       "_cand": {
-        "key": "rss:george-michael-the-faith-tour-concert-film-acquired-by-bleec",
+        "key": "rss:the-biggest-marvel-news-from-san-diego-comic-con-2026-marvel",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Variety Music"
+          "Marvel.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety Music",
+        "attribution": "Marvel.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 68,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
@@ -1213,37 +933,38 @@
       "tierClass": "B"
     },
     {
-      "id": "news-marvelous-mrs-maisel-set-designer-death",
-      "slug": "marvelous-mrs-maisel-set-designer-fatally-stabbed-in-apparent-murder-s",
-      "title": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Murder-Suicide",
+      "id": "news-cole-hauser-dutton-ranch-without-taylor-sheridan",
+      "slug": "cole-hauser-on-challenges-of-making-dutton-ranch-without-taylor-sherid",
+      "title": "Cole Hauser On Challenges Of Making Dutton Ranch Without Taylor Sheridan: Everything Had Changed",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "marvelous-mrs-maisel-set-designer-death",
-      "primaryKeyword": "The Marvelous Mrs. Maisel",
-      "primaryEntity": "The Marvelous Mrs. Maisel",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "cole-hauser-dutton-ranch-without-taylor-sheridan",
+      "primaryKeyword": "cole hauser yellowstone",
+      "primaryEntity": "Cole Hauser",
       "entities": [
-        "Mary Kate Golding"
+        "Dutton Ranch",
+        "Taylor Sheridan"
       ],
-      "angle": "Set designer for 'The Marvelous Mrs. Maisel' found fatally stabbed in an apparent murder-suicide.",
+      "angle": "Cole Hauser reflects on the difficulties of filming the 'Yellowstone' franchise without creator Taylor Sheridan's direct involvement.",
       "tmdbType": "movie",
-      "source": "rss:TheWrap",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "TheWrap",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.thewrap.com/media-platforms/tv/marvelous-mrs-maisel-set-designer-murdered-mary-kate-golding/",
-          "ageMin": 120,
-          "headline": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide",
-          "summary": "Mary Kate Golding was found dead in her New York home on Tuesday The post ‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide appeared first on TheWrap ."
+          "url": "https://deadline.com/2026/07/cole-hauser-challenges-dutton-ranch-without-taylor-sheridan-1237002246/",
+          "ageMin": 106,
+          "headline": "Cole Hauser On Challenges Of Making Dutton Ranch Without Taylor Sheridan: Everything Had Changed",
+          "summary": "Although the Duttons are still keeping things interesting on our screens, it s a whole new behind-the-scenes family for the cast of Taylor Sheridan s western TV franchise. Cole Hauser, who reprises his role as Rip Wheeler, recently opened up about the challenges of filming Dutton Ranch without parent series Yellowstone creator Taylor Sheridan at the helm, [ ]"
         }
       ],
-      "ageMin": 120,
+      "ageMin": 106,
       "_cand": {
-        "key": "rss:-marvelous-mrs-maisel-set-designer-fatally-stabbed-in-appare",
+        "key": "rss:cole-hauser-on-challenges-of-making-dutton-ranch-without-tay",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1253,21 +974,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "TheWrap"
+          "Deadline"
         ],
         "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "TheWrap",
+        "sensitivity": "normal",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 66,
+      "priority": 57,
       "signals": {
         "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 14,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 6,
@@ -1275,7 +996,7 @@
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "S"
+      "tierClass": "C"
     },
     {
       "id": "news-snoop-dogg-biopic-summer-2027-release",
@@ -1288,15 +1009,15 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "snoop dogg biopic",
+      "primaryKeyword": "Snoop Dogg biopic",
       "primaryEntity": "Snoop Dogg's Hood of Horror",
       "entities": [
-        "Snoop Dogg (biopic)",
         "Snoop Dogg",
         "Jonathan Daviss",
-        "Craig Brewer"
+        "Craig Brewer",
+        "Universal Pictures"
       ],
-      "angle": "Universal Pictures sets a Summer 2027 release date for the Snoop Dogg biopic starring Jonathan Daviss and directed by Craig Brewer.",
+      "angle": "Snoop Dogg's biopic gets a Summer 2027 release date.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1304,12 +1025,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 3181,
+          "ageMin": 3241,
           "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
           "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
         }
       ],
-      "ageMin": 3181,
+      "ageMin": 3241,
       "_cand": {
         "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
         "popularity": 0,
@@ -1346,75 +1067,9 @@
       "tierClass": "B"
     },
     {
-      "id": "news-family-guy-casting",
-      "slug": "stewie-casting-announced-for-fox-s-family-guy-spin-off-series",
-      "title": "Stewie: Casting Announced for FOX’s Family Guy Spin-Off Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "family-guy-casting",
-      "primaryKeyword": "Family Guy spin-off Stewie",
-      "primaryEntity": "Family Guy Presents: Blue Harvest",
-      "entities": [
-        "Family Guy",
-        "Stewie"
-      ],
-      "angle": "Casting has been announced for the 'Family Guy' spin-off series focusing on Stewie.",
-      "tmdbType": "movie",
-      "source": "gnews:Game Informer",
-      "sources": [
-        {
-          "outlet": "Game Informer",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQLXJ5dmFqNlR2UFZXVVdkNFNoLVRPSENBcC1MdkFsdGhGcU43a0x2aGN0VUV1cGQ3Z2FmcUN6Q3c2ZEVvaW8yMkpqOEkzdkFtZHEtLUZmRjRBZFl3TEhEVVhFUXFmYnllRzduak9heGEyTXFiM1lGQjlrMjhmMktHM2gzRV9RRjYyNFhQNlAxT1ZLaDNEQmkxTGljTThzbWhCNW1JbFVDMU1xN3pnOTRZMDhqQ3l0czAzVUVldDZKTQ?oc=5",
-          "ageMin": 657,
-          "headline": "Star Wars Zero Company Cast Includes Actors From Clone Wars, Hades II, Resident Evil, And More - Game Informer",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQLXJ5dmFqNlR2UFZXVVdkNFNoLVRPSENBcC1MdkFsdGhGcU43a0x2aGN0VUV1cGQ3Z2FmcUN6Q3c2ZEVvaW8yMkpqOEkzdkFtZHEtLUZmRjRBZFl3TEhEVVhFUXFmYnllRzduak9heGEyTXFiM1lGQjlrMjhmMktHM2gzRV9RRjYyNFhQNlAxT1ZLaDNEQmkxTGljTThzbWhCNW1JbFVDMU1xN3pnOTRZMDhqQ3l0czAzVUV"
-        }
-      ],
-      "ageMin": 657,
-      "_cand": {
-        "key": "rss:star-wars-zero-company-cast-includes-actors-from-clone-wars-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Game Informer"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Game Informer",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
       "id": "news-the-chi-other",
-      "slug": "how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side-of-chicag",
-      "title": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
+      "slug": "lena-waithe-stars-reflect-on-the-chi-legacy-ahead-of-series-finale",
+      "title": "Lena Waithe, Stars Reflect on 'The Chi' Legacy Ahead of Series Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -1422,14 +1077,14 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "the-chi-other",
-      "primaryKeyword": "the chi",
+      "primaryKeyword": "the chi series finale",
       "primaryEntity": "The Chi",
       "entities": [
         "Lena Waithe",
         "Birgundi Baker",
         "Jacob Latimore"
       ],
-      "angle": "Creator and stars reflect on the legacy of 'The Chi' ahead of its series finale and tease the ending.",
+      "angle": "Creator and stars reflect on the Paramount+ drama's legacy ahead of its series finale.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -1437,12 +1092,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chi-series-finale-preview-lena-waithe-interview-1236654335/",
-          "ageMin": 337,
+          "ageMin": 397,
           "headline": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
           "summary": "Heading into the series finale, creator Lena Waithe along with stars Birgundi Baker and Jacob Latimore reflect on the Paramount+ show's legacy, and tease how it will all end."
         }
       ],
-      "ageMin": 337,
+      "ageMin": 397,
       "_cand": {
         "key": "rss:how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side",
         "popularity": 0,
@@ -1463,9 +1118,9 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 62,
+      "priority": 57,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 5,
@@ -1481,37 +1136,38 @@
       "tierClass": "A"
     },
     {
-      "id": "news-resident-evil-director-zach-cregger-hardest-scene",
-      "slug": "resident-evil-director-zach-cregger-reveals-the-movie-s-hardest-scene-",
-      "title": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot",
+      "id": "news-disney-ad-creative-studio-beta",
+      "slug": "disney-ad-creative-studio-begins-closed-beta-with-select-advertisers",
+      "title": "Disney Ad Creative Studio Begins Closed Beta with Select Advertisers",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "resident-evil-director-zach-cregger-hardest-scene",
-      "primaryKeyword": "resident evil director",
-      "primaryEntity": "Resident Evil",
+      "eventSlug": "disney-ad-creative-studio-beta",
+      "primaryKeyword": "Disney Ad Creative Studio",
+      "primaryEntity": "Disney Ad Creative Studio",
       "entities": [
-        "Zach Cregger"
+        "Walt Disney",
+        "Disney"
       ],
-      "angle": "Director Zach Cregger discusses the most challenging scene to film for the 'Resident Evil' movie.",
+      "angle": "Disney's Ad Creative Studio is launching a closed beta for select advertisers.",
       "tmdbType": "movie",
-      "source": "gnews:IMDb",
+      "source": "gnews:The Walt Disney Company",
       "sources": [
         {
-          "outlet": "IMDb",
+          "outlet": "The Walt Disney Company",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBOU0xvODdHb3d5anJOYVJ3d29uSG1MU2JDRElUa2NBSHp3Rl9WVDlVMDV5NzNyMlJhVVFVbTcwQUNxM1NMNnNZWUI1dExoN0Y0bFV4ZWR2NnBGYjBITjZXSXZQOEZBdw?oc=5",
-          "ageMin": 278,
-          "headline": "Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot - IMDb",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTFBOU0xvODdHb3d5anJOYVJ3d29uSG1MU2JDRElUa2NBSHp3Rl9WVDlVMDV5NzNyMlJhVVFVbTcwQUNxM1NMNnNZWUI1dExoN0Y0bFV4ZWR2NnBGYjBITjZXSXZQOEZBdw?oc=5\" target=\"_blank\" Resident Evil Director Zach Cregger Reveals The Movie's Hardest Scene To Shoot /a nbsp; nb"
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9DWExoZjVQWUFzN2Z6VFJBdTFxS2pPNUlIcV9xNktfMVVVMktMaGMtSXBaYUUtZUNRV1BZQjNiLUo0WFNpT1JoRGxFcDdJS3VNNVNmR2psY2g2V0xpMVJ1QTBfa0g5bUR6V3NTWHJQaw?oc=5",
+          "ageMin": 407,
+          "headline": "Disney Ad Creative Studio Begins Closed Beta with Select Advertisers - The Walt Disney Company",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE9DWExoZjVQWUFzN2Z6VFJBdTFxS2pPNUlIcV9xNktfMVVVMktMaGMtSXBaYUUtZUNRV1BZQjNiLUo0WFNpT1JoRGxFcDdJS3VNNVNmR2psY2g2V0xpMVJ1QTBfa0g5bUR6V3NTWHJQaw?oc=5\" target=\"_blank\" Disney Ad Creative Studio Begins Closed Beta with Select Advertisers /a nbsp; "
         }
       ],
-      "ageMin": 278,
+      "ageMin": 407,
       "_cand": {
-        "key": "rss:resident-evil-director-zach-cregger-reveals-the-movie-s-hard",
+        "key": "rss:disney-ad-creative-studio-begins-closed-beta-with-select-adv",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -1521,152 +1177,86 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "IMDb"
+          "The Walt Disney Company"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "IMDb",
+        "attribution": "The Walt Disney Company",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 52,
+      "priority": 63,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-avatar-the-last-airbender-release-discussion",
-      "slug": "avatar-aang-the-last-airbender-soars-above-its-troubled-release",
-      "title": "'Avatar Aang: The Last Airbender' Soars Above Its Troubled Release",
+      "id": "news-every-year-after-season-one-reception",
+      "slug": "every-year-after-star-joseph-chiu-on-season-one-reception-and-hopes-fo",
+      "title": "‘Every Year After’ Star Joseph Chiu on Season One Reception and Hopes for Next Season",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "avatar-the-last-airbender-release-discussion",
-      "primaryKeyword": "avatar the last airbender",
-      "primaryEntity": "Avatar Aang: The Last Airbender",
+      "eventSlug": "every-year-after-season-one-reception",
+      "primaryKeyword": "Every Year After",
+      "primaryEntity": "Every Year After",
       "entities": [
-        "Avatar: The Last Airbender",
-        "Netflix"
+        "Every Year After (TV series)",
+        "Joseph Chiu",
+        "Prime Video"
       ],
-      "angle": "Analysis of the reception and challenges surrounding the release of the live-action 'Avatar: The Last Airbender'.",
+      "angle": "Star of Prime Video romance series 'Every Year After' reflects on the first season's reception and expresses optimism for a potential second season.",
       "tmdbType": "movie",
-      "source": "gnews:Inverse",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Inverse",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONUJ0elIzUlNWZDZ0bk5YT3Frbl82bUk1ZHlEeFdQY3B1Zm1ycHUwUEpFV1I1T1Y1aENKR3FoQmxfWDNwQkp1NEZvd0JLanlBMmt4Y29WZG8yRTAycDdtdFB0MS02VkJlSjVvM1FwS2o1a185NkxLZm9qSmJWY3ZTVQ?oc=5",
-          "ageMin": 271,
-          "headline": "'Avatar Aang: The Last Airbender' Soars Above Its Troubled Release - Inverse",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxONUJ0elIzUlNWZDZ0bk5YT3Frbl82bUk1ZHlEeFdQY3B1Zm1ycHUwUEpFV1I1T1Y1aENKR3FoQmxfWDNwQkp1NEZvd0JLanlBMmt4Y29WZG8yRTAycDdtdFB0MS02VkJlSjVvM1FwS2o1a185NkxLZm9qSmJWY3ZTVQ?oc=5\" target=\"_blank\" 'Avatar Aang: The Last Airbender' Soars Above Its Trou"
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-features/every-year-after-joseph-chiu-season-1-interview-1236655490/",
+          "ageMin": 250,
+          "headline": "‘Every Year After’ Star Joseph Chiu on Season One Reception and Hopes for Next Season",
+          "summary": "The Canadian actor plays Jordie in the Prime Video romance series: “I poured a lot of myself into this role.”"
         }
       ],
-      "ageMin": 271,
+      "ageMin": 250,
       "_cand": {
-        "key": "rss:-avatar-aang-the-last-airbender-soars-above-its-troubled-rel",
+        "key": "rss:-every-year-after-star-joseph-chiu-on-season-one-reception-a",
         "popularity": 0,
-        "kind": "gnews"
+        "kind": "rss-news"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
+        "tier1Count": 1,
+        "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Inverse"
+          "THR"
         ],
-        "maxTier": 5,
+        "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Inverse",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 61,
+      "priority": 50,
       "signals": {
         "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "radar": 15
-      },
-      "radarKind": "movie-in-theaters",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-kitchen-nightmares-season-three-ratings",
-      "slug": "kitchen-nightmares-season-three-ratings-revealed",
-      "title": "Kitchen Nightmares Season Three Ratings Revealed",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "kitchen-nightmares-season-three-ratings",
-      "primaryKeyword": "Kitchen Nightmares ratings",
-      "primaryEntity": "Kitchen Nightmares",
-      "entities": [
-        "Gordon Ramsay"
-      ],
-      "angle": "Report on the viewership numbers for the third season of the reality TV series 'Kitchen Nightmares'.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Series Finale",
-      "sources": [
-        {
-          "outlet": "TV Series Finale",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNSmJoUHJ3ZldXM2RvZWNncVRwaTlTSHlOY2lNRWE3NnczYWZYeUl4bjdIVXBRamxuUHdDSktYNXVxdXFYdWJNZEpJeGpjOWxmbFcxMEc0WnZBTnZIdGc2UGNuWkg3cFJQME02RldRUGZ5NmYxSlhVbWl6MzBKNjV0bG5VMjJZUdIBhgFBVV95cUxNSmJoUHJ3ZldXM2RvZWNncVRwaTlTSHlOY2lNRWE3NnczYWZYeUl4bjdIVXBRamxuUHdDSktYNXVxdXFYdWJNZEpJeGpjOWxmbFcxMEc0WnZBTnZIdGc2UGNuWkg3cFJQME02RldRUGZ5NmYxSlhVbWl6MzBKNjV0bG5VMjJZUQ?oc=5",
-          "ageMin": 129,
-          "headline": "Kitchen Nightmares: Season Three Ratings - TV Series Finale",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNSmJoUHJ3ZldXM2RvZWNncVRwaTlTSHlOY2lNRWE3NnczYWZYeUl4bjdIVXBRamxuUHdDSktYNXVxdXFYdWJNZEpJeGpjOWxmbFcxMEc0WnZBTnZIdGc2UGNuWkg3cFJQME02RldRUGZ5NmYxSlhVbWl6MzBKNjV0bG5VMjJZUdIBhgFBVV95cUxNSmJoUHJ3ZldXM2RvZWNncVRwaTlTSHlOY2lNRWE3NnczYWZYeUl4bjd"
-        }
-      ],
-      "ageMin": 129,
-      "_cand": {
-        "key": "rss:kitchen-nightmares-season-three-ratings-tv-series-finale",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Series Finale"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Series Finale",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 53,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
         "type": 5,
         "pop": 0,
@@ -1677,6 +1267,141 @@
         "softTv": 0
       },
       "tierClass": "C"
+    },
+    {
+      "id": "news-david-harbour-stranger-things-end-emmy-nomination",
+      "slug": "david-harbour-on-the-end-of-stranger-things-emmy-nominated-dtf-st-loui",
+      "title": "David Harbour on the End of Stranger Things, Emmy-Nominated DTF St. Louis and Upcoming Reunion With Millie Bobby Brown",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "david-harbour-stranger-things-end-emmy-nomination",
+      "primaryKeyword": "Stranger Things",
+      "primaryEntity": "Stranger Things",
+      "entities": [
+        "Stranger Things (TV series)",
+        "David Harbour",
+        "Millie Bobby Brown",
+        "HBO"
+      ],
+      "angle": "David Harbour reflects on the conclusion of 'Stranger Things,' his Emmy-nominated work on 'DTF St. Louis,' and an upcoming reunion with Millie Bobby Brown.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/david-harbour-stranger-things-emmy-nom-dtf-st-louis-podcast-1236655145/",
+          "ageMin": 291,
+          "headline": "David Harbour on the End of Stranger Things, Emmy-Nominated DTF St. Louis and Upcoming Reunion With Millie Bobby Brown",
+          "summary": "For the HBO limited series 'DTF St. Louis,' Harbour is nominated for his work as a producer (best limited series) and performer (best supporting actor in a limited or anthology series or movie)."
+        }
+      ],
+      "ageMin": 291,
+      "_cand": {
+        "key": "rss:david-harbour-on-the-end-of-stranger-things-emmy-nominated-d",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 50,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-bon-jovi-msg-concert-cancelled",
+      "slug": "bon-jovi-abruptly-ends-msg-concert-due-to-sinus-infection",
+      "title": "Bon Jovi Abruptly Ends MSG Concert Due to Sinus Infection",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "bon-jovi-msg-concert-cancelled",
+      "primaryKeyword": "bon jovi concert cancelled",
+      "primaryEntity": "Jon Bon Jovi",
+      "entities": [
+        "Bon Jovi",
+        "MSG"
+      ],
+      "angle": "Jon Bon Jovi was forced to abruptly end a concert at Madison Square Garden due to a sinus infection.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/bon-jovi-abruptly-ends-msg-concert-sinus-infection-1235598245/",
+          "ageMin": 30,
+          "headline": "Bon Jovi Abruptly Ends MSG Concert Due to Sinus Infection",
+          "summary": "\"Don’t throw away your ticket stubs, I’m gonna figure something out,\" the singer said from the stage before ending the night early"
+        }
+      ],
+      "ageMin": 30,
+      "_cand": {
+        "key": "rss:bon-jovi-abruptly-ends-msg-concert-due-to-sinus-infection",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
     }
   ]
 }
