@@ -1,0 +1,229 @@
+# INSTAGRAM REELS LANE — daily slate (plan §6.3).
+# ⛔ AUTO-POST CRON DISABLED (owner 2026-07-10: "do not publish to Instagram yet").
+# The schedule below is commented out so NOTHING posts unattended. Manual dispatch stays
+# available and defaults to DRAFT (nothing published). To GO LIVE later: uncomment the
+# `schedule:` block — a schedule event forces --live. Kill switch: commit site/data/ig/PAUSED.
+name: ig-reels
+on:
+  # ⬇️ GO-LIVE SWITCH: uncomment this whole `schedule:` block to start posting 7 reels/day at fixed
+  # LA times. Each cron fires ~45min before its slot, builds ONE reel (trying up to 4 candidates),
+  # and schedules it for the EXACT LA time via Zernio. Times are UTC (PDT/summer shown; in PST the
+  # lead just grows to ~1h45 — still fine, and Zernio keeps the POST time DST-correct year-round).
+  # Runs are serialized by the concurrency group, so each reads the prior run's committed ledger and
+  # takes the next EMPTY slot — no double-posts. Kill switch: commit site/data/ig/PAUSED.
+  schedule:
+    # BUILD-AHEAD model (owner 2026-07-14): GitHub cron DROPS/DELAYS runs (20-70 min drift + skipped
+    # firings), so we do NOT depend on 7 separate firings. Each EARLY run builds the whole day's
+    # remaining slate at once and SCHEDULES each reel for its LA slot (10a/12p/2p/4p/6p/8p/10p) via
+    # Zernio/Buffer — so ONE reliable early firing fills all 7 slots regardless of GitHub's timing. The
+    # later runs are cheap no-ops when the day is already full, or catch-ups if an early one was dropped.
+    # DENSE early-morning coverage (owner 2026-07-15): on 2026-07-14 GitHub DROPPED the 12/13/14 UTC
+    # firings entirely, so the day didn't start until 16:47 UTC (9:47 AM LA) and the 10 AM slot was
+    # skipped (the build finished after 10:00). Firing hourly from 3–9 AM LA means even if GitHub drops
+    # several, at least one lands early enough to build the whole slate BEFORE the 10 AM slot. Runs after
+    # the day is full exit immediately (cheap no-op), so extra firings cost almost nothing.
+    - cron: "15 10 * * *" # 10:15 UTC →  3:15 AM LA
+    - cron: "15 11 * * *" # 11:15 UTC →  4:15 AM LA
+    - cron: "15 12 * * *" # 12:15 UTC →  5:15 AM LA (target primary — whole slate built well before 10 AM)
+    - cron: "15 13 * * *" # 13:15 UTC →  6:15 AM LA
+    - cron: "15 14 * * *" # 14:15 UTC →  7:15 AM LA
+    - cron: "15 15 * * *" # 15:15 UTC →  8:15 AM LA (last comfortable start to finish before the 10 AM slot)
+    - cron: "15 16 * * *" # 16:15 UTC →  9:15 AM LA (catch-up — 10 AM slot may already be tight)
+    - cron: "15 18 * * *" # 18:15 UTC → 11:15 AM LA (catch-up for any still-empty slots)
+    - cron: "15 20 * * *" # 20:15 UTC →  1:15 PM LA (catch-up)
+    - cron: "15 22 * * *" # 22:15 UTC →  3:15 PM LA (late catch-up)
+    # DRAIN crons (owner 2026-07-24, direct Meta publishing): the Graph API can't schedule, so queued
+    # IG containers / FB reels publish when a run drains them. One firing just after each LA slot —
+    # these runs exit fast when slots are full but ALWAYS drain the due queue first.
+    - cron: "5 17,19,21,23 * * *" # 10:05a / 12:05p / 2:05p / 4:05p LA
+    - cron: "5 1,3,5 * * *"       # 6:05p / 8:05p / 10:05p LA
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "draft | live | dry | no-publish"
+        default: "draft"
+      limit:
+        description: "candidates to ATTEMPT this run"
+        default: "1"
+      posts:
+        description: "reels to actually BUILD+post (stop after N; blank = same as limit)"
+        default: ""
+      immediate:
+        description: "publish NOW (~3 min out) instead of the next LA slot — test only"
+        default: ""
+      slug:
+        description: "force one article slug (optional)"
+        default: ""
+
+concurrency:
+  group: ig-lane # shared with ig-analytics so the two never race on the ledger commit
+  cancel-in-progress: false
+
+permissions:
+  contents: write # helps if the org allows it; the PAT push below is the reliable path
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    # 120 not 55 (owner 2026-07-15): a build-ahead run now builds the whole slate (up to 7) in ONE
+    # firing, and publish happens AFTER the build loop — so a mid-build timeout would lose every built
+    # reel. At ~5-6 min/reel, 7 builds + held attempts is ~50-60 min; 120 gives ample headroom so the run
+    # always reaches the publish+ledger-commit steps. Extra minutes are free (idle after the day is full).
+    timeout-minutes: 120
+    steps:
+      # ref: LIVE branch head, never the trigger-time SHA (owner incident 2026-07-17: a schedule run
+      # pins github.sha at TRIGGER time — a run created at 16:02 checked out a tree missing the
+      # previous run's 16:05 ledger push, could not see Sam Neill was already posted, and DOUBLE-POSTED
+      # it. Checking out the branch ref resolves at RUN time, after the concurrency queue serializes.)
+      - uses: actions/checkout@v4
+        with:
+          ref: rebuild-trending-news
+      - name: sync to the true latest ledger (defense-in-depth vs the trigger-SHA race)
+        run: git pull --ff-only origin rebuild-trending-news || true
+      # FRESH ARTICLE SUPPLY (owner audit 2026-07-16, root-caused): the news/gossip/inside lanes
+      # publish articles to MAIN (hourly), but this branch's content/articles FROZE on 07-10.
+      # `git restore --worktree` updates ONLY the working tree — the INDEX stays clean, so the
+      # ledger-commit step can never sweep 400+ article files into the state commit (the original
+      # `git checkout origin/main --` variant STAGED them all — index pollution). (fixed 2026-07-17)
+      - name: fresh article supply (articles live on main)
+        run: |
+          git fetch --depth=1 origin main
+          git restore --source=origin/main --worktree -- content/articles
+          echo "articles from main: $(ls content/articles/*.md | wc -l)"
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: system deps
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: python deps (cached)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ig-pip-${{ runner.os }}-v2 # v2: pin opencv (numpy-ABI fix) — invalidates the stale v1 wheel cache
+      # opencv-python-headless PINNED to 4.10.0.84: the first build shipping wheels compatible
+      # with BOTH numpy 1.x and 2.x. Unpinned, pip paired the latest opencv with whatever numpy
+      # the other deps resolved, half-loading cv2 (cv2.data present but CascadeClassifier missing)
+      # → face_crop.py crashed the shots stage on the runner. (2026-07-11)
+      - run: pip -q install faster-whisper kokoro-onnx soundfile "opencv-python-headless==4.10.0.84" pillow numpy
+      # non-fatal probe: face_crop.py already degrades to center-crop, but surface a broken cv2 loudly
+      - run: python -c "import cv2; c=cv2.CascadeClassifier(cv2.data.haarcascades+'haarcascade_frontalface_default.xml'); assert not c.empty(); print('cv2 face detection OK', cv2.__version__)" || echo "::warning::cv2 face detection unavailable — reels will use center-crop fallback"
+      - name: kokoro models (fallback voice — cached)
+        uses: actions/cache@v4
+        id: kokoro
+        with:
+          path: .models
+          key: kokoro-v1.0
+      - if: steps.kokoro.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .models
+          curl -sL -o .models/kokoro-v1.0.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sL -o .models/voices-v1.0.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+      - name: whisper model (alignment wall — cached, ~490MB)
+        uses: actions/cache@v4
+        with:
+          path: .models/whisper
+          key: whisper-small-en-int8
+      - name: run
+        env:
+          TSR_SITE: ${{ github.workspace }}
+          TSR_PYTHON: python3
+          TSR_MODELS: ${{ github.workspace }}/.models
+          WHISPER_CACHE: ${{ github.workspace }}/.models/whisper
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_ID: ${{ secrets.META_IG_ID }}
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            # BUILD-AHEAD: attempt up to 15 candidates and SHIP up to 7 reels (posts=7), scheduling each
+            # for the next EMPTY LA slot today via Zernio/Buffer. A run that finds the day already full
+            # exits immediately (cheap). One reliable early firing fills all 7 slots.
+            FLAGS="--limit=15 --posts=7 --live"
+          else
+            # manual dispatch — defaults to DRAFT (nothing posts) unless you pick mode=live
+            MODE="${{ github.event.inputs.mode || 'draft' }}"
+            LIMIT="${{ github.event.inputs.limit || '1' }}"
+            POSTS="${{ github.event.inputs.posts }}"
+            IMMEDIATE="${{ github.event.inputs.immediate }}"
+            SLUG="${{ github.event.inputs.slug }}"
+            FLAGS="--limit=$LIMIT"
+            [ -n "$POSTS" ] && FLAGS="$FLAGS --posts=$POSTS"
+            [ -n "$IMMEDIATE" ] && FLAGS="$FLAGS --now"
+            [ "$MODE" = "live" ] && FLAGS="$FLAGS --live"
+            [ "$MODE" = "dry" ] && FLAGS="--dry"
+            [ "$MODE" = "no-publish" ] && FLAGS="$FLAGS --no-publish"
+            [ -n "$SLUG" ] && FLAGS="$FLAGS --slug=$SLUG"
+          fi
+          echo "flags: $FLAGS"
+          node pipeline/ig/igrun.mjs $FLAGS
+      # ⚠ LOAD-BEARING: posted.json is the record of reels ALREADY scheduled on Zernio —
+      # losing this commit = a double-post next run. Runs even after failures, retries
+      # around other lanes' pushes, and FAILS LOUDLY if the ledger can't be persisted.
+      - name: commit state (ledgers — must never be lost)
+        if: always()
+        env:
+          TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
+        run: |
+          git config user.name "tsr-ig-bot" && git config user.email "bot@thescreenreport.com"
+          # the articles overlay is WORKTREE-only, but belt-and-braces: never let non-ledger paths
+          # ride along in the state commit (index pollution was one leg of the 07-17 double-post).
+          git reset -q -- . 2>/dev/null || true
+          # `git add -A data/ig` stages every non-ignored ledger change and is a no-op for
+          # missing files — the old enumerated list aborted atomically (exit 128) whenever
+          # any listed path was absent, silently committing NOTHING → double-post. (audit)
+          git add -A data/ig
+          if git diff --cached --quiet; then echo "no state changes"; exit 0; fi
+          git commit -m "ig: state $(date -u +%FT%H%M)"
+          # push with the PAT — the default github-actions token is read-only on this repo (403).
+          REMOTE="https://x-access-token:${TSR_GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for i in 1 2 3 4 5; do
+            git rebase --abort 2>/dev/null || true   # clear any halted rebase from a prior conflicting attempt
+            if git pull --rebase --autostash "$REMOTE" ${GITHUB_REF_NAME}; then
+              git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
+            else
+              # CONFLICT-PROOF MERGE (owner incident 2026-07-17: a rebase conflict here lost the run's
+              # posted rows → the next run DOUBLE-POSTED the same stories). Ledgers are append-mostly
+              # JSON → resolve every conflict as a UNION (JSON) / ours (binary), then continue.
+              echo "rebase conflict — union-merging ledgers"
+              for f in $(git diff --name-only --diff-filter=U); do
+                case "$f" in
+                  *.json)
+                    # rebase swaps sides: :3 = THIS run's commit being replayed, :2 = the remote base.
+                    # The run's rows must win per-key (they are the rows a failed push would lose).
+                    git show :3:"$f" > /tmp/run.json 2>/dev/null || echo "" > /tmp/run.json
+                    git show :2:"$f" > /tmp/remote.json 2>/dev/null || echo "" > /tmp/remote.json
+                    node pipeline/ig/scripts/merge-ledgers.mjs "$f" /tmp/run.json /tmp/remote.json || git checkout --theirs -- "$f" || true
+                    ;;
+                  *) git checkout --theirs -- "$f" 2>/dev/null || git checkout --ours -- "$f" || true ;;
+                esac
+                git add "$f"
+              done
+              GIT_EDITOR=true git rebase --continue && git push "$REMOTE" HEAD:${GITHUB_REF_NAME} && exit 0
+            fi
+            echo "push attempt $i failed — retrying"; sleep $((i * 10))
+          done
+          echo "::error::ig ledger could not be pushed — manual reconcile required" && exit 1
+      - name: run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-run-report
+          path: data/ig/runs/
+          if-no-files-found: ignore
+      # the built reel(s) — downloadable for owner review (works for draft/no-publish test runs;
+      # out/ is git-ignored + ephemeral in CI, so the artifact is the only way to retrieve it)
+      - name: built video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-video
+          path: |
+            data/ig/out/
+            data/ig/work/*/job.json
+          if-no-files-found: ignore
+          retention-days: 7
