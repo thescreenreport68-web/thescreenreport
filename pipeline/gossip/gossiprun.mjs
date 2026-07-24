@@ -15,6 +15,7 @@ import { writeGossipArticle } from "./assemble.mjs";
 import { detectGossipType, LEDE_ORDER } from "./writer.mjs";
 import { loadRecentIndex, isCrossDup, tokens as xdTokens, normName } from "./crossDedup.mjs";
 import { brandCardHero } from "./brandCard.mjs";
+import { updateArticleInPlace, readParent, isOwnArticle, withinWindow } from "./updateInPlace.mjs";
 import { routeBySubject } from "./config.gossip.mjs";
 import { openStore } from "./vecStore.mjs";
 import { dedupCheck, recordPublished } from "./dedup.mjs";
@@ -71,6 +72,8 @@ export function updateStreak({ published, processed }, { dir = path.join(DATA_DI
 export async function gossipRun({
   discoverImpl, categorizeImpl, runImpl = runGossip, writeImpl = writeGossipArticle,
   heroImpl = pickHero, linkIndexImpl = buildLinkIndex, findRelatedImpl = findRelatedLinks, categoryGuardImpl,
+  updateInPlaceImpl = updateArticleInPlace,
+  contentDir = null,   // tests point this at a temp dir; production uses the real content dir
   onePerCategory = false, verify = true, judge = true, hero = false, links = false, categoryGuard = false,
   dedup = true, social = true, storeImpl = null, embedImpl, adjudicateImpl,
   limit = 0, fromFind = false, dequeueImpl = dequeue, maxDrain = 10, dryRun = false, nowMs, requireTopicId = null,
@@ -180,8 +183,16 @@ export async function gossipRun({
       }
       // STEP 7 — internal links to REAL related published articles (shared-entity gate + contradiction firewall).
       if (links && linkIndex) { try { r.article.relatedLinks = await findRelatedImpl({ article: r.article, topic: t, index: linkIndex, selfSlug: t.slug }); } catch { r.article.relatedLinks = []; } }
-      // Phase 3 — follow-up link-chain: an UPDATE always links its parent FIRST, by exact title (deterministic).
-      if (t.parentSlug) {
+      // ONE STORY = ONE URL (owner directive 2026-07-20): decide BEFORE the link-chain, because an
+      // article about to be refreshed IN PLACE must never link to itself.
+      // REVIEW runs are artifact-only and must never mutate the live content dir.
+      let inPlaceTarget = null;
+      if (t.isUpdate && t.parentSlug && !REVIEW) {
+        const p = readParent(t.parentSlug, contentDir || undefined);
+        if (p && isOwnArticle(p.fm) && withinWindow(p.fm, now)) inPlaceTarget = t.parentSlug;
+      }
+      // Phase 3 — follow-up link-chain: a NEW-slug follow-up links its parent FIRST, by exact title.
+      if (t.parentSlug && !inPlaceTarget) {
         try {
           const pf = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../content/articles", `${t.parentSlug}.md`);
           const raw = fs.readFileSync(pf, "utf8");
@@ -191,7 +202,23 @@ export async function gossipRun({
           r.article.relatedLinks = [chain, ...(r.article.relatedLinks || []).filter((l) => l.slug !== t.parentSlug)];
         } catch { /* parent file unavailable (e.g. review-only) — chain skipped */ }
       }
-      const out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, bundle: r.bundle, ...(REVIEW ? { dir: REVIEW } : {}) });
+      let out = null;
+      if (inPlaceTarget) {
+        const up = updateInPlaceImpl({
+          parentSlug: inPlaceTarget, article: r.article, frame: r.frame, provenance: r.provenance,
+          route: r.route, topic: t, bundle: r.bundle, dateISO, newFact: t.updateFact, dryRun, now,
+          ...(contentDir ? { dir: contentDir } : {}),
+        });
+        if (up.status === "UPDATED") {
+          out = up;
+          console.log(`[one-url] refreshed ${up.slug} in place (update #${up.frontmatter.updatedCount}) — no new slug minted`);
+        } else if (up.status === "SKIP") {
+          report.skipped.push({ id: t.id, category: cat, decision: "UPDATE_TOO_SOON", reason: up.reason });
+          continue;                                   // anti-churn: leave the live URL untouched
+        }
+        // PUBLISH_NEW ⇒ fall through and mint a slug as normal
+      }
+      if (!out) out = writeImpl({ article: r.article, frame: r.frame, provenance: r.provenance, route: r.route, topic: t, dateISO, dryRun, bundle: r.bundle, ...(REVIEW ? { dir: REVIEW } : {}) });
       // The 72h cross-lane index was built ONCE before this loop, so on a multi-article tick article #2
       // was never checked against article #1 — two pops of the same story in one tick both shipped.
       // Fold each publish straight into the live index.
@@ -211,7 +238,7 @@ export async function gossipRun({
         verifyDegraded: !!r.provenance?.verifyDegraded,
         relatedLinks: (r.article.relatedLinks || []).map((l) => l.slug),
         sources: (r.bundle?.sources || []).map((s) => `${s.outlet}/${s.tier}`), written: out.written, path: out.path,
-        isUpdate: !!t.isUpdate, parentSlug: t.parentSlug || null,
+        isUpdate: !!t.isUpdate, parentSlug: t.parentSlug || null, updatedInPlace: !!out.updatedInPlace,
         headline: r.headline || null, seoSemantic: r.seoSemantic || null, voice: r.voice || null,
         guardCuts: r.guardCuts || [], surgicalFixes: r.surgicalFixes || [],
         seoIssues: (out.seoIssues || []).map((i) => `${i.code}:${i.action}`),
