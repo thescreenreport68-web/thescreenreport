@@ -13,6 +13,8 @@ import { editorialGate } from "./stages/editorialGate.mjs";
 import { canonicalize } from "./find/categorize.mjs";
 import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store.mjs";
 import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
+import { findSameStory, myRecentArticles } from "./find/sameStory.mjs";
+import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
@@ -59,8 +61,20 @@ if (FROM_FIND) {
   // candidate's entities+event words against EVERY article in the shared content/articles dir from the last 72h
   // (read-only — all lanes publish there); ≥3 shared non-generic stems = same story → skip.
   const _recent = recentArticles(168); // 7 days (2026-07-17: a 6-day-later rehash of our own Ariana Grande story slipped the old 72h window)
+  // ONE STORY = ONE URL (owner standing policy 2026-07-19): before deciding to SKIP a near-duplicate, ask whether it
+  // is actually a DEVELOPMENT on a story THIS lane already published. If so we keep the topic and route it to an
+  // in-place UPDATE of that article (find/sameStory.mjs decides, at a much higher bar than the skip rule — a wrong
+  // update overwrites a live URL). `myRecentArticles` is ledger-restricted, so another lane's file can never match.
+  const _mine = myRecentArticles(168);
   const _n1 = SOURCE_TOPICS.length;
+  let _updates = 0;
   SOURCE_TOPICS = SOURCE_TOPICS.filter((t) => {
+    const u = findSameStory(t, _mine);
+    if (u) {
+      t._update = u; _updates++;
+      console.log(`  ↻ UPDATE (one story = one URL): "${(t.title || "").slice(0, 62)}" → /${u.category}/${u.slug}/ (${u.why})`);
+      return true; // proceed through the pipeline; the write step merges instead of creating a new slug
+    }
     const d = findDuplicate(t, _recent);
     if (d) { console.log(`  ⏭ dup-story skip: "${(t.title || "").slice(0, 70)}" ≈ published "${d.slug}" (shared: ${d.shared.slice(0, 5).join(", ")})`); return false; }
     // PER-ENTITY DAY CAP (scale-up 2026-07-16): defer a topic whose entity already has ≥4 articles in 24h — the
@@ -70,7 +84,7 @@ if (FROM_FIND) {
     if (cap) { console.log(`  ⏸ entity day-cap: "${(t.title || "").slice(0, 70)}" — ${cap.count} article(s) on this entity in 24h (cap ${cap.cap}; e.g. ${cap.sample.join(", ")})`); return false; }
     return true;
   });
-  if (_n1 !== SOURCE_TOPICS.length) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} duplicate/capped topic(s) dropped → ${SOURCE_TOPICS.length} publishable`);
+  if (_n1 !== SOURCE_TOPICS.length || _updates) console.log(`  dup guard: ${_n1 - SOURCE_TOPICS.length} duplicate/capped topic(s) dropped → ${SOURCE_TOPICS.length} publishable (${_updates} routed to in-place UPDATE)`);
   // PACING BAR (Phase 4): the scheduler passes the day's adaptive quality bar — topics scoring below it wait for
   // a richer moment (or the bar to relax). Breaking topics are exempt (they pre-cleared the governor's gate).
   const PACE_BAR = Number(process.env.PACE_BAR || 0);
@@ -460,7 +474,10 @@ async function processTopic(topic, i) {
     // (owner 2026-07-01, gossip-parity): source outlet og:image (the real on-topic story photo) → cinematic TMDB
     // stills, vision-ranked → Wikimedia Commons last resort; HOTLINKED (measured remotely, never re-hosted);
     // >=1200px Discover floor; landscape preferred. A passed article with NO image on any ladder still HOLDS.
-    if (pass) {
+    // ONE STORY = ONE URL: an in-place UPDATE keeps the published article's hero (updateArticle.PRESERVE), so the
+    // whole ladder — og:image fetch, vision ranking, remote measures — would be paid for and then discarded. Skipping
+    // it also removes a false failure mode: an update must never be HELD for lack of a NEW image it doesn't need.
+    if (pass && !topic._update) {
       const isTitleStory = ["movies", "tv", "streaming"].includes(topic.category) || ["box-office", "trailer", "watchguide", "reaction"].includes(topic.formatTag);
       // For a TITLE story, search the image by the REAL WORK (the resolved TMDB title / editorial work), never the
       // editorial-corrected PERSON entity — that grabbed a wrong same-name cooking show's chef for the Silo story.
@@ -508,23 +525,51 @@ async function processTopic(topic, i) {
       writtenCount++;
       const out = assemble({ article, classification, image, topic, dateISO });
       auditBody = out.body; internalLinks = out.internalLinks || [];
+      // ONE STORY = ONE URL: when this topic was matched to an article we already published, merge the fresh facts
+      // into THAT file (identity fields frozen, dateModified stamped) instead of writing a second slug. A null merge
+      // means the target became unreadable — fall through and publish normally rather than lose the development.
+      const merged = topic._update ? mergeUpdate({ file: path.join(ART, topic._update.file), out, nowISO: new Date().toISOString() }) : null;
+      if (topic._update && !merged) console.log(`  ⚠ update target unreadable (${topic._update.slug}) — publishing as a new article instead`);
+      // ANTI-CHURN: the target was refreshed very recently. Do NOT publish a second URL as a consolation —
+      // that is precisely what this policy forbids. Drop the topic; it stays eligible once the cooldown clears.
+      if (merged?.skipped) {
+        writtenCount--;
+        rec.status = "deferred";
+        rec.deferReason = `update cooldown (${merged.slug} refreshed ${merged.ageH.toFixed(1)}h ago < ${merged.cooldownH}h)`;
+        console.log(`  ⏸ update cooldown: /${topic._update.category}/${merged.slug}/ was refreshed ${merged.ageH.toFixed(1)}h ago — deferring (no second URL)`);
+        return rec;
+      }
+      const upd = merged;
       if (!DRY) {
-        fs.writeFileSync(path.join(ART, out.slug + ".md"), out.md);
+        // UPDATE writes to the EXISTING slug; a normal publish writes the new one. Everything downstream
+        // (ledger record, status, audit, state file) is shared — only the destination and the keys differ.
+        fs.writeFileSync(path.join(ART, (upd ? upd.slug : out.slug) + ".md"), upd ? upd.md : out.md);
         // DEDUP LEDGER: record the story so FIND never re-processes/re-publishes it (owner: no dupes = save credits +
         // protect Google trust + keep the feed fresh). Keyed by eventSlug (cross-outlet), the title slug, AND the
         // robust primaryEntity+eventType key (catches a story whose headline drifts across runs — the KVIFF bug).
+        // On an UPDATE the NEW event keys are recorded against the SAME slug, so the next tick recognises this
+        // development as already covered instead of re-opening it.
         // + the VIDEO-FEED fields (Reels automation): source URLs for the image-gatherer, priority/signals for the
         // top-10 picker, hero image + category for frame filler/diversity — lost otherwise (queue.json is overwritten).
         recordPublished({
-          eventSlug: topic.eventSlug, titleKey: slugKey(topic.title), primaryEntity: topic.primaryEntity, eventType: topic.eventType, slug: out.slug, title: topic.title,
+          eventSlug: topic.eventSlug, titleKey: slugKey(topic.title), primaryEntity: topic.primaryEntity, eventType: topic.eventType,
+          slug: upd ? upd.slug : out.slug, title: upd ? upd.frontmatter.title : topic.title,
           sourceUrls: (topic.sources || []).map((s) => s?.url).filter(Boolean),
           priority: topic.priority, signals: topic.signals,
-          image: image?.image || null, category: classification.category,
+          image: (upd ? upd.frontmatter.image : image?.image) || null,
+          category: upd ? upd.frontmatter.category : classification.category,
           verifyStatus: topic.verification?.status || null,
         });
       }
-      rec.status = "published"; rec.score = scored.score; rec.category = classification.category; rec.subcategory = classification.subcategory;
-      console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + out.slug + ".md"}${rec.acceptReason ? " [" + rec.acceptReason + "]" : ""} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
+      rec.status = "published"; rec.score = scored.score;
+      rec.category = upd ? upd.frontmatter.category : classification.category;
+      rec.subcategory = upd ? upd.frontmatter.subcategory : classification.subcategory;
+      if (upd) rec.updatedSlug = upd.slug;
+      if (upd) {
+        console.log(`  ↻ ${DRY ? "DRY (not written)" : "UPDATED"} /${upd.frontmatter.category}/${upd.slug}/ · dateModified ${upd.frontmatter.dateModified} · rev ${upd.frontmatter.updateCount} · ${upd.titleChanged ? `headline REFRESHED (sim ${upd.sim.toFixed(2)}) → "${upd.frontmatter.title}"` : "headline unchanged"} · no new URL`);
+      } else {
+        console.log(`  ✓ ${DRY ? "DRY (md not written)" : "WROTE " + out.slug + ".md"}${rec.acceptReason ? " [" + rec.acceptReason + "]" : ""} [${classification.category}/${classification.subcategory}] score ${scored.score}`);
+      }
     } else {
       // Terminal hold — rare in the lean model: a genuinely broken article (no title/garbled), a missing required
       // embed, a body trimmed too short, or no hero image. rec.holdReason was set where the hold was decided.
