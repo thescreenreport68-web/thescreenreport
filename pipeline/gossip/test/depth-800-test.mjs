@@ -115,20 +115,20 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
 }
 // ── DEPTH PASS: a short draft is rewritten using UNUSED material, not padded ──
 {
+  // Depth comparable to the real live case (Nivea: 36 facts / 27 quotes) so the material genuinely
+  // projects to 800+ — otherwise the EARLY MATERIAL GATE correctly holds it before any writing.
   const details = {
-    facts: ["He had been due to play 14 dates across the UK and Germany beginning in September",
-            "Live Nation confirmed refunds would be issued automatically within 30 days",
-            "Adams last toured Europe in 2023",
-            "His representative said he expects to reschedule in 2027"],
-    quotes: [{ speaker: "Ryan Adams", text: "I have to stop and take care of this" }],
-    timeline: [{ when: "Friday", what: "cancelled the tour" }], people: [], numbers: [], openQuestions: [],
+    facts: Array.from({ length: 30 }, (_, i) => `Verified fact ${i}: a distinct detail the reporting established about the cancellation.`),
+    quotes: Array.from({ length: 8 }, (_, i) => ({ speaker: "Ryan Adams", text: `A distinct verbatim line ${i} from the statement he posted.` })),
+    timeline: Array.from({ length: 5 }, (_, i) => ({ when: `Day ${i}`, what: `a separate development ${i} in the sequence` })),
+    people: [], numbers: [], openQuestions: [],
   };
-  const background = { timeline: [{ when: "2023", what: "last European tour" }], priorStatements: [], whoTheyAre: ["Ryan Adams is a 51-year-old musician"], whatsNext: ["Reschedule expected 2027"] };
+  const background = { timeline: Array.from({ length: 6 }, (_, i) => ({ when: `20${18 + i}`, what: `a prior event ${i} in his touring history` })), priorStatements: Array.from({ length: 4 }, (_, i) => ({ who: "His representative", what: `an earlier statement ${i} on the schedule`, when: `20${20 + i}` })), whoTheyAre: ["Ryan Adams is a 51-year-old musician"], whatsNext: ["Reschedule expected 2027"] };
   let calls = 0, sawIssues = null;
   const shortBody = 'Ryan Adams cancelled his European tour on Friday, OK! Magazine reports. "I have to stop and take care of this," he wrote.\n\n' + varied(20);
   const longBody = 'Ryan Adams cancelled his European tour on Friday, OK! Magazine reports. "I have to stop and take care of this," he wrote.\n\n' + varied(75) + "\n\n" + varied(75);
   const r = await runGossip(
-    { primaryEntity: "Ryan Adams", title: "t", claim: "tour cancelled", subjectType: "musician", sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC.repeat(3) }, { outlet: "Page Six", tier: 6, text: SRC.repeat(3) }] },
+    { primaryEntity: "Ryan Adams", title: "t", claim: "tour cancelled", subjectType: "musician", sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC.repeat(8) }, { outlet: "Page Six", tier: 6, text: SRC.repeat(8) }] },
     {
       writeImpl: async ({ priorArticle, issues }) => {
         calls++;
@@ -158,7 +158,8 @@ const BUNDLE = { sources: [{ outlet: "OK! Magazine", tier: 5, text: SRC }], quot
       backgroundImpl: async () => ({ timeline: [], priorStatements: [], whoTheyAre: [], whatsNext: [] }),
       verify: false, judge: false, corroborate: false, substance: true,
     });
-  check("🔴 genuinely thin story is HELD, never padded to 800", r.status === "HELD" && r.stage === "thin", `${r.status}/${r.stage}`);
+  check("🔴 genuinely thin story is HELD, never padded to 800", r.status === "HELD" && /thin/.test(r.stage), `${r.status}/${r.stage}`);
+  check("…and it is held BEFORE paying for the writer (early material gate)", r.stage === "thin-material", r.stage);
 }
 // ── the tested models are the ones in use ──
 {

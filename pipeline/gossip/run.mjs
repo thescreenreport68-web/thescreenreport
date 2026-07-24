@@ -19,7 +19,7 @@ import { gatherBundle, corroborateBundle } from "./contentFinder.mjs";
 import { findDetails, findBackground, materialDepth } from "./detailFinder.mjs";
 import { editorialReview } from "./editorialGate.mjs";
 import { frameTopic } from "./frame.mjs";
-import { writeGossip } from "./writer.mjs";
+import { writeGossip, wordRangeFor } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
 import { semanticSeoPass } from "./seoAudit.mjs";
@@ -28,6 +28,9 @@ import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck, substanceCheck, SUBSTANCE_MIN_WORDS } from "./qualityGate.mjs";
+// Depth passes are full writer calls. 2 is the quality ceiling; 1 captures most of the gain. Tunable
+// because wall-clock per tick matters — a tick that runs 25min backs the hourly cron up behind itself.
+const DEPTH_PASSES = Number(process.env.GOSSIP_DEPTH_PASSES ?? 2);
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
@@ -173,6 +176,20 @@ export async function runGossip(topic, {
   // just the thin discovery source or the highest-tier outlet that merely echoed it.
   const frame = frameTopic(topic, bundle, ed);
   if (frame.decision === "HOLD") return { status: "HELD", frame, stage: "frame", reason: frame.reason };
+
+  // EARLY MATERIAL GATE (2026-07-25). With an 800-word floor, a thin topic used to pay for the writer
+  // AND up to two depth passes before being held at the end — repeated for every topic the tick drained,
+  // which is what pushed ticks past 25 minutes. The word target is already derived from the enriched
+  // material, so if its CEILING cannot reach the floor, no amount of writing will get there. Decide here
+  // and skip the whole write stage. (Saves ~4 writer calls per doomed topic; the verdict is identical.)
+  if (substance) {
+    const projected = wordRangeFor(bundle);
+    if (projected.hi < SUBSTANCE_MIN_WORDS) {
+      return { status: "HELD", frame, stage: "thin-material",
+        reason: `material supports only ${projected.label} — below the ${SUBSTANCE_MIN_WORDS}w floor; skipped before writing`,
+        substance: { pass: false, words: 0, reasons: [`projected ${projected.label} < ${SUBSTANCE_MIN_WORDS}w`] } };
+    }
+  }
 
   // Stage 5+6 — WRITE, then the SELF-CORRECT loop. The writer fixes ONLY the flagged spots each pass (surgical),
   // keeping the good prose; a full rewrite is the fallback only when a draft is broken top-to-bottom. A hard-stop
@@ -385,7 +402,7 @@ export async function runGossip(topic, {
   // ask it to work those facts in. This adds SUBSTANCE, not words: the prompt never mentions a word
   // count, it names real unused facts. If the material is genuinely exhausted, nothing is added and the
   // gate below holds the piece — which is the honest outcome.
-  for (let depthPass = 0; depthPass < 2 && substance && !sub.pass && sub.words < SUBSTANCE_MIN_WORDS; depthPass++) {
+  for (let depthPass = 0; depthPass < DEPTH_PASSES && substance && !sub.pass && sub.words < SUBSTANCE_MIN_WORDS; depthPass++) {
     const body = String(article.body || "");
     const unused = [
       ...((bundle?.details?.facts) || []),

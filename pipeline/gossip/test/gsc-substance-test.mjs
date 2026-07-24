@@ -125,7 +125,7 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
 }
 // ── end-to-end: a thin article is HELD, a substantial one PUBLISHES ──
 {
-  const SRC = "Star Alpha, 34, wed Star Beta on July 3 at a Malibu estate with 40 guests, People reports. ".repeat(8);
+  const SRC = "Star Alpha, 34, wed Star Beta on July 3 at a Malibu estate with 40 guests, People reports. ".repeat(30);
   const mk = (body) => async () => ({
     title: "Star Alpha and Star Beta Wed in Malibu", dek: "The couple kept the ceremony small and private.",
     body, keyTakeaways: ["k"], faq: [{ q: "Q?", a: "A real answer here." }], whatWeKnow: ["Star Alpha wed Star Beta"], whatWeDont: [], claims: [],
@@ -140,7 +140,7 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
   const thinBody = 'Star Alpha wed Star Beta on July 3, People reports. "It was perfect," she said.\n\n' +
     'A short account of the day followed in the same report. '.repeat(12);
   const rThin = await runGossip(topic, { ...common, writeImpl: mk(thinBody) });
-  check("E2E: a thin article is HELD, not published", rThin.status === "HELD" && rThin.stage === "thin", `${rThin.status}/${rThin.stage}`);
+  check("E2E: a thin article is HELD, not published", rThin.status === "HELD" && /thin/.test(rThin.stage), `${rThin.status}/${rThin.stage}`);
 
   const richBody = 'Star Alpha wed Star Beta on July 3, People reports. "It was the best day of my life," she said.\n\n' +
     ["The ceremony took place under an olive grove at the property's edge.", "Guests arrived by shuttle from a hotel in Santa Monica that afternoon.", "The bride wore a silk gown with a cathedral train and no veil.", "Dinner was served family style on long wooden tables lit by lamps.", "A string quartet played during the vows before a soul band took over.", "The couple met on a film set in Atlanta and dated privately for years.", "Security collected phones at the gate to keep images off social media.", "Fireworks closed the night just after midnight over the Pacific.", "Their families gathered for a rehearsal lunch the previous day.", "Vows were written separately and read without notes to the crowd.", "Catering came from a Venice restaurant the pair visited on date one.", "The officiant was a college friend who introduced them years earlier.", "Flowers were grown on a farm twenty minutes north of the property.", "An after-party ran until sunrise in a converted barn behind the house.", "Only immediate family stayed on site for brunch the following morning.", "Neither had spoken publicly about the engagement before this week.", "A representative declined to describe the guest list in any detail.", "Photographs will not be released, two people familiar with the plans said.", "The pair are expected to travel abroad later in the summer months.", "Both have kept their relationship largely out of public view until now.",
@@ -200,7 +200,14 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
     corroborateImpl: async (t, b) => ({ ...b, corroboratingOutlets: [{ outlet: "Page Six" }] }),
   });
   // gatherBundle builds the bundle from the topic's own sources; add the 2nd outlet via the topic itself
-  const rRich2 = rRich.status === "PUBLISH" ? rRich : await runGossip({ ...topic, sources: [{ outlet: "People", tier: 6, text: SRC }, { outlet: "Page Six", tier: 6, text: SRC }] }, { ...common, writeImpl: mk(richBody) });
+  // enrichment is off in this suite, so hand the run pre-built details/background — the early material
+  // gate is depth-driven and would otherwise (correctly) refuse to write from a thin bundle.
+  const enriched = {
+    detailImpl: async () => ({ facts: Array.from({ length: 30 }, (_, i) => `Verified fact ${i} about the ceremony.`), quotes: Array.from({ length: 8 }, (_, i) => ({ speaker: "a source", text: `Distinct line ${i}.` })), timeline: Array.from({ length: 5 }, (_, i) => ({ when: `Day ${i}`, what: `step ${i}` })), people: [], numbers: [], openQuestions: [] }),
+    backgroundImpl: async () => ({ timeline: Array.from({ length: 6 }, (_, i) => ({ when: `20${18 + i}`, what: `prior ${i}` })), priorStatements: Array.from({ length: 4 }, (_, i) => ({ who: "rep", what: `earlier ${i}` })), whoTheyAre: ["Star Alpha is an actor"], whatsNext: [] }),
+    enrich: true,
+  };
+  const rRich2 = rRich.status === "PUBLISH" ? rRich : await runGossip({ ...topic, sources: [{ outlet: "People", tier: 6, text: SRC }, { outlet: "Page Six", tier: 6, text: SRC }] }, { ...common, ...enriched, writeImpl: mk(richBody) });
   check("E2E: a substantial multi-source article PUBLISHES", rRich2.status === "PUBLISH", `${rRich2.status}${rRich2.reason ? " — " + rRich2.reason : ""}`);
   check("E2E: the substance verdict is reported", !!rRich2.substance && typeof rRich2.substance.words === "number", JSON.stringify(rRich2.substance || {}).slice(0, 90));
 }
