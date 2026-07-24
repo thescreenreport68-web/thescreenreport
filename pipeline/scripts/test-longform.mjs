@@ -62,7 +62,7 @@ console.log("=== 4. STRUCTURE — the subheadings and bullets that are missing t
 
 console.log("=== 5. THRESHOLDS are staged + tunable (test ladder 400 → 600 → 800) ===");
 {
-  ok(CFG.MIN_WORDS === 800, `default floor is the owner's stated minimum (${CFG.MIN_WORDS})`);
+  ok(CFG.MIN_WORDS === 600, `default floor is the owner's stated minimum, 600 — one number everywhere (the earlier 600/800 split held a good 707-word article against a bar he never set)`);
   ok(CFG.MIN_H2 >= 4 && CFG.MIN_BULLETS >= 4, `structure minimums set (${CFG.MIN_H2} subheads, ${CFG.MIN_BULLETS} bullets)`);
   ok(CFG.MIN_CHARS >= 6000, `material floor scales with the word target (${CFG.MIN_CHARS} chars for ${CFG.MIN_WORDS} words)`);
   ok(CFG.TARGET_WORDS > CFG.MIN_WORDS, "target sits above the floor so the writer aims past the minimum");

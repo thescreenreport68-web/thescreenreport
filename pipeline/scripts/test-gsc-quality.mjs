@@ -46,7 +46,11 @@ console.log("=== 3. THE BACKWARDS BRANCH IS GONE — a weak story never earns a 
   const lean = structuralFloors(base, assessGrounding(bundle([2000, 200])));
   ok(lean.words >= CFG.MIN_WORDS, `lean story word floor ${lean.words} >= ${CFG.MIN_WORDS} (was 220 — the bug)`);
   const rich = structuralFloors(base, assessGrounding(bundle([5000, 4000])));
-  ok(rich.words === 400, "well-sourced story keeps its full 400-word format floor");
+  // Owner raised the absolute minimum to 600 (2026-07-24), so a 400-word format floor is RAISED, not kept.
+  // A format whose own floor is ABOVE the minimum still keeps its higher value — the floor is a floor, not a target.
+  ok(rich.words === CFG.MIN_WORDS, `a 400-word format floor is raised to the ${CFG.MIN_WORDS} minimum (got ${rich.words})`);
+  const tall = structuralFloors({ words: 900, faq: 3, h2: 2, kt: 3, ext: 2, sources: true }, assessGrounding(bundle([5000, 4000])));
+  ok(tall.words === 900, "a format that already asks for MORE than the minimum keeps its own higher floor");
   ok(structuralFloors({ ...base, words: 220 }, assessGrounding(bundle([5000]))).words === CFG.MIN_WORDS,
     `a format asking for 220 is RAISED to ${CFG.MIN_WORDS} — nothing publishes under the floor, ever`);
   // structural allowances are still permitted for a genuinely leaner (but sufficiently sourced) piece

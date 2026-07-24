@@ -35,5 +35,23 @@ console.log("=== 3. metaDescription must not duplicate the dek ===");
   ok(true, "assemble rebuilds metaDescription from body prose when the finisher returns the dek verbatim");
 }
 
+
+console.log("=== 4. THE 600-WORD MINIMUM IS REAL, NOT ADVISORY ===");
+{
+  const { CFG, structuralFloors, assessGrounding } = await import("../lib/qualityFloor.mjs");
+  ok(CFG.MIN_WORDS === 600, `absolute floor is 600 (owner 2026-07-24) — got ${CFG.MIN_WORDS}`);
+  // every format floor is raised to 600, including the 300-word news form that let 314w through
+  for (const [form, w] of [["news", 300], ["awards", 300], ["music-news", 350], ["box-office", 400]]) {
+    const got = structuralFloors({ words: w, faq: 3, h2: 1, kt: 0, ext: 0, sources: false }, assessGrounding(null)).words;
+    ok(got === 600, `${form} floor ${w} → ${got} (no format may sit under the minimum)`);
+  }
+  // 🔴 the loophole that published a 314-word article: word count was a NIT, retried once, shipped anyway
+  const BROKEN_RX = /^no title$|garbled non-Latin|prompt-leak|^body \d+w < \d+/i;
+  ok(BROKEN_RX.test("body 314w < 600"), "an under-floor body is FATAL (was a nit → published anyway)");
+  ok(BROKEN_RX.test("body 599w < 600"), "one word short is still fatal — a minimum means a minimum");
+  ok(!BROKEN_RX.test("FAQ 1 < 3"), "genuine format nits stay non-fatal (still retried, still publishable)");
+  ok(!BROKEN_RX.test("H2s 1 < 2"), "structure nits stay non-fatal");
+}
+
 console.log(`\n${fail===0?"✅ ALL":"❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail?1:0);

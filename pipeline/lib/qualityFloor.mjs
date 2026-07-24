@@ -31,7 +31,9 @@ export const CFG = {
   // a story resting on ONE outlet must be richer — the "no single-source shorts" rule
   MIN_CHARS_SINGLE: Number(process.env.QUALITY_MIN_CHARS_SINGLE ?? 1800),
   // hard word floor for anything that publishes; never relaxed, for any format, for any reason
-  MIN_WORDS: Number(process.env.QUALITY_MIN_WORDS ?? 250),
+  // 600 = the owner's hard minimum for every article (2026-07-24), raised from 250. Applies to ALL
+  // articles, longform or not — the previous fallback let a short-form story publish at 314 words.
+  MIN_WORDS: Number(process.env.QUALITY_MIN_WORDS ?? 600),
   // Require at least one FULL-TEXT extraction. This is the decisive rule, learned from live tick #524:
   // the content finder either extracts the outlet's real article OR falls back to the RSS blurb, and
   // "0 full-text, 1 summary" (300 chars) is precisely the thin single-source brief the owner banned —

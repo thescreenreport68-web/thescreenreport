@@ -25,7 +25,11 @@ export const ON = process.env.LONGFORM === "1";
 export const CFG = {
   // The enforced floor. Staged during testing (400 → 600 → 800) via LONGFORM_MIN_WORDS so we can prove
   // each rung before demanding the next; 800 is the owner's stated bare minimum for going live.
-  MIN_WORDS: Number(process.env.LONGFORM_MIN_WORDS ?? 800),
+  // 600 = the owner's single, hard minimum for EVERY article (2026-07-24). One number, everywhere —
+  // the earlier split (600 general / 800 longform) held a perfectly good 707-word article because two
+  // different floors were in play. The writer is still ASKED for more (TARGET below); 600 is the line
+  // an article may not fall under, not the target it aims for.
+  MIN_WORDS: Number(process.env.LONGFORM_MIN_WORDS ?? 600),
   // The writer is asked for TARGET, not MIN, and TARGET carries deliberate MARGIN above the floor.
   // Measured: the fidelity guard runs AFTER the writer and cuts every sentence it cannot trace to the
   // sources — 6 cuts on the 800-word test, landing a genuinely good draft at 798 and failing it by two
@@ -75,13 +79,21 @@ const HEDGE = /\b(reportedly|allegedly|apparently|seemingly|arguably|presumably|
 const sentences = (t) => String(t || "").replace(/\s+/g, " ").split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter((s) => s.split(/\s+/).length >= 4);
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
 
-// Jaccard similarity over word sets — catches a sentence re-stated in fresh wording, which a literal
-// duplicate check misses and which is the most common way padding actually appears.
+// Near-duplicate detection. TWO corrections learned from a false alarm on a real article:
+//   1. Compare only SUBSTANTIAL sentences (>= MIN_DUP_WORDS). Short ones are naturally similar —
+//      "He plays the lead role" vs "SHE plays the lead role" scored 0.80 on the old measure and was
+//      called padding, though they name different people. Length is what makes repetition repetition.
+//   2. Use Jaccard over the UNION, not the smaller set. Dividing by min(|A|,|B|) inflates similarity
+//      whenever one sentence is short, which is exactly the false-alarm case above.
+// Same lesson as the \s-matches-newline bug: a measure that flags good work is worse than none.
+const MIN_DUP_WORDS = Number(process.env.PADDING_MIN_SENT_WORDS ?? 10);
+const DUP_SIM = Number(process.env.PADDING_DUP_SIM ?? 0.6);
 function nearDup(a, b) {
+  if (a.split(/\s+/).length < MIN_DUP_WORDS || b.split(/\s+/).length < MIN_DUP_WORDS) return 0;
   const A = new Set(norm(a).split(" ")), B = new Set(norm(b).split(" "));
-  if (A.size < 4 || B.size < 4) return 0;
+  if (A.size < 6 || B.size < 6) return 0;
   const inter = [...A].filter((w) => B.has(w)).length;
-  return inter / Math.min(A.size, B.size);
+  return inter / (A.size + B.size - inter);          // union-based: symmetric, not short-biased
 }
 
 export function paddingReport(body, { title = "" } = {}) {
@@ -95,7 +107,7 @@ export function paddingReport(body, { title = "" } = {}) {
   // near-duplicate sentence pairs
   let dupPairs = 0;
   for (let i = 0; i < sents.length; i++) {
-    for (let j = i + 1; j < sents.length; j++) if (nearDup(sents[i], sents[j]) >= 0.7) dupPairs++;
+    for (let j = i + 1; j < sents.length; j++) if (nearDup(sents[i], sents[j]) >= DUP_SIM) dupPairs++;
   }
   // headline restated in the body (a classic filler paragraph)
   const tset = new Set(norm(title).split(" ").filter((w) => w.length > 3));
