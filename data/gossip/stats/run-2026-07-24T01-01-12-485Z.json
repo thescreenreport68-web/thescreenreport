@@ -1,0 +1,135 @@
+{
+  "ts": "2026-07-24T01:01:12.485Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "rihanna-and-a-ap-rocky-make-a-high-fashion-exit-from-the-world-cup-final",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.011339,
+  "costPerPublished": 0.011339,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12097,
+      "out": 632,
+      "usd": 0.0052091
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 917,
+      "out": 1191,
+      "usd": 0.00046186
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 13261,
+      "out": 4067,
+      "usd": 0.004917534
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5293,
+      "out": 552,
+      "usd": 0.0007500999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2607,
+      "out": 192,
+      "usd": 0.0012621,
+      "ms": 1184
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 917,
+      "out": 1191,
+      "usd": 0.00029690999999999995,
+      "ms": 12596
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12681,
+      "out": 3738,
+      "usd": 0.00418755,
+      "ms": 157126
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9490,
+      "out": 440,
+      "usd": 0.003947,
+      "ms": 4024
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1362,
+      "out": 160,
+      "usd": 0.00020020000000000001,
+      "ms": 960
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 580,
+      "out": 329,
+      "usd": 0.00024526,
+      "ms": 13389
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 398,
+      "out": 84,
+      "usd": 0.00007340000000000001,
+      "ms": 596
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 194,
+      "out": 52,
+      "usd": 0.0000402,
+      "ms": 947
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2093,
+      "out": 95,
+      "usd": 0.0002473,
+      "ms": 1973
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1246,
+      "out": 161,
+      "usd": 0.00018900000000000004,
+      "ms": 1909
+    }
+  }
+}
