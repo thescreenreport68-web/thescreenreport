@@ -1,39 +1,41 @@
 ---
 title: >-
-  Disclosure Day Box Office Day 40: Adds $245,525 as Domestic Total Hits $115
+  Disclosure Day Box Office Day 41: Adds $181,420 as Domestic Total Hits $115.2
   Million
 slug: disclosure-day-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T21:31:26.023Z'
+updated: '2026-07-24T09:01:11.119Z'
+boxOfficeTracker: true
 dek: >-
   How much Disclosure Day has made at the domestic box office, with a day-by-day
   breakdown of its theatrical run, updated daily.
-metaTitle: 'Disclosure Day Box Office: Total Gross and Daily Breakdown'
+metaTitle: 'Disclosure Day Box Office: Total Gross and Daily'
 metaDescription: >-
-  Disclosure Day has grossed $115,031,290 at the domestic box office through day
-  40, adding $245,525 in its latest daily haul.
+  Disclosure Day has grossed $115,212,710 at the domestic box office through day
+  41, adding $181,420 in its latest daily haul.
 tags:
   - Disclosure Day
   - Steven Spielberg
-  - Emily Blunt
-  - Josh O'Connor
-  - Sci-Fi Thriller
+  - Olivia Blunt
   - Box Office
-  - Digital Release
-  - Whistleblower
+  - Sci-Fi
+  - Thriller
+  - Josh O'Connor
+  - Movie Bomb
 keyTakeaways:
   - >-
-    'Disclosure Day' has grossed $115,031,290 at the domestic box office through
-    day 40.
-  - 'It added $245,525 in its most recent day, playing in 1,299 theaters.'
-  - The worldwide total stands at $233 million.
+    'Disclosure Day' has grossed $115,212,710 at the domestic box office through
+    day 41.
+  - 'It added $181,420 in its most recent day, playing in 1,299 theaters.'
+  - The worldwide total stands at $235 million.
   - Emily Blunt leads the cast for director Steven Spielberg.
 faq:
   - q: How much has 'Disclosure Day' made at the box office?
     a: >-
-      'Disclosure Day' has grossed $115,031,290 domestically, with $233 million
+      'Disclosure Day' has grossed $115,212,710 domestically, with $235 million
       worldwide.
   - q: What is the production budget of 'Disclosure Day'?
     a: >-
@@ -43,19 +45,19 @@ faq:
     a: '''Disclosure Day'' is currently playing across 1,299 theaters.'
   - q: How long has 'Disclosure Day' been in theaters?
     a: >-
-      'Disclosure Day' is 40 days into its theatrical run, adding $245,525 in
+      'Disclosure Day' is 41 days into its theatrical run, adding $181,420 in
       its most recent day.
 about:
   - name: Disclosure Day
     type: Movie
   - name: Steven Spielberg
     type: Person
-  - name: Emily Blunt
+  - name: Olivia Blunt
     type: Person
 formatTag: box-office
 boxOffice:
-  domestic: '$115,031,290'
-  worldwide: $233 million
+  domestic: '$115,212,710'
+  worldwide: $235 million
   budget: $115 million
   theaters: '1,299'
 whereToWatch:
@@ -70,36 +72,32 @@ signals:
   breakout: 0
   corroboration: 4
   type: 6
-eventSlug: disclosure-day-bo-update-d40
+eventSlug: disclosure-day-bo-update-d41
 eventType: boxoffice
 outletCount: 4
 storyStatus: CONFIRMED
-image: >-
-  https://imageio.forbes.com/specials-images/imageserve/6a5aebee5c31984c1d2a0aee/0x0.jpg?format=jpg&crop=3052,1715,x0,y0,safe&height=900&width=1600&fit=bounds
-imageAlt: Disclosure Day — Emily Blunt Josh O'Connor Disclosure Day movie poster
-imageCredit: Photo via Forbes
-imageWidth: 1600
-imageHeight: 899
-updated: '2026-07-23T09:01:12.161Z'
-boxOfficeTracker: true
+image: 'https://image.tmdb.org/t/p/original/pW4Ah1A6SgZNQNmf5AgiIYPzFHF.jpg'
+imageAlt: Disclosure Day — Disclosure Day movie poster Olivia Blunt Steven Spielberg
+imageCredit: The Movie Database (TMDB)
+imageWidth: 2859
+imageHeight: 1608
 ---
 
-Steven Spielberg returns to the screen with '[Disclosure Day](/movies/disclosure-day-box-office-day-39-adds-185-595-as-domestic-total-hits-114-8/),' a sci-fi thriller starring Emily Blunt and Josh O'Connor. The film runs for 146 minutes and delves into the world of corporate secrets and extraterrestrial discovery.
+Steven Spielberg returned to original science fiction with *[Disclosure Day](/movies/disclosure-day-box-office-day-40-adds-245-525-as-domestic-total-hits-115-million/)*, a 146-minute thriller that pits a lone truth-seeker against a powerful conspiracy. The story follows cybersecurity expert Daniel Kellner, who uncovers secrets about extraterrestrial life and becomes a corporate target. His path crosses with meteorologist Margaret Fairchild, who is experiencing inexplicable phenomena, and together they race to prove the existence of alien intelligence beyond Earth's understanding.
 
-In 'Disclosure Day,' a cybersecurity expert uncovers dangerous secrets about aliens and becomes a whistleblower, forcing him to go on the run from a powerful corporation. His path crosses with a meteorologist experiencing inexplicable phenomena, and together they must work to prove the existence of life beyond Earth's understanding.
+## A Stellar Cast on a Dangerous Mission
 
-The ensemble cast is led by Emily Blunt as Margaret Fairchild and Josh O'Connor as Daniel Kellner. They are joined by Colin Firth as Noah Scanlon, Colman Domingo as Hugo Wakefield, and Eve Hewson as Jane Blakenship. Rounding out the key players are Wyatt Russell as Jackson, Elizabeth Marvel as Sister Maura, and Henry Lloyd-Hughes as Casper Boyd.
+The film assembles a formidable ensemble led by Olivia Blunt as the determined meteorologist Margaret Fairchild. Josh O'Connor plays the whistleblowing expert Daniel Kellner, with Colin Firth as the corporate figure Noah Scanlon. The supporting cast is equally deep, featuring Colman Domingo as Hugo Wakefield, Eve Hewson as Jane Blakenship, Wyatt Russell as Jackson, Elizabeth Marvel as Sister Maura, and Henry Lloyd-Hughes as Casper Boyd.
 
-'Disclosure Day' is now available to rent or buy on Amazon Video, Apple TV Store, Google Play Movies, and YouTube.
+## The Box Office: A Historic Collapse
 
-## The Box Office
-The film is now available on digital platforms, signaling the end of its box office journey.
+The journey for *Disclosure Day* at the box office is a stark tale of promise followed by precipitous decline. However, its momentum evaporated swiftly.
 
-The story of the **Disclosure Day box office** concludes as the film transitions to its digital afterlife.
+The film has now exited theaters and is available for rental or purchase on digital platforms including Amazon Video, Apple TV, Google Play Movies, and YouTube.
 
 ## At the Box Office
 
-Disclosure Day has grossed $115,031,290 at the domestic box office, 40 days into its theatrical run, while playing across 1,299 theaters. The film added $245,525 in its most recent day of release. Worldwide, it has taken in $233 million. It carries a reported production budget of $115 million.
+Disclosure Day has grossed $115,212,710 at the domestic box office, 41 days into its theatrical run, while playing across 1,299 theaters. The film added $181,420 in its most recent day of release. Worldwide, it has taken in $235 million. It carries a reported production budget of $115 million.
 
 ## Daily Tracking
 
@@ -112,3 +110,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 38 | 2026-07-20 | — | $114.7 Million |
 | 39 | 2026-07-22 | — | $114.8 Million |
 | 40 | 2026-07-23 | — | $115 Million |
+| 41 | 2026-07-24 | $181,420 | $115.2 Million |
