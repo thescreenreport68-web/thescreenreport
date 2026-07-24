@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-24T09:01:11.574Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "tom-schwartz-claps-back-at-unrecognizable-paparazzi-headline",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.010916,
+  "costPerPublished": 0.010916,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12377,
+      "out": 644,
+      "usd": 0.0053231
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 936,
+      "out": 460,
+      "usd": 0.000207872
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 13407,
+      "out": 4595,
+      "usd": 0.004630775250000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 8,
+      "in": 5343,
+      "out": 551,
+      "usd": 0.0007546999999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2345,
+      "out": 190,
+      "usd": 0.0011785,
+      "ms": 12993
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 936,
+      "out": 460,
+      "usd": 0.00016704,
+      "ms": 29664
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 12736,
+      "out": 4226,
+      "usd": 0.00436612,
+      "ms": 227790
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10032,
+      "out": 454,
+      "usd": 0.0041446,
+      "ms": 14497
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1496,
+      "out": 184,
+      "usd": 0.00022319999999999998,
+      "ms": 1142
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 671,
+      "out": 369,
+      "usd": 0.00027979000000000003,
+      "ms": 14112
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 425,
+      "out": 111,
+      "usd": 0.00008690000000000001,
+      "ms": 1326
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 197,
+      "out": 43,
+      "usd": 0.0000369,
+      "ms": 575
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2090,
+      "out": 95,
+      "usd": 0.000247,
+      "ms": 1615
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1135,
+      "out": 118,
+      "usd": 0.0001607,
+      "ms": 2678
+    }
+  }
+}
