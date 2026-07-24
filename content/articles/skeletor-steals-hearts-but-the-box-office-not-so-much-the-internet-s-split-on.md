@@ -100,10 +100,40 @@ reactions:
     quote: >-
       i watched this film it was awsome and the end credits with his twin sister
       she-ra oh boy i so hope they make that
+  - speaker: LittleKuriboh
+    date: '2026-07-23'
+    quote: >-
+      Masters of the Universe opens with narration by He-Man who stops while
+      explaining that the sword that gives him his power is called the Sword of
+      Power and he goes “(Scoff) Yeah. I know.” This movie should go to fuckin
+      jail.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      When I saw this in theatres someone in the row in front of me said as loud
+      as he could “THAT’S DOLPH LUNDGREN! HE’S FROM THE ORIGINAL!” like he had
+      to let everyone in the room know that he recognised him
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      I’m still genuinely surprised how great that Jared Leto is as Skeletor! He
+      actually perfectly rides that line of being intimidating and cartoonish at
+      the same time. Not to mention the costume and effects for him make this
+      the absolute most badass version of Skeletor
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Actually, he was right. In the toy store scene, He-Man's concept was a
+      barbarian warrior named "Torak" So yeah, it was a reference to that.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      This didn't deserve to fail at the box office, like Last Action Hero
+      before it, history will look at it differently.
 fanConsensus: >-
   A fun, nostalgic film beloved by those who saw it, but its legacy is
   overshadowed by box office disappointment and a rushed move to streaming.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   popularity: 235
@@ -118,7 +148,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T02:31:04.044Z'
+dateModified: '2026-07-24T08:31:02.488Z'
 provenance:
   parentEventSlug: masters-of-the-universe-2026
   primaryEntity: Masters of the Universe
@@ -132,6 +162,7 @@ imageAlt: Masters of the Universe 2026 movie poster Skeletor
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2840
 imageHeight: 1598
+updated: '2026-07-24T08:31:02.488Z'
 ---
 
 The movie that fans who saw it largely adored is the same film the box office largely ignored. Now, with its quick debut on Prime Video just weeks after its theatrical run, the conversation has reignited, and the internet went into full meltdown over the divide between genuine love and commercial disappointment.
