@@ -130,12 +130,47 @@ reactions:
       watched 4 movies today and caught up with new ghost in the shell episode.
       Movies were, Masters of the universe, Fire in the sky, The Running Man
       (wright) and
+  - speaker: A viewer
+    date: '2026-06-12'
+    quote: >-
+      The ending of the movie Emily blunt : LISTEN ME : OK I am listening CUT TO
+      BLACK . END CREDITS ROLL ME STILL LISTENING to John Williams music
+  - speaker: A viewer
+    date: '2026-06-12'
+    quote: >-
+      I just wanted to know what happened after disclosure. But then....,
+      credits
+  - speaker: A viewer
+    platform: other
+    date: 'July 19, 2026'
+    quote: >-
+      I enjoyed the film a lot seeing it at our local cinema. It was pretty much
+      what I had expected it to be - a thrilling humane sci-fi story with a lot
+      of Spielberg heart. The cinematography was amazing and I think John
+      Williams' score is one of his very best. It has amazing themes and I love
+      the subtle A.I. Artificial Intelligence references in it.
+  - speaker: A viewer
+    platform: other
+    date: 'July 23, 2026'
+    quote: >-
+      Cool to hear that you enjoyed it as well! It was indeed pretty clever.
+      When I saw the film initially I was kinda surprised with the 'wrestling
+      smackdown scene' in the beginning, but then with the ending... We as human
+      beings need to just listen and be more humane, I think. I found that to be
+      a pretty solid and worthy statement. :)
+  - speaker: A viewer
+    platform: other
+    date: 'July 19, 2026'
+    quote: >-
+      Agreed Rob! The film felt like classic Spielberg and John Williams' score
+      really brought it home for me as well. I also feel like the ending was far
+      more clever than people realize. Happy to hear you enjoyed it!
 fanConsensus: >-
   The reaction is sharply divided between viewers who are enthralled by the
   meta-speculation that the film could be a vehicle for real disclosure, and
   those focused on critiquing or celebrating it as a traditional Spielberg
   blockbuster.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   popularity: 632
@@ -150,7 +185,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T06:31:03.398Z'
+dateModified: '2026-07-24T16:36:29.102Z'
 provenance:
   parentEventSlug: disclosure-day-2026
   primaryEntity: Disclosure Day
@@ -164,7 +199,7 @@ imageAlt: Steven Spielberg Disclosure Day trailer screenshot
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T06:31:03.398Z'
+updated: '2026-07-24T16:36:29.102Z'
 ---
 
 The first trailer for [Steven Spielberg](/movies/disclosure-day-how-spielberg-s-new-film-is-blurring-the-line-between-movie-and/)'s *Disclosure Day* has dropped, and the timeline did not stay calm for long. While the footage promises classic Spielbergian spectacle, a dominant thread of online conversation is fixated on one question: is this a work of fiction or a cleverly orchestrated 'soft opening' for the real thing?

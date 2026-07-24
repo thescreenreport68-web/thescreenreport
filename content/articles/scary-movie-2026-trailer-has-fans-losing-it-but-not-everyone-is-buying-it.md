@@ -115,11 +115,30 @@ reactions:
   - speaker: A viewer
     date: '2026-07-21'
     quote: "Scream 5,6 Final destination: bloodline Squid game Smile 2 Megan They all cooked by him\U0001F602"
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: Is there's a reason why they deleted this scene?
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: Idk why the " what that mouth do" line always gets me
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Most wasted potential ever. He was the only reason I wanted to see this
+      movie and he ended up being nothing.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: one of the best scenes in the whole movie
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      Wait I went to see this movie and that scene was not in it and I stayed
+      the whole time
 fanConsensus: >-
   A powerfully nostalgic but sharply divided reaction, with fans split between
   celebrating the return of a 2000s comedy staple and doubting its ability to
   recapture the original magic.
-updatedCount: 1
+updatedCount: 2
 trendScore: 163
 signals:
   popularity: 374
@@ -134,7 +153,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T08:58:10.424Z'
+dateModified: '2026-07-24T16:36:29.102Z'
 provenance:
   parentEventSlug: scary-movie-2026
   primaryEntity: Scary Movie
@@ -148,7 +167,7 @@ imageAlt: Scary Movie 2026 trailer screenshot Ghostface
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
-updated: '2026-07-24T08:58:10.424Z'
+updated: '2026-07-24T16:36:29.102Z'
 ---
 
 The first trailer for the new [Scary Movie](/movies/scary-movie-2026-the-internet-is-split-between-nostalgic-cheers-and/) sequel has arrived, and the reaction was instant — and loud. For many, the sight of familiar characters and that signature 2000s slapstick felt like a time machine. But as the initial hype settled, a clear split emerged — some fans are losing it over the return, while others are convinced the magic is gone for good.
