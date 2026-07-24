@@ -1,179 +1,142 @@
 {
- "dateKey": "2026-07-23",
+ "dateKey": "2026-07-24",
  "topTopic": {
-  "name": "Christopher Nolan's The Odyssey shatters box-office records and dominates industry conversation",
-  "why": "The day's dominant conversation is The Odyssey, appearing in multiple independent headlines: box-office record vs Oppenheimer (Forbes), IMAX boss calls it transformational (Deadline), IMAX Q2 earnings ride the film to double-digit growth (Variety/Wrap), Imax CEO calls it transformational (Deadline), and a documentary about Nolan's film is set for theatrical release (Wrap)."
+  "name": "The Odyssey Box Office Surge",
+  "why": "Multiple independent headlines report Christopher Nolan's The Odyssey crossing ₹100 crore ($13.4M) in India and nearing $400M worldwide, dominating trade conversation with box-office records, IMAX re-release impact, and global haul milestones."
  },
  "slots": [
   {
    "story": {
-    "title": "Imax Boss Reacts as The Odyssey Shatters Box-Office Records",
-    "angle": "The News International quotes IMAX CEO on The Odyssey breaking records.",
+    "title": "The Odyssey Box Office Surge in India",
+    "angle": "Crosses ₹100 crore ($13.4M) at Indian box office in 7 days; fastest for a Hollywood tentpole in India.",
     "entities": [
-     "IMAX",
+     "Christopher Nolan",
      "The Odyssey"
     ],
     "sourceLinks": [
-     "https://www.thenews.com.pk/latest/1409991-imax-boss-reacts-to-record-profit-from-christopher-nolan-epic-the-odyssey"
+     "https://www.hindustantimes.com/entertainment/hollywood/christopher-nolan-the-odyssey-box-office-crosses-100-crore-in-india-400-million-worldwide-101784884257451.html",
+     "https://gulfnews.com/entertainment/the-odyssey-box-office-nolans-epic-neighs-past-rs-1-billion-in-india-trots-ahead-of-oppenheimer-in-north-america-1.500618808",
+     "https://www.news18.com/movies/hollywood/the-odyssey-box-office-day-7-christopher-nolans-epic-inches-closer-to-rs-100-crore-in-india-ws-l-10231685.html"
+    ],
+    "isTopTopic": true,
+    "viral": 9,
+    "hint": "box-office"
+   },
+   "slotLA": "06:53",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey Global Haul and IMAX Re-release",
+    "angle": "Nears $400 million worldwide; IMAX 70 mm re-release drives strong returns at premium large-format venues.",
+    "entities": [
+     "Christopher Nolan",
+     "The Odyssey",
+     "IMAX"
+    ],
+    "sourceLinks": [
+     "https://www.afr.com/life-and-luxury/arts-and-culture/imax-melbourne-nearly-dumped-projector-now-making-it-an-odyssey-fortune-20260724-p60i5r"
     ],
     "isTopTopic": true,
     "viral": 8,
     "hint": "box-office"
    },
-   "slotLA": "07:06",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "09:12",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey Turns IMAX Cinemas Into Summer’s Hottest Ticket",
-    "angle": "The Week analyzes how Nolan’s film is driving IMAX attendance nationally.",
+    "title": "The Odyssey Tops Global Box Office Charts",
+    "angle": "Record-breaking haul surpasses regional releases; positions Nolan for strong awards-season positioning.",
     "entities": [
-     "The Odyssey",
-     "IMAX"
+     "Christopher Nolan",
+     "The Odyssey"
     ],
     "sourceLinks": [
-     "https://theweek.com/culture-life/film/how-the-odyssey-turned-imax-cinemas-into-summers-hottest-ticket"
+     "https://variety.com/2026/film/news/tomorrow-and-tomorrow-and-tomorrow-movie-sky-yang-sean-kaufman-1236819131/",
+     "https://www.inverse.com/entertainment/star-trek-reboot-movie-jonathan-goldstein-and-john-francis-daley-characters-timeline",
+     "https://www.usatoday.com/story/entertainment/movies/2026/07/24/resident-evil-movie-zach-cregger-austin-abrams-comic-con/91032641007/"
     ],
     "isTopTopic": true,
     "viral": 7,
     "hint": "box-office"
    },
-   "slotLA": "08:43",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "11:39",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Hollywood stars 'devastated' by the death of 18-year-old actress, Kaylee Hottle",
-    "angle": "Yen News reports on tributes following the death of young actress Kaylee Hottle.",
+    "title": "The Odyssey Streaming and Home Release Plans",
+    "angle": "Warner Bros. strategizes streaming window and premium home formats amid strong theatrical tailwinds.",
     "entities": [
-     "Kaylee Hottle"
+     "The Odyssey",
+     "Warner Bros."
     ],
     "sourceLinks": [
-     "https://yen.com.gh/entertainment/celebrities/308518-18-year-kaylee-hottles-real-character-light-hollywood-stars-send-tributes/"
+     "https://www.thewrap.com/media-platforms/tv/fox-roku-deal-creators-on-fast-explained/"
+    ],
+    "isTopTopic": true,
+    "viral": 6,
+    "hint": "streaming"
+   },
+   "slotLA": "13:52",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey Cast and Crew Reactions Fuel Buzz",
+    "angle": "On-set anecdotes and cast interviews amplify fan excitement and social engagement around the film.",
+    "entities": [
+     "Christopher Nolan",
+     "Cast"
+    ],
+    "sourceLinks": [
+     "https://www.mensjournal.com/entertainment/1956-glenn-ford-film-named-a-must-see-western-classic-has-a-100-rotten-tomatoes-score",
+     "https://www.mensjournal.com/news/74-years-ago-today-the-best-western-in-movie-history-was-released"
+    ],
+    "isTopTopic": true,
+    "viral": 7,
+    "hint": "news"
+   },
+   "slotLA": "16:02",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Resident Evil New Trailer and Fan Reactions",
+    "angle": "Zach Cregger's Resident Evil movie trailer packs franchise elements; fans debate fidelity to games.",
+    "entities": [
+     "Zach Cregger",
+     "Resident Evil"
+    ],
+    "sourceLinks": [
+     "https://www.relyonhorror.com/latest-news/resident-evil-film-new-trailer/"
     ],
     "isTopTopic": false,
     "viral": 7,
-    "hint": "memoriam"
+    "hint": "news"
    },
-   "slotLA": "10:26",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "18:25",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Check Out The First Trailer for Zach Cregger’s Resident Evil Movie",
-    "angle": "Restart.run debuts the first trailer for the new Resident Evil film.",
+    "title": "Lil Wayne to Receive Hollywood Walk of Fame Star",
+    "angle": "Lil Wayne honored in 2027 class; music and crossover cinema presence highlighted.",
     "entities": [
-     "Resident Evil",
-     "Zach Cregger"
+     "Lil Wayne"
     ],
     "sourceLinks": [
-     "https://www.restart.run/articles/check-out-the-first-trailer-for-zach-cregger-s-resident-evil-movie"
+     "https://olorisupergal.com/lil-wayne-to-receive-hollywood-walk-of-fame-star-in-class-of-2027/"
     ],
     "isTopTopic": false,
     "viral": 6,
-    "hint": "first-look"
+    "hint": "celebrity"
    },
-   "slotLA": "12:16",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "The New Resident Evil Movie Trailer Makes A Direct Connection To The Games",
-    "angle": "Kotaku reports the trailer for the new Resident Evil movie links directly to the games.",
-    "entities": [
-     "Resident Evil",
-     "Zach Cregger"
-    ],
-    "sourceLinks": [
-     "https://kotaku.com/resident-evil-movie-trailer-2-zach-cregger-raccoon-city-2000718759"
-    ],
-    "isTopTopic": false,
-    "viral": 6,
-    "hint": "first-look"
-   },
-   "slotLA": "13:59",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Which Viewing Option for ‘The Odyssey’ is Right for You? A Definitive Guide",
-    "angle": "The Washington Post helps audiences choose how to watch The Odyssey at home.",
-    "entities": [
-     "The Odyssey"
-    ],
-    "sourceLinks": [
-     "https://www.washingtonpost.com/style/2026/07/23/which-viewing-option-odyssey-is-right-you-definitive-guide/"
-    ],
-    "isTopTopic": false,
-    "viral": 5,
-    "hint": "news"
-   },
-   "slotLA": "15:49",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Google Fined $1 Billion by EU Over Search, Android Practices",
-    "angle": "The Wrap covers the EU antitrust fine against Google for search and Android practices.",
-    "entities": [
-     "Google",
-     "EU",
-     "antitrust"
-    ],
-    "sourceLinks": [
-     "https://www.thewrap.com/industry-news/tech/google-fined-billion-search-android-european-union-digital-markets-act/"
-    ],
-    "isTopTopic": false,
-    "viral": 5,
-    "hint": "news"
-   },
-   "slotLA": "17:40",
-   "status": "posted",
-   "key": "google-fined-1-billion-by-eu-over-search-android-practices"
-  },
-  {
-   "story": {
-    "title": "What's New to Streaming this Week? (July 24, 2026)",
-    "angle": "Mashable lists new streaming titles launching the week of July 24.",
-    "entities": [
-     "streaming"
-    ],
-    "sourceLinks": [
-     "https://mashable.com/entertainment/new-to-streaming-july-24-2026"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
-    "hint": "streaming"
-   },
-   "slotLA": "19:21",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "‘They’re stuck in the past’: Four writers on the future of movies",
-    "angle": "Washington Post opinion piece features four writers discussing where movies are headed.",
-    "entities": [
-     "film industry"
-    ],
-    "sourceLinks": [
-     "https://www.washingtonpost.com/opinions/2026/07/23/odyssey-backrooms-obsession-four-writers-discuss/"
-    ],
-    "isTopTopic": false,
-    "viral": 3,
-    "hint": "news"
-   },
-   "slotLA": "21:06",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "20:39",
+   "status": "pending"
   }
  ],
  "bench": [],
- "builtAt": 1784814373429
+ "builtAt": 1784900745089
 }
