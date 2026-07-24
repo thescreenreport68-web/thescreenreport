@@ -1,45 +1,41 @@
 ---
-title: Chris Brown Pleads Guilty in U.K. Court Over 2023 Nightclub Attack
+title: 'Chris Brown Pleads Guilty to Affray, Has London Assault Charges Dropped'
 slug: chris-brown-pleads-guilty-in-u-k-court-over-2023-nightclub-attack
 category: celebrity
 subcategory: news
 author: editorial-team
 date: '2026-07-24T13:00:06.529Z'
 dek: >-
-  The singer and his vocal coach admitted to a 'vicious and unprovoked' assault
-  at a London venue. Sentencing is scheduled for October.
-metaTitle: Chris Brown Pleads Guilty to UK Nightclub Affray Charge
+  The singer admitted to a public order offense, leading prosecutors to drop
+  more serious assault and grievous bodily harm charges from a 2023 incident.
+metaTitle: Chris Brown Pleads Guilty in London Club Assault Case
 metaDescription: >-
-  Chris Brown has pleaded guilty to affray for a nightclub attack in London. He
-  and his co-defendant will be sentenced in October 2026.
+  Chris Brown pleaded guilty to affray in a London court, ending the assault
+  case from a 2023 nightclub incident. He will be sentenced in October.
 tags:
-  - chris brown guilty
+  - chris brown london assault
   - chris brown
   - omololu akinlolu
-targetKeyword: chris brown guilty
+targetKeyword: chris brown london assault
 keyTakeaways:
   - >-
-    Chris Brown pleaded guilty to affray in the U.K. for a 2023 nightclub
-    attack.
+    Chris Brown pleaded guilty to affray in London's Southwark Crown Court on
+    July 24.
   - >-
-    His co-defendant, vocal coach Omololu Akinlolu, also pleaded guilty to the
-    charge.
-  - >-
-    The pair will be sentenced in October 2026, with more serious assault
-    charges dropped.
+    His plea resulted in the dismissal of more serious charges of assault and
+    suspicion of grievous bodily harm.
 faq:
-  - q: What is affray?
+  - q: What is the charge of affray?
     a: >-
-      Affray is a criminal offense in the U.K. The specific legal definition was
-      not detailed in the source reports.
-  - q: Will Chris Brown serve jail time?
+      Affray is a public order offense in English law, defined as the use or
+      threat of unlawful violence that would cause a reasonable person to fear
+      for their safety. It is a less serious charge than assault or grievous
+      bodily harm.
+  - q: Has the victim commented on the plea?
     a: >-
-      The sentencing hearing is scheduled for October 2026. The judge will
-      determine the appropriate penalty.
-  - q: Where did the attack take place?
-    a: >-
-      The incident occurred at Tape London, a nightclub located in the Mayfair
-      district of London, in February 2023.
+      The report does not include a current statement from the victim, Amadou
+      Diaw. It notes he previously filed and then dropped a civil lawsuit
+      against Brown related to the incident.
 about: []
 imageAlt: Chris Brown Pleads Guilty in U.K. Court Over 2023 Nightclub Attack
 imageCredit: Photo via Deadline
@@ -48,66 +44,62 @@ image: >-
 imageWidth: 1600
 imageHeight: 1066
 formatTag: news
-trendScore: 87
+tier: popular
+trendScore: 69
 signals:
-  recency: 30
-  corroboration: 18
+  recency: 24
+  corroboration: 12
   status: 18
   type: 12
   pop: 0
   breakout: 0
   big: 0
-  trending: 8
+  trending: 0
   spice: 0
   softTv: 0
+  demand: 2
   learned: 1
-eventSlug: chris-brown-pleads-guilty-uk-attack
+eventSlug: chris-brown-pleads-guilty-affray
 eventType: legal
-outletCount: 2
+outletCount: 1
 provenance:
-  eventSlug: chris-brown-pleads-guilty-uk-attack
+  eventSlug: chris-brown-pleads-guilty-affray
   primaryEntity: Chris Brown
   eventType: legal
   sensitivity: high
   status: DEVELOPING
-  attribution: variety.com
+  attribution: billboard.com
   outlets:
-    - Variety
-    - Deadline
-  publishedAt: '2026-07-24T13:00:06.529Z'
-dateModified: '2026-07-24T13:00:06.529Z'
+    - Billboard
+  publishedAt: '2026-07-24T18:55:02.388Z'
+dateModified: '2026-07-24T19:04:17.312Z'
 storyStatus: DEVELOPING
 sensitivity: high
 newsType: controversy
 pullQuote:
-  text: >-
-    This was a vicious and unprovoked attack by Brown and Akinlolu in a crowded
-    nightclub where Brown used a glass bottle as a weapon to strike the victim’s
-    head twice,
-  attribution: 'Claire Campbell, a senior prosecutor at CPS London South'
+  text: '“continued to assault whilst the victim attempted to flee through the club,”'
+  attribution: the Crown Prosecution Service said in a statement
 keyPoints:
-  - Chris Brown pleaded guilty to affray for a 2023 London nightclub attack.
-  - 'He and his vocal coach, Omololu Akinlolu, will be sentenced in October 2026.'
   - >-
-    More serious assault and grievous bodily harm charges against them were
-    dropped.
-sightings:
-  - event: Plea hearing at Southwark Crown Court
-    date: July 2026
+    Chris Brown pleaded guilty to affray in a London court, ending a 2023
+    assault case.
+  - >-
+    The guilty plea resulted in the dismissal of more serious assault and
+    grievous bodily harm charges.
+  - >-
+    Brown and his vocal coach will be sentenced in October, with the singer
+    allowed to leave the U.K. until then.
+updateCount: 1
 ---
 
-[Chris Brown](/music/a-jury-has-found-chris-brown-liable-for-13-million-after-his-dog-maule/) has pleaded guilty to affray in the United Kingdom for his role in a 2023 nightclub assault, according to Variety. His co-defendant, vocal coach Omololu Akinlolu, also entered a guilty plea to the same charge.
+Chris Brown pleaded guilty to a charge of affray in London’s Southwark Crown Court on Friday, July 24, according to a report by Billboard.
 
-Brown entered his plea at Southwark Crown Court. The hearing reportedly lasted less than five minutes.
+The 37-year-old singer’s plea to the public order offense led prosecutors to drop more serious charges of assault and suspicion of grievous bodily harm tied to an alleged 2023 nightclub incident. Brown’s vocal coach, Omololu Akinlolu, also pleaded guilty to affray and had the same serious charges dismissed during the brief hearing.
 
-## What happened at the nightclub?
+## What is Chris Brown accused of doing?
 
-The incident took place at the Tape London nightclub in Mayfair in February 2023. According to the U.K.’s Crown Prosecution Service, Brown twice hit an unnamed victim on the head with a glass bottle while Akinlolu punched him. The CPS stated that the pair continued their assault as the victim tried to flee through the club. The victim was reportedly kicked while defenseless on the floor before seeking hospital treatment for injuries to his head and knees.
+According to the report, Brown was accused of striking Diaw over the head with a bottle, with Akinlolu allegedly joining in to punch the victim. Prosecutors stated the men “continued to assault whilst the victim attempted to flee through the club.” Diaw was hospitalized for head and knee injuries.
 
-Prosecutor Claire Campbell described the event as a "vicious and unprovoked attack by Brown and Akinlolu in a crowded nightclub where Brown used a glass bottle as a weapon to strike the victim’s head twice." She added, "This kind of violence is entirely unacceptable."
+## What happens next for Chris Brown?
 
-## What happens next?
-
-Brown and Akinlolu will be sentenced in October 2026. According to reports, the two men were present in court for the plea hearing. More serious charges of assault and grievous bodily harm, which they denied, were dropped, as was a separate charge against Brown of possessing an offensive weapon.
-
-A warrant for their arrest was issued after the victim went to the hospital, but both men had already left the U.K. Brown was arrested in May 2025 when he returned to the country to perform in Manchester as part of a world tour.
+The charge of affray carries a maximum sentence of three years in prison.
