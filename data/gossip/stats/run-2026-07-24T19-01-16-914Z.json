@@ -1,0 +1,188 @@
+{
+  "ts": "2026-07-24T19:01:16.914Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "meghan-mccain-fires-back-at-old-and-ugly-trolls-with-raw-podcast-confession",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 6,
+  "held": 2,
+  "rejected": 1,
+  "skipped": 1,
+  "blocked": 1,
+  "costUSD": 0.074005,
+  "costPerPublished": 0.074005,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 23,
+      "in": 54244,
+      "out": 5556,
+      "usd": 0.02909562
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 6,
+      "in": 6906,
+      "out": 43433,
+      "usd": 0.011741469999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 1916,
+      "out": 706,
+      "usd": 0.00033372
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 20,
+      "in": 63596,
+      "out": 33576,
+      "usd": 0.027747353499999995
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 15,
+      "in": 14886,
+      "out": 2775,
+      "usd": 0.0025986
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 5034,
+      "out": 1906,
+      "usd": 0.0019563695
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 2,
+      "in": 2941,
+      "out": 2021,
+      "usd": 0.0005317632
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9596,
+      "out": 781,
+      "usd": 0.0048313,
+      "ms": 6248
+    },
+    "background": {
+      "calls": 4,
+      "errors": 1,
+      "in": 3041,
+      "out": 10439,
+      "usd": 0.0005931,
+      "ms": 104261
+    },
+    "detailFinder": {
+      "calls": 4,
+      "errors": 1,
+      "in": 3220,
+      "out": 16421,
+      "usd": 0,
+      "ms": 113880
+    },
+    "synthesizer": {
+      "calls": 4,
+      "errors": 1,
+      "in": 2763,
+      "out": 1005,
+      "usd": 0.00061344,
+      "ms": 59496
+    },
+    "writer": {
+      "calls": 20,
+      "errors": 1,
+      "in": 62630,
+      "out": 33526,
+      "usd": 0.02929089,
+      "ms": 826033
+    },
+    "verify": {
+      "calls": 19,
+      "errors": 0,
+      "in": 44648,
+      "out": 4775,
+      "usd": 0.025331899999999997,
+      "ms": 28226
+    },
+    "judge": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9431,
+      "out": 1138,
+      "usd": 0.0013982999999999999,
+      "ms": 5897
+    },
+    "claimAudit": {
+      "calls": 4,
+      "errors": 1,
+      "in": 4997,
+      "out": 19724,
+      "usd": 0,
+      "ms": 151716
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2565,
+      "out": 918,
+      "usd": 0.00090207,
+      "ms": 32811
+    },
+    "headlineJudge": {
+      "calls": 3,
+      "errors": 1,
+      "in": 785,
+      "out": 205,
+      "usd": 0.0001605,
+      "ms": 3337
+    },
+    "seoAuditor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 593,
+      "out": 145,
+      "usd": 0.0001173,
+      "ms": 2318
+    },
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 304,
+      "out": 14,
+      "usd": 0.00007468000000000001,
+      "ms": 1888
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2075,
+      "out": 104,
+      "usd": 0.0002491,
+      "ms": 2152
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 591,
+      "out": 53,
+      "usd": 0.0000803,
+      "ms": 1130
+    }
+  }
+}
