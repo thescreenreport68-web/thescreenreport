@@ -1,0 +1,179 @@
+{
+  "ts": "2026-07-24T16:40:16.940Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "giuliana-rancic-invites-ex-jerry-oconnell-to-her-podcast-after-he-recalls-t",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 3,
+  "held": 1,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.081847,
+  "costPerPublished": 0.081847,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 33,
+      "in": 44136,
+      "out": 14086,
+      "usd": 0.009692859999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 3,
+      "in": 3438,
+      "out": 2009,
+      "usd": 0.0008342403999999999
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 17,
+      "in": 42730,
+      "out": 9643,
+      "usd": 0.0369265
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 2,
+      "in": 2225,
+      "out": 19867,
+      "usd": 0.005310044999999999
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 13,
+      "in": 60929,
+      "out": 30427,
+      "usd": 0.027058773999999997
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 7028,
+      "out": 2821,
+      "usd": 0.00127643805
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 2,
+      "in": 2220,
+      "out": 634,
+      "usd": 0.000747912
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 7249,
+      "out": 587,
+      "usd": 0.0036422,
+      "ms": 4570
+    },
+    "background": {
+      "calls": 3,
+      "errors": 1,
+      "in": 3230,
+      "out": 8030,
+      "usd": 0.0005668,
+      "ms": 128016
+    },
+    "detailFinder": {
+      "calls": 3,
+      "errors": 1,
+      "in": 3376,
+      "out": 15522,
+      "usd": 0,
+      "ms": 116526
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2046,
+      "out": 1508,
+      "usd": 0.00045558,
+      "ms": 16387
+    },
+    "writer": {
+      "calls": 13,
+      "errors": 0,
+      "in": 60929,
+      "out": 30427,
+      "usd": 0.0273978,
+      "ms": 712148
+    },
+    "verify": {
+      "calls": 18,
+      "errors": 7,
+      "in": 27801,
+      "out": 5909,
+      "usd": 0.0216249,
+      "ms": 64632
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4070,
+      "out": 436,
+      "usd": 0.0005814,
+      "ms": 2329
+    },
+    "claimAudit": {
+      "calls": 4,
+      "errors": 2,
+      "in": 4795,
+      "out": 16,
+      "usd": 0,
+      "ms": 164484
+    },
+    "headline": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2220,
+      "out": 634,
+      "usd": 0.00072616,
+      "ms": 23041
+    },
+    "headlineJudge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 784,
+      "out": 177,
+      "usd": 0.00014920000000000002,
+      "ms": 1875
+    },
+    "seoAuditor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 419,
+      "out": 99,
+      "usd": 0.0000815,
+      "ms": 1129
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1595,
+      "out": 101,
+      "usd": 0.0001999,
+      "ms": 3376
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1198,
+      "out": 103,
+      "usd": 0.000161,
+      "ms": 2065
+    }
+  }
+}
