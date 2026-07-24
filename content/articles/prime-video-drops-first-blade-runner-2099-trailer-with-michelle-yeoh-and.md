@@ -8,47 +8,47 @@ subcategory: trailers
 author: editorial-team
 date: '2026-07-24T17:32:26.769Z'
 dek: >-
-  The limited series, set decades after the films, stars Michelle Yeoh as a
-  replicant and Hunter Schafer as a human on the run. It premieres this
-  November.
+  The Prime Video limited series, set 50 years after '2049', premieres November
+  25, 2026 and features a new duo of hunters in a reborn Los Angeles.
 metaTitle: Blade Runner 2099 Trailer Drops on Prime Video
 metaDescription: >-
-  Prime Video has released the first trailer for the limited series Blade Runner
-  2099, starring Michelle Yeoh and Hunter Schafer. It premieres this November.
+  Amazon released the first trailer for 'Blade Runner 2099,' starring Michelle
+  Yeoh and Hunter Schafer. "Los Angeles has been reborn, just not by humanity.
 tags:
   - blade runner 2099 trailer
   - blade runner 2099
   - michelle yeoh
   - hunter schafer
-  - ridley scott
+  - silka luisa
 targetKeyword: blade runner 2099 trailer
 keyTakeaways:
+  - The first trailer for 'Blade Runner 2099' debuted at San Diego Comic-Con.
   - >-
-    The first trailer for the limited series 'Blade Runner 2099' has been
-    released by Prime Video.
+    Michelle Yeoh and Hunter Schafer star as co-leads in the eight-episode
+    limited series.
   - >-
-    Michelle Yeoh stars as a replicant named Olwen, while Hunter Schafer plays a
-    human named Cora.
-  - The show is set after the events of both the 1982 film and its 2049 sequel.
-  - 'Ridley Scott executive produces the series, which premieres on November 25.'
+    The series is set to premiere exclusively on Prime Video on November 25,
+    2026.
+  - Ridley Scott serves as an executive producer on the sequel series.
+  - >-
+    The story follows a fugitive and a dying replicant forced to partner as
+    Blade Runners.
 faq:
-  - q: When does Blade Runner 2099 come out?
-    a: The limited series is scheduled to premiere on Prime Video on November 25.
-  - q: Is Ridley Scott directing Blade Runner 2099?
+  - q: Is 'Blade Runner 2099' a movie or a TV show?
     a: >-
-      No, Ridley Scott is serving as an executive producer. The first two
-      episodes are being directed by Jonathan van Tulleken, with Silka Luisa
-      acting as the showrunner.
-  - q: Do I need to watch the other Blade Runner movies first?
+      It is a television limited series produced for Amazon's Prime Video. The
+      show consists of eight episodes.
+  - q: Will Harrison Ford or Ryan Gosling appear in the series?
     a: >-
-      The series is set after the events of both Blade Runner (1982) and Blade
-      Runner 2049, so familiarity with those films will provide context for the
-      world and its central conflict between humans and replicants.
-  - q: Where was Blade Runner 2099 filmed?
+      The announced cast for Blade Runner 2099 does not include Harrison Ford or
+      Ryan Gosling. The series focuses on new characters played by Michelle Yeoh
+      and Hunter Schafer.
+  - q: Who is the showrunner for 'Blade Runner 2099'?
     a: >-
-      According to the report, the series was largely shot in the Czech Republic
-      at Prague’s historic Barrandov Studios, with additional production taking
-      place in Barcelona, Spain.
+      Silka Luisa serves as the showrunner and executive producer. She is known
+      for her work on the Apple TV+ series Shining Girls.
+  - q: How many episodes will there be?
+    a: Blade Runner 2099 is a limited series consisting of eight episodes.
 about:
   - name: Blade Runner 2099
     type: TV Series
@@ -60,9 +60,9 @@ image: 'https://image.tmdb.org/t/p/original/hJ5R9d6QuH3tzr8L8neZZTuzNXm.jpg'
 imageWidth: 1280
 imageHeight: 720
 formatTag: trailer
-trendScore: 106
+trendScore: 85
 signals:
-  recency: 30
+  recency: 9
   corroboration: 18
   status: 18
   type: 15
@@ -73,64 +73,62 @@ signals:
   spice: 0
   softTv: 0
   learned: -1
-eventSlug: blade-runner-2099-trailer-drops
+eventSlug: blade-runner-2099-trailer
 eventType: trailer
 outletCount: 2
 provenance:
-  eventSlug: blade-runner-2099-trailer-drops
+  eventSlug: blade-runner-2099-trailer
   primaryEntity: Blade Runner 2099
   eventType: trailer
   sensitivity: normal
   status: DEVELOPING
-  attribution: variety.com
+  attribution: hollywoodreporter.com
   outlets:
+    - The Hollywood Reporter
     - Variety
-    - THR
-  publishedAt: '2026-07-24T17:32:26.769Z'
-dateModified: '2026-07-24T17:32:26.769Z'
+  publishedAt: '2026-07-24T23:30:33.372Z'
+dateModified: '2026-07-24T23:36:10.965Z'
 storyStatus: DEVELOPING
 youtubeId: qoEyZoOTtss
 releaseInfo: 'June 25, 1982'
 keyMoments:
-  - The first trailer for the Prime Video limited series has been released.
-  - >-
-    Michelle Yeoh stars as Olwen, a replicant, and Hunter Schafer plays Cora, a
-    human on the run.
-  - The story is set decades after the events of Blade Runner 2049.
-  - 'Ridley Scott, director of the original 1982 film, is an executive producer.'
-  - The series is scheduled to premiere on November 25.
+  - First trailer reveal at San Diego Comic-Con.
+  - Michelle Yeoh and Hunter Schafer star as co-leads Olwen and Cora.
+  - Set 50 years after the film 'Blade Runner 2049'.
+  - 'Eight-episode limited series premiering November 25, 2026 on Prime Video.'
+  - Ridley Scott executive produces the sequel series.
 officialSynopsis: >-
-  In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is
-  called out of retirement to terminate a quartet of replicants who have escaped
-  to Earth seeking their creator for a way to extend their short life spans.
+  Fifty years after the events of Blade Runner 2049, Los Angeles has been
+  reborn, just not by humanity. Cora, a fugitive in a final bid to stop running,
+  takes on one last identity: a Blade Runner. Forced to partner with Olwen, a
+  Replicant days from dying, she hunts down a runaway hiding a truth that could
+  collapse their fragile city.
 seriesContext:
   network: Prime Video
-  premiere: November 25
-  seasons: Limited Series
-  creator: ''
+  premiere: 'November 25, 2026'
+  seasons: '1'
+  creator: Silka Luisa
   cast:
     - Michelle Yeoh
     - Hunter Schafer
     - Dimitri Abold
+updateCount: 1
 ---
 
-Prime Video has released the first look at its long-awaited return to the dystopian future of [Ridley Scott](/movies/the-internet-had-thoughts-about-ridley-scott-using-the-word-dad-in-his-new/)’s sci-fi universe. According to Variety, the first trailer for the limited series **Blade Runner 2099** has arrived, starring Michelle Yeoh and Hunter Schafer.
+Amazon MGM Studios has unveiled the first trailer for its long-awaited live-action series, **'Blade Runner 2099.'** According to The Hollywood Reporter, the teaser debuted at San Diego Comic-Con, giving fans their initial look at the sci-fi sequel starring Michelle Yeoh and Hunter Schafer. The limited series is scheduled to premiere on Prime Video on November 25, 2026.
 
-The series is set to premiere on the streaming service on November 25, marking the franchise’s first major story in nearly a decade. It picks up after the events of both the original 1982 film and its sequel, *Blade Runner 2049*, continuing the saga of replicants and the humans who hunt them.
+## What is 'Blade Runner 2099' about?
 
-## What is Blade Runner 2099 about?
+The official synopsis sets the stage fifty years after the events of *Blade Runner 2049*. "Los Angeles has been reborn, just not by humanity. Cora, a fugitive in a final bid to stop running, takes on one last identity: a Blade Runner. Forced to partner with Olwen, a Replicant days from dying, she hunts down a runaway hiding a truth that could collapse their fragile city." This premise continues the franchise's core exploration of identity and humanity within a dystopian future.
 
-The official synopsis for the original film sets the stage: In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans. *Blade Runner 2099* expands this world, focusing on a new chapter in the war between humans and replicants.
+## Who is in the cast and who do they play?
 
-## Who stars in the new series?
+Michelle Yeoh and Hunter Schafer lead the series as co-leads. According to Variety, Yeoh plays Olwen, a replicant nearing the end of her lifespan, and Schafer portrays Cora, a human on the run who assumes the role of a Blade Runner. The cast also includes series regulars Dimitri Abold and Lewis Gribben, with recurring guest stars such as Katelyn Rose Downey, Daniel Rigby, Johnny Harris, Amy Lennox, Sheila Atim, and [Matthew Needham](/tv/matthew-needham-lands-joker-role-in-batman-caped-crusader-season-2/).
 
-Michelle Yeoh, who won an Oscar for *Everything Everywhere All at Once*, leads the cast as Olwen, a replicant confronting the end of her life. Hunter Schafer, the breakout star of *Euphoria*, plays Cora, a human fugitive being pursued by Blade Runners. The trailer suggests the two form an unlikely alliance. Series regulars include Dimitri Abold and Lewis Gribben, with recurring roles for Katelyn Rose Downey, Daniel Rigby, Johnny Harris, Amy Lennox, Sheila Atim, and [Matthew Needham](/tv/matthew-needham-lands-joker-role-in-batman-caped-crusader-season-2/).
+## Where does this fit in the Blade Runner franchise?
 
-## Who is behind the camera?
+Ridley Scott, who launched the franchise with the 1982 film *Blade Runner*, executive produces the series. The story follows both Scott's original film and Denis Villeneuve's 2017 sequel, *Blade Runner 2049*. Showrunner Silka Luisa developed the series, which has been in the works for five years. Jonathan van Tulleken is set to direct the first two episodes.
 
-Ridley Scott, who directed the original landmark film, serves as an executive producer. Silka Luisa, known for *Shining Girls*, is the showrunner. Jonathan van Tulleken, who directed episodes of *Shōgun*, is set to direct the first two episodes of the series. Production took place primarily in the Czech Republic at Prague’s Barrandov Studios, with additional work in Barcelona.
+## When and where can I watch it?
 
-The release of this trailer confirms the series' imminent arrival. With its high-concept legacy and a cast led by two of today's most compelling actors, *Blade Runner 2099* aims to honor the franchise's philosophical roots while pushing its visual and narrative boundaries onto the television screen.
-
-## Sources
-- [Prime Video](https://www.primevideo.com/)
+*Blade Runner 2099* is an eight-episode limited series. It will premiere exclusively on Prime Video on November 25, 2026. The production was largely shot in the Czech Republic at Prague's Barrandov Studios, with additional work in Barcelona.

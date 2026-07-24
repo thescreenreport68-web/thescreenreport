@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "baseline": 0.09644670050761421,
-  "sample": 591,
+  "baseline": 0.09612141652613827,
+  "sample": 593,
   "earners": 57,
   "buckets": {
     "category:movies": {
@@ -10,15 +10,15 @@
       "impressions": 215,
       "hitRate": 0.0815450643776824,
       "enough": true,
-      "lift": 0.8454935622317596
+      "lift": 0.8483547925608012
     },
     "format:news": {
-      "n": 488,
+      "n": 490,
       "earners": 41,
       "impressions": 775,
-      "hitRate": 0.08401639344262295,
+      "hitRate": 0.0836734693877551,
       "enough": true,
-      "lift": 0.8711173425366695
+      "lift": 0.8704976727533119
     },
     "category:awards": {
       "n": 11,
@@ -26,7 +26,7 @@
       "impressions": 6,
       "hitRate": 0.18181818181818182,
       "enough": true,
-      "lift": 1.8851674641148326
+      "lift": 1.8915470494417865
     },
     "format:awards": {
       "n": 11,
@@ -34,15 +34,15 @@
       "impressions": 6,
       "hitRate": 0.18181818181818182,
       "enough": true,
-      "lift": 1.8851674641148326
+      "lift": 1.8915470494417865
     },
     "category:tv": {
-      "n": 175,
+      "n": 177,
       "earners": 11,
       "impressions": 68,
-      "hitRate": 0.06285714285714286,
+      "hitRate": 0.062146892655367235,
       "enough": true,
-      "lift": 0.6517293233082707
+      "lift": 0.6465457428882943
     },
     "category:celebrity": {
       "n": 111,
@@ -50,7 +50,7 @@
       "impressions": 520,
       "hitRate": 0.13513513513513514,
       "enough": true,
-      "lift": 1.4011379800853485
+      "lift": 1.405879563774301
     },
     "format:trailer": {
       "n": 28,
@@ -58,7 +58,7 @@
       "impressions": 8,
       "hitRate": 0.10714285714285714,
       "enough": true,
-      "lift": 1.1109022556390977
+      "lift": 1.1146616541353385
     },
     "category:music": {
       "n": 60,
@@ -66,7 +66,7 @@
       "impressions": 126,
       "hitRate": 0.16666666666666666,
       "enough": true,
-      "lift": 1.7280701754385965
+      "lift": 1.7339181286549707
     },
     "format:music-news": {
       "n": 58,
@@ -74,7 +74,7 @@
       "impressions": 123,
       "hitRate": 0.15517241379310345,
       "enough": true,
-      "lift": 1.6088929219600727
+      "lift": 1.6143375680580765
     },
     "format:box-office": {
       "n": 4,
@@ -109,5 +109,5 @@
       "lift": 1
     }
   },
-  "computedAt": "2026-07-24T22:34:06.001Z"
+  "computedAt": "2026-07-24T23:32:32.592Z"
 }
