@@ -6,12 +6,12 @@ subcategory: news
 author: editorial-team
 date: '2026-07-23T19:33:03.650Z'
 dek: >-
-  The 'Girls' alum will play a wellness tech CEO in the eight-episode final
-  season, which begins filming in the UK this August.
+  The 'Girls' alum will play a fitness influencer turned tech CEO when
+  production begins in the U.K. this August.
 metaTitle: Zosia Mamet Cast in HBO's 'Industry' Season 5
 metaDescription: >-
-  Zosia Mamet has joined the cast of HBO's financial drama 'Industry' for its
-  fifth and final season, playing a fitness influencer turned CEO.
+  Zosia Mamet has joined the cast of HBO's 'Industry' for its fifth and final
+  season, playing a new character named Carmen Dame.
 tags:
   - zosia mamet industry
   - zosia mamet
@@ -19,112 +19,111 @@ tags:
 targetKeyword: Zosia Mamet Industry
 keyTakeaways:
   - >-
-    Zosia Mamet joins the cast of HBO's 'Industry' for its fifth and final
-    season.
+    Zosia Mamet will play Carmen Dame, a fitness influencer turned wellness tech
+    CEO, in the final season of 'Industry'.
   - >-
-    She will play Carmen Dame, a fitness influencer turned wellness tech founder
-    and CEO.
+    Production on the fifth and final season is scheduled to begin in the U.K.
+    the first week of August.
   - >-
-    Filming on the eight-episode final season is set to begin the first week of
-    August in the UK.
-  - >-
-    The series, created by Mickey Down and Konrad Kay, is a Bad Wolf production
-    for HBO and the BBC.
+    Series creators Mickey Down and Konrad Kay previously thanked fans and the
+    cast when announcing the final season renewal.
 faq:
-  - q: How many episodes will 'Industry' Season 5 have?
-    a: The fifth and final season of 'Industry' will consist of eight episodes.
-  - q: Is this really the last season of 'Industry'?
+  - q: Is 'Industry' ending after season five?
     a: >-
-      Yes. HBO has confirmed that the upcoming fifth season will be the series'
-      last.
-  - q: Where can I watch 'Industry'?
-    a: '''Industry'' airs on HBO and is a co-production with the BBC.'
-  - q: Who are the creators of 'Industry'?
+      Yes. HBO and the show's creators have confirmed that the upcoming fifth
+      season will be the final one for the series.
+  - q: What other shows has Zosia Mamet been in?
     a: >-
-      The series is created, written, and executive produced by Mickey Down and
-      Konrad Kay.
+      Zosia Mamet is best known for her role as Shoshanna Shapiro on the HBO
+      series Girls. She has also appeared in films and other television
+      projects.
+  - q: Who creates and writes 'Industry'?
+    a: >-
+      The series was created by Mickey Down and Konrad Kay, who continue to
+      serve as the show's writers and executive producers.
 about:
   - name: Industry
-    type: TV Series
+    type: TV Show
 imageAlt: Zosia Mamet Joins HBO's Industry For Its Fifth and Final Season
 imageCredit: Photo via Deadline
 image: 'https://deadline.com/wp-content/uploads/2026/07/Zosia-Mamet.jpg?w=1600'
 imageWidth: 1500
 imageHeight: 845
 formatTag: news
-trendScore: 113
+trendScore: 83
 signals:
-  recency: 24
-  corroboration: 24
-  status: 18
+  recency: 1
+  corroboration: 18
+  status: 25
   type: 14
   pop: 0
   breakout: 0
   big: 18
-  trending: 15
+  trending: 8
   spice: 0
   softTv: 0
-eventSlug: zosia-mamet-industry-season-5-casting
+  learned: -1
+eventSlug: zosia-mamet-industry-season-5
 eventType: casting
-outletCount: 3
+outletCount: 2
 provenance:
-  eventSlug: zosia-mamet-industry-season-5-casting
+  eventSlug: zosia-mamet-industry-season-5
   primaryEntity: Zosia Mamet
   eventType: casting
   sensitivity: normal
-  status: DEVELOPING
-  attribution: deadline.com
+  status: CONFIRMED
+  attribution: null
   outlets:
-    - Deadline
-    - Variety
     - THR
-  publishedAt: '2026-07-23T19:33:03.650Z'
-dateModified: '2026-07-23T19:33:03.650Z'
-storyStatus: DEVELOPING
+    - Yahoo
+  publishedAt: '2026-07-24T11:01:37.050Z'
+dateModified: '2026-07-24T11:04:20.092Z'
+storyStatus: CONFIRMED
 newsType: general
 pullQuote:
   text: >-
     "Finally: we owe everything to our crew and the best cast on TV for making
-    our writing live,"
-  attribution: creators Mickey Down and Konrad Kay said in a statement
+    our writing live."
+  attribution: Creators Mickey Down and Konrad Kay in a statement
 keyPoints:
-  - Zosia Mamet has been added to the cast for the final season.
-  - She will portray a wellness tech CEO named Carmen Dame.
-  - Production on the eight-episode season begins in August in the UK.
+  - Zosia Mamet joins the cast of 'Industry' for its final season.
+  - She will play a new character named Carmen Dame.
+  - Filming on Season 5 begins in the U.K. in August.
 seriesContext:
-  network: HBO
-  premiere: '2020'
-  status: Final season
+  network: 'HBO, BBC'
+  premiere: ''
+  status: Renewed for final season
   seasons: '5'
-  creator: Mickey Down & Konrad Kay
+  creator: 'Mickey Down, Konrad Kay'
   cast:
-    - Myha'la
+    - Myha’la
     - Marisa Abela
     - Kit Harington
-  whereToWatch: Max
+  whereToWatch: HBO
 seriesStatus:
   show: Industry
-  network: HBO
+  network: 'HBO, BBC'
   status: renewed
   season: Season 5
   window: ''
   castAdded:
     - name: Zosia Mamet
       role: Carmen Dame
+updateCount: 1
 ---
 
-Zosia Mamet has joined the cast of HBO's financial drama 'Industry' for its upcoming fifth and final season, according to Deadline. She will play Carmen Dame, a fitness influencer turned wellness tech founder and CEO.
+Zosia Mamet has joined the cast of HBO and BBC's series *Industry* for its fifth and final season, the network announced. She will play Carmen Dame, a fitness influencer turned wellness tech founder and CEO.
 
-The final season will consist of eight episodes, with production set to begin the first week of August in the UK, as reported by Variety. The series, created by Mickey Down and Konrad Kay, is a Bad Wolf production for HBO and the BBC.
+Production on the fifth season is set to begin the first week of August in the U.K.
 
 ## Who is Zosia Mamet playing?
 
-Mamet's character, Carmen Dame, enters the cutthroat world of London finance as a wellness tech CEO. Her casting follows the show's pattern of adding notable actors each season, which has previously included Kit Harington, Max Minghella, and Kiernan Shipka.
+Mamet's character, Carmen Dame, is described as a fitness influencer who becomes the founder and CEO of a wellness tech company.
 
-## When does filming start?
+## When does filming begin?
 
-Production on the final chapter is scheduled to kick off the first week of August. The series films in the United Kingdom.
+According to HBO, cameras will start rolling on the final season in the United Kingdom during the first week of August.
 
-Mamet is no stranger to HBO, having starred as Shoshanna Shapiro in the network's series 'Girls' and appearing in HBO Max's 'The Flight Attendant'. The creators of 'Industry', Mickey Down and Konrad Kay, previously stated about ending the series, "Finally: we owe everything to our crew and the best cast on TV for making our writing live."
+Series creators Mickey Down and Konrad Kay released a statement when the final season was ordered. "Finally: we owe everything to our crew and the best cast on TV for making our writing live," they said.
 
-The returning cast for the final season includes Myha'la, Marisa Abela, Kit Harington, Ken Leung, Max Minghella, and Charlie Heaton, among others.
+Mamet joins a returning ensemble that includes Myha’la, Marisa Abela, and Kit Harington, among others. The show is a Bad Wolf production for HBO and BBC.
