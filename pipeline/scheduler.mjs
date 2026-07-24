@@ -73,6 +73,44 @@ function runNode(script, args, extraEnv = {}) {
   });
 }
 
+// ── SEARCH STATE IN EVERY TICK REPORT (owner 2026-07-24, decision 4) ─────────────────────────────
+// Two jobs, both cheap (the GSC read is the SAME 12h-cached file FIND already refreshed — no extra
+// API call, ever):
+//   1. print the search numbers in every tick so the recovery is visible without asking for a report
+//   2. shout if the lane has gone a FULL DAY at zero publishes. The quality floor makes zero-publish
+//      ticks normal and expected, which is exactly why a whole silent day must not look normal too —
+//      that is the failure mode this alarm exists to catch (a threshold set too high, a broken
+//      extractor, a starved queue). Uses GitHub's ::error:: so it surfaces in the run UI, and NEVER
+//      fails the job — a warning that breaks publishing would be worse than the thing it warns about.
+async function reportSearchState(st, publishedThisTick) {
+  try {
+    const { loadDemand } = await import("./find/gscDemand.mjs");
+    const d = await loadDemand();                       // cache hit; no network in the common case
+    if (d?.ok) {
+      const impr = d.pages.reduce((n, p) => n + p.impressions, 0);
+      const clicks = d.pages.reduce((n, p) => n + p.clicks, 0);
+      console.log(`[news-search] GSC ${d.window?.startDate}→${d.window?.endDate}: ${impr} impressions · ${clicks} clicks · ${d.pages.length} pages earning · ${d.strikingPages.length} in striking distance (pos 8-30)${d.cached ? ` · cache ${d.ageH}h old` : ""}`);
+    } else {
+      console.log(`[news-search] GSC unavailable (${d?.reason || "unknown"}) — selection ran on freshness alone`);
+    }
+  } catch (e) { console.log(`[news-search] unavailable (${String(e?.message || e).slice(0, 60)})`); }
+
+  // Zero-publish-day alarm, measured from the day's own ledger (the authority on what shipped).
+  try {
+    const day = st?.day || {};
+    const dayPublished = Number(day.published || 0);   // the governor's day counter already includes this tick
+    const h = laHour(new Date());
+    // Only meaningful once the day is genuinely over — before ~20:00 LA a zero is just an early day.
+    if (dayPublished === 0 && h >= 20) {
+      const msg = `NEWS LANE HAS PUBLISHED 0 ARTICLES TODAY (${h}:00 LA). Zero-publish TICKS are expected under the quality floor — a zero-publish DAY is not: the floor is too high, the extractor is failing, or the queue is starved. Check the 'quality floor:' lines for the chars/full-text distribution.`;
+      console.log(`::error title=News lane: zero publishes today::${msg}`);
+      console.error(`[news-scheduler] 🔴 ${msg}`);
+    } else if (dayPublished === 0 && h >= 14) {
+      console.log(`::warning title=News lane: still 0 publishes::Zero articles so far today (${h}:00 LA) — watch it.`);
+    }
+  } catch { /* an alarm must never break the tick */ }
+}
+
 export async function tick({ now = new Date() } = {}) {
   if (!laPostingHours(now)) {
     console.log(`[news-scheduler] ${now.toISOString()} — outside LA posting hours (${POST_START}:00–${POST_END}:00 PT); no-op.`);
@@ -136,6 +174,7 @@ export async function tick({ now = new Date() } = {}) {
     published, costUsd: costM ? Number(costM[1]) : 0,
   });
   console.log(`[news-scheduler] published ${published} (${slugs.join(", ") || "—"}). day ${st.day.published}/${pace.CFG.TARGET} · tokens ${st.bucket.tokens.toFixed(2)} · fresh backlog ${freshBacklog()}.`);
+  await reportSearchState(st, published);
   setOutput({ published, slugs: slugs.join(",") });
   return { published, slugs };
 }

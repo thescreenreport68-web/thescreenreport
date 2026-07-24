@@ -135,16 +135,31 @@ console.log("=== 8. EVERGREEN OPPORTUNITIES — found from our OWN search data =
     { q: "best a24 movies", impressions: 8, clicks: 0, position: 25 },
     { q: "best movie trilogy", impressions: 4, clicks: 0, position: 16 },
     { q: "best trilogy movies", impressions: 3, clicks: 0, position: 18 },
+    { q: "2025 oscar winners", impressions: 11, clicks: 0, position: 55 },
     { q: "zendaya cast in the odyssey", impressions: 40, clicks: 2, position: 1 },  // NEWS, not evergreen
   ] };
-  const ops = evergreenOpportunities(demand);
+  // A stand-in article corpus — matching runs against slug + title + metaTitle, exactly as in production.
+  const index = [
+    { slug: "best-a24-movies-ranked", title: "The Best A24 Movies, Ranked", metaTitle: "" },
+    { slug: "best-movie-trilogies", title: "The Greatest Movie Trilogies Ever Made", metaTitle: "" },
+    // 🔴 the killer case: the slug shares ZERO words with "2025 oscar winners" — only the metaTitle matches
+    { slug: "every-winner-at-the-97th-academy-awards", title: "Sean Baker's Anora Dominates the 2025 Oscars Winners List", metaTitle: "2025 Oscars Winners: Full List of Academy Award Winners" },
+  ];
+  const ops = evergreenOpportunities(demand, { index });
   ok(ops.length > 0, `found ${ops.length} evergreen cluster(s) from real query shapes`);
   ok(!ops.some((o) => /zendaya/i.test(o.queries.join(" "))), "a pure NEWS query is not mistaken for evergreen demand");
   const a24 = ops.find((o) => o.queries.some((q) => /a24/.test(q)));
-  ok(a24 && a24.variants >= 2, "near-identical phrasings collapse into ONE cluster (not two thin pages)");
-  ok(a24 && a24.existingPage === "best-a24-movies-ranked", "correctly reports we ALREADY have that page → improve it, never a second URL");
-  const trilogy = ops.find((o) => o.queries.some((q) => /trilogy/.test(q)));
-  ok(trilogy && trilogy.existingPage === null, "a cluster with no page of ours is flagged as a NEW-page candidate");
+  ok(a24 && a24.variants >= 2, `"films" and "movies" are one intent → ONE cluster, not two thin pages (${a24?.variants} variants)`);
+  ok(a24 && a24.existingPage === "best-a24-movies-ranked", "reports the page we ALREADY have → improve it, never a second URL");
+
+  // 🔴 REGRESSION — the two near-duplicates the first version reported as "NO PAGE YET".
+  // Publishing either would have duplicated a page that already ranks.
+  const trilogy = ops.find((o) => o.queries.some((q) => /trilog/.test(q)));
+  ok(trilogy && trilogy.existingPage === "best-movie-trilogies",
+    "singular 'trilogy' now matches our plural 'trilogies' page (stemming) — no duplicate");
+  const oscars = ops.find((o) => o.queries.some((q) => /oscar/.test(q)));
+  ok(oscars && oscars.existingPage === "every-winner-at-the-97th-academy-awards",
+    "'2025 oscar winners' matches via metaTitle even though the SLUG shares no words — no duplicate");
 }
 
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);

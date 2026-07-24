@@ -94,10 +94,53 @@ export function savePerformance(perf, out = OUT) {
 // already have a page for (improve it) versus not (a candidate to write).
 const REFERENCE = /\b(best|top|ranked|ranking|list|greatest|worst|winners?|highest|grossing|all time|how many|what is|which|where to watch|explained|guide|vs\.?|compared)\b/i;
 
-export function evergreenOpportunities(demand, { minImpressions = 2 } = {}) {
+// 🔴 THE DUPLICATE-PAGE NEAR-MISS (2026-07-24). The first version of this matched cluster words against
+// GSC page SLUGS only, after stripping "best/top/ranked/movies/all/time" as stopwords and with no
+// stemming. It therefore reported "NO PAGE YET" for two clusters we already had strong pages for:
+//   · "best movie trilogy"  → we own best-movie-trilogies.md (1314 words, 54 impr) — "trilogy" is not a
+//     substring of "trilogies", and every other word had been stripped as a stopword
+//   · "2025 oscar winners"  → we own every-winner-at-the-97th-academy-awards.md, whose metaTitle is
+//     literally "2025 Oscars Winners: Full List of Academy Award Winners" (50 impr) — the slug shares
+//     ZERO words with the query, so a slug-only check could never find it
+// Acting on that would have published two duplicates of pages that already rank — precisely the harm
+// the recovery plan exists to prevent. Fixed by matching against the REAL article corpus (slug + title
+// + metaTitle) with stemming, and by keeping the identifying words instead of stripping them.
+const IDENT_STOP = new Set(["the", "a", "an", "of", "and", "for", "with", "in", "on", "to", "is", "are", "at", "by"]);
+// Searchers use these interchangeably — "best a24 films" and "best a24 movies" are ONE intent and must
+// land in ONE cluster, or we would conclude we need two pages for the same thing (the duplicate trap).
+// Applied to the RAW word BEFORE stemming: the generic "-ies -> -y" rule turns "movies" into "movy"
+// (it is movie+s, not movy+ies), so stemming first would leave films->movie and movies->movy unmatched.
+// Irregulars are listed explicitly; "trilogies -> trilogy" is left to the stemmer, where -ies IS right.
+const SYNONYM = {
+  film: "movie", films: "movie", movie: "movie", movies: "movie",
+  flick: "movie", flicks: "movie", pic: "movie", pics: "movie",
+  show: "series", shows: "series", serie: "series", series: "series",
+  academy: "oscar", oscars: "oscar", oscar: "oscar",
+};
+const estem = (w) => w.replace(/ies$/, "y").replace(/(?<=.{3})(es|s)$/, "");
+const norm = (w) => SYNONYM[w] || estem(w);
+const etoks = (s) => new Set(String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").split(/\s+/)
+  .filter((w) => w.length > 2 && !IDENT_STOP.has(w)).map(norm));
+
+// Every published page on the site, keyed for duplicate detection. Deliberately ALL lanes: a duplicate
+// of another lane's page is still a duplicate.
+export function articleIndex({ artDir = ART_DIR } = {}) {
+  const out = [];
+  let files = [];
+  try { files = fs.readdirSync(artDir).filter((f) => f.endsWith(".md")); } catch { return out; }
+  for (const f of files) {
+    const slug = f.replace(/\.md$/, "");
+    let d = {};
+    try { d = matter(fs.readFileSync(path.join(artDir, f), "utf8")).data || {}; } catch { /* still index the slug */ }
+    out.push({ slug, title: d.title || "", metaTitle: d.metaTitle || "", category: d.category || "",
+      toks: new Set([...etoks(slug), ...etoks(d.title), ...etoks(d.metaTitle)]) });
+  }
+  return out;
+}
+
+export function evergreenOpportunities(demand, { minImpressions = 2, index } = {}) {
   if (!demand?.ok || !demand.queries?.length) return [];
-  const STOP = new Set(["the", "a", "an", "of", "and", "for", "with", "in", "on", "to", "best", "top", "ranked", "ranking", "list", "movies", "movie", "films", "film", "all", "time"]);
-  const key = (q) => q.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)).sort().join(" ");
+  const key = (q) => [...etoks(q)].sort().join(" ");
   const clusters = new Map();
   for (const r of demand.queries) {
     if (!REFERENCE.test(r.q)) continue;
@@ -108,19 +151,34 @@ export function evergreenOpportunities(demand, { minImpressions = 2 } = {}) {
     if (c.bestPosition == null || r.position < c.bestPosition) c.bestPosition = r.position;
     clusters.set(k, c);
   }
-  // does a page of ours already serve this cluster?
-  const pageSlugs = demand.pages.map((p) => ({ slug: p.slug, impressions: p.impressions, position: p.position }));
+  // Accept a caller-supplied index; build the token sets for any entry that lacks them so callers can
+  // pass plain {slug,title,metaTitle} records without knowing the tokeniser.
+  const corpus = (index || articleIndex()).map((a) =>
+    a.toks instanceof Set ? a : { ...a, toks: new Set([...etoks(a.slug), ...etoks(a.title), ...etoks(a.metaTitle)]) });
+  const gsc = new Map(demand.pages.map((p) => [p.slug, p]));
   const out = [];
   for (const c of clusters.values()) {
     if (c.impressions < minImpressions) continue;
-    const words = c.key.split(" ");
-    const existing = pageSlugs.find((p) => words.filter((w) => p.slug.includes(w)).length >= Math.min(2, words.length));
+    const words = c.key.split(" ").filter(Boolean);
+    const need = Math.min(2, words.length);
+    // best-overlapping existing page across slug + title + metaTitle
+    let existing = null, bestOverlap = 0;
+    for (const a of corpus) {
+      const n = words.filter((w) => a.toks.has(w)).length;
+      if (n >= need && n > bestOverlap) { bestOverlap = n; existing = a; }
+    }
+    const live = existing ? gsc.get(existing.slug) : null;
     out.push({
       ...c,
       variants: c.queries.length,
       existingPage: existing ? existing.slug : null,
-      existingPosition: existing ? existing.position : null,
-      action: existing ? "improve existing page (already ranking — never a new URL)" : "candidate for a NEW evergreen page",
+      existingTitle: existing ? (existing.title || existing.metaTitle) : null,
+      existingPosition: live ? live.position : null,
+      existingImpressions: live ? live.impressions : null,
+      matchedWords: bestOverlap,
+      action: existing
+        ? "IMPROVE the existing page (already ranking — never a second URL)"
+        : "candidate for a NEW evergreen page",
     });
   }
   return out.sort((a, b) => b.impressions - a.impressions || b.variants - a.variants);
