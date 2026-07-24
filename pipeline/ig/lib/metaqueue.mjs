@@ -4,7 +4,7 @@
 // The story LOCK is taken before enqueue (enqueue = the commitment); the drain never re-checks it.
 import path from "node:path";
 import { IG } from "../config.mjs";
-import { readJson, writeJson } from "./util.mjs";
+import { readJson, writeJson, sleep } from "./util.mjs";
 import { loadPosted, savePosted } from "./ledger.mjs";
 import { igCreateContainer, igPublish, igComment, fbReelPublish, fbFindRecentReel, metaEnabled } from "./meta.mjs";
 
@@ -18,7 +18,14 @@ const saveQ = (q) => writeJson(qFile(), q);
 export async function metaEnqueue({ slug, videoUrl, coverUrl, igCaption, firstComment, fbDescription, whenISO, slot, day }) {
   const results = [];
   let containerId = null;
-  const ig = await igCreateContainer({ videoUrl, caption: igCaption, coverUrl });
+  // Burst guard (live 2026-07-24: containers 6-7 of a 7-reel build got a spurious Meta 400
+  // "pages_* permission" error after 5 straight successes — Meta's burst-throttle wears a
+  // permissions costume). One paused retry rescues the direct path before the Zernio fallback.
+  let ig = await igCreateContainer({ videoUrl, caption: igCaption, coverUrl });
+  if (!ig.ok) {
+    await sleep(20000);
+    ig = await igCreateContainer({ videoUrl, caption: igCaption, coverUrl });
+  }
   if (ig.ok) {
     containerId = ig.containerId;
     results.push({ platform: "instagram", id: `metaq:${containerId}`, ok: true, queued: true });
