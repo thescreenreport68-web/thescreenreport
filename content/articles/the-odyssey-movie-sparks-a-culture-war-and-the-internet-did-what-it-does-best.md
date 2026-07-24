@@ -98,12 +98,31 @@ reactions:
       Funny to me how people online tried to stir up cultural fights related to
       the Odyssey, when my guess is most Nolan fans were just like "It's a
       $250M+ Christopher Nolan movie with a ton of star power, looks awesome."
+  - speaker: Whoopi Goldberg
+    platform: interview
+    quote: 'I don’t understand. If you feel like that, why go see the movie?'
+  - speaker: Whoopi Goldberg
+    platform: interview
+    quote: >-
+      If you don’t want to see it, then don’t go see it. Why do you care who’s
+      cast in it?
+  - speaker: Alyssa Farah Griffin
+    platform: interview
+    quote: Twitter is not real life
+  - speaker: Alyssa Farah Griffin
+    platform: interview
+    quote: there’s nothing woke in this film.
+  - speaker: Sara Haines
+    platform: interview
+    quote: >-
+      You cannot not see the film and complain about how awful it is when you
+      haven’t seen the film.
 fanConsensus: >-
   The audience reaction is a deeply divided triptych: one panel shows outrage
   over perceived cultural disrespect, another defends the film by pointing to
   Hollywood's history of inaccuracy, and the largest panel is covered in memes
   and meta-commentary about the absurdity of the fight itself.
-updatedCount: 0
+updatedCount: 1
 trendScore: 329
 signals:
   popularity: 1037
@@ -117,7 +136,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T08:31:00.471Z'
+dateModified: '2026-07-24T04:31:09.016Z'
 provenance:
   parentEventSlug: the-odyssey-2026
   primaryEntity: The Odyssey
@@ -131,6 +150,7 @@ imageAlt: Christopher Nolan The Odyssey movie poster 2026
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-24T04:31:09.016Z'
 ---
 
 The reaction was instant — and loud, revealing a surprising culture war over a 3,000-year-old epic. The discourse is deeply divided, but threaded with humor and meta-commentary, creating a sprawling digital conversation that's as much about the audience as it is about the film.

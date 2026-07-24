@@ -103,11 +103,32 @@ reactions:
       win. But I just don't see that happening with either film, especially if
       Wildwood turns out as amazing as it's looking so far. Speaking of
       Wildwood, did you see the latest news
+  - speaker: Andrew Stanton
+    platform: interview
+    quote: >-
+      Lilypad is built like a toy in the sense that she wants to help the kid go
+      forward, but she’s got very different skills and zero experience, whereas
+      Jessie has nothing but experience and is probably unprepared for what to
+      do.
+  - speaker: A viewer
+    date: '2026-06-17'
+    quote: "\U0001F44FHello, Toy Story fans! \U0001F30DWhat country are you watching this movie from?"
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: >-
+      I feel like a big kid watching this movie and I'm 56 and my Wife is 57 we
+      feel like big kids watching this movie
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: 'Poor Bonnie, she was being bullied on her Lilypad :('
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: The fact that blaze and bonnie both start with a b is just cute ❤
 fanConsensus: >-
   Audience reaction is sharply divided, with celebration of the film's box
   office success being overwhelmingly overshadowed by anger and criticism toward
   Pixar and Disney for conducting layoffs simultaneously.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   popularity: 372
@@ -122,7 +143,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T16:31:14.941Z'
+dateModified: '2026-07-24T04:31:09.016Z'
 provenance:
   parentEventSlug: toy-story-5-2026
   primaryEntity: Toy Story 5
@@ -136,6 +157,7 @@ imageAlt: Toy Story 5 movie poster Woody Buzz Lightyear
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-24T04:31:09.016Z'
 ---
 
 Pixar’s *[Toy Story 5](/movies/toy-story-5-box-office-day-27-adds-2-7-million-as-domestic-total-hits-413-3/)* is pulling off the kind of box office magic that studio execs dream about, sprinting toward the $1 billion mark worldwide. But instead of a victory lap, the film's financial triumph is landing with a thud for a big chunk of the audience. Why?
