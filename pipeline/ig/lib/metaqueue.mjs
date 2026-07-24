@@ -6,7 +6,7 @@ import path from "node:path";
 import { IG } from "../config.mjs";
 import { readJson, writeJson } from "./util.mjs";
 import { loadPosted, savePosted } from "./ledger.mjs";
-import { igCreateContainer, igPublish, igComment, fbReelPublish, metaEnabled } from "./meta.mjs";
+import { igCreateContainer, igPublish, igComment, fbReelPublish, fbFindRecentReel, metaEnabled } from "./meta.mjs";
 
 const qFile = () => path.join(IG.dataDir, "metaqueue.json");
 const loadQ = () => readJson(qFile(), { items: [] });
@@ -81,6 +81,18 @@ export async function metaDrain({ log = console.log } = {}) {
     }
     // Facebook (native Reel — published at slot time; no scheduling support upstream)
     if (!item.done.fb) {
+      // duplicate wall: on a RETRY, first check whether the "failed" attempt actually published
+      // (lost finish-response). Found = record it, never upload the same reel twice.
+      if (item.attempts > 1) {
+        const existing = await fbFindRecentReel(item.fb.description);
+        if (existing) {
+          item.done.fb = existing;
+          updateRow(item.slug, "facebook", { postId: existing, published: true, queued: false, error: null });
+          log(`  ✅ meta: FB reel for ${item.slug} already live (${existing}) — retry skipped (duplicate wall)`);
+          published++;
+          continue;
+        }
+      }
       const r = await fbReelPublish(item.fb);
       if (r.ok) {
         item.done.fb = r.videoId;

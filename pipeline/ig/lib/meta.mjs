@@ -108,6 +108,22 @@ export async function fbReelPublish({ videoUrl, description }) {
   } catch (e) { return { ok: false, error: String(e.message).slice(0, 200) }; }
 }
 
+// VERIFY-BEFORE-RETRY (duplicate wall, owner mandate "never again"): a finish call whose response
+// was lost would re-upload the same reel on the next drain. Before any RETRY, look for a recent
+// page video carrying the same description head — found = it published, do not upload again.
+export function descKey(description) {
+  return String(description || "").slice(0, 80).replace(/\s+/g, " ").trim().toLowerCase();
+}
+export async function fbFindRecentReel(description) {
+  try {
+    const want = descKey(description);
+    if (want.length < 10) return null; // too generic to match safely
+    const j = await gjson(`${G}/${process.env.META_PAGE_ID}/videos?fields=id,description&limit=25&access_token=${T()}`, {}, 30000);
+    const hit = (j.data || []).find((v) => descKey(v.description) === want);
+    return hit ? hit.id : null;
+  } catch { return null; } // fail-open to the normal retry (a lookup error must not strand the item)
+}
+
 // ── INSIGHTS (the un-blinding) ─────────────────────────────────────────────────────
 export async function igMediaInsights(mediaId) {
   try {

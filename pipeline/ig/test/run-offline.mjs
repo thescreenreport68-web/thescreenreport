@@ -54,6 +54,12 @@ const CLEAN_SCRIPT = { sentences: [
 await t("lint: clean in-band script passes (22-30s format)", () => {
   assert.deepEqual(lintScript(CLEAN_SCRIPT, ENTITIES), []);
 });
+await t("meta: descKey matcher (FB verify-before-retry duplicate wall)", async () => {
+  const { descKey } = await import("../lib/meta.mjs");
+  assert.equal(descKey("  Mark  Wahlberg\nis BACK. "), "mark wahlberg is back.");
+  assert.equal(descKey("x".repeat(200)).length, 80);
+  assert.equal(descKey(null), "");
+});
 await t("lint: bare movie title on first mention is flagged; framed variants pass (title-unframed)", () => {
   const ents = [{ name: "Mark Wahlberg", kind: "person" }, { name: "By Any Means", kind: "movie" }];
   // NB: the sentence AFTER the title must not carry a class word — "…in By Any Means. The film
