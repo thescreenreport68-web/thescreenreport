@@ -84,7 +84,16 @@ const PROMPT_LEAK = /\b(not (?:detailed|specified|mentioned|provided|stated|avai
 // Deterministic, free checks computed from the article object (no LLM).
 export function deterministic(article, topic) {
   const body = article.body || "";
-  const words = body.trim().split(/\s+/).filter(Boolean).length;
+  // Count READER-VISIBLE prose, not markdown. Measured 2026-07-24: a draft with 712 words of actual
+  // prose passed an 800 floor because "##", "-", "**" and heading text were all counted as words. The
+  // floor now measures what a human reads, so 800 means 800.
+  const words = body.trim()
+    .replace(/^#{1,6}\s.*$/gm, " ")          // headings are navigation, not article prose
+    .replace(/^\s*>\s?/gm, " ")              // blockquote markers
+    .replace(/^\s*[-*+]\s+/gm, " ")          // list markers (the item text still counts)
+    .replace(/\*\*|__|[*_`]/g, " ")          // emphasis syntax
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1") // links → their anchor text
+    .split(/\s+/).filter(Boolean).length;
   const h2s = (body.match(/^##\s+.+/gm) || []).map((h) => h.replace(/^##\s+/, ""));
   const h2Questions = h2s.filter((h) => h.trim().endsWith("?")).length;
   const internalLinks = (body.match(/\]\(\/[^)]+\)/g) || []).length;

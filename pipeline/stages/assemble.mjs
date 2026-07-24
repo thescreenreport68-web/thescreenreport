@@ -108,6 +108,13 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   const bodyPlain = body.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/^#+\s.*$/gm, " ").replace(/[*_`>]/g, " ").replace(/\s+/g, " ").trim();
   const metaTitle = finishMetaTitle({ model: article.metaTitle, title: article.title });
   const metaDescription = finishMetaDescription({ model: article.metaDescription, dek: article.dek, bodyText: bodyPlain.slice(0, 1500) });
+  // metaDescription must NOT be a byte-copy of the dek (measured 2026-07-24: they were identical, wasting
+  // the SERP snippet — the two fields do different jobs and Google sees the duplicate). When the finisher
+  // falls back to the dek, rebuild it from the body's opening prose instead.
+  const _dek = String(article.dek || "").trim();
+  const metaDesc = metaDescription.trim() === _dek && _dek
+    ? finishMetaDescription({ model: "", dek: "", bodyText: bodyPlain }) || metaDescription
+    : metaDescription;
   let seoTags = (classification.tags?.length ? classification.tags : article.tags || []).filter(Boolean);
   if (!seoTags.length) seoTags = [...new Set([topic.primaryEntity, classification.category, ...String(topic.primaryKeyword || "").split(/\s+/)].filter(Boolean).map((s) => String(s).toLowerCase()))].slice(0, 8);
   // TOPIC→ARTICLE DRIFT GUARD (root-fix 2026-07-16, the Bonta/"swimming lesson" case): FIND metadata describes
@@ -140,7 +147,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     date: dateISO,
     dek: article.dek || "",
     metaTitle,
-    metaDescription,
+    metaDescription: metaDesc,
     tags: seoTags,
     targetKeyword: drift.targetKeyword,
     keyTakeaways: article.keyTakeaways || [],
@@ -168,7 +175,11 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   if (drift.eventSlug) fm.eventSlug = drift.eventSlug;
   if (drift.eventType) fm.eventType = drift.eventType;
   {
-    const outletCount = topic.verification?.outletCount ?? topic.corroborationCount;
+    // Count the outlets we ACTUALLY gathered. Measured 2026-07-24: an article built from 6 outlets
+    // reported outletCount 1, because this read verification.outletCount — set during FIND, BEFORE the
+    // content finder's corroboration widened the bundle. The bundle is the truth at publish time.
+    const gathered = (topic._bundle?.sources || []).length;
+    const outletCount = gathered || (topic.verification?.outletCount ?? topic.corroborationCount);
     if (Number.isFinite(outletCount)) fm.outletCount = outletCount;
   }
   // Provenance for the post-publish recheck / auto-retraction system (only on breaking-news articles).
@@ -188,6 +199,9 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     // PR2: surface the FIND trust label as the reader-facing storyStatus badge (deterministic — never
     // depends on the LLM). EVERGREEN reference pieces get no badge; held statuses collapse to HOLD.
     const STATUS_BADGE = { CONFIRMED: "CONFIRMED", DEVELOPING: "DEVELOPING", RUMOR: "RUMOR", CONFIRMING: "HOLD", QUEUE: "HOLD", "EDITORIAL-HOLD": "HOLD" };
+    // storyStatus is SYSTEM-owned and deliberately NOT in the writer-passthrough list above: the writer
+    // emitted storyStatus "CONFIRMED" on a story whose verified provenance said DEVELOPING, and the
+    // passthrough overwrote the truthful badge with the model's guess. Only verification decides this.
     const badge = STATUS_BADGE[topic.verification.status];
     if (badge) fm.storyStatus = badge;
     if (topic.verification.sensitivity && topic.verification.sensitivity !== "normal") fm.sensitivity = topic.verification.sensitivity;
@@ -210,7 +224,7 @@ export function assemble({ article, classification, image, topic, dateISO }) {
     "release", "tracklist", "tourDates", "ticketInfo", "officialPost", "predictions",
     "careerArc", "keyTracks", "peerLine", "stats", "screenWork", "soundtrack", "songSpotlight", "discoveryArtist",
     // PLAYBOOK PR1 structured fields (rendered in PR2 UI; carried now so writer output persists)
-    "storyStatus", "sensitivity", "keyPoints", "sightings", "criterion", "honorableMentions", "topFive", "bestFor",
+    "sensitivity", "keyPoints", "sightings", "criterion", "honorableMentions", "topFive", "bestFor",
     "readingModes", "reveals", "officialSynopsis", "seriesContext", "seriesStatus", "weekendChart", "verdictBox",
     "releaseWindows", "credits", "careerStats", "methodology", "footnotes", "speakers", "looseThreads", "atAGlance",
     "verdictBuckets", "confidenceTier", "precursorTimeline", "bottomLine"]) {

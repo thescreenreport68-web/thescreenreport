@@ -117,3 +117,32 @@ export function dropOrphanHeadings(body) {
   }
   return out.join("\n");
 }
+
+// ── INLINE-BULLET REPAIR (measured defect, 2026-07-24) ───────────────────────────────────────────
+// The writer emitted an entire list on ONE line: "intro: * **A** does x. * **B** does y. * **C** …".
+// Markdown needs each item on its own line, so that renders as a single paragraph full of literal
+// asterisks — the most visible failure in the first 800-word draft, and precisely the bullet feature
+// the owner asked for. A prompt rule alone cannot guarantee this (the writer already had one), so the
+// repair is DETERMINISTIC and runs on every article: any line carrying 2+ inline " * " item markers is
+// split into real list lines. Genuine multiplication/footnote asterisks are untouched because the
+// pattern requires the marker to be followed by a capitalised or bold item start.
+export function fixInlineBullets(md) {
+  const ITEM = /\s+[*-]\s+(?=\*\*|[A-Z0-9"'\u201c])/g;      // an inline item marker mid-line
+  const lines = String(md || "").split("\n");
+  const out = [];
+  for (const line of lines) {
+    const startsBullet = /^\s*[*-]\s+\S/.test(line);
+    const inline = (line.match(ITEM) || []).length;
+    // A real list-on-one-line has 2+ item markers total, counting the leading one when present.
+    if (inline + (startsBullet ? 1 : 0) < 2 || inline === 0) { out.push(line); continue; }
+    const lead0 = startsBullet ? line.replace(/^\s*[*-]\s+/, "") : line;
+    const parts = lead0.split(ITEM).map((x) => x.trim()).filter(Boolean);
+    // when the line did NOT start with a bullet, the first chunk is the intro sentence, not an item
+    const intro = startsBullet ? null : parts.shift();
+    if (intro) out.push(intro);
+    out.push("");
+    for (const p of parts) out.push(`- ${p.replace(/^[*-]\s+/, "").replace(/\s*\.\s*$/, "")}`);
+    out.push("");
+  }
+  return out.join("\n").replace(/\n{3,}/g, "\n\n");
+}

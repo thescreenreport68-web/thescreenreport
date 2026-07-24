@@ -21,7 +21,7 @@ import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
-import { dedupeSentences, trimIncomplete, dropOrphanHeadings } from "./lib/polish.mjs";
+import { dedupeSentences, trimIncomplete, dropOrphanHeadings, fixInlineBullets } from "./lib/polish.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getPersonFacts, personFactsBlock, getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
@@ -332,9 +332,15 @@ async function processTopic(topic, i) {
           // itself. Each adds ~2,400 chars of real credits — the material an 800-word piece needs when only one
           // outlet covered the story.
           const workNames = new Set([topic.primaryEntity, topic._titleFacts?.title].filter(Boolean).map((x) => String(x).toLowerCase()));
+          // ONLY people the HEADLINE is about. Measured 2026-07-24: grounding every entity pulled in Matt
+          // Damon's block on a Holland/Pattinson story, and the writer duly wrote a Damon-and-Ben-Affleck
+          // paragraph — an off-topic tangent that breaks our own ONE-STORY rule. Person facts exist to
+          // deepen the story's SUBJECTS, not to introduce new ones.
+          const headline = String(topic.title || "").toLowerCase();
           const people = (topic.entities || [])
             .map((e) => String(e || "").replace(/\s*\((film|movie|tv series|series|album|song)\)\s*$/i, "").trim())
-            .filter((e) => e.length > 2 && !workNames.has(e.toLowerCase()));
+            .filter((e) => e.length > 2 && !workNames.has(e.toLowerCase()))
+            .filter((e) => headline.includes(e.toLowerCase().split(/\s+/).slice(-1)[0]));
           let added = 0;
           for (const name of people) {
             if (added >= 2) break;
@@ -343,7 +349,7 @@ async function processTopic(topic, i) {
               const pb = pf ? personFactsBlock(pf) : null;
               if (pb) {
                 if (!topic._person) topic._person = pf;
-                topic.facts.push({ title: `AUTHORITATIVE PERSON FACTS — ${name}`, extract: pb });
+                topic.facts.push({ title: `AUTHORITATIVE PERSON FACTS — ${name} (use ONLY where it explains THIS story; do NOT write a mini-biography, a birth year, or unrelated past projects)`, extract: pb });
                 console.log(`  longform: +${pb.length} chars person facts (${name})`);
                 added++;
               }
@@ -495,7 +501,13 @@ async function processTopic(topic, i) {
     // faithful brief (short if the source is thin) is a valid article. Attempt 2 (only if needed) tightens format or
     // re-grounds a stray; whatever remains publishes (strays are trimmed after the loop).
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-      ({ article } = await generate({ topic, model: MODELS.generator, corrections, previousArticle: attempt > 1 ? article : null }));
+      ({ article } = await generate({
+        // LONGFORM WRITER (owner 2026-07-24: "find the writer who can do this"). Measured: deepseek-v3.2
+        // produced 563/502/798/595/601 words on the SAME topic with the SAME abundant material — it does not
+        // hold a length. That is a model property, not a prompt one, so the model is the thing to change.
+        // Stays inside the cheap-models-only constraint; defaults to the locked generator when unset.
+        topic, model: (LF_ON && topic._longform && process.env.LONGFORM_WRITER) || MODELS.generator,
+        corrections, previousArticle: attempt > 1 ? article : null }));
       attachStructured();
       // CLASSIFICATION is TOPIC-derived (a FIND/seed topic carries the authoritative category/subcategory/formatTag);
       // tags derive deterministically. The LLM classifier runs ONLY for a legacy topic with no categorization, once.
@@ -534,7 +546,7 @@ async function processTopic(topic, i) {
 
     // FINAL POLISH (deterministic, before assemble): collapse duplicated sentences and trim any truncated/
     // cut-orphaned fragment — can never add a fact.
-    if (pass && article?.body) article.body = dropOrphanHeadings(trimIncomplete(dedupeSentences(article.body)));
+    if (pass && article?.body) article.body = fixInlineBullets(dropOrphanHeadings(trimIncomplete(dedupeSentences(article.body))));
 
     // ── HERO IMAGE — LAST MILE (2026-07-03, audit D9: previously picked BEFORE the gate, so og:image fetches +
     // the vision call + measure downloads were fully wasted on every held article — 4/6 in the last run). Picked
