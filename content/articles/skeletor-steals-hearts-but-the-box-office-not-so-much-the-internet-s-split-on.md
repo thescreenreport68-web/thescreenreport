@@ -157,10 +157,38 @@ reactions:
       Watched Masters of the Universe for the second time tonight, first day
       streaming on Prime. It's such a fun movie, I'm disappointed it didn't do
       better in theatres. I hope they make the sequel!
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      This movie captured all of the best parts of the 80's cartoon that I grew
+      up with. That show was cheesy AF, funny and awesome. Skeletor monologing
+      for his imaginary audience, the awkward prolonged group laughter, the
+      weirdo character names, the PSA at the end,
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      I was genuinely so sad that this movie did not do well in theaters. I
+      really hope this does well in streaming. I love this movie so much and
+      gets more movies.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: Skeletor was such a menace in this - rightfully so
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      As a kid that grew up watching the cartoon.......this movie was a massive
+      hit for me. They hit all the great nostalgia points but also made it fun
+      and acknowledged the absurdity of the show. Also love they acknowledge the
+      super secret powers meme video.......can't
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      This movie was a blast to watch. He-Man punching the screen at the end was
+      pure cinema.
 fanConsensus: >-
   A fun, nostalgic film beloved by those who saw it, but its legacy is
   overshadowed by box office disappointment and a rushed move to streaming.
-updatedCount: 2
+updatedCount: 3
 trendScore: 45
 signals:
   popularity: 235
@@ -175,7 +203,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T14:31:02.937Z'
+dateModified: '2026-07-24T22:32:19.487Z'
 provenance:
   parentEventSlug: masters-of-the-universe-2026
   primaryEntity: Masters of the Universe
@@ -189,7 +217,7 @@ imageAlt: Masters of the Universe 2026 movie poster Skeletor
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2840
 imageHeight: 1598
-updated: '2026-07-24T14:31:02.937Z'
+updated: '2026-07-24T22:32:19.487Z'
 ---
 
 The movie that fans who saw it largely adored is the same film the box office largely ignored. Now, with its quick debut on Prime Video just weeks after its theatrical run, the conversation has reignited, and the internet went into full meltdown over the divide between genuine love and commercial disappointment.

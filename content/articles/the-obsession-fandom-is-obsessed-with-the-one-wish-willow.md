@@ -131,11 +131,38 @@ reactions:
   - speaker: A viewer
     date: '2026-06-30'
     quote: i love the score when he broke the one wish willow its so haunting
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: >-
+      Easily the most heartbreaking part of the movie for me. Nikki seemed like
+      such a good person, and everything could’ve been okay, but Bear was too
+      scared of getting rejected to just trust his own feelings.
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: >-
+      I liked how they had sarah genuinely like bear. The contrast between her
+      and cursed nikki somehow makes the movie more terrifying
+  - speaker: A viewer
+    date: '2026-07-02'
+    quote: >-
+      8:32 I like how disturbing it is that the newborn Freaky Nikki is still
+      kind of "glitchy," as if it's still learning how to talk like a normal
+      human being.
+  - speaker: A viewer
+    date: '2026-06-30'
+    quote: >-
+      03:40 "No, it's not a romance, it's a love story" could be said about the
+      film, too
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: >-
+      “When I have a crush on a guy…no one knows” WHY DID THEY PUT THAT LINE IN
+      THERE.
 fanConsensus: >-
   The audience is largely having more creative fun building lore around the
   film's magical MacGuffin than engaging with its central plot, though a
   cringeworthy character moment has sparked notable criticism.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   popularity: 459
@@ -150,7 +177,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T14:31:02.937Z'
+dateModified: '2026-07-24T22:32:19.487Z'
 provenance:
   parentEventSlug: obsession-2026
   primaryEntity: Obsession
@@ -164,7 +191,7 @@ imageAlt: Obsession 2026 movie poster One Wish Willow
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T14:31:02.937Z'
+updated: '2026-07-24T22:32:19.487Z'
 ---
 
 The 2026 film *[Obsession](/movies/obsession-box-office-day-67-adds-359-520-as-domestic-total-hits-258-7-million/)* might be about a supernatural pact gone wrong, but the audience has become fixated on something else entirely: the mechanics of the fictional 'One Wish Willow' company. While the plot follows Bear's disastrous wish, a large portion of viewers are more interested in the world-building around the magical product, imagining the beleaguered customer service reps, the company's origin story, and the mundane ways its all-powerful system can fail.
