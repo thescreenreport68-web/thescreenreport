@@ -174,9 +174,9 @@ async function streamAudio(body, { label, timeoutMs, maxAudioBytes = 0 }) {
 // INSTRUCTIONS, and costs ~$0.011/read vs ~$0.073 on gpt-audio (~7×). Returns pcm16@24k mono —
 // the exact format the pipeline already consumes. The whisper verbatim wall + ending check stay
 // downstream as the safety net. Ship gate: the owner A/B-listens before this goes live (flag below).
-// Voice + delivery LOCKED by the owner's two-round A/B casting (2026-07-24): SHIMMER won over
-// marin/echo/cedar + 9 others; this exact instruction set produced the take the owner approved
-// ("shimmer-wahlberg-PACED"). Shimmer's natural read runs ~2.2 wps — the SPEED block below lifts it
+// Voice + delivery LOCKED by the owner's three-round A/B casting (2026-07-24): ECHO won the final
+// head-to-head vs shimmer on identical scripts (after beating marin/cedar/ash + 8 others in round 2);
+// this exact instruction set produced the approved takes. Shimmer's natural read runs ~2.2 wps — the SPEED block below lifts it
 // to ~2.7-2.8 wps, which the owner called right ("calm, normal pacing"; the unpushed takes were "very
 // slow"). ⚠ measured pace ≈2.75 wps ≠ config wps 3.4 (gpt-audio) — the IG_TTS=openai flip commit must
 // rebalance IG.script.wps + word bands or duration estimates will be wrong.
@@ -188,7 +188,7 @@ const OPENAI_TTS_INSTR =
   "anchor racing the clock - rapid, tight, minimal pauses, clearly articulated. Push the tempo throughout. " +
   "Sound completely human from the very first word: natural micro-pauses, never monotone, never salesy, no AI cadence.";
 
-export async function openaiSpeak({ text, voice = process.env.OPENAI_TTS_VOICE || "shimmer", style, context = "" }) {
+export async function openaiSpeak({ text, voice = process.env.OPENAI_TTS_VOICE || "echo", style, context = "" }) {
   const instructions = OPENAI_TTS_INSTR + (context ? ` Story context: ${context}.` : "");
   const res = await fetch("https://api.openai.com/v1/audio/speech", {
     method: "POST",

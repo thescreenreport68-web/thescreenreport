@@ -48,7 +48,6 @@ const CLEAN_SCRIPT = { sentences: [
   "And he already has a sequel dated for June 2028.",
   "Warner Bros calls this their biggest studio debut since early 2019.",
   "Now critics are handing it the whole franchise's best reviews in years.",
-  "Even the studio quietly admits nobody modeled an opening quite like this.",
   "So does the DC rebuild finally have its real proof?",
   "Let us know in the comments below.",
 ], ending: "question" };

@@ -74,7 +74,10 @@ export const IG = {
     // subtitles/images stay in sync. pace:null = off.
     // maxTempo 1.12 (2026-07-16): slow reads now speed UP to target too — a 3.0-wps read of a
     // max-length script rendered past the 47s ceiling and died at watchqc after full spend.
-    pace: { targetWps: 3.4, minTempo: 0.85, maxTempo: 1.12 },
+    // targetWps 2.72 (2026-07-24): the owner cast ECHO at its NATURAL pace — the old 3.4 target
+    // would have sped every approved-sounding take up by maxTempo and wrecked the cast voice.
+    // paceTake now only corrects outlier takes toward the approved pace, both directions.
+    pace: { targetWps: 2.72, minTempo: 0.85, maxTempo: 1.12 },
     // calibrated to the owner's ACTUAL bars: every axis ≥6 (his rejected take had
     // pauses=5), the ending MUST land, and the total floor fits 33-42s reads (long
     // reads score structurally lower than the short ones the old floor was tuned on)
@@ -144,7 +147,10 @@ export const IG = {
   // LENGTH DISCIPLINE (owner 2026-07-24, retention-first): avg IG watch was 2-7s on 35-40s reels
   // (~10-15% completion — the metric every 2026 algorithm ranks on). 22-30s standard mechanically
   // raises completion AND cuts voice cost ~25%. Rich emotional stories may still reach ~32s.
-  script: { minWords: 70, maxWords: 105, minSec: 18, maxSec: 32, durTolSec: 3, targetSec: [22, 30], wps: 3.4 },
+  // wps 2.72 = ECHO's measured natural pace on the owner-approved takes (2026-07-24 casting:
+  // 2.68-2.76 across reads). Word bands derive from it: 82w ≈ 30s + pauses ≈ 33s ≤ maxSec+tol;
+  // 60w ≈ 22s. The gpt-audio FALLBACK reads ~3.5-4.0 wps → those rare reels render short, never long.
+  script: { minWords: 60, maxWords: 82, minSec: 18, maxSec: 32, durTolSec: 3, targetSec: [22, 30], wps: 2.72 },
 
   // Enrichment (owner 2026-07-12): when OUR article yields fewer than `minFacts` verified facts,
   // pull MORE verified facts about the SAME people/event from related news so the reel can reach

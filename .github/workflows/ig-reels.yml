@@ -138,6 +138,8 @@ jobs:
           META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
           META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
           META_IG_ID: ${{ secrets.META_IG_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IG_TTS: openai   # owner-cast voice (echo, 2026-07-24) — gpt-audio marin stays the auto-fallback
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             # BUILD-AHEAD: attempt up to 15 candidates and SHIP up to 7 reels (posts=7), scheduling each
