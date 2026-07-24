@@ -1,0 +1,76 @@
+{
+  "id": "news-noah-wyle-the-pitt-fan-discourse-season-3",
+  "slug": "noah-wyle-on-the-pitt-fan-discourse-saving-hollywood-and-what-s-coming",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 505w < 600",
+        "a 66-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 7,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [
+        "body 495w < 600",
+        "a 66-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 4,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Noah Wyle",
+    "work": {
+      "title": "The Pitt",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 495,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 66,
+      "avgSentence": 21,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 495w < 600",
+        "a 66-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "tv",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 122170
+}

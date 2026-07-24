@@ -1,0 +1,77 @@
+{
+  "id": "news-blade-runner-2099-premiere-date-trailer",
+  "slug": "blade-runner-2099-sequel-series-sets-late-fall-prime-video-premiere-fi",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "body 258w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "H2s 0 < 1",
+        "body 247w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Blade Runner 2099",
+    "work": {
+      "title": "Blade Runner 2099",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 247,
+      "h2s": 0,
+      "h2Questions": 0,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 19,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "H2s 0 < 1",
+        "body 247w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "1+ subheads"
+    ]
+  },
+  "ms": 91837
+}

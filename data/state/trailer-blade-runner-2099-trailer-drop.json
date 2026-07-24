@@ -1,0 +1,84 @@
+{
+  "id": "trailer-blade-runner-2099-trailer-drop",
+  "slug": "blade-runner-2099-teaser-michelle-yeoh-goes-cyberpunk-in-new-tv-spinof",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/trailers",
+      "format": [
+        "body 370w < 600"
+      ],
+      "cuts": 3,
+      "broken": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "tv/trailers",
+      "format": [
+        "body 390w < 600"
+      ],
+      "cuts": 3,
+      "broken": [
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Blade Runner 2099",
+    "work": {
+      "title": "Blade Runner 2099",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "indiewire.com"
+  },
+  "holdReason": "broken article: prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 390,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 19,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 390w < 600",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "hardBlocks": [
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 400w",
+      "3+ FAQ",
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 60106
+}
