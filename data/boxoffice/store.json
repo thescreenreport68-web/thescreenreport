@@ -2356,11 +2356,11 @@
    "key": "the-odyssey-bo-update-150m|BO-UPDATE",
    "eventSlug": "the-odyssey-bo-update-150m",
    "form": "BO-UPDATE",
-   "reason": "consistency: metaTitle: headlines domestic while the title headlines other — the SERP promise must match the page",
-   "tries": 44,
-   "at": "2026-07-24T03:32:45.075Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 45,
+   "at": "2026-07-24T04:02:58.389Z",
    "dead": true,
-   "expiresAt": "2026-07-27T03:32:45.075Z"
+   "expiresAt": "2026-07-27T04:02:58.389Z"
   },
   {
    "key": "a-day-like-no-other-ev-streaming-arrival|NOW-STREAMING",
@@ -2399,16 +2399,24 @@
    "at": "2026-07-23T23:05:18.855Z",
    "dead": true,
    "expiresAt": "2026-07-26T23:05:18.855Z"
+  },
+  {
+   "key": "stuart-fails-to-save-the-universe-trending-tv|TRENDING-TV",
+   "eventSlug": "stuart-fails-to-save-the-universe-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "under floor: no confirmed streaming platform for trending TV",
+   "tries": 1,
+   "at": "2026-07-24T04:02:58.771Z"
   }
  ],
- "zeroStreak": 35,
+ "zeroStreak": 36,
  "daySpend": {
   "laDay": "2026-07-23",
-  "usd": 0.55356
+  "usd": 0.55523
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784863868661
+  "lastMs": 1784865669696
  },
  "lastAuditDay": "2026-07-23",
  "attempts": {
@@ -2427,7 +2435,8 @@
    "tom clancy's jack ryan: ghost war": 3,
    "silo": 2,
    "citizen vigilante": 1,
-   "spider-man: brand new day": 1
+   "spider-man: brand new day": 1,
+   "stuart fails to save the universe": 1
   }
  }
 }
