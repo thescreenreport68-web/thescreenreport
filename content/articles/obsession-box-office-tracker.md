@@ -9,8 +9,10 @@ author: editorial-team
 date: '2026-07-17T06:31:24.072Z'
 updated: '2026-07-24T08:31:02.873Z'
 boxOfficeTracker: true
-dek: '## The Movie'
-metaTitle: '''Obsession'' Climbs to $260M at the Domestic Box Office'
+dek: >-
+  How much Obsession has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Obsession Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Obsession has grossed $259,556,380 at the domestic box office through day 69,
   adding $369,115 in its latest daily haul.

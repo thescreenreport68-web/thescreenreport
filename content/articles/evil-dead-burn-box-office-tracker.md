@@ -10,10 +10,9 @@ date: '2026-07-16T16:31:29.698Z'
 updated: '2026-07-24T07:30:02.419Z'
 boxOfficeTracker: true
 dek: >-
-  Souheila Yacoub stars in the latest chapter of the demonic franchise, directed
-  by Sébastien Vaniček. The film's global opening has already covered its
-  production budget.
-metaTitle: '''Evil Dead Burn'' Hits $26M at the Domestic Box Office'
+  How much Evil Dead Burn has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Evil Dead Burn Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Evil Dead Burn has grossed $26,023,203 at the domestic box office through day
   13, adding $645,186 in its latest daily haul.

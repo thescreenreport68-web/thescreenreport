@@ -6,10 +6,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-19T04:30:45.711Z'
 dek: >-
-  Chiwetel Ejiofor leads a starry cast in Kane Parsons' chilling horror-mystery.
-  The film's phenomenal performance has rewritten the indie studio's record
-  books.
-metaTitle: '''Backrooms'' Climbs to $196M at the Domestic Box Office'
+  How much Backrooms has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Backrooms Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Backrooms has grossed $195,963,463 at the domestic box office through day 52,
   adding $222,066 in its latest daily haul.
@@ -83,7 +82,6 @@ imageHeight: 2160
 updated: '2026-07-20T13:31:38.654Z'
 boxOfficeTracker: true
 ---
-
 
 Chiwetel Ejiofor leads the cast of Kane Parsons' unsettling horror-mystery '[Backrooms](/movies/backrooms-box-office-day-50-adds-215-180-as-domestic-total-hits-195-5-million/).' The film centers on a strange and inexplicable doorway that materializes in the basement of a seemingly ordinary furniture showroom, unleashing a cascade of supernatural terror over its 111-minute runtime. Director Parsons crafts a chilling blend of horror, mystery, and science fiction from this simple, eerie premise.
 

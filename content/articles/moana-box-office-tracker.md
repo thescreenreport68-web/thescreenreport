@@ -9,8 +9,10 @@ author: editorial-team
 date: '2026-07-16T06:08:30.477Z'
 updated: '2026-07-24T07:01:09.635Z'
 boxOfficeTracker: true
-dek: '## The Movie'
-metaTitle: '''Moana'' Climbs to $90M at the Domestic Box Office'
+dek: >-
+  How much Moana has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Moana Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Moana has grossed $89,793,206 at the domestic box office through day 13,
   adding $2,523,599 in its latest daily haul.

@@ -10,9 +10,9 @@ date: '2026-07-16T06:30:43.348Z'
 updated: '2026-07-24T07:00:09.635Z'
 boxOfficeTracker: true
 dek: >-
-  The latest Illumination adventure, starring Jeff Bridges and Christoph Waltz,
-  earned the franchise's best reviews but its lowest domestic debut.
-metaTitle: '''Minions & Monsters'' Reaches $144M at the Box Office'
+  How much Minions & Monsters has made at the domestic box office, with a
+  day-by-day breakdown of its theatrical run, updated daily.
+metaTitle: 'Minions & Monsters Box Office: Total Gross by Day'
 metaDescription: >-
   Minions & Monsters has grossed $143,860,945 at the domestic box office through
   day 22, adding $2,277,815 in its latest daily haul.

@@ -8,10 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-19T04:29:45.711Z'
 dek: >-
-  The comedy-horror sequel, starring the original Wayans brothers and Anna
-  Faris, has scared up major theatrical success. Now in its 47th week, the
-  film's remarkable run proves the franchise's enduring appeal.
-metaTitle: '''Scary Movie'' Crosses $108M at the Domestic Box Office'
+  How much Scary Movie has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Scary Movie Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Scary Movie has grossed $108,044,772 at the domestic box office through day
   47, adding $34,691 in its latest daily haul.
@@ -83,7 +82,6 @@ imageHeight: 675
 updated: '2026-07-23T11:01:04.113Z'
 boxOfficeTracker: true
 ---
-
 
 The Franchise Returns With a Vengeance
 

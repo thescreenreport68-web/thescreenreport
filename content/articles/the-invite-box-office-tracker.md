@@ -8,9 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-18T15:00:51.138Z'
 dek: >-
-  Olivia Wilde directs and stars in a dark comedy about a dinner party gone
-  wrong, featuring Seth Rogen, Penélope Cruz, and Edward Norton.
-metaTitle: '''The Invite'' Climbs to $15M at the Domestic Box Office'
+  How much The Invite has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'The Invite Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   The Invite has grossed $15,017,888 at the domestic box office through day 24,
   adding $1,221,904 in its latest daily haul.
@@ -75,7 +75,6 @@ imageHeight: 864
 updated: '2026-07-20T08:30:48.504Z'
 boxOfficeTracker: true
 ---
-
 
 A Dinner Party That Spins Out of Control
 

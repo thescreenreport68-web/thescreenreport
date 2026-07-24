@@ -8,10 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-16T10:30:37.277Z'
 dek: >-
-  Milly Alcock's debut as the Kryptonian hero, in a film directed by Craig
-  Gillespie, fails to take flight commercially. The $120 million worldwide gross
-  falls far short of its $175 million production budget.
-metaTitle: '''Supergirl'' Climbs to $70M at the Domestic Box Office'
+  How much Supergirl has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Supergirl Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Supergirl has grossed $70,456,634 at the domestic box office through day 26,
   adding $335,587 in its latest daily haul.
@@ -79,7 +78,6 @@ imageHeight: 730
 updated: '2026-07-23T08:31:03.974Z'
 boxOfficeTracker: true
 ---
-
 
 A Heroic Effort That Couldn't Take Off
 

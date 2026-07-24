@@ -8,9 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-18T15:36:27.784Z'
 dek: >-
-  The fifth and final 'Jackass' film brings the crew together for one last
-  crusade, but its opening weekend suggests a muted farewell.
-metaTitle: '''Jackass: Best and Last'' Reaches $18M at the Box Office'
+  How much Jackass: Best and Last has made at the domestic box office, with a
+  day-by-day breakdown of its theatrical run, updated daily.
+metaTitle: 'Jackass: Best and Last Box Office: Total Gross by Day'
 metaDescription: >-
   Jackass: Best and Last has grossed $18,082,045 at the domestic box office
   through day 26, adding $38,677 in its latest daily haul.
@@ -79,7 +79,6 @@ imageHeight: 2160
 updated: '2026-07-23T09:31:05.390Z'
 boxOfficeTracker: true
 ---
-
 
 A Final Farewell from the Stunt Crew
 

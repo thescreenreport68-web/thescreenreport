@@ -6,10 +6,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-20T15:01:33.835Z'
 dek: >-
-  The Antoine Fuqua-directed film chronicling the life of Michael Jackson,
-  starring his nephew Jaafar, has achieved a historic global milestone, becoming
-  the top-grossing musical biopic of all time.
-metaTitle: '''Michael'' Climbs to $372M at the Domestic Box Office'
+  How much Michael has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Michael Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Michael has grossed $372,256,380 at the domestic box office through day 89,
   adding $35,059 in its latest daily haul.
@@ -83,7 +82,6 @@ imageHeight: 2160
 updated: '2026-07-23T10:31:07.327Z'
 boxOfficeTracker: true
 ---
-
 
 The Story of the King of Pop
 

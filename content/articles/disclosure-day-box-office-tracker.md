@@ -8,10 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-16T21:31:26.023Z'
 dek: >-
-  Steven Spielberg's whistleblower thriller, starring Emily Blunt and Josh
-  O'Connor, has ended its theatrical run and is now available on digital
-  platforms.
-metaTitle: '''Disclosure Day'' Hits $115M at the Domestic Box Office'
+  How much Disclosure Day has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Disclosure Day Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Disclosure Day has grossed $115,031,290 at the domestic box office through day
   40, adding $245,525 in its latest daily haul.
@@ -84,7 +83,6 @@ imageHeight: 899
 updated: '2026-07-23T09:01:12.161Z'
 boxOfficeTracker: true
 ---
-
 
 Steven Spielberg returns to the screen with '[Disclosure Day](/movies/disclosure-day-box-office-day-39-adds-185-595-as-domestic-total-hits-114-8/),' a sci-fi thriller starring Emily Blunt and Josh O'Connor. The film runs for 146 minutes and delves into the world of corporate secrets and extraterrestrial discovery.
 

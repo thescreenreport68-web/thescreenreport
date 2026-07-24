@@ -10,10 +10,9 @@ date: '2026-07-16T11:30:40.267Z'
 updated: '2026-07-24T08:01:05.083Z'
 boxOfficeTracker: true
 dek: >-
-  The historical drama starring William Franklyn-Miller as a young George
-  Washington debuts as Angel Studios' biggest live-action opener ever, landing
-  third over the holiday weekend.
-metaTitle: '''Young Washington'' Hits $42M at the Domestic Box Office'
+  How much Young Washington has made at the domestic box office, with a
+  day-by-day breakdown of its theatrical run, updated daily.
+metaTitle: 'Young Washington Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Young Washington has grossed $42,411,869 at the domestic box office through
   day 20, adding $434,141 in its latest daily haul.

@@ -8,10 +8,9 @@ subcategory: box-office
 author: editorial-team
 date: '2026-07-19T06:33:43.561Z'
 dek: >-
-  Christopher Nolan's R-rated epic, starring Matt Damon, storms into theaters
-  with a record-breaking opening weekend, setting a new high bar for the
-  director and the genre this year.
-metaTitle: '''The Odyssey'' Climbs to $51M at the Domestic Box Office'
+  How much The Odyssey has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'The Odyssey Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   The Odyssey has grossed $51,280,000 at the domestic box office through day 1,
   adding $51,280,000 in its latest daily haul.
@@ -79,7 +78,6 @@ imageHeight: 901
 updated: '2026-07-19T06:33:43.561Z'
 boxOfficeTracker: true
 ---
-
 
 The Epic Arrives on Screen
 

@@ -10,10 +10,9 @@ date: '2026-07-16T09:30:41.221Z'
 updated: '2026-07-24T07:31:02.419Z'
 boxOfficeTracker: true
 dek: >-
-  The beloved toys return for their biggest adventure yet, facing off against a
-  digital menace. With a star-studded voice cast, the film is charming audiences
-  and racing past financial milestones.
-metaTitle: '''Toy Story 5'' Crosses $437M at the Domestic Box Office'
+  How much Toy Story 5 has made at the domestic box office, with a day-by-day
+  breakdown of its theatrical run, updated daily.
+metaTitle: 'Toy Story 5 Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
   Toy Story 5 has grossed $436,720,018 at the domestic box office through day
   34, adding $2,077,040 in its latest daily haul.
