@@ -52,13 +52,20 @@ const sql = [
   `CREATE VIRTUAL TABLE IF NOT EXISTS articles_fts USING fts5(title, dek, body, content='articles', content_rowid='id');`,
   `DELETE FROM articles;`,
 ];
-for (let i = 0; i < rows.length; i += 40) {
-  sql.push(
-    `INSERT INTO articles (slug, category, title, dek, date, image, body) VALUES\n${rows
-      .slice(i, i + 40)
-      .join(",\n")};`
-  );
+// Chunk INSERTs by BYTE SIZE, not row count — D1 rejects statements over ~100KB
+// (SQLITE_TOOBIG; broke the deploy at 1,030 articles when 40-row batches outgrew the cap).
+const PREFIX = "INSERT INTO articles (slug, category, title, dek, date, image, body) VALUES\n";
+const MAX_SQL = 80_000;
+let batch = [];
+let batchLen = PREFIX.length;
+for (const row of rows) {
+  if (batch.length && batchLen + row.length + 2 > MAX_SQL) {
+    sql.push(PREFIX + batch.join(",\n") + ";");
+    batch = []; batchLen = PREFIX.length;
+  }
+  batch.push(row); batchLen += row.length + 2;
 }
+if (batch.length) sql.push(PREFIX + batch.join(",\n") + ";");
 sql.push(`INSERT INTO articles_fts(articles_fts) VALUES('rebuild');`);
 fs.writeFileSync(OUT, sql.join("\n"));
 console.log(`search-index.sql: ${rows.length} articles, ${(fs.statSync(OUT).size / 1024).toFixed(0)} KB`);
