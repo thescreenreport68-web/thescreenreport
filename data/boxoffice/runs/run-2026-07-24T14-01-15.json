@@ -1,0 +1,227 @@
+{
+ "runId": "run-2026-07-24T14-01-15",
+ "mode": "live",
+ "startedAt": "2026-07-24T14:01:15.687Z",
+ "films": 41,
+ "published": [],
+ "held": [
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "score": 70
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "masters-of-the-universe-bo-opening×BO-OPENING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.5,
+  "behind": false,
+  "expected": 2.8,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 4,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.10104
+ },
+ "faults": {
+  "count": 3,
+  "bySeverity": {
+   "info": 3
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "malformed JSON from google/gemini-2.5-flash-lite — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T14:05:40.374Z"
+   },
+   {
+    "stage": "model:qa",
+    "message": "malformed JSON from google/gemini-2.5-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T14:06:44.595Z"
+   },
+   {
+    "stage": "model:qa",
+    "message": "malformed JSON from google/gemini-2.5-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-24T14:06:55.456Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-24T14:07:27.141Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3549,
+    "out": 3871,
+    "usd": 0.00067,
+    "ms": 7309
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 11831,
+    "out": 602,
+    "usd": 0.00142,
+    "ms": null
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 668,
+    "out": 272,
+    "usd": 0.00011,
+    "ms": 9424
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6089,
+    "out": 2229,
+    "usd": 0.006,
+    "ms": 44816
+   },
+   "qa": {
+    "calls": 9,
+    "errors": 0,
+    "in": 24131,
+    "out": 4161,
+    "usd": 0.01764,
+    "ms": null
+   }
+  },
+  "totalUsd": 0.02584
+ },
+ "openrouterTotalUsd": 0.02526
+}
