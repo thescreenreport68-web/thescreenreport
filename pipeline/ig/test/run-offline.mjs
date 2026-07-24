@@ -42,7 +42,7 @@ const ENTITIES = [{ name: "Superman", kind: "movie" }, { name: "James Gunn", kin
 
 // ── lint: script gates ──────────────────────────────────────────────────────────
 const CLEAN_SCRIPT = { sentences: [
-  "Superman just smashed a box office record nobody predicted.",
+  "The Superman movie just smashed a box office record nobody predicted.",
   "The film pulled in a huge $220M during its opening weekend.",
   "James Gunn confirmed those record numbers himself on Friday morning.",
   "And he already has a sequel dated for June 2028.",
@@ -54,6 +54,48 @@ const CLEAN_SCRIPT = { sentences: [
 ], ending: "question" };
 await t("lint: clean in-band script passes (22-30s format)", () => {
   assert.deepEqual(lintScript(CLEAN_SCRIPT, ENTITIES), []);
+});
+await t("lint: bare movie title on first mention is flagged; framed variants pass (title-unframed)", () => {
+  const ents = [{ name: "Mark Wahlberg", kind: "person" }, { name: "By Any Means", kind: "movie" }];
+  // NB: the sentence AFTER the title must not carry a class word — "…in By Any Means. The film
+  // pulled in…" counts as framed (the window looks 2 words past the title, and that phrasing DOES
+  // tell a listener it's a film).
+  const bare = { ...CLEAN_SCRIPT, sentences: [
+    "Mark Wahlberg is nearly unrecognizable in By Any Means.",
+    "He plays real hitman Gregory Scarpa with slicked hair and heavy jowls.",
+    ...CLEAN_SCRIPT.sentences.slice(2),
+  ] };
+  assert.ok(lintScript(bare, ents).some((v) => v.rule === "title-unframed"), "bare title flagged");
+  const framed = { ...bare, sentences: ["Mark Wahlberg is nearly unrecognizable in the movie By Any Means.", ...bare.sentences.slice(1)] };
+  assert.ok(!lintScript(framed, ents).some((v) => v.rule === "title-unframed"), "class word BEFORE passes");
+  const after = { ...bare, sentences: ["Mark Wahlberg shocks in the By Any Means trailer released today.", ...bare.sentences.slice(1)] };
+  assert.ok(!lintScript(after, ents).some((v) => v.rule === "title-unframed"), "class word AFTER passes");
+  // a title that frames itself needs nothing
+  const selfFramed = [{ name: "Superman: The Movie", kind: "movie" }];
+  assert.ok(!lintScript(bare, selfFramed).some((v) => v.rule === "title-unframed"), "self-framing title exempt");
+});
+await t("writer: bare-title script is mechanically FRAMED and shipped, never held (title-unframed repair)", async () => {
+  const { writeScript } = await import("../agents/script.mjs");
+  const { ASK_FAMILIES } = await import("../agents/engage.mjs");
+  const BARE = { sentences: [
+    "Mark Wahlberg is nearly unrecognizable in By Any Means.",
+    "He plays real hitman Gregory Scarpa with slicked hair and heavy jowls.",
+    "The transformation took 4 hours in the makeup chair every day.",
+    "And the first footage already has fans doing double takes.",
+    "Director Tony Goldwyn says the studio nearly missed the star at the table read.",
+    "Because it hits theaters this December with awards buzz building.",
+    "So is this Wahlberg's boldest swing in years?",
+    "Let us know in the comments below.",
+  ], ending: "question" };
+  setMock(({ kind }) => (kind === "llm" ? BARE : undefined));
+  const r = await writeScript({
+    article: { title: "Mark Wahlberg unrecognizable in By Any Means" },
+    facts: { storyOneLine: "s", entities: [{ name: "Mark Wahlberg", kind: "person" }, { name: "By Any Means", kind: "movie" }], facts: [{ claim: "c", surprise: 9 }] },
+    segment: "Movie News", engage: { goal: "comments", family: ASK_FAMILIES.comments },
+  });
+  setMock(null);
+  assert.ok(!r.hold, `must ship, got hold: ${r.hold}`);
+  assert.ok(r.script.sentences[0].includes("the movie By Any Means"), "class word injected at first mention");
 });
 await t("lint: ending gate — fact-then-ask is REJECTED, question-then-ask passes", async () => {
   const { lintEnding } = await import("../agents/engage.mjs");

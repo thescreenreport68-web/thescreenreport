@@ -48,6 +48,10 @@ HARD RULES:
 - SHARE TRIGGER (mandatory, exactly ONE): every script carries one beat a viewer would forward to a
   specific friend — a fandom-identity moment ("every Jurassic Park fan..."), a nostalgia callback, or
   a wow-stat. It must be a REAL fact from the list, framed for the person who NEEDS to hear it.
+- TITLE & CHARACTER FRAMING: a VOICE cannot italicize. On FIRST mention, introduce every movie/show
+  title with a class word so the listener KNOWS it is a title — "the movie By Any Means", "the series
+  Stranger Things", "the By Any Means trailer" — bare after that. Same for fictional characters: frame
+  them with a role word ("plays hitman Gregory Scarpa", "as Agent Cooper"), never a bare unfamiliar name.
 - Numbers: write digits (the pronunciation pass handles speech).
 - PACE THE NUMBERS. Never stack multiple figures in one sentence — a voice rushes them and the scale is lost. Give each key number its OWN short beat with a word of context: "It opened to $160 million at home. Another $640 million overseas. That's $800 million worldwide." — NOT "160 million domestic and 640 million overseas for 800 million total." One figure per breath.
 
@@ -155,13 +159,29 @@ export async function writeScript({ article, facts, segment, engage }) {
   // and are deterministically fixable — split an overlong hook at its natural break, then
   // trim whole body sentences (hook block + ending pair stay intact) until under the ceiling.
   // Only fires when EVERY remaining violation is mechanical; content gates are never papered over.
-  const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long", "repetition"]);
+  const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long", "repetition", "title-unframed"]);
   // CHAINED REPAIR (2026-07-24): under the tighter 22-30s caps a script often fails with mechanical
   // AND ending violations together — the mechanical trim runs first, and any remaining ending-only
   // violations fall through to the ending repair below (which then sees the TRIMMED script).
   if (lastScript && violations.length && violations.every((v) => MECH.has(v.rule) || v.rule.startsWith("ending"))
       && violations.some((v) => MECH.has(v.rule))) {
     let s = [...lastScript.sentences];
+    // -1) TITLE FRAMING injection (owner 2026-07-24): "By Any Means" → "the movie By Any Means"
+    //     at the FIRST mention only — a listener can't hear italics, the words must say it's a
+    //     movie. Adds ≤2 words; the trim loop below re-converges the caps afterward.
+    for (const viol of violations.filter((x) => x.rule === "title-unframed" && x.name)) {
+      const cls = viol.kindWord === "tv" ? "series" : "movie";
+      const re = new RegExp(`\\b${viol.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i");
+      for (let i = 0; i < s.length; i++) {
+        if (!re.test(s[i])) continue;
+        s[i] = s[i].replace(re, (m, off, str) => {
+          const before = str.slice(0, off);
+          if (/\bthe\s+$/i.test(before)) return `${cls} ${m}`; // "the By Any Means…" → "the movie By Any Means…"
+          return off === 0 ? `The ${cls} ${m}` : `the ${cls} ${m}`;
+        });
+        break;
+      }
+    }
     // 0) a repeated body line is deterministically fixable — DROP the later sentence of each
     //    repeated pair (the linter reports "sentences X and Y repeat …"; Y is the later one).
     //    Never drop the hook (0) or the ending pair (last 2). (owner 2026-07-12)

@@ -19,6 +19,8 @@ const BAIT_RE = [
 ];
 // Weak/meta hooks (fix D from the old lane, kept as a fresh rule).
 const WEAK_HOOK_RE = /^\s*\w+[^.!?]*\b(revealed|teased|talks about|opened? up|discusse[sd]|share[sd]|addresse[sd])\b[^.!?]*[.!?]/i;
+// words that tell a LISTENER the next/previous words are a title, not ordinary speech
+const TITLE_CLASS_RE = /\b(movie|film|thriller|biopic|drama|comedy|documentary|doc|musical|sequel|prequel|remake|reboot|series|show|sitcom|trailer|teaser|franchise|saga|feature|adaptation|spin-?off|special|season|blockbuster|western|horror|animation|rom-?com)\b/i;
 const GREETING_RE = /^\s*(hey|hi|hello|welcome|what'?s up|good (morning|evening)|in (recent|today'?s) news|the screen report here)/i;
 
 export function estimateSeconds(words) {
@@ -65,6 +67,31 @@ export function lintScript(script, entities = [], topicText = "") {
   // Gate against the SAME ceiling watchqc rejects at (maxSec + durTolSec = 47s), not maxSec — the estimate
   // is imperfect (paced read ~3.4-3.6 wps), so gating at 44 would trim/hold reels whose ~44-47s renders
   // ship fine. The "duration" rule is a MECHANICAL TRIM in the repair loop (script.mjs), never a hold.
+  // TITLE FRAMING (owner 2026-07-24): a voice cannot italicize — spoken bare, an everyday-word
+  // title ("By Any Means") is heard as ordinary words, not a movie. FIRST mention of every
+  // movie/show entity must sit next to a class word ("the movie By Any Means", "the By Any Means
+  // trailer"); later mentions can be bare. Deterministically repairable (script.mjs injects the
+  // class word), so this trims-or-fixes, never holds.
+  for (const e of entities) {
+    const kind = String(e?.kind || "").toLowerCase();
+    if (kind !== "movie" && kind !== "tv") continue;
+    const name = String(e?.name || "").trim();
+    if (!name || TITLE_CLASS_RE.test(name)) continue; // "Superman: The Movie" frames itself
+    const nameW = normWords(name);
+    if (!nameW.length) continue;
+    const all = words; // normWords(full) already computed above
+    let at = -1;
+    for (let i = 0; i + nameW.length <= all.length; i++) {
+      if (nameW.every((w, k) => all[i + k] === w)) { at = i; break; }
+    }
+    if (at < 0) continue; // title never spoken by name
+    const win = [...all.slice(Math.max(0, at - 3), at), ...all.slice(at + nameW.length, at + nameW.length + 2)].join(" ");
+    if (!TITLE_CLASS_RE.test(win)) {
+      const cls = kind === "tv" ? "series" : "movie";
+      v.push({ rule: "title-unframed", name, kindWord: kind, detail: `"${name}" is spoken bare on first mention — a listener cannot hear it is a ${cls}; say "the ${cls} ${name}" (or "the ${name} trailer/sequel") the FIRST time, bare after that` });
+    }
+  }
+
   const gaps = Math.max(0, sentences.length - 1);
   const estSec = estimateSeconds(words.length) + gaps * (IG.voice?.tighten?.keepSilence ?? 0.26) + (IG.endTailSec ?? 1.8);
   const durCeil = IG.script.maxSec + (IG.script.durTolSec ?? 3);
