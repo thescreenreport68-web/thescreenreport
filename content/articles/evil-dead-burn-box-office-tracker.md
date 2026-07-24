@@ -1,20 +1,22 @@
 ---
 title: >-
-  Evil Dead Burn Box Office Day 12: Adds $857,423 as Domestic Total Hits $25.4
+  Evil Dead Burn Box Office Day 13: Adds $645,186 as Domestic Total Hits $26
   Million
 slug: evil-dead-burn-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T16:31:29.698Z'
+updated: '2026-07-24T07:30:02.419Z'
+boxOfficeTracker: true
 dek: >-
-  Souheila Yacoub leads the latest franchise entry, which sees a grieving widow
-  face a family of demonic horrors. Despite strong reviews, the film's opening
-  weekend fell short of expectations.
-metaTitle: '''Evil Dead Burn'' Hits $25M at the Domestic Box Office'
+  Souheila Yacoub stars in the latest chapter of the demonic franchise, directed
+  by Sébastien Vaniček. The film's global opening has already covered its
+  production budget.
+metaTitle: '''Evil Dead Burn'' Hits $26M at the Domestic Box Office'
 metaDescription: >-
-  Evil Dead Burn has grossed $25,378,017 at the domestic box office through day
-  12, adding $857,423 in its latest daily haul.
+  Evil Dead Burn has grossed $26,023,203 at the domestic box office through day
+  13, adding $645,186 in its latest daily haul.
 tags:
   - Evil Dead Burn
   - Box Office
@@ -22,20 +24,18 @@ tags:
   - Souheila Yacoub
   - Sébastien Vaniček
   - Franchise Film
-  - 2026 Release
-  - Demon Possession
+  - Movie Opening Weekend
+  - Evil Dead Burn box office
 keyTakeaways:
   - >-
-    'Evil Dead Burn' has grossed $25,378,017 at the domestic box office through
-    day 12.
-  - 'It added $857,423 in its most recent day, playing in 3,004 theaters.'
-  - The worldwide total stands at $35 million.
+    'Evil Dead Burn' has grossed $26,023,203 at the domestic box office through
+    day 13.
+  - 'It added $645,186 in its most recent day, playing in 3,004 theaters.'
+  - It carries a reported $20 million production budget.
   - Souheila Yacoub leads the cast for director Sébastien Vaniček.
 faq:
   - q: How much has 'Evil Dead Burn' made at the box office?
-    a: >-
-      'Evil Dead Burn' has grossed $25,378,017 domestically, with $35 million
-      worldwide.
+    a: '''Evil Dead Burn'' has grossed $26,023,203 across 3,004 theaters.'
   - q: What is the production budget of 'Evil Dead Burn'?
     a: >-
       'Evil Dead Burn' was produced on a reported budget of $20 million before
@@ -44,7 +44,7 @@ faq:
     a: '''Evil Dead Burn'' is currently playing across 3,004 theaters.'
   - q: How long has 'Evil Dead Burn' been in theaters?
     a: >-
-      'Evil Dead Burn' is 12 days into its theatrical run, adding $857,423 in
+      'Evil Dead Burn' is 13 days into its theatrical run, adding $645,186 in
       its most recent day.
 about:
   - name: Evil Dead Burn
@@ -55,8 +55,7 @@ about:
     type: Person
 formatTag: box-office
 boxOffice:
-  domestic: '$25,378,017'
-  worldwide: $35 million
+  domestic: '$26,023,203'
   budget: $20 million
   theaters: '3,004'
 trendScore: 80
@@ -64,37 +63,28 @@ signals:
   recency: 3
   pop: 2
   breakout: 0
-  corroboration: 5
+  corroboration: 3
   type: 6
-eventSlug: evil-dead-burn-bo-update-d12
+eventSlug: evil-dead-burn-bo-update-d13
 eventType: boxoffice
-outletCount: 5
+outletCount: 3
 storyStatus: CONFIRMED
 image: 'https://image.tmdb.org/t/p/original/A5Tz6ogGt4VV8NESG9oWVct5bo1.jpg'
-imageAlt: Evil Dead Burn — Souheila Yacoub Evil Dead Burn movie poster horror
+imageAlt: Evil Dead Burn — Souheila Yacoub Evil Dead Burn movie poster 2026
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2995
 imageHeight: 1685
-updated: '2026-07-23T07:30:00.906Z'
-boxOfficeTracker: true
 ---
 
+After her husband's abrupt death, Alice (Souheila Yacoub) seeks solace with his remaining family—descendants of a leading researcher on demonic possession. This is the chilling premise of '[Evil Dead Burn](/movies/evil-dead-burn-box-office-day-12-adds-857-423-as-domestic-total-hits-25-4/),' a 110-minute horror-thriller directed by Sébastien Vaniček. As her in-laws transform one by one into creatures that feed on fear, Alice discovers that the vows she took in life survive even in death.
 
-A Widow’s Vows Tested by Demonic Terror
+Souheila Yacoub carries the film as the grieving widow Alice, plunged into a nightmare. She is joined by Tandi Wright as Susan, Hunter Doohan as Joseph, and Luciane Buchanan as Thya. The supporting family of horrors is rounded out by Erroll Shand as Edgar, Maude Davey as Polly, George Pullar as Will, and Victory Ndukwe as Leo. Together, they face a legacy of possession that threatens to consume them all.
 
-Souheila Yacoub headlines *[Evil Dead Burn](/movies/evil-dead-burn-box-office-day-11-adds-636-149-as-domestic-total-hits-24-5/)*, the latest chapter in the long-running horror franchise. The film follows Alice, a woman reeling from her husband's sudden death, as she seeks refuge with his surviving family. She soon discovers her in-laws are the descendants of a leading researcher on demonic possession, a lineage that comes with a horrific price. One by one, the family transforms into creatures that feast on fear, forcing Alice to learn that the vows she took in life may be her only weapon in a fight for survival. Directed by Sébastien Vaniček, this 110-minute horror-thriller plunges audiences into a visceral battle against an ancient evil.
-
-## A Family Cursed by Blood
-
-The ensemble cast brings this terrifying family dynamic to life. Souheila Yacoub stars as the resilient widow, Alice. She is joined by Tandi Wright as Susan, Hunter Doohan as Joseph, and Luciane Buchanan as Thya. Erroll Shand plays Edgar, with Maude Davey as Polly, George Pullar as Will, and Victory Ndukwe rounding out the family as Leo. Together, they portray a clan bound by a dark secret, each member a potential vessel for the demonic force threatening to consume them all.
-
-## The Box Office Haunting
-
-The story of the *Evil Dead Burn* box office is one of high hopes meeting a chilling reality. This underwhelming launch came despite the franchise's remarkable critical consistency; all six films in the series have earned positive Rotten Tomatoes scores.
+This opening for the sixth film in the franchise fell significantly below previous installments but is far from a financial disaster. For producers, the numbers signal a loyal fanbase that still believes in the series' viability, with marketing costs now the primary hurdle to clear for full profitability. The film played in 3,004 theaters domestically.
 
 ## At the Box Office
 
-Evil Dead Burn has grossed $25,378,017 at the domestic box office, 12 days into its theatrical run, while playing across 3,004 theaters. The film added $857,423 in its most recent day of release. Worldwide, it has taken in $35 million. It carries a reported production budget of $20 million.
+Evil Dead Burn has grossed $26,023,203 at the domestic box office, 13 days into its theatrical run, while playing across 3,004 theaters. The film added $645,186 in its most recent day of release. It carries a reported production budget of $20 million.
 
 ## Daily Tracking
 
@@ -107,3 +97,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 10 | 2026-07-20 | $1.5 Million | $24.2 Million |
 | 11 | 2026-07-22 | — | $24.5 Million |
 | 12 | 2026-07-23 | — | $25.4 Million |
+| 13 | 2026-07-24 | $645,186 | $26 Million |
