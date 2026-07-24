@@ -1599,32 +1599,62 @@ await ta("agentChat SALVAGES a malformed-JSON response instead of failing the wh
   assert.equal(calls, 2, "one failed JSON attempt then one raw-text salvage on the SAME model");
 });
 
-await ta("NO-REWRITE: the lane can create a new article but REFUSES to overwrite a published one", async () => {
-  // Owner directive 2026-07-24: improvements apply to NEW articles only; republishing existing files
-  // creates churn while Google builds trust. writeBoxOfficeArticle used fs.writeFileSync with no
-  // existence check, and slugs here are deterministic — so a repeat would have silently replaced a live
-  // article and re-dated it on deploy.
+await ta("ONE STORY = ONE URL: a chart film gets ONE stable tracker slug that updates in place, date preserved, history grown", async () => {
+  // Owner directive 2026-07-24: one canonical <film>-box-office-tracker per film; day-N URLs never minted
+  // again; the tracker refreshes in place daily (original date kept, `updated` bumped, a Daily Tracking
+  // table that accumulates). This replaces the flood of 64 near-duplicate day-N URLs.
+  const dirW = fs.mkdtempSync(path.join(os.tmpdir(), "bo-tracker-"));
+  const para = "A full opening paragraph carrying real substance about the film, its cast, its premise and how "
+    + "it performed in theaters over the past week, written at enough length to clear the floor comfortably "
+    + "for any reader who wants to understand what happened and why the studio behind it cares. ";
+  const mk = (day, cume, daily, dom, dateISO) => ({
+    article: { title: `Test Film Box Office Day ${day}`, metaTitle: "T", dek: "d", metaDescription: "m",
+      body: para + para + para, keyTakeaways: ["a", "b", "c"], faq: [{ q: "x", a: "y" }, { q: "z", a: "w" }], about: [], tags: ["t"] },
+    trigger: { eventSlug: `test-film-bo-update-d${day}`, title: "Test Film" }, angle: { form: "BO-UPDATE" },
+    film: { title: "Test Film", dailyChart: { cume, dailyGross: daily, theaters: "3,000", dayInRelease: `Day ${day}` } },
+    gathered: { cume, numbers: [cume], sources: [] }, boxData: { worldwide: "$200 million", budget: "$50 million" },
+    image: null, dateISO, dir: dirW,
+  });
+
+  const d1 = writeBoxOfficeArticle(mk(5, "$54,900,000", "$1,000,000", "$54.9 million", "2026-07-16T09:00:00.000Z"));
+  assert.equal(d1.written, true, "tracker created: " + JSON.stringify(d1.scaffold || d1.consistency));
+  assert.ok(d1.slug.endsWith("-box-office-tracker"), "stable tracker slug, no day/number: " + d1.slug);
+  const after1 = matter.read(d1.path);
+  assert.equal(after1.data.boxOfficeTracker, true);
+
+  const d2 = writeBoxOfficeArticle(mk(8, "$68,600,000", "$5,500,000", "$68.6 million", "2026-07-19T09:00:00.000Z"));
+  assert.equal(d2.written, true, "day 8 UPDATES IN PLACE, not refused");
+  assert.equal(d2.slug, d1.slug, "same URL — no new file");
+  assert.equal(fs.readdirSync(dirW).length, 1, "still exactly ONE file for the film");
+  const after2 = matter.read(d2.path);
+  assert.equal(after2.data.date, after1.data.date, "original publish date PRESERVED across the update");
+  assert.notEqual(after2.data.updated, after1.data.updated, "`updated` bumped to the new date");
+  assert.ok(/## Daily Tracking/.test(after2.content), "Daily Tracking table present");
+  assert.ok(/\|\s*5\s*\|/.test(after2.content) && /\|\s*8\s*\|/.test(after2.content), "BOTH day 5 and day 8 rows accumulated");
+  fs.rmSync(dirW, { recursive: true, force: true });
+});
+
+await ta("NO-REWRITE still holds for NON-tracker articles (a feature must not silently overwrite a live file)", async () => {
   const dirW = fs.mkdtempSync(path.join(os.tmpdir(), "bo-norewrite-"));
   const para = "A full opening paragraph carrying real substance about the film, its cast, its premise and how "
     + "it performed in theaters over the past week, written at enough length to clear the floor comfortably "
     + "for any reader who wants to understand what happened and why the studio behind it cares. ";
   const args = {
-    article: { title: "Test Film Box Office Day 5", metaTitle: "T", dek: "d", metaDescription: "m",
-      body: para + para + para, keyTakeaways: ["a", "b", "c"], faq: [{ q: "x", a: "y" }, { q: "z", a: "w" }], about: [], tags: ["t"] },
-    trigger: { eventSlug: "t-bo-update", title: "Test Film" }, angle: { form: "BO-UPDATE" },
-    film: { title: "Test Film", dailyChart: { cume: "$100,000,000", dailyGross: "$1,000,000", theaters: "3,000", dayInRelease: "Day 5" } },
-    gathered: { cume: "$100,000,000", numbers: ["$100,000,000"], sources: [] },
+    article: { title: "Test Feature About A Film", metaTitle: "T", dek: "d", metaDescription: "m",
+      body: para + para + para + para, keyTakeaways: ["a", "b", "c"], faq: [{ q: "x", a: "y" }, { q: "z", a: "w" }], about: [], tags: ["t"] },
+    trigger: { eventSlug: "t-feature", title: "Test Feature" }, angle: { form: "BO-OPENING" },
+    film: { title: "Test Feature About A Film" }, // NO dailyChart => not a tracker
+    gathered: { openingWeekend: "$45 million", numbers: ["$45 million"], sources: [] },
     boxData: { worldwide: "$200 million", budget: "$50 million" },
     image: null, dateISO: new Date().toISOString(), dir: dirW,
   };
   const first = writeBoxOfficeArticle(args);
-  assert.equal(first.written, true, "a NEW article writes normally: " + JSON.stringify(first.scaffold || []));
+  assert.equal(first.written, true, "a NEW feature writes normally: " + JSON.stringify(first.scaffold || first.consistency));
   const before = fs.readFileSync(first.path, "utf8");
-
-  const second = writeBoxOfficeArticle({ ...args, article: { ...args.article, body: para + para + para + "CHANGED." } });
-  assert.equal(second.written, false, "the second write is REFUSED");
+  const second = writeBoxOfficeArticle({ ...args, article: { ...args.article, body: para + para + para + para + "CHANGED." } });
+  assert.equal(second.written, false, "the second write is REFUSED (non-tracker)");
   assert.equal(second.refusedRewrite, true);
-  assert.equal(fs.readFileSync(first.path, "utf8"), before, "the published file is byte-identical — untouched");
+  assert.equal(fs.readFileSync(first.path, "utf8"), before, "the published feature is byte-identical — untouched");
   fs.rmSync(dirW, { recursive: true, force: true });
 });
 

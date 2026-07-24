@@ -22,6 +22,50 @@ const slugify = (s) => {
   return cut.includes("-") ? cut.replace(/-[^-]*$/, "") : cut;
 };
 
+// ── ONE STORY = ONE URL (owner directive 2026-07-24) ─────────────────────────────────────────────
+// A film's daily box-office coverage lives at ONE stable URL — `<film>-box-office-tracker` — that updates
+// in place. The old model minted a new day-N slug every day (64 near-duplicate URLs across 15 films),
+// which hurt the whole site in Google. The slug is now a function of the FILM ONLY, never the day or the
+// number, so the same URL is refreshed daily instead of a new one being created.
+export const trackerSlug = (film) => slugify(`${film?.title || "film"}-box-office-tracker`);
+
+// The "## Daily Tracking" table is the tracker's growing, genuinely-unique content: one row per day of
+// real reported numbers. On each update we read the table already on the page, add today's row (or replace
+// it if we somehow re-run the same day), and re-render — so history accumulates instead of spawning URLs.
+const DAY_TABLE_H = "## Daily Tracking";
+function parseDailyTable(body) {
+  const rows = [];
+  const block = String(body || "").split(/\n(?=## )/).find((b) => b.trim().startsWith(DAY_TABLE_H));
+  if (!block) return rows;
+  for (const line of block.split("\n")) {
+    const m = line.match(/^\|\s*(?:Day\s*)?(\d+)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*([^|]*?)\s*\|\s*$/i);
+    if (!m || /^-+$/.test(m[2].replace(/[|\s:-]/g, ""))) continue; // skip header/separator
+    rows.push({ day: Number(m[1]), date: m[2].trim(), daily: m[3].trim(), total: m[4].trim() });
+  }
+  return rows;
+}
+function mergeDailyRow(rows, { canon, dateISO }) {
+  const day = Number(canon.dayInRelease);
+  if (!Number.isFinite(day)) return rows;
+  const d = new Date(dateISO);
+  const dateStr = isNaN(d.getTime()) ? "—" : d.toISOString().slice(0, 10);
+  // Word format ($5.5 million) so the new row reads the same as the migrated historical rows in the table.
+  const row = {
+    day, date: dateStr,
+    daily: Number.isFinite(canon.dailyGross?.raw) ? fmtUSDWords(canon.dailyGross.raw) : (canon.dailyGross?.text || "—"),
+    total: Number.isFinite(canon.domestic?.raw) ? fmtUSDWords(canon.domestic.raw) : (canon.domestic?.text || "—"),
+  };
+  const out = rows.filter((r) => r.day !== day); // one row per day; a re-run replaces, never duplicates
+  out.push(row);
+  out.sort((a, b) => a.day - b.day);
+  return out;
+}
+function renderDailyTable(rows) {
+  if (!rows.length) return "";
+  const body = rows.map((r) => `| ${r.day} | ${r.date} | ${r.daily} | ${r.total} |`).join("\n");
+  return `\n\n${DAY_TABLE_H}\n\nDomestic box-office totals for each reported day of the theatrical run.\n\n| Day | Date | Daily Gross | Domestic Total |\n| --- | --- | --- | --- |\n${body}`;
+}
+
 const trimAtWord = (str, max) => {
   const t = (str || "").trim();
   if (t.length <= max) return t;
@@ -338,7 +382,7 @@ export function scaffoldViolations(body, fm) {
   return v;
 }
 
-export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered = {}, boxData = {}, image, dateISO, momentum = null }) {
+export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered = {}, boxData = {}, image, dateISO, momentum = null, priorDate = null, priorTable = null }) {
   const form = FORMS[angle.form];
   // ── SINGLE SOURCE OF TRUTH: ONE reconciled canonical figure set; EVERY surface below draws from it. ──
   const canon = canonicalFigures({ gathered, boxData, film });
@@ -359,7 +403,8 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
       : dg ? `${film.title} Box Office Day ${day || "Update"}: Adds ${dg} as Domestic Total Hits ${dom}`
       : `${film.title} Box Office${day ? ` Day ${day}` : " Update"}: Domestic Total Hits ${dom}`);
   }
-  const slug = slugify(title);
+  // Chart updates share ONE stable per-film URL (the tracker); everything else keeps a title-derived slug.
+  const slug = isChart ? trackerSlug(film) : slugify(title);
   const boxOffice = buildBoxOffice(canon, gathered);
   // Records: a chart UPDATE carries ONLY the system milestone claim (stale opening-phase records were
   // recycling into day-N updates — "second-best AND third-best" in one article). Features keep gathered records.
@@ -395,7 +440,11 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     category: form.category,
     subcategory: form.subcategory,
     author: BOXOFFICE_AUTHOR_SLUG,
-    date: dateISO,
+    // A tracker preserves its ORIGINAL publish date across every daily update (the article is not new —
+    // it is being refreshed) and carries an `updated` freshness signal; Google rewards a stable URL that
+    // updates, not a re-dated one. A brand-new tracker has no priorDate, so date = now.
+    date: (isChart && priorDate) ? priorDate : dateISO,
+    ...(isChart ? { updated: dateISO, boxOfficeTracker: true } : {}),
     dek: article.dek || "",
     ...seoFinish({ metaTitle: buildMetaTitle(article.metaTitle, { title, film, gathered, boxData, form, canon }), metaDescription: chartMetaDesc || article.metaDescription || article.dek || "" }),
     tags: ensureTags(article, { film, form, gathered }),
@@ -459,30 +508,64 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
   // ── SCAFFOLD GATE: no placeholder, empty section, template label, flattened heading, or under-floor
   // body can reach a reader (replaces the deleted fast-accept path with a REAL floor for every form).
   const scaffold = scaffoldViolations(cleanBody, fm);
-  const md = matter.stringify("\n" + cleanBody + "\n", fm);
-  return { slug, frontmatter: fm, md, canon, consistency, scaffold };
+  // The Daily Tracking table is appended AFTER every gate — like the numbers section, it is system-built
+  // from verified per-day figures and structurally uncuttable. It carries HISTORICAL figures that are not
+  // in the current-day canon, so it must NOT go through numberConsistencyGate (which would flag every
+  // prior day's total as "not a canonical figure"). Merged from the page's existing table + today's row.
+  const dailyTable = isChart ? renderDailyTable(mergeDailyRow(priorTable || [], { canon, dateISO })) : "";
+  const finalBody = cleanBody + dailyTable;
+  const md = matter.stringify("\n" + finalBody + "\n", fm);
+  return { slug, frontmatter: fm, md, canon, consistency, scaffold, dailyTable };
 }
 
 export function writeBoxOfficeArticle({ article, trigger, angle, film, gathered, boxData, image, dateISO, momentum = null, dir = CONTENT_DIR, dryRun = false }) {
-  const out = buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered, boxData, image, dateISO, momentum });
+  const isChart = !!film?.dailyChart;
+
+  // ── ONE STORY = ONE URL: a chart update is an IN-PLACE refresh of the film's tracker. Read whatever is
+  // already on the page so we PRESERVE its original publish date and GROW its Daily Tracking table instead
+  // of starting over. The slug is a pure function of the film, so this path is deterministic.
+  let priorDate = null, priorTable = null, trackerExists = false;
+  if (isChart) {
+    const trackerPath = path.join(dir, trackerSlug(film) + ".md");
+    if (fs.existsSync(trackerPath)) {
+      trackerExists = true;
+      try {
+        const g = matter.read(trackerPath);
+        priorDate = g.data?.date || null;               // keep the earliest/original date
+        priorTable = parseDailyTable(g.content);         // accumulate the history already published
+      } catch { /* silent-ok: a corrupt tracker just re-seeds from today; consistency gate still protects it */ }
+    }
+  }
+
+  const out = buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered, boxData, image, dateISO, momentum, priorDate, priorTable });
   // The consistency + scaffold gates are HARD walls: a self-contradicting or scaffold-broken article is
   // never written to disk, not even in review mode — the caller receives the violations and holds.
   if (!out.consistency.ok || out.scaffold.length) return { ...out, path: path.join(dir, out.slug + ".md"), written: false };
-  // ── NO-REWRITE GUARD (owner directive 2026-07-24) ────────────────────────────────────────────────
-  // "No more mass rewrites of already-published articles — improvements apply to NEW articles only.
-  //  Republishing existing files creates churn signals while Google is still building trust."
-  // fs.writeFileSync happily overwrites, and this lane's slugs are deterministic, so a repeated
-  // film+day+figure would silently REPLACE a live article and re-date it in the deploy. The lane may
-  // now only CREATE. An existing path is refused, reported, and counted as a publish that did not happen
-  // (materiality upstream should have caught it — so this firing is itself a signal worth seeing).
+
   const target = path.join(dir, out.slug + ".md");
+  // ── NO-REWRITE GUARD (owner directive 2026-07-24), with the ONE STORY = ONE URL carve-out ──────────
+  // The lane may not churn OTHER published articles. But a chart update refreshing its OWN tracker at the
+  // stable per-film URL is exactly the intended model — one URL updated in place, original date preserved,
+  // `updated` bumped, history table grown. So: allow the overwrite ONLY when the existing file is a
+  // box-office tracker (ours, marked boxOfficeTracker:true). A DIFFERENT article occupying the slug, or any
+  // non-tracker collision, is still refused.
   if (!dryRun && fs.existsSync(target)) {
-    fault("assemble:no-rewrite", `refused to overwrite an already-published article: ${out.slug}.md`, { severity: SEV.WARN });
-    return { ...out, path: target, written: false, refusedRewrite: true };
+    if (isChart && trackerExists) {
+      let existingIsTracker = false;
+      try { existingIsTracker = matter.read(target).data?.boxOfficeTracker === true; } catch { existingIsTracker = false; }
+      if (!existingIsTracker) {
+        fault("assemble:no-rewrite", `refused: ${out.slug}.md exists and is NOT a box-office tracker`, { severity: SEV.WARN });
+        return { ...out, path: target, written: false, refusedRewrite: true };
+      }
+      // else: fall through — this is the tracker updating itself, the intended in-place refresh.
+    } else {
+      fault("assemble:no-rewrite", `refused to overwrite an already-published article: ${out.slug}.md`, { severity: SEV.WARN });
+      return { ...out, path: target, written: false, refusedRewrite: true };
+    }
   }
   if (!dryRun) {
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, out.slug + ".md"), out.md);
+    fs.writeFileSync(target, out.md);
   }
-  return { ...out, path: path.join(dir, out.slug + ".md"), written: !dryRun };
+  return { ...out, path: target, written: !dryRun, trackerUpdate: isChart && trackerExists };
 }
