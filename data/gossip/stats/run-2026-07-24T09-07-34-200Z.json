@@ -1,0 +1,158 @@
+{
+  "ts": "2026-07-24T09:07:34.200Z",
+  "mode": "from-find",
+  "review": true,
+  "published": [
+    {
+      "slug": "george-kittle-shares-inside-look-at-taylor-swift-and-travis-kelces-wedding",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged",
+        "faq-cleaned:dropped"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": {
+        "applied": false,
+        "reason": "new-name"
+      },
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 7,
+  "held": 2,
+  "rejected": 1,
+  "skipped": 3,
+  "blocked": 0,
+  "costUSD": 0.05259,
+  "costPerPublished": 0.05259,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 24,
+      "in": 55892,
+      "out": 17116,
+      "usd": 0.02151840635
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 26,
+      "in": 49475,
+      "out": 4326,
+      "usd": 0.0256575
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 6,
+      "in": 4277,
+      "out": 9386,
+      "usd": 0.0029585816000000003
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 21,
+      "in": 14451,
+      "out": 2525,
+      "usd": 0.0024551
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1228,
+      "out": 58,
+      "usd": 0.00030216000000000005,
+      "ms": 7502
+    },
+    "editor": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9896,
+      "out": 725,
+      "usd": 0.0047813,
+      "ms": 5425
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 0,
+      "in": 3114,
+      "out": 5160,
+      "usd": 0.0012090599999999999,
+      "ms": 80156
+    },
+    "writer": {
+      "calls": 17,
+      "errors": 0,
+      "in": 52786,
+      "out": 16178,
+      "usd": 0.017641300000000002,
+      "ms": 477903
+    },
+    "verify": {
+      "calls": 23,
+      "errors": 1,
+      "in": 41501,
+      "out": 3869,
+      "usd": 0.0211756,
+      "ms": 34382
+    },
+    "judge": {
+      "calls": 5,
+      "errors": 0,
+      "in": 7191,
+      "out": 1334,
+      "usd": 0.0012527000000000003,
+      "ms": 6851
+    },
+    "voice": {
+      "calls": 3,
+      "errors": 0,
+      "in": 1163,
+      "out": 4226,
+      "usd": 0.00086535,
+      "ms": 41226
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 1878,
+      "out": 880,
+      "usd": 0.0007311400000000001,
+      "ms": 45119
+    },
+    "headlineJudge": {
+      "calls": 3,
+      "errors": 0,
+      "in": 1114,
+      "out": 353,
+      "usd": 0.0002526,
+      "ms": 2431
+    },
+    "seoAuditor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 577,
+      "out": 143,
+      "usd": 0.0001149,
+      "ms": 1706
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1614,
+      "out": 139,
+      "usd": 0.000217,
+      "ms": 2658
+    },
+    "linker": {
+      "calls": 8,
+      "errors": 1,
+      "in": 2033,
+      "out": 288,
+      "usd": 0.00031850000000000004,
+      "ms": 5429
+    }
+  }
+}
