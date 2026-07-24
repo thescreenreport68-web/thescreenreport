@@ -1,0 +1,96 @@
+{
+ "runId": "run-2026-07-24T08-01-05",
+ "mode": "live",
+ "startedAt": "2026-07-24T08:01:05.083Z",
+ "films": 41,
+ "published": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "slug": "young-washington-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/young-washington-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "scope: non-Hollywood box-office language in body",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.14,
+  "behind": true,
+  "expected": 19.43,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.03963
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-24T08:04:44.581Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3547,
+    "out": 3446,
+    "usd": 0.00061,
+    "ms": 6193
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4913,
+    "out": 458,
+    "usd": 0.00067,
+    "ms": 2135
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1511,
+    "out": 1761,
+    "usd": 0.00045,
+    "ms": 80468
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4023,
+    "out": 2057,
+    "usd": 0.00163,
+    "ms": 55867
+   }
+  },
+  "totalUsd": 0.00336
+ },
+ "openrouterTotalUsd": 0.00552
+}
