@@ -6,41 +6,48 @@ subcategory: trailers
 author: editorial-team
 date: '2026-07-23T19:32:03.650Z'
 dek: >-
-  The 16mm film documents the band's 2025 Skeletour shows in Mexico City and
-  will hit IMAX screens worldwide in August.
+  The Amir Chamdin-directed film, shot on 16mm, documents the band's 2025
+  Skeletour and hits IMAX screens in August.
 metaTitle: Ghost Concert Film '2 Big to Rig' Trailer Released
 metaDescription: >-
-  The 16mm film documents the band's 2025 Skeletour shows in Mexico City and
-  will hit IMAX screens worldwide in August. What is '2 Big to Rig' about?
+  Ghost has shared the first look at their upcoming concert film. The film was
+  captured live over two sold-out nights at Mexico City's Palacio de los
+  Deportes.
 tags:
   - ghost concert film trailer
   - 2 big to rig
   - ghost
   - amir chamdin
-  - trafalgar releasing
 targetKeyword: Ghost concert film trailer
 keyTakeaways:
   - >-
-    Ghost's new concert film, '2 Big to Rig,' documents their 2025 Skeletour
-    shows in Mexico City.
+    Ghost's concert film '2 Big to Rig' captures their 2025 Skeletour shows in
+    Mexico City.
   - >-
-    This is the band's second feature film, following 2024's 'Rite Here Rite
-    Now.'
+    This marks the band's second feature film following 2024's 'Rite Here Rite
+    Now'.
 faq:
-  - q: Who is directing the Ghost concert film?
-    a: The film is directed by Amir Juan Chamdin.
-  - q: What tour does the film document?
+  - q: Who is in the cast of '2 Big to Rig'?
     a: >-
-      "2 Big to Rig" documents Ghost's Skeletour World Tour, specifically
-      focusing on two performances in Mexico City in September 2025.
-  - q: Is this Ghost's first concert movie?
+      The film features Tobias Forge as Papa V Perpetua, leading the band of
+      Nameless Ghouls. The ghouls are portrayed by Per Eriksson, Cosmo
+      Sniderman, Hayden C Scott, Laura Scarborough, Olivia Morreale, Randy
+      Moore, and Gabriela Gunčíková.
+  - q: Is '2 Big to Rig' a documentary or a scripted film?
     a: >-
-      No, this is the band's second feature film. Their first was 2024's "Rite
-      Here Rite Now."
-  - q: Will the film be shown in IMAX?
+      It is a music documentary. The film is a concert documentary that captures
+      Ghost's live performances in Mexico City, combined with behind-the-scenes
+      footage from their Skeletour.
+  - q: Will the film be available to stream?
     a: >-
-      Yes, "2 Big to Rig" will be presented in IMAX in select locations
-      worldwide.
+      The initial release is a theatrical event. There is no confirmed
+      information about a streaming release yet.
+  - q: What is the meaning of the title '2 Big to Rig'?
+    a: >-
+      The title references the massive scale of the band's live production. As
+      noted in the trailer, a crew member states the stage setup was literally
+      "too big to rig, but we do pull it off everyday," highlighting the
+      logistical challenge of their spectacle.
 about:
   - name: 2 Big to Rig
     type: Movie
@@ -51,9 +58,9 @@ imageWidth: 1600
 imageHeight: 900
 formatTag: trailer
 tier: popular
-trendScore: 99
+trendScore: 73
 signals:
-  recency: 30
+  recency: 4
   corroboration: 12
   status: 18
   type: 15
@@ -63,11 +70,11 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: ghost-mexico-city-concert-film-trailer
+eventSlug: ghost-big-to-rig-trailer
 eventType: trailer
 outletCount: 1
 provenance:
-  eventSlug: ghost-mexico-city-concert-film-trailer
+  eventSlug: ghost-big-to-rig-trailer
   primaryEntity: 2 Big to Rig
   eventType: trailer
   sensitivity: normal
@@ -75,8 +82,8 @@ provenance:
   attribution: rollingstone.com
   outlets:
     - Rolling Stone
-  publishedAt: '2026-07-23T19:32:03.650Z'
-dateModified: '2026-07-23T19:32:03.650Z'
+  publishedAt: '2026-07-24T05:00:11.291Z'
+dateModified: '2026-07-24T05:02:59.341Z'
 storyStatus: DEVELOPING
 infoCard:
   director: Amir Juan Chamdin
@@ -90,18 +97,18 @@ youtubeId: Gp4a9EF_7Js
 releaseInfo: 'August 26, 2026'
 keyMoments:
   - The film documents Ghost's 2025 Skeletour shows in Mexico City.
-  - 'Tobias Forge stars as the band''s frontman, Papa V Perpetua.'
-  - >-
-    This is the band's second concert film, following a record-breaking
-    predecessor.
-  - 'It receives a worldwide theatrical and IMAX release on August 26, 2026.'
+  - Tobias Forge leads the band as Papa V Perpetua.
+  - It is the band's second concert film after 'Rite Here Rite Now'.
+  - 'Theatrical and IMAX release begins August 26, 2026.'
 reveals:
   - term: Release Date
     note: 'The film will be released in theaters worldwide on August 26, 2026.'
-  - term: Film Format
-    note: The concert footage was captured on 16mm film.
-  - term: Tour Focus
-    note: The film is the definitive document of the band's Skeletour World Tour.
+  - term: Filming Format
+    note: The concert was captured on 16mm film for a distinct visual texture.
+  - term: Setlist Scope
+    note: >-
+      The performance includes songs from all six Ghost albums, including tracks
+      from 'Skeletá'.
 officialSynopsis: >-
   Captured live over the course of GHOST’s two sold-out shows in Mexico City
   last year, 2 BIG TO RIG is the definitive document of the band's unforgettable
@@ -116,17 +123,17 @@ officialSynopsis: >-
   band's six albums — including 2025’s global #1 SKELETÁ as well as non-LP
   favorites including “Mary On A Cross,” “Kiss the Go-Goat,” and “The Future is
   a Foreign Land.”
+updateCount: 1
 ---
 
-Ghost has unveiled the first trailer for their upcoming concert film, "2 Big to Rig." According to Rolling Stone, the film captures the Swedish metal band's two sold-out shows in Mexico City from September 2025.
+Ghost has shared the first look at their upcoming concert film. According to Rolling Stone, the trailer for *2 Big to Rig* previews the definitive document of the band's 2025 Skeletour World Tour.
 
-**What is '2 Big to Rig' about?**
+The film was captured live over two sold-out nights at Mexico City's Palacio de los Deportes. Directed by Amir Juan Chamdin, it promises exclusive behind-the-scenes and backstage access to the band's elaborate live ritual. A press release states the project was made with "the intention to share the Skeletour World Tour experience with the faithful in the territories where staging the show was not logistically feasible."
 
-The film is the definitive document of Ghost's Skeletour World Tour.
+## What does the film include?
 
-**When and where can you see it?**
+The setlist pulls material from all six of Ghost's albums, including tracks from 2025's *Skeletá* and non-LP favorites like "Mary On A Cross" and "Kiss the Go-Goat." The film will be presented in IMAX at select locations.
 
-The film is directed by Amir Juan Chamdin and stars Tobias Forge as Papa V Perpetua, leading a band of Nameless Ghouls played by Per Eriksson, Cosmo Sniderman, and others.
+## When does it come out?
 
-## Sources
-- [Trafalgar Releasing](https://www.trafalgar-releasing.com/)
+This marks Ghost's second feature film, following 2024's *Rite Here Rite Now*.
