@@ -1,196 +1,40 @@
 {
-  "runId": "run-2026-07-24T14-31-10",
-  "builtAt": "2026-07-24T14:33:25.154Z",
-  "count": 22,
+  "runId": "run-2026-07-24T15-31-08",
+  "builtAt": "2026-07-24T15:33:26.170Z",
+  "count": 20,
   "topics": [
     {
-      "id": "news-benjamin-button-musical-new-york-cast-andrew-durand",
-      "slug": "benjamin-button-musical-finds-its-new-york-cast-with-tony-nominee-andr",
-      "title": "Benjamin Button Musical Finds Its New York Cast With Tony Nominee Andrew Durand In Title Role",
+      "id": "news-wicked-film-live-orchestra-screening",
+      "slug": "wicked-film-to-feature-special-live-orchestra-screening",
+      "title": "'Wicked' Film to Feature Special Live Orchestra Screening",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "benjamin-button-musical-new-york-cast-andrew-durand",
-      "primaryKeyword": "benjamin button musical",
-      "primaryEntity": "The Curious Case of Benjamin Button",
-      "entities": [
-        "The Curious Case of Benjamin Button (musical)",
-        "Andrew Durand",
-        "Public Theater"
-      ],
-      "angle": "Tony nominee Andrew Durand cast in title role for North American premiere of 'Benjamin Button' musical.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/benjamin-button-musical-andrew-durand-off-broadway-1237002419/",
-          "ageMin": 17,
-          "headline": "Benjamin Button Musical Finds Its New York Cast With Tony Nominee Andrew Durand In Title Role",
-          "summary": "The stage musical adaptation of The Curious Case of Benjamin Button will make its North American premiere Off Broadway at the Public Theater this fall, with Dead Outlaw Tony nominee Andrew Durand taking the title role. Full casting of the production, which begins previews October 8, opens October 21 and runs through November 15, has [ ]"
-        }
-      ],
-      "ageMin": 17,
-      "_cand": {
-        "key": "rss:benjamin-button-musical-finds-its-new-york-cast-with-tony-no",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 92,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-barstool-sports-celebrity-family-feud-record-loss",
-      "slug": "barstool-sports-suffers-record-loss-on-celebrity-family-feud",
-      "title": "Barstool Sports Suffers Record Loss on Celebrity Family Feud",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "barstool-sports-celebrity-family-feud-record-loss",
-      "primaryKeyword": "celebrity family feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Barstool Sports"
-      ],
-      "angle": "Barstool Sports experienced its worst-ever loss on the game show 'Celebrity Family Feud'.",
-      "tmdbType": "movie",
-      "source": "gnews:Consequence of Sound",
-      "sources": [
-        {
-          "outlet": "Consequence of Sound",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeGViV3dodTFQSmVicm5maE8zZU1Za05EMDRWbjdoc0lkZWppZC1YNVpZYnVSc3Vja04xb1BldlVqTFFWRmpTSmduTnNBUUpPMUJpNnFHSDZnVXpGaW8zMTVQb19aRE9ieDlGZnY4ckdpcFpnT0NCb2RweDNSR2xnc0RmVU5uMWJneTEwOUhVLUNtZ085cDhyLU5lOUlHTFlTc1E?oc=5",
-          "ageMin": 110,
-          "headline": "Barstool Sports Suffers Worst Loss in Celebrity Family Feud History - Consequence of Sound",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOeGViV3dodTFQSmVicm5maE8zZU1Za05EMDRWbjdoc0lkZWppZC1YNVpZYnVSc3Vja04xb1BldlVqTFFWRmpTSmduTnNBUUpPMUJpNnFHSDZnVXpGaW8zMTVQb19aRE9ieDlGZnY4ckdpcFpnT0NCb2RweDNSR2xnc0RmVU5uMWJneTEwOUhVLUNtZ085cDhyLU5lOUlHTFlTc1E?oc=5\" target=\"_blank\" Barstool "
-        },
-        {
-          "outlet": "Yahoo",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTjQ4UWxTSTE4YkRHdjJkNTczNmIta2E3RGgycFVyaHRzRjFYMC1idE8wQnhraUh0dUYtTTQ0cTYzMEdLYkJzM29jbURzX3ZNcFp2eVNCZ3dqYldoRGRKQ0V0aFNwWENuaWRIekNVeFRZYUM1aXdEdU0xdnZ2REtFV0JFQXp4ME1WVU11MnhwOHA0bnpqbTZKd2tNRkNnLTBtbkJ3aGdxYm96VE1q?oc=5",
-          "ageMin": 117,
-          "headline": "Flaggs Crush Barstool Stiffs On Celebrity Family Feud - Yahoo",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxPTjQ4UWxTSTE4YkRHdjJkNTczNmIta2E3RGgycFVyaHRzRjFYMC1idE8wQnhraUh0dUYtTTQ0cTYzMEdLYkJzM29jbURzX3ZNcFp2eVNCZ3dqYldoRGRKQ0V0aFNwWENuaWRIekNVeFRZYUM1aXdEdU0xdnZ2REtFV0JFQXp4ME1WVU11MnhwOHA0bnpqbTZKd2tNRkNnLTBtbkJ3aGdxYm96VE1q?oc=5\" target=\"_bla"
-        },
-        {
-          "outlet": "Duke Basketball Report",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZF82Z19aYlNHRk1WUTlneG9qZU11MV9mRjVwNDYtSG9ZeWFCdnJXTk9EMENlS0x6UWdNMm50LXQtSmlsRDZIc3Q1S250SHBtZVFpLVVGbDZHWTZTTl9jcGxWajlVcDdBQ0M3Nkd3eEUtYzV6N0NudVNWZDd2SHFjNmYwb2I0UnFtR2hiQnI0VmV4VXltM2hOZUlTa3V3c2JpVHItWWdFVVFCdw?oc=5",
-          "ageMin": 117,
-          "headline": "Flaggs Dominate Barstool Stiffs On Celebrity Family Feud - Duke Basketball Report",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZF82Z19aYlNHRk1WUTlneG9qZU11MV9mRjVwNDYtSG9ZeWFCdnJXTk9EMENlS0x6UWdNMm50LXQtSmlsRDZIc3Q1S250SHBtZVFpLVVGbDZHWTZTTl9jcGxWajlVcDdBQ0M3Nkd3eEUtYzV6N0NudVNWZDd2SHFjNmYwb2I0UnFtR2hiQnI0VmV4VXltM2hOZUlTa3V3c2JpVHItWWdFVVFCdw?oc=5\" target=\"_blank"
-        }
-      ],
-      "ageMin": 110,
-      "_cand": {
-        "key": "rss:barstool-sports-suffers-worst-loss-in-celebrity-family-feud-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 3,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 3,
-        "outlets": [
-          "Consequence of Sound",
-          "Yahoo",
-          "Duke Basketball Report"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 83,
-      "signals": {
-        "recency": 16,
-        "corroboration": 20,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 15,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "A"
-    },
-    {
-      "id": "music-news-katseye-animal-video-ep-release",
-      "slug": "demi-moore-gets-front-row-seat-to-katseye-s-breakdown-in-animal-video",
-      "title": "Demi Moore Gets Front-Row Seat to Katseye s Breakdown in Animal Video",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "katseye-animal-video-ep-release",
-      "primaryKeyword": "Katseye music",
-      "primaryEntity": "KATSEYE",
+      "eventSlug": "wicked-film-live-orchestra-screening",
+      "primaryKeyword": "Wicked film",
+      "primaryEntity": "Wicked",
       "entities": [
-        "Katseye",
-        "Demi Moore",
-        "Ed Sheeran",
-        "Omer Fedi"
+        "Justin Hurwitz"
       ],
-      "angle": "Katseye to release new single 'Animal' from upcoming EP, with Demi Moore featured in a video.",
+      "angle": "The upcoming 'Wicked' film will feature a special screening accompanied by a live orchestra, in collaboration with composer Justin Hurwitz.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/katseye-new-single-animal-video-guest-demi-moore-1235598166/",
-          "ageMin": 5,
-          "headline": "Demi Moore Gets Front-Row Seat to Katseye s Breakdown in Animal Video",
-          "summary": "The single, written by Ed Sheeran and produced by Omer Fedi and Blake Slatkin, will appear on Katseye's upcoming five-track EP Wild"
+          "url": "https://www.billboard.com/culture/tv-film/wicked-live-orchestra-movie-event-1236302306/",
+          "ageMin": 0,
+          "headline": "Wicked Film Screening With Live Orchestra Announced: Coming Soon",
+          "summary": "It comes in partnership with La La Land composer and conductor Justin Hurwitz's company."
         }
       ],
-      "ageMin": 5,
+      "ageMin": 0,
       "_cand": {
-        "key": "rss:demi-moore-gets-front-row-seat-to-katseye-s-breakdown-in-ani",
+        "key": "rss:wicked-film-screening-with-live-orchestra-announced-coming-s",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -200,16 +44,16 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 73,
+      "priority": 93,
       "signals": {
         "recency": 30,
         "corroboration": 12,
@@ -217,44 +61,46 @@
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "learned": 4
+        "softTv": 0
       },
       "tierClass": "B"
     },
     {
-      "id": "news-days-of-thunder-reboot-development",
-      "slug": "days-of-thunder-reboot-inches-closer-to-the-start-line",
-      "title": "'Days of Thunder' Reboot Inches Closer to the Start Line",
+      "id": "news-the-thundermans-announcement",
+      "slug": "the-thundermans-premiere-date-and-art-revealed-for-latest-nickelodeon-",
+      "title": "The Thundermans: Premiere Date and Art Revealed for Latest Nickelodeon Series Reunion Movie",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "days-of-thunder-reboot-development",
-      "primaryKeyword": "Days of Thunder reboot",
-      "primaryEntity": "Days of Thunder",
-      "entities": [],
-      "angle": "Development update on a potential reboot of the film 'Days of Thunder'.",
+      "eventSlug": "the-thundermans-announcement",
+      "primaryKeyword": "the thundermans reunion movie",
+      "primaryEntity": "The Thundermans Return",
+      "entities": [
+        "The Thundermans",
+        "Nickelodeon"
+      ],
+      "angle": "Nickelodeon reveals premiere date and art for 'The Thundermans' reunion movie.",
       "tmdbType": "movie",
-      "source": "gnews:Car and Driver",
+      "source": "gnews:BroBible",
       "sources": [
         {
-          "outlet": "Car and Driver",
+          "outlet": "BroBible",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdERfamFfajY4ZlpTNFVYTEVYMmFLc3U5aV9DZHd0RWtYOUtKRkNleV9CeGh6aDI3VmN4b18tcFd1YTdaUjFIWG4wUkRjdXNqWnVyaVRiVDBPYmk3YzduYWlLTE4xakI0Rnphdy15SkMtbkREZnlOemhYN29ZWE9wZA?oc=5",
-          "ageMin": 88,
-          "headline": "'Days of Thunder' Reboot Inches Closer to the Start Line - Car and Driver",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNdERfamFfajY4ZlpTNFVYTEVYMmFLc3U5aV9DZHd0RWtYOUtKRkNleV9CeGh6aDI3VmN4b18tcFd1YTdaUjFIWG4wUkRjdXNqWnVyaVRiVDBPYmk3YzduYWlLTE4xakI0Rnphdy15SkMtbkREZnlOemhYN29ZWE9wZA?oc=5\" target=\"_blank\" 'Days of Thunder' Reboot Inches Closer to the Start Li"
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX0FUek1QeTJzWTkzOVlYYV9qc2I2T3llUXJFZEtfVFV3bVRsMkRmMEF0Ykkxam5vRXJwNUNlTVl1amZ1MEZlSGEwTjR5TGRpb1pIS2pjR21VVktma3dQWS1CVW1zUW9jdlIxM1h0cFpqRVNuWWRiTVB3SmtQOGo3OElOYVk0T0xNcnNIMDI0d2Rrb2Y5a3NDbkZ2aUF3NEtJMXd5YnV0NElhamNjTkRNZEU0aEtGQlNqRXU5NUc0emc5bUt5YVZYell4ZGt2V28tX0gxUzlpSQ?oc=5",
+          "ageMin": 36,
+          "headline": "The First Trailer For 'Ebenezer', Johnny Depp's First Hollywood Movie In Nearly 10 Years, Has Been Released - BroBible",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX0FUek1QeTJzWTkzOVlYYV9qc2I2T3llUXJFZEtfVFV3bVRsMkRmMEF0Ykkxam5vRXJwNUNlTVl1amZ1MEZlSGEwTjR5TGRpb1pIS2pjR21VVktma3dQWS1CVW1zUW9jdlIxM1h0cFpqRVNuWWRiTVB3SmtQOGo3OElOYVk0T0xNcnNIMDI0d2Rrb2Y5a3NDbkZ2aUF3NEtJMXd5YnV0NElhamNjTkRNZEU0aEtGQlNqRXU"
         }
       ],
-      "ageMin": 88,
+      "ageMin": 36,
       "_cand": {
-        "key": "rss:-days-of-thunder-reboot-inches-closer-to-the-start-line-car-",
+        "key": "rss:the-first-trailer-for-ebenezer-johnny-depp-s-first-hollywood",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -264,38 +110,175 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Car and Driver"
+          "BroBible"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Car and Driver",
+        "attribution": "BroBible",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 77,
+      "priority": 84,
       "signals": {
-        "recency": 16,
+        "recency": 24,
         "corroboration": 8,
         "status": 18,
         "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 8,
+        "learned": -1
+      },
+      "demandImpressions": 431,
+      "demandQuery": "johnny galecki acting return",
+      "demandPosition": 1,
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-avatar-seven-havens-trailer",
+      "slug": "avatar-seven-havens-trailer-introduces-long-lost-twins-ahead-of-octobe",
+      "title": "‘Avatar: Seven Havens’ Trailer Introduces Long-Lost Twins Ahead of October Premiere",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "avatar-seven-havens-trailer",
+      "primaryKeyword": "Avatar Seven Havens trailer",
+      "primaryEntity": "Avatar",
+      "entities": [
+        "Avatar (franchise)"
+      ],
+      "angle": "A trailer has been released for 'Avatar: Seven Havens', introducing new characters ahead of its premiere.",
+      "tmdbType": "movie",
+      "source": "gnews:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORHJaTld5ZEsyR3pFbGpSWmpOSkRDeENvbUZBVU9keTh4NWZKZ0VYMmhfOXRmeldxVzA1X3NfNE52Tkx5ZHZwUlpwMEJiTGlWQTBPWFZ6Y2x4RFRfX01ET2gyN0poYWdER2N0bEctMWVBdlUxNXp6Y0tLNTFjS1pETHR4SDRyOGZXZ3VzeDk2UUNXUFlGM1lnR0RxY0JCUXNTQzNPYWRB?oc=5",
+          "ageMin": 1121,
+          "headline": "‘Avatar: Seven Havens’ Trailer Introduces Long-Lost Twins Ahead of October Premiere - TheWrap",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxORHJaTld5ZEsyR3pFbGpSWmpOSkRDeENvbUZBVU9keTh4NWZKZ0VYMmhfOXRmeldxVzA1X3NfNE52Tkx5ZHZwUlpwMEJiTGlWQTBPWFZ6Y2x4RFRfX01ET2gyN0poYWdER2N0bEctMWVBdlUxNXp6Y0tLNTFjS1pETHR4SDRyOGZXZ3VzeDk2UUNXUFlGM1lnR0RxY0JCUXNTQzNPYWRB?oc=5\" target=\"_blank\" ‘Ava"
+        }
+      ],
+      "ageMin": 1121,
+      "_cand": {
+        "key": "rss:-avatar-seven-havens-trailer-introduces-long-lost-twins-ahea",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TheWrap"
+        ],
+        "maxTier": 6,
+        "sensitivity": "normal",
+        "attribution": "TheWrap",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 1,
+        "corroboration": 10,
+        "status": 18,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "demand": 2
+        "demand": 3
       },
-      "demandImpressions": 1,
-      "demandQuery": "new girl reboot",
-      "demandPosition": 14,
+      "demandImpressions": 2,
+      "demandQuery": "avatar all-time worldwide box office gross exact 2026",
+      "demandPosition": 6,
       "tierClass": "B"
     },
     {
-      "id": "music-news-kelsea-ballerini-patrick-droney-math-of-us-single",
-      "slug": "kelsea-ballerini-and-patrick-droney-release-tender-new-single-math-of-",
-      "title": "Kelsea Ballerini and Patrick Droney Release Tender New Single ‘Math of Us’",
+      "id": "news-percy-jackson-and-the-olympians-season-3-premiere-date",
+      "slug": "percy-jackson-and-the-olympians-season-three-premiere-date-set-for-dis",
+      "title": "Percy Jackson and the Olympians: Season Three Premiere Date Set for Disney+ Series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "percy-jackson-and-the-olympians-season-3-premiere-date",
+      "primaryKeyword": "percy jackson season 3",
+      "primaryEntity": "Percy Jackson & the Olympians: The Lightning Thief",
+      "entities": [
+        "Percy Jackson and the Olympians",
+        "Disney+"
+      ],
+      "angle": "Disney+ sets premiere date for the third season of 'Percy Jackson and the Olympians'.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeDdMTWVybERoSTU1RmNNa0FnQ0o3MFl2R1o1aDBpYk1jZnFTX0I4WGEzbDNGZWFsYXFodm5tZUpfN29TUm95YlVLMy13ZzZQdEc5MVdYTHBfbGE5ZXF6MFBSaXVnV1hTMDRDOUZidzNkaVJPaXdHcFdVdWRDcFE4aWJ3bDZzQVA0d3pGMDBYTi1HWmh2SDdkZGtIR0ZDS2RnYWwwdUctdDRqMlZtLWVIc2NDVElsV0M2Z09tZFp5aWJWT2JN0gHKAUFVX3lxTFB4dENKSllRdEV1VXFMQ3ViZzB4NmtvcmZXQm9BbWZQU0hma015NDhSaGlvdlZLZkhKMEl5dUx2ajlocVY0LXR2YVROd2ZLNElVZTU5SDdhRFRKVUJQakNHT2VhWF9JWjUtcHUweXVyTFFVbDlxRXFMNnJNMFB0MDRuMXRXY3VZZEZmRVVLejZUQW1Od1dWZkFoWHNEalB5NE43dUljRGk1ejB4OEVLWURvQXczalF0WWVLbUdtam1pdE0tazg5LW83aEE?oc=5",
+          "ageMin": 36,
+          "headline": "The Thundermans: Premiere Date and Art Revealed for Latest Nickelodeon Series Reunion Movie - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOeDdMTWVybERoSTU1RmNNa0FnQ0o3MFl2R1o1aDBpYk1jZnFTX0I4WGEzbDNGZWFsYXFodm5tZUpfN29TUm95YlVLMy13ZzZQdEc5MVdYTHBfbGE5ZXF6MFBSaXVnV1hTMDRDOUZidzNkaVJPaXdHcFdVdWRDcFE4aWJ3bDZzQVA0d3pGMDBYTi1HWmh2SDdkZGtIR0ZDS2RnYWwwdUctdDRqMlZtLWVIc2NDVElsV0M2Z09"
+        }
+      ],
+      "ageMin": 36,
+      "_cand": {
+        "key": "rss:the-thundermans-premiere-date-and-art-revealed-for-latest-ni",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 76,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-music-soup-label-growth",
+      "slug": "music-soup-label-gains-momentum-with-rising-artists",
+      "title": "Music Soup Label Gains Momentum with Rising Artists",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -303,28 +286,30 @@
       "eventType": "announcement",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "kelsea-ballerini-patrick-droney-math-of-us-single",
-      "primaryKeyword": "Kelsea Ballerini",
-      "primaryEntity": "Kelsea Ballerini",
+      "eventSlug": "music-soup-label-growth",
+      "primaryKeyword": "music labels",
+      "primaryEntity": "Musiq Soulchild",
       "entities": [
-        "Patrick Droney"
+        "Music Soup",
+        "Vincent Mason",
+        "Wisp"
       ],
-      "angle": "Kelsea Ballerini and Patrick Droney release a new duet.",
+      "angle": "A burgeoning independent music label is making waves with its growing roster of artists.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/kelsea-ballerini-patrick-droney-duet-math-of-us-video-1235598266/",
+          "url": "https://www.billboard.com/pro/label-look-music-soup-vincent-mason-wisp/",
           "ageMin": 31,
-          "headline": "Kelsea Ballerini and Patrick Droney Duet on Tender New Single ‘Math of Us’",
-          "summary": "Droney’s new album, Made You Look , is out now"
+          "headline": "Label Look: From Vincent Mason to Wisp, Music Soup Is Heating Up — And Its Founders Are Hungry for More",
+          "summary": "As several of the label’s artists gain steam, co-founders Sean Lewow and Max Motley say they “haven’t remotely scratched the surface” of their ambitions."
         }
       ],
       "ageMin": 31,
       "_cand": {
-        "key": "rss:kelsea-ballerini-and-patrick-droney-duet-on-tender-new-singl",
+        "key": "rss:label-look-from-vincent-mason-to-wisp-music-soup-is-heating-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -334,11 +319,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -360,23 +345,498 @@
       "tierClass": "B"
     },
     {
-      "id": "news-peacock-dungeon-crawler-carl-casts-jeff-hays",
+      "id": "music-news-loe-shimmy-pretty-girls-run-the-world-release",
+      "slug": "loe-shimmy-drops-new-project-pretty-girls-run-the-world",
+      "title": "Loe Shimmy Drops New Project 'Pretty Girls Run the World'",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "loe-shimmy-pretty-girls-run-the-world-release",
+      "primaryKeyword": "Loe Shimmy",
+      "primaryEntity": "Loe Shimmy",
+      "entities": [
+        "Pretty Girls Run the World"
+      ],
+      "angle": "Up-and-coming hip-hop artist Loe Shimmy releases a new project.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/rb-hip-hop/loe-shimmy-hip-hop-up-and-comer-uly-2026-interview-1236301622/",
+          "ageMin": 45,
+          "headline": "Hip-Hop Up-and-Comer Loe Shimmy s Quest to Conquer Every Genre Has Only Just Begun",
+          "summary": "The Florida star's new project Pretty Girls Run the World is out today (July 24)."
+        }
+      ],
+      "ageMin": 45,
+      "_cand": {
+        "key": "rss:hip-hop-up-and-comer-loe-shimmy-s-quest-to-conquer-every-gen",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-barstool-celebrity-family-feud-loss",
+      "slug": "barstool-employees-score-an-embarassing-zero-in-celebrity-family-feud-",
+      "title": "Barstool employees score an embarassing zero in ‘Celebrity Family Feud’ flop",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "appearance",
+      "sensitivity": "normal",
+      "eventSlug": "barstool-celebrity-family-feud-loss",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Barstool Sports"
+      ],
+      "angle": "Barstool employees had a notably poor performance on Celebrity Family Feud.",
+      "tmdbType": "movie",
+      "source": "gnews:New York Post",
+      "sources": [
+        {
+          "outlet": "New York Post",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPV2RVVmFMTHRxRDJYQmFYS2pMSnZ2dVp2NzVRTkxlR015bW94dFdpa1htOEFIVHdsNjJraURtTlRKRGhiZ09jdm1pd0dKUEZYX3llUm9KdUlfZ2tQSkVkdTlxaEtEc1NSN1MyR01pZkVWTGtiVnMyVlRwNFFPZ3FLMV9tMy1PNWU2dDFCQUdsOFNWaWZwM2JGeFV6UlE0UWxCVEVRcXBOdEZlS3JoNGxyT19B?oc=5",
+          "ageMin": 137,
+          "headline": "Barstool employees score an embarassing zero in ‘Celebrity Family Feud’ flop - New York Post",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPV2RVVmFMTHRxRDJYQmFYS2pMSnZ2dVp2NzVRTkxlR015bW94dFdpa1htOEFIVHdsNjJraURtTlRKRGhiZ09jdm1pd0dKUEZYX3llUm9KdUlfZ2tQSkVkdTlxaEtEc1NSN1MyR01pZkVWTGtiVnMyVlRwNFFPZ3FLMV9tMy1PNWU2dDFCQUdsOFNWaWZwM2JGeFV6UlE0UWxCVEVRcXBOdEZlS3JoNGxyT19B?oc=5\" targ"
+        },
+        {
+          "outlet": "Yahoo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNU215cl9HS3Z3LWR6VF8weklvVEpSOFZ1TWtROG9BMnR5R2hCWnNjYzhvbXpONnAyd2VEM1FVQ3pXeXZDX2F1VDd4aDlRZWlfUE95U1VJU00wY21NS0wtTDVEaVZuZ2kzYnRZZWV0WlM4N21seEdpWHI4WWZKLXhLS0lCaFFGTDRZdWhUTzYzYTVnT1ltaUhTQ29JUlYyMzdjdWw1SnlKS2Vtbk03?oc=5",
+          "ageMin": 140,
+          "headline": "Barstool Sports loses Celebrity Family Feud by funniest score possible - Yahoo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxNU215cl9HS3Z3LWR6VF8weklvVEpSOFZ1TWtROG9BMnR5R2hCWnNjYzhvbXpONnAyd2VEM1FVQ3pXeXZDX2F1VDd4aDlRZWlfUE95U1VJU00wY21NS0wtTDVEaVZuZ2kzYnRZZWV0WlM4N21seEdpWHI4WWZKLXhLS0lCaFFGTDRZdWhUTzYzYTVnT1ltaUhTQ29JUlYyMzdjdWw1SnlKS2Vtbk03?oc=5\" target=\"_bla"
+        }
+      ],
+      "ageMin": 137,
+      "_cand": {
+        "key": "rss:barstool-employees-score-an-embarassing-zero-in-celebrity-fa",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "New York Post",
+          "Yahoo"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 16,
+        "corroboration": 14,
+        "status": 18,
+        "type": 6,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 8,
+        "spice": 4,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-na-hong-jin-hope-footage-comic-con",
+      "slug": "director-na-hong-jin-makes-comic-con-debut-with-frightening-new-hope-f",
+      "title": "Director Na Hong-jin Makes Comic-Con Debut With Frightening New ‘Hope’ Footage, Says Casting Hoyeon Was His ‘Best Decision’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "na-hong-jin-hope-footage-comic-con",
+      "primaryKeyword": "Na Hong-jin Hope footage",
+      "primaryEntity": "Hope",
+      "entities": [
+        "Hope (film)",
+        "Na Hong-jin",
+        "Hoyeon Jung"
+      ],
+      "angle": "Director Na Hong-jin debuted new footage from his upcoming film 'Hope' at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "gnews:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNZlJfZ2RnaDhIN3pZSVE3bDZFckl4Nm1feGVIVGhoekVrWVFEbE9NVmxxVWpoZnNVTEtLTWFIblNIa09vOTlvNkx6ZF9HRzVENkRBOGNxNlFydUFvNTZ3NmsybURHRDgyOElXR29rcjZFc1VGbzg4eGhhNE8zNzVfRUxJcGpVZ1lfYnpLY0xudmpZQQ?oc=5",
+          "ageMin": 724,
+          "headline": "Director Na Hong-Jin Makes Comic-Con Debut With Frightening New ‘Hope’ Footage, Says Casting Hoyeon Was His ‘Best Decision’ - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNZlJfZ2RnaDhIN3pZSVE3bDZFckl4Nm1feGVIVGhoekVrWVFEbE9NVmxxVWpoZnNVTEtLTWFIblNIa09vOTlvNkx6ZF9HRzVENkRBOGNxNlFydUFvNTZ3NmsybURHRDgyOElXR29rcjZFc1VGbzg4eGhhNE8zNzVfRUxJcGpVZ1lfYnpLY0xudmpZQQ?oc=5\" target=\"_blank\" Director Na Hong-Jin Makes Com"
+        }
+      ],
+      "ageMin": 724,
+      "_cand": {
+        "key": "rss:director-na-hong-jin-makes-comic-con-debut-with-frightening-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-leslie-odom-jr-hamilton-west-end-return",
+      "slug": "leslie-odom-jr-returns-to-hamilton-on-west-end-after-mid-show-exit",
+      "title": "Leslie Odom Jr. Returns to 'Hamilton' on West End After Mid-Show Exit",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "leslie-odom-jr-hamilton-west-end-return",
+      "primaryKeyword": "Leslie Odom Jr.",
+      "primaryEntity": "Leslie Odom Jr.",
+      "entities": [
+        "Hamilton",
+        "West End"
+      ],
+      "angle": "Leslie Odom Jr. is set to return to the West End production of 'Hamilton' after an unexpected mid-performance exit.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/theater/global/leslie-odom-jr-hamilton-london-returning-matinee-1236820174/",
+          "ageMin": 56,
+          "headline": "Leslie Odom Jr. Returning to ‘Hamilton’ on West End Tonight After Exiting Mid-Performance (EXCLUSIVE)",
+          "summary": "Leslie Odom Jr. was forced to exit a matinee performance of “Hamilton” in London mid-show Thursday. Variety understands Odom bowed out after the first act and was replaced by Manaia Glassey-Ohlson. He did not appear in the evening performance of the show. A spokesperson for Hamilton declined to elaborate on what caused Odom s exit but [ ]"
+        }
+      ],
+      "ageMin": 56,
+      "_cand": {
+        "key": "rss:leslie-odom-jr-returning-to-hamilton-on-west-end-tonight-aft",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-marilyn-monroe-some-like-it-hot-coronado",
+      "slug": "marilyn-monroe-comes-to-coronado-the-story-behind-some-like-it-hot",
+      "title": "Marilyn Monroe comes to Coronado: The story behind ‘Some Like It Hot’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "marilyn-monroe-some-like-it-hot-coronado",
+      "primaryKeyword": "Some Like It Hot",
+      "primaryEntity": "Some Like It Hot",
+      "entities": [
+        "Some Like It Hot (1959 film)",
+        "Marilyn Monroe"
+      ],
+      "angle": "The story behind the filming of the classic movie 'Some Like It Hot' in Coronado.",
+      "tmdbType": "movie",
+      "source": "gnews:TVGuide.com",
+      "sources": [
+        {
+          "outlet": "TVGuide.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1oSFV4d2l6NHJoeVE2TUp5THFrWWNNcktHVUtUYUlKT0F6NEtrTElNUF9EdWtLb3R6SWVuRlc3X25tcnRlQnphQ09URzd2UmVZYXZxXzduY0lFVlF1ajZld0ZId2VUQjh5dXpB?oc=5",
+          "ageMin": 91,
+          "headline": "The Complete Guide to Summer TV 2026: Everything to Know About What to Watch This Season - TVGuide.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMia0FVX3lxTE1oSFV4d2l6NHJoeVE2TUp5THFrWWNNcktHVUtUYUlKT0F6NEtrTElNUF9EdWtLb3R6SWVuRlc3X25tcnRlQnphQ09URzd2UmVZYXZxXzduY0lFVlF1ajZld0ZId2VUQjh5dXpB?oc=5\" target=\"_blank\" The Complete Guide to Summer TV 2026: Everything to Know About What to Watch This Se"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:the-complete-guide-to-summer-tv-2026-everything-to-know-abou",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TVGuide.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TVGuide.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "music-news-kelsea-ballerini-patrick-droney-math-of-us-single",
+      "slug": "kelsea-ballerini-and-patrick-droney-release-tender-new-single-math-of-",
+      "title": "Kelsea Ballerini and Patrick Droney Release Tender New Single ‘Math of Us’",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "kelsea-ballerini-patrick-droney-math-of-us-single",
+      "primaryKeyword": "kelsea ballerini",
+      "primaryEntity": "Kelsea Ballerini",
+      "entities": [
+        "Patrick Droney"
+      ],
+      "angle": "Kelsea Ballerini releases a new duet with Patrick Droney.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/kelsea-ballerini-patrick-droney-duet-math-of-us-video-1235598266/",
+          "ageMin": 91,
+          "headline": "Kelsea Ballerini and Patrick Droney Duet on Tender New Single ‘Math of Us’",
+          "summary": "Droney’s new album, Made You Look , is out now"
+        }
+      ],
+      "ageMin": 91,
+      "_cand": {
+        "key": "rss:kelsea-ballerini-and-patrick-droney-duet-on-tender-new-singl",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ryan-whitney-viral-moment-celebrity-family-feud",
+      "slug": "ryan-whitney-goes-viral-after-embarrassing-act-on-celebrity-family-feu",
+      "title": "Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "ryan-whitney-viral-moment-celebrity-family-feud",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Ryan Whitney"
+      ],
+      "angle": "Ryan Whitney went viral for an embarrassing moment on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:Markerzone.com",
+      "sources": [
+        {
+          "outlet": "Markerzone.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZZmtDbElkVVNGNUJEYTRxN3V1ODdISkxEQmNsLW9rSFV5Y18tNGJjUjZ2VFVFWklVNktLTGRvZ1R6elVHYlNaRzV5a3NFd084MTY4ZjlZUGhYbUFMNDFuWg?oc=5",
+          "ageMin": 41,
+          "headline": "Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud - Markerzone.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE5ZZmtDbElkVVNGNUJEYTRxN3V1ODdISkxEQmNsLW9rSFV5Y18tNGJjUjZ2VFVFWklVNktLTGRvZ1R6elVHYlNaRzV5a3NFd084MTY4ZjlZUGhYbUFMNDFuWg?oc=5\" target=\"_blank\" Ryan Whitney goes viral after embarrassing act on Celebrity Family Feud /a nbsp; nbsp; font color="
+        }
+      ],
+      "ageMin": 41,
+      "_cand": {
+        "key": "rss:ryan-whitney-goes-viral-after-embarrassing-act-on-celebrity-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Markerzone.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Markerzone.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-dungeon-crawler-carl-series-casts-jeff-hays",
       "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
-      "title": "Peacock's Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+      "title": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "peacock-dungeon-crawler-carl-casts-jeff-hays",
-      "primaryKeyword": "dungeon crawler carl series",
-      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "eventSlug": "dungeon-crawler-carl-series-casts-jeff-hays",
+      "primaryKeyword": "Dungeon Crawler Carl series casting",
+      "primaryEntity": "Dungeon Crawler Carl",
       "entities": [
-        "Peacock",
-        "Jeff Hays"
+        "Jeff Hays",
+        "Peacock"
       ],
-      "angle": "Jeff Hays, known for audiobook narration, cast as Princess Donut in Peacock's 'Dungeon Crawler Carl' series.",
+      "angle": "Audiobook narrator Jeff Hays has been cast as Princess Donut in Peacock's upcoming 'Dungeon Crawler Carl' series.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -384,12 +844,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
-          "ageMin": 931,
+          "ageMin": 991,
           "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
           "summary": "He'll voice the key character of Princess Donut, a talking cat."
         }
       ],
-      "ageMin": 931,
+      "ageMin": 991,
       "_cand": {
         "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
         "popularity": 0,
@@ -427,813 +887,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-zach-cregger-hypes-weapons-prequel",
-      "slug": "zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-things-await-gl",
-      "title": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "zach-cregger-hypes-weapons-prequel",
-      "primaryKeyword": "weapons prequel",
-      "primaryEntity": "Weapons",
-      "entities": [
-        "Weapons (film)",
-        "Zach Cregger"
-      ],
-      "angle": "Director Zach Cregger teases 'mysteries and crazy things' for the upcoming 'Weapons' prequel.",
-      "tmdbType": "movie",
-      "source": "rss:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 7,
-          "url": "https://www.thewrap.com/creative-content/movies/zach-cregger-weapons-prequel-gladys-script-update/",
-          "ageMin": 687,
-          "headline": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
-          "summary": "\"The script is in progress now, but we’re taking that super seriously,\" the director adds The post Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story appeared first on TheWrap ."
-        }
-      ],
-      "ageMin": 687,
-      "_cand": {
-        "key": "rss:zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-thing",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 67,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-tyla-discusses-new-album-a-pop",
-      "slug": "music-superstar-tyla-talks-new-highly-anticipated-album-a-pop",
-      "title": "Music Superstar Tyla Talks New Highly Anticipated Album ‘A*Pop’",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "tyla-discusses-new-album-a-pop",
-      "primaryKeyword": "Tyla new album",
-      "primaryEntity": "Tyla",
-      "entities": [
-        "A*Pop"
-      ],
-      "angle": "South African music superstar Tyla discusses her highly anticipated new album 'A*Pop'.",
-      "tmdbType": "movie",
-      "source": "gnews:TODAY.com",
-      "sources": [
-        {
-          "outlet": "TODAY.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNT3d2WmNDbFJxVHJlUF9ZNkNUQU9ZanlZdFpoRUZQckNlcjdZX1BIejRSbmJDa1RHaFdMTTN5WVl2OEdHbE1HdTF6d1hleGlyUzNOSGxhdEdGTnlodVE1VENZSk1Vd1dpdWhETjBaclFLWkpNb1JBSGhmMlN0a0tFRTZYcXNIei1iSmZRWlZQQmpYS29wYS1BT050S3dOVkwzU1Qxbg?oc=5",
-          "ageMin": 16,
-          "headline": "Music Superstar Tyla Talks New Highly Anticipated Album ‘A*Pop’ - TODAY.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNT3d2WmNDbFJxVHJlUF9ZNkNUQU9ZanlZdFpoRUZQckNlcjdZX1BIejRSbmJDa1RHaFdMTTN5WVl2OEdHbE1HdTF6d1hleGlyUzNOSGxhdEdGTnlodVE1VENZSk1Vd1dpdWhETjBaclFLWkpNb1JBSGhmMlN0a0tFRTZYcXNIei1iSmZRWlZQQmpYS29wYS1BT050S3dOVkwzU1Qxbg?oc=5\" target=\"_blank\" Music "
-        }
-      ],
-      "ageMin": 16,
-      "_cand": {
-        "key": "rss:music-superstar-tyla-talks-new-highly-anticipated-album-a-po",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TODAY.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TODAY.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 24,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-dungeon-crawler-carl-peacock-series-jeff-hays-casting",
-      "slug": "jeff-hays-cast-in-peacock-s-dungeon-crawler-carl-series",
-      "title": "Jeff Hays Cast in Peacock's 'Dungeon Crawler Carl' Series",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "dungeon-crawler-carl-peacock-series-jeff-hays-casting",
-      "primaryKeyword": "dungeon crawler carl",
-      "primaryEntity": "Dungeon Crawler Carl",
-      "entities": [
-        "Peacock",
-        "Jeff Hays"
-      ],
-      "angle": "Jeff Hays, the narrator of the 'Dungeon Crawler Carl' audiobook, has been cast in the upcoming Peacock series adaptation.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVjRsV3JQZm5OR2tXSDBnQk5NSFlRMG1HUnZxQi1IemRJMXZma2tGXzZpdUpsd2Y1MGlBaGUyVXlLMXpkMFdpRzNYM24wLTRzN2V4ck03WU5VdW1BdW1WQ0t1MmFMalBJbXBaMnNTQ3N6V3k1c0xmZUpUYUNCbFgtX2xwOVBLM05SMXpIRmR6czg2QUNIZWo0aWlQVWFrM1h6Q3AtVWpkMzVCd0dOVmR6WjByelE?oc=5",
-          "ageMin": 931,
-          "headline": "'Dungeon Crawler Carl' Peacock Series Casts Audiobook Narrator Jeff Hays - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxOVjRsV3JQZm5OR2tXSDBnQk5NSFlRMG1HUnZxQi1IemRJMXZma2tGXzZpdUpsd2Y1MGlBaGUyVXlLMXpkMFdpRzNYM24wLTRzN2V4ck03WU5VdW1BdW1WQ0t1MmFMalBJbXBaMnNTQ3N6V3k1c0xmZUpUYUNCbFgtX2xwOVBLM05SMXpIRmR6czg2QUNIZWo0aWlQVWFrM1h6Q3AtVWpkMzVCd0dOVmR6WjByelE?oc=5\" t"
-        }
-      ],
-      "ageMin": 931,
-      "_cand": {
-        "key": "rss:-dungeon-crawler-carl-peacock-series-casts-audiobook-narrato",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 62,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-girl-in-the-river-acquisition-release",
-      "slug": "tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-gets-late-",
-      "title": "Tiffany Haddish, Devon Sawa s Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "the-girl-in-the-river-acquisition-release",
-      "primaryKeyword": "The Girl in the River movie",
-      "primaryEntity": "The Girl in the River",
-      "entities": [
-        "Tiffany Haddish",
-        "Devon Sawa",
-        "Maggie Grace",
-        "Ralph Macchio"
-      ],
-      "angle": "Thriller 'The Girl in the River' starring Tiffany Haddish and Devon Sawa acquired by Samuel Goldwyn Films with late summer release and trailer.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-girl-in-the-river-tiffany-haddish-devon-sawa-release-1236653795/",
-          "ageMin": 2821,
-          "headline": "Tiffany Haddish, Devon Sawa s Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
-          "summary": "Maggie Grace and Ralph Macchio star in Brando Benetton's movie that has been acquired by Samuel Goldwyn Films and centers on twin girls who go missing."
-        }
-      ],
-      "ageMin": 2821,
-      "_cand": {
-        "key": "rss:tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-happys-place-season-3-filming-dates",
-      "slug": "happy-s-place-sets-season-3-filming-dates-everything-we-know-about-the",
-      "title": "‘Happy’s Place’ Sets Season 3 Filming Dates: Everything We Know About the Comedy’s Return",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "happys-place-season-3-filming-dates",
-      "primaryKeyword": "Happy's Place",
-      "primaryEntity": "Happy's Place",
-      "entities": [
-        "Open Season 3",
-        "Season 3"
-      ],
-      "angle": "Filming dates have been set for the third season of the comedy series 'Happy's Place'.",
-      "tmdbType": "movie",
-      "source": "gnews:TV Insider",
-      "sources": [
-        {
-          "outlet": "TV Insider",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPOFBOQndnYW9ST0FNTUJmemdUbDM3cWMwREp5WURIbDYxdF91YWp2Mll2VUh6VFZfMnRPSGdfdXk3MmktVWxhaU5tYmE5c0d3OVh6enRWTWVnSnlQWndzY0lBV0Q3bzB0b1RZQW43UHZRS1Y1LUdqU0taWE9UeTBhQlRXOTFZR2dzQlRXbzh4U3FPS2ZTUnBVaHR2cjc?oc=5",
-          "ageMin": 249,
-          "headline": "‘Happy’s Place’ Sets Season 3 Filming Dates: Everything We Know About the Comedy’s Return - TV Insider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxPOFBOQndnYW9ST0FNTUJmemdUbDM3cWMwREp5WURIbDYxdF91YWp2Mll2VUh6VFZfMnRPSGdfdXk3MmktVWxhaU5tYmE5c0d3OVh6enRWTWVnSnlQWndzY0lBV0Q3bzB0b1RZQW43UHZRS1Y1LUdqU0taWE9UeTBhQlRXOTFZR2dzQlRXbzh4U3FPS2ZTUnBVaHR2cjc?oc=5\" target=\"_blank\" ‘Happy’s Place’ S"
-        }
-      ],
-      "ageMin": 249,
-      "_cand": {
-        "key": "rss:-happy-s-place-sets-season-3-filming-dates-everything-we-kno",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "TV Insider"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "TV Insider",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-snoop-dogg-biopic-release-date",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-release-date",
-      "primaryKeyword": "snoop dogg biopic",
-      "primaryEntity": "Snoop Dogg Biopic",
-      "entities": [
-        "Snoop Dogg's Hood of Horror",
-        "Snoop Dogg",
-        "Universal",
-        "Jonathan Daviss"
-      ],
-      "angle": "Universal has set a summer 2027 release date for the Snoop Dogg biopic.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 3901,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 3901,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-deadpool-other",
-      "slug": "is-it-time-for-deadpool-to-grow-up-and-stop-joking-around",
-      "title": "Is It Time for Deadpool to Grow Up and Stop Joking Around?",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "high",
-      "eventSlug": "deadpool-other",
-      "primaryKeyword": "deadpool character",
-      "primaryEntity": "Deadpool",
-      "entities": [
-        "Marvel"
-      ],
-      "angle": "A critical discussion explores whether Deadpool needs to mature to be a true Marvel superhero.",
-      "tmdbType": "movie",
-      "source": "gnews:The Guardian",
-      "sources": [
-        {
-          "outlet": "The Guardian",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOLXVSRWZNbU5GbFFtbG1iWXdnNGo3Vm1HeTVCZUo2NkxCZTRLUmRfaldnLXMwTFFtNmI0dGdodzVhV2kwWW5qYUZsOTlKVnRpTGp5alBXSDhwRXR6OUZuc0Ewb3RoN3E1OU5EdUNkSDJnQUFhRTdpX2NDNzYxOVRNMEVfejV0bkNrQzJyWGJqLTlVU2FCeFlOaUlwYlB3T0JDQlp4VFhJN0NWaEZWRHdn?oc=5",
-          "ageMin": 165,
-          "headline": "If Deadpool wants to be a true Marvel superhero, is it time he grew up and stopped joking around? - The Guardian",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOLXVSRWZNbU5GbFFtbG1iWXdnNGo3Vm1HeTVCZUo2NkxCZTRLUmRfaldnLXMwTFFtNmI0dGdodzVhV2kwWW5qYUZsOTlKVnRpTGp5alBXSDhwRXR6OUZuc0Ewb3RoN3E1OU5EdUNkSDJnQUFhRTdpX2NDNzYxOVRNMEVfejV0bkNrQzJyWGJqLTlVU2FCeFlOaUlwYlB3T0JDQlp4VFhJN0NWaEZWRHdn?oc=5\" target=\""
-        }
-      ],
-      "ageMin": 165,
-      "_cand": {
-        "key": "rss:if-deadpool-wants-to-be-a-true-marvel-superhero-is-it-time-h",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Guardian"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "The Guardian",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 63,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 12,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-barstool-employees-celebrity-family-feud-loss",
-      "slug": "barstool-employees-score-an-embarassing-zero-in-celebrity-family-feud-",
-      "title": "Barstool employees score an embarassing zero in ‘Celebrity Family Feud’ flop",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "barstool-employees-celebrity-family-feud-loss",
-      "primaryKeyword": "celebrity family feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Barstool Sports"
-      ],
-      "angle": "Barstool Sports personalities had a notably poor performance on Celebrity Family Feud.",
-      "tmdbType": "movie",
-      "source": "gnews:New York Post",
-      "sources": [
-        {
-          "outlet": "New York Post",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPV2RVVmFMTHRxRDJYQmFYS2pMSnZ2dVp2NzVRTkxlR015bW94dFdpa1htOEFIVHdsNjJraURtTlRKRGhiZ09jdm1pd0dKUEZYX3llUm9KdUlfZ2tQSkVkdTlxaEtEc1NSN1MyR01pZkVWTGtiVnMyVlRwNFFPZ3FLMV9tMy1PNWU2dDFCQUdsOFNWaWZwM2JGeFV6UlE0UWxCVEVRcXBOdEZlS3JoNGxyT19B?oc=5",
-          "ageMin": 77,
-          "headline": "Barstool employees score an embarassing zero in ‘Celebrity Family Feud’ flop - New York Post",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPV2RVVmFMTHRxRDJYQmFYS2pMSnZ2dVp2NzVRTkxlR015bW94dFdpa1htOEFIVHdsNjJraURtTlRKRGhiZ09jdm1pd0dKUEZYX3llUm9KdUlfZ2tQSkVkdTlxaEtEc1NSN1MyR01pZkVWTGtiVnMyVlRwNFFPZ3FLMV9tMy1PNWU2dDFCQUdsOFNWaWZwM2JGeFV6UlE0UWxCVEVRcXBOdEZlS3JoNGxyT19B?oc=5\" targ"
-        }
-      ],
-      "ageMin": 77,
-      "_cand": {
-        "key": "rss:barstool-employees-score-an-embarassing-zero-in-celebrity-fa",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "New York Post"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "New York Post",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-barstool-sports-celebrity-family-feud-loss",
-      "slug": "barstool-sports-loses-celebrity-family-feud-by-funniest-score-possible",
-      "title": "Barstool Sports loses Celebrity Family Feud by funniest score possible",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "barstool-sports-celebrity-family-feud-loss",
-      "primaryKeyword": "celebrity family feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Barstool Sports"
-      ],
-      "angle": "Barstool Sports' appearance on Celebrity Family Feud resulted in a humorous loss.",
-      "tmdbType": "movie",
-      "source": "gnews:The Big Lead",
-      "sources": [
-        {
-          "outlet": "The Big Lead",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96V05rbWx4QTZPeUhPek9tNlpicTZTXzZxUnBjVEhqLXpPeEh6c09hdXI0STJFNWhzS3k3ZGhCLU1Rbl9jRmlTZGlTR1QzYkZZNXNCdUJVSzhXT005WllCZDBCNk9CckpianhjdDdR?oc=5",
-          "ageMin": 79,
-          "headline": "Barstool Sports loses Celebrity Family Feud by funniest score possible - The Big Lead",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMibkFVX3lxTE96V05rbWx4QTZPeUhPek9tNlpicTZTXzZxUnBjVEhqLXpPeEh6c09hdXI0STJFNWhzS3k3ZGhCLU1Rbl9jRmlTZGlTR1QzYkZZNXNCdUJVSzhXT005WllCZDBCNk9CckpianhjdDdR?oc=5\" target=\"_blank\" Barstool Sports loses Celebrity Family Feud by funniest score possible /a nbsp; "
-        }
-      ],
-      "ageMin": 79,
-      "_cand": {
-        "key": "rss:barstool-sports-loses-celebrity-family-feud-by-funniest-scor",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "The Big Lead"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "The Big Lead",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 56,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-cooper-and-ace-flagg-celebrity-family-feud",
-      "slug": "cooper-and-ace-flagg-beat-barstool-sports-on-celebrity-family-feud-jul",
-      "title": "Cooper And Ace Flagg Beat Barstool Sports On Celebrity Family Feud July 23rd",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "cooper-and-ace-flagg-celebrity-family-feud",
-      "primaryKeyword": "Celebrity Family Feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Cooper Flagg",
-        "Ace Flagg",
-        "Barstool Sports"
-      ],
-      "angle": "Cooper and Ace Flagg competed against Barstool Sports on Celebrity Family Feud.",
-      "tmdbType": "movie",
-      "source": "gnews:92.9 The Ticket",
-      "sources": [
-        {
-          "outlet": "92.9 The Ticket",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE54c2dlZ3VodUtFWGxTcmUwRjJhM2ExRko4UXJldy1CRERLX21BTFdfWjlmclNZT1l1bUNCSjlEcHFPeVBtZmhiV2FYVmNmcTB3NjRLcWdOQTBNY1luWktjUEdtNDNhQQ?oc=5",
-          "ageMin": 248,
-          "headline": "Cooper And Ace Flagg Beat Barstool Sports On Celebrity Family Feud July 23rd - 92.9 The Ticket",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE54c2dlZ3VodUtFWGxTcmUwRjJhM2ExRko4UXJldy1CRERLX21BTFdfWjlmclNZT1l1bUNCSjlEcHFPeVBtZmhiV2FYVmNmcTB3NjRLcWdOQTBNY1luWktjUEdtNDNhQQ?oc=5\" target=\"_blank\" Cooper And Ace Flagg Beat Barstool Sports On Celebrity Family Feud July 23rd /a nbsp; nbsp"
-        }
-      ],
-      "ageMin": 248,
-      "_cand": {
-        "key": "rss:cooper-and-ace-flagg-beat-barstool-sports-on-celebrity-famil",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "92.9 The Ticket"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "92.9 The Ticket",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-wisconsin-greats-team-usa-hockey-celebrity-family-feud",
-      "slug": "wisconsin-greats-represent-team-usa-hockey-on-celebrity-family-feud",
-      "title": "Wisconsin greats represent Team USA Hockey on Celebrity Family Feud",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "wisconsin-greats-team-usa-hockey-celebrity-family-feud",
-      "primaryKeyword": "Celebrity Family Feud",
-      "primaryEntity": "Celebrity Family Feud",
-      "entities": [
-        "Team USA Hockey",
-        "Wisconsin greats"
-      ],
-      "angle": "Former Wisconsin greats representing Team USA Hockey appeared on Celebrity Family Feud.",
-      "tmdbType": "movie",
-      "source": "gnews:Badgers Wire",
-      "sources": [
-        {
-          "outlet": "Badgers Wire",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQLV9QUk42dzZYQWlSS01YOVhDZmItandqUjZRZERyWmVkaHdpOGNWbGNJaGlDN0ZVcV9EYlVBYWtPWlNnc01OMW54MVBvbmxGeG01MDBFeTdQR0ljSzVJUlZMaXlIX3k4ZElwX1pHYzdsNDQzdnc1TFhkbGFSdDMyUFpwbV9Ob0VubXM2QllfcVVsdEZMdHNBZ0NTYkx5STRtZ1paa1UyMWJqbTU5MEFpb2xXcE1Ha1hoQlZIRURYZDVWMkNJSlJCbGU3WHlMSkVNMXlLSw?oc=5",
-          "ageMin": 265,
-          "headline": "Wisconsin greats represent Team USA Hockey on Celebrity Family Feud - Badgers Wire",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQLV9QUk42dzZYQWlSS01YOVhDZmItandqUjZRZERyWmVkaHdpOGNWbGNJaGlDN0ZVcV9EYlVBYWtPWlNnc01OMW54MVBvbmxGeG01MDBFeTdQR0ljSzVJUlZMaXlIX3k4ZElwX1pHYzdsNDQzdnc1TFhkbGFSdDMyUFpwbV9Ob0VubXM2QllfcVVsdEZMdHNBZ0NTYkx5STRtZ1paa1UyMWJqbTU5MEFpb2xXcE1Ha1hoQlZ"
-        }
-      ],
-      "ageMin": 265,
-      "_cand": {
-        "key": "rss:wisconsin-greats-represent-team-usa-hockey-on-celebrity-fami",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Badgers Wire"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Badgers Wire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-david-harbour-stranger-things-end-emmy",
-      "slug": "david-harbour-on-the-end-of-stranger-things-emmy-nominated-dtf-st-loui",
-      "title": "David Harbour on the End of Stranger Things, Emmy-Nominated DTF St. Louis",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "david-harbour-stranger-things-end-emmy",
-      "primaryKeyword": "david harbour stranger things",
-      "primaryEntity": "David Harbour",
-      "entities": [
-        "Stranger Things",
-        "DTF St. Louis"
-      ],
-      "angle": "David Harbour reflects on the conclusion of 'Stranger Things' and his Emmy-nominated work.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/david-harbour-stranger-things-emmy-nom-dtf-st-louis-podcast-1236655145/",
-          "ageMin": 951,
-          "headline": "David Harbour on the End of Stranger Things, Emmy-Nominated DTF St. Louis and Upcoming Reunion With Millie Bobby Brown",
-          "summary": "For the HBO limited series 'DTF St. Louis,' Harbour is nominated for his work as a producer (best limited series) and performer (best supporting actor in a limited or anthology series or movie)."
-        }
-      ],
-      "ageMin": 951,
-      "_cand": {
-        "key": "rss:david-harbour-on-the-end-of-stranger-things-emmy-nominated-d",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 5,
-        "pop": 0,
-        "breakout": 0,
-        "big": 6,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 8,
-        "learned": -1
-      },
-      "demandImpressions": 30,
-      "demandQuery": "running up that hill stranger things",
-      "demandPosition": 31.5,
-      "tierClass": "C"
-    },
-    {
-      "id": "news-chris-brown-pleads-guilty-london-attack",
+      "id": "news-chris-brown-pleads-guilty-london-nightclub-attack",
       "slug": "chris-brown-pleads-guilty-in-london-nightclub-attack",
       "title": "Chris Brown Pleads Guilty in London Nightclub Attack",
       "contentType": "news",
@@ -1242,13 +896,11 @@
       "subcategory": "news",
       "eventType": "legal",
       "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "chris-brown-pleads-guilty-london-attack",
-      "primaryKeyword": "Chris Brown",
+      "eventSlug": "chris-brown-pleads-guilty-london-nightclub-attack",
+      "primaryKeyword": "chris brown",
       "primaryEntity": "Chris Brown: Welcome to My Life",
       "entities": [
-        "Chris Brown",
-        "Omololu Akinlolu"
+        "Chris Brown"
       ],
       "angle": "Singer Chris Brown pleads guilty to charges related to a London nightclub attack.",
       "tmdbType": "movie",
@@ -1258,32 +910,41 @@
           "outlet": "Rolling Stone",
           "tier": 7,
           "url": "https://www.rollingstone.com/music/music-news/chris-brown-pleads-guilty-affray-london-nightclub-attack-1235598310/",
-          "ageMin": 33,
+          "ageMin": 93,
           "headline": "Chris Brown Pleads Guilty in London Nightclub Attack",
           "summary": "Singer and co-defendant Omololu “Hoody Baby” Akinlolu face up to three years in prison when sentenced in October"
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/music/music-news/chris-brown-pleads-guilty-london-nightclub-attack-1236655813/",
+          "ageMin": 148,
+          "headline": "Chris Brown Pleads Guilty After London Nightclub Attack",
+          "summary": "The singer pleaded guilty to affray, which in the U.K. is a public order offense where the defendant uses or threatens unlawful violence against another person."
         },
         {
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/chris-brown-pleads-guilty-uk-nightclub-incident-mayfair-1237002399/",
-          "ageMin": 139,
+          "ageMin": 199,
           "headline": "Chris Brown Pleads Guilty To Affray Over UK Nightclub Confrontation",
           "summary": "Chris Brown has pleaded guilty to affray following a confrontation in a London nightclub in 2023. According to BBC News, the singer entered his plea at Southwark Crown Court in a hearing that took less than five minutes. The incident took place in a London nightclub in Mayfair. Brown s co-defendant, his vocal coach Omololu Akinlolu, [ ]"
         }
       ],
-      "ageMin": 33,
+      "ageMin": 93,
       "_cand": {
         "key": "rss:chris-brown-pleads-guilty-in-london-nightclub-attack",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 3,
       "verification": {
-        "tier1Count": 2,
+        "tier1Count": 3,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 3,
         "outlets": [
           "Rolling Stone",
+          "THR",
           "Deadline"
         ],
         "maxTier": 7,
@@ -1293,21 +954,157 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 81,
+      "priority": 86,
       "signals": {
-        "recency": 24,
-        "corroboration": 18,
+        "recency": 16,
+        "corroboration": 24,
         "status": 18,
         "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
-        "trending": 8,
+        "trending": 15,
         "spice": 0,
         "softTv": 0,
         "learned": 1
       },
       "tierClass": "S"
+    },
+    {
+      "id": "news-jake-johnson-other",
+      "slug": "jake-johnson-s-hollywood-comeback-multiple-tv-shows-and-a-hot-streak",
+      "title": "Jake Johnson's Hollywood Comeback: Multiple TV Shows and a Hot Streak",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "jake-johnson-other",
+      "primaryKeyword": "Jake Johnson",
+      "primaryEntity": "Jake Johnson",
+      "entities": [
+        "New Girl",
+        "Maximum Pleasure Guaranteed"
+      ],
+      "angle": "Jake Johnson is experiencing a career resurgence with multiple TV projects, including the Apple TV+ thriller 'Maximum Pleasure Guaranteed'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/features/jake-johnson-the-dink-new-girl-tom-cruise-1236820098/",
+          "ageMin": 31,
+          "headline": "Jake Johnson Was Screwed Over by Hollywood. And He’s Never Been Hotter",
+          "summary": "Jake Johnson has never been more booked and busy. The “New Girl” veteran is currently starring in three TV shows: “Maximum Pleasure Guaranteed,” a cheeky Apple TV+ thriller opposite Tatiana Maslany that’s drawn critical raves; “Sunset P.I.,” an upcoming NBC comedy as a private investigator roaming L.A.; and “Cable Guy,” a Hulu pilot inspired by [ ]"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:jake-johnson-was-screwed-over-by-hollywood-and-he-s-never-be",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-jack-white-chris-robinson-free-cover",
+      "slug": "jack-white-and-chris-robinson-cover-free-s-i-m-a-mover-live",
+      "title": "Jack White and Chris Robinson Cover Free's 'I'm a Mover' Live",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "jack-white-chris-robinson-free-cover",
+      "primaryKeyword": "Jack White",
+      "primaryEntity": "Jack White",
+      "entities": [
+        "Chris Robinson",
+        "The Black Crowes",
+        "Free"
+      ],
+      "angle": "Musicians Jack White and Chris Robinson collaborated on a cover during a live performance.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/jack-white-the-black-crowes-chris-robinson-surprise-guest-1235598308/",
+          "ageMin": 48,
+          "headline": "Jack White Brings Out Black Crowes Chris Robinson to Tear Up Free s I m a Mover",
+          "summary": "The two rockers covered the Seventies deep cut during White's show in Chicago"
+        }
+      ],
+      "ageMin": 48,
+      "_cand": {
+        "key": "rss:jack-white-brings-out-black-crowes-chris-robinson-to-tear-up",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "B"
     },
     {
       "id": "news-lainey-wilson-documentary-netflix",
@@ -1321,12 +1118,12 @@
       "sensitivity": "normal",
       "tier": "popular",
       "eventSlug": "lainey-wilson-documentary-netflix",
-      "primaryKeyword": "lainey wilson documentary",
+      "primaryKeyword": "Lainey Wilson documentary",
       "primaryEntity": "Lainey Wilson",
       "entities": [
         "Netflix"
       ],
-      "angle": "Country star Lainey Wilson's documentary is set to premiere on Netflix.",
+      "angle": "Country star Lainey Wilson gets a documentary on Netflix.",
       "tmdbType": "movie",
       "source": "gnews:KSWO 7News",
       "sources": [
@@ -1334,12 +1131,12 @@
           "outlet": "KSWO 7News",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZFNkLVNuWk1aVGNQMmFOUVZpc2dNd09uc1oyWTJrZXUwMml3d3NueHYtTXRzMVJGYXhCR2ktOEdBU1N3cnU0Z1VJQV92a1A4dDNwSlNhM1E2N1gwakFqWlFlZnpiSjVCanBVN2hySjllYTNjaWFvUmMtUzNmWjcyMTRPNTYtZDVnU005NmZRenh1czRN0gGoAUFVX3lxTE5RT3RUOUEyckJlY0lnTkZjdExHa2hNVy1CY2NsYlRNMzV3cFpqSnVqa1FiRWVqX195UEUzcmo4R2R1ck90NXVxd1pJWGV0ajdvWlU0Um1mUUI3TFowRFkxUTI0dVF6d0gwY3NqWHlvenNrZ1czRG5QQkdKSEZMSjJIbENlVEdDYjZ5eXBZV29PaUFPZ3ZPREhCc09nNm5FTkFCS1lDNjBzeA?oc=5",
-          "ageMin": 67,
+          "ageMin": 127,
           "headline": "Lawton filmmaker brings Lainey Wilson documentary to Netflix - KSWO 7News",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMilAFBVV95cUxPZFNkLVNuWk1aVGNQMmFOUVZpc2dNd09uc1oyWTJrZXUwMml3d3NueHYtTXRzMVJGYXhCR2ktOEdBU1N3cnU0Z1VJQV92a1A4dDNwSlNhM1E2N1gwakFqWlFlZnpiSjVCanBVN2hySjllYTNjaWFvUmMtUzNmWjcyMTRPNTYtZDVnU005NmZRenh1czRN0gGoAUFVX3lxTE5RT3RUOUEyckJlY0lnTkZjdExHa2hNVy1CY2N"
         }
       ],
-      "ageMin": 67,
+      "ageMin": 127,
       "_cand": {
         "key": "rss:lawton-filmmaker-brings-lainey-wilson-documentary-to-netflix",
         "popularity": 0,
@@ -1377,9 +1174,9 @@
       "tierClass": "C"
     },
     {
-      "id": "news-ariana-grande-foundation-evolving-philanthropy",
-      "slug": "ariana-grande-s-foundation-exemplifies-evolving-celebrity-philanthropy",
-      "title": "Ariana Grande's Foundation Exemplifies Evolving Celebrity Philanthropy",
+      "id": "news-barstool-sports-celebrity-family-feud-loss",
+      "slug": "barstool-sports-suffers-worst-loss-in-celebrity-family-feud-history",
+      "title": "Barstool Sports Suffers Worst Loss in Celebrity Family Feud History",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
@@ -1387,11 +1184,146 @@
       "eventType": "other",
       "sensitivity": "normal",
       "tier": "popular",
-      "eventSlug": "ariana-grande-foundation-evolving-philanthropy",
-      "primaryKeyword": "ariana grande foundation",
+      "eventSlug": "barstool-sports-celebrity-family-feud-loss",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Barstool Sports"
+      ],
+      "angle": "Barstool Sports experienced a record-breaking loss on the game show 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:Consequence of Sound",
+      "sources": [
+        {
+          "outlet": "Consequence of Sound",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOeGViV3dodTFQSmVicm5maE8zZU1Za05EMDRWbjdoc0lkZWppZC1YNVpZYnVSc3Vja04xb1BldlVqTFFWRmpTSmduTnNBUUpPMUJpNnFHSDZnVXpGaW8zMTVQb19aRE9ieDlGZnY4ckdpcFpnT0NCb2RweDNSR2xnc0RmVU5uMWJneTEwOUhVLUNtZ085cDhyLU5lOUlHTFlTc1E?oc=5",
+          "ageMin": 170,
+          "headline": "Barstool Sports Suffers Worst Loss in Celebrity Family Feud History - Consequence of Sound",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxOeGViV3dodTFQSmVicm5maE8zZU1Za05EMDRWbjdoc0lkZWppZC1YNVpZYnVSc3Vja04xb1BldlVqTFFWRmpTSmduTnNBUUpPMUJpNnFHSDZnVXpGaW8zMTVQb19aRE9ieDlGZnY4ckdpcFpnT0NCb2RweDNSR2xnc0RmVU5uMWJneTEwOUhVLUNtZ085cDhyLU5lOUlHTFlTc1E?oc=5\" target=\"_blank\" Barstool "
+        }
+      ],
+      "ageMin": 170,
+      "_cand": {
+        "key": "rss:barstool-sports-suffers-worst-loss-in-celebrity-family-feud-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Consequence of Sound"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Consequence of Sound",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-flaggs-dominate-barstool-stiffs-celebrity-family-feud",
+      "slug": "flaggs-dominate-barstool-stiffs-on-celebrity-family-feud",
+      "title": "Flaggs Dominate Barstool Stiffs on Celebrity Family Feud",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "flaggs-dominate-barstool-stiffs-celebrity-family-feud",
+      "primaryKeyword": "Celebrity Family Feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Flaggs",
+        "Barstool Stiffs"
+      ],
+      "angle": "The team 'Flaggs' decisively beat 'Barstool Stiffs' on 'Celebrity Family Feud'.",
+      "tmdbType": "movie",
+      "source": "gnews:Duke Basketball Report",
+      "sources": [
+        {
+          "outlet": "Duke Basketball Report",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZF82Z19aYlNHRk1WUTlneG9qZU11MV9mRjVwNDYtSG9ZeWFCdnJXTk9EMENlS0x6UWdNMm50LXQtSmlsRDZIc3Q1S250SHBtZVFpLVVGbDZHWTZTTl9jcGxWajlVcDdBQ0M3Nkd3eEUtYzV6N0NudVNWZDd2SHFjNmYwb2I0UnFtR2hiQnI0VmV4VXltM2hOZUlTa3V3c2JpVHItWWdFVVFCdw?oc=5",
+          "ageMin": 177,
+          "headline": "Flaggs Dominate Barstool Stiffs On Celebrity Family Feud - Duke Basketball Report",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZF82Z19aYlNHRk1WUTlneG9qZU11MV9mRjVwNDYtSG9ZeWFCdnJXTk9EMENlS0x6UWdNMm50LXQtSmlsRDZIc3Q1S250SHBtZVFpLVVGbDZHWTZTTl9jcGxWajlVcDdBQ0M3Nkd3eEUtYzV6N0NudVNWZDd2SHFjNmYwb2I0UnFtR2hiQnI0VmV4VXltM2hOZUlTa3V3c2JpVHItWWdFVVFCdw?oc=5\" target=\"_blank"
+        }
+      ],
+      "ageMin": 177,
+      "_cand": {
+        "key": "rss:flaggs-dominate-barstool-stiffs-on-celebrity-family-feud-duk",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Duke Basketball Report"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Duke Basketball Report",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ariana-grande-foundation-philanthropy",
+      "slug": "ariana-grande-s-foundation-shows-how-celebrity-giving-is-evolving",
+      "title": "Ariana Grande's Foundation Shows How Celebrity Giving is Evolving",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "ariana-grande-foundation-philanthropy",
+      "primaryKeyword": "Ariana Grande foundation",
       "primaryEntity": "Ariana Grande",
       "entities": [],
-      "angle": "Ariana Grande's foundation is highlighted as an example of evolving celebrity philanthropy.",
+      "angle": "ABC News highlights how Ariana Grande's foundation is pioneering new approaches to celebrity philanthropy.",
       "tmdbType": "movie",
       "source": "gnews:ABC News - Breaking News, Latest News and Videos",
       "sources": [
@@ -1399,12 +1331,12 @@
           "outlet": "ABC News - Breaking News, Latest News and Videos",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQN1dScmpmQ3RkNGg4SXgtVkF3c21fdUI4V25WRjZzOVl1WTJkNlc3d3NrM3dZZFBCVXRvcERlM09PWVBFbHhDYmozcWR5bmtTLVp3WnlHMUhmR2xNZmg3Y2VMM2FvU25VVnh3RF9UUkZHUUIxb0tqLTB0djZIa1A2WFd3dXV6MjZUc0pCRmdEMFQ4WW1OWVp1cGNYY25OdEI1ZURmMWFFOWhrM2k5ZEotRdIBtgFBVV95cUxQN2xkWk9UeE50eEhpNDlRb19BdFd5X001d05FSW10VWd1ZmZOSjBuZ0RJbGxBQnRQU0xCRUpjRHdXdUlSTVNLcmhDMDlWM2JhQ3M0bEN6WjVJajF2N05JN3FuTEFhQ3dNMy1JekM4eE44Z3huaWg1RUNkaHg3MFVjeGpjdGNwekJva21LQUFFYVA2NEdoNVJ1ZGxNQTBGVHhxYjF0a3V0T2J4VjFMblRrSVpXOXRHQQ?oc=5",
-          "ageMin": 107,
+          "ageMin": 167,
           "headline": "Celebrity giving is evolving: Ariana Grande’s foundation shows how - ABC News - Breaking News, Latest News and Videos",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQN1dScmpmQ3RkNGg4SXgtVkF3c21fdUI4V25WRjZzOVl1WTJkNlc3d3NrM3dZZFBCVXRvcERlM09PWVBFbHhDYmozcWR5bmtTLVp3WnlHMUhmR2xNZmg3Y2VMM2FvU25VVnh3RF9UUkZHUUIxb0tqLTB0djZIa1A2WFd3dXV6MjZUc0pCRmdEMFQ4WW1OWVp1cGNYY25OdEI1ZURmMWFFOWhrM2k5ZEotRdIBtgFBVV95cUx"
         }
       ],
-      "ageMin": 107,
+      "ageMin": 167,
       "_cand": {
         "key": "rss:celebrity-giving-is-evolving-ariana-grande-s-foundation-show",
         "popularity": 0,
@@ -1444,73 +1376,6 @@
       "demandQuery": "season 13 premieres september 24 as ariana grande exits the cast",
       "demandPosition": 22,
       "tierClass": "C"
-    },
-    {
-      "id": "news-chris-affleck-mother-of-ben-casey-affleck-dies",
-      "slug": "chris-affleck-mother-of-oscar-winners-ben-and-casey-affleck-dies-at-83",
-      "title": "Chris Affleck, Mother of Oscar Winners Ben and Casey Affleck, Dies at 83",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "death",
-      "sensitivity": "high",
-      "eventSlug": "chris-affleck-mother-of-ben-casey-affleck-dies",
-      "primaryKeyword": "Chris Affleck",
-      "primaryEntity": "Chris Affleck",
-      "entities": [
-        "Ben Affleck",
-        "Casey Affleck"
-      ],
-      "angle": "Chris Affleck, mother of Oscar winners Ben and Casey Affleck, has passed away at 83.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/chris-anne-affleck-dead-ben-affleck-casey-affleck-mother-1236655678/",
-          "ageMin": 610,
-          "headline": "Chris Affleck, Mother of Oscar Winners Ben and Casey Affleck, Dies at 83",
-          "summary": "A schoolteacher, she was recently diagnosed with pancreatic cancer and died June 2, her family announced."
-        }
-      ],
-      "ageMin": 610,
-      "_cand": {
-        "key": "rss:chris-affleck-mother-of-oscar-winners-ben-and-casey-affleck-",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 49,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 1
-      },
-      "tierClass": "S"
     }
   ]
 }

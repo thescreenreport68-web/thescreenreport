@@ -1,0 +1,69 @@
+{
+  "id": "news-the-thundermans-announcement",
+  "slug": "the-thundermans-premiere-date-and-art-revealed-for-latest-nickelodeon-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 230w < 600"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 229w < 600"
+      ],
+      "cuts": 1,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "The Thundermans Return",
+    "work": null,
+    "outlet": "brobible.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 229,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 32,
+      "avgSentence": 18,
+      "flesch": 57,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 229w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 113619
+}
