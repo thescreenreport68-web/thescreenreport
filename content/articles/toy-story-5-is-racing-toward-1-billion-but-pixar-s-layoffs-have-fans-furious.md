@@ -124,11 +124,39 @@ reactions:
   - speaker: A viewer
     date: '2026-07-23'
     quote: The fact that blaze and bonnie both start with a b is just cute ❤
+  - speaker: Morissa Wagner
+    connection: brand director at Newell Brands
+    platform: statement
+    quote: The theme fits so well with the Elmer’s brand and our mission.
+  - speaker: Kristen Mahan
+    connection: director of global brand marketing at Newell Brands
+    platform: statement
+    quote: >-
+      For us, it’s that balance of honoring that iconic storytelling and
+      characters that people already love while showing up in ways that feel
+      current and relevant to how kids create and play today.
+  - speaker: Kristen Mahan
+    connection: director of global brand marketing at Newell Brands
+    platform: statement
+    quote: >-
+      Creativity and creating those shared experiences between both parents and
+      kids, where that nostalgia and the newness come together.
+  - speaker: Jessica Stuhmer
+    connection: >-
+      global brand manager for Lite-Brite, My Little Pony, and Potato Head at
+      Basic Fun!
+    platform: statement
+    quote: >-
+      Both brands spark imagination and creative storytelling in a way that
+      resonates across generations.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: I literally cried when bonnie made a and blaze is a good friend
 fanConsensus: >-
   Audience reaction is sharply divided, with celebration of the film's box
   office success being overwhelmingly overshadowed by anger and criticism toward
   Pixar and Disney for conducting layoffs simultaneously.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   popularity: 372
@@ -143,7 +171,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T04:31:09.016Z'
+dateModified: '2026-07-24T12:31:11.692Z'
 provenance:
   parentEventSlug: toy-story-5-2026
   primaryEntity: Toy Story 5
@@ -157,7 +185,7 @@ imageAlt: Toy Story 5 movie poster Woody Buzz Lightyear
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T04:31:09.016Z'
+updated: '2026-07-24T12:31:11.692Z'
 ---
 
 Pixar’s *[Toy Story 5](/movies/toy-story-5-box-office-day-27-adds-2-7-million-as-domestic-total-hits-413-3/)* is pulling off the kind of box office magic that studio execs dream about, sprinting toward the $1 billion mark worldwide. But instead of a victory lap, the film's financial triumph is landing with a thud for a big chunk of the audience. Why?

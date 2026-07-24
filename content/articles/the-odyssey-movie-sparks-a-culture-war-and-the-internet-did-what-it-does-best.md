@@ -117,12 +117,29 @@ reactions:
     quote: >-
       You cannot not see the film and complain about how awful it is when you
       haven’t seen the film.
+  - speaker: Whoopi Goldberg
+    platform: interview
+    quote: Don’t do it. We will be OK if you don’t go see it.
+  - speaker: Elliot Page
+    platform: interview
+    quote: >-
+      So for me, the focus was really on being able to capture him in these few
+      scenes and hopefully make Chris happy.
+  - speaker: A viewer
+    date: '2026-07-03'
+    quote: Shout out to Universal for leaving the comments on.
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: The funniest part is that comment section is still open.
+  - speaker: A viewer
+    date: '2026-07-02'
+    quote: "I can't believe they haven't shut the comments down!!! \U0001F602"
 fanConsensus: >-
   The audience reaction is a deeply divided triptych: one panel shows outrage
   over perceived cultural disrespect, another defends the film by pointing to
   Hollywood's history of inaccuracy, and the largest panel is covered in memes
   and meta-commentary about the absurdity of the fight itself.
-updatedCount: 1
+updatedCount: 2
 trendScore: 329
 signals:
   popularity: 1037
@@ -136,7 +153,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T04:31:09.016Z'
+dateModified: '2026-07-24T12:31:11.692Z'
 provenance:
   parentEventSlug: the-odyssey-2026
   primaryEntity: The Odyssey
@@ -150,7 +167,7 @@ imageAlt: Christopher Nolan The Odyssey movie poster 2026
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T04:31:09.016Z'
+updated: '2026-07-24T12:31:11.692Z'
 ---
 
 The reaction was instant — and loud, revealing a surprising culture war over a 3,000-year-old epic. The discourse is deeply divided, but threaded with humor and meta-commentary, creating a sprawling digital conversation that's as much about the audience as it is about the film.
