@@ -22,7 +22,13 @@ export const AGENTS = {
   editor: { model: "google/gemini-2.5-flash", fallback: "google/gemini-2.5-flash-lite", temperature: 0.1, maxTokens: 500, watchdogMs: 90e3, attemptDeadlineMs: 60e3 },
   // The writer. LOCKED deepseek-v3.2 (proven at gossip's 236–450-word form). v4-flash is OUTAGE fallback only —
   // it edits quotes (inside-lane proof), acceptable only because the verbatim quoteGuard re-checks everything.
-  writer: { model: "deepseek/deepseek-v3.2", fallback: "deepseek/deepseek-v4-flash", temperature: 0.4, surgicalTemperature: 0.2, maxTokens: 2800, watchdogMs: 240e3, attemptDeadlineMs: 150e3 },
+  // 2026-07-25 BAKE-OFF WINNER. Same real bundle, same prompt, 8 models measured:
+  //   qwen3-235b   689w · 6 subheads · 7/7 quotes verbatim · 0 fabrications  ← chosen
+  //   qwen3.5-plus 716w but only 4/7 quotes kept (more words, worse fidelity)
+  //   deepseek-v3.2 (previous) 431w · 3 subheads
+  // Quote fidelity outranks raw length: a longer piece that drops quotes is a worse article.
+  // maxTokens raised to carry an 800-1000 word piece plus its JSON envelope.
+  writer: { model: "qwen/qwen3-235b-a22b-2507", fallback: "deepseek/deepseek-v3.2", temperature: 0.4, surgicalTemperature: 0.2, maxTokens: 4200, watchdogMs: 300e3, attemptDeadlineMs: 200e3 },
   // Claim-verify L3 (the deterministic L1/L2/L2.5 floors run before this). Caller has its own retry loop.
   verify: { model: "google/gemini-2.5-flash", fallback: "google/gemini-2.5-flash-lite", temperature: 0, maxTokens: 900, watchdogMs: 90e3, attemptDeadlineMs: 60e3 },
   // Engagement/safety scorer — approver, never a blocker (owner-locked calibration).
@@ -34,6 +40,12 @@ export const AGENTS = {
   linker: { model: "google/gemini-2.5-flash-lite", fallback: null, temperature: 0, maxTokens: 150, watchdogMs: 60e3, attemptDeadlineMs: 30e3 },
   // ── Declared for later phases (unused in Phase 0) ──
   // Writer's brief from the gathered bundle — analytical, quotes referenced by anchor ID only (Phase 2).
+  // NEW 2026-07-25 — the "sub-finder": pulls EVERY distinct fact/quote/date out of gathered source text so
+  // the writer has enough real material for 800 words. Bake-off: qwen3.5-flash extracted 56 usable items
+  // vs 47 for gemini-flash-lite, with 7/7 quotes verbatim and zero invented numbers — and costs less.
+  detailFinder: { model: "qwen/qwen3.5-flash-02-23", fallback: "qwen/qwen3-30b-a3b-instruct-2507", temperature: 0, maxTokens: 2600, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },
+  // NEW 2026-07-25 — the "how we got here" agent: timeline, prior statements, who these people are.
+  background: { model: "qwen/qwen3.5-flash-02-23", fallback: "google/gemini-2.5-flash-lite", temperature: 0.1, maxTokens: 2000, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },
   synthesizer: { model: "deepseek/deepseek-v4-flash", fallback: "qwen/qwen3-235b-a22b-2507", temperature: 0.3, maxTokens: 1600, watchdogMs: 120e3, attemptDeadlineMs: 80e3 },
   // Best-of-3 H1/metaTitle/metaDescription candidates (Phase 2).
   headline: { model: "deepseek/deepseek-v3.2", fallback: "deepseek/deepseek-v4-flash", temperature: 0.7, maxTokens: 900, watchdogMs: 90e3, attemptDeadlineMs: 60e3 },

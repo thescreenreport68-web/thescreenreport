@@ -43,9 +43,13 @@ const BUNDLE = {
 }
 // ── 3) word range from bundle depth ──
 {
+  // 2026-07-25: the target now scales on a DEPTH score (chars + facts + quotes + background), because
+  // 800-word articles are reached by enriching the bundle, not by demanding more words.
   const thin = wordRangeFor({ sources: [{ text: "short text" }] });
-  const rich = wordRangeFor(BUNDLE);
-  check("thin bundle → short target; rich → fuller", thin.hi <= 300 && rich.lo >= 280 && rich.hi <= 450, JSON.stringify({ thin, rich }));
+  const rich = wordRangeFor({ ...BUNDLE, sources: [{ text: "x".repeat(9000) }],
+    details: { facts: Array(25).fill("f"), timeline: [], quotes: [] },
+    background: { timeline: Array(8).fill("t"), priorStatements: [] } });
+  check("thin bundle → short target; rich → fuller", thin.hi <= 400 && rich.lo >= 800 && rich.hi <= 1000, JSON.stringify({ thin, rich }));
 }
 // ── 4) prompt consistency + sections ──
 {

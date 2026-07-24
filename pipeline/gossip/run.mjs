@@ -16,6 +16,7 @@
 //   { status: "BLOCKED_LEGAL", blocks }      — an absolute legal RED LINE (minor sexual allegation / intimate media)
 //   { status: "PUBLISH", article, frame, provenance, auto, bundle, editorial } — ready to assemble + publish
 import { gatherBundle, corroborateBundle } from "./contentFinder.mjs";
+import { findDetails, findBackground, materialDepth } from "./detailFinder.mjs";
 import { editorialReview } from "./editorialGate.mjs";
 import { frameTopic } from "./frame.mjs";
 import { writeGossip } from "./writer.mjs";
@@ -26,7 +27,7 @@ import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchore
 import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
-import { qualityCheck, substanceCheck } from "./qualityGate.mjs";
+import { qualityCheck, substanceCheck, SUBSTANCE_MIN_WORDS } from "./qualityGate.mjs";
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
@@ -115,6 +116,10 @@ export async function runGossip(topic, {
   voice = false, voiceImpl = voicePass,
   craftFix = false, // deterministic quality triggers → one surgical rewrite (live-on, like synth/headline)
   substance = false, // recovery-mode publish/no-publish verdict on the FINISHED article (live-on)
+  enrich = false,            // detailFinder + background agents (live-on): the material that makes 800 honest
+  detailImpl = findDetails,
+  backgroundImpl = findBackground,
+  priorCoverage = [],        // our own past articles on this subject — free, already-verified background
 } = {}) {
   // Stage 3 — receipts (fail-closed). CHEAP-FIRST (Phase 1): extract the PRIMARY source only, let the
   // editorial gate reject non-stories, and pay for corroboration ONLY on stories the gate keeps — a
@@ -145,6 +150,23 @@ export async function runGossip(topic, {
   // Step 4 — corroboration, AFTER the editorial gate kept the story (fail-safe enrichment; the frame below
   // tiers off the corroborated bundle exactly as before — only the spend order changed).
   if (corroborate) { try { await corroborateBundle(topic, bundle, { ...(fetchImpl ? { fetchImpl } : {}) }); } catch { /* enrichment only */ } }
+
+  // Step 4b — ENRICHMENT (2026-07-25). The owner's 800-word floor is met by giving the writer MORE REAL
+  // MATERIAL, never by demanding more words of thin input. detailFinder mines every distinct fact/quote
+  // /date out of what we gathered; background assembles the "how we got here" from those sources plus
+  // our own prior coverage. Both fail soft and both drop anything they cannot trace to the source.
+  if (enrich) {
+    try {
+      const [details, background] = await Promise.all([
+        detailImpl({ bundle, topic }),
+        backgroundImpl({ bundle, topic, priorCoverage }),
+      ]);
+      bundle.details = details;
+      bundle.background = background;
+      const d = materialDepth(bundle);
+      console.log(`[enrich] ${d.outlets} outlet(s) · ${d.chars} chars · ${d.facts} facts · ${d.quotes} quotes · ${d.background} background items`);
+    } catch { /* enrichment is additive only — never blocks a story */ }
+  }
 
   // Stage 4 — frame. Pass the CORROBORATED bundle + the editorial verdict so tier/attribution reflect what the
   // CONTENT actually establishes (a wire-reported fact is a fact; the real reporting outlet is the byline), not
@@ -356,7 +378,59 @@ export async function runGossip(topic, {
   // RECOVERY-MODE SUBSTANCE GATE (owner-approved, Option A). LAST thing before publishing, after every
   // repair pass — so nothing is held for a defect the pipeline would have fixed. The writer was never
   // given a word target (the no-padding rule stands); this only judges the finished piece.
-  const sub = substanceCheck(article, bundle);
+  let sub = substanceCheck(article, bundle);
+
+  // DEPTH PASS (2026-07-25). A short draft is almost always the writer leaving gathered material on the
+  // floor — not an absence of material. So instead of failing, show it EXACTLY what it did not use and
+  // ask it to work those facts in. This adds SUBSTANCE, not words: the prompt never mentions a word
+  // count, it names real unused facts. If the material is genuinely exhausted, nothing is added and the
+  // gate below holds the piece — which is the honest outcome.
+  for (let depthPass = 0; depthPass < 2 && substance && !sub.pass && sub.words < SUBSTANCE_MIN_WORDS; depthPass++) {
+    const body = String(article.body || "");
+    const unused = [
+      ...((bundle?.details?.facts) || []),
+      ...((bundle?.details?.timeline) || []).map((t) => `${t.when || ""} ${t.what || ""}`.trim()),
+      ...((bundle?.background?.timeline) || []).map((t) => `${t.when || ""} ${t.what || ""}`.trim()),
+      ...((bundle?.background?.priorStatements) || []).map((p) => `${p.who || ""}: ${p.what || ""}`.trim()),
+      ...((bundle?.background?.whoTheyAre) || []),
+      ...((bundle?.background?.whatsNext) || []),
+    ].filter((x) => {
+      const t = String(x || "").trim();
+      if (t.length < 15) return false;
+      const probe = t.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").slice(0, 40);
+      return probe && !body.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").includes(probe);
+    }).slice(0, 18);
+    const unusedQuotes = ((bundle?.details?.quotes) || [])
+      .filter((q) => q?.text && !body.includes(String(q.text).slice(0, 30))).slice(0, 5);
+
+    if (unused.length >= 4 || unusedQuotes.length >= 2) {
+      try {
+        const issues = [
+          `You left verified material unused. This article covers ${(String(article.body || "").match(/^##\s/gm) || []).length} section(s); the material below supports MORE. Work every item in where it belongs and OPEN THE SECTIONS it unlocks ("## How We Got Here" for the timeline and history, "## The Other Side" for denials or the counter-claim, "## The Reaction" for what others said, "## What Happens Next" for anything upcoming). Keep every existing fact and quote exactly as they are. Do NOT pad, speculate, or repeat yourself — expand ONLY by using the listed material:`,
+          ...unused.map((u) => `UNUSED FACT: ${u}`),
+          ...unusedQuotes.map((q) => `UNUSED QUOTE (${q.speaker || "source"}): "${q.text}"`),
+        ];
+        const deeper = await writeImpl({ bundle, frame, topic, model, priorArticle: article, issues, rewrite: false, brief, anchors });
+        substituteAnchors(deeper, anchors);
+        const qcD = verifyQuotes(deeper, bundle);
+        const rcD = inspect(deeper, frame, topic, bundle, verifyResult);
+        const subD = substanceCheck(deeper, bundle);
+        // adopt ONLY if it is genuinely better and still clean
+        if (qcD.ok && !rcD.redLine && rcD.legalPass !== false && subD.words > sub.words) {
+          deeper.body = trimIncomplete(dedupeSentences(deeper.body));
+          deeper.body = cutAbsenceClaims(cutScaffolding(deeper.body, disc).body, disc).body;
+          if (disc.length && !deeper.body.includes(disc[0])) deeper.body = (deeper.body.trim() + "\n\n" + disc[0]).trim();
+          deeper.keyTakeaways = ensureTakeaways(deeper);
+          deeper.faq = dropAbsenceFaq(deeper.faq || []).faq;
+          deeper.faq = ensureFaq(deeper);
+          article = deeper;
+          sub = substanceCheck(article, bundle);
+          console.log(`[depth ${depthPass + 1}] worked in ${unused.length} unused fact(s) + ${unusedQuotes.length} quote(s) → ${sub.words}w`);
+        }
+      } catch { /* depth pass is best-effort — the original article stands */ }
+    }
+  }
+
   if (substance && !sub.pass) {
     return { status: "HELD", frame, article, stage: "thin", reason: `substance gate: ${sub.reasons.join("; ")}`, substance: sub };
   }

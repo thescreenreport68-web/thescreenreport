@@ -79,13 +79,24 @@ export function detectGossipType(topic) {
 // Word TARGET = f(bundle depth) — never a fixed floor (a floor past the bundle's material is the fabrication
 // forcing-function; news lane D1). Thin bundle → short + legal beats padded; rich bundle → a fuller piece.
 export function wordRangeFor(bundle, anchors = []) {
-  const seed = (bundle?.sources || []).filter((s) => !s.corroborating);
+  // 2026-07-25 — owner target is 800 words MINIMUM. The old ceiling (350–450) was the real cause of
+  // 235-word articles: the writer was told to stop long before the material ran out. Measured proof —
+  // the same single-source bundle yielded 689 words with no fabrication once the cap was lifted.
+  //
+  // The target still scales with how much VERIFIED material exists, because a floor handed to the
+  // writer is a fabrication forcing-function (the locked no-padding rule). The way we reach 800 is by
+  // ENRICHING THE BUNDLE FIRST (detailFinder + background), never by demanding more words of thin input.
   const chars = (bundle?.sources || []).reduce((a, s) => a + (s.text || "").length, 0);
-  const rich = chars >= 5000 || (bundle?.sources || []).length >= 3;
-  const medium = chars >= 1800;
-  const lo = rich ? 350 : medium ? 280 : 220;
-  const hi = rich ? 450 : medium ? 380 : 300;
-  return { lo, hi, label: `${lo}\u2013${hi} words` };
+  const facts = (bundle?.details?.facts || []).length + (bundle?.details?.timeline || []).length;
+  const quotes = (bundle?.quotes || []).length + (bundle?.details?.quotes || []).length;
+  const bg = (bundle?.background?.timeline || []).length + (bundle?.background?.priorStatements || []).length;
+  // a "depth score" — how much genuinely distinct material the writer has to work with
+  const depth = chars / 1000 + facts * 0.6 + quotes * 0.8 + bg * 0.9;
+  if (depth >= 22) return { lo: 800, hi: 1000, label: "800\u20131000 words" };
+  if (depth >= 15) return { lo: 650, hi: 850, label: "650\u2013850 words" };
+  if (depth >= 9)  return { lo: 500, hi: 700, label: "500\u2013700 words" };
+  if (depth >= 5)  return { lo: 350, hi: 550, label: "350\u2013550 words" };
+  return { lo: 250, hi: 400, label: "250\u2013400 words" };
 }
 
 export function buildGossipPrompt(bundle, frame, topic, corrections = null, ledeStyle = "scene", brief = null, anchors = []) {
@@ -129,7 +140,14 @@ ${frame.needsDisclaimer ? `\nMANDATORY — include this exact sentence, as its o
 ${corrections ? `\n⚠ FIX THESE FROM YOUR LAST DRAFT (keep the voice + the same facts; attribute any flagged claim, e.g. "according to ${frame.attribution || "the outlet"}", or add the required note): ${corrections}` : ""}
 
 LENGTH: write ${range.label} — the target matches how much VERIFIED material the bundle actually holds. Never pad past the material: a thin bundle means a SHORT, punchy, legal piece (padding invents facts — the one unforgivable error). Keep individual SENTENCES tight and develop what the bundle supports: the trigger, the who/what/when/where, the reaction, the what-we-know-vs-unconfirmed, the relevant timeline/context. More RELEVANT specifics = a stronger story.
-STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question. Then: what sparked it (attributed) → what we know vs. what's unconfirmed → quick context / why it matters → the denial / other side if any. Use one or two "## " subheads to break up a longer piece (skip subheads under ~450 words). Pull one punchy line out as the pull-quote.
+STRUCTURE: the DISPLAY headline (title) = a specific present-tense hook that names the subject (NEVER state an unconfirmed damaging claim as fact). Open the BODY with your assigned LEDE STYLE above — never a recycled "What happens when…?" question.
+Then build the piece from the sections below. This is a MENU, NOT A FORM — include a section ONLY when the material genuinely supports it, and skip any you cannot fill from the sources. An omitted section is correct; an invented one is a failure. Use "## " subheads (aim 3–6 when the piece runs long):
+  • What was said — the quotes in full, with who said them and where
+  • How we got here — the timeline and background: when it started, what came before, who these people are
+  • The other side — the denial, the silence, the counter-claim
+  • The reaction — what other people actually said, quoted and attributed
+  • What happens next — the court date, the release, the thing to watch for
+Order them however the story reads best. Pull one punchy line out as the pull-quote.
 CRAFT (each of these measurably drives search + reader trust — do them all where the bundle supports it):
 - Sentence 2 of the lede = the sourcing tag + a role appositive ("..., a source close to the 'Euphoria' star told PEOPLE").
 - Include at least ONE concrete NUMBER from the bundle (an age, a date, a dollar figure, a count) and — when a quote card exists — at least ONE attributed quote.

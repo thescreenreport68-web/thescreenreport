@@ -27,7 +27,7 @@ console.log("\n=== MODELS REGISTRY + agentChat ===\n");
   const res = await agentChat("writer", { system: "s", user: "u", json: true }, { chatImpl });
   const m = meterEntries();
   check("success: data returned + meter entry with tokens", res.data.ok === 1 && m.length === 1 && m[0].in === 100 && m[0].out === 50 && m[0].role === "writer");
-  check("registry model + fresh temperature used", got.model === "deepseek/deepseek-v3.2" && got.temperature === 0.4 && got.maxTokens === 2800);
+  check("registry model + fresh temperature used", got.model === AGENTS.writer.model && got.temperature === 0.4 && got.maxTokens === AGENTS.writer.maxTokens);
 }
 // 4) surgical flag selects surgicalTemperature.
 {
@@ -39,22 +39,22 @@ console.log("\n=== MODELS REGISTRY + agentChat ===\n");
 {
   meterReset();
   const chatImpl = async (o) => {
-    if (o.model === "deepseek/deepseek-v3.2") throw new Error("provider down");
+    if (o.model === AGENTS.writer.model) throw new Error("provider down");
     return { data: { via: o.model }, usage: { prompt_tokens: 10, completion_tokens: 5 } };
   };
   const res = await agentChat("writer", { user: "u" }, { chatImpl });
   const m = meterEntries();
-  check("fallback chain: v3.2 error → v4-flash success", res.data.via === "deepseek/deepseek-v4-flash" && m.length === 2 && !!m[0].error && !m[1].error);
+  check("fallback chain: v3.2 error → v4-flash success", res.data.via === AGENTS.writer.fallback && m.length === 2 && !!m[0].error && !m[1].error);
 }
 // 6) attempt deadline: a hung primary triggers the fallback instead of hanging.
 {
   meterReset();
-  const chatImpl = (o) => o.model === "deepseek/deepseek-v3.2"
+  const chatImpl = (o) => o.model === AGENTS.writer.model
     ? new Promise(() => {}) // never resolves — a hung provider
     : Promise.resolve({ data: { via: o.model }, usage: {} });
   const t0 = Date.now();
   const res = await agentChat("writer", { user: "u", attemptDeadlineMs: 120 }, { chatImpl });
-  check("hung primary → deadline → fallback (fast)", res.data.via === "deepseek/deepseek-v4-flash" && Date.now() - t0 < 2000);
+  check("hung primary → deadline → fallback (fast)", res.data.via === AGENTS.writer.fallback && Date.now() - t0 < 2000);
   check("timeout attempt metered as error", meterEntries()[0].error?.includes("timed out"));
 }
 // 7) explicit model override skips the chain.

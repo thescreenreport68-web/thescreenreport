@@ -96,7 +96,7 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
 
 // ── SUBSTANCE GATE (Option A) — judges the FINISHED article, never the writer ──
 {
-  const rich = "Star A confirmed the split on July 3, People reports. " + '"It was the hardest decision," she said. ' + "More verified detail sentence goes right here. ".repeat(50);
+  const rich = "Star A confirmed the split on July 3, People reports. " + '"It was the hardest decision," she said. ' + "More verified detail sentence goes right here for length. ".repeat(120);
   const twoOutlets = { sources: [{ outlet: "People", text: "x" }], corroboratingOutlets: [{ outlet: "Page Six" }] };
   const ok = substanceCheck({ body: rich }, twoOutlets);
   check("a substantial, multi-source, quoted piece PASSES", ok.pass, JSON.stringify(ok.reasons));
@@ -107,19 +107,20 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
   const single = substanceCheck({ body: rich }, { sources: [{ outlet: "People", text: "x" }], corroboratingOutlets: [] });
   check("a single-source piece is HELD", !single.pass && single.reasons.some((r) => /single-source/.test(r)), JSON.stringify(single.reasons));
 
-  const noSubstance = substanceCheck({ body: "Star A and Star B are reportedly in a good place, a source says. " + "Vague filler sentence with nothing concrete at all in it. ".repeat(50) }, twoOutlets);
+  const noSubstance = substanceCheck({ body: "Star A and Star B are reportedly in a good place, a source says. " + "Vague filler sentence with nothing concrete at all in it. ".repeat(120) }, twoOutlets);
   check("no quote AND no concrete date/number is HELD", !noSubstance.pass && noSubstance.reasons.some((r) => /no verbatim quote/.test(r)), JSON.stringify(noSubstance.reasons));
 
-  const quoteOnly = substanceCheck({ body: '"This is a real verbatim quote from the source," she said. ' + "Filler sentence with no numbers at all in here. ".repeat(50) }, twoOutlets);
+  const quoteOnly = substanceCheck({ body: '"This is a real verbatim quote from the source," she said. ' + "Filler sentence with no numbers at all in here at all. ".repeat(120) }, twoOutlets);
   check("a quote alone satisfies the substance requirement", quoteOnly.pass, JSON.stringify(quoteOnly.reasons));
-  check("floor default is 250 words", SUBSTANCE_MIN_WORDS === 250);
+  check("floor default is 800 words (owner directive 2026-07-25)", SUBSTANCE_MIN_WORDS === 800);
 }
 // ── the gate must NOT leak a word target into the writer ──
 {
   const { buildGossipPrompt } = await import("../writer.mjs");
   const bundle = { sources: [{ outlet: "People", tier: 6, text: "Star A wed on July 3. ".repeat(30), quotes: [] }] };
   const { user } = buildGossipPrompt(bundle, { writerDirective: "d", uiLabel: "Reported" }, { primaryEntity: "Star A", title: "t" });
-  check("writer prompt contains NO 250-word instruction (no-padding rule intact)", !/250/.test(user), (user.match(/\d{3}[–-]\d{3} words/) || ["?"])[0]);
+  check("writer prompt states a bundle-DERIVED range, never a fixed floor (no-padding rule intact)",
+    /\d{3}–\d{3,4} words/.test(user) && !/(at least|minimum of|no fewer than|must be)\s*\d{3,4}\s*words?/i.test(user) && !/\bminimum\s+word/i.test(user), (user.match(/\d{3}[–-]\d{3,4} words/) || ["?"])[0]);
   check("writer target is still the bundle-derived range", /\d{3}–\d{3} words/.test(user));
 }
 // ── end-to-end: a thin article is HELD, a substantial one PUBLISHES ──
@@ -143,6 +144,51 @@ console.log("\n=== GSC STEP 1 + SUBSTANCE GATE ===\n");
 
   const richBody = 'Star Alpha wed Star Beta on July 3, People reports. "It was the best day of my life," she said.\n\n' +
     ["The ceremony took place under an olive grove at the property's edge.", "Guests arrived by shuttle from a hotel in Santa Monica that afternoon.", "The bride wore a silk gown with a cathedral train and no veil.", "Dinner was served family style on long wooden tables lit by lamps.", "A string quartet played during the vows before a soul band took over.", "The couple met on a film set in Atlanta and dated privately for years.", "Security collected phones at the gate to keep images off social media.", "Fireworks closed the night just after midnight over the Pacific.", "Their families gathered for a rehearsal lunch the previous day.", "Vows were written separately and read without notes to the crowd.", "Catering came from a Venice restaurant the pair visited on date one.", "The officiant was a college friend who introduced them years earlier.", "Flowers were grown on a farm twenty minutes north of the property.", "An after-party ran until sunrise in a converted barn behind the house.", "Only immediate family stayed on site for brunch the following morning.", "Neither had spoken publicly about the engagement before this week.", "A representative declined to describe the guest list in any detail.", "Photographs will not be released, two people familiar with the plans said.", "The pair are expected to travel abroad later in the summer months.", "Both have kept their relationship largely out of public view until now.",
+     "The venue sits on a bluff overlooking a stretch of protected coastline.",
+     "Its owners rarely rent the estate and did so only through a mutual friend.",
+     "A vintage convertible carried the couple from the ceremony to the reception.",
+     "Their dog wore a collar of white ranunculus for the processional.",
+     "The cake was a single tier of olive oil sponge with candied lemon.",
+     "Servers poured a Sicilian white the pair discovered on a trip last autumn.",
+     "Speeches were limited to three, by request, and none ran past four minutes.",
+     "The bride's sister read a poem the couple had chosen together in spring.",
+     "A photographer worked on film only, at the couple's specific instruction.",
+     "Lanterns were strung between two oaks that frame the property's south lawn.",
+     "Dancing began before dessert, which the planner said was deliberate.",
+     "Two guests flew in from Sydney and landed the morning of the ceremony.",
+     "The groom wore his grandfather's watch, repaired for the occasion.",
+     "Rain had been forecast that week and cleared the day before.",
+     "A quartet of local musicians replaced the band for the final hour.",
+     "The couple left just after two, to a corridor of sparklers.",
+     "Their families had met properly for the first time only that weekend.",
+     "A handwritten seating chart replaced the printed one at the last minute.",
+     "Breakfast the next morning was served on the terrace for eleven people.",
+     "The estate's caretaker described the weekend as the quietest he had worked.",
+     "No commercial vendor was permitted to post images from the day.",
+     "The pair had considered a courthouse ceremony before choosing the coast.",
+     "Invitations went out eight weeks ahead, far later than is typical.",
+     "One guest described the tone as closer to a long dinner than a wedding.",
+     "The couple funded the weekend themselves, according to two attendees.",
+     "Neighbours along the ridge were notified by letter the previous month.",
+     "A shuttle ran every twenty minutes from the hotel until midnight.",
+     "The florist drove up from San Diego with the arrangements in a van.",
+     "Table numbers were replaced with the names of places the two had lived.",
+     "An uncle officiated a short blessing in Portuguese before the vows.",
+     "The couple wrote their own vows on the flight over three weeks earlier.",
+     "Security checked names against a printed list at the gate each evening.",
+     "A single tent was raised on the lower lawn in case the weather turned.",
+     "Guests were given tins of local olive oil as they left on Sunday.",
+     "The bride changed into a second, shorter dress before the dancing began.",
+     "Their planner had worked on only two weddings at the estate before this.",
+     "A neighbour's horses were moved to a far paddock for the weekend.",
+     "The reception ran three hours longer than the schedule allowed for.",
+     "One toast referenced a trip the couple took to Lisbon in their first year.",
+     "Coffee was served at one in the morning to those who had stayed.",
+     "The estate's chapel was used only for photographs, not the ceremony.",
+     "A string of failed bookings had pushed the date back twice before.",
+     "Both sets of parents spoke briefly, unplanned, near the end of dinner.",
+     "The couple's oldest friends handled the music for the first hour.",
+     "A quiet room was set aside upstairs for guests with young children.",
      "The venue had hosted only a handful of private events before this one.",
      "Planning took roughly nine months from the engagement announcement.",
      "A small team handled the arrangements without an outside coordinator.",

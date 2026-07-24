@@ -16,7 +16,10 @@ const BANNED = /\b(delve|tapestry|testament|underscore|in the world of|at the en
 //
 // Consequence the owner accepted explicitly: this REDUCES output. Plenty of real gossip breaks with a
 // single outlet, and those are now held. Fewer, more substantial pieces is the intended trade.
-export const SUBSTANCE_MIN_WORDS = Number(process.env.GOSSIP_MIN_WORDS ?? 250);
+// Owner directive 2026-07-25: 800 words MINIMUM. Reached by ENRICHING THE MATERIAL (detailFinder +
+// background agents) and then a DEPTH PASS that points the writer at facts it left unused — never by
+// telling the writer to hit a number, which is the banned padding pressure.
+export const SUBSTANCE_MIN_WORDS = Number(process.env.GOSSIP_MIN_WORDS ?? 800);
 
 export function substanceCheck(article, bundle, { minWords = SUBSTANCE_MIN_WORDS } = {}) {
   const body = String(article?.body || "");
