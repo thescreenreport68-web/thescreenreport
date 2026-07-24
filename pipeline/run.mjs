@@ -475,9 +475,13 @@ async function processTopic(topic, i) {
     // stills, vision-ranked → Wikimedia Commons last resort; HOTLINKED (measured remotely, never re-hosted);
     // >=1200px Discover floor; landscape preferred. A passed article with NO image on any ladder still HOLDS.
     // ONE STORY = ONE URL: an in-place UPDATE keeps the published article's hero (updateArticle.PRESERVE), so the
-    // whole ladder — og:image fetch, vision ranking, remote measures — would be paid for and then discarded. Skipping
-    // it also removes a false failure mode: an update must never be HELD for lack of a NEW image it doesn't need.
-    if (pass && !topic._update) {
+    // whole ladder — og:image fetch, vision ranking, remote measures — would be paid for and then discarded. REUSE
+    // the existing hero instead: it satisfies assemble()'s image contract (a bare `image: undefined` makes YAML
+    // dumping throw) and mergeUpdate re-freezes the same values, so nothing on the live page actually changes.
+    if (pass && topic._update) {
+      if (topic._update.image) image = { image: topic._update.image, imageWidth: topic._update.imageWidth, imageHeight: topic._update.imageHeight, credit: topic._update.imageCredit || "Wikimedia Commons" };
+      else { pass = false; rec.holdReason = "update target has no stored hero image"; console.log("  ⛔ HELD: update target missing hero — cannot merge safely"); }
+    } else if (pass) {
       const isTitleStory = ["movies", "tv", "streaming"].includes(topic.category) || ["box-office", "trailer", "watchguide", "reaction"].includes(topic.formatTag);
       // For a TITLE story, search the image by the REAL WORK (the resolved TMDB title / editorial work), never the
       // editorial-corrected PERSON entity — that grabbed a wrong same-name cooking show's chef for the Silo story.

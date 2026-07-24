@@ -73,6 +73,9 @@ export function myRecentArticles(hours = 168, { artDir = ART_DIR, now = Date.now
         title: d.title || "",
         at,
         category: d.category || "",
+        // the EXISTING hero — reused verbatim on an update (no re-sourcing cost, no art churn); also
+        // keeps assemble() from dumping `image: undefined` when the update path skips the image ladder.
+        image: d.image || null, imageWidth: d.imageWidth || null, imageHeight: d.imageHeight || null, imageCredit: d.imageCredit || null,
         eventType: String(d.eventType || "").toLowerCase() || null,
         // identity signals
         subject: stems([(d.about || [])[0]?.name, d.targetKeyword].filter(Boolean).join(" ")),
@@ -131,6 +134,7 @@ export function findSameStory(topic, mine, { minShared = 4 } = {}) {
     if (!best || score > best.score) {
       best = {
         slug: a.slug, file: a.file, title: a.title, category: a.category, at: a.at, score, confidence,
+        image: a.image, imageWidth: a.imageWidth, imageHeight: a.imageHeight, imageCredit: a.imageCredit,
         shared,
         why: `beat=${tType} · subject ${subjShared}/${Math.min(tSubj.size, a.subject.size)} (${subjRatio.toFixed(2)}) · event ${evShared} · shared ${shared.length} · ${exact ? "same eventSlug" : "fuzzy"}`,
       };

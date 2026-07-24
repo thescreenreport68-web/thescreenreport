@@ -69,6 +69,10 @@ console.log("=== 1. same-story detection — a development is recognised, not tr
   ok(!!m, "development matched an already-published article");
   ok(m?.slug === KRATOS, `matched the RIGHT article (${m?.slug?.slice(0, 46)})`);
   ok(/beat=casting/.test(m?.why || ""), `match reasoning recorded: ${m?.why}`);
+  // REGRESSION (live tick #513): the update path reuses the EXISTING hero — the match must carry it,
+  // else run.mjs leaves `image` undefined and assemble() throws "YAMLException: ...[object Undefined]".
+  ok(!!m?.image && /image\.tmdb\.org/.test(m.image), "match carries the existing hero image (so assemble never dumps undefined)");
+  ok(Number.isFinite(m?.imageWidth) && Number.isFinite(m?.imageHeight), "hero dimensions carried too");
 }
 
 console.log("=== 2. UPDATE, NOT CREATE — the headline proof, against a real filesystem ===");
@@ -238,6 +242,21 @@ console.log("=== 8. anti-churn cooldown + self-link ===");
   ok(!new RegExp(`\\]\\(/tv/${T8}/\\)`).test(selfy.md), "self-link unwrapped (a page must not link to itself)");
   ok(/our earlier report/.test(selfy.md), "the anchor words survive as plain text");
   ok(/\[another story\]\(\/movies\/other-piece\/\)/.test(selfy.md), "genuine internal links untouched");
+}
+
+console.log("=== 9. the YAMLException mechanism — why the update path must reuse the hero ===");
+{
+  // Exactly what killed live tick #513: an update topic skipped the image ladder, so assemble() built
+  // frontmatter with `image: undefined` and js-yaml refuses to dump it.
+  let threw = false;
+  try { matter.stringify("\nbody\n", { title: "X", image: undefined, imageWidth: undefined }); }
+  catch (e) { threw = /unacceptable kind|undefined/i.test(String(e)); }
+  ok(threw, "matter.stringify DOES throw on `image: undefined` (reproduces the tick #513 error)");
+  // The fix: a defined hero (reused from the existing article) dumps cleanly.
+  let ok2 = false;
+  try { matter.stringify("\nbody\n", { title: "X", image: "https://image.tmdb.org/t/p/original/h.jpg", imageWidth: 3840, imageHeight: 2160 }); ok2 = true; }
+  catch { ok2 = false; }
+  ok(ok2, "a reused, defined hero dumps cleanly — no exception");
 }
 
 fs.rmSync(TMP, { recursive: true, force: true });
