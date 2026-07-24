@@ -1,0 +1,145 @@
+{
+  "ts": "2026-07-24T12:01:13.670Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ella-bright-says-friendship-with-belmont-cameli-was-so-easy-from-the-get-go",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.016987,
+  "costPerPublished": 0.016987,
+  "byModel": {
+    "deepseek/deepseek-v3.2": {
+      "calls": 7,
+      "in": 18121,
+      "out": 5673,
+      "usd": 0.00516927145
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 8,
+      "in": 14061,
+      "out": 2522,
+      "usd": 0.010523300000000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1007,
+      "out": 422,
+      "usd": 0.000161982
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 7,
+      "in": 7871,
+      "out": 864,
+      "usd": 0.0011327000000000002
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 301,
+      "out": 14,
+      "usd": 0.00007399000000000001,
+      "ms": 2220
+    },
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2400,
+      "out": 198,
+      "usd": 0.001215,
+      "ms": 1451
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1007,
+      "out": 422,
+      "usd": 0.00016658999999999996,
+      "ms": 9729
+    },
+    "writer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 17110,
+      "out": 5336,
+      "usd": 0.005749540000000001,
+      "ms": 222707
+    },
+    "verify": {
+      "calls": 8,
+      "errors": 1,
+      "in": 13692,
+      "out": 2482,
+      "usd": 0.0095746,
+      "ms": 16436
+    },
+    "judge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2854,
+      "out": 437,
+      "usd": 0.0004602,
+      "ms": 2394
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 710,
+      "out": 323,
+      "usd": 0.00027312,
+      "ms": 17454
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 403,
+      "out": 60,
+      "usd": 0.00006430000000000002,
+      "ms": 991
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 201,
+      "out": 56,
+      "usd": 0.0000425,
+      "ms": 457
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2094,
+      "out": 103,
+      "usd": 0.0002506,
+      "ms": 2462
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 288,
+      "out": 50,
+      "usd": 0.0000488,
+      "ms": 501
+    }
+  }
+}
