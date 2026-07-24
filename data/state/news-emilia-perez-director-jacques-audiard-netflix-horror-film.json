@@ -1,0 +1,73 @@
+{
+  "id": "news-emilia-perez-director-jacques-audiard-netflix-horror-film",
+  "slug": "emilia-p-rez-director-jacques-audiard-reunites-with-netflix-for-horror",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 296w < 600"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 290w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Jacques Audiard",
+    "work": {
+      "title": "La Nuit ravagée",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 290,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 52,
+      "avgSentence": 18,
+      "flesch": 46,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 2,
+      "hardBlocks": [
+        "body 290w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 0,
+    "failed": []
+  },
+  "ms": 171163
+}

@@ -1,0 +1,78 @@
+{
+  "id": "news-baton-soccer-drama-mls-partnership",
+  "slug": "major-league-soccer-boards-danny-ramirez-soccer-drama-baton-as-key-par",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title",
+        "body 309w < 600"
+      ],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title",
+        "body 308w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "unconfirmed",
+    "entity": "Baton",
+    "work": {
+      "title": "Baton",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 308,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": false,
+      "kwInFirst100": false,
+      "kwInH2": false,
+      "maxSentence": 44,
+      "avgSentence": 17,
+      "flesch": 44,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 308w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 217297
+}
