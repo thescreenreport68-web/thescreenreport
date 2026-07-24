@@ -47,14 +47,12 @@ const CLEAN_SCRIPT = { sentences: [
   "James Gunn confirmed those record numbers himself on Friday morning.",
   "And he already has a sequel dated for June 2028.",
   "Warner Bros calls this their biggest studio debut since early 2019.",
-  "Because the previous champ was Aquaman back in late December.",
   "Now critics are handing it the whole franchise's best reviews in years.",
-  "Fans queued up overnight in forty different cities for the first showings.",
   "Even the studio quietly admits nobody modeled an opening quite like this.",
   "So does the DC rebuild finally have its real proof?",
   "Let us know in the comments below.",
 ], ending: "question" };
-await t("lint: clean 90+ word script passes (30-40s floor)", () => {
+await t("lint: clean in-band script passes (22-30s format)", () => {
   assert.deepEqual(lintScript(CLEAN_SCRIPT, ENTITIES), []);
 });
 await t("lint: ending gate — fact-then-ask is REJECTED, question-then-ask passes", async () => {

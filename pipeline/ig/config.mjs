@@ -92,7 +92,7 @@ export const IG = {
     // keepSilence 0.22 → 0.26: leave inter-sentence pauses a touch longer so the read breathes and
     // is easier to follow (owner 2026-07-12: "reduce the pacing a little"). Paired with the slower
     // delivery prompt; both nudges are small so durations stay inside the 25-44s band.
-    tighten: { minSilence: 0.3, keepSilence: 0.26, threshold: "-34dB", protectTailSec: 4.5, floorSec: 30 },
+    tighten: { minSilence: 0.3, keepSilence: 0.26, threshold: "-34dB", protectTailSec: 4.5, floorSec: 16 }, // floorSec tracks the shorter 22-30s format (was 30 — would have blocked all tightening)
     maxLongGaps: 1, // remaining pauses >0.45s allowed after tightening (outside the tail)
   },
   // ≤1s tail (owner audit 2026-07-16): the 1.8s dimmed endcard read as a DEAD ZONE — viewers swiped
@@ -141,7 +141,10 @@ export const IG = {
   // (maxSec + durTolSec = 47s). The pre-voice duration estimate is imperfect (read pace varies), so gating
   // at exactly maxSec would trim/hold reels whose renders would clear watchqc — one shared constant keeps
   // the script gate, the mechanical trim, and watchqc aligned so a good reel is NEVER held for length.
-  script: { minWords: 88, maxWords: 136, minSec: 25, maxSec: 44, durTolSec: 3, targetSec: [30, 40], wps: 3.4 },
+  // LENGTH DISCIPLINE (owner 2026-07-24, retention-first): avg IG watch was 2-7s on 35-40s reels
+  // (~10-15% completion — the metric every 2026 algorithm ranks on). 22-30s standard mechanically
+  // raises completion AND cuts voice cost ~25%. Rich emotional stories may still reach ~32s.
+  script: { minWords: 70, maxWords: 105, minSec: 18, maxSec: 32, durTolSec: 3, targetSec: [22, 30], wps: 3.4 },
 
   // Enrichment (owner 2026-07-12): when OUR article yields fewer than `minFacts` verified facts,
   // pull MORE verified facts about the SAME people/event from related news so the reel can reach

@@ -25,7 +25,7 @@ export const ASK_FAMILIES = {
       '"Drop it in the comments."',
     ],
     writerGuidance:
-      "end with a story-specific question the audience is dying to answer, then invite them to answer it in the comments — as ONE flowing beat",
+      "end with a TWO-SIDED debate question about THIS story — one a reasonable fan could argue either way (was she right? too far? who wins?) — then invite them to answer in the comments as ONE flowing beat. Never a yes/no pleasantry, never generic",
   },
   saves: {
     patterns: [/\b(save|bookmark) this\b.{0,52}[.!]?$/i],
@@ -78,7 +78,7 @@ export function sendsSignal(facts, segment = "") {
 const SYS = `You direct audience engagement for an Instagram news reel — BEFORE it is written. Pick the ONE ask that fits THIS story best.
 GOALS: "comments" (the story invites opinions/debate/a question people genuinely want to answer — the default for gossip and one-off news) · "saves" (ONLY content people will RETURN to: release dates, watch guides, schedules, lists — never one-off news or gossip) · "sends" (shocks, records, nostalgia, fandom-identity moments people DM to a specific friend).
 Return STRICT JSON {"goal":"comments"|"saves"|"sends","why":string,"cta":string,"firstComment":string}
-cta: the written caption CTA line for that goal. firstComment: a warm pinned comment seeding the goal (for comments: ask the question invitingly; for saves/sends: one bonus detail).
+cta: the written caption CTA line for that goal. firstComment: a HOT TAKE that PICKS A SIDE of the story\u2019s debate (one confident, defensible sentence a fan would argue with — this seeds the comment thread; never a neutral question, never bait).
 Never use banned phrasing: "tag a friend", "like if", "share if", "comment YES", "you won't believe".`;
 
 export async function pickGoal({ facts, segment, preferSends = false }) {

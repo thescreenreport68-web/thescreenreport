@@ -30,6 +30,9 @@ jobs:
           TSR_SITE: ${{ github.workspace }}
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }} # YouTube metrics path (flywheel 2026-07-16)
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_ID: ${{ secrets.META_IG_ID }}
         run: |
           node pipeline/ig/igrun.mjs --verify || echo "::warning::some scheduled posts failed live verification"
           node pipeline/ig/igrun.mjs --analytics

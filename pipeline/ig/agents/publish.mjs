@@ -6,7 +6,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { IG } from "../config.mjs";
 import { fetchWithTimeout, sleep } from "../lib/util.mjs"; // sleep used by verifyLive + host HEAD-poll
-import { postYouTube } from "../lib/buffer.mjs"; // YouTube Shorts via Buffer (multi-platform 2026-07-13)
+import { postYouTube } from "../lib/buffer.mjs";
+import { metaEnabled } from "../lib/meta.mjs";
+import { metaEnqueue } from "../lib/metaqueue.mjs"; // YouTube Shorts via Buffer (multi-platform 2026-07-13)
 
 const GH_API = "https://api.github.com";
 const ghHeaders = () => ({
@@ -326,10 +328,37 @@ export function shiftFbSlot(whenISO, shiftH = 3) {
 // Fan ONE ALREADY-HOSTED reel out to every enabled platform, error-ISOLATED (one platform failing
 // never blocks the others). Takes URLs + metadata directly so the DRAIN path (a built reel recovered
 // from a prior run) can post without re-hosting or re-building. (owner audit 2026-07-16)
-export async function publishHosted({ id, caption, platformMeta, videoUrl, coverUrl = null, whenISO, live = false }) {
+export async function publishHosted({ id, caption, platformMeta, videoUrl, coverUrl = null, whenISO, live = false, slot = null, day = null }) {
   const enabled = (IG.platforms || ["instagram"]).filter((p) => !platformPaused(p));
   const results = [];
+
+  // DIRECT META PATH (owner 2026-07-24: own Graph API app — no third-party dependency). IG + FB go
+  // through metaEnqueue: the IG container is created NOW (invisible, processes while waiting) and both
+  // publish at slot time via the drain. FB posts as a NATIVE REEL (discovery surface — the old bridge
+  // posted plain page videos that only reached followers). Zernio remains the automatic fallback when
+  // META env is absent or the enqueue fails. YouTube stays on Buffer (native scheduling).
+  let metaHandled = false;
+  if (live && metaEnabled() && (enabled.includes("instagram") || enabled.includes("facebook"))) {
+    try {
+      const mq = await metaEnqueue({
+        slug: id, videoUrl, coverUrl,
+        igCaption: caption?.full || "", firstComment: caption?.firstComment || null,
+        fbDescription: platformMeta?.facebook?.full || caption?.full || "",
+        whenISO, slot, day,
+      });
+      if (mq.containerId) {
+        metaHandled = true;
+        for (const r of mq.results) if (enabled.includes(r.platform)) results.push(r);
+      } else {
+        console.warn(`  ⚠ meta enqueue failed (${mq.results.find((r) => !r.ok)?.error}) — falling back to Zernio`);
+      }
+    } catch (e) {
+      console.warn(`  ⚠ meta path error (${String(e.message).slice(0, 100)}) — falling back to Zernio`);
+    }
+  }
+
   for (const platform of enabled) {
+    if (metaHandled && (platform === "instagram" || platform === "facebook")) continue; // handled above
     try {
       if (platform === "instagram") {
         const post = await postToInstagram({ videoUrl, coverUrl, caption: caption?.full, firstComment: caption?.firstComment, whenISO, live });
@@ -358,10 +387,10 @@ export async function publishHosted({ id, caption, platformMeta, videoUrl, cover
 
 // Host the video+cover ONCE, then fan out. Instagram posts FIRST and exactly as before (its own
 // proven caption); Facebook (Zernio) + YouTube (Buffer) use platformMeta metadata.
-export async function publish({ job, mp4, cover, whenISO, live = false }) {
+export async function publish({ job, mp4, cover, whenISO, live = false, slot = null, day = null }) {
   const videoUrl = await hostFile(mp4, `${job.id}.mp4`);
   // cover is BEST-EFFORT: a thumbnail hosting hiccup must never throw away a fully-built reel (the video
   // is what matters; the platforms accept a null cover and pick their own frame). (review 2026-07-16)
   const coverUrl = cover ? await hostFile(cover, `${job.id}-cover.jpg`).catch((e) => { console.error(`  cover host failed (non-fatal): ${String(e.message).slice(0, 80)}`); return null; }) : null;
-  return publishHosted({ id: job.id, caption: job.caption, platformMeta: job.platformMeta, videoUrl, coverUrl, whenISO, live });
+  return publishHosted({ id: job.id, caption: job.caption, platformMeta: job.platformMeta, videoUrl, coverUrl, whenISO, live, slot, day });
 }

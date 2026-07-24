@@ -13,6 +13,7 @@ import { IG } from "../config.mjs";
 import { fetchWithTimeout } from "../lib/util.mjs";
 import { loadPosted, savePosted, appendInsight } from "../lib/ledger.mjs";
 import { bufferMetrics } from "../lib/buffer.mjs";
+import { igMediaInsights, fbVideoInsights, igAccountSnapshot, metaEnabled } from "../lib/meta.mjs";
 
 const zHeaders = () => ({ Authorization: `Bearer ${process.env.ZERNIO_API_KEY}`, "Content-Type": "application/json" });
 
@@ -79,6 +80,20 @@ export async function collect({ hoursMarks = [3, 24, 72, 168] } = {}) {
           row.engagementRate = m.engagementRate;
           row.endpoint = "buffer:metrics";
         }
+      } else if (metaEnabled() && platform === "instagram" && /^\d+$/.test(String(id))) {
+        // direct-published IG reel → the REAL numbers incl. shares/saves/avg-watch (owner 2026-07-24)
+        const m = await igMediaInsights(id);
+        if (m.ok) {
+          row.views = m.views; row.reach = m.reach; row.likes = m.likes; row.comments = m.comments;
+          row.shares = m.shares; row.saved = m.saved; row.avgWatchMs = m.avgWatchMs;
+          row.endpoint = "meta:media_insights";
+        }
+      } else if (metaEnabled() && platform === "facebook" && /^\d+$/.test(String(id))) {
+        const m = await fbVideoInsights(id);
+        if (m.ok) {
+          row.views = m.views; row.reach = m.reach; row.avgWatchMs = m.avgWatchMs;
+          row.endpoint = "meta:video_insights";
+        }
       } else {
         const res = await tryEndpoints(id);
         const d = res?.data || {};
@@ -103,6 +118,13 @@ export async function collect({ hoursMarks = [3, 24, 72, 168] } = {}) {
     appendInsight(row);
     rows.push(row);
     if (gotData || platform !== "youtube") p.collected = [...new Set([...(p.collected || []), ...hoursMarks.filter((h) => h <= mark)])];
+  }
+  // account-level snapshot (followers, day reach, engaged accounts) — trend context for the learner
+  if (metaEnabled()) {
+    try {
+      const snap = await igAccountSnapshot();
+      if (snap.ok) appendInsight({ kind: "ig-account", at: new Date().toISOString(), followers: snap.followers, reachToday: snap.reachToday, engagedToday: snap.engagedToday });
+    } catch { /* garnish */ }
   }
   if (rows.length) savePosted(ledger);
   return rows;

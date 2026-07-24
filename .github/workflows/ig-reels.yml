@@ -32,6 +32,11 @@ on:
     - cron: "15 18 * * *" # 18:15 UTC → 11:15 AM LA (catch-up for any still-empty slots)
     - cron: "15 20 * * *" # 20:15 UTC →  1:15 PM LA (catch-up)
     - cron: "15 22 * * *" # 22:15 UTC →  3:15 PM LA (late catch-up)
+    # DRAIN crons (owner 2026-07-24, direct Meta publishing): the Graph API can't schedule, so queued
+    # IG containers / FB reels publish when a run drains them. One firing just after each LA slot —
+    # these runs exit fast when slots are full but ALWAYS drain the due queue first.
+    - cron: "5 17,19,21,23 * * *" # 10:05a / 12:05p / 2:05p / 4:05p LA
+    - cron: "5 1,3,5 * * *"       # 6:05p / 8:05p / 10:05p LA
   workflow_dispatch:
     inputs:
       mode:
@@ -130,6 +135,9 @@ jobs:
           ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           TSR_GH_TOKEN: ${{ secrets.TSR_GH_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID: ${{ secrets.META_PAGE_ID }}
+          META_IG_ID: ${{ secrets.META_IG_ID }}
         run: |
           if [ "${{ github.event_name }}" = "schedule" ]; then
             # BUILD-AHEAD: attempt up to 15 candidates and SHIP up to 7 reels (posts=7), scheduling each

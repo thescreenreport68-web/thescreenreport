@@ -21,11 +21,11 @@ HARD RULES:
   quote from a NAMED star or director is fine; an unnamed person's reaction is always reworded.
 - ONE story only. No background tangents.
 - NEVER break the fourth wall or reference the source or your own reporting. BANNED phrasings: "the article notes/says", "the report says/adds/notes", "the story says", "sources say", "it's been reported", "as mentioned", and any "according to [outlet/anyone]". You ARE the reporter — state every fact directly and first-hand, as if you have the information yourself. (A named on-record quote from a real star or director is still fine.)
-- HOOK (sentence 1): ≤12 words, contains the star/film name AND the single most surprising concrete fact. No greetings, no "in recent news", never open with "revealed/teased/talked about".
+- HOOK (sentence 1) IS A COLD OPEN — the reel lives or dies in its first 3 seconds (measured: viewers swipe at 2-4s when the open winds up). ≤10 words, contains the star/film name AND the single most surprising concrete fact, phrased as the PAYOFF not the setup ("Sam Neill is gone at 78" not "Sad news about a Jurassic Park star"). No greetings, no "in recent news", never open with "revealed/teased/talked about".
 - Order facts by DESCENDING surprise — the best material inside the first 10 seconds, never saved for the end.
 - LENGTH IS A HARD GATE — over-length gets the whole script AUTO-REJECTED, so stay disciplined:
   COUNT the words in every sentence and keep EACH ONE to ≤14 words; the moment a sentence reaches
-  15, split it into two short ones. Keep the WHOLE script ${IG.script.minWords}-130 words (aim 30-40s
+  15, split it into two short ones. Keep the WHOLE script ${IG.script.minWords}-${IG.script.maxWords} words (aim 22-30s
   when the material allows; 25-30s is fine for a thinner story — reach the floor by expanding REAL
   details engagingly, never padding). The CLOSING QUESTION is the strictest: 12 words MAX, punchy and
   direct — a long, winding question kills the ending AND cannot be auto-fixed, so it will HOLD the video.
@@ -45,6 +45,9 @@ HARD RULES:
   the final third; those belong in the MIDDLE. A low-energy fact dropped before the question is
   what makes an ending feel "tacked on" — end on the through-line, not a footnote. The LAST person or work you NAME before the closing question MUST be the story's MAIN subject — never a secondary name (a sibling, a bystander, a separate sighting): the closing shot follows the last subject named, so a side character there hijacks the final frame. Secondary names go in the MIDDLE only.
 - USE THE FULL RANGE of facts — every sentence adds a DIFFERENT fact or angle, never circling back. COMBINE closely-related facts into ONE beat (two facts about the same detail = one sentence, not two restatements). Never repeat the same fact, phrase, or point.
+- SHARE TRIGGER (mandatory, exactly ONE): every script carries one beat a viewer would forward to a
+  specific friend — a fandom-identity moment ("every Jurassic Park fan..."), a nostalgia callback, or
+  a wow-stat. It must be a REAL fact from the list, framed for the person who NEEDS to hear it.
 - Numbers: write digits (the pronunciation pass handles speech).
 - PACE THE NUMBERS. Never stack multiple figures in one sentence — a voice rushes them and the scale is lost. Give each key number its OWN short beat with a word of context: "It opened to $160 million at home. Another $640 million overseas. That's $800 million worldwide." — NOT "160 million domestic and 640 million overseas for 800 million total." One figure per breath.
 
@@ -153,7 +156,11 @@ export async function writeScript({ article, facts, segment, engage }) {
   // trim whole body sentences (hook block + ending pair stay intact) until under the ceiling.
   // Only fires when EVERY remaining violation is mechanical; content gates are never papered over.
   const MECH = new Set(["too-long", "duration", "hook-too-long", "sentence-too-long", "repetition"]);
-  if (lastScript && violations.length && violations.every((v) => MECH.has(v.rule))) {
+  // CHAINED REPAIR (2026-07-24): under the tighter 22-30s caps a script often fails with mechanical
+  // AND ending violations together — the mechanical trim runs first, and any remaining ending-only
+  // violations fall through to the ending repair below (which then sees the TRIMMED script).
+  if (lastScript && violations.length && violations.every((v) => MECH.has(v.rule) || v.rule.startsWith("ending"))
+      && violations.some((v) => MECH.has(v.rule))) {
     let s = [...lastScript.sentences];
     // 0) a repeated body line is deterministically fixable — DROP the later sentence of each
     //    repeated pair (the linter reports "sentences X and Y repeat …"; Y is the later one).
@@ -210,6 +217,9 @@ export async function writeScript({ article, facts, segment, engage }) {
     const trimmed = { ...lastScript, sentences: s };
     const still = [...lintScript(trimmed, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(trimmed.sentences, engage?.goal || "comments")];
     if (!still.length) return { script: trimmed, attempts: 3, trimmed: true };
+    // hand the trimmed script + remaining violations to the ending repair below
+    lastScript = trimmed;
+    violations = still;
   }
   // DETERMINISTIC ENDING REPAIR: if the story cleared every CONTENT gate and ONLY the ending
   // PHRASING is off, BUILD a complete valid ending — drop any trailing ask, GUARANTEE the audience
@@ -233,11 +243,15 @@ export async function writeScript({ article, facts, segment, engage }) {
       s.push(who ? `What's your take on ${who}?` : "What's your take on this?");
     }
     s.push(canonical);
-    // stay under the word ceiling: drop the last BODY line (never the hook/question/ask) if the
-    // added ending pushed it over (rare — the swap is usually net-neutral).
-    const cap = IG?.script?.maxWords ?? 136;
+    // stay under BOTH ceilings (words AND estimated duration) — the appended ending can push either
+    // over, and a "duration"-only violation after the repair would HOLD a good story (the same trap
+    // fixed in the mechanical repair; resurfaced under the tighter 22-30s format). (2026-07-24)
+    const cap = IG?.script?.maxWords ?? 105;
+    const minW2 = IG?.script?.minWords ?? 70;
+    const ceil2 = (IG?.script?.maxSec ?? 32) + (IG?.script?.durTolSec ?? 3);
+    const estOver2 = (arr) => estimateSeconds(normWords(arr.join(" ")).length) + Math.max(0, arr.length - 1) * (IG?.voice?.tighten?.keepSilence ?? 0.26) + (IG?.endTailSec ?? 0.9) > ceil2;
     let g = 0;
-    while (normWords(s.join(" ")).length > cap && s.length > 5 && g++ < 24) s.splice(s.length - 3, 1);
+    while ((normWords(s.join(" ")).length > cap || estOver2(s)) && normWords(s.join(" ")).length > minW2 && s.length > 5 && g++ < 24) s.splice(s.length - 3, 1);
     const repaired = { ...lastScript, sentences: s };
     const still = [...lintScript(repaired, facts.entities, `${article.title} ${facts.storyOneLine || ""}`), ...lintEnding(repaired.sentences, goal)];
     if (!still.length) return { script: repaired, attempts: 3, repairedEnding: true };

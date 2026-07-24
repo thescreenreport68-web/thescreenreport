@@ -59,8 +59,11 @@ const EVENT_PRIORS = [
   { type: "feud", prior: 65, surprise: true, re: /\b(feud|slams|fires back|blasts|calls out|clash\w*|war of words)\b/i },
   { type: "transformation", prior: 65, surprise: true, re: /\b(unrecognizable|transform\w*|new look|debuts .{0,20}(hair|look)|dyed|weight|shaved)\b/i },
   { type: "record-money", prior: 60, surprise: false, re: /\b(record|smash\w*|biggest|highest|box office|\$\d|million|billion)\b/i },
-  { type: "casting", prior: 55, surprise: false, re: /\b(cast[s]?\b|casting|joins|lands (the )?(role|lead)|to star|starring|replace[sd]?)\b/i },
-  { type: "first-look", prior: 50, surprise: false, re: /\b(first look|first-look|trailer|teaser|poster|unveil\w*|reveal\w*)\b/i },
+  // RETENTION RECLASS (owner 2026-07-24, from our own IG watch-time data): trade announcements held
+  // viewers 2-4s (June Squibb casting: 2.0s avg watch) while people/emotion stories held 7-15s
+  // (Waddingham 14.8s → 10× views). Casting/first-look priors demoted hard.
+  { type: "casting", prior: 30, surprise: false, re: /\b(cast[s]?\b|casting|joins|lands (the )?(role|lead)|to star|starring|replace[sd]?)\b/i },
+  { type: "first-look", prior: 35, surprise: false, re: /\b(first look|first-look|trailer|teaser|poster|unveil\w*|reveal\w*)\b/i },
 ];
 export function eventPrior(candidate) {
   const fmType = String(candidate.eventType || "").toLowerCase();
@@ -209,7 +212,11 @@ export async function scorePool(candidates, deps = realDeps) {
     const spikeHeat = wiki?.ratio != null ? heatFromSpike(wiki.ratio, wiki.latest, cfg.minSpikeViews) : 0;
     const fame = wiki?.baseline != null ? fameFromBaseline(wiki.baseline) : null;
     const inTrends = name ? trends.some((t) => t.includes(name) || name.includes(t)) : false;
-    const heat = storyHeat({ trendScore: Number(c.trendScore), spikeHeat, prior: prior.prior, inTrends });
+    // trade classes (casting/first-look/other) held viewers 2-4s in our own data — their single-outlet
+    // trendScore may RANK them but can no longer QUALIFY them alone (capped below the 60 bar).
+    const tradeClass = ["casting", "first-look", "other"].includes(prior.type);
+    const tsRaw = Number(c.trendScore);
+    const heat = storyHeat({ trendScore: tradeClass && Number.isFinite(tsRaw) ? Math.min(tsRaw, 55) : tsRaw, spikeHeat, prior: prior.prior, inTrends });
     const qualified = qualifies({ heat, fame, surprise: prior.surprise }, cfg);
     const segRel = weights.segments?.[c.segment] ?? 1;
     const sp = starPower({ heat, fame, segRel });

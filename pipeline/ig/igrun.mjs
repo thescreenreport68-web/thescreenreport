@@ -44,6 +44,7 @@ import { render } from "./agents/render.mjs";
 import { makeCover } from "./agents/cover.mjs";
 import { watchQC } from "./agents/watchqc.mjs";
 import { publish, publishHosted, hostFile, verifyLive, acquireStoryLock, listStoryLocks } from "./agents/publish.mjs";
+import { metaDrain } from "./lib/metaqueue.mjs";
 import { bufferStatus } from "./lib/buffer.mjs";
 import { planSlots, upcomingSlotsToday } from "./agents/slots.mjs";
 import { collect } from "./agents/analytics.mjs";
@@ -489,6 +490,14 @@ async function main() {
 
   if (isPaused()) { console.log("⏸  PAUSED file present — exiting."); return; }
 
+  // META DRAIN — first thing, EVERY run (build, catch-up, analytics): publish any queued IG
+  // container / FB reel whose slot time has arrived. The drain crons in ig-reels.yml sit just
+  // after each LA slot so posts land within cron drift of their slot. (owner 2026-07-24)
+  try {
+    const d = await metaDrain({});
+    if (d.published || d.waiting) console.log(`  meta drain: ${d.published || 0} published, ${d.waiting || 0} still queued`);
+  } catch (e) { console.warn(`  meta drain error (non-fatal): ${String(e.message).slice(0, 100)}`); }
+
   if (args.analytics) { const rows = await collect(); console.log(`analytics: ${rows.length} rows collected`); return; }
   if (args.learn) { const res = learn(); console.log("learner:", JSON.stringify(res.updated ? res.weights.accountMedians : res.reason)); return; }
   if (args.verify) {
@@ -672,7 +681,7 @@ async function main() {
           const lock = await acquireStoryLock(job.id, { slot: slotLabel, day });
           if (!lock.acquired) { console.warn(`  🔒 SKIP ${job.id}: ${lock.reason}`); continue; }
         }
-        const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live });
+        const pub = await publish({ job, mp4: job.render.mp4, cover: job.render.cover, whenISO, live, slot: slotLabel, day });
         job.publish = { ...pub, slot: slotLabel };
         saveJob(job);
         writeBuiltMeta(job, { videoUrl: pub.videoUrl, coverUrl: pub.coverUrl }); // hosted URL → drain can retry a failed platform tomorrow

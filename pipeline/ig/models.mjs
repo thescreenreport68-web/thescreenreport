@@ -167,8 +167,42 @@ async function streamAudio(body, { label, timeoutMs, maxAudioBytes = 0 }) {
 // timeout 100s: a healthy audio stream starts producing within seconds — a silent
 // 100s stream is dead; fail fast and retry fast (2026-07-10: 240s timeouts let a slow
 // OpenAI night blow through 20-minute stage watchdogs)
+// ── OPENAI DIRECT TTS (owner 2026-07-24: "the voice should be perfect, no compromise"). Activates
+// automatically when OPENAI_API_KEY is present. gpt-4o-mini-tts = a REAL text-to-speech model:
+// reads verbatim by construction (no ad-libs, no runaways, no conversing — the failure modes that
+// forced best-of-N takes), keeps the owner-approved MARIN voice, accepts per-read delivery
+// INSTRUCTIONS, and costs ~$0.011/read vs ~$0.073 on gpt-audio (~7×). Returns pcm16@24k mono —
+// the exact format the pipeline already consumes. The whisper verbatim wall + ending check stay
+// downstream as the safety net. Ship gate: the owner A/B-listens before this goes live (flag below).
+export async function openaiSpeak({ text, voice = "marin", style, context = "" }) {
+  const instructions =
+    `${style || "Warm, confident American entertainment-news anchor"}. ` +
+    "Sound completely human and alive from the FIRST word — the opening seconds decide everything: " +
+    "hit the first line with genuine interest, like telling a friend surprising news. " +
+    (context ? `${context} ` : "") +
+    "Natural pacing with real breaths; punch names and numbers; land the final question warmly and unhurried.";
+  const res = await fetch("https://api.openai.com/v1/audio/speech", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ model: process.env.OPENAI_TTS_MODEL || "gpt-4o-mini-tts", voice, input: text, instructions, response_format: "pcm" }),
+    signal: AbortSignal.timeout(120000),
+  });
+  if (!res.ok) throw new Error(`openai-tts ${res.status}: ${(await res.text().catch(() => "")).slice(0, 180)}`);
+  const pcm = Buffer.from(await res.arrayBuffer());
+  const est = +(text.length * 0.000012 + (pcm.length / 48000) * 0.00025).toFixed(5); // ~$12/M chars in + audio out
+  record("voice", "openai/gpt-4o-mini-tts", est, "direct-tts (estimated)");
+  // deterministic TTS reads the exact input — transcript IS the text; the whisper wall still verifies
+  return { pcm, transcript: text, cost: est };
+}
+
 export async function speak({ text, voice = IG.voice.candidates[0], style, context = "", model = IG.models.voice, timeoutMs = 60000 }) {
   if (mock) { const r = await mock({ kind: "speak", text, voice, model }); if (r !== undefined) return r; }
+  // Direct OpenAI TTS path — requires BOTH the key and the owner's A/B approval flag (IG_TTS=openai).
+  // Falls back to the gpt-audio path on any error, so the lane never stalls on a new dependency.
+  if (process.env.OPENAI_API_KEY && process.env.IG_TTS === "openai") {
+    try { return await openaiSpeak({ text, voice: voice === "marin" ? "marin" : voice, style, context }); }
+    catch (e) { console.warn(`  openai-tts failed (${String(e.message).slice(0, 80)}) — falling back to gpt-audio`); }
+  }
   // ENGINE framing is what enforces verbatim (probe-proven twice: performer framing made
   // the model CONVERSE — it empathized with sentence 1 and ANSWERED the closing question).
   // The performance energy lives strictly inside the Delivery clause.
