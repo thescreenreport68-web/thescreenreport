@@ -1,10 +1,10 @@
 ---
 title: 'Backrooms Box Office Day 52: Adds $222,066 as Domestic Total Hits $196 Million'
-slug: backrooms-box-office-day-52-adds-222-066-as-domestic-total-hits-196-million
+slug: backrooms-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-20T13:31:38.654Z'
+date: '2026-07-19T04:30:45.711Z'
 dek: >-
   Chiwetel Ejiofor leads a starry cast in Kane Parsons' chilling horror-mystery.
   The film's phenomenal performance has rewritten the indie studio's record
@@ -80,7 +80,10 @@ imageAlt: Backrooms — Chiwetel Ejiofor Backrooms movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-20T13:31:38.654Z'
+boxOfficeTracker: true
 ---
+
 
 Chiwetel Ejiofor leads the cast of Kane Parsons' unsettling horror-mystery '[Backrooms](/movies/backrooms-box-office-day-50-adds-215-180-as-domestic-total-hits-195-5-million/).' The film centers on a strange and inexplicable doorway that materializes in the basement of a seemingly ordinary furniture showroom, unleashing a cascade of supernatural terror over its 111-minute runtime. Director Parsons crafts a chilling blend of horror, mystery, and science fiction from this simple, eerie premise.
 
@@ -95,3 +98,12 @@ Its performance has rewritten the expectations for what a studio like A24 can ac
 ## At the Box Office
 
 Backrooms has grossed $195,963,463 at the domestic box office, 52 days into its theatrical run, while playing across 742 theaters. The film added $222,066 in its most recent day of release. Worldwide, it has taken in $384 million. It carries a reported production budget of $10 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 50 | 2026-07-19 | — | $195.5 Million |
+| 52 | 2026-07-20 | — | $196 Million |

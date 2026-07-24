@@ -2,11 +2,11 @@
 title: >-
   Young Washington Box Office Day 19: Adds $627,285 as Domestic Total Hits $42
   Million
-slug: young-washington-box-office-day-19-adds-627-285-as-domestic-total-hits-42
+slug: young-washington-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T10:01:18.157Z'
+date: '2026-07-16T11:30:40.267Z'
 dek: >-
   The historical war drama starring William Franklyn-Miller as a young George
   Washington is holding strong in theaters, delivering a major financial win for
@@ -75,7 +75,10 @@ imageAlt: Young Washington — William Franklyn-Miller Young Washington movie po
 imageCredit: Photo via deseret.com
 imageWidth: 1600
 imageHeight: 841
+updated: '2026-07-23T10:01:18.157Z'
+boxOfficeTracker: true
 ---
+
 
 Three weeks after its release, the historical war drama is holding strong in the top ten.
 
@@ -86,3 +89,16 @@ The film features a robust ensemble cast. William Franklyn-Miller stars as the t
 ## At the Box Office
 
 Young Washington has grossed $41,977,728 at the domestic box office, 19 days into its theatrical run, while playing across 2,275 theaters. The film added $627,285 in its most recent day of release. It carries a reported production budget of $20 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 12 | 2026-07-16 | — | $35.7 Million |
+| 13 | 2026-07-16 | — | $36.5 Million |
+| 15 | 2026-07-18 | $1.2 Million | $38.5 Million |
+| 17 | 2026-07-20 | $1 Million | $41 Million |
+| 18 | 2026-07-22 | — | $41.4 Million |
+| 19 | 2026-07-23 | — | $42 Million |

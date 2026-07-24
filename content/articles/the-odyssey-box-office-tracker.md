@@ -2,7 +2,7 @@
 title: >-
   The Odyssey Box Office Day 1: Adds $51.3 Million as Domestic Total Hits $51.3
   Million
-slug: the-odyssey-box-office-day-1-adds-51-3-million-as-domestic-total-hits-51-3
+slug: the-odyssey-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
@@ -76,7 +76,10 @@ imageAlt: The Odyssey — Matt Damon The Odyssey movie poster Christopher Nolan
 imageCredit: Photo via comicbook.com
 imageWidth: 1600
 imageHeight: 901
+updated: '2026-07-19T06:33:43.561Z'
+boxOfficeTracker: true
 ---
+
 
 The Epic Arrives on Screen
 
@@ -99,3 +102,11 @@ The opening weekend's performance suggests strong initial audience interest, whi
 ## At the Box Office
 
 The Odyssey has grossed $51,280,000 at the domestic box office, 1 days into its theatrical run, while playing across 3,919 theaters. The film added $51,280,000 in its most recent day of release. Worldwide, it has taken in $73 million. It carries a reported production budget of $250 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 1 | 2026-07-19 | $51.3 Million | $51.3 Million |

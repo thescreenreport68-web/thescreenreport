@@ -2,11 +2,11 @@
 title: >-
   Scary Movie Box Office Day 47: Adds $34,691 as Domestic Total Hits $108
   Million
-slug: scary-movie-box-office-day-47-adds-34-691-as-domestic-total-hits-108-million
+slug: scary-movie-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T11:01:04.113Z'
+date: '2026-07-19T04:29:45.711Z'
 dek: >-
   The comedy-horror sequel, starring the original Wayans brothers and Anna
   Faris, has scared up major theatrical success. Now in its 47th week, the
@@ -80,7 +80,10 @@ imageAlt: Scary Movie — Scary Movie 2026 cast poster Marlon Wayans Anna Faris
 imageCredit: Photo via TheWrap
 imageWidth: 1200
 imageHeight: 675
+updated: '2026-07-23T11:01:04.113Z'
+boxOfficeTracker: true
 ---
+
 
 The Franchise Returns With a Vengeance
 
@@ -97,3 +100,14 @@ The film's availability has expanded to digital rental and purchase platforms in
 ## At the Box Office
 
 Scary Movie has grossed $108,044,772 at the domestic box office, 47 days into its theatrical run, while playing across 225 theaters. The film added $34,691 in its most recent day of release. Worldwide, it has taken in $230 million. It carries a reported production budget of $30 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 43 | 2026-07-19 | — | $107.8 Million |
+| 45 | 2026-07-20 | — | $108 Million |
+| 46 | 2026-07-22 | — | $108 Million |
+| 47 | 2026-07-23 | — | $108 Million |

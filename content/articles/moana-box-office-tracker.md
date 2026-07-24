@@ -1,10 +1,10 @@
 ---
 title: 'Moana Box Office Day 12: Adds $4 Million as Domestic Total Hits $87.3 Million'
-slug: moana-box-office-day-12-adds-4-million-as-domestic-total-hits-87-3-million
+slug: moana-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T07:01:02.719Z'
+date: '2026-07-16T06:08:30.477Z'
 dek: >-
   Disney's live-action remake, starring Dwayne Johnson and Catherine Lagaʻaia,
   voyages into theaters with a costly journey. The film's performance is a
@@ -69,7 +69,10 @@ imageAlt: Moana — Dwayne Johnson Catherine Lagaʻaia Moana 2026 movie poster
 imageCredit: Photo via businessinsider.com
 imageWidth: 1600
 imageHeight: 800
+updated: '2026-07-23T07:01:02.719Z'
+boxOfficeTracker: true
 ---
+
 
 The Voyage of 'Moana' (2026)
 
@@ -82,3 +85,16 @@ Dwayne Johnson returns to the role of the charismatic demigod Maui, this time in
 ## At the Box Office
 
 Moana has grossed $87,269,607 at the domestic box office, 12 days into its theatrical run, while playing across 4,200 theaters. The film added $4,030,564 in its most recent day of release. Worldwide, it has taken in $116 million. It carries a reported production budget of $250 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 5 | 2026-07-16 | — | $54.9 Million |
+| 6 | 2026-07-17 | $4.3 Million | $59.2 Million |
+| 8 | 2026-07-19 | $5.5 Million | $68.6 Million |
+| 10 | 2026-07-20 | $5.9 Million | $82.1 Million |
+| 11 | 2026-07-22 | $2.2 Million | $83.2 Million |
+| 12 | 2026-07-23 | $4 Million | $87.3 Million |

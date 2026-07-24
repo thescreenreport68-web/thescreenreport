@@ -1,10 +1,10 @@
 ---
 title: 'Michael Box Office Day 89: Adds $35,059 as Domestic Total Hits $372.3 Million'
-slug: michael-box-office-day-89-adds-35-059-as-domestic-total-hits-372-3-million
+slug: michael-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T10:31:07.327Z'
+date: '2026-07-20T15:01:33.835Z'
 dek: >-
   The Antoine Fuqua-directed film chronicling the life of Michael Jackson,
   starring his nephew Jaafar, has achieved a historic global milestone, becoming
@@ -80,7 +80,10 @@ imageAlt: Michael — Jaafar Jackson as Michael Jackson biopic film poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-23T10:31:07.327Z'
+boxOfficeTracker: true
 ---
+
 
 The Story of the King of Pop
 
@@ -93,3 +96,12 @@ The film features a stellar cast led by Michael Jackson's own nephew, Jaafar Jac
 ## At the Box Office
 
 Michael has grossed $372,256,380 at the domestic box office, 89 days into its theatrical run, while playing across 165 theaters. The film added $35,059 in its most recent day of release. Worldwide, it has taken in $1.00 billion. It carries a reported production budget of $250 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 87 | 2026-07-20 | — | $372.2 Million |
+| 89 | 2026-07-23 | — | $372.3 Million |

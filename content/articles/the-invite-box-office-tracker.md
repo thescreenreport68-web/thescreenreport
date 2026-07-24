@@ -2,12 +2,11 @@
 title: >-
   The Invite Box Office Day 24: Adds $1.2 Million as Domestic Total Hits $15
   Million
-slug: >-
-  the-invite-box-office-day-24-adds-1-2-million-as-domestic-total-hits-15-million
+slug: the-invite-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-20T08:30:48.504Z'
+date: '2026-07-18T15:00:51.138Z'
 dek: >-
   Olivia Wilde directs and stars in a dark comedy about a dinner party gone
   wrong, featuring Seth Rogen, Penélope Cruz, and Edward Norton.
@@ -73,7 +72,10 @@ imageAlt: >-
 imageCredit: Photo via PMC
 imageWidth: 1600
 imageHeight: 864
+updated: '2026-07-20T08:30:48.504Z'
+boxOfficeTracker: true
 ---
+
 
 A Dinner Party That Spins Out of Control
 
@@ -90,3 +92,12 @@ This early success suggested strong initial intrigue for Wilde's project.
 ## At the Box Office
 
 The Invite has grossed $15,017,888 at the domestic box office, 24 days into its theatrical run, while playing across 2,110 theaters. The film added $1,221,904 in its most recent day of release. Worldwide, it has taken in $16 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 22 | 2026-07-18 | $1.1 Million | $12.2 Million |
+| 24 | 2026-07-20 | $1.2 Million | $15 Million |

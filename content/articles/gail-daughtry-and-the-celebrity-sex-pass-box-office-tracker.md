@@ -2,7 +2,7 @@
 title: >-
   Gail Daughtry and the Celebrity Sex Pass Box Office Day 10: Adds $29,000 as
   Domestic Total Hits
-slug: gail-daughtry-and-the-celebrity-sex-pass-box-office-day-10-adds-29-000-as
+slug: gail-daughtry-and-the-celebrity-sex-pass-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
@@ -81,7 +81,10 @@ imageAlt: >-
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3200
 imageHeight: 1800
+updated: '2026-07-20T15:32:18.568Z'
+boxOfficeTracker: true
 ---
+
 
 Zoey Deutch headlines the quirky comedy *Gail Daughtry and the Celebrity Sex Pass*, a film that puts a uniquely modern spin on relationship revenge. Directed by David Wain, the 93-minute story follows Gail Daughtry, a small-town Kansas hairdresser whose world is upended when her fiancé uses his pre-approved 'celebrity sex pass' on Jennifer Aniston. Determined to even the score, Gail travels to Los Angeles with her supportive friend Otto to track down her own celebrity hall pass: Jon Hamm.
 
@@ -96,3 +99,11 @@ However, the film's financial runway appears short.
 ## At the Box Office
 
 Gail Daughtry and the Celebrity Sex Pass has grossed $1,314,000 at the domestic box office, 10 days into its theatrical run, while playing across 357 theaters. The film added $29,000 in its most recent day of release. It carries a reported production budget of $4 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 10 | 2026-07-20 | — | $1.3 Million |

@@ -2,11 +2,11 @@
 title: >-
   Obsession Box Office Day 68: Adds $440,605 as Domestic Total Hits $259.2
   Million
-slug: obsession-box-office-day-68-adds-440-605-as-domestic-total-hits-259-2-million
+slug: obsession-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T08:01:03.867Z'
+date: '2026-07-17T06:31:24.072Z'
 dek: >-
   The micro-budget horror film starring Michael Johnston continues its
   unprecedented box office run, posting the highest-grossing fourth weekend ever
@@ -80,7 +80,10 @@ imageAlt: Obsession — Olivia Wilde Obsession 2026 film poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-23T08:01:03.867Z'
+boxOfficeTracker: true
 ---
+
 
 Olivia Wilde's latest project, *[Obsession](/movies/obsession-box-office-day-67-adds-359-520-as-domestic-total-hits-258-7-million/)*, is a chilling horror-thriller that twists the classic wish-fulfillment trope into a nightmare. Directed by Curry Barker, the 109-minute film follows a hopeless romantic who breaks the mysterious "One Wish Willow" to win his crush's heart, only to discover that some desires come at a dark and sinister price.
 
@@ -95,3 +98,15 @@ This success is even more staggering considering its micro-budget origins. It is
 ## At the Box Office
 
 Obsession has grossed $259,187,265 at the domestic box office, 68 days into its theatrical run, while playing across 1,524 theaters. The film added $440,605 in its most recent day of release. Worldwide, it has taken in $443 million. It carries a reported production budget of $750,000.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 62 | 2026-07-17 | — | $255.4 Million |
+| 64 | 2026-07-19 | — | $256.8 Million |
+| 66 | 2026-07-20 | — | $258.5 Million |
+| 67 | 2026-07-22 | — | $258.7 Million |
+| 68 | 2026-07-23 | — | $259.2 Million |

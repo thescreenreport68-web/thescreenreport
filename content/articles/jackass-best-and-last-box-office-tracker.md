@@ -2,12 +2,11 @@
 title: >-
   Jackass: Best and Last Box Office Day 26: Adds $38,677 as Domestic Total Hits
   $18.1 Million
-slug: >-
-  jackass-best-and-last-box-office-day-26-adds-38-677-as-domestic-total-hits-18-1
+slug: jackass-best-and-last-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T09:31:05.390Z'
+date: '2026-07-18T15:36:27.784Z'
 dek: >-
   The fifth and final 'Jackass' film brings the crew together for one last
   crusade, but its opening weekend suggests a muted farewell.
@@ -77,7 +76,10 @@ imageAlt: >-
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-23T09:31:05.390Z'
+boxOfficeTracker: true
 ---
+
 
 A Final Farewell from the Stunt Crew
 
@@ -96,3 +98,14 @@ The initial **Jackass Best and Last box office** figures are now in.
 ## At the Box Office
 
 Jackass: Best and Last has grossed $18,082,045 at the domestic box office, 26 days into its theatrical run, while playing across 305 theaters. The film added $38,677 in its most recent day of release. Worldwide, it has taken in $27 million. It carries a reported production budget of $10 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 22 | 2026-07-18 | — | $17.9 Million |
+| 24 | 2026-07-20 | — | $18 Million |
+| 25 | 2026-07-22 | — | $18 Million |
+| 26 | 2026-07-23 | — | $18.1 Million |

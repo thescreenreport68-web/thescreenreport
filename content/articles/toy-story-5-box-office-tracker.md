@@ -2,11 +2,11 @@
 title: >-
   Toy Story 5 Box Office Day 33: Adds $3.1 Million as Domestic Total Hits $434.6
   Million
-slug: toy-story-5-box-office-day-33-adds-3-1-million-as-domestic-total-hits-434-6
+slug: toy-story-5-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T07:31:00.906Z'
+date: '2026-07-16T09:30:41.221Z'
 dek: >-
   The beloved animated franchise continues its winning streak, with Woody, Buzz,
   and a new digital rival captivating family audiences. The film's impressive
@@ -77,7 +77,11 @@ imageAlt: Toy Story 5 — Toy Story 5 movie poster Tom Hanks Tim Allen
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-23T07:31:00.906Z'
+boxOfficeTracker: true
 ---
+
+
 
 A New Chapter for Woody and Buzz
 
@@ -92,3 +96,17 @@ The voice cast is a mix of beloved icons and exciting new talent. Tom Hanks and 
 ## At the Box Office
 
 Toy Story 5 has grossed $434,642,978 at the domestic box office, 33 days into its theatrical run, while playing across 3,400 theaters. The film added $3,050,058 in its most recent day of release. Worldwide, it has taken in $958 million. It carries a reported production budget of $250 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 26 | 2026-07-16 | — | $410.6 Million |
+| 27 | 2026-07-17 | $2.7 Million | $413.3 Million |
+| 29 | 2026-07-19 | $4.2 Million | $420.3 Million |
+| 31 | 2026-07-20 | $4.7 Million | $430.9 Million |
+| 32 | 2026-07-22 | $1.7 Million | $431.6 Million |
+| 33 | 2026-07-23 | $3.1 Million | $434.6 Million |
+

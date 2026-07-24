@@ -2,11 +2,11 @@
 title: >-
   Evil Dead Burn Box Office Day 12: Adds $857,423 as Domestic Total Hits $25.4
   Million
-slug: evil-dead-burn-box-office-day-12-adds-857-423-as-domestic-total-hits-25-4
+slug: evil-dead-burn-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
-date: '2026-07-23T07:30:00.906Z'
+date: '2026-07-16T16:31:29.698Z'
 dek: >-
   Souheila Yacoub leads the latest franchise entry, which sees a grieving widow
   face a family of demonic horrors. Despite strong reviews, the film's opening
@@ -75,7 +75,10 @@ imageAlt: Evil Dead Burn — Souheila Yacoub Evil Dead Burn movie poster horror
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2995
 imageHeight: 1685
+updated: '2026-07-23T07:30:00.906Z'
+boxOfficeTracker: true
 ---
+
 
 A Widow’s Vows Tested by Demonic Terror
 
@@ -92,3 +95,15 @@ The story of the *Evil Dead Burn* box office is one of high hopes meeting a chil
 ## At the Box Office
 
 Evil Dead Burn has grossed $25,378,017 at the domestic box office, 12 days into its theatrical run, while playing across 3,004 theaters. The film added $857,423 in its most recent day of release. Worldwide, it has taken in $35 million. It carries a reported production budget of $20 million.
+
+## Daily Tracking
+
+Domestic box-office totals for each reported day of the theatrical run.
+
+| Day | Date | Daily Gross | Domestic Total |
+| --- | --- | --- | --- |
+| 6 | 2026-07-16 | $1.2 Million | $18.2 Million |
+| 8 | 2026-07-19 | $1.5 Million | $20.7 Million |
+| 10 | 2026-07-20 | $1.5 Million | $24.2 Million |
+| 11 | 2026-07-22 | — | $24.5 Million |
+| 12 | 2026-07-23 | — | $25.4 Million |
