@@ -1,0 +1,6 @@
+{
+  "_readme": "Site-wide 301 redirect manifest (ONE STORY = ONE URL consolidation, 2026-07-24). Lanes APPEND entries here when retiring a URL in favor of its canonical article (e.g. box-office day-N pages -> the film's tracker article), and delete the retired .md in the same commit. scripts/build-redirects.mjs turns this into out/_redirects at build time; Cloudflare (Workers static assets AND Pages) serves them as real 301s, so Google transfers the retired URL's credit to the canonical. RULES: 'from'/'to' start with '/' and end with '/'; never remove or edit another lane's entries; never redirect a URL that still has an .md file. The canary entry is permanent — deploy verification curls it.",
+  "redirects": [
+    { "from": "/zz-redirect-canary/", "to": "/about/", "note": "permanent self-test entry — deploy checks curl this" }
+  ]
+}

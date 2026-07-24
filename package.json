@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "node scripts/fetch-metrics.mjs"
+    "prebuild": "node scripts/fetch-metrics.mjs && node scripts/build-redirects.mjs"
   },
   "dependencies": {
     "@extractus/article-extractor": "^8.1.0",
