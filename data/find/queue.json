@@ -1,10 +1,75 @@
 {
-  "runId": "run-2026-07-24T04-31-08",
-  "builtAt": "2026-07-24T04:32:24.820Z",
-  "count": 16,
+  "runId": "run-2026-07-24T05-31-02",
+  "builtAt": "2026-07-24T05:32:16.928Z",
+  "count": 23,
   "topics": [
     {
-      "id": "news-zach-cregger-weapons-prequel-gladys-origin-story",
+      "id": "news-seth-green-star-wars-detours-release",
+      "slug": "seth-green-s-star-wars-detours-will-finally-see-the-light-of-day",
+      "title": "Seth Green’s Star Wars: Detours Will Finally See the Light of Day",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "seth-green-star-wars-detours-release",
+      "primaryKeyword": "Seth Green Star Wars Detours",
+      "primaryEntity": "Star Wars: Detours",
+      "entities": [
+        "Seth Green"
+      ],
+      "angle": "Seth Green's animated Star Wars series 'Detours' is finally set to be released.",
+      "tmdbType": "movie",
+      "source": "gnews:IGN Nordic",
+      "sources": [
+        {
+          "outlet": "IGN Nordic",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZDBLV002d0tUeVFBaDlUVmltV0p3UUh1ZU0wLW1acHgycFNTMm90X3lMQ3hvc0o1MnBQb2FCOWdtMHdfR25MR0tTWDhBWlZzYk5Jdmgzay1vandLQ0ExSzNra2ZPZTdMRUxDUkp3b2ROaHVUUkNGMk1VVFA0ckFta3NxeFVDSHliVXVQYXQ3bUNQSHc1RmZjTnpPNjJERGtVVHZmVHU5cWVJWENXMGN0bA?oc=5",
+          "ageMin": 9,
+          "headline": "Seth Green’s Star Wars: Detours Will Finally See the Light of Day - IGN Nordic",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOZDBLV002d0tUeVFBaDlUVmltV0p3UUh1ZU0wLW1acHgycFNTMm90X3lMQ3hvc0o1MnBQb2FCOWdtMHdfR25MR0tTWDhBWlZzYk5Jdmgzay1vandLQ0ExSzNra2ZPZTdMRUxDUkp3b2ROaHVUUkNGMk1VVFA0ckFta3NxeFVDSHliVXVQYXQ3bUNQSHc1RmZjTnpPNjJERGtVVHZmVHU5cWVJWENXMGN0bA?oc=5\" target"
+        }
+      ],
+      "ageMin": 9,
+      "_cand": {
+        "key": "rss:seth-green-s-star-wars-detours-will-finally-see-the-light-of",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IGN Nordic"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IGN Nordic",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 30,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-zach-cregger-hypes-weapons-prequel",
       "slug": "zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-things-await-gl",
       "title": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
       "contentType": "news",
@@ -13,14 +78,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "zach-cregger-weapons-prequel-gladys-origin-story",
+      "eventSlug": "zach-cregger-hypes-weapons-prequel",
       "primaryKeyword": "weapons prequel",
       "primaryEntity": "Weapons",
       "entities": [
         "Weapons (film)",
         "Zach Cregger"
       ],
-      "angle": "Director Zach Cregger hypes upcoming prequel for his horror film 'Weapons', promising 'mysteries and crazy things' for the Gladys origin story.",
+      "angle": "Director Zach Cregger provides an update on the prequel for his film 'Weapons,' promising 'mysteries and crazy things.'",
       "tmdbType": "movie",
       "source": "rss:TheWrap",
       "sources": [
@@ -28,12 +93,12 @@
           "outlet": "TheWrap",
           "tier": 7,
           "url": "https://www.thewrap.com/creative-content/movies/zach-cregger-weapons-prequel-gladys-script-update/",
-          "ageMin": 87,
+          "ageMin": 146,
           "headline": "Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story",
           "summary": "\"The script is in progress now, but we’re taking that super seriously,\" the director adds The post Zach Cregger Hypes ‘Weapons’ Prequel: ‘Mysteries and Crazy Things’ Await Gladys Origin Story appeared first on TheWrap ."
         }
       ],
-      "ageMin": 87,
+      "ageMin": 146,
       "_cand": {
         "key": "rss:zach-cregger-hypes-weapons-prequel-mysteries-and-crazy-thing",
         "popularity": 0,
@@ -70,39 +135,39 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-ghost-big-to-rig-trailer",
-      "slug": "ghost-drops-trailer-for-mexico-city-concert-film-2-big-to-rig",
-      "title": "Ghost Drops Trailer for Mexico City Concert Film '2 Big to Rig'",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "movies",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "id": "news-brad-bird-explores-sf-earthquake-miniseries",
+      "slug": "brad-bird-thinks-1906-would-lend-itself-to-multiple-episodes-as-tv-min",
+      "title": "Brad Bird Thinks 1906 Would Lend Itself To Multiple Episodes As TV Miniseries About S.F. Earthquake",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ghost-big-to-rig-trailer",
-      "primaryKeyword": "Ghost concert film trailer",
-      "primaryEntity": "Ghost",
+      "eventSlug": "brad-bird-explores-sf-earthquake-miniseries",
+      "primaryKeyword": "Brad Bird",
+      "primaryEntity": "Brad Bird",
       "entities": [
-        "Ghost (band)",
-        "2 Big to Rig"
+        "Frankenstein",
+        "San Francisco Earthquake",
+        "TV Miniseries"
       ],
-      "angle": "Metal band Ghost has released the first trailer for their upcoming concert film, '2 Big to Rig,' offering a behind-the-scenes look at their Skeletour.",
+      "angle": "Brad Bird suggests the 1906 San Francisco earthquake could be a TV miniseries.",
       "tmdbType": "movie",
-      "source": "rss:Rolling Stone",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Rolling Stone",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://www.rollingstone.com/music/music-news/ghost-first-trailer-mexico-city-concert-film-2-big-to-rig-1235597960/",
-          "ageMin": 546,
-          "headline": "Ghost Scare Up First Trailer for Mexico City Concert Film ‘2 Big to Rig’",
-          "summary": "Out threatrically on Aug. 26, metal band's second concert movie was shot on 16mm film and presents a behind-the-scenes look at their Skeletour"
+          "url": "https://deadline.com/2026/07/brad-bird-1906-tv-series-comic-con-career-panel-1237002229/",
+          "ageMin": 173,
+          "headline": "Brad Bird Thinks 1906 Would Lend Itself To Multiple Episodes As TV Miniseries About S.F. Earthquake",
+          "summary": "Ray Gunn director Brad Bird has made several lasting films in his day, but he has yet to venture into television. He hasn t ruled out the opportunity to make a miniseries with a project he has long pursued. Actually yeah, I have a project that, it s hard to explain, but it would lend itself to [ ]"
         }
       ],
-      "ageMin": 546,
+      "ageMin": 173,
       "_cand": {
-        "key": "rss:ghost-scare-up-first-trailer-for-mexico-city-concert-film-2-",
+        "key": "rss:brad-bird-thinks-1906-would-lend-itself-to-multiple-episodes",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -112,87 +177,21 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Rolling Stone"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Rolling Stone",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 73,
       "signals": {
-        "recency": 4,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-dungeon-crawler-carl-peacock-jeff-hays-casting",
-      "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
-      "title": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "dungeon-crawler-carl-peacock-jeff-hays-casting",
-      "primaryKeyword": "Dungeon Crawler Carl series",
-      "primaryEntity": "Dungeon Crawler Carl (TV series)",
-      "entities": [
-        "Peacock",
-        "Jeff Hays"
-      ],
-      "angle": "Jeff Hays, the audiobook narrator for 'Dungeon Crawler Carl', has been cast in the upcoming Peacock series adaptation to voice the character Princess Donut.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
-          "ageMin": 331,
-          "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
-          "summary": "He'll voice the key character of Princess Donut, a talking cat."
-        }
-      ],
-      "ageMin": 331,
-      "_cand": {
-        "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 71,
-      "signals": {
-        "recency": 9,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -203,66 +202,65 @@
       "tierClass": "B"
     },
     {
-      "id": "music-news-rolling-stones-foreign-tongues-debuts-no-1",
-      "slug": "the-rolling-stones-foreign-tongues-debuts-at-no-1-on-billboard-chart",
-      "title": "The Rolling Stones' 'Foreign Tongues' Debuts at No. 1 on Billboard Chart",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "id": "trailer-marvels-wolverine-trailer",
+      "slug": "marvel-s-wolverine-big-new-story-trailer-is-being-overshadowed-by-dram",
+      "title": "Marvel's Wolverine big new story trailer is being overshadowed by drama",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
       "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "rolling-stones-foreign-tongues-debuts-no-1",
-      "primaryKeyword": "Rolling Stones Foreign Tongues",
-      "primaryEntity": "The Rolling Stones",
+      "eventSlug": "marvels-wolverine-trailer",
+      "primaryKeyword": "marvels wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
       "entities": [
-        "Foreign Tongues"
+        "Marvel's Wolverine",
+        "Marvel"
       ],
-      "angle": "The Rolling Stones' new album 'Foreign Tongues' has debuted at number one on the Billboard Top Album Sales chart.",
+      "angle": "A new story trailer for Marvel's Wolverine game has dropped amidst behind-the-scenes drama.",
       "tmdbType": "movie",
-      "source": "rss:Billboard",
+      "source": "gnews:Polygon.com",
       "sources": [
         {
-          "outlet": "Billboard",
-          "tier": 7,
-          "url": "https://www.billboard.com/music/chart-beat/the-rolling-stones-foreign-tongues-number-one-album-sales-1236302146/",
-          "ageMin": 1,
-          "headline": "The Rolling Stones’ ‘Foreign Tongues’ Debuts at No. 1 on Billboard s Top Album Sales Chart",
-          "summary": "Plus, the set starts in the top 10 on five more album charts."
+          "outlet": "Polygon.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTFJ0d0phd2I1N0FhbkszR3d3Z0s2Uy1Kc05lZmNSb3BYRlpHWjA3amFGR0QtN2ZhSHVmanBqRDNta2Z5NC1MeDF2V3dfWnpBbF9SS3VMSjV4empnMGszb2RMNExlZ2d0MXhFbW9HRGp1RFdvQS1oSzZRNGZTOEI3TVkzQkRFYzhy?oc=5",
+          "ageMin": 627,
+          "headline": "Marvel's Wolverine big new story trailer is being overshadowed by drama - Polygon.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTFJ0d0phd2I1N0FhbkszR3d3Z0s2Uy1Kc05lZmNSb3BYRlpHWjA3amFGR0QtN2ZhSHVmanBqRDNta2Z5NC1MeDF2V3dfWnpBbF9SS3VMSjV4empnMGszb2RMNExlZ2d0MXhFbW9HRGp1RFdvQS1oSzZRNGZTOEI3TVkzQkRFYzhy?oc=5\" target=\"_blank\" Marvel's Wolverine big new story trailer is "
         }
       ],
-      "ageMin": 1,
+      "ageMin": 627,
       "_cand": {
-        "key": "rss:the-rolling-stones-foreign-tongues-debuts-at-no-1-on-billboa",
+        "key": "rss:marvel-s-wolverine-big-new-story-trailer-is-being-overshadow",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
-      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Billboard"
+          "Polygon.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Billboard",
+        "attribution": "Polygon.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 69,
+      "priority": 63,
       "signals": {
-        "recency": 30,
-        "corroboration": 12,
+        "recency": 4,
+        "corroboration": 8,
         "status": 18,
-        "type": 9,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -270,7 +268,7 @@
       "tierClass": "B"
     },
     {
-      "id": "news-james-watkins-clayface-sdcc-2026",
+      "id": "news-james-watkins-clayface-horror-movie-sdcc-2026",
       "slug": "director-james-watkins-reveals-emotional-depth-in-clayface-horror-movi",
       "title": "Director James Watkins Reveals Emotional Depth in Clayface Horror Movie at SDCC 2026",
       "contentType": "news",
@@ -279,15 +277,14 @@
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "james-watkins-clayface-sdcc-2026",
-      "primaryKeyword": "clayface movie",
+      "eventSlug": "james-watkins-clayface-horror-movie-sdcc-2026",
+      "primaryKeyword": "Clayface movie",
       "primaryEntity": "Clayface",
       "entities": [
         "Clayface (film)",
-        "James Watkins",
-        "SDCC 2026"
+        "James Watkins"
       ],
-      "angle": "Director James Watkins discusses the emotional depth of the Clayface character at SDCC.",
+      "angle": "Director James Watkins discusses his upcoming Clayface horror movie at San Diego Comic-Con.",
       "tmdbType": "movie",
       "source": "gnews:Yahoo",
       "sources": [
@@ -295,12 +292,12 @@
           "outlet": "Yahoo",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNGhwcGIxRnpld1hMYXBzLTV0QVVKWXRUaWZZUXZzZ3RGX050NHFaeFpKRWp5R1l2dGNxdTA5ZUdFZm1QSW5pRUYyMTU1dlFHLWNtSFFsQnViTTV6M2FzNE5BYVpiUlZ5aUY4Q2xVVGx2X28wQlVlcUQyZ0l5YUduY00wSHVOaUNCQlpVSmdwUmh1RGRQZFl3MjdxallfbnNQNUgtX0diMXRHMXc?oc=5",
-          "ageMin": 253,
+          "ageMin": 313,
           "headline": "Director James Watkins Reveals Emotional Depth in Clayface Horror Movie at SDCC 2026 - Yahoo",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNGhwcGIxRnpld1hMYXBzLTV0QVVKWXRUaWZZUXZzZ3RGX050NHFaeFpKRWp5R1l2dGNxdTA5ZUdFZm1QSW5pRUYyMTU1dlFHLWNtSFFsQnViTTV6M2FzNE5BYVpiUlZ5aUY4Q2xVVGx2X28wQlVlcUQyZ0l5YUduY00wSHVOaUNCQlpVSmdwUmh1RGRQZFl3MjdxallfbnNQNUgtX0diMXRHMXc?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 253,
+      "ageMin": 313,
       "_cand": {
         "key": "rss:director-james-watkins-reveals-emotional-depth-in-clayface-h",
         "popularity": 0,
@@ -337,7 +334,74 @@
       "tierClass": "B"
     },
     {
-      "id": "news-stuart-fails-to-save-the-universe-premiere-og-death",
+      "id": "music-news-bon-jovi-concert-ended-sinus-infection",
+      "slug": "bon-jovi-abruptly-ends-msg-concert-due-to-sinus-infection",
+      "title": "Bon Jovi Abruptly Ends MSG Concert Due to Sinus Infection",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "bon-jovi-concert-ended-sinus-infection",
+      "primaryKeyword": "Bon Jovi",
+      "primaryEntity": "Bon Jovi",
+      "entities": [
+        "MSG Concert"
+      ],
+      "angle": "Bon Jovi abruptly ends MSG concert due to sinus infection.",
+      "tmdbType": "movie",
+      "source": "rss:Rolling Stone",
+      "sources": [
+        {
+          "outlet": "Rolling Stone",
+          "tier": 7,
+          "url": "https://www.rollingstone.com/music/music-news/bon-jovi-abruptly-ends-msg-concert-sinus-infection-1235598245/",
+          "ageMin": 150,
+          "headline": "Bon Jovi Abruptly Ends MSG Concert Due to Sinus Infection",
+          "summary": "\"Don’t throw away your ticket stubs, I’m gonna figure something out,\" the singer said from the stage before ending the night early"
+        }
+      ],
+      "ageMin": 150,
+      "_cand": {
+        "key": "rss:bon-jovi-abruptly-ends-msg-concert-due-to-sinus-infection",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Rolling Stone"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Rolling Stone",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 58,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-stuart-fails-to-save-the-universe-premiere-death",
       "slug": "stuart-fails-to-save-the-universe-creators-stars-on-premiere-s-shockin",
       "title": "Stuart Fails To Save The Universe Creators Stars On Premiere s Shocking OG Death Its Aftermath",
       "contentType": "news",
@@ -346,14 +410,13 @@
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "high",
-      "eventSlug": "stuart-fails-to-save-the-universe-premiere-og-death",
-      "primaryKeyword": "Stuart Fails To Save The Universe",
+      "eventSlug": "stuart-fails-to-save-the-universe-premiere-death",
+      "primaryKeyword": "stuart fails to save the universe premiere",
       "primaryEntity": "Stuart Fails to Save the Universe",
       "entities": [
-        "Stuart Fails To Save The Universe (TV series)",
         "HBO Max"
       ],
-      "angle": "The premiere episode of HBO Max's 'Stuart Fails To Save The Universe' features a shocking death of an original character, with the aftermath being explored.",
+      "angle": "The premiere episode of HBO Max's 'Stuart Fails to Save the Universe' features a shocking death of an original character.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -361,12 +424,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/big-bang-theory-spinoff-stuart-creators-premiere-raj-death-1236979878/",
-          "ageMin": 181,
+          "ageMin": 241,
           "headline": "Stuart Fails To Save The Universe Creators Stars On Premiere s Shocking OG Death Its Aftermath",
           "summary": "SPOILER ALERT: The story includes details about the premiere episode of HBO Max s Stuart Fails To Save the Universe. The Big Bang Theory spinoff Stuart Fails To Save the Universe starts off with Stuart (Kevin Sussman) in a post-apocalyptic Pasadena getting a visit from an alternate version of himself who urges him to restore reality [ ]"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 241,
       "_cand": {
         "key": "rss:stuart-fails-to-save-the-universe-creators-stars-on-premiere",
         "popularity": 0,
@@ -405,9 +468,77 @@
       "tierClass": "S"
     },
     {
+      "id": "news-snoop-dogg-biopic-summer-2027-release",
+      "slug": "snoop-dogg-biopic-lands-summer-2027-release-date-from-universal",
+      "title": "Snoop Dogg Biopic Lands Summer 2027 Release Date From Universal",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
+      "primaryKeyword": "Snoop Dogg biopic",
+      "primaryEntity": "Snoop Dogg Biopic",
+      "entities": [
+        "Snoop Dogg's Hood of Horror",
+        "Snoop Dogg",
+        "Jonathan Daviss",
+        "Craig Brewer"
+      ],
+      "angle": "Universal sets a Summer 2027 release date for the upcoming Snoop Dogg biopic.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
+          "ageMin": 3361,
+          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
+          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
+        }
+      ],
+      "ageMin": 3361,
+      "_cand": {
+        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 64,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
       "id": "news-stuart-fails-to-save-the-universe-composer-title-sequence",
-      "slug": "composer-discusses-stuart-fails-to-save-the-universe-s-ever-changing-t",
-      "title": "Composer Discusses 'Stuart Fails to Save the Universe's' Ever-Changing Title Sequence",
+      "slug": "stuart-fails-to-save-the-universe-eps-composer-on-show-s-ever-changing",
+      "title": "Stuart Fails To Save The Universe EPs Composer On Show s Ever-Changing Title Sequence You Shouldn t Skip , Packed With Messages Spoilers",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -415,12 +546,13 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "stuart-fails-to-save-the-universe-composer-title-sequence",
-      "primaryKeyword": "stuart fails to save the universe",
+      "primaryKeyword": "Stuart Fails to Save the Universe",
       "primaryEntity": "Stuart Fails to Save the Universe",
       "entities": [
-        "HBO Max"
+        "HBO Max",
+        "The Big Bang Theory"
       ],
-      "angle": "The composer for 'Stuart Fails to Save the Universe' discusses the show's ever-changing title sequence.",
+      "angle": "Composer discusses the ever-changing, message-packed title sequence of HBO Max's Stuart Fails To Save the Universe.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
@@ -428,12 +560,12 @@
           "outlet": "Deadline",
           "tier": 7,
           "url": "https://deadline.com/2026/07/stuart-fails-to-save-the-universe-title-sequence-danny-elfman-1236979832/",
-          "ageMin": 181,
+          "ageMin": 241,
           "headline": "Stuart Fails To Save The Universe EPs Composer On Show s Ever-Changing Title Sequence You Shouldn t Skip , Packed With Messages Spoilers",
           "summary": "SPOILER ALERT: The story includes a detail about the premiere episode of HBO Max s Stuart Fails To Save the Universe. Each episode of The Big Bang Theory spinoff Stuart Fails To Save the Universe tells a story of its four protagonists, Stuart (Kevin Sussman), Denise (Lauren Lapkus), Bert (Brian Posehn) and Kripke (John Ross Bowie), [ ]"
         }
       ],
-      "ageMin": 181,
+      "ageMin": 241,
       "_cand": {
         "key": "rss:stuart-fails-to-save-the-universe-eps-composer-on-show-s-eve",
         "popularity": 0,
@@ -472,40 +604,238 @@
       "tierClass": "A"
     },
     {
-      "id": "news-the-girl-in-the-river-trailer-release",
-      "slug": "thriller-the-girl-in-the-river-gets-trailer-and-late-summer-release",
-      "title": "Thriller 'The Girl in the River' Gets Trailer and Late Summer Release",
+      "id": "music-news-rolling-stones-foreign-tongues-billboard-debut",
+      "slug": "the-rolling-stones-foreign-tongues-debuts-at-no-1-on-billboard-s-top-a",
+      "title": "The Rolling Stones’ ‘Foreign Tongues’ Debuts at No. 1 on Billboard s Top Album Sales Chart",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "rolling-stones-foreign-tongues-billboard-debut",
+      "primaryKeyword": "Rolling Stones album",
+      "primaryEntity": "The Rolling Stones",
+      "entities": [
+        "Foreign Tongues"
+      ],
+      "angle": "The Rolling Stones' new album 'Foreign Tongues' debuts at No. 1 on the Billboard Top Album Sales Chart.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/chart-beat/the-rolling-stones-foreign-tongues-number-one-album-sales-1236302146/",
+          "ageMin": 61,
+          "headline": "The Rolling Stones’ ‘Foreign Tongues’ Debuts at No. 1 on Billboard s Top Album Sales Chart",
+          "summary": "Plus, the set starts in the top 10 on five more album charts."
+        }
+      ],
+      "ageMin": 61,
+      "_cand": {
+        "key": "rss:the-rolling-stones-foreign-tongues-debuts-at-no-1-on-billboa",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-damson-idris-f1-the-movie-sequel-conversations",
+      "slug": "damson-idris-teases-f1-the-movie-sequel-conversations",
+      "title": "Damson Idris Teases 'F1 The Movie' Sequel Conversations",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-girl-in-the-river-trailer-release",
-      "primaryKeyword": "The Girl in the River trailer",
-      "primaryEntity": "The Girl in the River",
+      "eventSlug": "damson-idris-f1-the-movie-sequel-conversations",
+      "primaryKeyword": "F1 The Movie sequel",
+      "primaryEntity": "F1",
       "entities": [
-        "Tiffany Haddish: Black Mitzvah",
-        "Tiffany Haddish",
-        "Devon Sawa",
-        "Maggie Grace"
+        "F1 The Movie",
+        "Damson Idris"
       ],
-      "angle": "The thriller 'The Girl in the River,' starring Tiffany Haddish and Devon Sawa, has released its trailer and set a late summer release date.",
+      "angle": "Actor Damson Idris hints at potential sequel for 'F1 The Movie'.",
+      "tmdbType": "movie",
+      "source": "gnews:Motorsport.com",
+      "sources": [
+        {
+          "outlet": "Motorsport.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5",
+          "ageMin": 702,
+          "headline": "Damson Idris teases \"exciting conversations\" over \"F1 The Movie\" sequel - Motorsport.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNQWNTV1Y3U012dGxkZXZVdWpBOVdRUVBoeVlsT3JvQVVwOE1zNGtyNnc0aFR1dWZTR1ZTQ0R4LTh5cTByN0x1WFpZU1FibWdvcTh1MG9VTWdmNUh1ajF2ckhoV0YyRWtWLVJpaE90NDVLbS1iMVctVVZ5cmZwYjZYYkd6NEtXLTdvUFhWYnRETzdXbXRGOWVXTEZDdmh2ZzZlaVV2WA?oc=5\" target=\"_blank\" Damson"
+        }
+      ],
+      "ageMin": 702,
+      "_cand": {
+        "key": "rss:damson-idris-teases-exciting-conversations-over-f1-the-movie",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Motorsport.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Motorsport.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-colin-woodell-myron-bolitar-harlan-coben-series",
+      "slug": "colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-coben-series-",
+      "title": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "colin-woodell-myron-bolitar-harlan-coben-series",
+      "primaryKeyword": "myron bolitar series",
+      "primaryEntity": "Myron Bolitar (character)",
+      "entities": [
+        "Colin Woodell",
+        "Harlan Coben",
+        "Netflix"
+      ],
+      "angle": "Colin Woodell has been cast as the lead in a new Netflix series based on Harlan Coben's Myron Bolitar character.",
+      "tmdbType": "movie",
+      "source": "gnews:Netflix",
+      "sources": [
+        {
+          "outlet": "Netflix",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5",
+          "ageMin": 272,
+          "headline": "Colin Woodell Will Star as Myron Bolitar in a New Harlan Coben Series - Netflix",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTE8tM0cxXzctUDBUUlZ5czlHbHRfRlU2d0wwQkdkQThLTk5xNVMzaXF4VVdKOTk2WkFLNkZtSm1VYmJYZ2VKRkxsRzJKcFVjUTRhYTNPSW42blhBYjVMbXpRVUM5eW1zZnZWUWR0X1k4UUowbmRmWEg5NFN6NUw?oc=5\" target=\"_blank\" Colin Woodell Will Star as Myron Bolitar in a New Harlan Cobe"
+        }
+      ],
+      "ageMin": 272,
+      "_cand": {
+        "key": "rss:colin-woodell-will-star-as-myron-bolitar-in-a-new-harlan-cob",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Netflix"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Netflix",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 67,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-dungeon-crawler-carl-series-casts-jeff-hays",
+      "slug": "peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrator-jeff-ha",
+      "title": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "dungeon-crawler-carl-series-casts-jeff-hays",
+      "primaryKeyword": "dungeon crawler carl series casting",
+      "primaryEntity": "Dungeon Crawler Carl (TV series)",
+      "entities": [
+        "Peacock",
+        "Jeff Hays"
+      ],
+      "angle": "Jeff Hays, the narrator of the 'Dungeon Crawler Carl' audiobooks, has been cast in the Peacock series adaptation.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-girl-in-the-river-tiffany-haddish-devon-sawa-release-1236653795/",
-          "ageMin": 2221,
-          "headline": "Tiffany Haddish, Devon Sawa s Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
-          "summary": "Maggie Grace and Ralph Macchio star in Brando Benetton's movie that has been acquired by Samuel Goldwyn Films and centers on twin girls who go missing."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/dungeon-crawler-carl-peacock-audiobook-narrator-jeff-hays-1236655544/",
+          "ageMin": 391,
+          "headline": "Peacock s Dungeon Crawler Carl Series Casts Audiobook Narrator Jeff Hays",
+          "summary": "He'll voice the key character of Princess Donut, a talking cat."
         }
       ],
-      "ageMin": 2221,
+      "ageMin": 391,
       "_cand": {
-        "key": "rss:tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-",
+        "key": "rss:peacock-s-dungeon-crawler-carl-series-casts-audiobook-narrat",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -524,15 +854,15 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 66,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -540,22 +870,24 @@
       "tierClass": "B"
     },
     {
-      "id": "news-zosia-mamet-joins-industry-season-5",
-      "slug": "zosia-mamet-joins-final-season-of-hbo-s-industry",
-      "title": "Zosia Mamet Joins Final Season of HBO's 'Industry'",
+      "id": "news-industry-season-5-zosia-mamet-casting",
+      "slug": "zosia-mamet-joins-industry-season-5",
+      "title": "Zosia Mamet Joins ‘Industry’ Season 5",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "zosia-mamet-joins-industry-season-5",
-      "primaryKeyword": "Zosia Mamet Industry",
-      "primaryEntity": "Industry (TV series)",
+      "eventSlug": "industry-season-5-zosia-mamet-casting",
+      "primaryKeyword": "Industry season 5",
+      "primaryEntity": "Industry",
       "entities": [
-        "Zosia Mamet"
+        "Zosia Mamet",
+        "HBO",
+        "BBC"
       ],
-      "angle": "Zosia Mamet is set to join the cast of HBO and BBC's 'Industry' for its upcoming fifth and final season.",
+      "angle": "Zosia Mamet joins the cast of HBO and BBC's 'Industry' for its fifth and final season.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -563,12 +895,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/industry-adds-zosia-mamet-season-5-cast-1236655281/",
-          "ageMin": 571,
+          "ageMin": 631,
           "headline": "Zosia Mamet Joins ‘Industry’ Season 5",
           "summary": "The ‘Girls’ actress will join the HBO and BBC series as a new character for its final season."
         }
       ],
-      "ageMin": 571,
+      "ageMin": 631,
       "_cand": {
         "key": "rss:zosia-mamet-joins-industry-season-5",
         "popularity": 0,
@@ -605,104 +937,37 @@
       "tierClass": "B"
     },
     {
-      "id": "news-snoop-dogg-biopic-summer-2027-release",
-      "slug": "snoop-dogg-biopic-lands-summer-2027-release",
-      "title": "Snoop Dogg Biopic Lands Summer 2027 Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "snoop-dogg-biopic-summer-2027-release",
-      "primaryKeyword": "Snoop Dogg biopic",
-      "primaryEntity": "Snoop Dogg's Hood of Horror",
-      "entities": [
-        "Snoop Dogg",
-        "Jonathan Daviss",
-        "Craig Brewer"
-      ],
-      "angle": "The Snoop Dogg biopic has been given a Summer 2027 release date by Universal.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/snoop-dogg-biopic-lands-summer-2027-release-1236653520/",
-          "ageMin": 3301,
-          "headline": "Snoop Dogg Biopic Lands Summer 2027 Release From Universal",
-          "summary": "Jonathan Daviss stars in Craig Brewer's feature that examines the life of the iconic rapper."
-        }
-      ],
-      "ageMin": 3301,
-      "_cand": {
-        "key": "rss:snoop-dogg-biopic-lands-summer-2027-release-from-universal",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 64,
-      "signals": {
-        "recency": 1,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-marvelous-mrs-maisel-death",
-      "slug": "marvelous-mrs-maisel-set-designer-fatally-stabbed-in-apparent-spousal-",
-      "title": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide",
+      "id": "news-marvelous-mrs-maisel-set-designer-fatally-stabbed",
+      "slug": "marvelous-mrs-maisel-set-designer-fatally-stabbed-in-apparent-murder-s",
+      "title": "'Marvelous Mrs. Maisel' Set Designer Fatally Stabbed in Apparent Murder-Suicide",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "the-marvelous-mrs-maisel-death",
-      "primaryKeyword": "Marvelous Mrs Maisel set designer death",
+      "eventSlug": "marvelous-mrs-maisel-set-designer-fatally-stabbed",
+      "primaryKeyword": "The Marvelous Mrs. Maisel",
       "primaryEntity": "The Marvelous Mrs. Maisel",
       "entities": [
         "Mary Kate Golding"
       ],
-      "angle": "The set designer for 'The Marvelous Mrs. Maisel' was found fatally stabbed in an apparent murder-suicide.",
+      "angle": "The set designer for 'The Marvelous Mrs. Maisel' was fatally stabbed.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "rss:TheWrap",
       "sources": [
         {
-          "outlet": "Deadline",
+          "outlet": "TheWrap",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/big-brother-season-28-week-2-eviction-cbs-1237002136/",
-          "ageMin": 225,
-          "headline": "Big Brother Season 28, Week 2 Eviction: Rick Devens HOH Reign Ends With Second Houseguest Evicted",
-          "summary": "SPOILER ALERT: This post contains details on Big Brother Season 28, Episode 8, which aired on Thursday, July 23. Julie Chen Moonves returned to host another live eviction of Big Brother, where a second housemate exited the house. With the Survivor alum Rick Devens in power as the Head of Household, it was a wild [ ]"
+          "url": "https://www.thewrap.com/media-platforms/tv/marvelous-mrs-maisel-set-designer-murdered-mary-kate-golding/",
+          "ageMin": 300,
+          "headline": "‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide",
+          "summary": "Mary Kate Golding was found dead in her New York home on Tuesday The post ‘Marvelous Mrs. Maisel’ Set Designer Fatally Stabbed in Apparent Spousal Murder-Suicide appeared first on TheWrap ."
         }
       ],
-      "ageMin": 225,
+      "ageMin": 300,
       "_cand": {
-        "key": "rss:big-brother-season-28-week-2-eviction-rick-devens-hoh-reign-",
+        "key": "rss:-marvelous-mrs-maisel-set-designer-fatally-stabbed-in-appare",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -712,11 +977,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "TheWrap"
         ],
         "maxTier": 7,
         "sensitivity": "high",
-        "attribution": "Deadline",
+        "attribution": "TheWrap",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -737,65 +1002,67 @@
       "tierClass": "S"
     },
     {
-      "id": "news-cole-hauser-dutton-ranch-without-taylor-sheridan",
-      "slug": "cole-hauser-on-filming-yellowstone-without-taylor-sheridan-everything-",
-      "title": "Cole Hauser on Filming 'Yellowstone' Without Taylor Sheridan: 'Everything Had Changed'",
+      "id": "news-star-wars-zero-company-casting",
+      "slug": "star-wars-zero-company-cast-includes-actors-from-clone-wars-hades-ii-r",
+      "title": "Star Wars Zero Company Cast Includes Actors From Clone Wars, Hades II, Resident Evil, And More",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "other",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "cole-hauser-dutton-ranch-without-taylor-sheridan",
-      "primaryKeyword": "cole hauser taylor sheridan",
-      "primaryEntity": "Cole Hauser",
+      "eventSlug": "star-wars-zero-company-casting",
+      "primaryKeyword": "Star Wars Zero Company",
+      "primaryEntity": "Star Wars Zero Company",
       "entities": [
-        "Yellowstone",
-        "Taylor Sheridan"
+        "Escape Plan 2: Hades",
+        "Clone Wars",
+        "Hades II",
+        "Resident Evil"
       ],
-      "angle": "Cole Hauser discusses the challenges of filming the 'Yellowstone' ranch without Taylor Sheridan's direct involvement.",
+      "angle": "Casting details revealed for the new Star Wars animated series 'Zero Company'.",
       "tmdbType": "movie",
-      "source": "rss:Deadline",
+      "source": "gnews:Game Informer",
       "sources": [
         {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/cole-hauser-challenges-dutton-ranch-without-taylor-sheridan-1237002246/",
-          "ageMin": 166,
-          "headline": "Cole Hauser On Challenges Of Making Dutton Ranch Without Taylor Sheridan: Everything Had Changed",
-          "summary": "Although the Duttons are still keeping things interesting on our screens, it s a whole new behind-the-scenes family for the cast of Taylor Sheridan s western TV franchise. Cole Hauser, who reprises his role as Rip Wheeler, recently opened up about the challenges of filming Dutton Ranch without parent series Yellowstone creator Taylor Sheridan at the helm, [ ]"
+          "outlet": "Game Informer",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQLXJ5dmFqNlR2UFZXVVdkNFNoLVRPSENBcC1MdkFsdGhGcU43a0x2aGN0VUV1cGQ3Z2FmcUN6Q3c2ZEVvaW8yMkpqOEkzdkFtZHEtLUZmRjRBZFl3TEhEVVhFUXFmYnllRzduak9heGEyTXFiM1lGQjlrMjhmMktHM2gzRV9RRjYyNFhQNlAxT1ZLaDNEQmkxTGljTThzbWhCNW1JbFVDMU1xN3pnOTRZMDhqQ3l0czAzVUVldDZKTQ?oc=5",
+          "ageMin": 837,
+          "headline": "Star Wars Zero Company Cast Includes Actors From Clone Wars, Hades II, Resident Evil, And More - Game Informer",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxQLXJ5dmFqNlR2UFZXVVdkNFNoLVRPSENBcC1MdkFsdGhGcU43a0x2aGN0VUV1cGQ3Z2FmcUN6Q3c2ZEVvaW8yMkpqOEkzdkFtZHEtLUZmRjRBZFl3TEhEVVhFUXFmYnllRzduak9heGEyTXFiM1lGQjlrMjhmMktHM2gzRV9RRjYyNFhQNlAxT1ZLaDNEQmkxTGljTThzbWhCNW1JbFVDMU1xN3pnOTRZMDhqQ3l0czAzVUV"
         }
       ],
-      "ageMin": 166,
+      "ageMin": 837,
       "_cand": {
-        "key": "rss:cole-hauser-on-challenges-of-making-dutton-ranch-without-tay",
+        "key": "rss:star-wars-zero-company-cast-includes-actors-from-clone-wars-",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Deadline"
+          "Game Informer"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Deadline",
+        "attribution": "Game Informer",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 59,
       "signals": {
-        "recency": 16,
-        "corroboration": 12,
+        "recency": 1,
+        "corroboration": 8,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 6,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -803,9 +1070,150 @@
       "tierClass": "C"
     },
     {
+      "id": "news-stewie-family-guy-spin-off-casting",
+      "slug": "stewie-casting-announced-for-fox-s-family-guy-spin-off-series",
+      "title": "Stewie: Casting Announced for FOX’s Family Guy Spin-Off Series",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "stewie-family-guy-spin-off-casting",
+      "primaryKeyword": "Stewie Family Guy spin-off",
+      "primaryEntity": "Stewie Griffin: The Untold Story",
+      "entities": [
+        "Stewie",
+        "Family Guy",
+        "FOX"
+      ],
+      "angle": "Casting announced for the 'Family Guy' spin-off series centered on Stewie.",
+      "tmdbType": "movie",
+      "source": "gnews:TV Series Finale",
+      "sources": [
+        {
+          "outlet": "TV Series Finale",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQaXdVVnhYdTRwVzJMS2drTE10RzFhOU9GVVhIUXhzcnR3M0xSS0dPbTZyZ053ZkppWFFCbXd6SkpuNm5aVVRsQXhocjRONkplTldYeXViUlQ4R29rRDB0ejlQZmhkeWR4NU1KQkFteDlucF9GREk0TXlpOENjSjEzeFdZcm1FSS1vQUZfZkJ0cUhOTnhuenhadWZZNXTSAaIBQVVfeXFMTkpDd3ppUm5hOUhEdGphT1VfOUEtT1FoMm9oWHNYd2dpd2txX0JjZmpRSzJXSm5KdWlkWFpfZVkxN0JNMmN1dHg5SnFSUDhGcHJ4NFZ6dHFyeXJubTR5dDQ4MkZIYl9naUFqZFhoblRwNDNJaDdPWFE5RGlKSlVSNlFNa2JJZTcyVE5uNTZLeGFHT1F1YXJ5RHFfd29zSUtncld3?oc=5",
+          "ageMin": 932,
+          "headline": "Stewie: Casting Announced for FOX’s Family Guy Spin-Off Series - TV Series Finale",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxQaXdVVnhYdTRwVzJMS2drTE10RzFhOU9GVVhIUXhzcnR3M0xSS0dPbTZyZ053ZkppWFFCbXd6SkpuNm5aVVRsQXhocjRONkplTldYeXViUlQ4R29rRDB0ejlQZmhkeWR4NU1KQkFteDlucF9GREk0TXlpOENjSjEzeFdZcm1FSS1vQUZfZkJ0cUhOTnhuenhadWZZNXTSAaIBQVVfeXFMTkpDd3ppUm5hOUhEdGphT1VfOUE"
+        }
+      ],
+      "ageMin": 932,
+      "_cand": {
+        "key": "rss:stewie-casting-announced-for-fox-s-family-guy-spin-off-serie",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TV Series Finale"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TV Series Finale",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-celebrity-family-feud-july-23-episode-pro-hockey-teams",
+      "slug": "celebrity-family-feud-july-23-new-episode-3-to-feature-pro-hockey-team",
+      "title": "Celebrity Family Feud July 23 New Episode 3 To Feature Pro Hockey Teams And More",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "celebrity-family-feud-july-23-episode-pro-hockey-teams",
+      "primaryKeyword": "celebrity family feud",
+      "primaryEntity": "Celebrity Family Feud",
+      "entities": [
+        "Pro Hockey Teams"
+      ],
+      "angle": "A new episode of Celebrity Family Feud will feature professional hockey teams.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ZNnhjbHRPMVJUd083RXJOZ3h5bFQyOXl0M1dRc0t1RXI5X0JZdzdYM3VqZHVCaHo1elpFZHRsa2tIYWhlVWJpdVYtMEpNR0NMMUNLQld0YkM3cnUtaTIyYw?oc=5",
+          "ageMin": 644,
+          "headline": "Celebrity Family Feud July 23 New Episode 3 To Feature Pro Hockey Teams And More - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ZNnhjbHRPMVJUd083RXJOZ3h5bFQyOXl0M1dRc0t1RXI5X0JZdzdYM3VqZHVCaHo1elpFZHRsa2tIYWhlVWJpdVYtMEpNR0NMMUNLQld0YkM3cnUtaTIyYw?oc=5\" target=\"_blank\" Celebrity Family Feud July 23 New Episode 3 To Feature Pro Hockey Teams And More /a nbsp; nbsp; fo"
+        },
+        {
+          "outlet": "VICE",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPc3JITXA5RDMtbnlBZHUxZk5ZX3Q5VnlmcVdUaWM0aUdTaGNLeThSNGtFbjBpZ3Y3dURobzZzYWNINnM1MEVkYy1aS3l0ckxJVnhUTmRtdHBDdUtEenRtb2dBUTlUMFV1UWdPS1VqZEZudG01bG9GQWJrU21uUXF4RVdUeDc4NUNWcTZGcXljZ3NGU0w5alkyWGNlVVpDbGZlOXZFQ3llV3R3dHZrM0NFd2o4bDVoUklFYzVmSVln?oc=5",
+          "ageMin": 677,
+          "headline": "Star Wars Zero Company Reveals Game Length, Other Key Details Fans May Find Disappointing - VICE",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxPc3JITXA5RDMtbnlBZHUxZk5ZX3Q5VnlmcVdUaWM0aUdTaGNLeThSNGtFbjBpZ3Y3dURobzZzYWNINnM1MEVkYy1aS3l0ckxJVnhUTmRtdHBDdUtEenRtb2dBUTlUMFV1UWdPS1VqZEZudG01bG9GQWJrU21uUXF4RVdUeDc4NUNWcTZGcXljZ3NGU0w5alkyWGNlVVpDbGZlOXZFQ3llV3R3dHZrM0NFd2o4bDVoUklFYzV"
+        }
+      ],
+      "ageMin": 644,
+      "_cand": {
+        "key": "rss:celebrity-family-feud-july-23-new-episode-3-to-feature-pro-h",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "IMDb",
+          "VICE"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 59,
+      "signals": {
+        "recency": 4,
+        "corroboration": 14,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 8,
+        "spice": 4,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
       "id": "news-the-chi-other",
-      "slug": "the-chi-stars-and-creator-reflect-on-show-s-legacy-ahead-of-series-fin",
-      "title": "The Chi Stars and Creator Reflect on Show's Legacy Ahead of Series Finale",
+      "slug": "the-chi-stars-and-creator-reflect-on-series-legacy-ahead-of-finale",
+      "title": "The Chi Stars and Creator Reflect on Series Legacy Ahead of Finale",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
@@ -813,14 +1221,15 @@
       "eventType": "other",
       "sensitivity": "normal",
       "eventSlug": "the-chi-other",
-      "primaryKeyword": "the chi series finale",
+      "primaryKeyword": "The Chi",
       "primaryEntity": "The Chi",
       "entities": [
         "Lena Waithe",
         "Birgundi Baker",
-        "Jacob Latimore"
+        "Jacob Latimore",
+        "Paramount+"
       ],
-      "angle": "The creator and stars of 'The Chi' reflect on the show's legacy and tease the series finale.",
+      "angle": "Creator and stars reflect on the legacy and upcoming finale of the Paramount+ series.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -828,12 +1237,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/the-chi-series-finale-preview-lena-waithe-interview-1236654335/",
-          "ageMin": 457,
+          "ageMin": 517,
           "headline": "How The Chi Spotlighted Love, Hope and Loss on the South Side of Chicago",
           "summary": "Heading into the series finale, creator Lena Waithe along with stars Birgundi Baker and Jacob Latimore reflect on the Paramount+ show's legacy, and tease how it will all end."
         }
       ],
-      "ageMin": 457,
+      "ageMin": 517,
       "_cand": {
         "key": "rss:how-the-chi-spotlighted-love-hope-and-loss-on-the-south-side",
         "popularity": 0,
@@ -872,39 +1281,38 @@
       "tierClass": "A"
     },
     {
-      "id": "news-emmys-telecast-changes",
-      "slug": "shaking-up-the-emmys-by-moving-five-categories-out-of-the-telecast-mig",
-      "title": "Shaking Up the Emmys By Moving Five Categories Out of the Telecast Might Not Work, But at Least the TV Academy Is Trying Something",
+      "id": "news-cole-hauser-dutton-ranch-without-sheridan",
+      "slug": "cole-hauser-on-challenges-of-making-dutton-ranch-without-taylor-sherid",
+      "title": "Cole Hauser On Challenges Of Making Dutton Ranch Without Taylor Sheridan: Everything Had Changed",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "emmys-telecast-changes",
-      "primaryKeyword": "Emmys",
-      "primaryEntity": "Emmys",
+      "eventSlug": "cole-hauser-dutton-ranch-without-sheridan",
+      "primaryKeyword": "Cole Hauser",
+      "primaryEntity": "Cole Hauser",
       "entities": [
-        "Richard Gadd",
-        "Half Man",
-        "HBO Max"
+        "Dutton Ranch",
+        "Taylor Sheridan"
       ],
-      "angle": "The TV Academy is attempting to shake up the Emmys by moving categories out of the main telecast.",
+      "angle": "Cole Hauser discusses the challenges of filming Dutton Ranch without Taylor Sheridan's direct involvement.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "rss:Deadline",
       "sources": [
         {
-          "outlet": "Variety",
+          "outlet": "Deadline",
           "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/emmys-shake-up-telecast-move-categories-tv-academy-trying-1236819841/",
-          "ageMin": 346,
-          "headline": "Shaking Up the Emmys By Moving Five Categories Out of the Telecast Might Not Work, But at Least the TV Academy Is Trying Something",
-          "summary": "Richard Gadd, change your flight plans. The creator and star of HBO Max’s “Half Man” wound up with the series’ only Emmy nomination this year — via his supporting actor in a limited/anthology series or movie nod. But as of last week, that category will no longer be presented during NBC’s Emmy telecast on Sept. [ ]"
+          "url": "https://deadline.com/2026/07/cole-hauser-challenges-dutton-ranch-without-taylor-sheridan-1237002246/",
+          "ageMin": 226,
+          "headline": "Cole Hauser On Challenges Of Making Dutton Ranch Without Taylor Sheridan: Everything Had Changed",
+          "summary": "Although the Duttons are still keeping things interesting on our screens, it s a whole new behind-the-scenes family for the cast of Taylor Sheridan s western TV franchise. Cole Hauser, who reprises his role as Rip Wheeler, recently opened up about the challenges of filming Dutton Ranch without parent series Yellowstone creator Taylor Sheridan at the helm, [ ]"
         }
       ],
-      "ageMin": 346,
+      "ageMin": 226,
       "_cand": {
-        "key": "rss:shaking-up-the-emmys-by-moving-five-categories-out-of-the-te",
+        "key": "rss:cole-hauser-on-challenges-of-making-dutton-ranch-without-tay",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -914,11 +1322,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Deadline"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Deadline",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -939,23 +1347,164 @@
       "tierClass": "C"
     },
     {
-      "id": "news-chris-anne-affleck-dies-at-83",
-      "slug": "chris-anne-affleck-mother-of-ben-and-casey-affleck-dies-at-83",
-      "title": "Chris Anne Affleck, Mother of Ben and Casey Affleck, Dies at 83",
+      "id": "news-big-brother-season-28-week-2-eviction",
+      "slug": "big-brother-season-28-rick-devens-hoh-reign-ends-in-week-2-eviction",
+      "title": "Big Brother Season 28: Rick Devens' HOH Reign Ends in Week 2 Eviction",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "big-brother-season-28-week-2-eviction",
+      "primaryKeyword": "Big Brother",
+      "primaryEntity": "Big Brother",
+      "entities": [
+        "Rick Devens",
+        "Julie Chen Moonves"
+      ],
+      "angle": "The latest eviction results from Big Brother Season 28.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/big-brother-season-28-week-2-eviction-cbs-1237002136/",
+          "ageMin": 285,
+          "headline": "Big Brother Season 28, Week 2 Eviction: Rick Devens HOH Reign Ends With Second Houseguest Evicted",
+          "summary": "SPOILER ALERT: This post contains details on Big Brother Season 28, Episode 8, which aired on Thursday, July 23. Julie Chen Moonves returned to host another live eviction of Big Brother, where a second housemate exited the house. With the Survivor alum Rick Devens in power as the Head of Household, it was a wild [ ]"
+        }
+      ],
+      "ageMin": 285,
+      "_cand": {
+        "key": "rss:big-brother-season-28-week-2-eviction-rick-devens-hoh-reign-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 50,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-jon-bon-jovi-cuts-msg-show-short-vocal-issues",
+      "slug": "jon-bon-jovi-cuts-nyc-concert-short-due-to-health-issue-vows-to-resche",
+      "title": "Jon Bon Jovi Cuts NYC Concert Short Due to Health Issue, Vows to Reschedule",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "health",
+      "sensitivity": "high",
+      "tier": "popular",
+      "eventSlug": "jon-bon-jovi-cuts-msg-show-short-vocal-issues",
+      "primaryKeyword": "jon bon jovi concert",
+      "primaryEntity": "Jon Bon Jovi",
+      "entities": [
+        "Bon Jovi"
+      ],
+      "angle": "Jon Bon Jovi abruptly ends Madison Square Garden concert due to vocal issues, vowing to reschedule.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/jon-bon-jovi-abruptly-ends-msg-show-vocal-issues-reschedule-1237002327/",
+          "ageMin": 80,
+          "headline": "Jon Bon Jovi Abruptly Ends MSG Show Amid Vocal Issues, Will Reschedule: You re Not Getting The Best Of Me",
+          "summary": "Two weeks into Bon Jovi s latest tour, the band had to reschedule a stop after Jon Bon Jovi had to end the show early. During Thursday s Madison Square Garden show, the frontman performed through vocal issues before pulling the plug early, telling the audience that he plans to reschedule the show at the famed New [ ]"
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/music/jon-bon-jovi-cut-nyc-concert-short-sinus-infection/",
+          "ageMin": 95,
+          "headline": "Jon Bon Jovi Cuts NYC Concert Short Due to Health Issue, Vows to Reschedule Show",
+          "summary": "The \"Livin' on a Prayer\" singer's Madison Square Garden residency marks his return to performing after a four-year hiatus The post Jon Bon Jovi Cuts NYC Concert Short Due to Health Issue, Vows to Reschedule Show appeared first on TheWrap ."
+        }
+      ],
+      "ageMin": 80,
+      "_cand": {
+        "key": "rss:jon-bon-jovi-abruptly-ends-msg-show-amid-vocal-issues-will-r",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 2,
+        "outlets": [
+          "Deadline",
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 25,
+        "type": 12,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-chris-affleck-death",
+      "slug": "chris-affleck-mother-of-oscar-winners-ben-and-casey-affleck-dies-at-83",
+      "title": "Chris Affleck, Mother of Oscar Winners Ben and Casey Affleck, Dies at 83",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "death",
       "sensitivity": "high",
-      "eventSlug": "chris-anne-affleck-dies-at-83",
-      "primaryKeyword": "Chris Anne Affleck death",
-      "primaryEntity": "Chris Anne Affleck",
+      "eventSlug": "chris-affleck-death",
+      "primaryKeyword": "Chris Affleck",
+      "primaryEntity": "Chris Affleck",
       "entities": [
         "Ben Affleck",
         "Casey Affleck"
       ],
-      "angle": "Chris Anne Affleck, mother to Oscar-winning actors Ben and Casey Affleck, has died at the age of 83.",
+      "angle": "Chris Affleck, mother of Oscar winners Ben and Casey Affleck, has died at 83.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -963,14 +1512,14 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/movies/movie-news/chris-anne-affleck-dead-ben-affleck-casey-affleck-mother-1236655678/",
-          "ageMin": 10,
-          "headline": "Chris Anne Affleck, Mother to Oscar Winners Ben and Casey Affleck, Dies at 83",
-          "summary": "Chris died on June 2 after a battle with pancreatic cancer, her family announced."
+          "ageMin": 70,
+          "headline": "Chris Affleck, Mother of Oscar Winners Ben and Casey Affleck, Dies at 83",
+          "summary": "A schoolteacher, she was recently diagnosed with pancreatic cancer and died June 2, her family announced."
         }
       ],
-      "ageMin": 10,
+      "ageMin": 70,
       "_cand": {
-        "key": "rss:chris-anne-affleck-mother-to-oscar-winners-ben-and-casey-aff",
+        "key": "rss:chris-affleck-mother-of-oscar-winners-ben-and-casey-affleck-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -989,78 +1538,12 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 74,
+      "priority": 60,
       "signals": {
-        "recency": 30,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
         "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "S"
-    },
-    {
-      "id": "news-jon-bon-jovi-health",
-      "slug": "jon-bon-jovi-abruptly-ends-msg-show-amid-vocal-issues-will-reschedule",
-      "title": "Jon Bon Jovi Abruptly Ends MSG Show Amid Vocal Issues, Will Reschedule",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "health",
-      "sensitivity": "high",
-      "tier": "popular",
-      "eventSlug": "jon-bon-jovi-health",
-      "primaryKeyword": "jon bon jovi concert",
-      "primaryEntity": "Jon Bon Jovi",
-      "entities": [
-        "Bon Jovi"
-      ],
-      "angle": "Jon Bon Jovi abruptly ends MSG concert due to sinus infection, vows to reschedule.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/jon-bon-jovi-abruptly-ends-msg-show-vocal-issues-reschedule-1237002327/",
-          "ageMin": 20,
-          "headline": "Jon Bon Jovi Abruptly Ends MSG Show Amid Vocal Issues, Will Reschedule: You re Not Getting The Best Of Me",
-          "summary": "Two weeks into Bon Jovi s latest tour, the band had to reschedule a stop after Jon Bon Jovi had to end the show early. During Thursday s Madison Square Garden show, the frontman performed through vocal issues before pulling the plug early, telling the audience that he plans to reschedule the show at the famed New [ ]"
-        }
-      ],
-      "ageMin": 20,
-      "_cand": {
-        "key": "rss:jon-bon-jovi-abruptly-ends-msg-show-amid-vocal-issues-will-r",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 24,
-        "corroboration": 12,
-        "status": 18,
-        "type": 12,
         "pop": 0,
         "breakout": 0,
         "big": 0,
