@@ -1,0 +1,181 @@
+{
+  "ts": "2026-07-24T21:01:11.416Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "90-day-fiance-stars-daughter-still-battling-after-brain-bleed",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.053515,
+  "costPerPublished": 0.053515,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 11,
+      "in": 27071,
+      "out": 7908,
+      "usd": 0.02682507
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 14,
+      "in": 24488,
+      "out": 5546,
+      "usd": 0.0046672
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 2,
+      "in": 2375,
+      "out": 24522,
+      "usd": 0.006530095
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2010,
+      "out": 1165,
+      "usd": 0.000534856
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 2,
+      "in": 7085,
+      "out": 2033,
+      "usd": 0.002628095
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 6,
+      "in": 26314,
+      "out": 14171,
+      "usd": 0.01222857
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 1,
+      "in": 2065,
+      "out": 8,
+      "usd": 0.00010097415
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4763,
+      "out": 428,
+      "usd": 0.0024989,
+      "ms": 3479
+    },
+    "background": {
+      "calls": 4,
+      "errors": 2,
+      "in": 2219,
+      "out": 1096,
+      "usd": 0.0006603000000000002,
+      "ms": 65621
+    },
+    "detailFinder": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2375,
+      "out": 24522,
+      "usd": 0,
+      "ms": 133706
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2010,
+      "out": 1165,
+      "usd": 0.00039059999999999995,
+      "ms": 33139
+    },
+    "writer": {
+      "calls": 8,
+      "errors": 1,
+      "in": 32294,
+      "out": 15840,
+      "usd": 0.014331720000000001,
+      "ms": 527020
+    },
+    "verify": {
+      "calls": 16,
+      "errors": 11,
+      "in": 12086,
+      "out": 1586,
+      "usd": 0.0052766,
+      "ms": 60333
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1753,
+      "out": 161,
+      "usd": 0.00023970000000000003,
+      "ms": 980
+    },
+    "claimAudit": {
+      "calls": 2,
+      "errors": 1,
+      "in": 2065,
+      "out": 8,
+      "usd": 0,
+      "ms": 90651
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1105,
+      "out": 364,
+      "usd": 0.00037791,
+      "ms": 9116
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 371,
+      "out": 96,
+      "usd": 0.0000755,
+      "ms": 637
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 188,
+      "out": 51,
+      "usd": 0.000039200000000000004,
+      "ms": 404
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2126,
+      "out": 95,
+      "usd": 0.0002506,
+      "ms": 2427
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 301,
+      "out": 41,
+      "usd": 0.0000465,
+      "ms": 525
+    }
+  }
+}
