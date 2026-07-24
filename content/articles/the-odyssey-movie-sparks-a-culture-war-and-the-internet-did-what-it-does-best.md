@@ -134,12 +134,35 @@ reactions:
   - speaker: A viewer
     date: '2026-07-02'
     quote: "I can't believe they haven't shut the comments down!!! \U0001F602"
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      watched the odyssey last night. film ruined by everyone speaking english
+      instead of ancient greek.
+  - speaker: A viewer
+    date: '2026-07-04'
+    quote: >-
+      Thank you hollywood for spending hundreds of millions of dollars so I can
+      have fun in the Youtube comment section.
+  - speaker: A viewer
+    date: '2026-07-02'
+    quote: >-
+      "Can't wait to watch a movie based on a famous Greek story- where are the
+      Greeks?"
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      i love the criticism of the odyssey that makes it clear theyve never read
+      it
+  - speaker: A viewer
+    date: '2026-07-01'
+    quote: Didn't know Bronze Age Greek Men talked like New Yorkers.
 fanConsensus: >-
   The audience reaction is a deeply divided triptych: one panel shows outrage
   over perceived cultural disrespect, another defends the film by pointing to
   Hollywood's history of inaccuracy, and the largest panel is covered in memes
   and meta-commentary about the absurdity of the fight itself.
-updatedCount: 2
+updatedCount: 3
 trendScore: 329
 signals:
   popularity: 1037
@@ -153,7 +176,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T12:31:11.692Z'
+dateModified: '2026-07-24T20:31:12.029Z'
 provenance:
   parentEventSlug: the-odyssey-2026
   primaryEntity: The Odyssey
@@ -167,7 +190,7 @@ imageAlt: Christopher Nolan The Odyssey movie poster 2026
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T12:31:11.692Z'
+updated: '2026-07-24T20:31:12.029Z'
 ---
 
 The reaction was instant — and loud, revealing a surprising culture war over a 3,000-year-old epic. The discourse is deeply divided, but threaded with humor and meta-commentary, creating a sprawling digital conversation that's as much about the audience as it is about the film.

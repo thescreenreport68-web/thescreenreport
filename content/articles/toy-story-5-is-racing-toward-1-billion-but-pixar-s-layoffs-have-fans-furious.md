@@ -152,11 +152,20 @@ reactions:
   - speaker: A viewer
     date: '2026-07-23'
     quote: I literally cried when bonnie made a and blaze is a good friend
+  - speaker: A viewer
+    date: '2026-06-23'
+    quote: I watch this in the movie it was amazing and I am watching it in Australia
+  - speaker: A viewer
+    date: '2026-06-23'
+    quote: 'Me too I am Toy story fan, but Toy story5 was on YouTube'
+  - speaker: A viewer
+    date: '2026-07-16'
+    quote: My favorite scene is smarty pants saying “number 1 “
 fanConsensus: >-
   Audience reaction is sharply divided, with celebration of the film's box
   office success being overwhelmingly overshadowed by anger and criticism toward
   Pixar and Disney for conducting layoffs simultaneously.
-updatedCount: 2
+updatedCount: 3
 trendScore: 45
 signals:
   popularity: 372
@@ -171,7 +180,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T12:31:11.692Z'
+dateModified: '2026-07-24T20:31:12.029Z'
 provenance:
   parentEventSlug: toy-story-5-2026
   primaryEntity: Toy Story 5
@@ -185,7 +194,7 @@ imageAlt: Toy Story 5 movie poster Woody Buzz Lightyear
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T12:31:11.692Z'
+updated: '2026-07-24T20:31:12.029Z'
 ---
 
 Pixar’s *[Toy Story 5](/movies/toy-story-5-box-office-day-27-adds-2-7-million-as-domestic-total-hits-413-3/)* is pulling off the kind of box office magic that studio execs dream about, sprinting toward the $1 billion mark worldwide. But instead of a victory lap, the film's financial triumph is landing with a thud for a big chunk of the audience. Why?
