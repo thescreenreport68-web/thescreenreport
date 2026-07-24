@@ -112,7 +112,12 @@ export const IG = {
   hardDailyCap: 20, // absolute (platform quota is 50-100; we stay far under)
   maxRunUsd: 8.0, // kill the run if spend exceeds this — headroom for one run that BUILDS 7 + attempts extras that hold (owner 2026-07-15). Real spend ≈ $0.25-0.4/reel → ~$3-4 for a full 7, well under this.
   maxJobUsd: 0.80, // park a single job if it alone exceeds this
-  freshDays: 10, // scout candidate window. Reels REPURPOSE already-published entertainment stories — a gossip/box-office piece from a week ago is still perfectly shareable (it's not breaking news), and a 4-day window left the gossip lane with 0 candidates (56/91 aged out). 10 days keeps a healthy slate. (owner 2026-07-12)
+  // FRESH-FIRST POOL (owner 2026-07-24): a day's 7 videos are chosen from THAT day's + the PREVIOUS
+  // day's articles (poolDays rolling window) — the old 10-day pool ranked 250-450 articles and let
+  // week-old evergreen outrank fresh news. freshDays is now only the WIDENING CEILING: a thin fresh
+  // pool (weekend, supply outage) widens one day at a time so 7/day never starves.
+  poolDays: 2,
+  freshDays: 10, // widening ceiling ONLY (owner 2026-07-24) — was the primary window until then
   categories: ["movies", "tv", "celebrity"],
   moviesFirstShare: 0.8, // ~80/20 movies-first bias in slate scoring
 

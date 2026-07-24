@@ -35,9 +35,9 @@ function inNewsOrGossipLane(data) {
   return !ft || VIDEO_FORMATS.has(ft);
 }
 
-export function listCandidates({ now = new Date(), lane = null } = {}) {
+export function listCandidates({ now = new Date(), lane = null, days = null } = {}) {
   const files = fs.readdirSync(IG.articlesDir).filter((f) => f.endsWith(".md"));
-  const cutoff = now.getTime() - IG.freshDays * 864e5;
+  const cutoff = now.getTime() - (days ?? IG.poolDays ?? IG.freshDays) * 864e5;
   const doneTopics = builtTopics(); // topic tokens of every already-built story (cross-run topic dedup)
   const out = [];
   for (const f of files) {
@@ -127,7 +127,21 @@ function interleaveBatch(pool, size = 18) {
 }
 
 export async function scout({ limit = 3, candidates = null, lane = null } = {}) {
-  const pool = candidates ?? listCandidates({ lane });
+  // FRESH-FIRST POOL (owner 2026-07-24): rank TODAY + YESTERDAY's articles, not the whole 10-day
+  // archive. Thin fresh pool (weekend, outage) → widen one day at a time up to freshDays so the
+  // 7/day guarantee survives holds + topic-dedup; every widening is visible in the run log.
+  let pool = candidates;
+  if (!pool) {
+    const minPool = IG.discovery?.minPool ?? 24;
+    let days = IG.poolDays ?? 2;
+    pool = listCandidates({ lane, days });
+    while (pool.length < minPool && days < (IG.freshDays ?? 10)) {
+      days++;
+      pool = listCandidates({ lane, days });
+    }
+    if (days > (IG.poolDays ?? 2)) console.log(`  scout: fresh pool thin — widened to ${days} days (${pool.length} candidates)`);
+    else console.log(`  scout: fresh pool ${pool.length} candidates (${days}-day window)`);
+  }
   if (!pool.length) return [];
   const weights = loadWeights();
   // POPULARITY ENGINE v2 (owner 2026-07-17): the old batch was the NEWEST 18 of a ~250-450 pool —
