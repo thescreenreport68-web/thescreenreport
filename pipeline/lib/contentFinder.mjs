@@ -121,6 +121,16 @@ export function extractQuotes(text) {
 // ENTITY + OR-ed keywords is far more reliable (Google News search accepts the same shape). Returns NULL for a
 // degenerate entity so we never fire a garbage query like '""' / '"the"' — caller then relies on seedUrls.
 const GQ_STOP = new Set("the a an of to in on for at by and or with as is are was were new movie film show series tv star stars cast news report reports latest dc mcu trailer today".split(" "));
+// One-at-a-time gate for the corroboration search (see the call site for the measured reason). A plain
+// promise chain: each caller waits for the previous one, so N concurrent topics issue N sequential
+// searches instead of N simultaneous ones that get rate-limited into returning nothing.
+let _corrChain = Promise.resolve();
+export function corrGate(fn) {
+  const run = _corrChain.then(fn, fn);
+  _corrChain = run.then(() => {}, () => {});
+  return run;
+}
+
 export function buildGdeltQuery(topic) {
   if (topic.gdeltQuery) return topic.gdeltQuery;
   const raw = (topic.query || topic.title || topic.primaryEntity || "").trim();
@@ -262,11 +272,25 @@ export async function findContent(topic, { maxSources = 6, maxExtract = 8, corro
   //    SEEDS — the outlet's own article URL(s) from FIND. CORR (only when corroborate=true) — a Google-News search
   //    + GDELT artlist to widen the bundle. Under the trust-the-source model corroborate is FALSE, so we extract
   //    ONLY the top outlet's story.
+  // 🔴 CORROBORATION MUST BE SERIALISED (measured 2026-07-24). Google News rate-limits concurrent
+  // searches, and the .catch(() => []) below turns that into SILENCE — every story collapses back to a
+  // single outlet and the pipeline looks like "there just isn't more material". Measured on one topic:
+  //   sequential  → 3 outlets / 10,766 chars      three in parallel → 1 outlet each
+  // That difference is the whole 800-word story, so the search runs through a global one-at-a-time gate.
+  // Inert when corroborate=false (the production default), so this cannot affect the live lane.
   const gq = corroborate ? buildGdeltQuery(topic) : null;
-  const [gnFound, gdelt] = corroborate ? await Promise.all([
-    gq ? gnewsSearch(gq, ent, { max: 6 }).catch(() => []) : [],
-    gq ? gdeltArticles(gq, { sinceHours: 168, maxRecords: 50 }).catch(() => []) : [],
-  ]) : [[], []];
+  let corrErr = null;
+  const [gnFound, gdelt] = corroborate ? await corrGate(async () => Promise.all([
+    gq ? gnewsSearch(gq, ent, { max: 6 }).catch((e) => { corrErr = `gnews: ${String(e?.message || e).slice(0, 60)}`; return []; }) : [],
+    gq ? gdeltArticles(gq, { sinceHours: 168, maxRecords: 50 }).catch((e) => { corrErr = `${corrErr ? corrErr + " · " : ""}gdelt: ${String(e?.message || e).slice(0, 50)}`; return []; }) : [],
+  ])) : [[], []];
+  // NEVER fail silently again: a corroboration that returns nothing is reported, so a rate-limit or a
+  // dead endpoint is visibly distinguishable from a story that genuinely has only one outlet.
+  if (corroborate) {
+    const got = gnFound.length + gdelt.length;
+    if (!got) console.log(`  ⚠ corroboration found NO extra outlets${corrErr ? ` (${corrErr})` : gq ? " (query ok, sources returned 0)" : " (no query built)"}`);
+    else console.log(`  corroboration: +${gnFound.length} gnews, +${gdelt.length} gdelt candidates`);
+  }
   const seedEntries = [
     ...(topic.seedUrls || []).map((u) => ({ url: u, outlet: null })),
     ...findSources.filter((s) => s.url).map((s) => ({ url: s.url, outlet: s.outlet || null })),

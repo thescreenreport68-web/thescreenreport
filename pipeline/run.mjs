@@ -15,6 +15,7 @@ import { recordPublished, slugKey, loadPublished, entityKey } from "./find/store
 import { recentArticles, findDuplicate, entityDayCap } from "./lib/dupGuard.mjs";
 import { findSameStory, myRecentArticles } from "./find/sameStory.mjs";
 import { assessGrounding } from "./lib/qualityFloor.mjs";
+import * as LONGFORM from "./lib/longform.mjs";
 import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
@@ -177,7 +178,12 @@ async function processTopic(topic, i) {
         // Pass FIND's full sources[] (outlet+tier+url+summary): the finder uses the inline summary text directly
         // AND extracts the real article body from the url, so the writer always has real reporting (Phase A).
         sources: topic.sources || [],
-      });
+      // LONGFORM (owner 2026-07-24, OFF in production): 800 words cannot be written honestly from ONE outlet's
+      // ~2100 chars (~350 words of source) — that gap is what padding fills, and padding is how invention gets in.
+      // So longform mode re-enables the multi-outlet gather that the trust-the-source simplification switched off:
+      // 2-3 outlets on the same story typically yields 3-4x the material plus DIFFERENT quotes and details. The
+      // trust model is unchanged — the top outlet is still ground truth; the others only add material.
+      }, LONGFORM.ON ? { corroborate: true } : undefined);
       // (corroborate defaults FALSE — trust-the-source: extract ONLY the top outlet's own article, no gnews/GDELT.)
       if (!cf.blocked && cf.sources?.length) {
         topic._bundle = cf;
@@ -201,6 +207,14 @@ async function processTopic(topic, i) {
     // such articles in one week earning ZERO Google impressions. Skipping here is both the quality fix and the
     // single biggest cost saving in the lane. Every decision logs its numbers so the thresholds can be tuned from
     // the observed distribution instead of guesswork.
+    // LONGFORM DECISION (flag-gated): does this story have the MATERIAL to justify asking for 800 words?
+    // Decided per story from what we actually gathered — never a blanket target. A story that cannot support
+    // the long form keeps the short form rather than being padded up to a number.
+    if (LONGFORM.ON) {
+      const g = LONGFORM.canGoLong(topic._bundle);
+      topic._longform = g.ok;
+      console.log(`  longform: ${g.ok ? "YES" : "no "} — ${g.reason}`);
+    }
     {
       const q = assessGrounding(topic._bundle);
       console.log(`  quality floor: ${q.chars} chars · ${q.sources} src · ${q.quotes || 0} quotes → ${q.skip ? "SKIP" : "ok"} (${q.reason})`);
@@ -564,6 +578,19 @@ async function processTopic(topic, i) {
         return rec;
       }
       const upd = merged;
+      // DRY-RUN DRAFTS (owner 2026-07-24: "test it, but without publishing"). A dry run produces the real
+      // article and writes NOTHING live; without this the draft was discarded and there was nothing to read.
+      // Drafts land OUTSIDE content/articles so they can never be picked up by the site build or a lane.
+      if (DRY && process.env.DRAFT_DIR) {
+        try {
+          const dd = path.resolve(process.env.DRAFT_DIR);
+          fs.mkdirSync(dd, { recursive: true });
+          fs.writeFileSync(path.join(dd, out.slug + ".md"), out.md);
+          const w = String(out.body || "").replace(/^#{1,6}\s.*$/gm, "").split(/\s+/).filter(Boolean).length;
+          const h2 = (out.body.match(/^##\s+\S/gm) || []).length, bl = (out.body.match(/^\s*[-*]\s+\S/gm) || []).length;
+          console.log(`  📄 DRAFT saved: ${w}w · ${h2} subheads · ${bl} bullets → ${path.relative(process.cwd(), path.join(dd, out.slug + ".md"))}`);
+        } catch (e) { console.log(`  ⚠ draft save failed: ${String(e?.message || e).slice(0, 60)}`); }
+      }
       if (!DRY) {
         // UPDATE writes to the EXISTING slug; a normal publish writes the new one. Everything downstream
         // (ledger record, status, audit, state file) is shared — only the destination and the keys differ.

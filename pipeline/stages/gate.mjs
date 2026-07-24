@@ -6,6 +6,7 @@ import { verifyGate } from "../lib/verifyGate.mjs";
 import { verifyQuotes } from "../lib/quoteGuard.mjs";
 import { specificsGuard } from "../lib/specificsGuard.mjs";
 import { assessGrounding, structuralFloors } from "../lib/qualityFloor.mjs";
+import * as LONGFORM from "../lib/longform.mjs";
 
 // PHASE C — classify a gate hardBlock string. BLOCK = an accuracy/grounding/must-have failure that must NEVER be
 // auto-published (a fabrication, a contradicted fact, an ungrounded stray the writer left in, a missing
@@ -138,7 +139,12 @@ export function deterministic(article, topic) {
   // for a genuinely leaner (but properly sourced) piece survive; the WORD FLOOR never drops below 250, and a
   // story with too little material is now SKIPPED upstream in run.mjs before any model is paid.
   const assessment = assessGrounding(topic._bundle);
-  const p = structuralFloors(base, assessment);
+  let p = structuralFloors(base, assessment);
+  // LONGFORM (flag-gated, OFF in production): when this story had the material for the long form, the
+  // 800-word floor and the structure requirements become REAL — unlike the legacy word floor they are
+  // enforced as brokenHold below, not filed as a "format nit" that publishes anyway.
+  const LF = LONGFORM.ON && topic._longform;
+  if (LF) p = { ...p, words: Math.max(p.words, LONGFORM.CFG.MIN_WORDS) };
 
   const hardBlocks = [];
   if (!article.title || !String(article.title).trim()) hardBlocks.push("no title"); // trim: a whitespace-only title slugifies to "" (audit 2026-07-06) — hold it as broken so it never reaches assemble
@@ -166,6 +172,14 @@ export function deterministic(article, topic) {
   const kwExact = kw ? deburr(prose).split(kw).length - 1 : 0;
   // A single long sentence is tolerable (burstiness); a genuine run-on is not. Overall density is caught
   // by Flesch (<40 blocks) + the avg-sentence/readability scores — so hard-block only true run-ons (>55).
+  // LONGFORM structure + padding checks. Readability stays the veto: these RAISE the bar for a long
+  // article, they never lower an existing one, and a padded 800-word draft is rejected outright so
+  // length can never buy itself with quality (owner: readability is the number one priority).
+  if (LF) {
+    for (const b of LONGFORM.structureReport(body).blocks) hardBlocks.push(b);
+    const pad = LONGFORM.paddingReport(body, { title: article.title });
+    for (const b of pad.blocks) hardBlocks.push(`padding — ${b}`);
+  }
   if (maxSentence > 55) hardBlocks.push(`a ${maxSentence}-word run-on sentence (>55 — split it)`);
   if (flesch < 40) hardBlocks.push(`Flesch ${flesch} < 40 (too dense to read comfortably)`);
   if (kwExact > 8) hardBlocks.push(`keyword stuffed (exact phrase ${kwExact}x)`);
@@ -341,7 +355,13 @@ export async function gate({ article, topic, judgeModel, runJudge = false }) {
   // det.hardBlocks split: a genuinely BROKEN article (no title / garbled / prompt-leak) is the only accuracy-side
   // hold; everything else (missing FAQ, keyword-not-in-title, a dense sentence, too few H2s) is a FORMAT nit worth one
   // retry, then published anyway (publish-everything — we never hold a faithful story over an SEO/structure nit).
-  const BROKEN_RX = /^no title$|garbled non-Latin|prompt-leak/i;
+  // LONGFORM (flag-gated) adds the length/structure/padding failures to the FATAL set. This is the
+  // mechanism that was missing: the legacy word floor is computed, reported as a "format nit", retried
+  // once and then PUBLISHED ANYWAY — which is how 110-word articles shipped against a 300-word profile.
+  // In longform mode "body Nw < 800", the structure requirements and the padding detector genuinely hold.
+  const BROKEN_RX = LONGFORM.ON && topic?._longform
+    ? /^no title$|garbled non-Latin|prompt-leak|^body \d+w <|subheadings <|bullet points <|generic heading|padding|filler phrases|near-duplicate|restated/i
+    : /^no title$|garbled non-Latin|prompt-leak/i;
   const brokenHold = (det.hardBlocks || []).filter((b) => BROKEN_RX.test(b));
   const formatBlocks = (det.hardBlocks || []).filter((b) => !BROKEN_RX.test(b));
 

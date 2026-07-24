@@ -1,4 +1,5 @@
 import { chat } from "../lib/openrouter.mjs";
+import * as LONGFORM from "../lib/longform.mjs";
 
 const SYSTEM = `You are a senior staff writer for The Screen Report, a premium Hollywood / English-language film, TV & celebrity NEWS site. You write for real fans first — accurate, genuinely useful, and so readable that people finish them and stay. (Good rankings follow a good reader experience; never write for the search engine.)
 
@@ -197,6 +198,18 @@ export async function generate({ topic, model, maxTokens = 6000, corrections = n
   // paid for, and then hard-blocked. Genuinely thin stories are now skipped upstream in run.mjs before any
   // model runs; what reaches the writer has the material to clear the floor honestly.
   const QUALITY_MIN_WORDS = Number(process.env.QUALITY_MIN_WORDS ?? 250);
+
+  // ── WORD BUDGET + SHAPE ────────────────────────────────────────────────────────────────────────
+  // Three modes. LONGFORM is flag-gated and only offered when this story's MATERIAL supports it
+  // (topic._longform, decided in run.mjs from the gathered chars/outlets) — we never ask for 800 words
+  // from 350 words of source, because that gap is exactly what padding fills.
+  const wordBudget = (LONGFORM.ON && topic._longform)
+    ? `${LONGFORM.SHAPE}
+
+WORD BUDGET: ${LONGFORM.CFG.MIN_WORDS}-${LONGFORM.CFG.TARGET_WORDS} words — ${LONGFORM.CFG.MIN_WORDS} is a HARD MINIMUM and a shorter draft is rejected. You have material from MULTIPLE outlets plus verified structured facts below, so reach that length by COVERING MORE OF IT — never by padding. Required structure: at least ${LONGFORM.CFG.MIN_H2} descriptive subheadings and at least ${LONGFORM.CFG.MIN_BULLETS} bullet points. ⚠ READABILITY IS JUDGED FIRST: if you cannot reach ${LONGFORM.CFG.MIN_WORDS} grounded words without repeating yourself, hedging, or reaching for filler ("it remains to be seen", "stay tuned"), write the shorter honest piece instead — padded drafts are detected and rejected automatically.`
+    : thinGrounding
+      ? `WORD BUDGET: the grounding is on the leaner side — write a TIGHT, fully-grounded ${QUALITY_MIN_WORDS}-380-word piece. It MUST clear ${QUALITY_MIN_WORDS} words (anything shorter is not publishable at all), but reach that length ONLY from what the sources below actually contain — never by adding background, career history or franchise context they don't state. Padding beyond the sources is exactly how fabrications happen: if the material genuinely cannot support ${QUALITY_MIN_WORDS} grounded words, write what IS supported and let it be rejected rather than inventing to fill the gap.`
+      : "WORD BUDGET: solid grounding — write the form's natural length (~450-650 words), every fact from the sources below.";
   // SANITY floor only (2026-07-04, NEWS_AUTOMATION_SPEC §3): NOT a padding target. The old 220/350 floor forced the
   // writer to pad a thin source up to a length — and padding IS how invention gets in. A faithful rewrite of a top
   // outlet's story is naturally long enough; a genuinely thin source becomes a SHORT, tight, fully-grounded brief and
@@ -245,9 +258,7 @@ STORY STATUS: ${topic.verification?.status || topic.storyStatus || "n/a"} — CO
 SENSITIVITY: ${topic.sensitivity || "normal"} — if "high" (death / legal / health / allegation) use STRICTLY neutral verbs (reportedly, confirmed, announced) and BAN any playful, speculative, or sensational phrasing.${topic.demandQuery ? `
 SEARCHERS' OWN WORDS: real people reached this site searching "${topic.demandQuery}". Where it fits NATURALLY and TRUTHFULLY, prefer that vocabulary and word order in the title and metaTitle — it is how your reader actually phrases this subject. ⛔ STRICT LIMITS: this supplies PHRASING ONLY, never facts. Do NOT introduce any name, work, number, claim or angle from that query that the REFERENCE FACTS below do not state — a search phrase is not a source. If the query implies something the facts don't support (a ranking, a rumour, a different film), IGNORE it completely. Accuracy outranks phrasing every time.` : ""}
 
-WORD BUDGET: ${thinGrounding
-    ? `the grounding is on the leaner side — write a TIGHT, fully-grounded ${QUALITY_MIN_WORDS}-380-word piece. It MUST clear ${QUALITY_MIN_WORDS} words (anything shorter is not publishable at all), but reach that length ONLY from what the sources below actually contain — never by adding background, career history or franchise context they don't state. Padding beyond the sources is exactly how fabrications happen: if the material genuinely cannot support ${QUALITY_MIN_WORDS} grounded words, write what IS supported and let it be rejected rather than inventing to fill the gap.`
-    : "solid grounding — write the form's natural length (~450-650 words), every fact from the sources below."}
+${wordBudget}
 
 ⛔ NUMBERS & NAMED SPECIFICS — the #1 rule (this is what gets articles held): NEVER state a NUMBER or hard specific
 unless that EXACT value appears in the REFERENCE FACTS below. This means: box-office grosses, opening/5-day figures,
