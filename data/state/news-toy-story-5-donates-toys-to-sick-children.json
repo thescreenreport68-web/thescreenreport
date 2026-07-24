@@ -1,0 +1,69 @@
+{
+  "id": "news-toy-story-5-donates-toys-to-sick-children",
+  "slug": "toy-story-5-has-given-away-18-000-toys-to-sick-kids",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 2,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 2,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Toy Story 5",
+    "work": {
+      "title": "Toy Story 5",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 244,
+      "h2s": 3,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 43,
+      "avgSentence": 16,
+      "flesch": 45,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "body ≥ 220w"
+    ]
+  },
+  "ms": 76520
+}
