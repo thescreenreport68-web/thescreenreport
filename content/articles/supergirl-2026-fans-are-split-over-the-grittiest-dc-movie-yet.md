@@ -141,11 +141,23 @@ reactions:
       impression the movie was considered a flop. The blame directed at people
       not wanting to see a woman lead hero. Story was amazing, soundtrack was
       good and the feels hit from the beginning.
+  - speaker: Erin Ptah
+    date: '2026-07-24'
+    quote: >-
+      Erin Watches: Supergirl (2026) I liked it! Saw it a couple weeks ago,
+      typed up reactions over the next couple days, am now editing them together
+      into a single post. There are some valid complaints. The internet reaction
+      hasn't been as reality-detached as, say, The
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      The Supergirl: Woman of Tomorrow comic is really great. It's amazing that
+      DC made such a bad movie out of it to be honest.
 fanConsensus: >-
   Audiences are passionately divided, with one side loving the film's gritty,
   fresh feel and Jason Momoa's Lobo, while the other side condemns it as a
   derivative John Wick clone with a cruel plot point involving Krypto.
-updatedCount: 1
+updatedCount: 2
 trendScore: 167
 signals:
   popularity: 388
@@ -160,7 +172,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T10:31:04.753Z'
+dateModified: '2026-07-24T18:31:07.131Z'
 provenance:
   parentEventSlug: supergirl-2026
   primaryEntity: Supergirl
@@ -174,7 +186,7 @@ imageAlt: Milly Alcock Supergirl 2026 movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T10:31:04.753Z'
+updated: '2026-07-24T18:31:07.131Z'
 ---
 
 From its grimy, sweat-stained aesthetic to a plot point that has dog lovers on high alert, the film has sparked a fierce and immediate divide.
