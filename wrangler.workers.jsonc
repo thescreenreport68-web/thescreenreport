@@ -8,6 +8,10 @@
 {
   "name": "thescreenreport-site",
   "compatibility_date": "2026-07-18",
+  // keep the workers.dev mirror PERMANENTLY off — wrangler re-enables it on every deploy
+  // unless pinned here (caught by /verify-fixes 2026-07-24: indexable duplicate host).
+  "workers_dev": false,
+  "preview_urls": false,
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
