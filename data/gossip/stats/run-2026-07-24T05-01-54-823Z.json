@@ -1,0 +1,138 @@
+{
+  "ts": "2026-07-24T05:01:54.823Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "josh-duhamels-newborn-smile-sparks-a-fatherhood-wake-up-call",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 1,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.02394,
+  "costPerPublished": 0.02394,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 22,
+      "in": 29923,
+      "out": 10514,
+      "usd": 0.0071979
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 6,
+      "in": 12260,
+      "out": 1602,
+      "usd": 0.007683
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1054,
+      "out": 427,
+      "usd": 0.000167112
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 5,
+      "in": 16236,
+      "out": 4364,
+      "usd": 0.00889196
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2297,
+      "out": 238,
+      "usd": 0.0012840999999999998,
+      "ms": 1495
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1054,
+      "out": 427,
+      "usd": 0.00017172,
+      "ms": 8359
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 15539,
+      "out": 4039,
+      "usd": 0.00494723,
+      "ms": 114984
+    },
+    "verify": {
+      "calls": 5,
+      "errors": 0,
+      "in": 9963,
+      "out": 1364,
+      "usd": 0.006398899999999999,
+      "ms": 7816
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1463,
+      "out": 180,
+      "usd": 0.00021830000000000002,
+      "ms": 876
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 697,
+      "out": 325,
+      "usd": 0.00027081,
+      "ms": 41399
+    },
+    "headlineJudge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 411,
+      "out": 83,
+      "usd": 0.00007430000000000002,
+      "ms": 1354
+    },
+    "seoAuditor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 201,
+      "out": 72,
+      "usd": 0.0000489,
+      "ms": 2720
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2164,
+      "out": 101,
+      "usd": 0.0002568,
+      "ms": 1426
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 303,
+      "out": 41,
+      "usd": 0.000046700000000000003,
+      "ms": 455
+    }
+  }
+}
