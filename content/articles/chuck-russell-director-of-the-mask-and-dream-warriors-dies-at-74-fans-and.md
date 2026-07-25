@@ -105,11 +105,50 @@ reactions:
       RIP Chuck Russell. If you like your action well-paced and your effects
       practical, you owe it to yourself to revisit his vision of The Blob.
       deadline.com/2026/07/chuc...
+  - speaker: Jim Carrey
+    connection: actor in The Mask
+    platform: statement
+    quote: >-
+      I consider it a privilege to have worked with Chuck Russell, who during
+      the shooting of ‘The Mask,’ created an ebullient, childlike atmosphere of
+      wonder and camaraderie on his set. The entire cast and crew were touched
+      and inspired by his playfulness. Every one of us has been many years
+      blessed by that buoyant and timeless moment. I consider ‘The Mask’ one of
+      the jewels of my creative life. Thank you, Chuck.
+  - speaker: Jim Carrey
+    connection: Director of 'The Mask'
+    platform: interview
+    date: 'July 24, 2026'
+    quote: >-
+      I consider it a privilege to have worked with Chuck Russell, who, during
+      the shooting of 'The Mask,' created an ebullient, childlike atmosphere of
+      wonder and camaraderie on his set.
+  - speaker: Jim Carrey
+    connection: Director of 'The Mask'
+    platform: interview
+    date: 'July 24, 2026'
+    quote: >-
+      The entire cast and crew were touched and inspired by his playfulness.
+      Every one of us has been many years blessed by that buoyant and timeless
+      moment. I consider 'The Mask' one of the jewels of my creative life. Thank
+      you, Chuck.
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      Ghanian poster for A NIGHTMARE ON ELM STREET 3: DREAM WARRIORS (1987), the
+      best movie in the series Directed by Chuck Russell - R.I.P.
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      RIP Chuck Russell. Between things like Nightmare on Elm Street 3: Dream
+      Warriors, The Blob, Eraser (and even The Scorpion King,) Russell could be
+      great at delivering these outsized genre crowd-pleasers. A king of the
+      kind of film you rent from the video store on
 fanConsensus: >-
   Fans and colleagues are celebrating Chuck Russell as a uniquely versatile and
   genuinely kind filmmaker who left a lasting mark on horror, comedy, and action
   cinema.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   outlets: 4
@@ -126,7 +165,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T22:32:19.487Z'
+dateModified: '2026-07-25T10:31:04.174Z'
 provenance:
   parentEventSlug: chuck-russell-director-of-jim-carrey-s-the-mask-dies-at-74
   primaryEntity: Chuck Russell
@@ -141,6 +180,7 @@ imageAlt: Chuck Russell director portrait The Mask premiere
 imageCredit: Photo via PMC
 imageWidth: 1296
 imageHeight: 730
+updated: '2026-07-25T10:31:04.174Z'
 ---
 
 The film world is mourning the loss of a versatile and beloved director. The news has sparked a wave of tributes that celebrate not just his eclectic filmography but also his reputation as a warm and generous collaborator.

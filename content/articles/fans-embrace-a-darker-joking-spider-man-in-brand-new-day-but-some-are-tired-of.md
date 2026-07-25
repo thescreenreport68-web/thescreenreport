@@ -91,11 +91,43 @@ reactions:
     quote: >-
       She handled the pressure of the character that she's playing with such
       grace. And the third act, she steals the movie. It is so good.
+  - speaker: Destin Daniel Cretton
+    platform: interview
+    quote: >-
+      I really gravitated toward exploring a character who is, by every sense of
+      the word, completely alone. The character hasn’t really experienced this
+      before in his life. I’ve been through those stages. And I think it’s a
+      subject that a lot of people will relate to right now.
+  - speaker: Destin Daniel Cretton
+    platform: interview
+    quote: >-
+      We tried a lot of different songs, not just for what the song is about,
+      but also just for something that creates the right vibe for that sequence.
+      I'm a big fan of TV on the Radio. I saw them play at Madison Square
+      Garden. It was one of my favorite New York experiences when I visited, so
+      that song has always been special to me. And when we plopped it into that
+      montage, it just felt, and not only felt right for the montage, it felt
+      right for setting the tone of what this movie is going to be.
+  - speaker: A viewer
+    date: '2026-07-21'
+    quote: >-
+      SPIDER-MAN: BRAND NEW DAY – Final Trailer (Peter’s Journey)
+      www.youtube.com/watch?v=P3uI...
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Zendaya when asked if fans will cry watching ‘SPIDER-MAN: BRAND NEW DAY’
+      “Yes... I cried multiple times.” (via youtu.be/ychUz_5blJI?...)
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      ONE WEEK BEFORE SPIDER-MAN BRAND NEW DAY MOVIE'S RELEASE!!! I'M SOOOO
+      HYPED, LET'S GOOOOOO!!! — (i also made a meme lmao) —
 fanConsensus: >-
   Fans are largely positive about the film's mature, emotionally weighty take on
   Spider-Man, celebrating his resilient humor amidst trauma, though a notable
   minority is vocally tired of the character's perpetual suffering.
-updatedCount: 0
+updatedCount: 1
 trendScore: 25
 signals:
   popularity: 100
@@ -110,7 +142,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-20T04:33:46.147Z'
+dateModified: '2026-07-25T10:31:04.174Z'
 provenance:
   parentEventSlug: spider-man-brand-new-day-2026
   primaryEntity: 'Spider-Man: Brand New Day'
@@ -124,6 +156,7 @@ imageAlt: Spider-Man Brand New Day poster Tom Holland
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-25T10:31:04.174Z'
 ---
 
 The first wave of fan reactions to **[Spider-Man](/movies/spider-man-brand-new-day-has-fans-split-hulk-fears-downey-s-villain-tease-and/): Brand New Day** is here, and yeah—the internet went into full meltdown. But not everyone is on the same page. The discourse is split between emotional connection and superhero fatigue, and it's not cooling off anytime soon.
