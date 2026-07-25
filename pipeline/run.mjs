@@ -21,7 +21,7 @@ import { mergeUpdate } from "./stages/updateArticle.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
-import { dedupeSentences, trimIncomplete, dropOrphanHeadings, fixInlineBullets } from "./lib/polish.mjs";
+import { dedupeSentences, trimIncomplete, dropOrphanHeadings, fixInlineBullets, dropStubTitles, fixSpacedPunctuation } from "./lib/polish.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getPersonFacts, personFactsBlock, getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
@@ -39,6 +39,10 @@ const ART = path.resolve(__dirname, "../content/articles");
 const STATE = path.resolve(__dirname, "../data/state");
 fs.mkdirSync(STATE, { recursive: true });
 const DRY = process.argv.includes("--dry-run");
+// Body-safe variant of fixSpacedPunctuation: the meta version collapses ALL whitespace, which would
+// destroy markdown line structure. In the body we only close the gap before terminal punctuation
+// (the "*Variety* ." artifact left behind when inline emphasis is stripped).
+const fixSpacedPunctuation2 = (md) => String(md || "").replace(/[ \t]+([.,;:!?])/g, "$1");
 const ONLY = (process.argv.find((a) => a.startsWith("--only=")) || "").split("=")[1];
 // FIND→MAKE seam: --from-find loads the autonomously-discovered ranked queue (data/find/queue.json)
 // instead of the hand-typed topics.mjs. This is the single integration point (FIND_HALF_PLAN §3).
@@ -546,7 +550,7 @@ async function processTopic(topic, i) {
 
     // FINAL POLISH (deterministic, before assemble): collapse duplicated sentences and trim any truncated/
     // cut-orphaned fragment — can never add a fact.
-    if (pass && article?.body) article.body = fixInlineBullets(dropOrphanHeadings(trimIncomplete(dedupeSentences(article.body))));
+    if (pass && article?.body) article.body = fixSpacedPunctuation2(dropStubTitles(fixInlineBullets(dropOrphanHeadings(trimIncomplete(dedupeSentences(article.body))))));
 
     // ── HERO IMAGE — LAST MILE (2026-07-03, audit D9: previously picked BEFORE the gate, so og:image fetches +
     // the vision call + measure downloads were fully wasted on every held article — 4/6 in the last run). Picked

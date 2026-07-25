@@ -6,6 +6,7 @@ const matter = require("gray-matter");
 import { TAXONOMY, AUTHOR_SLUG } from "../config.mjs";
 import { addInternalLinks, isRemovedForm } from "../lib/internalLinks.mjs";
 import { finishMetaTitle, finishMetaDescription, driftGuard, entityFidelity, slugifyTitle } from "../lib/seoFinish.mjs";
+import { cleanQuoteText, fixSpacedPunctuation, dropStubTitles } from "../lib/polish.mjs";
 import { anchorGuards, cleanSourcesSection, sanitizeBareUrls, normalizeStaleToday } from "../lib/factGuards.mjs";
 
 import { fileURLToPath } from "node:url";
@@ -107,10 +108,11 @@ export function assemble({ article, classification, image, topic, dateISO }) {
   // These live only in <head> + JSON-LD, so they never affect on-page readability.
   const bodyPlain = body.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/^#+\s.*$/gm, " ").replace(/[*_`>]/g, " ").replace(/\s+/g, " ").trim();
   const metaTitle = finishMetaTitle({ model: article.metaTitle, title: article.title });
-  const metaDescription = finishMetaDescription({ model: article.metaDescription, dek: article.dek, bodyText: bodyPlain.slice(0, 1500) });
+  const metaDescription0 = finishMetaDescription({ model: article.metaDescription, dek: article.dek, bodyText: bodyPlain.slice(0, 1500) });
   // metaDescription must NOT be a byte-copy of the dek (measured 2026-07-24: they were identical, wasting
   // the SERP snippet — the two fields do different jobs and Google sees the duplicate). When the finisher
   // falls back to the dek, rebuild it from the body's opening prose instead.
+  const metaDescription = fixSpacedPunctuation(metaDescription0);
   const _dek = String(article.dek || "").trim();
   const metaDesc = metaDescription.trim() === _dek && _dek
     ? finishMetaDescription({ model: "", dek: "", bodyText: bodyPlain }) || metaDescription
@@ -216,6 +218,14 @@ export function assemble({ article, classification, image, topic, dateISO }) {
           ? Object.fromEntries(Object.entries(v).map(([kk, x]) => [kk, stripMd(x)]))
           : v;
   // merge the per-niche structured fields the generator produced (only when present)
+  // PULL QUOTE (owner 2026-07-25 — quotes must stand out and read cleanly). NewsPullQuote renders its
+  // own curly quotes and its own attribution line, so a stored text of «"…me,"» became a quote-inside-a-
+  // quote ending on a dangling comma. Store the bare sentence; keep terminal . ! ? which is real.
+  if (article.pullQuote && article.pullQuote.text) {
+    article.pullQuote = { ...article.pullQuote, text: cleanQuoteText(article.pullQuote.text) };
+    if (article.pullQuote.attribution) article.pullQuote.attribution = fixSpacedPunctuation(article.pullQuote.attribution);
+  }
+  if (Array.isArray(article.pullQuotes)) article.pullQuotes = article.pullQuotes.map(cleanQuoteText).filter(Boolean);
   for (const k of ["verdict", "rating", "prosCons", "infoCard", "entries", "tldr", "spoiler", "factPanel", "filmography", "whereToWatch",
     "youtubeId", "releaseInfo", "keyMoments", "sourceOutlet", "sourceUrl", "pullQuotes", "tweetIds", "consensus",
     "newsType", "pullQuote", "boxOffice", "records",

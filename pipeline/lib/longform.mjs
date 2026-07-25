@@ -65,8 +65,19 @@ earning its length from the REFERENCE FACTS. Use the story's own words for the h
 5. WHAT'S NEXT (heading): dated next steps — production start, release, the next confirmed milestone. If the
    sources give no next step, say plainly what remains unconfirmed rather than inventing a timeline.
 
+QUOTES: pick the ONE strongest verbatim quote and set it as the pullQuote field (bare sentence, NO surrounding
+quote marks and NO trailing speech-tag comma — the page adds its own styling and attribution line). Put
+the speaker + their relationship in pullQuote.attribution ("Ania Russell, his wife"). Other verbatim
+quotes stay inline in the prose, attributed by name. Never invent or trim a quote's wording.
+
 RULES: 4-6 headings total. At least one bullet list (section 2), a second only if it genuinely helps.
-Headings are descriptive and searchable ("When does it start filming?"), never generic ("Details", "More Info").
+HEADINGS — each one must NAME SOMETHING FROM THIS STORY (a person, a film, a number, a decision).
+A heading built only from scaffolding words is empty and is REJECTED, question-mark or not:
+  ✗ "What Are the Key Details?"  ✗ "What We Know So Far"  ✗ "More Information"  ✗ "What Happened?"
+  ✓ "The Mask, and the Fight to Cast Cameron Diaz"   ✓ "What Happens to His Unfinished Films"
+  ✓ "Who Else Is in the Cast?"   ✓ "When Does Filming Start in Toronto?"
+A reader-question heading is GOOD when the question is specific to this story. Do NOT stuff the keyword
+into headings — write what the section actually says; specificity is what makes it both readable and findable.
 LENGTH COMES FROM COVERAGE, NEVER FROM PADDING: more verified ground, not more adjectives. If you find yourself
 restating a point, adding "it remains to be seen", or describing what you cannot confirm — STOP and write shorter.
 A tight, honest 500 words is far better than 800 words of filler, and filler is rejected automatically.`;
@@ -126,15 +137,41 @@ export function paddingReport(body, { title = "" } = {}) {
 }
 
 // ── STRUCTURE CHECK ──────────────────────────────────────────────────────────────────────────────
+
+// ── HEADING QUALITY ─────────────────────────────────────────────────────────────────────────────
+// SCAFFOLDING = words that describe an article's plumbing rather than its subject. A heading made of
+// nothing but these is empty, in question form or not.
+const SCAFFOLD = new Set(["what", "why", "how", "when", "who", "where", "which", "are", "is", "was", "were", "the", "a", "an", "of", "for", "to", "in", "on", "and", "or", "s", "it", "this", "that", "there", "so", "far", "now", "next", "more", "other", "all", "any", "some", "key", "detail", "details", "info", "information", "overview", "background", "context", "summary", "conclusion", "thought", "thoughts", "final", "point", "points", "thing", "things", "know", "known", "knew", "need", "happen", "happened", "happening", "story", "news", "update", "updates", "recap", "everything", "matter", "matters", "mean", "means", "meaning", "take", "takeaway", "takeaways", "look", "looking", "about", "you", "we", "us", "reaction", "reactions", "said", "say", "says"]);
+export const h2list = (body) => (String(body || "").match(/^##\s+(.+)$/gm) || []).map((h) => h.replace(/^##\s+/, "").trim());
+
+// TRUE when a heading names nothing specific — i.e. every significant word is scaffolding.
+// "What Are the Key Details?"        → every word scaffolding                     → GENERIC
+// "What We Know So Far"              → every word scaffolding                     → GENERIC
+// "The Mask, and the Fight to Cast Cameron Diaz" → Mask/Fight/Cast/Cameron/Diaz   → SPECIFIC
+// "The Director's Defining Career"   → Director/Defining/Career                   → SPECIFIC
+export function isGenericHeading(h) {
+  const words = String(h || "").toLowerCase().replace(/[^a-z0-9\s'-]/g, " ").split(/\s+/).filter(Boolean);
+  if (!words.length) return true;
+  const meaningful = words.filter((w) => w.length > 2 && !SCAFFOLD.has(w) && !SCAFFOLD.has(w.replace(/'s$/, "")));
+  return meaningful.length === 0;
+}
+
 export function structureReport(body, cfg = CFG) {
   const b = String(body || "");
   const h2 = (b.match(/^##\s+\S/gm) || []).length;
   const bullets = (b.match(/^\s*[-*]\s+\S/gm) || []).length;
-  const generic = (b.match(/^##\s+(details|more info(rmation)?|overview|background|conclusion|summary|final thoughts)\s*$/gim) || []).length;
+  // 🔴 GENERIC HEADINGS (owner 2026-07-25: "that contributes nothing to the SEO or our article").
+  // The old check matched only bare one-word headings, so "What Are the Key Details?" walked straight
+  // through — it is not literally "Details". The real test is not a keyword list, it is whether the
+  // heading NAMES SOMETHING FROM THE STORY. A heading built entirely from scaffolding words tells a
+  // reader nothing and no one searches it; a heading containing a real person, film, number or
+  // decision does both jobs at once WITHOUT keyword-stuffing (which is what wrecks readability).
+  const genericHeads = h2list(b).filter(isGenericHeading);
+  const generic = genericHeads.length;
   const blocks = [];
   if (h2 < cfg.MIN_H2) blocks.push(`${h2} subheadings < ${cfg.MIN_H2}`);
   if (bullets < cfg.MIN_BULLETS) blocks.push(`${bullets} bullet points < ${cfg.MIN_BULLETS}`);
-  if (generic) blocks.push(`${generic} generic heading(s) ("Details"/"Overview" — name what the section actually says)`);
+  if (generic) blocks.push(`${generic} generic heading(s) [${genericHeads.map((h) => `"${h}"`).join(", ")}] — name the specific person/film/number the section is about`);
   return { h2, bullets, generic, blocks, ok: blocks.length === 0 };
 }
 

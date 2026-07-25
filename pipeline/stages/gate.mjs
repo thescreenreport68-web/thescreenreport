@@ -370,7 +370,11 @@ export async function gate({ article, topic, judgeModel, runJudge = false }) {
   // In longform mode "body Nw < 800", the structure requirements and the padding detector genuinely hold.
   const BROKEN_RX = LONGFORM.ON && topic?._longform
     ? /^no title$|garbled non-Latin|prompt-leak|^body \d+w <|subheadings <|bullet points <|generic heading|padding|filler phrases|near-duplicate|restated/i
-    : /^no title$|garbled non-Latin|prompt-leak/i;
+    // 🔴 The 600-word minimum is FATAL on EVERY path, not just longform (owner 2026-07-25). My earlier
+    // "600 is fatal" change landed only on the longform branch — so when longform DECLINED (a small
+    // story, exactly the 314-word Assante case) an under-floor body was still a retry-then-publish nit.
+    // A minimum that only applies to big stories is not a minimum.
+    : /^no title$|garbled non-Latin|prompt-leak|^body \d+w < \d+/i;
   const brokenHold = (det.hardBlocks || []).filter((b) => BROKEN_RX.test(b));
   const formatBlocks = (det.hardBlocks || []).filter((b) => !BROKEN_RX.test(b));
 

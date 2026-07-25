@@ -48,7 +48,7 @@ console.log("=== 3. PADDING DETECTOR — the safety net that lets length rise wi
 
 console.log("=== 4. STRUCTURE — the subheadings and bullets that are missing today ===");
 {
-  const good = "Lead paragraph.\n\n## What we know so far\n- Pedro Pascal as Reed Richards\n- Filming from March 2027\n- Pinewood Studios, London\n- Eight episodes\n\n## Who else is in it\ntext\n\n## Why this matters now\ntext\n\n## What happens next\ntext";
+  const good = "Lead paragraph.\n\n## Who Pedro Pascal Plays\n- Pedro Pascal as Reed Richards\n- Filming from March 2027\n- Pinewood Studios, London\n- Eight episodes\n\n## Who Else Joins the Cast\ntext\n\n## Why Pinewood Matters for the Budget\ntext\n\n## When Filming Starts in March\ntext";
   ok(structureReport(good).ok, `a properly shaped article passes (${structureReport(good).h2} subheads, ${structureReport(good).bullets} bullets)`);
 
   // the live reality measured on 2026-07-24: ~2 subheadings, ZERO bullets

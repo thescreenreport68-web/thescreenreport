@@ -146,3 +146,43 @@ export function fixInlineBullets(md) {
   }
   return out.join("\n").replace(/\n{3,}/g, "\n\n");
 }
+
+// ── FINISH-QUALITY REPAIRS (from the 2026-07-25 autonomous-draft review) ─────────────────────────
+// Each of these is a defect the reviewed article actually shipped. All deterministic — a prompt rule
+// cannot guarantee punctuation or markup, so these run on every article regardless of the writer.
+
+// 1. PULL-QUOTE TEXT. The NewsPullQuote component supplies its own curly quotes and its own attribution
+// line, so the stored text must be the BARE sentence. The draft stored:
+//     "He was such a wonderful guy, he meant everything to me,"
+// — wrapping quote marks AND the speech-tag comma baked in, which renders as a quote-inside-a-quote
+// ending on a dangling comma. Strip the wrapper, then the trailing comma the source used only because
+// a "she said" followed it. A terminal . ! ? is kept — that is real sentence punctuation.
+export function cleanQuoteText(s) {
+  let t = String(s || "").trim();
+  for (let i = 0; i < 3 && /^["“”'‘’]|["“”'‘’]$/.test(t); i++) t = t.replace(/^["“”'‘’]+|["“”'‘’]+$/g, "").trim();
+  return t.replace(/[,;:]+$/, "").trim();
+}
+
+// 2. SPACE BEFORE PUNCTUATION. Stripping inline emphasis (*Variety* → Variety) leaves the space behind,
+// so the meta description ended "...confirmed the news to Variety ." — visible in the Google snippet.
+export function fixSpacedPunctuation(s) {
+  return String(s || "")
+    .replace(/\s+([.,;:!?])/g, "$1")     // "Variety ." → "Variety."
+    .replace(/\(\s+/g, "(").replace(/\s+\)/g, ")")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+// 3. ONE- OR TWO-CHARACTER "TITLES". The draft listed «films titled *Hyperia* and *b*». TMDB has no such
+// credit (checked: 4 credits, none short), so "b" is an artifact — of a trim, or of the source's own
+// markup. A real film title is never 1-2 characters, so drop the item wherever it appears in a list,
+// and if it was the ONLY item, drop the clause rather than leave "films titled and".
+export function dropStubTitles(md) {
+  let out = String(md || "");
+  // "*Hyperia* and *b*"  →  "*Hyperia*"      /  "*a* and *Hyperia*" → "*Hyperia*"
+  out = out.replace(/\s*(?:,|and)\s+\*[A-Za-z0-9]{1,2}\*(?=[\s.,;)]|$)/g, "");
+  out = out.replace(/\*[A-Za-z0-9]{1,2}\*\s+and\s+/g, "");
+  // a lone stub left as the only named title → remove the naming clause entirely
+  out = out.replace(/,?\s*(?:including|titled|named)\s+\*[A-Za-z0-9]{1,2}\*(?=[\s.,;)]|$)/g, "");
+  return out.replace(/\s{2,}/g, " ").replace(/\s+([.,;:])/g, "$1");
+}
