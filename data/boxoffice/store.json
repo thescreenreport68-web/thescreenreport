@@ -2330,10 +2330,10 @@
    "key": "joy-ride-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "joy-ride-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 161 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T04:06:16.687Z",
-   "dead": true,
+   "reason": "words 167 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-25T05:07:52.374Z",
+   "dead": false,
    "expiresAt": "2026-07-25T04:06:16.687Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 34,
+ "zeroStreak": 35,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.32325
+  "usd": 0.34182
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784953948475
+  "lastMs": 1784955751318
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2584,7 +2584,8 @@
    "enola holmes 3": 1,
    "regretting you": 1,
    "kpop demon hunters": 1,
-   "death on the nile": 1
+   "death on the nile": 1,
+   "joy ride": 1
   }
  },
  "failures": {
@@ -2594,6 +2595,9 @@
     "# unverified claim(s) cut# unrecovered"
    ],
    "death on the nile": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "joy ride": [
     "words # < # (owner-set ~#-word minimum)"
    ]
   }
