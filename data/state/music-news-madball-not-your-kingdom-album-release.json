@@ -1,0 +1,68 @@
+{
+  "id": "music-news-madball-not-your-kingdom-album-release",
+  "slug": "madball-drops-new-album-not-your-kingdom-shares-don-t-misstep-video",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 65-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 3,
+      "broken": [
+        "body 554w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Madball",
+    "work": {
+      "title": "Not Your Kingdom",
+      "year": null,
+      "medium": null
+    },
+    "outlet": "nextmosh.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 633,
+      "h2s": 5,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 65,
+      "avgSentence": 23,
+      "flesch": 47,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 65-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 329975
+}
