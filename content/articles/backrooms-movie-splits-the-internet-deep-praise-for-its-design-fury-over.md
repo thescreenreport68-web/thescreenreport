@@ -147,12 +147,35 @@ reactions:
   - speaker: A viewer
     date: '2026-06-20'
     quote: The funniest part was the man is turning the lamp on and off
+  - speaker: A viewer
+    date: '2026-07-15'
+    quote: >-
+      It feels right to watch this movie on YouTube. The series started here to
+      begin with.
+  - speaker: A viewer
+    date: '2026-07-14'
+    quote: >-
+      This movie is like if you described a horror movie to someone who's never
+      seen one before, and then asked them to make one.
+  - speaker: A viewer
+    date: '2026-07-15'
+    quote: Kane really has hit big in life. What a film.
+  - speaker: A viewer
+    date: '2026-07-14'
+    quote: >-
+      I took my dad to see this movie with me on release. Minute seven, he was
+      curious. Minute ninety, he was flummoxed. Minute 6,429 afterward, he had
+      every question in the entire universe, which led him to the YouTube
+      series. Kane Parsons is NO JOKE,
+  - speaker: A viewer
+    date: '2026-06-01'
+    quote: Clark gotta be the most obsessed one with the backrooms
 fanConsensus: >-
   The audience is sharply divided between deep appreciation for the film's
   atmospheric craft and thematic depth, and intense anger over A24's copyright
   enforcement against fan content, creating two parallel and often conflicting
   conversations.
-updatedCount: 2
+updatedCount: 3
 trendScore: 183
 signals:
   popularity: 453
@@ -167,7 +190,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T18:31:07.131Z'
+dateModified: '2026-07-25T00:31:09.821Z'
 provenance:
   parentEventSlug: backrooms-2026
   primaryEntity: Backrooms
@@ -182,7 +205,7 @@ imageAlt: Backrooms movie 2026 A24 film poster
 imageCredit: Photo via Ziff
 imageWidth: 1280
 imageHeight: 720
-updated: '2026-07-24T18:31:07.131Z'
+updated: '2026-07-25T00:31:09.821Z'
 ---
 
 The release of the *[Backrooms](/movies/backrooms-movie-sends-fans-into-a-frenzy-between-a24-s-monster-and-copyright/)* movie sent fans into a frenzy — but not all in the same direction. One half of the conversation is a deep, analytical dive into the film’s haunting production design and its exploration of memory and isolation. The other is a boiling cauldron of anger, directed squarely at studio A24 for a wave of copyright strikes against fan-made Backrooms content. The result is a uniquely divided discourse, where celebration of cinematic craft exists side-by-side with accusations of corporate overreach.
