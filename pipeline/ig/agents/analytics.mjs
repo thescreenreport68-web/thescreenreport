@@ -114,7 +114,13 @@ export async function collect({ hoursMarks = [3, 24, 72, 168] } = {}) {
     // LIVE-PROBED 2026-07-16: Zernio's API exposes NO metrics fields at all (no views/reach/likes on
     // any endpoint), so retrying forever would just append null rows every 6h. If Zernio ships an
     // analytics surface later, drop this and the endpoint probe picks it up.
-    const gotData = [row.views, row.reach, row.likes, row.comments].some((v) => v != null);
+    // A ZERO is not data (owner 2026-07-25, from the YouTube reach audit): Buffer's metrics lag —
+    // whole publish-day cohorts read 0 views at the 24h mark and ~1,000 at 72h. The old check
+    // (v != null) accepted 0 as a real reading, marked that mark AND every lower mark collected,
+    // and never retried — so the ledger recorded "0 views" permanently and the Monday learner
+    // trained hookStyle/slot/segment weights on phantom failures. A zero-views row is now treated
+    // as NOT-YET-REPORTED and retried on the next sweep (the row is still appended for the record).
+    const gotData = row.views > 0 || [row.reach, row.likes, row.comments].some((v) => v > 0);
     appendInsight(row);
     rows.push(row);
     if (gotData || platform !== "youtube") p.collected = [...new Set([...(p.collected || []), ...hoursMarks.filter((h) => h <= mark)])];
