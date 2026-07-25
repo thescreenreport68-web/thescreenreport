@@ -2540,10 +2540,10 @@
    "key": "avatar-the-last-airbender-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "avatar-the-last-airbender-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 154 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T14:03:58.585Z",
-   "dead": true,
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-25T16:37:00.981Z",
+   "dead": false,
    "expiresAt": "2026-07-25T14:03:58.585Z"
   },
   {
@@ -2551,19 +2551,19 @@
    "eventSlug": "worst-neighbor-ever-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
    "reason": "5 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-22T14:09:38.026Z",
-   "dead": true,
+   "tries": 2,
+   "at": "2026-07-25T16:38:19.301Z",
+   "dead": false,
    "expiresAt": "2026-07-25T14:09:38.026Z"
   },
   {
    "key": "raw-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "raw-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 152 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T14:13:55.755Z",
-   "dead": true,
+   "reason": "words 162 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-25T16:40:28.474Z",
+   "dead": false,
    "expiresAt": "2026-07-25T14:13:55.755Z"
   },
   {
@@ -2725,10 +2725,10 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 13,
-   "at": "2026-07-25T16:12:03.768Z",
+   "tries": 14,
+   "at": "2026-07-25T16:33:28.432Z",
    "dead": true,
-   "expiresAt": "2026-07-28T16:12:03.768Z"
+   "expiresAt": "2026-07-28T16:33:28.432Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
@@ -2757,14 +2757,14 @@
    "at": "2026-07-25T15:06:06.466Z"
   }
  ],
- "zeroStreak": 8,
+ "zeroStreak": 9,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.40806
+  "usd": 0.4689
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784995808890
+  "lastMs": 1784997064501
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2784,7 +2784,10 @@
    "joy ride": 1,
    "sniper: no nation": 1,
    "little house on the prairie": 1,
-   "i will find you": 1
+   "i will find you": 1,
+   "avatar: the last airbender": 1,
+   "worst neighbor ever": 1,
+   "raw": 1
   }
  },
  "failures": {
@@ -2847,6 +2850,15 @@
    ],
    "i will find you": [
     "# unverified claim(s) cut# unrecovered"
+   ],
+   "avatar: the last airbender": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "worst neighbor ever": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "raw": [
+    "words # < # (owner-set ~#-word minimum)"
    ]
   }
  }
