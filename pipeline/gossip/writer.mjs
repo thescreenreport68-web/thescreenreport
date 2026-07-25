@@ -185,7 +185,7 @@ Then build the piece from the sections below. This is a MENU, NOT A FORM — inc
   • The other side — the denial, the silence, the counter-claim
   • The reaction — what other people actually said, quoted and attributed
   • What happens next — the court date, the release, the thing to watch for
-Order them however the story reads best. Pull one punchy line out as the pull-quote.
+Order them however the story reads best. Pick the strongest VERBATIM quote as the pull-quote (it renders as a display card with the speaker credited, so it must be someone's actual words — never your own prose, never a line you already used as the opening sentence).
 CRAFT (each of these measurably drives search + reader trust — do them all where the bundle supports it):
 - Sentence 2 of the lede = the sourcing tag + a role appositive ("..., a source close to the 'Euphoria' star told PEOPLE").
 - Include at least ONE concrete NUMBER from the bundle (an age, a date, a dollar figure, a count) and — when a quote card exists — at least ONE attributed quote.
@@ -213,7 +213,7 @@ Return STRICT JSON:
   "metaTitle": "SEARCH title: 45–55 chars, STARTS with the main person's NAME then the hook — a COMPLETE phrase (never cut mid-word / mid-name / mid-quote), no site name. Front-load the name so it wins in Google; may differ from the display title. Every specific must be bundle-supported.",
   "metaDescription": "SEARCH snippet: 140–160 chars, a teaser that earns the click — the hook PLUS one concrete fact from the story (a name / number / what happened). One or two COMPLETE sentences ending in a period. Must be REWORDED, NOT identical to the dek. Only bundle-supported facts.",
   "body": "markdown article (${range.label}) INCLUDING the mandatory non-confirmation sentence verbatim if required; use one or two '## ' subheads when it helps",
-  "pullQuote": "one short punchy line from the story (a quote or a vivid sentence) for display",
+  "pullQuote": {"text":"the single most striking VERBATIM quote from the bundle — copied word-for-word, no ellipsis, roughly 8-40 words, and NOT the same line you used to open the article", "attribution":"who said it, and where if it matters (e.g. \"Nivea, to People\" / \"Kenny Niedermeier on Instagram\")"},
   "keyTakeaways": ["EXACTLY 3 short factual takeaway bullets — REQUIRED, never empty"],
   "faq": [{"q":"a real question a reader would google about THIS story","a":"a SHORT, REAL factual ANSWER from the bundle"}, "... 2 to 5 FAQ — pick the count by how much the story SUPPORTS (a rich, multi-fact story → 4–5; a thin one → 2), never pad to a fixed number. Ask questions the article ANSWERS (the who/what/when/where/why of the CONFIRMED facts) and give each a real answer. Do NOT ask about things nobody knows yet or answer with 'not confirmed'/'unknown' — every FAQ must teach the reader something."],
   "claims": [{"text":"the claim","sourceQuote":"the verbatim bundle text that supports it"}],
@@ -259,7 +259,7 @@ ${issueList.map((p, i) => `${i + 1}. ${p}`).join("\n") || "(none specified)"}
 ${frame.needsDisclaimer ? `\nKEEP this exact sentence in the body: "${frame.disclaimerText}"` : ""}
 
 Return the FULL corrected article as STRICT JSON, same shape:
-{ "title":"...","dek":"...","metaTitle":"45–55, name-first, complete","metaDescription":"140–160, teaser + a fact, full sentence","body":"...","pullQuote":"...","keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
+{ "title":"...","dek":"...","metaTitle":"45–55, name-first, complete","metaDescription":"140–160, teaser + a fact, full sentence","body":"...","pullQuote":{"text":"verbatim quote","attribution":"who said it"},"keyTakeaways":["..."],"faq":[{"q":"...","a":"..."}],
   "claims":[{"text":"...","sourceQuote":"verbatim bundle text"}],"whatWeKnow":["..."],"whatWeDont":["..."],"denial":null,"statusLabel":"${frame.uiLabel}" }`;
   return { system: CORRECTION_SYS, user };
 }

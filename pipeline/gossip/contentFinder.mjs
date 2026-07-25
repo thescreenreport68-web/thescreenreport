@@ -166,15 +166,24 @@ export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extr
   try {
     const extra = await findUrlsImpl(topic, { fetchImpl, seedDomain: [...seedDomains][0] || "" });
     let extracted = 0, attempts = 0;
-    // Cap extraction ATTEMPTS, not just successes: a rate-limited extractor that keeps failing must not make us
-    // try (and time out on) every outlet. Tiering still uses ALL found outlets — it needs no per-source fetch.
-    const maxAttempts = maxCorroborating + 1;
+    // 🔴 2026-07-25 — WHY EVERY LIVE ARTICLE WAS SINGLE-SOURCE. A direct test of this function turned
+    // 1 source into 3 (3.6k → 16.4k chars), yet live ticks logged "NO second outlet found" every time.
+    // The old cap counted ATTEMPTS, and a FAILED extraction burned one: three dead candidates in a row
+    // (paywall, short page, reader hiccup) ended the search at zero while good candidates sat unqueued.
+    // Now the budget is WALL-CLOCK, so failures are cheap and we keep going until we have what we need
+    // or the clock says stop — the tick stays bounded, but a bad first candidate no longer decides it.
+    const deadline = Date.now() + Number(process.env.GOSSIP_CORROBORATE_MS ?? 45000);
+    const maxAttempts = Number(process.env.GOSSIP_CORROBORATE_TRIES ?? 6);
+    const why = [];
     for (const e of extra || []) {
       if (seedDomains.has(e.domain)) continue;
       bundle.corroboratingOutlets.push({ outlet: e.outlet || e.domain, domain: e.domain, tier: tierOfDomain(e.domain) });
-      if (extracted >= maxCorroborating || attempts >= maxAttempts) continue; // keep collecting outlets for tiering; stop fetching bodies
+      if (extracted >= maxCorroborating || attempts >= maxAttempts || Date.now() > deadline) continue; // keep collecting outlets for tiering; stop fetching bodies
       attempts++;
       const ex = await extractClean(e.url, { fetchImpl, extractImpl });
+      if (!ex) why.push(`${e.domain}: unreadable`);
+      else if (ex.text.length < 400) why.push(`${e.domain}: only ${ex.text.length} chars`);
+      else if (!mentionsEntity(ex.text)) why.push(`${e.domain}: no mention of the subject`);
       if (ex && ex.text.length >= 400 && mentionsEntity(ex.text)) {
         // ex.url = Jina's resolved publisher URL (for a Google link); fall back to the original for direct URLs.
         bundle.sources.push({ outlet: e.outlet || e.domain, url: ex.url || e.url, tier: tierOfDomain(e.domain), title: ex.title || e.title || "", text: ex.text, quotes: [], corroborating: true });
@@ -182,6 +191,7 @@ export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extr
         extracted++;
       }
     }
-  } catch { /* corroboration is enrichment only — never fatal */ }
+    if (!extracted && why.length) console.log(`[corroborate] tried ${attempts}: ${why.slice(0, 4).join("; ")}`);
+  } catch (e) { console.log(`[corroborate] search failed: ${String(e?.message || e).slice(0, 70)}`); }
   return refreshBundleCounts(bundle);
 }

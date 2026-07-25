@@ -6,7 +6,7 @@
 //     140–160 full sentence ≤160) from seo.mjs;
 //   • any failure falls back to the writer's original field — this stage can only improve, never break.
 // The reader-facing H1 (article.title) is NOT touched here: it already passed the accuracy gates.
-// All LLM traffic through agentChat("headline"/"headlineJudge") — metered, cheap, fail-open.
+// All LLM traffic through agentChat("headline") — one call, metered, cheap, fail-open.
 import { agentChat } from "./models.mjs";
 import { validMetaTitle, validMetaDesc } from "./seo.mjs";
 
@@ -55,14 +55,6 @@ Return STRICT JSON:
 { "candidates": [ { "metaTitle": "...", "metaDescription": "...", "dek": "..." }, { ... }, { ... } ] }`;
 }
 
-const JUDGE_SYS = `You are a search-CTR judge for celebrity news. Score each candidate SET 0-100 for: would a real searcher click it (name-first, concrete, specific), does it read as a complete natural phrase (no cut-offs), zero clickbait/superlatives, and metaDescription distinct from the dek. Output STRICT JSON only.`;
-
-function buildJudgePrompt(cands) {
-  return `CANDIDATE SETS:
-${cands.map((c, i) => `[${i}] metaTitle: ${c.metaTitle}\n    metaDescription: ${c.metaDescription}\n    dek: ${c.dek}`).join("\n")}
-
-Return STRICT JSON: { "best": <index>, "scores": [n, n, n], "why": "one clause" }`;
-}
 
 // Refine article.metaTitle / metaDescription / dek in place (field-by-field, each hard-gated; originals kept
 // on any failure). Returns { changed: [fields], candidates } for the run report. Fail-open everywhere.
@@ -74,15 +66,12 @@ export async function refineHeadline({ article, bundle, topic, chatImpl } = {}) 
     let cands = (Array.isArray(data?.candidates) ? data.candidates : []).filter((c) => c && (c.metaTitle || c.metaDescription || c.dek));
     if (!cands.length) return out;
     out.candidates = cands.length;
-    // judge picks the best set (fail-open to candidate 0)
-    let bestIdx = 0;
-    if (cands.length > 1) {
-      try {
-        const { data: j } = await agentChat("headlineJudge", { system: JUDGE_SYS, user: buildJudgePrompt(cands), json: true }, opts);
-        if (Number.isInteger(j?.best) && j.best >= 0 && j.best < cands.length) bestIdx = j.best;
-      } catch { /* keep 0 */ }
-    }
-    const best = cands[bestIdx];
+    // 💰 2026-07-25 — the separate judge call is REMOVED. It asked a model to rank candidates the SAME
+    // model had just written one call earlier — self-grading, and the real filtering is done by the
+    // DETERMINISTIC gates below (validMetaTitle / validMetaDesc / grounded / distinct-from-dek), which
+    // reject a bad candidate no matter how it scored. The generator now returns its own strongest first.
+    // Every candidate still gets its shot: we walk them in order and take the first that passes the gates.
+    const best = cands[0];
     // the grounding corpus: the article's own reader-facing text + the bundle sources
     const corpus = [article.title, article.dek, article.body, ...(bundle?.sources || []).map((s) => s.text)].join("\n");
     const names = [topic?.primaryEntity, ...(topic?.coSubjects || [])].filter(Boolean);

@@ -11,7 +11,6 @@
 import { seoMetaTitle, buildMetaDescription, validMetaTitle, validMetaDesc, clampDesc, JUNK_TAG } from "./seo.mjs";
 import { numbersGrounded, namesGrounded } from "./headline.mjs";
 import { SCAFFOLD_RE, ABSENCE_RE } from "./proseGuards.mjs";
-import { agentChat } from "./models.mjs";
 
 const MD_RE = /\*\*|__|(?<!\w)[*_](?=\w)|`|^#+\s/m;
 const stripMd = (s) => String(s ?? "").replace(/\*\*|__|`/g, "").replace(/^#+\s*/gm, "").replace(/\s+/g, " ").trim();
@@ -119,19 +118,3 @@ export function auditArticleSeo({ fm, body = "", topic = {}, bundle = null }) {
   return { fm, issues };
 }
 
-// ── Semantic pass (flash-lite, metered role "seoAuditor") — REPORT-ONLY: does the snippet earn its click,
-// is the keyword natural, is the unconfirmed framed honestly? Never blocks; feeds the stats ledger. ──
-export async function semanticSeoPass({ fm, topic, chatImpl } = {}) {
-  try {
-    const user = `SEARCH SNIPPET AUDIT for a celebrity article. Judge these stored fields:
-metaTitle: ${fm.metaTitle}
-metaDescription: ${fm.metaDescription}
-H1: ${fm.title}
-rumorStatus: ${fm.rumorStatus || ""}
-SUBJECT: ${topic?.primaryEntity || ""}
-
-Return STRICT JSON: { "clickEarned": <bool — does the snippet promise exactly what an article like this delivers>, "stuffing": <bool — is any phrase unnaturally repeated for SEO>, "honestLabel": <bool — if the status is a rumor/report, does the snippet avoid stating it as settled fact>, "note": "one short clause" }`;
-    const { data } = await agentChat("seoAuditor", { system: "You audit search snippets for a news site. Output strict JSON only.", user, json: true }, chatImpl ? { chatImpl } : {});
-    return data && typeof data === "object" ? data : null;
-  } catch { return null; }
-}

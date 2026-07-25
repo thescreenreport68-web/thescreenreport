@@ -17,11 +17,18 @@ export const ABSENCE_RE = /\b((neither|none of them|no one|nobody)\b[\w\s'’-]{
 // Abbreviation-safe sentence splitting: never split after a single-capital initial ("David H. Koch")
 // or a common title abbreviation — the naive split truncated a live lede at "the David H."
 const ABBREV_END = /(\b[A-Z]|\b(?:Mr|Mrs|Ms|Dr|Jr|Sr|St|vs|No|Inc|Ltd|U\.S|U\.K))\.$/;
+// 🔴 BRAND NAMES THAT END IN PUNCTUATION. A live lede published as "On July 23, the 51-year-old
+// former E!" — the splitter ended the sentence at "E!", orphaned the rest, and a per-sentence pass
+// then dropped the orphan. Entertainment copy is full of these, so a split is only real when what
+// FOLLOWS looks like a new sentence (capital + lowercase word), not a continuation like "News host".
+const BRAND_BANG = /(?:^|\s)(?:E|Yahoo|Jeopardy|Wendy|Guess|Yum|Toys ?R Us)!$/i;
+const CONTINUES = /^(?:News|Online|Entertainment|Network|Channel|Magazine|Studios?|Media|TV|Sports|Live|Finance|Mail|Answers|Music|host|anchor|correspondent|star|alum|personality|reporter)\b/;
 export function splitSentences(text) {
   const rough = String(text || "").split(/(?<=[.!?]["”']?)\s+/);
   const out = [];
   for (const part of rough) {
-    if (out.length && ABBREV_END.test(out[out.length - 1])) out[out.length - 1] += " " + part;
+    const prev = out[out.length - 1];
+    if (out.length && (ABBREV_END.test(prev) || (BRAND_BANG.test(prev) && CONTINUES.test(part)))) out[out.length - 1] += " " + part;
     else out.push(part);
   }
   return out;
@@ -119,6 +126,57 @@ export function bareMonthWithoutYear(body, { now = new Date() } = {}) {
     return m[0].trim().split(/\s+/).slice(0, 3).join(" ");
   }
   return null;
+}
+
+// ── SECTION CONTRACT (2026-07-25) ────────────────────────────────────────────────────────────────
+// Live articles showed three distinct section failures, all from the same cause — the writer needed
+// somewhere to put leftover material, so the section menu became a filing cabinet:
+//   • "## The Reaction" carrying NO reaction from anyone (3 of 5 live articles)
+//   • invented headings that were never on the menu ("What's On the Feed", "The Reaction and the Invite")
+//   • "## The Other Side" used for content unrelated to the story
+// A heading is a PROMISE to the reader. These check it is kept; run.mjs turns them into surgical fixes.
+export const MENU_SECTIONS = ["What Was Said", "How We Got Here", "The Other Side", "The Reaction", "What Happens Next"];
+const headingsOf = (body) => [...String(body || "").matchAll(/^##\s+(.+?)\s*$/gm)].map((m) => ({ name: m[1].trim(), at: m.index }));
+
+/** Section bodies keyed by heading, in document order. */
+export function sectionsOf(body) {
+  const text = String(body || ""), hs = headingsOf(text), out = [];
+  for (let i = 0; i < hs.length; i++) {
+    const start = text.indexOf("\n", hs[i].at);
+    const end = i + 1 < hs.length ? hs[i + 1].at : text.length;
+    out.push({ name: hs[i].name, body: text.slice(start < 0 ? hs[i].at : start, end).trim() });
+  }
+  return out;
+}
+
+/** Headings that are not on the menu (case-insensitive). */
+export function offMenuHeadings(body) {
+  const menu = new Set(MENU_SECTIONS.map((x) => x.toLowerCase()));
+  return sectionsOf(body).map((s) => s.name).filter((n) => !menu.has(n.toLowerCase()) && !/^sources$/i.test(n));
+}
+
+/** "The Reaction" with no quoted words in it is a broken promise. */
+export function emptyReactionSection(body) {
+  const s = sectionsOf(body).find((x) => /^the reaction/i.test(x.name));
+  if (!s) return null;
+  return /["\u201C][^"\u201D\n]{15,}["\u201D]/.test(s.body) ? null : s.name;
+}
+
+// A closing flourish that states no fact — "Aging isn't a failure. Motherhood changes bodies. And
+// authenticity, even when it's messy, is its own kind of power." The writer is told never to write one;
+// this catches it when it does. Only the FINAL paragraph is judged, and only when it carries no
+// quote, no number, no date and no attribution — i.e. nothing but sentiment.
+const HAS_SUBSTANCE = /["\u201C]|\b\d|\b(?:said|told|says|reported|according to|per|confirmed|announced|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|January|February|March|April|May|June|July|August|September|October|November|December)\b/;
+const FLOURISH = /\b(?:is its own kind of|isn't a failure|not as a wound|but as content|textbook|says everything|speaks for itself|one thing is (?:clear|certain)|time will tell|remains to be seen|the rest is|and that,? in the end|what happens next is anyone's guess)\b/i;
+export function conclusionFlourish(body) {
+  const paras = String(body || "").trim().split(/\n{2,}/).filter((p) => p.trim() && !/^#{1,6}\s/.test(p.trim()));
+  const last = paras[paras.length - 1];
+  if (!last) return null;
+  const words = last.split(/\s+/).filter(Boolean).length;
+  if (words < 8 || words > 70) return null;
+  if (HAS_SUBSTANCE.test(last)) return null;                 // it reports something — keep it
+  if (!FLOURISH.test(last) && words > 30) return null;       // long and unmarked ⇒ probably real prose
+  return last.slice(0, 140);
 }
 
 export function relativeTimeUnanchored(body) {

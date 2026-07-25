@@ -65,7 +65,53 @@ export function dedupeSentences(body, threshold = 0.72) {
     });
     return keptS.join(" ").replace(/\s{2,}/g, " ").trim();
   });
-  return spanDeduped.filter(Boolean).join("\n\n");
+  return spanDeduped.filter(Boolean).map(collapseRepeatedRuns).filter(Boolean).join("\n\n");
+}
+
+// 🔴 2026-07-25 — A LIVE ARTICLE PUBLISHED A QUOTE TWICE, MID-SENTENCE:
+//   “I'm 41 years old … I'm going to age. I'm going to get older. "I'm 41 years old … I'm going to
+//    age. I am fatter because I've had three kids," She didn't sugarcoat it…
+// Nothing upstream could see it. The sentence deduper compares WHOLE sentences and these two spans
+// only OVERLAP. The quoted-span deduper needs a CLOSING mark, and the first “ here is never closed —
+// the writer reopened with a straight " instead. So the duplicate slipped every existing net.
+//
+// This collapses a word-run that repeats verbatim inside one paragraph, keeping the FIRST occurrence.
+// Deliberately conservative: 8+ words, same paragraph, exact match after normalising quote characters
+// — long enough that legitimate prose never repeats it by accident.
+const RUN_MIN_WORDS = 8;
+export function collapseRepeatedRuns(para) {
+  let text = String(para || "");
+  if (!text.trim()) return text;
+  const key = (w) => w.toLowerCase().replace(/[\u2018\u2019']/g, "'").replace(/[\u201C\u201D"]/g, '"').replace(/[^a-z0-9'"$%.,!?-]/g, "");
+  for (let guard = 0; guard < 6; guard++) {
+    const words = text.split(/(\s+)/);                       // keep separators so we can rebuild exactly
+    const idx = [];                                          // indices of real words
+    for (let i = 0; i < words.length; i++) if (words[i].trim()) idx.push(i);
+    if (idx.length < RUN_MIN_WORDS * 2) break;
+    const norm = idx.map((i) => key(words[i]));
+    let cut = null;
+    for (let a = 0; a + RUN_MIN_WORDS <= norm.length && !cut; a++) {
+      const probe = norm.slice(a, a + RUN_MIN_WORDS).join(" ");
+      if (probe.replace(/[^a-z0-9]/g, "").length < 18) continue;   // too little substance to judge
+      for (let b = a + RUN_MIN_WORDS; b + RUN_MIN_WORDS <= norm.length; b++) {
+        if (norm.slice(b, b + RUN_MIN_WORDS).join(" ") !== probe) continue;
+        // extend the match as far as it stays identical, then drop the SECOND copy
+        let n = RUN_MIN_WORDS;
+        while (b + n < norm.length && a + n < b && norm[a + n] === norm[b + n]) n++;
+        cut = { from: idx[b], to: idx[b + n - 1] };
+        break;
+      }
+    }
+    if (!cut) break;
+    words.splice(cut.from, cut.to - cut.from + 1);
+    text = words.join("").replace(/\s{2,}/g, " ").trim();
+  }
+  // the removal can strand an opening quote mark with no partner — balance it rather than ship a stray
+  const opens = (text.match(/[\u201C]/g) || []).length, closes = (text.match(/[\u201D]/g) || []).length;
+  if (opens > closes) text = text.replace(/[\u201C]/, "");
+  const straight = (text.match(/"/g) || []).length;
+  if (straight % 2 === 1) text = text.replace(/"(?=[^"]*$)/, "");
+  return text.replace(/\s+([,.;:!?])/g, "$1").replace(/\s{2,}/g, " ").trim();
 }
 
 // CUT-AND-PUBLISH (owner rule: the gate never blocks — it corrects, and as a last resort CUTS the offending

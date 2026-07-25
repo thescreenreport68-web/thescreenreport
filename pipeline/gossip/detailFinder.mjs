@@ -21,6 +21,23 @@ import { agentChat, AGENTS } from "./models.mjs";
 const norm = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
 const bundleText = (bundle) => (bundle?.sources || []).map((s) => s.text || "").join("\n\n");
 
+// 🔴 2026-07-25 — THE STORY ZONE. A live bar-exam article published an entire section about the
+// subject's grandmother and sex in front of a fireplace. That text was real and it WAS in the source,
+// so every grounding check passed it — but it came from the "Trending Stories" teasers E! appends to
+// the end of the page. Measured on the actual scrape: the real article occupied the first 25%; the
+// unrelated teasers began at 86%.
+//
+// A scraped page is ALWAYS the article first, boilerplate last. The writer already only ever sees the
+// first 2,500 chars of each source, so the tail reached the article by exactly one route: extracted
+// "facts". Extract from the front of each source and that route closes. Nothing is lost — no writing
+// stage ever reads past this point either.
+const STORY_ZONE = Number(process.env.GOSSIP_STORY_ZONE ?? 0.65);
+const storyZone = (text) => {
+  const t = String(text || "");
+  return t.length <= 3500 ? t : t.slice(0, Math.max(3500, Math.floor(t.length * STORY_ZONE)));
+};
+const storyText = (bundle) => (bundle?.sources || []).map((s) => storyZone(s.text)).join("\n\n");
+
 /** Keep only items whose substance actually appears in the source corpus. */
 function groundedOnly(items, corpusNorm, { key = null, minLen = 12 } = {}) {
   const out = [];
@@ -62,6 +79,31 @@ function dedupeItems(items, { key = null, cap = 60 } = {}) {
   return out;
 }
 
+// 🔴 2026-07-25 — A LIVE BAR-EXAM STORY PUBLISHED AN ENTIRE SECTION ABOUT THE SUBJECT'S GRANDMOTHER
+// AND SEX IN FRONT OF A FIREPLACE. The scraped page carried unrelated "related story" blurbs further
+// down; the extractor faithfully turned them into facts (they ARE in the source text, so the grounding
+// check passed them), and the depth pass then pressed the writer to "use the unused material". The
+// writer invented a section to hold it.
+//
+// A fact must be about THIS STORY, not merely about this PERSON. The anchor is the story core: the
+// headline/claim plus the OPENING of the source — the real article always leads the page; the sidebar
+// junk sits below it. Sharing only the celebrity's name is exactly the off-topic signature.
+const STOP = new Set(("the a an of in on at to for with from by as is are was were and or but his her its their this that has have had "
+  + "will said says say new now amid over after before into out up down been being it he she they them who what when where which "
+  + "about more most other some such only own same than too very can just also into during while").split(" "));
+function topicCore(bundle, topic) {
+  const head = (bundle?.sources || []).map((s) => storyZone(s.text)).join(" ");
+  return norm([topic?.title, topic?.claim, topic?.angle, head].filter(Boolean).join(" "));
+}
+/** Distinctive words (>4 chars, not a stopword) that a fact shares with the story core. */
+function onTopic(item, core, entityToks) {
+  const t = norm(typeof item === "string" ? item : (item?.what || item?.text || ""));
+  if (!t) return false;
+  const toks = [...new Set(t.split(" "))].filter((w) => w.length > 4 && !STOP.has(w) && !entityToks.has(w));
+  if (toks.length < 2) return true;                       // too short to judge — keep it
+  return toks.filter((w) => core.includes(w)).length >= 2;
+}
+
 const EMPTY_DETAILS = { facts: [], quotes: [], timeline: [], people: [], numbers: [], openQuestions: [] };
 
 /**
@@ -69,7 +111,7 @@ const EMPTY_DETAILS = { facts: [], quotes: [], timeline: [], people: [], numbers
  * Nothing that cannot be traced back to the source text survives.
  */
 export async function findDetails({ bundle, topic, chatImpl, retried = false } = {}) {
-  const src = bundleText(bundle).slice(0, 14000);
+  const src = storyText(bundle).slice(0, 14000);
   if (src.length < 400) return { ...EMPTY_DETAILS, reason: "not enough source text" };
   try {
     const { data } = await agentChat("detailFinder", {
@@ -90,10 +132,12 @@ LIMITS — a truncated reply is worse than a terse one, and a re-sliced duplicat
     }, chatImpl ? { chatImpl } : {});
     if (!data || typeof data !== "object") return { ...EMPTY_DETAILS, reason: "no data" };
     const c = norm(src);
+    const core = topicCore(bundle, topic);
+    const entToks = new Set(norm(topic?.primaryEntity || "").split(" ").filter(Boolean));
     const out = {
-      facts: dedupeItems(groundedOnly(data.facts, c), { cap: 45 }),
+      facts: dedupeItems(groundedOnly(data.facts, c).filter((x) => onTopic(x, core, entToks)), { cap: 45 }),
       quotes: dedupeItems(groundedOnly(data.quotes, c, { key: "text", minLen: 15 }), { key: "text", cap: 20 }),
-      timeline: dedupeItems(groundedOnly(data.timeline, c, { key: "what" }), { key: "what", cap: 15 }),
+      timeline: dedupeItems(groundedOnly(data.timeline, c, { key: "what" }).filter((x) => onTopic(x, core, entToks)), { key: "what", cap: 15 }),
       people: [],
       numbers: [],        // kept for shape stability; nothing reads these and asking cost us the facts
       openQuestions: [],
@@ -101,7 +145,10 @@ LIMITS — a truncated reply is worse than a terse one, and a re-sliced duplicat
     };
     const kept = out.facts.length + out.quotes.length + out.timeline.length;
     const raw = (data.facts || []).length + (data.quotes || []).length + (data.timeline || []).length;
+    const grounded = groundedOnly(data.facts, c).length + groundedOnly(data.timeline, c, { key: "what" }).length;
+    const offTopic = grounded - (out.facts.length + out.timeline.length);
     if (raw > kept) console.log(`[detail] dropped ${raw - kept} ungrounded item(s) — kept ${kept}`);
+    if (offTopic > 0) console.log(`[detail] dropped ${offTopic} OFF-TOPIC item(s) (about the person, not this story)`);
     // 2026-07-25 review: one live bundle held 6,268 chars of source and came back with ZERO facts —
     // a silent extraction miss, not a thin story, and the writer then had nothing to build 800 words
     // from. A substantial corpus that yields nothing is a model failure worth one retry.
@@ -129,7 +176,7 @@ const EMPTY_BG = { timeline: [], priorStatements: [], whoTheyAre: [], whatsNext:
  * (already fact-checked), so it adds depth without adding risk.
  */
 export async function findBackground({ bundle, topic, priorCoverage = [], chatImpl } = {}) {
-  const src = bundleText(bundle).slice(0, 10000);
+  const src = storyText(bundle).slice(0, 10000);
   const archive = (priorCoverage || []).slice(0, 6)
     .map((a) => `- ${a.title || a.slug}${a.date ? ` (${String(a.date).slice(0, 10)})` : ""}${a.claim ? `: ${a.claim}` : ""}`).join("\n");
   if (src.length < 400 && !archive) return { ...EMPTY_BG, reason: "nothing to build background from" };

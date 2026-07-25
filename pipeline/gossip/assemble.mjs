@@ -52,7 +52,24 @@ function badgeFor(frame) {
   return base === "CONFIRMED" && frame.monitor ? "DEVELOPING" : base;
 }
 
+// PULL QUOTE (2026-07-25). Normalises the writer's object — and REFUSES anything it cannot prove is
+// verbatim in the bundle. A pull quote is the most prominent text on the page; shipping an unverifiable
+// one there would be the worst possible place for an invented line.
+export function pullQuoteFor(article, bundle) {
+  const raw = article?.pullQuote;
+  const text = String((raw && typeof raw === "object" ? raw.text : raw) || "").trim().replace(/^["\u201C\u201D]+|["\u201C\u201D]+$/g, "").trim();
+  if (!text || text.split(/\s+/).length < 4) return null;
+  const norm = (x) => String(x).toLowerCase().replace(/[\u2018\u2019']/g, "'").replace(/[^a-z0-9' ]/g, " ").replace(/\s+/g, " ").trim();
+  const corpus = norm([...(bundle?.sources || []).map((s) => s.text || ""), ...(bundle?.quotes || []),
+                       ...((bundle?.details?.quotes) || []).map((q) => q?.text || "")].join(" "));
+  const probe = norm(text);
+  if (!corpus || !probe || !corpus.includes(probe.slice(0, Math.min(60, probe.length)))) return null;  // not verbatim ⇒ no card
+  const attribution = String((raw && typeof raw === "object" ? raw.attribution : "") || "").trim().slice(0, 80);
+  return attribution ? { text, attribution } : { text };
+}
+
 export function buildGossipMarkdown({ article, frame, provenance, route, topic, dateISO, bundle = null }) {
+  const pullQuote = pullQuoteFor(article, bundle);
   // The URL slug derives from OUR headline (original phrasing), never the discovery title — the
   // discovery title IS the source outlet's headline, and shipping it as our slug is SERP
   // cannibalization against the outlet that broke the story (2026-07-18 audit fix F).
@@ -112,7 +129,10 @@ export function buildGossipMarkdown({ article, frame, provenance, route, topic, 
     faq: (article.faq || []).filter((f) => f && f.q && f.a).map((f) => ({ q: f.q, a: f.a })),
     // ── rumor-UI fields (rendered by the gossip modules) ──
     rumorStatus: frame.uiLabel,
-    gossipPull: article.pullQuote || article.gossipPull || null,
+    // 🔴 2026-07-25 — `gossipPull` was DEAD FRONTMATTER: no component ever read it and the field
+    // whitelist in lib/articles.ts dropped it, so a gossip pull quote has never once displayed.
+    // `pullQuote: {text, attribution}` is the shape the site's pull-quote card already consumes.
+    ...(pullQuote ? { pullQuote } : {}),
     storyStatus: badge,
     // ── HERO (Step 6): a powerful, story-specific, LEGAL lead image (TMDB official still / YouTube thumb) flows
     // through the site's existing image/imageAlt/imageCredit convention (header + OG card auto-render it). The

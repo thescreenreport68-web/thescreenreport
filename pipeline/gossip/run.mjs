@@ -22,15 +22,17 @@ import { frameTopic } from "./frame.mjs";
 import { writeGossip, wordRangeFor } from "./writer.mjs";
 import { buildAnchors, substituteAnchors, synthesize } from "./synthesizer.mjs";
 import { refineHeadline } from "./headline.mjs";
-import { semanticSeoPass } from "./seoAudit.mjs";
-import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, bareMonthWithoutYear } from "./proseGuards.mjs";
+import { cutScaffolding, cutAbsenceClaims, dropAbsenceFaq, relativeTimeUnanchored, bareMonthWithoutYear, offMenuHeadings, emptyReactionSection, conclusionFlourish, MENU_SECTIONS } from "./proseGuards.mjs";
 import { entityKey } from "./normalize.mjs";
 import { voicePass } from "./voice.mjs";
 import { legalGate } from "./legalGate.mjs";
 import { qualityCheck, substanceCheck, SUBSTANCE_MIN_WORDS } from "./qualityGate.mjs";
 // Depth passes are full writer calls. 2 is the quality ceiling; 1 captures most of the gain. Tunable
 // because wall-clock per tick matters — a tick that runs 25min backs the hourly cron up behind itself.
-const DEPTH_PASSES = Number(process.env.GOSSIP_DEPTH_PASSES ?? 2);
+// 💰 2026-07-25 — ONE depth pass, not two. Pass 2 bought ~100 words and cost a full writer call, and
+// it is where the off-topic filler came from: by then the genuinely relevant material is already in,
+// so the second pass is scraping the bottom of the barrel. Pass 1 does the real work (508w → 637w live).
+const DEPTH_PASSES = Number(process.env.GOSSIP_DEPTH_PASSES ?? 1);
 import { verifyQuotes } from "./quoteGuard.mjs";
 import { verifyGate } from "./verifyGate.mjs";
 import { judgeGossip } from "./judge.mjs";
@@ -115,7 +117,7 @@ export async function runGossip(topic, {
   verify = false, verifyImpl = verifyGate,
   judge = false, judgeImpl = judgeGossip,
   editorial = true, editorialImpl = editorialReview,
-  maxFix = 3, ledeStyle = "scene",
+  maxFix = Number(process.env.GOSSIP_MAX_FIX ?? 2), ledeStyle = "scene",  // 💰 3rd pass never converged a draft 2 passes could not; cleanse() is the backstop
   synth = false, synthImpl = synthesize,
   headline = false, headlineImpl = refineHeadline,
   voice = false, voiceImpl = voicePass,
@@ -265,7 +267,13 @@ export async function runGossip(topic, {
       }
     }
     if (frame.needsDisclaimer && frame.disclaimerText && !article.body.includes(frame.disclaimerText)) article.body = (article.body.trim() + "\n\n" + frame.disclaimerText).trim();
-    verifyResult = verify ? await verifyImpl({ article, bundle, model }) : verifyResult;
+    // 💰 2026-07-25 — DO NOT RE-VERIFY HERE. cleanse() only ever (a) substitutes a wrong specific with
+    // the CORRECT value taken from the source, or (b) CUTS the offending text. Neither can introduce a
+    // fabrication, so a fresh LLM verify can only ever return a SUBSET of what we already hold. Paying
+    // for it twice per article was ~25% of the fact-checker spend and bought nothing. Instead, drop the
+    // entries we just resolved and re-inspect deterministically — same guarantee, no model call.
+    const resolved = new Set([...corrections.map((c) => c.bad), ...drops].map((x) => String(x)));
+    if (verifyResult) verifyResult = { ...verifyResult, unsupported: (verifyResult.unsupported || []).filter((u) => !resolved.has(String(u.claim))) };
     report = inspect(article, frame, topic, bundle, verifyResult);
   };
   await cleanse();
@@ -343,6 +351,18 @@ export async function runGossip(topic, {
     // voice we never saw, an outlet we never gathered — then the semantic auditor for the swaps no
     // pattern can see ("in treatment" published as "in therapy"). Both feed this one surgical pass.
     fixIssues.push(...claimFixIssues(article.body, bundle));
+    // SECTION CONTRACT (2026-07-25). A heading is a promise; live articles broke it three ways.
+    for (const h of offMenuHeadings(article.body).slice(0, 3)) {
+      fixIssues.push(`OFF-MENU SECTION — "## ${h}" is not one of the allowed sections (${MENU_SECTIONS.join(", ")}). Either retitle it to the menu section it really is, or fold its content into the section where it belongs. Do not invent section names.`);
+    }
+    const emptyReaction = emptyReactionSection(article.body);
+    if (emptyReaction) {
+      fixIssues.push(`EMPTY "## ${emptyReaction}" — that heading promises what OTHER people said, but the section contains no quoted words from anyone. Either put a real attributed quote in it from the sources, or DELETE the heading and move its content into the section it actually belongs to. Never claim a reaction the sources do not report.`);
+    }
+    const flourish = conclusionFlourish(article.body);
+    if (flourish) {
+      fixIssues.push(`CONCLUSION PARAGRAPH — the piece ends on a summary flourish that states no fact: "${flourish}". Delete it. The article must stop on the latest concrete fact or the open question.`);
+    }
     if (claimAudit) {
       const audit = await auditImpl({ bundle, article });
       claimAuditReport = audit;
@@ -360,7 +380,10 @@ export async function runGossip(topic, {
       // A craft rewrite replaces the WHOLE article after every gate has run. Re-inspect it exactly like
       // the judge-fix branch does — quotes alone are not enough (legal framing, red lines and unsupported
       // specifics all live in inspect()). Adopt ONLY if the new draft passes on its own merits.
-      const vrFix = verify ? await verifyImpl({ article: fixed, bundle, model }) : null;
+      // 💰 the craft fix targets the headline / a date phrase / the lede. When it returns the body
+      // unchanged there is no new prose to fact-check — reuse the verdict we already paid for.
+      const bodyChanged = String(fixed?.body || "") !== String(article.body || "");
+      const vrFix = verify && bodyChanged ? await verifyImpl({ article: fixed, bundle, model }) : verifyResult;
       const rcFix = inspect(fixed, frame, topic, bundle, vrFix);
       const qc2 = verifyQuotes(fixed, bundle);
       if (qc2.ok && !rcFix.redLine && rcFix.legalPass !== false && (qualityCheck(fixed).words || 0) >= 120) {
@@ -409,8 +432,12 @@ export async function runGossip(topic, {
   let headlineReport = null;
   if (headline) { try { headlineReport = await headlineImpl({ article, bundle, topic }); } catch { headlineReport = null; } }
   // Phase 3 — semantic SEO pass (flash-lite, REPORT-ONLY: click-promise honesty / stuffing / labeling).
-  let seoSemantic = null;
-  if (headline) { try { seoSemantic = await semanticSeoPass({ fm: { metaTitle: article.metaTitle, metaDescription: article.metaDescription, title: article.title, rumorStatus: frame.uiLabel }, topic }); } catch { seoSemantic = null; } }
+  // 💰 2026-07-25 — the semantic SEO audit is REMOVED. It asked a model to score the snippet on
+  // clickEarned/stuffing/honestLabel, returned the verdict in the run report… and nothing ever read it.
+  // One model call per article that could not change a single character of the output. The snippet's
+  // real quality bar is the DETERMINISTIC contract (validMetaTitle / validMetaDesc / grounded), which
+  // still runs on every article and actually rejects bad output.
+  const seoSemantic = null;
 
   // Stage 7 — assemble: attach the byline, the rumor-UI fields, and the PROVENANCE the monitor needs.
   article.author = GOSSIP_AUTHOR_SLUG;
@@ -486,6 +513,12 @@ export async function runGossip(topic, {
           deeper.body = trimIncomplete(dedupeSentences(deeper.body));
           deeper.body = cutAbsenceClaims(cutScaffolding(deeper.body, disc).body, disc).body;
           deeper.body = cutInventedObservation(cutUngroundedClaims(deeper.body, bundle, disc).body, bundle, disc).body;
+          // the depth pass OPENS sections — so it is exactly where an empty "## The Reaction" or an
+          // off-menu heading gets created. Reject a deeper draft that breaks the section contract.
+          if (emptyReactionSection(deeper.body) || offMenuHeadings(deeper.body).length) {
+            console.log(`[depth ${depthPass + 1}] rejected — it broke the section contract`);
+            continue;
+          }
           if (disc.length && !deeper.body.includes(disc[0])) deeper.body = (deeper.body.trim() + "\n\n" + disc[0]).trim();
           deeper.keyTakeaways = ensureTakeaways(deeper);
           deeper.faq = dropAbsenceFaq(deeper.faq || []).faq;

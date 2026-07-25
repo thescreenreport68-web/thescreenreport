@@ -53,9 +53,7 @@ export const AGENTS = {
   // Best-of-3 H1/metaTitle/metaDescription candidates (Phase 2).
   headline: { model: "deepseek/deepseek-v3.2", fallback: "deepseek/deepseek-v4-flash", temperature: 0.7, maxTokens: 900, watchdogMs: 90e3, attemptDeadlineMs: 60e3 },
   // CTR/contract judge over headline candidates (Phase 2).
-  headlineJudge: { model: "google/gemini-2.5-flash-lite", fallback: null, temperature: 0, maxTokens: 400, watchdogMs: 60e3, attemptDeadlineMs: 30e3 },
   // Post-assemble semantic SEO pass (Phase 3; the deterministic walls are free code, not a model).
-  seoAuditor: { model: "google/gemini-2.5-flash-lite", fallback: null, temperature: 0, maxTokens: 500, watchdogMs: 60e3, attemptDeadlineMs: 45e3 },
   // Quote-masked register polish (Phase 4, flagged off by default).
   voice: { model: "deepseek/deepseek-v4-flash", fallback: null, temperature: 0.75, maxTokens: 2800, watchdogMs: 120e3, attemptDeadlineMs: 90e3 },
 };

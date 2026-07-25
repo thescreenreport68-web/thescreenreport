@@ -3,7 +3,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { auditArticleSeo, semanticSeoPass } from "../seoAudit.mjs";
+import { auditArticleSeo } from "../seoAudit.mjs";
 import { buildGossipMarkdown } from "../assemble.mjs";
 import { gossipRun } from "../gossiprun.mjs";
 import { saveQueue, loadQueue, QUEUE_PATH } from "../find.mjs";
@@ -92,13 +92,6 @@ const baseFm = () => ({
   });
   check("assemble runs the audit + returns seoIssues", Array.isArray(out.seoIssues) && out.seoIssues.length >= 1);
   check("assembled metaDescription ≤160 after repair", out.frontmatter.metaDescription.length <= 160);
-}
-// ── 8) semantic pass: fail-open + report shape ──
-{
-  const ok = await semanticSeoPass({ fm: baseFm(), topic: TOPIC, chatImpl: async () => ({ data: { clickEarned: true, stuffing: false, honestLabel: true, note: "ok" }, usage: {} }) });
-  check("semantic pass returns the report", ok && ok.clickEarned === true);
-  const dead = await semanticSeoPass({ fm: baseFm(), topic: TOPIC, chatImpl: async () => { throw new Error("down"); } });
-  check("semantic pass fail-open → null", dead === null);
 }
 // ── 9) UPDATE follow-up routing: publishes with the parent link-chain first ──
 {

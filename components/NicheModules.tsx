@@ -495,7 +495,7 @@ export function NicheTop({ article }: { article: Article }) {
       {article.formatTag === "box-office" ? <WeekendChart weekendChart={article.weekendChart || []} /> : null}
       {article.formatTag === "interview" ? <InterviewModule article={article} /> : null}
       {article.formatTag === "reaction" ? <ConsensusBox article={article} /> : null}
-      {article.formatTag === "news" ? <NewsPullQuote article={article} /> : null}
+      {article.formatTag === "news" || article.formatTag === "gossip" ? <NewsPullQuote article={article} /> : null}
       {article.formatTag === "box-office" ? <BoxOfficeModule article={article} /> : null}
       {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsHeader article={article} /> : null}
       <BoxOfficeModules article={article} />
