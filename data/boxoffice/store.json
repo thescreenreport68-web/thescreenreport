@@ -1272,6 +1272,20 @@
    "headlineNumberRaw": 17178884,
    "filmKey": "the invite",
    "chartDate": null
+  },
+  {
+   "key": "young-washington-bo-update-d21|BO-UPDATE",
+   "at": "2026-07-25T09:08:03.999Z",
+   "eventSlug": "young-washington-bo-update-d21",
+   "form": "BO-UPDATE",
+   "slug": "young-washington-box-office-tracker",
+   "title": "Young Washington Crosses $42.8M Domestic, Breaks Angel Studios Live-Action Record",
+   "film": "Young Washington",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 42770644,
+   "filmKey": "young washington",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2632,19 +2646,19 @@
    "key": "evil-dead-burn-bo-update-d14|BO-UPDATE",
    "eventSlug": "evil-dead-burn-bo-update-d14",
    "form": "BO-UPDATE",
-   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-25T08:33:53.396Z"
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-25T09:05:50.432Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.0582
+  "usd": 0.06168
  },
  "pace": {
   "tokens": 0,
-  "lastMs": 1784968342048
+  "lastMs": 1784970240530
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2665,7 +2679,8 @@
     "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
    ],
    "evil dead burn": [
-    "words # < # (owner-set ~#-word minimum)"
+    "words # < # (owner-set ~#-word minimum)",
+    "# unverified claim(s) cut# unrecovered"
    ]
   }
  }

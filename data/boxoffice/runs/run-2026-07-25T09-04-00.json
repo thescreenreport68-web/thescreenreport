@@ -1,0 +1,100 @@
+{
+ "runId": "run-2026-07-25T09-04-00",
+ "mode": "live",
+ "startedAt": "2026-07-25T09:04:00.530Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "slug": "young-washington-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/young-washington-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.08,
+  "behind": true,
+  "expected": 19.57,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-25",
+  "usd": 0.06168
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-25T09:08:04.003Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3568,
+    "out": 3508,
+    "usd": 0.00062,
+    "ms": 24218
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6488,
+    "out": 295,
+    "usd": 0.00077,
+    "ms": 2551
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1435,
+    "out": 598,
+    "usd": 0.00024,
+    "ms": 11501
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3980,
+    "out": 2233,
+    "usd": 0.00168,
+    "ms": 87372
+   }
+  },
+  "totalUsd": 0.0033
+ },
+ "openrouterTotalUsd": 0.00348
+}
