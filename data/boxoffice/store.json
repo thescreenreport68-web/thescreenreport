@@ -2484,21 +2484,21 @@
    "key": "joy-ride-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "joy-ride-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 167 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-25T05:07:52.374Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T04:06:16.687Z"
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-25T16:04:23.120Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T16:04:23.120Z"
   },
   {
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 153 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-25T06:08:43.289Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T05:06:20.513Z"
+   "reason": "soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-25T16:09:23.812Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T16:09:23.812Z"
   },
   {
    "key": "i-will-find-you-trending-tv-w2026-07-19|TRENDING-TV",
@@ -2570,10 +2570,10 @@
    "key": "sniper-no-nation-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "sniper-no-nation-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-22T13:56:10.320Z",
-   "dead": true,
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-25T16:06:38.284Z",
+   "dead": false,
    "expiresAt": "2026-07-25T13:56:10.320Z"
   },
   {
@@ -2725,10 +2725,10 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 11,
-   "at": "2026-07-25T15:32:52.326Z",
+   "tries": 12,
+   "at": "2026-07-25T16:02:39.257Z",
    "dead": true,
-   "expiresAt": "2026-07-28T15:32:52.326Z"
+   "expiresAt": "2026-07-28T16:02:39.257Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
@@ -2757,14 +2757,14 @@
    "at": "2026-07-25T15:06:06.466Z"
   }
  ],
- "zeroStreak": 6,
+ "zeroStreak": 7,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.29577
+  "usd": 0.36
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784993463744
+  "lastMs": 1784995265818
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2780,7 +2780,10 @@
    "masters of the universe": 2,
    "kpop demon hunters": 1,
    "death on the nile": 1,
-   "the boss baby": 1
+   "the boss baby": 1,
+   "joy ride": 1,
+   "sniper: no nation": 1,
+   "little house on the prairie": 1
   }
  },
  "failures": {
@@ -2830,6 +2833,15 @@
    ],
    "the boss baby": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "joy ride": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "sniper: no nation": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "little house on the prairie": [
+    "soft-floor humanvoice # < #"
    ]
   }
  }
