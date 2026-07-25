@@ -134,11 +134,28 @@ reactions:
     quote: >-
       Wait I went to see this movie and that scene was not in it and I stayed
       the whole time
+  - speaker: A viewer
+    date: '2026-05-30'
+    quote: Crazy how the backrooms actually made it into the franchise
+  - speaker: A viewer
+    date: '2026-05-30'
+    quote: 'When the world needed him the most, Doofy returned'
+  - speaker: A viewer
+    date: '2026-05-30'
+    quote: >-
+      I love that Anna Faris is never afraid to look awkward and dorky in a
+      movie.
+  - speaker: A viewer
+    date: '2026-05-30'
+    quote: "After watching Backrooms film. I would love to see a reference or a parody scene of the Backrooms in Scary Movie I can’t wait for this movie\U0001F602!"
+  - speaker: A viewer
+    date: '2026-05-30'
+    quote: "Everyone in the theater were getting excited but they got joke because they thought the movie started \U0001F602"
 fanConsensus: >-
   A powerfully nostalgic but sharply divided reaction, with fans split between
   celebrating the return of a 2000s comedy staple and doubting its ability to
   recapture the original magic.
-updatedCount: 2
+updatedCount: 3
 trendScore: 163
 signals:
   popularity: 374
@@ -153,7 +170,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T16:36:29.102Z'
+dateModified: '2026-07-25T04:32:35.103Z'
 provenance:
   parentEventSlug: scary-movie-2026
   primaryEntity: Scary Movie
@@ -167,7 +184,7 @@ imageAlt: Scary Movie 2026 trailer screenshot Ghostface
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
-updated: '2026-07-24T16:36:29.102Z'
+updated: '2026-07-25T04:32:35.103Z'
 ---
 
 The first trailer for the new [Scary Movie](/movies/scary-movie-2026-the-internet-is-split-between-nostalgic-cheers-and/) sequel has arrived, and the reaction was instant — and loud. For many, the sight of familiar characters and that signature 2000s slapstick felt like a time machine. But as the initial hype settled, a clear split emerged — some fans are losing it over the return, while others are convinced the magic is gone for good.

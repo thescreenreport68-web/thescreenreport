@@ -158,11 +158,36 @@ reactions:
     quote: >-
       “When I have a crush on a guy…no one knows” WHY DID THEY PUT THAT LINE IN
       THERE.
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: >-
+      I remember hearing the director said that the willow isn’t inherently evil
+      only bears wish was
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: >-
+      I think a MAJOR flaw in his wish was including “more than anything else in
+      the world”
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: >-
+      Simple "i wish to have better social skill" but bear isnt the type of guy
+      to think that
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: >-
+      "Wishes for world peace" Oh look out in the sky, its a shooting star! Oh
+      no, actually it's a giant meteor.
+  - speaker: A viewer
+    date: '2026-07-05'
+    quote: >-
+      His wish blew up in his face because it was straight up just a really bad
+      wish.
 fanConsensus: >-
   The audience is largely having more creative fun building lore around the
   film's magical MacGuffin than engaging with its central plot, though a
   cringeworthy character moment has sparked notable criticism.
-updatedCount: 2
+updatedCount: 3
 trendScore: 45
 signals:
   popularity: 459
@@ -177,7 +202,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T22:32:19.487Z'
+dateModified: '2026-07-25T04:32:35.103Z'
 provenance:
   parentEventSlug: obsession-2026
   primaryEntity: Obsession
@@ -191,7 +216,7 @@ imageAlt: Obsession 2026 movie poster One Wish Willow
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T22:32:19.487Z'
+updated: '2026-07-25T04:32:35.103Z'
 ---
 
 The 2026 film *[Obsession](/movies/obsession-box-office-day-67-adds-359-520-as-domestic-total-hits-258-7-million/)* might be about a supernatural pact gone wrong, but the audience has become fixated on something else entirely: the mechanics of the fictional 'One Wish Willow' company. While the plot follows Bear's disastrous wish, a large portion of viewers are more interested in the world-building around the magical product, imagining the beleaguered customer service reps, the company's origin story, and the mundane ways its all-powerful system can fail.
