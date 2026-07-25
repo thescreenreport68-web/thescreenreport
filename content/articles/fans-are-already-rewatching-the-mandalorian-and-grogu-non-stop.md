@@ -125,10 +125,37 @@ reactions:
       This lowkey did feel like a return to the spaghetti western/criminal
       underworld type stuff that introduced Mando to us and it honestly worked
       really well
+  - speaker: Delilah S. Dawson
+    date: '2026-07-25'
+    quote: >-
+      In case you're not on Instagram, which is the only social media on my
+      phone, here's a rundown of SDCC so far: * The Mandalorian and Grogu:
+      Danger in the Dark has a fancy foil cover! * We announced The Mandalorian
+      and Grogu: Nightmare on
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      I actually never expected to see a physical fight between hutts in live
+      action. Now I know these mfs can throw straight HANDS
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      Did you know that I was catch off guard of how fast the Hutts can move
+      while rewatching this movie in theaters?
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      Everyone talking about the Hutts fight but frankly I liked Din and Embo's
+      fight cause those two were basically evenly matched the whole time
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      For a guy tortured for a while, Rotta still fares well. Seeing Grogu about
+      to be eaten gave him enough of a boost.
 fanConsensus: >-
   Overwhelmingly positive, with fans celebrating the film's action, heart, and
   practical effects, and many reporting multiple theater viewings.
-updatedCount: 1
+updatedCount: 2
 trendScore: 127
 signals:
   popularity: 227
@@ -143,7 +170,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T08:58:10.424Z'
+dateModified: '2026-07-25T08:32:29.196Z'
 provenance:
   parentEventSlug: the-mandalorian-and-grogu-2026
   primaryEntity: The Mandalorian and Grogu
@@ -157,7 +184,7 @@ imageAlt: The Mandalorian and Grogu movie poster Din Djarin
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T08:58:10.424Z'
+updated: '2026-07-25T08:32:29.196Z'
 ---
 
 Social media had thoughts — a lot of them — and the reaction is a nearly unanimous chorus of delight.

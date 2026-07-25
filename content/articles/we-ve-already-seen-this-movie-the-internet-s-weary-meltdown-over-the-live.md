@@ -137,10 +137,29 @@ reactions:
   - speaker: A viewer
     date: '2026-07-25'
     quote: Moana (2026) The animated movie was 20 minutes shorter.
+  - speaker: A viewer
+    date: '2026-06-10'
+    quote: I know what I will watch on the 10th July....THE ORIGINAL!
+  - speaker: A viewer
+    date: '2026-06-10'
+    quote: 'Disney: No one asked for it, so we made it.'
+  - speaker: A viewer
+    date: '2026-06-13'
+    quote: >-
+      Wow the Moana movie got new graphics good thing it's the exact same music
+      as the TEN YEAR OLD MOVIE-
+  - speaker: A viewer
+    date: '2026-06-11'
+    quote: Looks like Dwayne’s daughters will finally believe that he’s Maui. lol
+  - speaker: A viewer
+    date: '2026-07-04'
+    quote: >-
+      Cant wait until 2030 when the make an animated remake of this live action
+      remake
 fanConsensus: >-
   Overwhelmingly negative, viewing the trailer as a pointless, visually inferior
   carbon copy that epitomizes Disney's creatively exhausted remake strategy.
-updatedCount: 2
+updatedCount: 3
 trendScore: 225
 signals:
   popularity: 620
@@ -155,7 +174,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-25T02:31:03.113Z'
+dateModified: '2026-07-25T08:32:29.196Z'
 provenance:
   parentEventSlug: moana-2026
   primaryEntity: Moana
@@ -169,7 +188,7 @@ imageAlt: live action Moana trailer screenshot Dwayne Johnson Maui
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
-updated: '2026-07-25T02:31:03.113Z'
+updated: '2026-07-25T08:32:29.196Z'
 ---
 
 Disney finally released that live-action [Moana](/movies/catherine-laga-aia-and-dwayne-johnson-lead-moana-live-action-cast/) trailer, and cue the meltdown — but not the nostalgic kind. The internet's reaction is a masterclass in déjà vu fatigue, with exhaustion and open mockery dominating the conversation. Audiences are questioning why this remake exists at all, while a handful of defenders clutch at the promise of a familiar song.
