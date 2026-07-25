@@ -1,0 +1,64 @@
+{
+  "ts": "2026-07-25T22:02:31.814Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [],
+  "topics": 9,
+  "held": 2,
+  "rejected": 0,
+  "skipped": 4,
+  "blocked": 2,
+  "costUSD": 0,
+  "costPerPublished": null,
+  "byModel": {},
+  "byRole": {
+    "dedup": {
+      "calls": 8,
+      "errors": 8,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 12408
+    },
+    "editor": {
+      "calls": 8,
+      "errors": 8,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 12469
+    },
+    "detailFinder": {
+      "calls": 12,
+      "errors": 12,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 18958
+    },
+    "background": {
+      "calls": 8,
+      "errors": 8,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 12838
+    },
+    "synthesizer": {
+      "calls": 4,
+      "errors": 4,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 6733
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 4,
+      "in": 0,
+      "out": 0,
+      "usd": 0,
+      "ms": 6506
+    }
+  }
+}
