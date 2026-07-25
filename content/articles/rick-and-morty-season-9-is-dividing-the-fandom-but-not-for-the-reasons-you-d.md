@@ -112,12 +112,36 @@ reactions:
     quote: >-
       I'm really digging the Beth/Jerry dynamic now, and how Jerry is willing to
       own up to how he was – and his willingness to call Rick for help.
+  - speaker: Dan Harmon
+    connection: creator
+    platform: interview
+    quote: >-
+      Harmon, who is currently Emmy-nominated for the ninth series of his
+      animated series Rick and Morty , would tell writers who found his
+      behind-the-scenes methods “abusive” that they would thank him when they
+      won an Emmy Award.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: >-
+      I've come around on Phineas and Ferb. It's like if Rick and Morty were for
+      normal people.
+  - speaker: A viewer
+    date: '2026-07-25'
+    quote: i want a rick and morty themed 40th birthday party
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: i think these guys need to put down the rick and morty
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      Rick manufactured his body to have his fight or flight response to
+      automatically fight
 fanConsensus: >-
   The fandom is divided between viewers who welcome the show's focus on
   character development and emotional beats, and those who feel it has lost its
   anarchic, adventure-driven edge, with a side of criticism aimed at the
   fandom's own toxicity.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   popularity: 191
@@ -132,7 +156,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-22T08:31:02.673Z'
+dateModified: '2026-07-25T06:36:23.421Z'
 provenance:
   parentEventSlug: rick-and-morty-2013
   primaryEntity: Rick and Morty
@@ -147,6 +171,7 @@ imageAlt: Rick and Morty season 9 Beth and Jerry poster
 imageCredit: Photo via Valnet
 imageWidth: 1600
 imageHeight: 900
+updated: '2026-07-25T06:36:23.421Z'
 ---
 
 The latest *[Rick and Morty](/tv/rick-and-morty-season-9-promises-a-full-tank-but-fans-are-still-split-on-the/)* episode has the timeline anything but calm. While the show has always sparked debate, season 9 is forcing a choice: is this the sign of a series gaining genuine depth, or is it a betrayal of the chaotic, anything-goes spirit that made it a hit? The reaction was instant — and loud, with wholesome praise for the Smith family's parents battling against frustration from viewers who miss the old bite.
