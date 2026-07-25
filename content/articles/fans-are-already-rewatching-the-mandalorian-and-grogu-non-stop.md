@@ -152,10 +152,34 @@ reactions:
     quote: >-
       For a guy tortured for a while, Rotta still fares well. Seeing Grogu about
       to be eaten gave him enough of a boost.
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      I love how Rotta grew up. Became nothing like his father didn’t want
+      anything to do with his father‘s legacy. Wanted to forge his own path. If
+      only Ahsoka could see him now to see the Hutt he became.
+  - speaker: A viewer
+    date: '2026-07-22'
+    quote: >-
+      Love how they still miss even shooting at a giant slug… they have
+      unlimited ammo in this universe and absolutely no one practices.
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: That kung loa hat line up was to smoke kung loa would be proud
+  - speaker: A viewer
+    date: '2026-07-23'
+    quote: '“I moight have a uniform that can fit him” Steve Blum, never change'
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      Watching The Mandalorian and Grogu on streaming, and I'm baffled how
+      people can say it doesn't look cinematic AND it looks just like the show.
+      Have you SEEN the show? Each episode has amazing cinematography. The show
+      looks spectacular in framing, blocking and color grading.
 fanConsensus: >-
   Overwhelmingly positive, with fans celebrating the film's action, heart, and
   practical effects, and many reporting multiple theater viewings.
-updatedCount: 2
+updatedCount: 3
 trendScore: 127
 signals:
   popularity: 227
@@ -170,7 +194,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-25T08:32:29.196Z'
+dateModified: '2026-07-25T16:31:07.217Z'
 provenance:
   parentEventSlug: the-mandalorian-and-grogu-2026
   primaryEntity: The Mandalorian and Grogu
@@ -184,7 +208,7 @@ imageAlt: The Mandalorian and Grogu movie poster Din Djarin
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-25T08:32:29.196Z'
+updated: '2026-07-25T16:31:07.217Z'
 ---
 
 Social media had thoughts — a lot of them — and the reaction is a nearly unanimous chorus of delight.
