@@ -1,0 +1,172 @@
+{
+  "ts": "2026-07-25T08:01:58.470Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kirsten-storms-exit-from-general-hospital-after-21-years-tied-to-personal-t",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-contract:dropped",
+        "dek-ungrounded:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 6
+    }
+  ],
+  "topics": 7,
+  "held": 2,
+  "rejected": 0,
+  "skipped": 2,
+  "blocked": 2,
+  "costUSD": 0.111191,
+  "costPerPublished": 0.111191,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 39,
+      "in": 66066,
+      "out": 22606,
+      "usd": 0.015024580000000001
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 5815,
+      "out": 1973,
+      "usd": 0.0020342166000000004
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 23,
+      "in": 57397,
+      "out": 13042,
+      "usd": 0.04795084
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 4,
+      "in": 5817,
+      "out": 41932,
+      "usd": 0.011280425
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 4,
+      "in": 4864,
+      "out": 3169,
+      "usd": 0.0010689817500000001
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 5,
+      "in": 5450,
+      "out": 4370,
+      "usd": 0.0018065771999999998
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 18,
+      "in": 73094,
+      "out": 37770,
+      "usd": 0.03202494299999999
+    }
+  },
+  "byRole": {
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 622,
+      "out": 29,
+      "usd": 0.00015292,
+      "ms": 3528
+    },
+    "editor": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9338,
+      "out": 813,
+      "usd": 0.0048339,
+      "ms": 5010
+    },
+    "background": {
+      "calls": 7,
+      "errors": 3,
+      "in": 4006,
+      "out": 9376,
+      "usd": 0.0013109000000000003,
+      "ms": 167635
+    },
+    "detailFinder": {
+      "calls": 6,
+      "errors": 2,
+      "in": 4290,
+      "out": 26053,
+      "usd": 0,
+      "ms": 300740
+    },
+    "synthesizer": {
+      "calls": 5,
+      "errors": 1,
+      "in": 3676,
+      "out": 2702,
+      "usd": 0.00105426,
+      "ms": 51934
+    },
+    "writer": {
+      "calls": 18,
+      "errors": 1,
+      "in": 71816,
+      "out": 37023,
+      "usd": 0.032848449999999994,
+      "ms": 956159
+    },
+    "verify": {
+      "calls": 28,
+      "errors": 15,
+      "in": 30497,
+      "out": 5333,
+      "usd": 0.0183646,
+      "ms": 99338
+    },
+    "judge": {
+      "calls": 7,
+      "errors": 3,
+      "in": 6666,
+      "out": 1342,
+      "usd": 0.00108074,
+      "ms": 59361
+    },
+    "claimAudit": {
+      "calls": 5,
+      "errors": 2,
+      "in": 5638,
+      "out": 12136,
+      "usd": 0,
+      "ms": 202762
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2802,
+      "out": 992,
+      "usd": 0.00098174,
+      "ms": 32991
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2099,
+      "out": 98,
+      "usd": 0.00024910000000000004,
+      "ms": 1812
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1246,
+      "out": 114,
+      "usd": 0.0001702,
+      "ms": 1538
+    }
+  }
+}
