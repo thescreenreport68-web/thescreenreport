@@ -2581,9 +2581,9 @@
    "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
    "reason": "words 173 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-22T19:04:42.992Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-25T19:04:42.992Z"
   },
   {
@@ -2591,9 +2591,9 @@
    "eventSlug": "outcome-now-streaming",
    "form": "NOW-STREAMING",
    "reason": "8 unverified claim(s) cut, unrecovered",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-22T19:07:34.303Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-25T19:07:34.303Z"
   },
   {
@@ -2773,14 +2773,14 @@
    "at": "2026-07-25T18:34:19.952Z"
   }
  ],
- "zeroStreak": 14,
+ "zeroStreak": 15,
  "daySpend": {
   "laDay": "2026-07-25",
   "usd": 0.50086
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785006090670
+  "lastMs": 1785007885221
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2804,9 +2804,11 @@
    "avatar: the last airbender": 1,
    "worst neighbor ever": 1,
    "raw": 1,
-   "spider-noir": 1,
+   "spider-noir": 2,
    "mortal kombat ii": 3,
-   "lanterns": 1
+   "lanterns": 1,
+   "sullivan's crossing": 1,
+   "outcome": 1
   }
  },
  "failures": {
