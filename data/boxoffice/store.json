@@ -2504,21 +2504,21 @@
    "key": "i-will-find-you-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "i-will-find-you-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-25T06:40:48.836Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T05:08:57.864Z"
+   "reason": "4 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-25T16:14:19.143Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T16:14:19.143Z"
   },
   {
    "key": "the-hawk-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "the-hawk-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 170 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-25T07:02:49.125Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T05:37:27.426Z"
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 3,
+   "at": "2026-07-25T16:16:18.948Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T16:16:18.948Z"
   },
   {
    "key": "the-get-out-bo-update-d26|BO-UPDATE",
@@ -2725,10 +2725,10 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 12,
-   "at": "2026-07-25T16:02:39.257Z",
+   "tries": 13,
+   "at": "2026-07-25T16:12:03.768Z",
    "dead": true,
-   "expiresAt": "2026-07-28T16:02:39.257Z"
+   "expiresAt": "2026-07-28T16:12:03.768Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
@@ -2757,20 +2757,20 @@
    "at": "2026-07-25T15:06:06.466Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 8,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.36
+  "usd": 0.40806
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784995265818
+  "lastMs": 1784995808890
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
   "laDay": "2026-07-25",
   "byFilm": {
-   "the hawk": 1,
+   "the hawk": 2,
    "the sheep detectives": 1,
    "house of the dragon": 1,
    "the mandalorian and grogu": 2,
@@ -2783,14 +2783,16 @@
    "the boss baby": 1,
    "joy ride": 1,
    "sniper: no nation": 1,
-   "little house on the prairie": 1
+   "little house on the prairie": 1,
+   "i will find you": 1
   }
  },
  "failures": {
   "laDay": "2026-07-25",
   "byFilm": {
    "the hawk": [
-    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem",
+    "soft-floor engagement # < #"
    ],
    "house of the dragon": [
     "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
@@ -2842,6 +2844,9 @@
    ],
    "little house on the prairie": [
     "soft-floor humanvoice # < #"
+   ],
+   "i will find you": [
+    "# unverified claim(s) cut# unrecovered"
    ]
   }
  }
