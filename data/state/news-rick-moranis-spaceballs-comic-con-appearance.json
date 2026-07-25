@@ -1,0 +1,75 @@
+{
+  "id": "news-rick-moranis-spaceballs-comic-con-appearance",
+  "slug": "rick-moranis-makes-first-ever-comic-con-appearance-for-spaceballs-deta",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 0,
+      "broken": [
+        "body 596w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Rick Moranis",
+    "work": {
+      "title": "Spaceballs: The New One",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "usatoday.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 684,
+      "h2s": 7,
+      "h2Questions": 5,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 60,
+      "avgSentence": 21,
+      "flesch": 51,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 3,
+    "failed": []
+  },
+  "ms": 171985
+}
