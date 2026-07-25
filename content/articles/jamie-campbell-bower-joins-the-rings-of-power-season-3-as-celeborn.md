@@ -1,133 +1,136 @@
 ---
-title: Jamie Campbell Bower Joins ‘The Rings of Power’ Season 3 as Celeborn
+title: >-
+  The Rings of Power Season 3 Trailer Debuts at Comic-Con; Simon Pegg Joins Cast
+  as the Balrog
 slug: jamie-campbell-bower-joins-the-rings-of-power-season-3-as-celeborn
 category: tv
 subcategory: news
 author: editorial-team
 date: '2026-07-23T16:30:00.026Z'
 dek: >-
-  The fantasy epic's third season will premiere in November 2026 and jump
-  forward several years in its timeline.
-metaTitle: Jamie Campbell Bower Cast as Celeborn in Rings of Power
+  The Prime Video fantasy epic returns November 11, with the fan-favorite actor
+  voicing a fiery new monster.
+metaTitle: 'Rings of Power Season 3 Trailer Released, Simon Pegg Cast'
 metaDescription: >-
-  Jamie Campbell Bower is joining the cast of The Rings of Power Season 3 as the
-  Elf lord Celeborn, husband to Galadriel. The season premieres in November
-  2026.
+  The Prime Video fantasy epic returns November 11, with the fan-favorite actor
+  voicing a fiery new monster. The series streams exclusively on Amazon Prime
+  Video.
 tags:
-  - rings of power
+  - rings of power season 3 trailer simon pegg
   - 'the lord of the rings: the rings of power'
-  - jamie campbell bower
-  - eddie marsan
-  - charlie vickers
-  - the rings of power
-targetKeyword: rings of power
+  - simon pegg
+  - sauron
+  - galadriel
+targetKeyword: rings of power season 3 trailer simon pegg
 keyTakeaways:
   - >-
-    Jamie Campbell Bower will play the Elf lord Celeborn in Season 3 of The
-    Rings of Power.
+    The first trailer for The Rings of Power Season 3 debuted at San Diego
+    Comic-Con.
+  - 'Simon Pegg will voice the Balrog, a hulking magma monster.'
   - >-
-    Season 3 is scheduled to premiere on Prime Video on Wednesday, November 11,
-    2026.
-  - >-
-    The new season will feature a time jump, placing the story at the height of
-    the War of the Elves and Sauron.
+    The new season jumps forward several years to the height of the War of the
+    Elves and Sauron.
 faq:
-  - q: Who is Celeborn in Tolkien's lore?
+  - q: What is Simon Pegg's role in The Rings of Power?
     a: >-
-      Celeborn is an Elf lord and warrior, and he is the husband of Galadriel.
-      His arrival in the series marks a significant addition to the storyline
-      involving the Elven realms.
-  - q: Will there be more seasons after Season 3?
+      Simon Pegg will voice the Balrog, a hulking magma monster that helps
+      Sauron forge the One Ring in Season 3.
+  - q: How many seasons of The Rings of Power have been released?
     a: >-
-      Showrunners J.D. Payne and Patrick McKay have stated they conceived the
-      series with a five-season plan in mind. Their comments indicate they
-      intend to see that original vision through.
-  - q: When did filming for Season 3 begin?
+      The first season is Prime Video's biggest TV series premiere ever, and the
+      second season is among the streamer's top five most-watched returning
+      seasons ever.
+  - q: Who are the showrunners of The Rings of Power?
     a: >-
-      Production on the third season started in June 2025. The series was
-      officially renewed for Season 3 several months prior, in February 2025.
+      The series is produced by showrunners and executive producers J.D. Payne
+      and Patrick McKay. They are joined by executive producers Lindsey Weber,
+      Justin Doble, Kate Hazell, and director Charlotte Brandstrom.
 about:
   - name: 'The Lord of the Rings: The Rings of Power'
-    type: TV Series
+    type: TV Show
 imageAlt: Jamie Campbell Bower Joins ‘The Rings of Power’ Season 3 as Celeborn
 imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/1mtjTIcwlo6YmGrJEr7fnGeITx3.jpg'
 imageWidth: 3000
 imageHeight: 1688
 formatTag: news
-trendScore: 74
+trendScore: 89
 signals:
-  recency: 16
-  corroboration: 8
+  recency: 4
+  corroboration: 18
   status: 18
   type: 14
   pop: 0
   breakout: 0
   big: 18
-  trending: 0
+  trending: 8
   spice: 0
   softTv: 0
-eventSlug: rings-of-power-season-3-jamie-campbell-bower-celeborn
+  learned: -1
+  radar: 10
+eventSlug: rings-of-power-season-3-trailer-simon-pegg-casting
 eventType: casting
-outletCount: 1
+outletCount: 2
 provenance:
-  eventSlug: rings-of-power-season-3-jamie-campbell-bower-celeborn
+  eventSlug: rings-of-power-season-3-trailer-simon-pegg-casting
   primaryEntity: 'The Lord of the Rings: The Rings of Power'
   eventType: casting
   sensitivity: normal
   status: DEVELOPING
-  attribution: Prime Video
+  attribution: hollywoodreporter.com
   outlets:
-    - TV Insider
-  publishedAt: '2026-07-23T16:30:00.026Z'
-dateModified: '2026-07-23T16:30:00.026Z'
+    - The Hollywood Reporter
+    - Variety
+  publishedAt: '2026-07-25T01:04:28.595Z'
+dateModified: '2026-07-25T01:05:50.450Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
-  text: '"We have a five-year plan that we’ve had all along that’s not changing,"'
-  attribution: J.D. Payne to TV Insider
+  text: >-
+    Jumping forward several years from the events of Season Two, Season Three
+    takes place at the height of the War of the Elves and Sauron, as the Dark
+    Lord seeks to craft the One Ring that will give him the edge he needs to win
+    the war, bind all peoples to his will – and at last rule all Middle-earth.
+  attribution: Official season description reported by The Hollywood Reporter
 keyPoints:
-  - Jamie Campbell Bower is the new cast member playing Celeborn.
-  - 'Season 3 premieres on November 11, 2026, on Prime Video.'
-  - The story jumps forward in time to the height of a major war.
+  - The first trailer for Season 3 of The Rings of Power debuted at Comic-Con.
+  - Simon Pegg joins the cast as the voice of the Balrog.
+  - The new season premieres November 11 on Amazon Prime Video.
 seriesContext:
-  network: Prime Video
+  network: Amazon Prime Video
   premiere: '2022'
-  status: Returning Series
+  status: Returning
   seasons: '3'
   creator: 'Patrick McKay, John D. Payne'
   cast:
     - Morfydd Clark
     - Charlie Vickers
     - Robert Aramayo
-  whereToWatch: Prime Video
+  whereToWatch: Amazon Prime Video
 seriesStatus:
   show: 'The Lord of the Rings: The Rings of Power'
-  network: Prime Video
+  network: Amazon Prime Video
   status: renewed
   season: Season 3
-  window: 'November 11, 2026'
+  window: November 11
   castAdded:
-    - name: Jamie Campbell Bower
-      role: Celeborn
+    - name: Simon Pegg
+      role: Voice of the Balrog
+updateCount: 1
 ---
 
-Jamie Campbell Bower has been cast as Celeborn in the upcoming third season of *The Lord of the Rings: The Rings of Power*, according to TV Insider. He will be a series regular in the new season, which is scheduled to premiere on Wednesday, November 11, 2026, exclusively on Prime Video.
+Amazon released the first trailer for the third season of *The Lord of the Rings: The Rings of Power* at San Diego Comic-Con on Friday.
 
-Prime Video also confirmed that Eddie Marsan has joined the cast in a recurring role. The streamer announced the premiere date and new casting details during its upfront presentation in May 2026.
+According to *The Hollywood Reporter*, the team also announced that actor Simon Pegg will voice the Balrog in the upcoming season. The fiery, hulking monster will help the dark lord Sauron forge the One Ring.
 
-## What happens in Season 3?
+## What does the trailer show?
 
-The new season will jump forward several years from the events of Season 2. According to a description from Prime Video, Season 3 takes place at the height of the War of the Elves and Sauron, as the Dark Lord seeks to craft the One Ring. Showrunners J.D. Payne and Patrick McKay have previously stated they have a five-season plan for the series.
+The new footage, shown during Amazon's Comic-Con showcase, depicts Middle-earth in open war. Royal elf Galadriel, played by Morfydd Clark, leads her forces against the dark lord Sauron, portrayed by Charlie Vickers. The official logline states the season takes place at the height of the War of the Elves and Sauron, as Sauron seeks to craft the One Ring to bind all peoples to his will.
 
-"We have a five-year plan that we’ve had all along that’s not changing," Payne told TV Insider in April 2023.
+## When does the new season premiere?
 
-## Who else is in the cast?
+The series streams exclusively on Amazon Prime Video. According to *Variety*, the season jumps forward several years from the events of Season Two.
 
-Alongside Bower and Marsan, new cast members for Season 3 include Andrew Richardson as a series regular, with Zubin Varla and Adam Young in recurring roles. They join returning stars Morfydd Clark as Galadriel and Charlie Vickers as Sauron. Directors Charlotte Brändström and Sanaa Hamri will return, with Stefan Schwartz joining as a new director.
+## Who is in the cast?
 
-Filming for the third season began in June 2025, following the series' renewal in February 2025.
-
-## Sources
-- [Prime Video](https://www.primevideo.com/)
-- [TV Insider](https://www.tvinsider.com/)
+Returning cast members include Morfydd Clark, Charlie Vickers, Robert Aramayo, Ismael Cruz Córdova, Charles Edwards, and Markella Kavenagh. They are joined by new additions for Season 3, including Jamie Campbell Bower, Eddie Marsan, and Andrew Richardson. The series is produced by showrunners and executive producers J.D. Payne and Patrick McKay.
