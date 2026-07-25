@@ -1,10 +1,75 @@
 {
-  "runId": "run-2026-07-25T06-36-12",
-  "builtAt": "2026-07-25T06:37:23.040Z",
-  "count": 12,
+  "runId": "run-2026-07-25T08-32-22",
+  "builtAt": "2026-07-25T08:33:47.016Z",
+  "count": 10,
   "topics": [
     {
-      "id": "news-interview-with-the-vampire-renewed-queen-of-the-damned",
+      "id": "news-spaceballs-the-new-ones-comic-con-panel",
+      "slug": "spaceballs-the-new-ones-panel-at-comic-con-mentions-marvel",
+      "title": "'Spaceballs: The New Ones' Panel at Comic-Con Mentions Marvel",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "spaceballs-the-new-ones-comic-con-panel",
+      "primaryKeyword": "spaceballs the new ones panel",
+      "primaryEntity": "Spaceballs: The New Ones",
+      "entities": [
+        "Spaceballs"
+      ],
+      "angle": "A panel for 'Spaceballs: The New Ones' at Comic-Con featured news and discussions, with a mention of Marvel.",
+      "tmdbType": "movie",
+      "source": "gnews:facebook.com",
+      "sources": [
+        {
+          "outlet": "facebook.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNTlMUFdzd0o5bHlwcUNqdVFPTmJISzFLTmk0by02dzVSRUg1dGFEcjJQY2d6c1dseFNteUc5QlREXy1LbXJYeFhBTjVkT2M4cVUtMXhOMTdFRVMweXRaQ09LNldCb050V0JSM3dqdWdFX21qeDVMRE9OODNQMEpBcTdQekZBdnFpcEU0VVJ5bEQ2cXZvRGstUnVENGI3UWZBa3pqVlBUTGhVanR4YnlHLXZqQzIzN2JIU1FxOV9SYnNvZ2podm5NdHV6S3Btb3hXNW5ySg?oc=5",
+          "ageMin": 32,
+          "headline": "It was all knocks on Marvel at the 'Spaceballs: The New Ones' Panel at Comic-Con Read more below. - facebook.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxPNTlMUFdzd0o5bHlwcUNqdVFPTmJISzFLTmk0by02dzVSRUg1dGFEcjJQY2d6c1dseFNteUc5QlREXy1LbXJYeFhBTjVkT2M4cVUtMXhOMTdFRVMweXRaQ09LNldCb050V0JSM3dqdWdFX21qeDVMRE9OODNQMEpBcTdQekZBdnFpcEU0VVJ5bEQ2cXZvRGstUnVENGI3UWZBa3pqVlBUTGhVanR4YnlHLXZqQzIzN2JIU1F"
+        }
+      ],
+      "ageMin": 32,
+      "_cand": {
+        "key": "rss:it-was-all-knocks-on-marvel-at-the-spaceballs-the-new-ones-p",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "facebook.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "facebook.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-interview-with-the-vampire-renewed-season-4-queen-of-the-damned",
       "slug": "interview-with-the-vampire-renewed-for-season-4-with-rebrand-to-queen-",
       "title": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
       "contentType": "news",
@@ -13,14 +78,14 @@
       "subcategory": "news",
       "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-renewed-queen-of-the-damned",
-      "primaryKeyword": "interview with the vampire season 4",
+      "eventSlug": "interview-with-the-vampire-renewed-season-4-queen-of-the-damned",
+      "primaryKeyword": "Interview with the Vampire renewal",
       "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Interview with the Vampire (TV series)",
+        "AMC",
         "Queen of the Damned"
       ],
-      "angle": "AMC's 'Interview with the Vampire' has been renewed for a fourth season and will be rebranded as 'Queen of the Damned'.",
+      "angle": "'Interview With the Vampire' renewed for Season 4, rebranding to 'Queen of the Damned'.",
       "tmdbType": "movie",
       "source": "gnews:The Hollywood Reporter",
       "sources": [
@@ -28,7 +93,7 @@
           "outlet": "The Hollywood Reporter",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc=5",
-          "ageMin": 556,
+          "ageMin": 673,
           "headline": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’ - The Hollywood Reporter",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc="
         },
@@ -36,7 +101,7 @@
           "outlet": "TheWrap",
           "tier": 6,
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPN1pFSWRfcVNpNmFGT3lkMDVLRU82WFdlT3p3TjAtUzJROVo1ZktmcFctT3ZsbHlaWmNqeEdRdjF6V3hiX0o2MVFYbUlBYU5rR0p6dzVVMmVHTm5fMnZqNFB0WmJVN3RIdm55Q1E0WHUwUDdxbjZaUEZXTWJmY1Q1dllmeV91Z0c3c2lqQjhXRmxLUnJGbHhyU0tPWUFINjJSLVNJSjh2dkRCNFQ1SzFBME5sLWY?oc=5",
-          "ageMin": 621,
+          "ageMin": 737,
           "headline": "‘Interview With the Vampire’ Renewed for Season 4 With a New Showrunner - TheWrap",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPN1pFSWRfcVNpNmFGT3lkMDVLRU82WFdlT3p3TjAtUzJROVo1ZktmcFctT3ZsbHlaWmNqeEdRdjF6V3hiX0o2MVFYbUlBYU5rR0p6dzVVMmVHTm5fMnZqNFB0WmJVN3RIdm55Q1E0WHUwUDdxbjZaUEZXTWJmY1Q1dllmeV91Z0c3c2lqQjhXRmxLUnJGbHhyU0tPWUFINjJSLVNJSjh2dkRCNFQ1SzFBME5sLWY?oc=5\" t"
         },
@@ -46,7 +111,7 @@
           "url": "https://decider.com/2026/07/24/queen-of-the-damned-with-a-vampire-season-4/",
           "headline": "The Queen Will Return! Anne Rice s Interview With the Vampire Renewed For Season 4",
           "summary": "The upcoming installment will be based on Rice's novel, The Queen of the Damned.",
-          "ageMin": 622,
+          "ageMin": 739,
           "via": "corr-feed"
         },
         {
@@ -55,11 +120,11 @@
           "url": "https://www.tvline.com/2222823/interview-with-the-vampire-renewed-season-4-queen-of-the-damned/",
           "headline": "Interview With The Vampire Renewed For Season 4 At AMC (With A New, Akasha-Centric Title)",
           "summary": "Interview With the Vampire will officially be back at AMC, and Season 4 is putting Akasha front and center - get details on the renewal.",
-          "ageMin": 622,
+          "ageMin": 739,
           "via": "corr-feed"
         }
       ],
-      "ageMin": 556,
+      "ageMin": 673,
       "_cand": {
         "key": "rss:-interview-with-the-vampire-renewed-for-season-4-with-rebran",
         "popularity": 0,
@@ -98,62 +163,245 @@
       "tierClass": "B"
     },
     {
-      "id": "news-cape-janet-yang-short-film-challenge-grants",
-      "slug": "cape-and-janet-yang-productions-unveil-short-film-challenge-grants",
-      "title": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "cape-janet-yang-short-film-challenge-grants",
-      "primaryKeyword": "CAPE Janet Yang short film grants",
-      "primaryEntity": "Coalition of Asian Pacifics in Entertainment",
+      "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-balrog",
+      "slug": "rings-of-power-season-3-trailer-simon-pegg-cast-more-comic-con",
+      "title": "'Rings of Power' Season 3 Trailer, Simon Pegg Cast, More: Comic-Con",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "high",
+      "eventSlug": "rings-of-power-season-3-trailer-simon-pegg-balrog",
+      "primaryKeyword": "rings of power season 3 trailer",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
-        "Janet Yang Productions",
-        "Auliʻi Cravalho"
+        "The Lord of the Rings: The Rings of Power",
+        "Simon Pegg"
       ],
-      "angle": "The Coalition of Asian Pacifics in Entertainment and Janet Yang Productions have unveiled short film challenge grants with Auliʻi Cravalho and an 'Anora' producer on the jury.",
+      "angle": "Amazon's 'The Rings of Power' drops its Season 3 trailer and announces Simon Pegg will voice the Balrog.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:Deadline",
       "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVZrYnRROVFScTBfNXpRMHczajNsWkFKM29rbnpsLU5NanJmQlBKY2hKRGNFay15aVVlbjhuVlkzeEd1MmR6dDhra3RtUFdqY1hTclBqd2Q3SzFMOWNwOHVRcW1WT25nZjhPc3RkUGU4OEpCdUE2d19VTnBsSnNYN1ZfZFZnanhyWnhBY3Jmbmw?oc=5",
+          "ageMin": 841,
+          "headline": "'The Rings of Power' Season 3 Trailer, Simon Pegg Cast, More: Comic-Con - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxPSVZrYnRROVFScTBfNXpRMHczajNsWkFKM29rbnpsLU5NanJmQlBKY2hKRGNFay15aVVlbjhuVlkzeEd1MmR6dDhra3RtUFdqY1hTclBqd2Q3SzFMOWNwOHVRcW1WT25nZjhPc3RkUGU4OEpCdUE2d19VTnBsSnNYN1ZfZFZnanhyWnhBY3Jmbmw?oc=5\" target=\"_blank\" 'The Rings of Power' Season 3 Tra"
+        },
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/cape-janet-yang-productions-filmmaker-grants-short-film-challenge-1236819620/",
-          "ageMin": 621,
-          "headline": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants With Auli‘i Cravalho and Anora Producer on Jury (EXCLUSIVE)",
-          "summary": "The Coalition of Asian Pacifics in Entertainment and Janet Yang Productions have granted four filmmakers $25,000 to produce their films as part of the Julia S. Gouw Short Film Challenge. The filmmakers include Keshni Kashyap Nilsson ( The Shoe Burglars ), Nayon Cho ( Stigma ), Patricia Lee ( Wasted Resources ) and Tiffany Lin ( Hunger ). The Short Film Challenge s jury [ ]"
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5",
+          "ageMin": 842,
+          "headline": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5\" target=\"_blank\" ‘Rings of Power’ Deb"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2222735/lord-of-the-rings-the-rings-of-power-season-3-comic-con-trailer-one-ring/",
+          "headline": "Rings Of Power Season 3 Comic-Con Trailer Shows The Creation Of LOTR's One Ring",
+          "summary": "Sauron s war against Middle-earth heats up in the Rings of Power Season 3 trailer. Get a sneak peek at the Lord of the Rings show s latest chapter right here.",
+          "ageMin": 843,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "ComingSoon",
+          "tier": 4,
+          "url": "https://www.comingsoon.net/tv/trailers/2167458-lotr-rings-of-power-season-3-trailer-mission-impossible-star",
+          "headline": "LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast",
+          "summary": "The first exciting teaser trailer for The Lord of the Rings: The Rings of Power season 3 shows Sauron forging the One Ring. The post LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
+          "ageMin": 749,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
+          "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
+          "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
+          "ageMin": 789,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "TVLine",
+          "tier": 6,
+          "url": "https://www.tvline.com/2222736/simon-pegg-balrog-voice-lord-of-the-rings-the-rings-of-power/",
+          "headline": "The Lord Of The Rings: The Rings Of Power Casts Simon Pegg To Voice The Balrog In Season 3",
+          "summary": "Get all the scoop out of the fantasy series San Diego Comic-Con panel!",
+          "ageMin": 843,
+          "via": "corr-feed"
         }
       ],
-      "ageMin": 621,
+      "ageMin": 841,
       "_cand": {
-        "key": "rss:cape-and-janet-yang-productions-unveil-short-film-challenge-",
+        "key": "rss:-the-rings-of-power-season-3-trailer-simon-pegg-cast-more-co",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 6,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 6,
+        "outlets": [
+          "Deadline",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 1,
+        "corroboration": 18,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "music-news-tame-impala-j-cole-khalid-headline-rebranded-arena",
+      "slug": "tame-impala-j-cole-khalid-among-first-acts-for-rebranded-afterpay-aren",
+      "title": "Tame Impala, J. Cole, Khalid Among First Acts for Rebranded Afterpay Arena",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "tame-impala-j-cole-khalid-headline-rebranded-arena",
+      "primaryKeyword": "tame impala",
+      "primaryEntity": "Tame Impala",
+      "entities": [
+        "J. Cole",
+        "Khalid",
+        "Laufey",
+        "Robyn"
+      ],
+      "angle": "Music stars set to perform at newly renamed Sydney arena.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/pro/sydney-former-qudos-bank-arena-officially-reopens-afterpay-arena/",
+          "ageMin": 28,
+          "headline": "Sydney s Former Qudos Bank Arena Officially Reopens as Afterpay Arena",
+          "summary": "Among the first acts scheduled to play the transformed venue are Tame Impala, J. Cole, Khalid, Laufey, Robyn, Olivia Dean, Zara Larsson and Hilary Duff."
+        }
+      ],
+      "ageMin": 28,
+      "_cand": {
+        "key": "rss:sydney-s-former-qudos-bank-arena-officially-reopens-as-after",
         "popularity": 0,
         "kind": "rss-news"
       },
+      "breakoutVelocity": 0,
       "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 67,
       "signals": {
-        "recency": 4,
+        "recency": 24,
         "corroboration": 12,
         "status": 18,
         "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-marvels-wolverine-new-story-trailer",
+      "slug": "marvel-s-wolverine-gets-a-new-story-trailer",
+      "title": "Marvel’s Wolverine Gets a New Story Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "movies",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "marvels-wolverine-new-story-trailer",
+      "primaryKeyword": "marvel's wolverine trailer",
+      "primaryEntity": "Deadpool & Wolverine",
+      "entities": [
+        "Marvel's Wolverine",
+        "Marvel"
+      ],
+      "angle": "The upcoming Marvel's Wolverine game has released a new story trailer.",
+      "tmdbType": "movie",
+      "source": "gnews:PlayDayOne",
+      "sources": [
+        {
+          "outlet": "PlayDayOne",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5",
+          "ageMin": 923,
+          "headline": "Marvel’s Wolverine Gets a New Story Trailer - PlayDayOne",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5\" target=\"_blank\" Marvel’s Wolverine Gets a New Story Trailer /a nbsp; nbsp"
+        }
+      ],
+      "ageMin": 923,
+      "_cand": {
+        "key": "rss:marvel-s-wolverine-gets-a-new-story-trailer-playdayone",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "PlayDayOne"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "PlayDayOne",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
         "pop": 0,
         "breakout": 0,
         "big": 24,
@@ -164,34 +412,50 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-balrog",
-      "slug": "rings-of-power-debuts-season-3-trailer-simon-pegg-joins-cast-as-the-ba",
-      "title": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog",
+      "id": "trailer-rings-of-power-season-3-teaser-trailer",
+      "slug": "the-lord-of-the-rings-the-rings-of-power-debuts-season-3-teaser-traile",
+      "title": "'The Lord of the Rings: The Rings of Power' Debuts Season 3 Teaser Trailer",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-trailer-simon-pegg-balrog",
-      "primaryKeyword": "rings of power season 3 trailer",
+      "eventSlug": "rings-of-power-season-3-teaser-trailer",
+      "primaryKeyword": "Rings of Power Season 3 trailer",
       "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
-        "The Lord of the Rings: The Rings of Power",
-        "Simon Pegg",
-        "The Balrog"
+        "The Lord of the Rings: The Rings of Power"
       ],
-      "angle": "Amazon Prime Video has released the first trailer for 'The Lord of the Rings: The Rings of Power' Season 3, announcing Simon Pegg will voice The Balrog.",
+      "angle": "Amazon Prime Video has released a teaser trailer for the third season of 'The Lord of the Rings: The Rings of Power'.",
       "tmdbType": "movie",
-      "source": "gnews:Variety",
+      "source": "gnews:Rural Radio Network",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5",
-          "ageMin": 726,
-          "headline": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5\" target=\"_blank\" ‘Rings of Power’ Deb"
+          "outlet": "Rural Radio Network",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQzNWMlg4N2p2V3VLZVdpaGVGNmpKYk0wV1FrU0ZiZC1NMnE1T3p5ZWpPbm81MWVtdzdQQkMwS0xGbkNMMGpJeE1KdzJlYnNlWVhPVU1lc0tSbTNnVDNqa1duLW1YUzdEeEJVS3pnWEFWaDh1bi1SOFJ2bUZGa0F4dVF2MmJBdkExTWJyTkhNcExQMUdkNDlhUmJsTG02ZWhLY2x3ZGZMa0JLUndod3FPYk5TVE9ZSVdWRXhtTGNzVlk?oc=5",
+          "ageMin": 313,
+          "headline": "‘The Lord of the Rings: The Rings of Power’ debuts season 3 teaser trailer - Rural Radio Network",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiwAFBVV95cUxNQzNWMlg4N2p2V3VLZVdpaGVGNmpKYk0wV1FrU0ZiZC1NMnE1T3p5ZWpPbm81MWVtdzdQQkMwS0xGbkNMMGpJeE1KdzJlYnNlWVhPVU1lc0tSbTNnVDNqa1duLW1YUzdEeEJVS3pnWEFWaDh1bi1SOFJ2bUZGa0F4dVF2MmJBdkExTWJyTkhNcExQMUdkNDlhUmJsTG02ZWhLY2x3ZGZMa0JLUndod3FPYk5TVE9ZSVdWRXh"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2222841/the-rings-of-power-season-3-trailer-question-lotr-fans-rights/",
+          "headline": "The Rings Of Power Season 3 Trailer Raises A Giant Question For Every LOTR Fan",
+          "summary": "The Rings of Power showrunners previously said what source material they can draw from for the show. The new trailer has us wondering if that list has changed.",
+          "ageMin": 755,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Digital Spy",
+          "tier": 5,
+          "url": "https://www.digitalspy.com/tv/a73257424/rings-of-power-season-3-trailer/",
+          "headline": "Prime Video's epic returning series Rings of Power unveils season 3 trailer",
+          "summary": "One Ring to rule them all...",
+          "ageMin": 839,
+          "via": "corr-feed"
         },
         {
           "outlet": "ComingSoon",
@@ -199,7 +463,7 @@
           "url": "https://www.comingsoon.net/tv/trailers/2167458-lotr-rings-of-power-season-3-trailer-mission-impossible-star",
           "headline": "LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast",
           "summary": "The first exciting teaser trailer for The Lord of the Rings: The Rings of Power season 3 shows Sauron forging the One Ring. The post LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
-          "ageMin": 632,
+          "ageMin": 749,
           "via": "corr-feed"
         },
         {
@@ -208,7 +472,7 @@
           "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
           "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
           "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
-          "ageMin": 673,
+          "ageMin": 789,
           "via": "corr-feed"
         },
         {
@@ -217,35 +481,44 @@
           "url": "https://www.tvline.com/2222736/simon-pegg-balrog-voice-lord-of-the-rings-the-rings-of-power/",
           "headline": "The Lord Of The Rings: The Rings Of Power Casts Simon Pegg To Voice The Balrog In Season 3",
           "summary": "Get all the scoop out of the fantasy series San Diego Comic-Con panel!",
-          "ageMin": 727,
+          "ageMin": 843,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "The A.V. Club",
+          "tier": 5,
+          "url": "https://www.avclub.com/sauron-forges-the-ring-in-rings-of-power-season-3-trailer",
+          "headline": "Sauron's fiery ascent begins in The Lord Of The Rings: Rings Of Power's season 3 trailer",
+          "summary": "Prime Video s fantasy epic returns in November, bringing Jamie Campbell Bower and Simon Pegg along for the ride.",
+          "ageMin": 842,
           "via": "corr-feed"
         }
       ],
-      "ageMin": 726,
+      "ageMin": 313,
       "_cand": {
-        "key": "rss:-rings-of-power-debuts-season-3-trailer-simon-pegg-joins-cas",
+        "key": "rss:-the-lord-of-the-rings-the-rings-of-power-debuts-season-3-te",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 4,
+      "corroborationCount": 7,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 4,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 7,
         "outlets": [
-          "Variety"
+          "Rural Radio Network"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "Rural Radio Network",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 63,
+      "priority": 67,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 15,
         "pop": 0,
@@ -259,24 +532,22 @@
       "tierClass": "B"
     },
     {
-      "id": "news-on-patrol-live-adds-tom-morris-jr",
+      "id": "news-live-pd-gang-reunites-on-on-patrol-live",
       "slug": "the-whole-live-pd-gang-is-back-together-as-tom-morris-jr-joins-on-patr",
       "title": "The Whole Live PD Gang Is Back Together as Tom Morris Jr. Joins On Patrol: Live",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "on-patrol-live-adds-tom-morris-jr",
+      "eventSlug": "live-pd-gang-reunites-on-on-patrol-live",
       "primaryKeyword": "on patrol live",
       "primaryEntity": "On Patrol: Live",
       "entities": [
-        "Dan Abrams",
-        "Sgt. Sean \"Sticks\" Larkin",
         "Live PD"
       ],
-      "angle": "Original Live PD cast members reunite for the revived series.",
+      "angle": "Original 'Live PD' personalities reunite on 'On Patrol: Live'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
@@ -284,12 +555,12 @@
           "outlet": "THR",
           "tier": 7,
           "url": "https://www.hollywoodreporter.com/tv/tv-news/live-pd-reunion-tom-morris-jr-dan-abrams-on-patrol-live-1236656080/",
-          "ageMin": 321,
+          "ageMin": 437,
           "headline": "The Whole Live PD Gang Is Back Together as Tom Morris Jr. Joins On Patrol: Live",
           "summary": "Dan Abrams and Sgt. Sean \"Sticks\" Larkin have their buddy back."
         }
       ],
-      "ageMin": 321,
+      "ageMin": 437,
       "_cand": {
         "key": "rss:the-whole-live-pd-gang-is-back-together-as-tom-morris-jr-joi",
         "popularity": 0,
@@ -312,10 +583,10 @@
       },
       "priority": 65,
       "signals": {
-        "recency": 9,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -327,40 +598,134 @@
       "tierClass": "B"
     },
     {
-      "id": "news-lucas-museum-comic-con-film-programming",
-      "slug": "lucas-museum-at-comic-con-star-wars-animated-series-detours-to-finally",
-      "title": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
+      "id": "news-interview-with-the-vampire-season-4-queen-of-the-damned",
+      "slug": "queen-of-the-damned-is-season-4-of-interview-with-the-vampire-series",
+      "title": "'Queen of the Damned' Is Season 4 Of 'Interview With the Vampire' Series",
       "contentType": "news",
       "formatTag": "news",
-      "category": "movies",
+      "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "lucas-museum-comic-con-film-programming",
-      "primaryKeyword": "Lucas Museum",
-      "primaryEntity": "Lucas Museum",
+      "sensitivity": "high",
+      "eventSlug": "interview-with-the-vampire-season-4-queen-of-the-damned",
+      "primaryKeyword": "interview with the vampire",
+      "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Comic-Con Episode IV: A Fan's Hope",
-        "Comic-Con",
-        "Seth Green"
+        "Interview with the Vampire (TV series)",
+        "Queen of the Damned"
       ],
-      "angle": "The Lucas Museum reveals its film programming, including Star Wars animated series, at Comic-Con.",
+      "angle": "The fourth season of 'Interview with the Vampire' will be titled 'Queen of the Damned'.",
+      "tmdbType": "movie",
+      "source": "gnews:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5",
+          "ageMin": 737,
+          "headline": "'Queen of the Damned' Is Season 4 Of 'Interview With the Vampire' Series - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5\" target=\"_blank\" '"
+        },
+        {
+          "outlet": "Decider",
+          "tier": 5,
+          "url": "https://decider.com/2026/07/24/queen-of-the-damned-with-a-vampire-season-4/",
+          "headline": "The Queen Will Return! Anne Rice s Interview With the Vampire Renewed For Season 4",
+          "summary": "The upcoming installment will be based on Rice's novel, The Queen of the Damned.",
+          "ageMin": 739,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "TVLine",
+          "tier": 6,
+          "url": "https://www.tvline.com/2222823/interview-with-the-vampire-renewed-season-4-queen-of-the-damned/",
+          "headline": "Interview With The Vampire Renewed For Season 4 At AMC (With A New, Akasha-Centric Title)",
+          "summary": "Interview With the Vampire will officially be back at AMC, and Season 4 is putting Akasha front and center - get details on the renewal.",
+          "ageMin": 739,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "The A.V. Club",
+          "tier": 5,
+          "url": "https://www.avclub.com/amc-renews-interview-with-the-vampire-for-season-4",
+          "headline": "Interview With The Vampire scores well-deserved season 4 renewal",
+          "summary": "Get ready for i Anne Rice s Queen Of The Damned /i because Sheila Atim s Akasha will lead AMC s drama.",
+          "ageMin": 738,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 737,
+      "_cand": {
+        "key": "rss:-queen-of-the-damned-is-season-4-of-interview-with-the-vampi",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 4,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 57,
+      "signals": {
+        "recency": 1,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-curb-your-enthusiasm-guest-stars-list",
+      "slug": "all-of-the-guest-stars-and-cameos-on-hbo-s-curb-your-enthusiasm-so-far",
+      "title": "All of the Guest Stars and Cameos on HBO's Curb Your Enthusiasm (So Far)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "curb-your-enthusiasm-guest-stars-list",
+      "primaryKeyword": "Curb Your Enthusiasm",
+      "primaryEntity": "Larry David: Curb Your Enthusiasm",
+      "entities": [
+        "Curb Your Enthusiasm",
+        "Larry David",
+        "Barack Obama",
+        "Rob Reiner"
+      ],
+      "angle": "Compiles a list of notable guest stars and cameos on the latest season of HBO's 'Curb Your Enthusiasm'.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/lucas-museum-comic-con-star-wars-animated-series-detours-1236655674/",
-          "ageMin": 901,
-          "headline": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
-          "summary": "\"We’ve lived long enough to see all the stuff that we were beaten for loving become the fine art of our day,\" said show creator Seth Green."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/larry-and-the-pursuit-of-unhappiness-guest-stars-cameos-1236651445/",
+          "ageMin": 218,
+          "headline": "All of the Guest Stars and Cameos on HBO Max s Life, Larry and the Pursuit of Unhappiness (So Far)",
+          "summary": "From Barack Obama's opening cameo to Rob Reiner's poignant final screen role, HBO's sketch-comedy history lesson has stacked a deep bench — here's who's played who through episode four."
         }
       ],
-      "ageMin": 901,
+      "ageMin": 218,
       "_cand": {
-        "key": "rss:lucas-museum-at-comic-con-star-wars-animated-series-detours-",
+        "key": "rss:all-of-the-guest-stars-and-cameos-on-hbo-max-s-life-larry-an",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -379,586 +744,78 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 49,
       "signals": {
-        "recency": 1,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "trailer-rings-of-power-season-3-trailer-time-jump-sauron",
-      "slug": "lord-of-the-rings-the-rings-of-power-season-3-trailer-5-year-time-jump",
-      "title": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-trailer-time-jump-sauron",
-      "primaryKeyword": "rings of power season 3 trailer",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
-      "entities": [
-        "The Lord of the Rings: The Rings of Power",
-        "Sauron"
-      ],
-      "angle": "The trailer for 'The Lord of the Rings: The Rings of Power' Season 3 reveals a five-year time jump and focuses on Sauron's war.",
-      "tmdbType": "movie",
-      "source": "gnews:TheWrap",
-      "sources": [
-        {
-          "outlet": "TheWrap",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5",
-          "ageMin": 726,
-          "headline": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War - TheWrap",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5\" target=\""
-        },
-        {
-          "outlet": "/Film",
-          "tier": 5,
-          "url": "https://www.slashfilm.com/2222735/lord-of-the-rings-the-rings-of-power-season-3-comic-con-trailer-one-ring/",
-          "headline": "Rings Of Power Season 3 Comic-Con Trailer Shows The Creation Of LOTR's One Ring",
-          "summary": "Sauron s war against Middle-earth heats up in the Rings of Power Season 3 trailer. Get a sneak peek at the Lord of the Rings show s latest chapter right here.",
-          "ageMin": 727,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "Consequence",
-          "tier": 5,
-          "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
-          "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
-          "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
-          "ageMin": 673,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "The A.V. Club",
-          "tier": 5,
-          "url": "https://www.avclub.com/sauron-forges-the-ring-in-rings-of-power-season-3-trailer",
-          "headline": "Sauron's fiery ascent begins in The Lord Of The Rings: Rings Of Power's season 3 trailer",
-          "summary": "Prime Video s fantasy epic returns in November, bringing Jamie Campbell Bower and Simon Pegg along for the ride.",
-          "ageMin": 726,
-          "via": "corr-feed"
-        }
-      ],
-      "ageMin": 726,
-      "_cand": {
-        "key": "rss:-lord-of-the-rings-the-rings-of-power-season-3-trailer-5-yea",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 4,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 4,
-        "outlets": [
-          "TheWrap"
-        ],
-        "maxTier": 6,
-        "sensitivity": "normal",
-        "attribution": "TheWrap",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
-        "recency": 1,
-        "corroboration": 10,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
+        "big": 6,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
         "learned": -1
       },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-little-big-town-new-album-video",
-      "slug": "little-big-town-shares-heartfelt-we-could-have-it-all-video-ahead-of-n",
-      "title": "Little Big Town Shares Heartfelt \"We Could Have It All\" Video Ahead Of New Album",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "little-big-town-new-album-video",
-      "primaryKeyword": "little big town new album",
-      "primaryEntity": "Little Big Town",
-      "entities": [
-        "We Could Have It All"
-      ],
-      "angle": "Country group Little Big Town has released a video for 'We Could Have It All' ahead of their new album.",
-      "tmdbType": "movie",
-      "source": "gnews:That Eric Alper",
-      "sources": [
-        {
-          "outlet": "That Eric Alper",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOElOMDdPUGdUa25UQXF2a0NET2ZRbF9oTFhrSlptc01xSkdyQVZNRGpFbUxkdEpTM2oyOWxmbE96UzBNZXRZdEt2VEFDT0FBVnFjNHdGWFE5Z0MwVV9GS18yTjEzdUtJXzR3U3A4V3ozcHA5TkxFMUpRR29LeFdIcUpiQ1J3NmNWdUFDZWtXNlU5VHM3UV9QZzZFZTk1czhBUlpmdDFGVy1vcG9TMWlPZDhNWGc2dDVFaDg0ZA?oc=5",
-          "ageMin": 357,
-          "headline": "Little Big Town Shares Heartfelt \"We Could Have It All\" Video Ahead Of New Album - That Eric Alper",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOOElOMDdPUGdUa25UQXF2a0NET2ZRbF9oTFhrSlptc01xSkdyQVZNRGpFbUxkdEpTM2oyOWxmbE96UzBNZXRZdEt2VEFDT0FBVnFjNHdGWFE5Z0MwVV9GS18yTjEzdUtJXzR3U3A4V3ozcHA5TkxFMUpRR29LeFdIcUpiQ1J3NmNWdUFDZWtXNlU5VHM3UV9QZzZFZTk1czhBUlpmdDFGVy1vcG9TMWlPZDhNWGc2dDVFaDg"
-        }
-      ],
-      "ageMin": 357,
-      "_cand": {
-        "key": "rss:little-big-town-shares-heartfelt-we-could-have-it-all-video-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "That Eric Alper"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "That Eric Alper",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 51,
-      "signals": {
-        "recency": 9,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 3,
-        "learned": 4
-      },
-      "demandImpressions": 2,
-      "demandQuery": "little house on the prairie alice halsey",
-      "demandPosition": 13,
       "tierClass": "C"
     },
     {
-      "id": "trailer-rings-of-power-season-3-teaser-trailer",
-      "slug": "see-the-first-teaser-trailer-for-the-lord-of-the-rings-the-rings-of-po",
-      "title": "See the first teaser trailer for ‘The Lord of the Rings: The Rings of Power’ season 3",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-teaser-trailer",
-      "primaryKeyword": "rings of power season 3 trailer",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
-      "entities": [
-        "The Lord of the Rings: The Rings of Power"
-      ],
-      "angle": "Entertainment Weekly shares the first teaser trailer for the third season of Amazon's 'The Lord of the Rings: The Rings of Power'.",
-      "tmdbType": "movie",
-      "source": "gnews:Entertainment Weekly",
-      "sources": [
-        {
-          "outlet": "Entertainment Weekly",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5",
-          "ageMin": 726,
-          "headline": "See the first teaser trailer for ‘The Lord of the Rings: The Rings of Power’ season 3 - Entertainment Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5\" target=\"_blank\" See the f"
-        },
-        {
-          "outlet": "/Film",
-          "tier": 5,
-          "url": "https://www.slashfilm.com/2222841/the-rings-of-power-season-3-trailer-question-lotr-fans-rights/",
-          "headline": "The Rings Of Power Season 3 Trailer Raises A Giant Question For Every LOTR Fan",
-          "summary": "The Rings of Power showrunners previously said what source material they can draw from for the show. The new trailer has us wondering if that list has changed.",
-          "ageMin": 639,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "ComingSoon",
-          "tier": 4,
-          "url": "https://www.comingsoon.net/tv/trailers/2167458-lotr-rings-of-power-season-3-trailer-mission-impossible-star",
-          "headline": "LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast",
-          "summary": "The first exciting teaser trailer for The Lord of the Rings: The Rings of Power season 3 shows Sauron forging the One Ring. The post LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
-          "ageMin": 632,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "Digital Spy",
-          "tier": 5,
-          "url": "https://www.digitalspy.com/tv/a73257424/rings-of-power-season-3-trailer/",
-          "headline": "Prime Video's epic returning series Rings of Power unveils season 3 trailer",
-          "summary": "One Ring to rule them all...",
-          "ageMin": 722,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "Consequence",
-          "tier": 5,
-          "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
-          "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
-          "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
-          "ageMin": 673,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "The A.V. Club",
-          "tier": 5,
-          "url": "https://www.avclub.com/sauron-forges-the-ring-in-rings-of-power-season-3-trailer",
-          "headline": "Sauron's fiery ascent begins in The Lord Of The Rings: Rings Of Power's season 3 trailer",
-          "summary": "Prime Video s fantasy epic returns in November, bringing Jamie Campbell Bower and Simon Pegg along for the ride.",
-          "ageMin": 726,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "TVLine",
-          "tier": 6,
-          "url": "https://www.tvline.com/2222736/simon-pegg-balrog-voice-lord-of-the-rings-the-rings-of-power/",
-          "headline": "The Lord Of The Rings: The Rings Of Power Casts Simon Pegg To Voice The Balrog In Season 3",
-          "summary": "Get all the scoop out of the fantasy series San Diego Comic-Con panel!",
-          "ageMin": 727,
-          "via": "corr-feed"
-        }
-      ],
-      "ageMin": 726,
-      "_cand": {
-        "key": "rss:see-the-first-teaser-trailer-for-the-lord-of-the-rings-the-r",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 7,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 7,
-        "outlets": [
-          "Entertainment Weekly"
-        ],
-        "maxTier": 6,
-        "sensitivity": "normal",
-        "attribution": "Entertainment Weekly",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 61,
-      "signals": {
-        "recency": 1,
-        "corroboration": 10,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-hbo-max-leads-emmy-drama-comedy-races",
-      "slug": "hbo-max-leads-emmy-drama-and-comedy-races-for-first-time-since-2017",
-      "title": "HBO Max Leads Emmy Drama and Comedy Races for First Time Since 2017",
+      "id": "news-rick-moranis-comic-con-appearance-spaceballs",
+      "slug": "rick-moranis-makes-first-comic-con-appearance-for-spaceballs",
+      "title": "Rick Moranis Makes First Comic-Con Appearance for 'Spaceballs'",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "celebrity",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "hbo-max-leads-emmy-drama-comedy-races",
-      "primaryKeyword": "HBO Max Emmy nominations",
-      "primaryEntity": "HBO Max",
+      "eventSlug": "rick-moranis-comic-con-appearance-spaceballs",
+      "primaryKeyword": "rick moranis comic con",
+      "primaryEntity": "Rick Moranis",
       "entities": [
-        "The Daytime Emmy Awards",
-        "Emmy Awards"
+        "Spaceballs"
       ],
-      "angle": "HBO Max leads the Emmy drama and comedy races for the first time since 2017, positioning it for a potential sweep.",
+      "angle": "Rick Moranis made his first-ever appearance at Comic-Con to discuss 'Spaceballs', sharing details about his personal life and career break.",
       "tmdbType": "movie",
-      "source": "rss:Variety",
+      "source": "gnews:IMDb",
       "sources": [
         {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://variety.com/2026/tv/awards/hbo-max-the-pitt-hacks-emmys-history-1236820629/",
-          "ageMin": 545,
-          "headline": "HBO Max Leads the Emmy Drama and Comedy Races for the First Time Since 2017. How Often Do Both Frontrunners Win?",
-          "summary": "HBO Max wants it all. The most-nominated network enters Phase 2 of the Emmy race with the year s two most-nominated series, giving the platform a rare opportunity to capture television s top drama and comedy prizes, and potentially make history across three major program categories. The Pitt, the sophomore season of the breakout medical drama, leads [ ]"
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KdzZScHFIT1FqNUdTWEVjSTZkY1VFV2x1X0VwRGRXR3g1cWhlcnNOZUFOZ0ZnLVV2elJnTkdfaktjQmJ4UkxGeERjM2Q5MkhOUGd3VVUwY2pSTmtYMGM0WHJjOHhZdw?oc=5",
+          "ageMin": 37,
+          "headline": "Rick Moranis Makes First-Ever Comic-Con Appearance for ‘Spaceballs’: Details on His Wife, Kids Why He Took a Break From Hollywood - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE1KdzZScHFIT1FqNUdTWEVjSTZkY1VFV2x1X0VwRGRXR3g1cWhlcnNOZUFOZ0ZnLVV2elJnTkdfaktjQmJ4UkxGeERjM2Q5MkhOUGd3VVUwY2pSTmtYMGM0WHJjOHhZdw?oc=5\" target=\"_blank\" Rick Moranis Makes First-Ever Comic-Con Appearance for ‘Spaceballs’: Details on His Wife, "
         }
       ],
-      "ageMin": 545,
+      "ageMin": 37,
       "_cand": {
-        "key": "rss:hbo-max-leads-the-emmy-drama-and-comedy-races-for-the-first-",
+        "key": "rss:rick-moranis-makes-first-ever-comic-con-appearance-for-space",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Variety"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-interview-with-the-vampire-season-4-queen-of-the-damned",
-      "slug": "queen-of-the-damned-announced-as-title-for-interview-with-the-vampire-",
-      "title": "'Queen of the Damned' Announced as Title for 'Interview With the Vampire' Season 4",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-season-4-queen-of-the-damned",
-      "primaryKeyword": "interview with the vampire season 4",
-      "primaryEntity": "Interview with the Vampire",
-      "entities": [
-        "Interview with the Vampire (TV series)",
-        "Queen of the Damned"
-      ],
-      "angle": "The upcoming fourth season of AMC's 'Interview with the Vampire' will be titled 'Queen of the Damned'.",
-      "tmdbType": "movie",
-      "source": "gnews:Under the Radar Magazine",
-      "sources": [
-        {
-          "outlet": "Under the Radar Magazine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ2JBVUdISjFnbEhnYWNwMXFZaEtrQTN2WjVHb3Bna3JWVExoNXpsdF9hYmQtLUgwRlc2SW9KM2VIb3RuNVZJUnRxQmJsakQxY0FHaVFTODk1YzVza2VsU1V3djNEcEJKSkFwRjFJY1F6RVZ3R2xNUEs0Y3BZd0hMZWtkRTFOVGUySGVoYVRBOW9RNUFzYVQ2dFE0YjFGcVJHS25Eb244WGhiWXBheTZzN1Z3?oc=5",
-          "ageMin": 592,
-          "headline": "Protomartyr Announce New Album and Tour, Share Video for New Song “Sounds We Cannot Hear” - Under the Radar Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPQ2JBVUdISjFnbEhnYWNwMXFZaEtrQTN2WjVHb3Bna3JWVExoNXpsdF9hYmQtLUgwRlc2SW9KM2VIb3RuNVZJUnRxQmJsakQxY0FHaVFTODk1YzVza2VsU1V3djNEcEJKSkFwRjFJY1F6RVZ3R2xNUEs0Y3BZd0hMZWtkRTFOVGUySGVoYVRBOW9RNUFzYVQ2dFE0YjFGcVJHS25Eb244WGhiWXBheTZzN1Z3?oc=5\" targ"
-        },
-        {
-          "outlet": "Decider",
-          "tier": 5,
-          "url": "https://decider.com/2026/07/24/queen-of-the-damned-with-a-vampire-season-4/",
-          "headline": "The Queen Will Return! Anne Rice s Interview With the Vampire Renewed For Season 4",
-          "summary": "The upcoming installment will be based on Rice's novel, The Queen of the Damned.",
-          "ageMin": 622,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "TVLine",
-          "tier": 6,
-          "url": "https://www.tvline.com/2222823/interview-with-the-vampire-renewed-season-4-queen-of-the-damned/",
-          "headline": "Interview With The Vampire Renewed For Season 4 At AMC (With A New, Akasha-Centric Title)",
-          "summary": "Interview With the Vampire will officially be back at AMC, and Season 4 is putting Akasha front and center - get details on the renewal.",
-          "ageMin": 622,
-          "via": "corr-feed"
-        }
-      ],
-      "ageMin": 592,
-      "_cand": {
-        "key": "rss:protomartyr-announce-new-album-and-tour-share-video-for-new-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 3,
-      "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 3,
+        "outletCount": 1,
         "outlets": [
-          "Under the Radar Magazine"
+          "IMDb"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Under the Radar Magazine",
+        "attribution": "IMDb",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
       "priority": 56,
       "signals": {
-        "recency": 4,
+        "recency": 24,
         "corroboration": 8,
         "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-netflix-adds-canceled-show-with-97-percent-rotten-tomatoes-score",
-      "slug": "netflix-quietly-adds-canceled-show-with-97-on-rotten-tomatoes",
-      "title": "Netflix Quietly Adds Canceled Show With 97% on Rotten Tomatoes",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "normal",
-      "eventSlug": "netflix-adds-canceled-show-with-97-percent-rotten-tomatoes-score",
-      "primaryKeyword": "canceled show netflix rotten tomatoes",
-      "primaryEntity": "Netflix",
-      "entities": [
-        "Tiresia",
-        "Tires"
-      ],
-      "angle": "Netflix quietly adds a critically acclaimed but canceled show to its platform.",
-      "tmdbType": "movie",
-      "source": "gnews:Men's Journal",
-      "sources": [
-        {
-          "outlet": "Men's Journal",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOd29PNV9VdkVUUTUzbjJMY21sMGd1Y0xnOUE5UHBJYVBWMkN6bUt3ZklyTi1hQUdtdGZfODg1OWpkb2Z4d2tFeUNuX1g5YUNNUTZQYTYwdWItRG5fNFNyYkN3WXhkeFdnSDc4c1FvdkVkVGZ5aHRlc3paRmhQbFJhYzczZi1ueHpaaVdhNkZnSmFOci1MZ19xdUdkQWk?oc=5",
-          "ageMin": 65,
-          "headline": "Netflix Quietly Adding Canceled Show With 97% on Rotten Tomatoes - Men's Journal",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMinAFBVV95cUxOd29PNV9VdkVUUTUzbjJMY21sMGd1Y0xnOUE5UHBJYVBWMkN6bUt3ZklyTi1hQUdtdGZfODg1OWpkb2Z4d2tFeUNuX1g5YUNNUTZQYTYwdWItRG5fNFNyYkN3WXhkeFdnSDc4c1FvdkVkVGZ5aHRlc3paRmhQbFJhYzczZi1ueHpaaVdhNkZnSmFOci1MZ19xdUdkQWk?oc=5\" target=\"_blank\" Netflix Quietly A"
-        }
-      ],
-      "ageMin": 65,
-      "_cand": {
-        "key": "rss:netflix-quietly-adding-canceled-show-with-97-on-rotten-tomat",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Men's Journal"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Men's Journal",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "demand": 5,
-        "learned": 1
-      },
-      "demandImpressions": 5,
-      "demandQuery": "christopher nolan movies ranked rotten tomatoes",
-      "demandPosition": 23.5,
-      "tierClass": "C"
-    },
-    {
-      "id": "news-pamela-anderson-career-evolution-rosebush-pruning",
-      "slug": "pamela-anderson-promotes-her-new-film-rosebush-pruning-the-evolution-o",
-      "title": "Pamela Anderson promotes her new film 'Rosebush Pruning,' the evolution of her career, and whether or not she'd consider appearing in Fox's Baywatch.",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "pamela-anderson-career-evolution-rosebush-pruning",
-      "primaryKeyword": "Pamela Anderson career",
-      "primaryEntity": "Pamela Anderson",
-      "entities": [
-        "Rosebush Pruning",
-        "Baywatch"
-      ],
-      "angle": "Pamela Anderson discusses her career evolution and her new film 'Rosebush Pruning'.",
-      "tmdbType": "movie",
-      "source": "gnews:facebook.com",
-      "sources": [
-        {
-          "outlet": "facebook.com",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUzB3eXBnYTltTy0zeW9HRVFpR216M29HYUptVFY0eGdKS01LcWpZcGRxWjcxblRQYkRfaHFsRjAxa1RlalozMlFHTzhzTGlaVGVqUnhIMEFkZ0w2OVpWaXg0U0ZHdmFJaUIxNHJ3NlN6WXNHY0R1TlNmb3NOQUlKU3JxRU9zRFRRbWhZbTFFOWpRRnNqT2FfMC1sZUpFT3ZvMjZrM1pWZTJkRmwxbFY5V3dnRlRjQTV0MEpUZDYyU0JHcmFPUnVGeEFYajBuNjBTcHFpSw?oc=5",
-          "ageMin": 156,
-          "headline": "Pamela Anderson promotes her new film 'Rosebush Pruning,' the evolution of her career, and whether or not she'd consider appearing in Fox's Baywatch. Read more below. - facebook.com",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUzB3eXBnYTltTy0zeW9HRVFpR216M29HYUptVFY0eGdKS01LcWpZcGRxWjcxblRQYkRfaHFsRjAxa1RlalozMlFHTzhzTGlaVGVqUnhIMEFkZ0w2OVpWaXg0U0ZHdmFJaUIxNHJ3NlN6WXNHY0R1TlNmb3NOQUlKU3JxRU9zRFRRbWhZbTFFOWpRRnNqT2FfMC1sZUpFT3ZvMjZrM1pWZTJkRmwxbFY5V3dnRlRjQTV0MEp"
-        }
-      ],
-      "ageMin": 156,
-      "_cand": {
-        "key": "rss:pamela-anderson-promotes-her-new-film-rosebush-pruning-the-e",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "facebook.com"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "facebook.com",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 52,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
+        "type": 5,
         "pop": 0,
         "breakout": 0,
         "big": 0,
