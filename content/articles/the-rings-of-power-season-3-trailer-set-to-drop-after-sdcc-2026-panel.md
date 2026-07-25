@@ -8,56 +8,59 @@ subcategory: news
 author: editorial-team
 date: '2026-07-24T13:01:06.529Z'
 dek: >-
-  Prime Video revealed a new trailer and key casting at Comic-Con, with the
-  series set to return for its third season in November 2026.
+  Amazon’s fantasy epic returns November 11, 2026, with the Dark Lord forging
+  the One Ring. New cast members include Eddie Marsan and Jamie Campbell Bower.
 metaTitle: 'Rings of Power Season 3 Trailer Released, Simon Pegg Cast'
 metaDescription: >-
-  Prime Video debuted the first trailer for The Rings of Power Season 3,
-  announcing Simon Pegg will voice the Balrog and setting a November 2026
-  premiere.
+  The first trailer for The Rings of Power Season 3 is here, setting the stage
+  for the War of the Elves and Sauron. Adam Young plays the mysterious orc
+  Marnûkh.
 tags:
   - rings of power season 3 trailer
   - 'the lord of the rings: the rings of power'
   - simon pegg
   - eddie marsan
-  - andrew richardson
+  - jamie campbell bower
 targetKeyword: rings of power season 3 trailer
 keyTakeaways:
-  - 'The Rings of Power Season 3 premieres November 11, 2026, on Prime Video.'
-  - Simon Pegg joins the cast to voice the fiery demon known as the Balrog.
   - >-
-    Season 3 takes place five years after Season 2, at the height of the War of
-    the Elves and Sauron.
+    The first trailer for Season 3 premiered at San Diego Comic-Con, with the
+    season launching globally on November 11, 2026.
   - >-
-    New characters include Eddie Marsan as Thrain and Jamie Campbell Bower as
+    Simon Pegg will voice the Balrog, the fiery demon first seen in The
+    Fellowship of the Ring.
+  - >-
+    New cast members include Eddie Marsan as Thrain and Jamie Campbell Bower as
     Celeborn.
   - >-
-    The season will depict Sauron’s quest to forge the One Ring to rule
-    Middle-earth.
+    Season 3 jumps forward five years to the height of the war, with Sauron
+    forging the One Ring.
+  - >-
+    The series has attracted over 185 million viewers worldwide since its 2022
+    debut.
 faq:
-  - q: How many episodes will be in The Rings of Power Season 3?
+  - q: Will The Rings of Power Season 3 be the final season?
     a: >-
-      Season 3 will consist of eight episodes total. They will be released in
-      batches: the first four episodes premiere on November 11, 2026, followed
-      by two episodes on November 18, and the final two episodes on November 25.
-  - q: Is The Rings of Power connected to Peter Jackson's movies?
-    a: >-
-      Yes, it is a prequel set thousands of years before the events of The Lord
-      of the Rings and The Hobbit. It explores the forging of the Rings of
-      Power, the rise of Sauron, and the events that lead directly into the
-      history shown in Jackson's film trilogies.
-  - q: What other new creatures will appear in Season 3?
+      No, Season 3 is not confirmed to be the final season. According to The
+      Hollywood Reporter, work on a potential fourth season is already well
+      underway, indicating Amazon's plans to continue the story beyond the
+      upcoming chapter.
+  - q: What other creatures will appear in Season 3 besides the Balrog?
     a: >-
       According to reports from the Comic-Con panel, viewers can expect to see
-      Mûmakil (giant elephant-like creatures), Orcs, and Fell-beasts in addition
-      to the newly announced Balrog. The trailer also reveals the Nazgûl, or
-      Ringwraiths, in a form reminiscent of their appearance in the films.
-  - q: Who are the showrunners and directors for the new season?
+      Mûmakil (the giant elephant-like creatures), Orcs, and Fell-beasts
+      alongside the speaking Balrog in the new season.
+  - q: Is The Rings of Power connected to Peter Jackson's movies?
     a: >-
-      J.D. Payne and Patrick McKay continue as showrunners and executive
-      producers. The season's episodes are directed by Charlotte Brändström,
-      Sanaa Hamri, and Stefan Schwartz, with each director overseeing multiple
-      installments.
+      The series is a prequel set thousands of years before the events of
+      Jackson's The Lord of the Rings and The Hobbit trilogies. It explores the
+      Second Age of Middle-earth, including the forging of the Rings of Power
+      and the rise of Sauron, which sets the stage for the events of the
+      familiar films.
+  - q: Where can I watch the previous seasons of The Rings of Power?
+    a: >-
+      Both Season 1 and Season 2 of The Lord of the Rings: The Rings of Power
+      are available to stream exclusively on Amazon Prime Video.
 about:
   - name: 'The Lord of the Rings: The Rings of Power'
     type: TV Series
@@ -80,39 +83,34 @@ signals:
   spice: 0
   softTv: 0
   learned: -1
-eventSlug: rings-of-power-season-3-trailer-simon-pegg-balrog
+eventSlug: rings-of-power-season-3-trailer-simon-pegg-casting
 eventType: trailer
-outletCount: 6
+outletCount: 5
 provenance:
-  eventSlug: rings-of-power-season-3-trailer-simon-pegg-balrog
+  eventSlug: rings-of-power-season-3-trailer-simon-pegg-casting
   primaryEntity: 'The Lord of the Rings: The Rings of Power'
   eventType: trailer
-  sensitivity: high
+  sensitivity: normal
   status: DEVELOPING
-  attribution: deadline.com
+  attribution: hollywoodreporter.com
   outlets:
-    - Deadline
+    - The Hollywood Reporter
     - Variety
-  publishedAt: '2026-07-25T08:31:51.700Z'
-dateModified: '2026-07-25T08:37:00.959Z'
+  publishedAt: '2026-07-25T14:59:38.717Z'
+dateModified: '2026-07-25T15:07:49.416Z'
 storyStatus: DEVELOPING
-sensitivity: high
 keyMoments:
-  - The first trailer for Season 3 debuted at San Diego Comic-Con.
-  - Simon Pegg joins the cast to voice the iconic Balrog.
-  - The season depicts Sauron's forging of the One Ring.
-  - 'The story jumps five years ahead, into the height of war.'
-  - The season premieres on Prime Video in November 2026.
+  - 'Sauron forges the One Ring, escalating the war in Middle-earth.'
+  - Simon Pegg joins the cast as the voice of the fiery Balrog.
+  - 'New characters include Celeborn, Thrain, and Khamûl the Easterling.'
+  - 'The season premieres November 11, 2026, exclusively on Prime Video.'
+  - The story is set five years after the fall of Eregion.
 keyPoints:
   - >-
-    Prime Video debuted the first trailer for The Rings of Power Season 3 at
-    Comic-Con.
-  - >-
-    Simon Pegg joins the cast as the voice of the Balrog, with Eddie Marsan and
-    Jamie Campbell Bower also joining.
-  - >-
-    Season 3 premieres November 11, 2026, and will focus on Sauron forging the
-    One Ring.
+    The first trailer for Season 3 debuted, setting a November 11, 2026 premiere
+    date.
+  - Simon Pegg was announced as the voice of the Balrog.
+  - A slate of new cast members joins the ensemble for the war-torn season.
 seriesContext:
   network: Prime Video
   premiere: '2022'
@@ -120,9 +118,9 @@ seriesContext:
   seasons: '3'
   creator: 'Patrick McKay, John D. Payne'
   cast:
-    - Morfydd Clark
-    - Charlie Vickers
-    - Robert Aramayo
+    - Morfydd Clark as Galadriel
+    - Charlie Vickers as Sauron
+    - Robert Aramayo as Elrond
   whereToWatch: Amazon Prime Video
 seriesStatus:
   show: 'The Lord of the Rings: The Rings of Power'
@@ -137,42 +135,44 @@ seriesStatus:
       role: Thrain
     - name: Jamie Campbell Bower
       role: Celeborn
-updateCount: 3
+updateCount: 4
 ---
 
-Prime Video debuted the first trailer for *The Lord of the Rings: The Rings of Power* Season 3 at San Diego Comic-Con, confirming a November 2026 premiere date and announcing Simon Pegg will voice the Balrog. The Hall H panel, according to Deadline, revealed a slate of new cast members and positioned the upcoming season as the show’s darkest chapter yet.
+Prime Video released the first trailer for the third season of *[The Lord of the Rings: The Rings of Power](/tv/jamie-campbell-bower-joins-the-rings-of-power-season-3-as-celeborn/)* at San Diego Comic-Con, setting the stage for the epic War of the Elves and Sauron. The action-packed footage confirms the season will premiere on November 11, 2026. The panel also delivered a major casting surprise, announcing that Simon Pegg will voice the Balrog, the fiery demon of Middle-earth.
 
-The third season arrives as the fantasy epic reaches the core of its prequel mission: depicting the forging of the One Ring and the full-scale war it unleashes. With over 185 million viewers worldwide since its 2022 debut, the series remains a cornerstone of Amazon’s streaming strategy.
+The series, which began in a time of relative peace, now leaps forward to a world at war. According to the official synopsis, Sauron’s armies have marched across Middle-earth, with only a few strongholds like Khazad-dûm and Rivendell left to resist. The trailer centers on the Dark Lord’s obsessive quest to forge the One Ring, the artifact that will grant him dominion over all.
 
 ## What Are the Key Details for Season 3?
 
-The Comic-Con reveals provided concrete details about the show’s return. The new season will premiere with a staggered release of its eight episodes, beginning in November 2026. Key confirmed specifics include:
-* **Release Date:** November 11, 2026 (first four episodes)
-* **Streaming Platform:** Amazon Prime Video
+The new season brings a host of confirmed details, from its release strategy to a slate of new faces.
 
-- **New Cast:** Simon Pegg (voice of the Balrog), Eddie Marsan (Thrain), Andrew Richardson (Anarion), Zubin Varla (Khamûl the Easterling), Adam Young (Marnûkh), and Jamie Campbell Bower (Celeborn)
-- **Setting:** Five years after the fall of Eregion, at the height of the War of the Elves and Sauron
-- **Central Plot:** Sauron’s campaign to craft the One Ring and subjugate all of Middle-earth
+* **Global Premiere Date:** November 11, 2026, on Prime Video.
+* **Release Schedule:** The season premieres with four episodes on November 11, followed by two more on November 18, and the final two on November 25.
+* **New Cast & Characters:** Simon Pegg voices the Balrog. Eddie Marsan plays Thrain, King Durin IV’s older brother. Jamie Campbell Bower plays Celeborn, Galadriel’s long-lost husband. Andrew Richardson is Anarion, Isildur’s brother. Adam Young plays the mysterious orc Marnûkh. Zubin Varla is Khamûl the Easterling.
+* **Creative Team:** Showrunners and executive producers J.D. Payne and Patrick McKay return, with directors Charlotte Brändström, Sanaa Hamri, and Stefan Schwartz helming episodes.
+* **Viewership:** According to Prime Video, the series has attracted over 185 million viewers worldwide since its 2022 debut.
 
-The official logline states the season “takes place at the height of the War of the Elves and Sauron, as the Dark Lord seeks to craft the One Ring that will give him the edge he needs to win the war, bind all peoples to his will – and at last rule all Middle-earth.”
+## The Story and Stakes of Season 3
 
-## Who Is Returning and Who Is New?
+Season 3 is set five years after the fall of Eregion, placing the narrative at the height of the War of the Elves and Sauron. The official logline states the Dark Lord “seeks to craft the One Ring that will give him the edge he needs to win the war, bind all peoples to his will – and at last rule all Middle-earth.” This plot advancement directly fulfills the series’ premise of confronting the re-emergence of evil, moving from political intrigue to open, continent-spanning conflict.
 
-The series is created by Patrick McKay and John D. Payne, who also serve as showrunners and executive producers. Directors for the new season include Charlotte Brändström, Sanaa Hamri, and Stefan Schwartz, each overseeing multiple episodes. The core ensemble returns, including Morfydd Clark as Galadriel, Charlie Vickers as Sauron, Robert Aramayo as Elrond, and Ismael Cruz Córdova as Arondir.
+The story explores the isolated realms holding out against Sauron’s forces. The elven kingdoms of Lindon and Rivendell, protected by their Three Rings, and the sealed dwarven halls of Khazad-dûm become the last bastions of the free peoples. The season promises to unite Dwarves, Elves, Men, and Wizards in a desperate race against time to stop the Dark Lord’s final victory.
 
-New additions bring pivotal figures from Tolkien’s legendarium to life. Jamie Campbell Bower’s Celeborn, Galadriel’s canonically destined husband, becomes a central love interest. Eddie Marsan joins as Thrain, father of *The Hobbit*’s Thorin Oakenshield, adding depth to Dwarven royalty. The most surprising casting is Simon Pegg as the voice of the Balrog, the magma monster last seen battling Gandalf in the mines of Moria. Pegg, known for roles in *Mission: Impossible* and *Star Trek*, adds his voice to a creature traditionally depicted as a force of pure destruction.
+## Simon Pegg and the Expanding Cast
 
-## Why Does This Season Matter for the Franchise?
+The most unexpected reveal from Comic-Con was the casting of Simon Pegg as the voice of the Balrog. The creature, a hulking magma monster from the depths of Moria, was last seen on screen battling Gandalf in Peter Jackson’s *The Fellowship of the Ring*. Pegg’s involvement marks his entry into another major genre franchise, adding to his roles in *Star Trek*, *[Star Wars](/tv/disney-s-2026-star-wars-slate-leaves-out-a-live-action-series-staple/)*, *Mission: Impossible*, and *The Boys*.
 
-Season 3 represents the narrative payoff for which the first two seasons have been laying the groundwork. After seasons of mystery and rising tension, the story now enters the canonical war that defines the Second Age. The trailer’s focus on Sauron pouring molten metal into a ring-shaped mold visually confirms the series is delivering on its core premise: showing the creation of the iconic weapon from Peter Jackson’s films.
+He joins a returning ensemble led by Morfydd Clark as Galadriel and Charlie Vickers as Sauron, alongside Robert Aramayo as Elrond, Ismael Cruz Córdova as Arondir, and Markella Kavenagh as Elanor ‘Nori’ Brandyfoot. The series has a 6.9/10 rating on IMDb.
 
-This shift moves the series from a sprawling ensemble drama into a focused war story. The stakes are explicitly defined—only the dwarf kingdom of Khazad-dûm and the elven realms of Lindon and Rivendell stand against Sauron’s conquering armies. The season also promises to explore origin stories for key *Lord of the Rings* elements, including the Ringwraiths and the political foundations of Gondor through the character of Anarion.
+## How Season 3 Fits the Franchise and Amazon’s Strategy
 
-## What Is the Release Schedule?
+*The Rings of Power* is a prequel set thousands of years before the events of *The Lord of the Rings* and *The Hobbit*. The first season is Prime Video’s biggest TV series premiere ever, and the second season ranks among its top five most-watched returning seasons. The show has been nominated for 7 Primetime Emmys, among 22 wins and 66 nominations total.
 
-Prime Video confirmed a specific rollout for the eight-episode season. The first four episodes will be available to stream on Wednesday, November 11, 2026. Two more episodes follow on November 18, with the season’s final two episodes landing on November 25. This structured release mirrors the strategy used for previous seasons, aiming to build weekly momentum and discussion.
+Releasing the Season 3 trailer at San Diego Comic-Con, a hallowed ground for fantasy fans, underscores Amazon’s commitment to the property. The timing is also notable, arriving in a year that marks the 25th anniversary of *The Fellowship of the Ring*’s theatrical release. According to The Hollywood Reporter, work on a potential fourth season is already well underway, signaling long-term plans for the Middle-earth saga on streaming.
 
-Production on the third season is complete, with the Comic-Con trailer serving as the first major marketing push. The series was renewed for this season in February 2025, and no further seasons have been officially announced. As of July 2026, the focus remains squarely on the impending war for Middle-earth arriving this November.
+## What’s Next for The Rings of Power?
+
+The next confirmed milestone is the global premiere of Season 3 on Prime Video on November 11, 2026. The eight-episode season will roll out over three weeks. Beyond that, the future of the series is actively being developed, though an official renewal for Season 4 has not been announced. Fans can expect the war for Middle-earth to escalate dramatically when the new season arrives this fall.
 
 ## Sources
 * [Prime Video](https://www.primevideo.com/)

@@ -1,0 +1,86 @@
+{
+  "id": "news-pamela-anderson-twisted-movie-interview",
+  "slug": "pamela-anderson-on-her-role-in-the-year-s-most-twisted-movie-i-like-st",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 4,
+      "broken": [
+        "body 575w < 600",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": [
+        "body 528w < 600",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Pamela Anderson",
+    "work": {
+      "title": "Rosebush Pruning",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "variety.com"
+  },
+  "holdReason": "broken article: body 528w < 600; prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 528,
+      "h2s": 4,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 17,
+      "flesch": 49,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 528w < 600",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+      ]
+    },
+    "hardBlocks": [
+      "body 528w < 600",
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 178881
+}
