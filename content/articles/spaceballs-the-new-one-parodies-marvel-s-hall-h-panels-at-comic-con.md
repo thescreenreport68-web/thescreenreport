@@ -6,50 +6,59 @@ subcategory: news
 author: editorial-team
 date: '2026-07-25T01:02:28.595Z'
 dek: >-
-  Amazon MGM Studios staged a full send-up of Marvel's timeline presentations,
-  featuring Rick Moranis, Josh Gad, and a beamed-in Mel Brooks.
+  Amazon MGM Studios unveiled the long-awaited sequel with a send-up of Marvel's
+  cinematic universe timeline and a rare Comic-Con appearance from Rick Moranis.
 metaTitle: 'Spaceballs: The New One Parodies Marvel at Comic-Con Hall H'
 metaDescription: >-
-  The event, reported by Deadline, featured appearances from key cast members
-  and confirmed a theatrical release date for the long-awaited sequel.
+  The sequel to the 1987 sci-fi spoof marks the return of Rick Moranis to a
+  major film role for the first time in over two decades.
 tags:
-  - spaceballs new one
+  - spaceballs the new one
   - 'spaceballs: the new one'
-  - josh gad
   - rick moranis
+  - josh gad
   - mel brooks
   - amazon mgm studios
-targetKeyword: spaceballs new one
+targetKeyword: spaceballs the new one
 keyTakeaways:
   - >-
-    Amazon MGM Studios presented 'Spaceballs: The New One' at Comic-Con's Hall H
-    on Friday, parodying Marvel's past panel presentations.
+    Amazon MGM Studios presented 'Spaceballs: The New One' in Hall H at San
+    Diego Comic-Con.
   - >-
-    The panel featured Josh Gad, Rick Moranis, and Lewis Pullman, with Mel
-    Brooks and Bill Pullman appearing via video.
+    The presentation included a full mock-up of an 11-phase 'Spaceballs
+    Cinematic Universe' timeline, parodying Marvel Studios.
   - >-
-    A clip was shown, and the film's theatrical release date was confirmed for
-    April 23, 2027.
+    Rick Moranis made a rare public appearance, receiving a standing ovation as
+    he returns to the role of Dark Helmet.
+  - >-
+    The sequel, directed by Josh Greenbaum, is scheduled for theatrical release
+    on April 23, 2027.
 faq:
-  - q: Is Josh Gad playing Barf in the sequel?
+  - q: Is Mel Brooks acting in the new Spaceballs movie?
     a: >-
-      No. Josh Gad clarified during the panel that he is not playing the beloved
-      mawg Barf, a role originated by John Candy. Instead, he is playing a new
-      mog character in the film, which he described as a love letter to Candy's
+      Yes, Mel Brooks is returning as the character Yogurt. However, due to his
+      age, he will not be wearing the elaborate makeup from the original film.
+      Instead, Yogurt will be a digital character, with Brooks providing the
+      voice via performance capture.
+  - q: What character is Josh Gad playing?
+    a: >-
+      Josh Gad is not playing Barf, the role originated by John Candy. Gad is
+      playing a new character who is also a Mog, the same alien species as Barf.
+      He has stated his role and the film are intended as a tribute to Candy's
       legacy.
-  - q: Will the trailer from Comic-Con be released online?
+  - q: Will the sequel include other original cast members?
     a: >-
-      No. According to the report, the clip shown in Hall H was longer than one
-      previously seen at CinemaCon, but the trailer is not being released
-      publicly at this time.
-  - q: 'What is the plot of ''Spaceballs: The New One''?'
+      Yes. In addition to Rick Moranis, Mel Brooks, Bill Pullman, and Daphne
+      Zuniga, other returning original cast members include George Wyner as
+      Colonel Sandurz and Michael Winslow as the Radar Technician. The film will
+      also include acknowledgements for original cast members who have passed
+      away.
+  - q: Why did Rick Moranis decide to return for this film?
     a: >-
-      The official premise states that forty years after the first film, the
-      galaxy faces a new threat obsessed with bringing back the past. With Lone
-      Starr in hiding, the hope falls to Queen Vespa's son, Prince Starburst
-      (Lewis Pullman), and a palace advisor named Destiny (Keke Palmer), who
-      must find the original heroes to fight a meta-commentary on reboots
-      themselves.
+      Moranis explained during the panel that the timing felt right, especially
+      upon hearing that Bill Pullman would return alongside his real-life son,
+      Lewis Pullman. He stated, "It just felt like, this is it. It's time, and
+      yes. I said yes, and it is the best decision I've ever made."
 about:
   - name: 'Spaceballs: The New One'
     type: Movie
@@ -60,9 +69,9 @@ image: >-
 imageWidth: 1600
 imageHeight: 1066
 formatTag: news
-trendScore: 87
+trendScore: 64
 signals:
-  recency: 24
+  recency: 1
   corroboration: 12
   status: 18
   type: 9
@@ -72,11 +81,11 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: spaceballs-the-new-one-comic-con-hall-h-parody
+eventSlug: spaceballs-the-new-one-comic-con-panel
 eventType: announcement
-outletCount: 1
+outletCount: 6
 provenance:
-  eventSlug: spaceballs-the-new-one-comic-con-hall-h-parody
+  eventSlug: spaceballs-the-new-one-comic-con-panel
   primaryEntity: 'Spaceballs: The New One'
   eventType: announcement
   sensitivity: normal
@@ -84,54 +93,72 @@ provenance:
   attribution: deadline.com
   outlets:
     - Deadline
-  publishedAt: '2026-07-25T01:02:28.595Z'
-dateModified: '2026-07-25T01:02:28.595Z'
+  publishedAt: '2026-07-25T15:58:39.823Z'
+dateModified: '2026-07-25T16:10:34.026Z'
 storyStatus: DEVELOPING
 infoCard:
   director: Josh Greenbaum
   cast:
-    - Mel Brooks
     - Rick Moranis
-    - Keke Palmer
+    - Bill Pullman
+    - Lewis Pullman
   releaseYear: '2027'
   genre: 'Comedy, Science Fiction'
   whereToWatch: Theaters
 newsType: general
 pullQuote:
   text: >-
-    "There’s room in a Mel Brooks movie for the smartest joke you’ve ever
-    thought of and the dumbest one."
-  attribution: 'Rick Moranis, during the panel'
+    There’s room in a Mel Brooks movie for the smartest joke you’ve ever thought
+    of and the dumbest one.
+  attribution: 'Rick Moranis, actor returning as Dark Helmet'
 keyPoints:
   - >-
-    Amazon MGM's Hall H panel for 'Spaceballs: The New One' was a full parody of
-    Marvel's iconic Comic-Con presentations.
+    Amazon MGM unveiled the 'Spaceballs' sequel with a Hall H panel parodying
+    Marvel's franchise reveals.
   - >-
-    The event featured Rick Moranis, Josh Gad, and Lewis Pullman live, with
-    video appearances from Mel Brooks and Bill Pullman.
-  - 'A release date of April 23, 2027, was confirmed for the theatrical sequel.'
+    Rick Moranis made a rare public appearance, confirming his return as Dark
+    Helmet after over 20 years.
+  - >-
+    The film, featuring returning original cast and new stars, is set for an
+    April 2027 theatrical release.
+updateCount: 1
 ---
 
-Amazon MGM Studios staged a presentation for *Spaceballs: The New One* in Comic-Con's Hall H on Friday that served as a direct parody of Marvel's own iconic panels. The event, reported by Deadline, featured appearances from key cast members and confirmed a theatrical release date for the long-awaited sequel.
+Amazon MGM Studios presented *Spaceballs: The New One* in San Diego Comic-Con's Hall H on Friday, July 24, 2026, with a full-scale parody of Marvel Studios' signature phase timeline reveals. The sequel to the 1987 sci-fi spoof marks the return of Rick Moranis to a major film role for the first time in over two decades.
 
-Josh Greenbaum directs the film, which brings back Mel Brooks as Yogurt and Rick Moranis as Dark Helmet, alongside new stars like Keke Palmer and Lewis Pullman.
+According to Deadline, the studio used the venue's massive wrap-around screens to display a hysterical send-up of the Marvel Cinematic Universe's presentation style. The gag outlined a fictional 11-phase *Spaceballs* cinematic universe, complete with fake titles spanning decades. It was a direct jab at the sprawling, meticulously planned franchise slates that have become a staple of the annual convention.
 
-## What happened at the Hall H panel?
+## What Happened at the Panel?
 
-The studio presentation opened with a massive display on the venue's 180-degree wrap-around screens, mimicking the scale of Marvel's timeline reveals from its 2019 and 2022 events. The screens humorously displayed iterations of the *Spaceballs* franchise across 11 fictional phases, complete with musicals and unidentified release dates.
+The Hall H event was packed with surprises and callbacks to the original film. Key moments from the panel included:
 
-Rick Moranis made a surprise appearance, disguised among fans wearing Dark Helmet costumes before standing to a standing ovation. Josh Gad, who writes, produces, and stars in the sequel, joked about the actor's potential future. "They’re announcing him as part of the X-Men cast tomorrow," Gad said.
+* **Rick Moranis's Return:** The actor, who played Dark Helmet in the original, was discovered in the audience wearing the character's helmet, a callback to the original film's "comb the desert" joke. He received a thunderous standing ovation and chants of his name.
+* **Mel Brooks's Video Message:** The 100-year-old creator of *Spaceballs* appeared via a recorded video, joking he was on the convention floor trying to buy a rare Charizard card. He returns to voice the digital character of Yogurt.
+* **The Cast Reunion:** Stars from the original film, including Bill Pullman (Lone Starr) and Daphne Zuniga (Queen Vespa), are returning. Lewis Pullman plays their on-screen son, Starburst.
+* **A New Clip:** The panel showed an extended clip from the film, featuring new characters played by Keke Palmer and Josh Gad, and culminating in a gag with an *Avatar* Na'vi character.
 
-## Who appeared and what did they say?
+## Who Is Making the Sequel?
 
-Mel Brooks, 100, beamed in with a message for the crowd. "Sorry I can’t be with you. I’m on the convention floor trying to buy a rare Charizard card," he joked. Bill Pullman also appeared remotely, claiming to be on a similar quest in the UK.
+The creative team includes Josh Gad, who also stars and produces, alongside writers Dan Hernandez and Benji Samit. The project originated from Gad, who was inspired to pitch a sequel to Mel Brooks after a planned *Honey, I Shrunk the Kids* follow-up with Moranis fell apart.
 
-His son, Lewis Pullman, who plays Starburst in the film, was on stage and called his father's original performance "unfillable." He also shared that his least favorite scene in the original was when Barf knocks his dad's cowboy hat off. "For a while I had real beef with Barf," the younger Pullman said.
+Gad described the new film as a love letter to the late John Candy, who played Barf in the original. While Gad is not playing Barf, he is playing another character of the same alien species, a Mog. The film will also acknowledge other original cast members who have passed away, including Joan Rivers and Dom DeLuise.
 
-Addressing the potential for controversy given Brooks's famously irreverent humor, director Josh Greenbaum noted the guiding principle. "It’s all about the laughs, Mel always said." Rick Moranis added, "There’s room in a Mel Brooks movie for the smartest joke you’ve ever thought of and the dumbest one."
+## Why Make a Sequel Now?
 
-## What was shown and when is it coming out?
+The panelists framed the sequel as a timely commentary on the current state of film and fandom. "The industry it was parodying is a very different industry than this one 40 years later," Gad said, according to The Hollywood Reporter. He explained the team thematically explored the concept of nostalgia and why audiences are drawn to sequels and legacy stories.
 
-The panel featured a longer clip than one previously shown at CinemaCon, depicting Yogurt, Keke Palmer's Destiny, and Lewis Pullman's Starburst on an adventure, alongside Daphne Zuniga's Princess Vespa. The footage concluded with a parody gag involving an *Avatar* Na'vi character. A public trailer was not released.
+Moderator Kevin Smith pointed out that when the first film was made, it only had the original *Star Wars* trilogy to spoof. "Now there's a never-ending fount," he said. The sequel aims to parody the modern landscape of endless franchises, reboots, and cinematic universes.
 
-The studio confirmed that *Spaceballs: The New One* will blast into theaters on April 23, 2027.
+## When Does It Come Out?
+
+*Spaceballs: The New One* is scheduled for a theatrical release on April 23, 2027. No trailer was released publicly from the Comic-Con panel, though a clip was shown exclusively to the Hall H audience. The footage was a slightly re-edited version of material first shown at CinemaCon in April, with new gags added, including Dark Helmet proclaiming, "Somehow I've returned... somehow!"
+
+## Lewis Pullman's 'Beef' with Barf
+
+Lewis Pullman, who plays Starburst, shared a personal grievance with the original film during the panel. He cited his least favorite scene as the moment Barf knocks his on-screen father's cowboy hat off into space. "I remember being too young to understand that the hat didn’t just fall into the abyss of space," Pullman said. "This whole movie’s about him trying to get his damn hat back."
+
+He added, "For a while I had real beef with Barf." The new film's premise, verified by TMDB, confirms this plot point, centering on Lone Starr's quest to retrieve his lost hat as the galaxy faces a new threat.
+
+## Sources
+* [Box Office Mojo](https://www.boxofficemojo.com/)
+* [Amazon MGM Studios](https://www.amazonstudios.com/)

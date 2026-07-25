@@ -1,13 +1,13 @@
 {
   "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-joins-cast",
-  "slug": "rings-of-power-debuts-season-3-trailer-simon-pegg-joins-cast-as-the-ba",
+  "slug": "the-rings-of-power-season-3-trailer-drops-simon-pegg-joins-cast",
   "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "tv/trailers",
       "format": [
-        "a 63-word run-on sentence (>55 — split it)"
+        "a 73-word run-on sentence (>55 — split it)"
       ],
       "cuts": 1,
       "broken": []
@@ -16,9 +16,9 @@
       "score": null,
       "cat": "tv/trailers",
       "format": [
-        "a 63-word run-on sentence (>55 — split it)"
+        "a 73-word run-on sentence (>55 — split it)"
       ],
-      "cuts": 0,
+      "cuts": 1,
       "broken": []
     }
   },
@@ -30,7 +30,7 @@
       "year": null,
       "medium": "tv"
     },
-    "outlet": "variety.com"
+    "outlet": "hollywoodreporter.com"
   },
   "holdReason": "trailer: required embed missing",
   "scorecard": {
@@ -39,8 +39,8 @@
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 637,
-      "h2s": 6,
+      "words": 691,
+      "h2s": 5,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 2,
@@ -50,14 +50,14 @@
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 63,
-      "avgSentence": 22,
-      "flesch": 53,
-      "bannedTells": 0,
+      "maxSentence": 73,
+      "avgSentence": 21,
+      "flesch": 56,
+      "bannedTells": 1,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "a 63-word run-on sentence (>55 — split it)"
+        "a 73-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": []
@@ -71,5 +71,82 @@
       "credit"
     ]
   },
-  "ms": 303093
+  "ms": 302253,
+  "previousRuns": [
+    {
+      "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-joins-cast",
+      "slug": "rings-of-power-debuts-season-3-trailer-simon-pegg-joins-cast-as-the-ba",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/trailers",
+          "format": [
+            "a 63-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 1,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/trailers",
+          "format": [
+            "a 63-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 0,
+          "broken": []
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "The Lord of the Rings: The Rings of Power",
+        "work": {
+          "title": "The Lord of the Rings: The Rings of Power",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "variety.com"
+      },
+      "holdReason": "trailer: required embed missing",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 637,
+          "h2s": 6,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 2,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 63,
+          "avgSentence": 22,
+          "flesch": 53,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "a 63-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "video grounding",
+          "≥1200px legal image",
+          "credit"
+        ]
+      },
+      "ms": 303093
+    }
+  ]
 }
