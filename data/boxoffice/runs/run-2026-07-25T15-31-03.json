@@ -1,0 +1,201 @@
+{
+ "runId": "run-2026-07-25T15-31-03",
+ "mode": "live",
+ "startedAt": "2026-07-25T15:31:03.744Z",
+ "films": 44,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-end-of-evangelion-bo-update×BO-UPDATE",
+   "reason": "scaffold: fewer than 3 keyTakeaways",
+   "score": 80
+  },
+  {
+   "tag": "masters-of-the-universe-bo-opening×BO-OPENING",
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "score": 55
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 154 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 4.2,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "attemptCapHit": 4,
+ "zeroStreak": 6,
+ "daySpend": {
+  "laDay": "2026-07-25",
+  "usd": 0.29577
+ },
+ "faults": {
+  "count": 2,
+  "bySeverity": {
+   "info": 2
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "malformed JSON from google/gemini-2.5-flash-lite — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-25T15:34:25.713Z"
+   },
+   {
+    "stage": "model:qa",
+    "message": "malformed JSON from google/gemini-2.5-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-25T15:39:57.333Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-25T15:40:05.658Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1110,
+    "out": 506,
+    "usd": 0.00031,
+    "ms": 2342
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3504,
+    "out": 2748,
+    "usd": 0.00051,
+    "ms": 6158
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 11536,
+    "out": 940,
+    "usd": 0.00153,
+    "ms": null
+   },
+   "synthesizer": {
+    "calls": 5,
+    "errors": 1,
+    "in": 2682,
+    "out": 1678,
+    "usd": 0.00052,
+    "ms": 54420
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1655,
+    "out": 1143,
+    "usd": 0.00077,
+    "ms": 35326
+   },
+   "writer": {
+    "calls": 5,
+    "errors": 0,
+    "in": 15903,
+    "out": 5323,
+    "usd": 0.01488,
+    "ms": 63396
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 40427,
+    "out": 7027,
+    "usd": 0.0297,
+    "ms": null
+   }
+  },
+  "totalUsd": 0.04821
+ },
+ "openrouterTotalUsd": 0.05213
+}

@@ -2464,20 +2464,20 @@
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "death-on-the-nile-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-25T04:38:46.810Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T03:38:04.597Z"
+   "reason": "3 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-25T15:37:35.122Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T15:37:35.122Z"
   },
   {
    "key": "the-boss-baby-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "the-boss-baby-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T07:07:27.117Z",
-   "dead": true,
+   "reason": "words 154 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-25T15:40:05.652Z",
+   "dead": false,
    "expiresAt": "2026-07-25T07:07:27.117Z"
   },
   {
@@ -2684,9 +2684,9 @@
    "key": "masters-of-the-universe-bo-opening|BO-OPENING",
    "eventSlug": "masters-of-the-universe-bo-opening",
    "form": "BO-OPENING",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 1,
-   "at": "2026-07-24T13:34:41.974Z"
+   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
+   "tries": 2,
+   "at": "2026-07-25T15:34:47.288Z"
   },
   {
    "key": "the-last-duel-ev-other|BO-UPDATE",
@@ -2725,10 +2725,10 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 10,
-   "at": "2026-07-25T15:03:13.283Z",
+   "tries": 11,
+   "at": "2026-07-25T15:32:52.326Z",
    "dead": true,
-   "expiresAt": "2026-07-28T15:03:13.283Z"
+   "expiresAt": "2026-07-28T15:32:52.326Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
@@ -2757,14 +2757,14 @@
    "at": "2026-07-25T15:06:06.466Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.24364
+  "usd": 0.29577
  },
  "pace": {
-  "tokens": 3.902325555555556,
-  "lastMs": 1784991671946
+  "tokens": 4,
+  "lastMs": 1784993463744
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2777,8 +2777,10 @@
    "voicemails for isabelle": 2,
    "enola holmes 3": 1,
    "regretting you": 1,
-   "masters of the universe": 1,
-   "kpop demon hunters": 1
+   "masters of the universe": 2,
+   "kpop demon hunters": 1,
+   "death on the nile": 1,
+   "the boss baby": 1
   }
  },
  "failures": {
@@ -2822,6 +2824,12 @@
    ],
    "kpop demon hunters": [
     "words # < # (owner-set ~#-word minimum)"
+   ],
+   "death on the nile": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "the boss baby": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ]
   }
  }
