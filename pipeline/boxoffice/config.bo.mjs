@@ -93,7 +93,6 @@ export const FORMS = {
 // Box-office forms are what the finder's LLM classifies theatrical films into; streaming forms are
 // built deterministically from Netflix/TMDB data (never LLM-assigned to a theatrical film).
 export const BOX_OFFICE_FORMS = Object.keys(FORMS).filter((k) => !FORMS[k].streaming);
-export const STREAMING_FORMS = Object.keys(FORMS).filter((k) => FORMS[k].streaming);
 
 // eventType "boxoffice" makes the article eligible for the homepage BREAKING badge (plan §14).
 export const EVENT_TYPE = "boxoffice";

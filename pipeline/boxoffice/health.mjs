@@ -37,11 +37,6 @@ export function fault(stage, message, { severity = SEV.WARN, meta = null } = {})
   return rec;
 }
 
-// Wrap a fail-soft catch: `catchFault("netflix", () => [], e)` records then returns the fallback.
-export function catchFault(stage, fallbackFn, err, opts = {}) {
-  fault(stage, err?.message || err, opts);
-  return typeof fallbackFn === "function" ? fallbackFn() : fallbackFn;
-}
 
 // assertCount(stage, actual, expected, label) — the chart bug (6 of 17 rows) in one call. A shortfall
 // beyond tolerance is recorded, not silently accepted. Returns true when the count is acceptable.

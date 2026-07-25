@@ -257,6 +257,30 @@ export async function boRun({
         console.log(`  ✓ material: ${mat.reason}`);
       }
 
+      // ── PRE-FLIGHT MATERIAL CHECK (free) — the last cheap gate before the expensive half ─────────────
+      // Synthesizer + writer + judge are ~85% of a candidate's cost. A handful of streaming/TV titles
+      // burned that whole stack EVERY tick and then failed the 200-word floor, because the source simply
+      // was not there. But the writer also receives TMDB premise + cast + figures, so raw source text
+      // alone is the wrong measure — an early version of this gate used it and skipped legitimate
+      // features. Gate ONLY on the signature that actually predicts the failure: a streaming/TV piece
+      // (no canonical numbers section to pad it) with a thin premise AND too few cast members to write
+      // about. Chart updates are always exempt: the system appends the numbers section + daily table.
+      if (!job.film?.dailyChart && (FORMS[angle.form] || {}).streaming) {
+        const premise = String(job.boxData?.overview || job.film?.overview || "").trim();
+        const castCount = (job.boxData?.castRoles || job.boxData?.cast || []).length;
+        const sourceWords = (job.bundle?.sources || []).map((x) => x?.text || "").join(" ").split(/\s+/).filter(Boolean).length;
+        // A hard first-party data anchor (Netflix hours / a chart rank) is itself substantial material —
+        // those pieces publish reliably. Only gate a title with NO anchor AND no premise AND no cast.
+        const hasDataAnchor = !!(job.gathered?.hoursRaw || job.gathered?.hoursViewed || job.gathered?.netflixRank);
+        if (!hasDataAnchor && premise.length < 200 && castCount < 3 && sourceWords < 150) {
+          const reason = `pre-flight: thin material (premise ${premise.length} chars, cast ${castCount}, sources ${sourceWords} words) — cannot reach the 200-word floor honestly`;
+          report.skipped.push({ tag, reason });
+          if (!dryRun && !reviewDir) recordFailure(store, film.title, reason, { now: new Date(now) });
+          console.log(`  ⟳ skip (free): thin material for ${film.title}`);
+          continue;
+        }
+      }
+
       // ── SYNTHESIZER ──
       await withTimeout(synthImpl(job), AGENTS.synthesizer.watchdogMs, `synth ${tag}`);
       if (job.synthFail || !job.brief) { hold(job.synthFail || "no brief"); continue; }

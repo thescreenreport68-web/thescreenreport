@@ -12,16 +12,12 @@ import { CONTENT_DIR, BOXOFFICE_AUTHOR_SLUG, EVENT_TYPE, FORMS, SEO } from "./co
 import { fault, SEV } from "./health.mjs";
 import { normMoney, canonicalFigures, numberConsistencyGate } from "./moneyGuard.mjs";
 import { loadFrozen, saveFrozen, resolveFrozen } from "./seoFrozen.mjs";
+import { slugify, wordCount } from "./textUtil.mjs";
 
 const require = createRequire(import.meta.url);
 const matter = require("gray-matter");
 
-const slugify = (s) => {
-  const full = (s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  if (full.length <= 80) return full;
-  const cut = full.slice(0, 80);
-  return cut.includes("-") ? cut.replace(/-[^-]*$/, "") : cut;
-};
+
 
 // ── ONE STORY = ONE URL (owner directive 2026-07-24) ─────────────────────────────────────────────
 // A film's daily box-office coverage lives at ONE stable URL — `<film>-box-office-tracker` — that updates
