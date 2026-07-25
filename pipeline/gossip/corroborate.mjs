@@ -17,7 +17,14 @@ export const registrableDomain = (d) => (d || "").toLowerCase().replace(/^https?
 const strip = (s) => decodeEntities(String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 
 // Bounded fetch — a finder is enrichment; a slow GDELT/Google-News endpoint must never stall the run.
-const FINDER_TIMEOUT_MS = 8000;
+// 🔴 2026-07-25 — MEASURED: GDELT answers in 11-15s (three samples: 15.1s, 14.7s, and one 429 at 11s).
+// The old 8s ceiling meant it ALWAYS timed out — the cloud diagnostics logged "gdelt: timeout (6001ms)"
+// every single tick. That mattered far more than it looks: GDELT is the only finder that returns DIRECT
+// publisher URLs. Google News returns redirect links, and the article reader now hard-blocks those
+// ("AbuseAlleviationError: anonymous access to domain news.google.com blocked"). So losing GDELT left
+// every candidate unreadable, which is why every published article shipped single-source.
+// The two finders run in parallel, so the wall-clock cost of this is ~15s once per topic, not 15s each.
+const FINDER_TIMEOUT_MS = Number(process.env.GOSSIP_FINDER_TIMEOUT_MS ?? 20000);
 const defaultFetch = (url, opts = {}) => fetch(url, { ...opts, signal: opts.signal || AbortSignal.timeout(FINDER_TIMEOUT_MS) });
 
 // AGGREGATORS / republishers — they re-surface other outlets' stories, so their presence is NOT independent
@@ -40,14 +47,34 @@ function titleNamesEntity(title, entity) {
 }
 
 // GDELT artlist → corroborating article URLs (direct publisher URLs). Fail-safe ([] on any issue).
+// 🔴 2026-07-25 — GDELT ENFORCES ONE REQUEST PER 5 SECONDS. Measured: a second call inside that window
+// returns HTTP 429 with the plain-text body "Please limit requests to one every 5 seconds". We never
+// spaced our calls, so on any tick that drained more than one topic GDELT simply stopped answering —
+// and GDELT is the only finder returning DIRECT publisher URLs (Google News returns redirect links the
+// article reader hard-blocks). Silent 429s were therefore a direct cause of single-source articles.
+const GDELT_MIN_GAP_MS = Number(process.env.GOSSIP_GDELT_GAP_MS ?? 5200);
+let gdeltNextAt = 0;
+async function gdeltPace() {
+  const wait = gdeltNextAt - Date.now();
+  if (wait > 0) await new Promise((r) => setTimeout(r, Math.min(wait, GDELT_MIN_GAP_MS)));
+  gdeltNextAt = Date.now() + GDELT_MIN_GAP_MS;
+}
+
 async function fromGDELT(topic, { fetchImpl, seedDomain = "", max = 6 } = {}) {
   const q = topicQuery(topic);
   if (!q) return [];
   try {
     const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${encodeURIComponent(q)}&mode=artlist&format=json&maxrecords=20&timespan=96h&sort=hybridrel`;
-    const r = await fetchImpl(url, { headers: { "User-Agent": UA } });
-    if (!r.ok) return [];
-    const text = await r.text();
+    let text = "";
+    for (let attempt = 0; attempt < 2; attempt++) {
+      await gdeltPace();
+      const r = await fetchImpl(url, { headers: { "User-Agent": UA } });
+      if (!r.ok) { if (attempt === 0) continue; return []; }
+      text = await r.text();
+      // the rate-limit reply is 200-with-plain-text as often as it is a 429 — detect it either way
+      if (!/limit requests to one every/i.test(text)) break;
+      if (attempt === 0) { console.log("[gdelt] rate-limited — pausing once before retry"); text = ""; }
+    }
     if (!text.trim().startsWith("{")) return []; // GDELT returns plain text on a bad query
     const arts = JSON.parse(text).articles || [];
     const out = [];
@@ -103,6 +130,9 @@ async function fromGoogleNews(topic, { fetchImpl, max = 6 } = {}) {
 // Merged corroboration: one entry per DISTINCT domain (a domain from either finder counts once), the seed domain
 // excluded. Google News first (it reliably names the covering outlets), GDELT second (direct URLs it happened to
 // find). Best-effort: any finder failing just yields the other's results.
+/** A Google News / aggregator redirect link — the reader hard-blocks these, so the body is unreachable. */
+export const isRedirectUrl = (u) => /^https?:\/\/(?:news\.google\.com|news\.yahoo\.com\/rss)/i.test(String(u || ""));
+
 export async function findCorroboratingUrls(topic, { fetchImpl = defaultFetch, seedDomain = "", max = 6 } = {}) {
   const [gn, gd] = await Promise.all([
     fromGoogleNews(topic, { fetchImpl, max: max + 2 }).catch(() => []),
@@ -110,7 +140,10 @@ export async function findCorroboratingUrls(topic, { fetchImpl = defaultFetch, s
   ]);
   const seen = new Set([registrableDomain(seedDomain)].filter(Boolean));
   const out = [];
-  for (const e of [...gn, ...gd]) {
+  // Direct publisher URLs first: a news.google.com link cannot be read at all (the reader 403s that
+  // domain outright), so trying one wastes an extraction slot that a readable candidate could have used.
+  const readableFirst = [...gd, ...gn].sort((a, b) => (isRedirectUrl(a.url) ? 1 : 0) - (isRedirectUrl(b.url) ? 1 : 0));
+  for (const e of readableFirst) {
     if (!e.domain || seen.has(e.domain) || isAggregator(e.domain)) continue;
     seen.add(e.domain);
     out.push(e);

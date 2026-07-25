@@ -5,7 +5,7 @@
 //   fallback) → crude fetch+strip (last resort). Fail-closed: 0 extractable sources ⇒ BLOCK.
 import { tierOf, tierOfDomain } from "./policy.mjs";
 import { extract as extractArticle } from "@extractus/article-extractor";
-import { findCorroboratingUrls, registrableDomain } from "./corroborate.mjs";
+import { findCorroboratingUrls, registrableDomain, isRedirectUrl } from "./corroborate.mjs";
 import { decodeEntities, isEvergreenSource } from "./normalize.mjs";
 
 const UA = "The Screen Report/1.0 (+https://thescreenreport.com)";
@@ -179,6 +179,9 @@ export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extr
       if (seedDomains.has(e.domain)) continue;
       bundle.corroboratingOutlets.push({ outlet: e.outlet || e.domain, domain: e.domain, tier: tierOfDomain(e.domain) });
       if (extracted >= maxCorroborating || attempts >= maxAttempts || Date.now() > deadline) continue; // keep collecting outlets for tiering; stop fetching bodies
+      // The reader returns a hard 403 for aggregator redirect links, so an attempt on one is a
+      // guaranteed loss. It still counts as an OUTLET (above) for tiering — we just cannot read its body.
+      if (isRedirectUrl(e.url)) { why.push(`${e.domain}: aggregator redirect (body unreadable)`); continue; }
       attempts++;
       const ex = await extractClean(e.url, { fetchImpl, extractImpl });
       if (!ex) why.push(`${e.domain}: unreadable`);
@@ -191,7 +194,11 @@ export async function corroborateBundle(topic, bundle, { fetchImpl = fetch, extr
         extracted++;
       }
     }
-    if (!extracted && why.length) console.log(`[corroborate] tried ${attempts}: ${why.slice(0, 4).join("; ")}`);
+    if (!extracted) {
+      if (why.length) console.log(`[corroborate] tried ${attempts}, none usable: ${why.slice(0, 4).join("; ")}`);
+      else if (!(extra || []).length) console.log(`[corroborate] search returned NO candidate outlets (nobody else covered this yet)`);
+      else console.log(`[corroborate] ${(extra || []).length} candidate(s) but all were the seed domain or aggregators`);
+    }
   } catch (e) { console.log(`[corroborate] search failed: ${String(e?.message || e).slice(0, 70)}`); }
   return refreshBundleCounts(bundle);
 }

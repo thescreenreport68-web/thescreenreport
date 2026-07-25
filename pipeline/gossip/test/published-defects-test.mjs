@@ -124,11 +124,24 @@ const check = (n, c, got = "") => { if (c) pass++; else { fails.push(n); console
   check("the writer never saw the tail anyway (2500-char window)", /slice\(0, 2500\)/.test(fs.readFileSync(path.join(HERE, "..", "writer.mjs"), "utf8")));
 }
 
-// ── 8. CORROBORATION: a failed candidate must not end the search ──────────────────────────────────
+// ── 8. CORROBORATION — three measured causes of single-sourcing ───────────────────────────────────
+// Every live article shipped with ONE outlet. Measured on 2026-07-25:
+//   • GDELT answers in 11-15s but the client ceiling was 8s ⇒ it ALWAYS timed out.
+//   • GDELT enforces one request per 5s and returns "Please limit requests to one every 5 seconds";
+//     we never spaced calls, so multi-topic ticks got nothing.
+//   • The article reader hard-403s news.google.com ("AbuseAlleviationError"), and Google News returns
+//     ONLY redirect links — so every such attempt was a guaranteed loss that burned the attempt budget.
+// After the fixes, a mainstream story went 1 → 3 sources (8,000 → 13,918 chars).
 {
   const cf = fs.readFileSync(path.join(HERE, "..", "contentFinder.mjs"), "utf8");
+  const co = fs.readFileSync(path.join(HERE, "..", "corroborate.mjs"), "utf8");
   check("🔴 corroboration is bounded by a CLOCK, not by failed attempts", /GOSSIP_CORROBORATE_MS/.test(cf));
   check("…and it reports why each candidate failed", /unreadable|no mention of the subject/.test(cf));
+  check("🔴 the GDELT ceiling clears its measured 11-15s latency", /GOSSIP_FINDER_TIMEOUT_MS \?\? 20000/.test(co));
+  check("🔴 GDELT calls are spaced for its 1-per-5s limit", /GDELT_MIN_GAP_MS/.test(co) && /gdeltPace/.test(co));
+  check("…and a rate-limit reply is retried, not silently swallowed", /limit requests to one every/i.test(co));
+  check("🔴 unreadable aggregator redirects never burn an attempt", /isRedirectUrl\(e\.url\)/.test(cf));
+  check("…readable direct URLs are tried first", /readableFirst/.test(co));
 }
 
 console.log(`\n── RESULT: ${pass} passed${fails.length ? `, ${fails.length} FAILED` : ""} ──`);
