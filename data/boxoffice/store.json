@@ -2300,10 +2300,10 @@
    "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 136 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T03:09:48.291Z",
-   "dead": true,
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-25T04:08:27.746Z",
+   "dead": false,
    "expiresAt": "2026-07-25T03:09:48.291Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 32,
+ "zeroStreak": 33,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.27757
+  "usd": 0.30101
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784950262624
+  "lastMs": 1784952152842
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2582,7 +2582,16 @@
    "stuart fails to save the universe": 1,
    "rising": 1,
    "enola holmes 3": 1,
-   "regretting you": 1
+   "regretting you": 1,
+   "kpop demon hunters": 1
+  }
+ },
+ "failures": {
+  "laDay": "2026-07-24",
+  "byFilm": {
+   "kpop demon hunters": [
+    "# unverified claim(s) cut# unrecovered"
+   ]
   }
  }
 }
