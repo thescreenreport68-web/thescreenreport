@@ -1,0 +1,86 @@
+{
+ "runId": "run-2026-07-25T08-01-03",
+ "mode": "live",
+ "startedAt": "2026-07-25T08:01:03.778Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "slug": "toy-story-5-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/toy-story-5-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.14,
+  "behind": true,
+  "expected": 19.43,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-25",
+  "usd": 0.05418
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-25T08:02:50.377Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3621,
+    "out": 1917,
+    "usd": 0.0004,
+    "ms": 4440
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3013,
+    "out": 232,
+    "usd": 0.00039,
+    "ms": 1140
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 729,
+    "out": 269,
+    "usd": 0.00011,
+    "ms": 4022
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1967,
+    "out": 1042,
+    "usd": 0.00081,
+    "ms": 38913
+   }
+  },
+  "totalUsd": 0.00171
+ },
+ "openrouterTotalUsd": 0.00192
+}
