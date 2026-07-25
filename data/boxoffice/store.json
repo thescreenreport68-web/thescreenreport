@@ -2724,11 +2724,11 @@
    "key": "the-end-of-evangelion-bo-update-d859|BO-UPDATE",
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
-   "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 14,
-   "at": "2026-07-25T16:33:28.432Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 15,
+   "at": "2026-07-25T17:07:20.002Z",
    "dead": true,
-   "expiresAt": "2026-07-28T16:33:28.432Z"
+   "expiresAt": "2026-07-28T17:07:20.002Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
@@ -2755,23 +2755,31 @@
    "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
    "tries": 1,
    "at": "2026-07-25T15:06:06.466Z"
+  },
+  {
+   "key": "spider-noir-trending-tv|TRENDING-TV",
+   "eventSlug": "spider-noir-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-25T17:04:03.250Z"
   }
  ],
- "zeroStreak": 9,
+ "zeroStreak": 10,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.4689
+  "usd": 0.50086
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784997064501
+  "lastMs": 1784998868506
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
   "laDay": "2026-07-25",
   "byFilm": {
    "the hawk": 2,
-   "the sheep detectives": 1,
+   "the sheep detectives": 2,
    "house of the dragon": 1,
    "the mandalorian and grogu": 2,
    "voicemails for isabelle": 2,
@@ -2787,7 +2795,9 @@
    "i will find you": 1,
    "avatar: the last airbender": 1,
    "worst neighbor ever": 1,
-   "raw": 1
+   "raw": 1,
+   "spider-noir": 1,
+   "mortal kombat ii": 1
   }
  },
  "failures": {
@@ -2805,7 +2815,8 @@
     "# unverified claim(s) cut# unrecovered"
    ],
    "the end of evangelion": [
-    "scaffold: fewer than # keytakeaways"
+    "scaffold: fewer than # keytakeaways",
+    "# unverified claim(s) cut# unrecovered"
    ],
    "neon genesis evangelion: the end of evangelion 2026 re-release": [
     "scaffold: fewer than # keytakeaways",
@@ -2858,6 +2869,9 @@
     "# unverified claim(s) cut# unrecovered"
    ],
    "raw": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "spider-noir": [
     "words # < # (owner-set ~#-word minimum)"
    ]
   }
