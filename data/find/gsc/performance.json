@@ -1,7 +1,7 @@
 {
   "ok": true,
-  "baseline": 0.09437086092715231,
-  "sample": 604,
+  "baseline": 0.09405940594059406,
+  "sample": 606,
   "earners": 57,
   "buckets": {
     "category:movies": {
@@ -10,7 +10,7 @@
       "impressions": 215,
       "hitRate": 0.07983193277310924,
       "enough": true,
-      "lift": 0.84593837535014
+      "lift": 0.8487394957983193
     },
     "format:news": {
       "n": 501,
@@ -18,7 +18,7 @@
       "impressions": 775,
       "hitRate": 0.08183632734530938,
       "enough": true,
-      "lift": 0.8671779248520503
+      "lift": 0.8700493749343419
     },
     "category:awards": {
       "n": 11,
@@ -26,7 +26,7 @@
       "impressions": 6,
       "hitRate": 0.18181818181818182,
       "enough": true,
-      "lift": 1.926634768740032
+      "lift": 1.9330143540669857
     },
     "format:awards": {
       "n": 11,
@@ -34,7 +34,7 @@
       "impressions": 6,
       "hitRate": 0.18181818181818182,
       "enough": true,
-      "lift": 1.926634768740032
+      "lift": 1.9330143540669857
     },
     "category:tv": {
       "n": 182,
@@ -42,7 +42,7 @@
       "impressions": 68,
       "hitRate": 0.06043956043956044,
       "enough": true,
-      "lift": 0.6404472720262194
+      "lift": 0.6425679583574321
     },
     "category:celebrity": {
       "n": 112,
@@ -50,7 +50,7 @@
       "impressions": 520,
       "hitRate": 0.13392857142857142,
       "enough": true,
-      "lift": 1.419172932330827
+      "lift": 1.4238721804511278
     },
     "format:trailer": {
       "n": 28,
@@ -58,23 +58,23 @@
       "impressions": 8,
       "hitRate": 0.10714285714285714,
       "enough": true,
-      "lift": 1.1353383458646615
+      "lift": 1.1390977443609023
     },
     "category:music": {
-      "n": 60,
+      "n": 62,
       "earners": 10,
       "impressions": 126,
-      "hitRate": 0.16666666666666666,
+      "hitRate": 0.16129032258064516,
       "enough": true,
-      "lift": 1.7660818713450293
+      "lift": 1.7147707979626485
     },
     "format:music-news": {
-      "n": 58,
+      "n": 60,
       "earners": 9,
       "impressions": 123,
-      "hitRate": 0.15517241379310345,
+      "hitRate": 0.15,
       "enough": true,
-      "lift": 1.6442831215970963
+      "lift": 1.594736842105263
     },
     "format:box-office": {
       "n": 4,
@@ -109,5 +109,5 @@
       "lift": 1
     }
   },
-  "computedAt": "2026-07-25T05:33:46.427Z"
+  "computedAt": "2026-07-25T06:37:20.234Z"
 }
