@@ -2340,10 +2340,10 @@
    "key": "little-house-on-the-prairie-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "little-house-on-the-prairie-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "soft-floor engagement 4 < 5",
-   "tries": 3,
-   "at": "2026-07-22T05:06:20.513Z",
-   "dead": true,
+   "reason": "words 153 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-25T06:08:43.289Z",
+   "dead": false,
    "expiresAt": "2026-07-25T05:06:20.513Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 36,
+ "zeroStreak": 37,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.34492
+  "usd": 0.36501
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784957531378
+  "lastMs": 1784959377074
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2586,7 +2586,8 @@
    "kpop demon hunters": 1,
    "death on the nile": 1,
    "joy ride": 1,
-   "jana nayagan": 1
+   "jana nayagan": 1,
+   "little house on the prairie": 1
   }
  },
  "failures": {
@@ -2599,6 +2600,9 @@
     "words # < # (owner-set ~#-word minimum)"
    ],
    "joy ride": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "little house on the prairie": [
     "words # < # (owner-set ~#-word minimum)"
    ]
   }
