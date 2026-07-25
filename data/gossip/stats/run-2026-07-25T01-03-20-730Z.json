@@ -1,0 +1,186 @@
+{
+  "ts": "2026-07-25T01:03:20.730Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kim-kardashian-turns-bar-exam-failure-into-a-punchline-in-new-energy-drink",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 1
+    }
+  ],
+  "topics": 2,
+  "held": 1,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.073276,
+  "costPerPublished": 0.073276,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 18,
+      "in": 39796,
+      "out": 8233,
+      "usd": 0.031991559999999995
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 14,
+      "in": 17399,
+      "out": 3752,
+      "usd": 0.0032407
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 5956,
+      "out": 3284,
+      "usd": 0.00157043
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 1894,
+      "out": 763,
+      "usd": 0.0003911724
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 16,
+      "in": 63201,
+      "out": 30123,
+      "usd": 0.027760168499999998
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 4,
+      "in": 8125,
+      "out": 2043,
+      "usd": 0.005905987
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 2,
+      "in": 3826,
+      "out": 16242,
+      "usd": 0.00241644
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4805,
+      "out": 346,
+      "usd": 0.0023065,
+      "ms": 3125
+    },
+    "background": {
+      "calls": 4,
+      "errors": 2,
+      "in": 3038,
+      "out": 1220,
+      "usd": 0.0007918000000000001,
+      "ms": 89487
+    },
+    "detailFinder": {
+      "calls": 4,
+      "errors": 2,
+      "in": 3151,
+      "out": 3276,
+      "usd": 0,
+      "ms": 227001
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 1894,
+      "out": 763,
+      "usd": 0.0003078,
+      "ms": 14266
+    },
+    "writer": {
+      "calls": 17,
+      "errors": 1,
+      "in": 62728,
+      "out": 29990,
+      "usd": 0.027507139999999996,
+      "ms": 709700
+    },
+    "verify": {
+      "calls": 18,
+      "errors": 2,
+      "in": 34991,
+      "out": 6884,
+      "usd": 0.0250974,
+      "ms": 43398
+    },
+    "judge": {
+      "calls": 4,
+      "errors": 0,
+      "in": 6686,
+      "out": 1289,
+      "usd": 0.0011842,
+      "ms": 6201
+    },
+    "claimAudit": {
+      "calls": 3,
+      "errors": 1,
+      "in": 4357,
+      "out": 8914,
+      "usd": 0,
+      "ms": 138374
+    },
+    "headline": {
+      "calls": 2,
+      "errors": 0,
+      "in": 1758,
+      "out": 621,
+      "usd": 0.0006154800000000001,
+      "ms": 27765
+    },
+    "headlineJudge": {
+      "calls": 2,
+      "errors": 0,
+      "in": 762,
+      "out": 217,
+      "usd": 0.00016300000000000003,
+      "ms": 1659
+    },
+    "seoAuditor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 400,
+      "out": 83,
+      "usd": 0.0000732,
+      "ms": 1007
+    },
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 305,
+      "out": 14,
+      "usd": 0.00007491000000000001,
+      "ms": 1882
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1557,
+      "out": 95,
+      "usd": 0.00019370000000000002,
+      "ms": 3249
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 275,
+      "out": 51,
+      "usd": 0.000047900000000000006,
+      "ms": 789
+    }
+  }
+}
