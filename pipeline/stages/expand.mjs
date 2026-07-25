@@ -21,6 +21,7 @@
 //     held as before. Reaching the floor is never worth inventing for.
 import { chat } from "../lib/openrouter.mjs";
 import { MODELS } from "../config.mjs";
+import { proseWordCount } from "../lib/polish.mjs";
 
 // Only rescue a draft that is genuinely CLOSE. Below this the story lacks material and padding it to
 // the floor is exactly the failure mode the whole quality floor exists to prevent.
@@ -47,8 +48,12 @@ export async function expandArticle({ article, topic, facts, targetWords, model 
   const body = String(article?.body || "");
   if (!body) return null;
   const existingHeadings = (body.match(/^##\s+(.+)$/gm) || []).map((h) => h.replace(/^##\s+/, "").trim());
-  const have = body.split(/\s+/).filter(Boolean).length;
-  const need = Math.max(80, (targetWords || 0) - have + 60);   // +60 so the fidelity trim cannot re-open the gap
+  // Count the SAME WAY THE GATE DOES. Measured 2026-07-25: counting raw tokens overshot by ~8 words per
+  // heading/list, so a rescue aimed at 600 landed at 598 prose words and was held for two words.
+  const have = proseWordCount(body);
+  // +90 margin: the fidelity guard runs AFTER this and cuts anything it cannot trace, and headings/list
+  // markers in the new section do not count toward the prose total. One rescue attempt is all we get.
+  const need = Math.max(110, (targetWords || 0) - have + 90);
 
   const user = `The draft below is ${have} words and must reach ${targetWords}. Write ONE new section of roughly ${need} words
 that covers something the draft has NOT covered, drawn only from the REFERENCE FACTS.
@@ -73,7 +78,7 @@ Return {"heading": "", "body": ""} if the facts genuinely support nothing furthe
   const heading = String(data?.heading || "").trim().replace(/^#+\s*/, "");
   const section = String(data?.body || "").trim();
   if (!heading || !section) return null;
-  const words = section.split(/\s+/).filter(Boolean).length;
+  const words = proseWordCount(section);
   if (words < 40) return null;                       // too small to be worth the risk of appending
 
   return { heading, markdown: `\n\n## ${heading}\n\n${section}\n`, words };

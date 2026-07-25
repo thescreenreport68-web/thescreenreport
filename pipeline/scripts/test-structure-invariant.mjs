@@ -115,5 +115,27 @@ console.log("=== 4. THE RULE ITSELF — no body transform may use a newline-eati
   ok(offenders.length === 0, `no body-level transform collapses \\s (found ${offenders.length}) — use [ \\t] so newlines survive`);
 }
 
+
+console.log("=== 5. ONE WORD COUNT — gate and expand must never disagree ===");
+{
+  const { proseWordCount } = await import("../lib/polish.mjs");
+  // 🔴 The 598-vs-600 hold: expand counted RAW tokens (heading words, list markers, ** markup all
+  // included) while the gate counted PROSE. Expand therefore aimed ~8 words low per heading/list and a
+  // rescued draft was held for TWO words after we had already paid for the extra call.
+  const md = "## A Heading\n\nSome prose with **bold** text.\n\n- bullet one\n- bullet two\n\n## Another Heading\n\nMore prose.";
+  const raw = md.split(/\s+/).filter(Boolean).length;
+  ok(proseWordCount(md) < raw, `prose count (${proseWordCount(md)}) excludes markdown that raw counting (${raw}) includes`);
+  ok(proseWordCount("") === 0, "empty body counts zero, never NaN");
+  ok(proseWordCount("[Deadline](https://x.com) reported it") === 3, "a link counts as its anchor text only");
+  ok(proseWordCount("## Heading Only") === 0, "a heading alone is zero prose words");
+  // both call sites must use THIS function — grep the sources so a future re-implementation fails here
+  const fs = await import("node:fs");
+  for (const f of ["../stages/gate.mjs", "../stages/expand.mjs"]) {
+    const src = fs.readFileSync(new URL(f, import.meta.url), "utf8");
+    ok(/proseWordCount/.test(src), `${f.replace("../", "")} uses the shared counter`);
+    ok(!/const (have|words) = body\.trim\(\)[\s\S]{0,200}split\(\/\\s\+/.test(src), `${f.replace("../", "")} has no private re-implementation`);
+  }
+}
+
 console.log(`\n${fail === 0 ? "✅ ALL" : "❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -191,3 +191,19 @@ export function dropStubTitles(md) {
   // and the near-duplicate detector earlier — this class of bug is the one to watch for in this file.)
   return out.replace(/[ \t]{2,}/g, " ").replace(/[ \t]+([.,;:])/g, "$1");
 }
+
+// ── THE ONE WORD COUNT (2026-07-25) ─────────────────────────────────────────────────────────────
+// 🔴 SINGLE SOURCE OF TRUTH. There were TWO different counts in the pipeline and they disagreed by
+// ~8 words per heading/list: the gate counted READER-VISIBLE PROSE (markdown stripped), while the
+// expand pass counted RAW tokens. So expand aimed at the wrong target and a rescued draft landed at
+// 598 against a 600 floor — held for TWO words after paying for the extra call. Anything that reasons
+// about article length must import this; never re-implement it.
+export function proseWordCount(md) {
+  return String(md || "").trim()
+    .replace(/^#{1,6}\s.*$/gm, " ")            // headings are navigation, not prose
+    .replace(/^\s*>\s?/gm, " ")                // blockquote markers
+    .replace(/^\s*[-*+]\s+/gm, " ")            // list markers (item text still counts)
+    .replace(/\*\*|__|[*_`]/g, " ")            // emphasis syntax
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")   // links → their anchor text
+    .split(/\s+/).filter(Boolean).length;
+}
