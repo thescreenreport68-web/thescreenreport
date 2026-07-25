@@ -22,13 +22,13 @@ export function loadStore(file = STORE_PATH) {
   return {
     published: s?.published || [], parked: s?.parked || [], zeroStreak: s?.zeroStreak || 0,
     daySpend: s?.daySpend || null, pace: s?.pace || null, lastAuditDay: s?.lastAuditDay || null,
-    attempts: s?.attempts || null, file, lost,
+    attempts: s?.attempts || null, failures: s?.failures || null, file, lost,
   };
 }
 
 function save(store) {
   fs.mkdirSync(path.dirname(store.file), { recursive: true });
-  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null, lastAuditDay: store.lastAuditDay || null, attempts: store.attempts || null };
+  const out = { published: store.published.slice(-CAP), parked: store.parked.slice(-500), zeroStreak: store.zeroStreak || 0, daySpend: store.daySpend || null, pace: store.pace || null, lastAuditDay: store.lastAuditDay || null, attempts: store.attempts || null, failures: store.failures || null };
   fs.writeFileSync(store.file, JSON.stringify(out, null, 1));
 }
 
@@ -126,6 +126,35 @@ export function bumpFilmAttempt(store, filmTitle, { now = new Date() } = {}) {
   store.attempts.byFilm[k] = (store.attempts.byFilm[k] || 0) + 1;
   save(store);
   return store.attempts.byFilm[k];
+}
+
+// REPEAT-FAILURE LOCKOUT (cost mandate 2026-07-25). Measured on the live lane: 33 of 41 ticks in one day
+// spent money and published NOTHING — 76% of the day's cost. The dominant pattern is the SAME candidate
+// failing the SAME check over and over: The Odyssey burned 58 paid attempts across two days on one
+// unwinnable consistency error. parkCooling bounds retries by TIME; this bounds them by REASON, which is
+// what actually repeats. If a film has already failed today for reason X, a second paid attempt for
+// reason X cannot succeed — the inputs (the day's chart figures) have not changed. Refuse it for free.
+// Cleared on the LA-day roll, when fresh numbers genuinely change the inputs.
+const reasonKey = (reason) => String(reason || "").toLowerCase().replace(/[0-9$.,]+/g, "#").slice(0, 60);
+export function recordFailure(store, filmTitle, reason, { now = new Date() } = {}) {
+  const day = laDayA(now);
+  if (!store.failures || store.failures.laDay !== day) store.failures = { laDay: day, byFilm: {} };
+  const k = String(filmTitle || "?").toLowerCase();
+  const list = store.failures.byFilm[k] || (store.failures.byFilm[k] = []);
+  const rk = reasonKey(reason);
+  if (!list.includes(rk)) list.push(rk);
+  save(store);
+}
+export function failedBeforeToday(store, filmTitle, reason, { now = new Date() } = {}) {
+  if (!store.failures || store.failures.laDay !== laDayA(now)) return false;
+  const list = store.failures.byFilm?.[String(filmTitle || "?").toLowerCase()] || [];
+  return list.includes(reasonKey(reason));
+}
+// Has this film failed ANY paid attempt today? Used to refuse a 2nd paid attempt on a film whose material
+// we already know is insufficient, before any model call.
+export function failureCountToday(store, filmTitle, { now = new Date() } = {}) {
+  if (!store.failures || store.failures.laDay !== laDayA(now)) return 0;
+  return (store.failures.byFilm?.[String(filmTitle || "?").toLowerCase()] || []).length;
 }
 
 // DAILY SPEND CAP (owner cost mandate): running LA-day spend, persisted in the store. borun refuses to
