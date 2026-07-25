@@ -1,0 +1,73 @@
+{
+  "id": "news-guillermo-del-toro-no-ai-pan-s-labyrinth-re-release",
+  "slug": "guillermo-del-toro-said-absolutely-no-goddamn-ai-in-pan-s-labyrinth-3d",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 325w < 600"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 325w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Guillermo del Toro",
+    "work": {
+      "title": "Pan's Labyrinth",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "variety.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 325,
+      "h2s": 2,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 41,
+      "avgSentence": 14,
+      "flesch": 55,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 325w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 1,
+    "failed": []
+  },
+  "ms": 165948
+}

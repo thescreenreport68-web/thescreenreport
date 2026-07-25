@@ -1,0 +1,75 @@
+{
+  "id": "news-rick-moranis-spaceballs-sequel-comic-con-debut",
+  "slug": "rick-moranis-makes-comic-con-debut-for-spaceballs-sequel",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 338w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 321w < 600"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Rick Moranis",
+    "work": {
+      "title": "Spaceballs: The New One",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "hollywoodreporter.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 321,
+      "h2s": 4,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 49,
+      "avgSentence": 16,
+      "flesch": 58,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 1,
+      "hardBlocks": [
+        "body 321w < 600"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 2,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 116335
+}
