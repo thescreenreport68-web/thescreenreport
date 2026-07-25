@@ -1,41 +1,191 @@
 {
-  "runId": "run-2026-07-25T02-01-01",
-  "builtAt": "2026-07-25T02:02:17.948Z",
-  "count": 15,
+  "runId": "run-2026-07-25T03-01-10",
+  "builtAt": "2026-07-25T03:02:24.415Z",
+  "count": 16,
   "topics": [
     {
-      "id": "news-rick-moranis-spaceballs-sequel-announcement",
-      "slug": "rick-moranis-makes-comic-con-debut-for-spaceballs-sequel",
-      "title": "Rick Moranis Makes Comic-Con Debut for Spaceballs Sequel",
+      "id": "news-chuck-russell-death",
+      "slug": "chuck-russell-director-of-the-mask-and-third-nightmare-on-elm-street-m",
+      "title": "Chuck Russell, Director of ‘The Mask’ and Third ‘Nightmare on Elm Street’ Movie, Dies at 74",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "rick-moranis-spaceballs-sequel-announcement",
-      "primaryKeyword": "spaceballs sequel",
-      "primaryEntity": "Spaceballs 2",
+      "eventType": "death",
+      "sensitivity": "high",
+      "eventSlug": "chuck-russell-death",
+      "primaryKeyword": "chuck russell director",
+      "primaryEntity": "Chuck Russell (director)",
       "entities": [
-        "Rick Moranis",
-        "Josh Gad"
+        "The Mask",
+        "A Nightmare on Elm Street 3: Dream Warriors"
       ],
-      "angle": "Rick Moranis makes his first-ever Comic-Con appearance to discuss the long-awaited 'Spaceballs' sequel.",
+      "angle": "Director Chuck Russell, known for 'The Mask' and 'A Nightmare on Elm Street 3', has passed away.",
+      "tmdbType": "movie",
+      "source": "gnews:The New York Times",
+      "sources": [
+        {
+          "outlet": "E! News",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPR0FsU0hkcGtJa3hIdnhIb2JoclllQ0U2emtJUTR0bzJvN0RfT1hNTkUxM2FRX2JodlIyaDlwdXMwQXpZa2lMYV9IRkg3cVI5bHhjQU5zRTRBQ001SDdGSThyTDlNUlFyaDhaNFFSa0xWRjVpMWVQRTg5SGtNZi1nYlRMNlRqTWtDVFVvOHVxTVN0UjRFQ1E?oc=5",
+          "ageMin": 76,
+          "headline": "Chuck Russell, Horror Movie Director, Dead at 74 - E! News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxPR0FsU0hkcGtJa3hIdnhIb2JoclllQ0U2emtJUTR0bzJvN0RfT1hNTkUxM2FRX2JodlIyaDlwdXMwQXpZa2lMYV9IRkg3cVI5bHhjQU5zRTRBQ001SDdGSThyTDlNUlFyaDhaNFFSa0xWRjVpMWVQRTg5SGtNZi1nYlRMNlRqTWtDVFVvOHVxTVN0UjRFQ1E?oc=5\" target=\"_blank\" Chuck Russell, Horror Mov"
+        },
+        {
+          "outlet": "The New York Times",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBqMDdQenhsVlVpMnVKQ3pzYkI0NzdjbVVWVGpoVC1xUy04VS14MjNOWUpFQ1p3QTJTeDZ0TURfVGZNWGhkUlV4bzFoZmZwbTdQTWRsbVgzX1Myd3JyeFA4UWM1eXNJLUpPUXBCTFduNS0?oc=5",
+          "ageMin": 86,
+          "headline": "Chuck Russell, Director of ‘The Mask’ and Third ‘Nightmare on Elm Street’ Movie, Dies at 74 - The New York Times",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTFBqMDdQenhsVlVpMnVKQ3pzYkI0NzdjbVVWVGpoVC1xUy04VS14MjNOWUpFQ1p3QTJTeDZ0TURfVGZNWGhkUlV4bzFoZmZwbTdQTWRsbVgzX1Myd3JyeFA4UWM1eXNJLUpPUXBCTFduNS0?oc=5\" target=\"_blank\" Chuck Russell, Director of ‘The Mask’ and Third ‘Nightmare on Elm Street’ Mov"
+        },
+        {
+          "outlet": "Yahoo",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcERCOFlvaVlIeVlMdE10d0d5VVY1d083d2dCaHNFczFBOHdjekVLSnJKUEpEcVNjc05yZmJxYWxaQVQ3UG1JdFU4WXdub2NZYnJ0eUpXN3JIOVBxYXY0ZmtQNGFmRkhkRjFEbnVlRHJpSWxyRXBPLVN0bTFPbGktNDY0RlBuQ25HMkIwODBLQ1ZBRE5kX1UxUEFxdG1aSHZDTjE0UA?oc=5",
+          "ageMin": 89,
+          "headline": "Chuck Russell, Horror Movie Director, Dead at 74 - Yahoo",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQcERCOFlvaVlIeVlMdE10d0d5VVY1d083d2dCaHNFczFBOHdjekVLSnJKUEpEcVNjc05yZmJxYWxaQVQ3UG1JdFU4WXdub2NZYnJ0eUpXN3JIOVBxYXY0ZmtQNGFmRkhkRjFEbnVlRHJpSWxyRXBPLVN0bTFPbGktNDY0RlBuQ25HMkIwODBLQ1ZBRE5kX1UxUEFxdG1aSHZDTjE0UA?oc=5\" target=\"_blank\" Chuck "
+        }
+      ],
+      "ageMin": 86,
+      "_cand": {
+        "key": "rss:chuck-russell-director-of-the-mask-and-third-nightmare-on-el",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "E! News",
+          "The New York Times",
+          "Yahoo"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "The New York Times",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 99,
+      "signals": {
+        "recency": 16,
+        "corroboration": 24,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 12,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-guillermo-del-toro-pan-s-labyrinth-ai-statement",
+      "slug": "guillermo-del-toro-assures-no-ai-used-in-pan-s-labyrinth-3d-re-release",
+      "title": "Guillermo Del Toro Assures No AI Used In Pan's Labyrinth 3D Re-Release",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "guillermo-del-toro-pan-s-labyrinth-ai-statement",
+      "primaryKeyword": "pan's labyrinth 3d re-release",
+      "primaryEntity": "Pan's Labyrinth",
+      "entities": [
+        "Guillermo del Toro"
+      ],
+      "angle": "Guillermo del Toro assures fans that no AI was used in the 3D re-release of 'Pan's Labyrinth,' emphasizing traditional restoration techniques for the film's 20th anniversary.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/guillermo-del-toro-no-goddmn-ai-pans-labyrinth-re-release-1237003272/",
+          "ageMin": 21,
+          "headline": "Guillermo Del Toro Assures No Godd*mn AI Used In Pan s Labyrinth 3D Re-Release — Comic-Con",
+          "summary": "As Guillermo Del Toro brings Pan s Labyrinth back to theaters 20 years later, he s sticking to tried-and-true restoration techniques. During Friday s Hall H panel for the movie s milestone anniversary at San Diego Comic-Con, the 3x Oscar winner reinforced his stance on using absolutely no goddamn AI in the 3D re-release, which premieres Oct. 9 in [ ]"
+        }
+      ],
+      "ageMin": 21,
+      "_cand": {
+        "key": "rss:guillermo-del-toro-assures-no-godd-mn-ai-used-in-pan-s-labyr",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 87,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-widow-s-bay-season-2-discussion",
+      "slug": "widow-s-bay-creator-on-writing-season-2-after-buzzy-launch-i-learned-a",
+      "title": "Widow's Bay Creator on Writing Season 2 After Buzzy Launch: 'I Learned a Lot About What You Don't Need'",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "widow-s-bay-season-2-discussion",
+      "primaryKeyword": "widow's bay season 2",
+      "primaryEntity": "Widow's Bay",
+      "entities": [
+        "Katie Dippold",
+        "Matthew Rhys",
+        "Apple TV+"
+      ],
+      "angle": "Creator Katie Dippold reflects on lessons learned from the buzzy launch of 'Widow's Bay' as she discusses writing the second season.",
       "tmdbType": "movie",
       "source": "rss:THR",
       "sources": [
         {
           "outlet": "THR",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/spaceballs-the-new-one-footage-1236656320/",
-          "ageMin": 12,
-          "headline": "Rick Moranis Makes Comic-Con Debut for Spaceballs Sequel",
-          "summary": "The Schwartz was strong with Josh Gad and the rest of the gang at Hall H's \"Spaceballs: The New One\" panel."
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/widows-bay-creator-season-2-katie-dippold-lessons-1236656424/",
+          "ageMin": 30,
+          "headline": "Widow s Bay Creator on Writing Season 2 After Buzzy Launch: I Learned a Lot About What You Don t Need",
+          "summary": "Katie Dippold discussed the Matthew Rhys-led Apple TV series at Comic-Con on the heels of its 19 Emmy nominations."
         }
       ],
-      "ageMin": 12,
+      "ageMin": 30,
       "_cand": {
-        "key": "rss:rick-moranis-makes-comic-con-debut-for-spaceballs-sequel",
+        "key": "rss:widow-s-bay-creator-on-writing-season-2-after-buzzy-launch-i",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -54,161 +204,21 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 98,
+      "priority": 80,
       "signals": {
-        "recency": 30,
+        "recency": 24,
         "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-rick-moranis-spaceballs-sequel-comic-con-debut",
-      "slug": "rick-moranis-makes-comic-con-debut-for-spaceballs-sequel",
-      "title": "Rick Moranis Makes Comic-Con Debut for ‘Spaceballs’ Sequel",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "casting",
-      "sensitivity": "normal",
-      "eventSlug": "rick-moranis-spaceballs-sequel-comic-con-debut",
-      "primaryKeyword": "spaceballs sequel",
-      "primaryEntity": "Spaceballs",
-      "entities": [
-        "Rick Moranis"
-      ],
-      "angle": "Rick Moranis makes a surprise appearance at Comic-Con to discuss a potential 'Spaceballs' sequel.",
-      "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
-      "sources": [
-        {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUVVrRTA1YUVGQkJMM25EUTRabElEclBsR2Z0Vk02Y3hrRE5DYXlKU0hHVXFGb0d2ZWhQa2x5eTkwUlhoeXZseFAwYVVJOVVjQmVodkhhcG9wQi1lc1JDVk9NSkdhMHhFNmlpNlRYeGZQOER6TzlnMGdvUmsxakFxUVdHd0VsVHo4UEhHZC1hUkZmR2E2QWlVX19R?oc=5",
-          "ageMin": 12,
-          "headline": "Rick Moranis Makes Comic-Con Debut for ‘Spaceballs’ Sequel - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOUVVrRTA1YUVGQkJMM25EUTRabElEclBsR2Z0Vk02Y3hrRE5DYXlKU0hHVXFGb0d2ZWhQa2x5eTkwUlhoeXZseFAwYVVJOVVjQmVodkhhcG9wQi1lc1JDVk9NSkdhMHhFNmlpNlRYeGZQOER6TzlnMGdvUmsxakFxUVdHd0VsVHo4UEhHZC1hUkZmR2E2QWlVX19R?oc=5\" target=\"_blank\" Rick Moranis Makes C"
-        }
-      ],
-      "ageMin": 12,
-      "_cand": {
-        "key": "rss:rick-moranis-makes-comic-con-debut-for-spaceballs-sequel-the",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "The Hollywood Reporter"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 98,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 14,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-interview-with-the-vampire-renewed-for-season-4",
-      "slug": "interview-with-the-vampire-renewed-for-season-4-titled-queen-of-the-da",
-      "title": "‘Interview With the Vampire’ Renewed for Season 4, Titled ‘Queen of the Damned’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "renewal",
-      "sensitivity": "high",
-      "eventSlug": "interview-with-the-vampire-renewed-for-season-4",
-      "primaryKeyword": "interview with the vampire season 4",
-      "primaryEntity": "Interview with the Vampire",
-      "entities": [
-        "Interview with the Vampire (TV Series)",
-        "Queen of the Damned"
-      ],
-      "angle": "AMC's Anne Rice adaptation 'Interview With the Vampire' is picked up for a fourth season, with the subtitle 'Queen of the Damned' hinting at future storylines.",
-      "tmdbType": "movie",
-      "source": "gnews:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5",
-          "ageMin": 346,
-          "headline": "‘Interview With the Vampire’ Renewed for Season 4, Titled ‘Queen of the Damned’ - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5\" target=\"_blank\" ‘Interview With the Vamp"
-        },
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5",
-          "ageMin": 346,
-          "headline": "'Queen of the Damned' Is Season 4 Of 'Interview With the Vampire' Series - Deadline",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxObjUxSkZQa1pHVEpJTk9tMXBDOTVxYnJlTlpFdThWX1d1dUpKQURfQV8zcnU4VmVhb3BKQzRGRVludmxmZ0lqTV8zMU9KenBva1pNUzRBRFIzYjNTeDNJSmY5MGpWWTFueXRyRU05QWV0STVsVUFEMnhlNXBqblJMTk1XVzlodlJCRXFvQTdhcU1YTmJQVnhMWTNVSlNuQjlhelFUd2xTeVM?oc=5\" target=\"_blank\" '"
-        }
-      ],
-      "ageMin": 346,
-      "_cand": {
-        "key": "rss:-interview-with-the-vampire-renewed-for-season-4-titled-quee",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 2,
-        "outlets": [
-          "Variety",
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "high",
-        "attribution": "Variety",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 79,
-      "signals": {
-        "recency": 9,
-        "corroboration": 18,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
-        "trending": 8,
+        "trending": 0,
         "spice": 0,
         "softTv": 0,
         "learned": -1
       },
-      "tierClass": "S"
+      "tierClass": "B"
     },
     {
       "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-balrog",
@@ -228,7 +238,7 @@
         "Simon Pegg",
         "The Balrog"
       ],
-      "angle": "Amazon drops the first trailer for 'The Rings of Power' Season 3, revealing Simon Pegg has joined the cast as the Balrog.",
+      "angle": "The trailer for 'The Rings of Power' Season 3 has been released, and Simon Pegg is confirmed to join the cast as The Balrog.",
       "tmdbType": "movie",
       "source": "gnews:Variety",
       "sources": [
@@ -236,12 +246,12 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5",
-          "ageMin": 451,
+          "ageMin": 511,
           "headline": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog - Variety",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5\" target=\"_blank\" ‘Rings of Power’ Deb"
         }
       ],
-      "ageMin": 451,
+      "ageMin": 511,
       "_cand": {
         "key": "rss:-rings-of-power-debuts-season-3-trailer-simon-pegg-joins-cas",
         "popularity": 0,
@@ -281,7 +291,84 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-rings-of-power-season-3-trailer-sauron-at-war",
+      "id": "news-interview-with-the-vampire-renewed-queen-of-the-damned",
+      "slug": "interview-with-the-vampire-renewed-for-season-4-with-rebrand-to-queen-",
+      "title": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "renewal",
+      "sensitivity": "normal",
+      "eventSlug": "interview-with-the-vampire-renewed-queen-of-the-damned",
+      "primaryKeyword": "interview with the vampire season 4",
+      "primaryEntity": "Interview with the Vampire",
+      "entities": [
+        "Interview with the Vampire (TV series)",
+        "AMC",
+        "Queen of the Damned"
+      ],
+      "angle": "AMC's 'Interview With the Vampire' has been renewed for a fourth season and will be rebranded as 'Queen of the Damned'.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc=5",
+          "ageMin": 341,
+          "headline": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’ - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc="
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5",
+          "ageMin": 406,
+          "headline": "‘Interview With the Vampire’ Renewed for Season 4, Titled ‘Queen of the Damned’ - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5\" target=\"_blank\" ‘Interview With the Vamp"
+        }
+      ],
+      "ageMin": 341,
+      "_cand": {
+        "key": "rss:-interview-with-the-vampire-renewed-for-season-4-with-rebran",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "The Hollywood Reporter",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-rings-of-power-season-3-trailer-sauron-war",
       "slug": "lord-of-the-rings-the-rings-of-power-season-3-trailer-5-year-time-jump",
       "title": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War",
       "contentType": "trailer",
@@ -290,14 +377,14 @@
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-trailer-sauron-at-war",
+      "eventSlug": "rings-of-power-season-3-trailer-sauron-war",
       "primaryKeyword": "rings of power season 3 trailer",
       "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
         "The Lord of the Rings: The Rings of Power",
         "Sauron"
       ],
-      "angle": "The trailer for 'The Rings of Power' Season 3 hints at a five-year time jump and Sauron's escalating conflict.",
+      "angle": "The trailer for 'The Rings of Power' Season 3 indicates a five-year time jump and shows Sauron at war.",
       "tmdbType": "movie",
       "source": "gnews:TheWrap",
       "sources": [
@@ -305,12 +392,12 @@
           "outlet": "TheWrap",
           "tier": 6,
           "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5",
-          "ageMin": 451,
+          "ageMin": 511,
           "headline": "'Lord of the Rings: The Rings of Power' Season 3 Trailer: 5-Year Time Jump Shows Sauron at War - TheWrap",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxNYXVGTEdSY1VtTDhjNzdUc0MwQVFQc1pMY3RXaHh1c0VmZ1FTUDZhaEs3b21kbHJjdHNHdUlnclNwbjVMUWpncUhiLWdObTZqUllhT2dneGtuVXI5NncyOXNRNWZlSDZweTB4QVFHTVdWWjlqWXI5QVViS25sa3FsMHpUbURDZkh4R2FhZ2U1Q2hXUV9tUFA4T1l4ZVg5TnRzT0N4SkRrckpaT3pMWTln?oc=5\" target=\""
         }
       ],
-      "ageMin": 451,
+      "ageMin": 511,
       "_cand": {
         "key": "rss:-lord-of-the-rings-the-rings-of-power-season-3-trailer-5-yea",
         "popularity": 0,
@@ -350,174 +437,38 @@
       "tierClass": "A"
     },
     {
-      "id": "trailer-rings-of-power-season-3-teaser-trailer",
-      "slug": "see-the-first-teaser-trailer-for-the-lord-of-the-rings-the-rings-of-po",
-      "title": "See the first teaser trailer for ‘The Lord of the Rings: The Rings of Power’ season 3",
-      "contentType": "trailer",
-      "formatTag": "trailer",
-      "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
-      "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-teaser-trailer",
-      "primaryKeyword": "rings of power season 3 trailer",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
-      "entities": [
-        "The Lord of the Rings: The Rings of Power"
-      ],
-      "angle": "A teaser trailer has been released for the third season of Amazon's 'The Lord of the Rings: The Rings of Power'.",
-      "tmdbType": "movie",
-      "source": "gnews:Entertainment Weekly",
-      "sources": [
-        {
-          "outlet": "Entertainment Weekly",
-          "tier": 6,
-          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5",
-          "ageMin": 451,
-          "headline": "See the first teaser trailer for ‘The Lord of the Rings: The Rings of Power’ season 3 - Entertainment Weekly",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPSmJoTS1oR0ZaSGRndjgyT0RnWEFveVNxR0xZNEMtOU5tcjhsMHdYZ041WlBCbDhhVXdRN0FWcXZwT0RZcGhsMUpxb19fdXFjXzdZZmJNS0dlQWpkT1hUTlRfNGZYaWYxTmRtdFNJLVFzTGJhbmZ0WUp3WGd4dV9mdW85cmJnRGFpTjQ0bjlQc1dfV3J3VG1TQzRIdFJFbTZyclE?oc=5\" target=\"_blank\" See the f"
-        }
-      ],
-      "ageMin": 451,
-      "_cand": {
-        "key": "rss:see-the-first-teaser-trailer-for-the-lord-of-the-rings-the-r",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Entertainment Weekly"
-        ],
-        "maxTier": 6,
-        "sensitivity": "normal",
-        "attribution": "Entertainment Weekly",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 74,
-      "signals": {
-        "recency": 4,
-        "corroboration": 10,
-        "status": 18,
-        "type": 15,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1,
-        "radar": 10
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-the-rings-of-power-prime-video",
-      "slug": "the-lord-of-the-rings-the-rings-of-power-prime-video",
-      "title": "The Lord of the Rings: The Rings of Power | Prime Video",
+      "id": "news-on-patrol-live-casting-tom-morris-jr",
+      "slug": "tom-morris-jr-rejoins-on-patrol-live-crew",
+      "title": "Tom Morris Jr. Rejoins 'On Patrol: Live' Crew",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "announcement",
+      "eventType": "casting",
       "sensitivity": "normal",
-      "eventSlug": "the-rings-of-power-prime-video",
-      "primaryKeyword": "The Rings of Power",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "eventSlug": "on-patrol-live-casting-tom-morris-jr",
+      "primaryKeyword": "On Patrol: Live",
+      "primaryEntity": "On Patrol: Live",
       "entities": [
-        "The Lord of the Rings: The Rings of Power",
-        "Prime Video"
+        "Dan Abrams",
+        "Tom Morris Jr."
       ],
-      "angle": "Amazon MGM Studios announces news regarding 'The Lord of the Rings: The Rings of Power'.",
+      "angle": "Original cast member Tom Morris Jr. returns to 'On Patrol: Live,' reuniting the core team.",
       "tmdbType": "movie",
-      "source": "gnews:Amazon MGM Studios Press Site",
+      "source": "rss:THR",
       "sources": [
         {
-          "outlet": "Amazon MGM Studios Press Site",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUGxNMnVsYjNUaUlXSTRQRXVUN3BWcV9hTm9ZQjhWbkxFRzYxNUtrZ1ZFQlQ2WWlFNG02Vk9HenlPbnFQSHd3NndZdVNfbVdaMlBJS2stOThJZjNRTVdKVUlOMjhvaEdtS1g4YXE0NXpFLU1qSGkycmlsTXhmZWRMUy1SckMtcThfd2ZIOFQ5anNDdG1tcXRndjg4RUYyTmtGcFdQNGRVN2xmSFU?oc=5",
-          "ageMin": 449,
-          "headline": "The Lord of the Rings: The Rings of Power | Prime Video - Amazon MGM Studios Press Site",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUGxNMnVsYjNUaUlXSTRQRXVUN3BWcV9hTm9ZQjhWbkxFRzYxNUtrZ1ZFQlQ2WWlFNG02Vk9HenlPbnFQSHd3NndZdVNfbVdaMlBJS2stOThJZjNRTVdKVUlOMjhvaEdtS1g4YXE0NXpFLU1qSGkycmlsTXhmZWRMUy1SckMtcThfd2ZIOFQ5anNDdG1tcXRndjg4RUYyTmtGcFdQNGRVN2xmSFU?oc=5\" target=\"_blan"
-        }
-      ],
-      "ageMin": 449,
-      "_cand": {
-        "key": "rss:the-lord-of-the-rings-the-rings-of-power-prime-video-amazon-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Amazon MGM Studios Press Site"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Amazon MGM Studios Press Site",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 66,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": -1,
-        "radar": 10
-      },
-      "radarKind": "tv-trending",
-      "tierClass": "A"
-    },
-    {
-      "id": "news-guillermo-del-toro-no-ai-pan-s-labyrinth-re-release",
-      "slug": "guillermo-del-toro-said-absolutely-no-goddamn-ai-in-pan-s-labyrinth-3d",
-      "title": "Guillermo del Toro said Absolutely No Goddamn AI in Pan's Labyrinth 3D Re-Release: We're Protecting a Lineage of Art",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "other",
-      "sensitivity": "normal",
-      "eventSlug": "guillermo-del-toro-no-ai-pan-s-labyrinth-re-release",
-      "primaryKeyword": "guillermo del toro pan's labyrinth ai",
-      "primaryEntity": "Pan's Labyrinth",
-      "entities": [
-        "Guillermo del Toro"
-      ],
-      "angle": "Guillermo del Toro insists on no AI for the 3D re-release of Pan's Labyrinth.",
-      "tmdbType": "movie",
-      "source": "rss:Variety",
-      "sources": [
-        {
-          "outlet": "Variety",
+          "outlet": "THR",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/guillermo-del-toro-no-ai-pans-labyrinth-rerelease-1236815109/",
-          "ageMin": 24,
-          "headline": "Guillermo del Toro said Absolutely No Goddamn AI in Pan s Labyrinth 3D Re-Release: We re Protecting a Lineage of Art",
-          "summary": "Guillermo del Toro had one rule when bringing “Pan s Labyrinth” back to theaters for its 20th anniversary: “No goddamn AI.” The filmmaker returned to San Diego Comic-Con to discuss the film’s 20th anniversary, which returns to theaters Oct. 9 in 3D and HDR for the first time. The filmmaker said he converted “Pan s Labyrinth” into [ ]"
+          "url": "https://www.hollywoodreporter.com/tv/tv-news/live-pd-reunion-tom-morris-jr-dan-abrams-on-patrol-live-1236656080/",
+          "ageMin": 106,
+          "headline": "The Whole Live PD Gang Is Back Together as Tom Morris Jr. Joins On Patrol: Live",
+          "summary": "Dan Abrams and Sgt. Sean \"Sticks\" Larkin have their buddy back."
         }
       ],
-      "ageMin": 24,
+      "ageMin": 106,
       "_cand": {
-        "key": "rss:guillermo-del-toro-said-absolutely-no-goddamn-ai-in-pan-s-la",
+        "key": "rss:the-whole-live-pd-gang-is-back-together-as-tom-morris-jr-joi",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -527,24 +478,90 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "Variety"
+          "THR"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "Variety",
+        "attribution": "THR",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 71,
+      "priority": 77,
       "signals": {
-        "recency": 24,
+        "recency": 16,
         "corroboration": 12,
         "status": 18,
-        "type": 5,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
-        "big": 12,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-onslaught-movie-universe-confirmation",
+      "slug": "onslaught-director-confirms-movie-is-set-in-the-same-universe-as-the-g",
+      "title": "Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Released",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "onslaught-movie-universe-confirmation",
+      "primaryKeyword": "onslaught movie",
+      "primaryEntity": "Onslaught (film)",
+      "entities": [
+        "The Guest"
+      ],
+      "angle": "Director confirms 'Onslaught' is set in the same universe as 'The Guest', with new posters released.",
+      "tmdbType": "movie",
+      "source": "gnews:IMDb",
+      "sources": [
+        {
+          "outlet": "IMDb",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE05aDQ3UVZKNWVieTFVMUhDYjhJT25CWU1CWlg0bmt0elpTS0M3eExQUEdlNWluN3hJN05pblFjVmVzYUd1UXBFRGNhYXdhZjJmaVJrQlFOYmZDMG5SUmNJSDNoSkM?oc=5",
+          "ageMin": 100,
+          "headline": "Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Released - IMDb",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE05aDQ3UVZKNWVieTFVMUhDYjhJT25CWU1CWlg0bmt0elpTS0M3eExQUEdlNWluN3hJN05pblFjVmVzYUd1UXBFRGNhYXdhZjJmaVJrQlFOYmZDMG5SUmNJSDNoSkM?oc=5\" target=\"_blank\" Onslaught Director Confirms Movie Is Set \"In The Same Universe\" As The Guest; New Posters Rel"
+        }
+      ],
+      "ageMin": 100,
+      "_cand": {
+        "key": "rss:onslaught-director-confirms-movie-is-set-in-the-same-univers",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IMDb"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IMDb",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 75,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
         "trending": 0,
         "spice": 0,
         "softTv": 0
@@ -554,7 +571,7 @@
     {
       "id": "music-news-little-big-town-new-album-video",
       "slug": "little-big-town-shares-heartfelt-we-could-have-it-all-video-ahead-of-n",
-      "title": "Little Big Town Shares Heartfelt \"We Could Have It All\" Video Ahead Of New Album",
+      "title": "Little Big Town Shares Heartfelt 'We Could Have It All' Video Ahead Of New Album",
       "contentType": "music-news",
       "formatTag": "music-news",
       "category": "music",
@@ -563,12 +580,12 @@
       "sensitivity": "normal",
       "tier": "popular",
       "eventSlug": "little-big-town-new-album-video",
-      "primaryKeyword": "Little Big Town new album",
+      "primaryKeyword": "Little Big Town",
       "primaryEntity": "Little Big Town",
       "entities": [
         "We Could Have It All"
       ],
-      "angle": "Country group Little Big Town releases a new video ahead of their upcoming album.",
+      "angle": "Country group Little Big Town released a video for their song 'We Could Have It All' ahead of their new album.",
       "tmdbType": "movie",
       "source": "gnews:That Eric Alper",
       "sources": [
@@ -576,12 +593,12 @@
           "outlet": "That Eric Alper",
           "tier": 5,
           "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOElOMDdPUGdUa25UQXF2a0NET2ZRbF9oTFhrSlptc01xSkdyQVZNRGpFbUxkdEpTM2oyOWxmbE96UzBNZXRZdEt2VEFDT0FBVnFjNHdGWFE5Z0MwVV9GS18yTjEzdUtJXzR3U3A4V3ozcHA5TkxFMUpRR29LeFdIcUpiQ1J3NmNWdUFDZWtXNlU5VHM3UV9QZzZFZTk1czhBUlpmdDFGVy1vcG9TMWlPZDhNWGc2dDVFaDg0ZA?oc=5",
-          "ageMin": 82,
+          "ageMin": 142,
           "headline": "Little Big Town Shares Heartfelt \"We Could Have It All\" Video Ahead Of New Album - That Eric Alper",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMivAFBVV95cUxOOElOMDdPUGdUa25UQXF2a0NET2ZRbF9oTFhrSlptc01xSkdyQVZNRGpFbUxkdEpTM2oyOWxmbE96UzBNZXRZdEt2VEFDT0FBVnFjNHdGWFE5Z0MwVV9GS18yTjEzdUtJXzR3U3A4V3ozcHA5TkxFMUpRR29LeFdIcUpiQ1J3NmNWdUFDZWtXNlU5VHM3UV9QZzZFZTk1czhBUlpmdDFGVy1vcG9TMWlPZDhNWGc2dDVFaDg"
         }
       ],
-      "ageMin": 82,
+      "ageMin": 142,
       "_cand": {
         "key": "rss:little-big-town-shares-heartfelt-we-could-have-it-all-video-",
         "popularity": 0,
@@ -623,185 +640,39 @@
       "tierClass": "C"
     },
     {
-      "id": "music-news-ministry-farewell-tour-hate-to-go-album",
-      "slug": "ministry-announce-final-album-and-farewell-tour",
-      "title": "Ministry Announce Final Album and Farewell Tour",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "ministry-farewell-tour-hate-to-go-album",
-      "primaryKeyword": "Ministry tour",
-      "primaryEntity": "Ministry",
-      "entities": [
-        "Hate To Go (Take Out Or Delivery)"
-      ],
-      "angle": "Industrial rock pioneers Ministry announce their final album and farewell tour.",
-      "tmdbType": "movie",
-      "source": "gnews:Louder",
-      "sources": [
-        {
-          "outlet": "Louder",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcUtTcndBckJWcm9yN2w3ZWpjZlBkT1ozcjJtaXFNT25MSGVLbGtXQnJLeFVaeXlsbG91c3VVczlReTByQXdoM21DQzNqTVpsUUFGV3NLSDZ6dGxMYmV4aGdKR0xJVWJpVEUzei04TEhoZFNINzV0bXluaHZjQ2ItTnpVSnRSVk9tTUxnTEtjWi04R1o3RFRaeDg1T25pWEZBM09YTWFobm5VZw?oc=5",
-          "ageMin": 462,
-          "headline": "\"It's time to herd goats.\" Ministry announce Goodbye Europe farewell tour, share animated video for Burned Out, the first single from their final album Hate To Go (Take Out Or Delivery) - Louder",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOcUtTcndBckJWcm9yN2w3ZWpjZlBkT1ozcjJtaXFNT25MSGVLbGtXQnJLeFVaeXlsbG91c3VVczlReTByQXdoM21DQzNqTVpsUUFGV3NLSDZ6dGxMYmV4aGdKR0xJVWJpVEUzei04TEhoZFNINzV0bXluaHZjQ2ItTnpVSnRSVk9tTUxnTEtjWi04R1o3RFRaeDg1T25pWEZBM09YTWFobm5VZw?oc=5\" target=\"_blank"
-        },
-        {
-          "outlet": "The Rock Revival",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOVm5yWlY3NXRfS05aX1ZTY3JPT3l0NGs5V3NYMDFpMk9SRkgzSlp1T25ybmhmLTZ3NzQ3VldaZHJDUWhlRGpubTFFeWl5X2NuMi1lY2tMc3c1bnlWQlpUQUVPbXhNMHNVNTZTRTc4Z3c3Z3pZWFhNWDhESVBCUl96a3NPcEFBSF9PclUyWG5vUXo?oc=5",
-          "ageMin": 511,
-          "headline": "Ministry Announce Final Album, Farewell World Tour - The Rock Revival",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAFBVV95cUxOVm5yWlY3NXRfS05aX1ZTY3JPT3l0NGs5V3NYMDFpMk9SRkgzSlp1T25ybmhmLTZ3NzQ3VldaZHJDUWhlRGpubTFFeWl5X2NuMi1lY2tMc3c1bnlWQlpUQUVPbXhNMHNVNTZTRTc4Z3c3Z3pZWFhNWDhESVBCUl96a3NPcEFBSF9PclUyWG5vUXo?oc=5\" target=\"_blank\" Ministry Announce Final Album, Fa"
-        }
-      ],
-      "ageMin": 462,
-      "_cand": {
-        "key": "rss:-it-s-time-to-herd-goats-ministry-announce-goodbye-europe-fa",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 2,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 2,
-        "outlets": [
-          "Louder",
-          "The Rock Revival"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "multiple outlets",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 57,
-      "signals": {
-        "recency": 4,
-        "corroboration": 14,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 8,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-scrapped-star-wars-series-screening",
-      "slug": "sdcc-scrapped-star-wars-series-from-robot-chicken-creators-to-screen-a",
-      "title": "SDCC: Scrapped 'Star Wars' Series from 'Robot Chicken' Creators to Screen at Lucas Museum",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "scrapped-star-wars-series-screening",
-      "primaryKeyword": "scrapped Star Wars series screening",
-      "primaryEntity": "Star Wars: The Clone Wars",
-      "entities": [
-        "Star Wars series",
-        "Robot Chicken",
-        "Lucas Museum",
-        "Animation Magazine"
-      ],
-      "angle": "Scrapped 'Star Wars' series from 'Robot Chicken' creators to be screened at Lucas Museum.",
-      "tmdbType": "movie",
-      "source": "gnews:Animation Magazine",
-      "sources": [
-        {
-          "outlet": "Animation Magazine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1JMQmc0aE1hVGhWRVlOanRsOHNVdFNLVml5SmFRYTctSEswMzJwZFdFVVFwMUJVaURWNG5tVW5hTFItYmh6TkpvbHo4VFJzcWhORnBQdE5ybE84aEZ2S3N6Q3FRNmxHYmVaU3NTVjJyRmtGNEw5dndPcU5zWmNOZ2JmSmJwc1ExQkJoTzFPLUFGZzAyNGF4TzVvd1FOd2NsekRucU04OW9xeFA1Vkgtb3M2SHMwdUEzbFY2bGptY0ZJLUs2T0E?oc=5",
-          "ageMin": 433,
-          "headline": "SDCC: Scrapped 'Star Wars' Series from 'Robot Chicken' Creators to Screen at Lucas Museum - Animation Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMixgFBVV95cUxPS1JMQmc0aE1hVGhWRVlOanRsOHNVdFNLVml5SmFRYTctSEswMzJwZFdFVVFwMUJVaURWNG5tVW5hTFItYmh6TkpvbHo4VFJzcWhORnBQdE5ybE84aEZ2S3N6Q3FRNmxHYmVaU3NTVjJyRmtGNEw5dndPcU5zWmNOZ2JmSmJwc1ExQkJoTzFPLUFGZzAyNGF4TzVvd1FOd2NsekRucU04OW9xeFA1Vkgtb3M2SHMwdUEzbFY"
-        }
-      ],
-      "ageMin": 433,
-      "_cand": {
-        "key": "rss:sdcc-scrapped-star-wars-series-from-robot-chicken-creators-t",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Animation Magazine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Animation Magazine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 4,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 18,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": -1
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "news-the-girl-in-the-river-trailer-release-date",
-      "slug": "tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-gets-late-",
-      "title": "Tiffany Haddish, Devon Sawa's Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
+      "id": "news-cape-janet-yang-short-film-grants",
+      "slug": "cape-and-janet-yang-productions-unveil-short-film-challenge-grants-wit",
+      "title": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants With Auli‘i Cravalho and Anora Producer on Jury (EXCLUSIVE)",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "the-girl-in-the-river-trailer-release-date",
-      "primaryKeyword": "the girl in the river trailer",
-      "primaryEntity": "The Girl in the River",
+      "eventSlug": "cape-janet-yang-short-film-grants",
+      "primaryKeyword": "short film grants",
+      "primaryEntity": "Coalition of Asian Pacifics in Entertainment",
       "entities": [
-        "Tiffany Haddish",
-        "Devon Sawa",
-        "Maggie Grace",
-        "Ralph Macchio"
+        "Auliʻi Cravalho",
+        "Janet Yang Productions",
+        "Auli‘i Cravalho"
       ],
-      "angle": "Thriller 'The Girl in the River' gets a late summer release date and trailer.",
+      "angle": "CAPE and Janet Yang Productions launch short film challenge grants.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Variety",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Variety",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/the-girl-in-the-river-tiffany-haddish-devon-sawa-release-1236653795/",
-          "ageMin": 3511,
-          "headline": "Tiffany Haddish, Devon Sawa s Thriller The Girl in the River Gets Late Summer Release and Trailer (Exclusive)",
-          "summary": "Maggie Grace and Ralph Macchio star in Brando Benetton's movie that has been acquired by Samuel Goldwyn Films and centers on twin girls who go missing."
+          "url": "https://variety.com/2026/film/news/cape-janet-yang-productions-filmmaker-grants-short-film-challenge-1236819620/",
+          "ageMin": 406,
+          "headline": "CAPE and Janet Yang Productions Unveil Short Film Challenge Grants With Auli‘i Cravalho and Anora Producer on Jury (EXCLUSIVE)",
+          "summary": "The Coalition of Asian Pacifics in Entertainment and Janet Yang Productions have granted four filmmakers $25,000 to produce their films as part of the Julia S. Gouw Short Film Challenge. The filmmakers include Keshni Kashyap Nilsson ( The Shoe Burglars ), Nayon Cho ( Stigma ), Patricia Lee ( Wasted Resources ) and Tiffany Lin ( Hunger ). The Short Film Challenge s jury [ ]"
         }
       ],
-      "ageMin": 3511,
+      "ageMin": 406,
       "_cand": {
-        "key": "rss:tiffany-haddish-devon-sawa-s-thriller-the-girl-in-the-river-",
+        "key": "rss:cape-and-janet-yang-productions-unveil-short-film-challenge-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -811,18 +682,18 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Variety"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Variety",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 67,
       "signals": {
-        "recency": 1,
+        "recency": 4,
         "corroboration": 12,
         "status": 18,
         "type": 9,
@@ -836,38 +707,38 @@
       "tierClass": "B"
     },
     {
-      "id": "trailer-marvels-wolverine-new-story-trailer",
-      "slug": "marvel-s-wolverine-gets-a-new-story-trailer",
-      "title": "Marvel’s Wolverine Gets a New Story Trailer",
-      "contentType": "trailer",
-      "formatTag": "trailer",
+      "id": "news-the-lord-of-the-rings-the-rings-of-power-prime-video",
+      "slug": "the-lord-of-the-rings-the-rings-of-power-prime-video",
+      "title": "The Lord of the Rings: The Rings of Power | Prime Video",
+      "contentType": "news",
+      "formatTag": "news",
       "category": "tv",
-      "subcategory": "trailers",
-      "eventType": "trailer",
+      "subcategory": "news",
+      "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "marvels-wolverine-new-story-trailer",
-      "primaryKeyword": "wolverine trailer",
-      "primaryEntity": "Deadpool & Wolverine",
+      "eventSlug": "the-lord-of-the-rings-the-rings-of-power-prime-video",
+      "primaryKeyword": "The Rings of Power",
+      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
-        "Marvel's Wolverine",
-        "Marvel"
+        "The Lord of the Rings: The Rings of Power",
+        "Prime Video"
       ],
-      "angle": "A new story trailer has been released for Marvel's Wolverine video game.",
+      "angle": "An announcement regarding The Lord of the Rings: The Rings of Power on Prime Video.",
       "tmdbType": "movie",
-      "source": "gnews:PlayDayOne",
+      "source": "gnews:Amazon MGM Studios Press Site",
       "sources": [
         {
-          "outlet": "PlayDayOne",
+          "outlet": "Amazon MGM Studios Press Site",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5",
-          "ageMin": 531,
-          "headline": "Marvel’s Wolverine Gets a New Story Trailer - PlayDayOne",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5JeS1odFFWZDVuU2Q1S2g1cXJoWVIxdVJMRWhmVnkyY29obmFjS3lkdUJTMi1fYWx4OTFtbzV0ekY0VTRLbkhlZFpMRU5peFZVMjVIOTdYbnFEM1lpajBIVnJUai02NVRmWVZHVVBfVVVOZC1FMVBVZTJsWHBmS1U?oc=5\" target=\"_blank\" Marvel’s Wolverine Gets a New Story Trailer /a nbsp; nbsp"
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUGxNMnVsYjNUaUlXSTRQRXVUN3BWcV9hTm9ZQjhWbkxFRzYxNUtrZ1ZFQlQ2WWlFNG02Vk9HenlPbnFQSHd3NndZdVNfbVdaMlBJS2stOThJZjNRTVdKVUlOMjhvaEdtS1g4YXE0NXpFLU1qSGkycmlsTXhmZWRMUy1SckMtcThfd2ZIOFQ5anNDdG1tcXRndjg4RUYyTmtGcFdQNGRVN2xmSFU?oc=5",
+          "ageMin": 509,
+          "headline": "The Lord of the Rings: The Rings of Power | Prime Video - Amazon MGM Studios Press Site",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxOUGxNMnVsYjNUaUlXSTRQRXVUN3BWcV9hTm9ZQjhWbkxFRzYxNUtrZ1ZFQlQ2WWlFNG02Vk9HenlPbnFQSHd3NndZdVNfbVdaMlBJS2stOThJZjNRTVdKVUlOMjhvaEdtS1g4YXE0NXpFLU1qSGkycmlsTXhmZWRMUy1SckMtcThfd2ZIOFQ5anNDdG1tcXRndjg4RUYyTmtGcFdQNGRVN2xmSFU?oc=5\" target=\"_blan"
         }
       ],
-      "ageMin": 531,
+      "ageMin": 509,
       "_cand": {
-        "key": "rss:marvel-s-wolverine-gets-a-new-story-trailer-playdayone",
+        "key": "rss:the-lord-of-the-rings-the-rings-of-power-prime-video-amazon-",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -877,11 +748,149 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "PlayDayOne"
+          "Amazon MGM Studios Press Site"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "PlayDayOne",
+        "attribution": "Amazon MGM Studios Press Site",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 66,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1,
+        "radar": 10
+      },
+      "radarKind": "tv-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "music-news-luisa-sonza-tomorrowland-debut",
+      "slug": "lu-sa-sonza-makes-her-tomorrowland-belgium-debut-joining-kris-kross-am",
+      "title": "Luísa Sonza Makes Her Tomorrowland Belgium Debut, Joining Kris Kross Amsterdam for My Oh My",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "luisa-sonza-tomorrowland-debut",
+      "primaryKeyword": "luisa sonza tomorrowland",
+      "primaryEntity": "Luísa Sonza",
+      "entities": [
+        "Tomorrowland Belgium",
+        "Kris Kross Amsterdam"
+      ],
+      "angle": "Luísa Sonza makes her debut at Tomorrowland Belgium, joining Kris Kross Amsterdam on stage.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/luisa-sonza-tomorrowland-belgium-debut-my-oh-my-kris-kross-1236302674/",
+          "ageMin": 284,
+          "headline": "Luísa Sonza Makes Her Tomorrowland Belgium Debut, Joining Kris Kross Amsterdam for My Oh My",
+          "summary": "The singer joined the Dutch duo during their Tomorrowland set."
+        }
+      ],
+      "ageMin": 284,
+      "_cand": {
+        "key": "rss:lu-sa-sonza-makes-her-tomorrowland-belgium-debut-joining-kri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "breakoutVelocity": 0,
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 52,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-netflix-considered-pulling-michael-jackson-the-verdict",
+      "slug": "netflix-executives-considered-pulling-michael-jackson-the-verdict-docu",
+      "title": "Netflix Executives Considered Pulling Michael Jackson: The Verdict Docuseries a Week Before Its Release (EXCLUSIVE)",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "netflix-considered-pulling-michael-jackson-the-verdict",
+      "primaryKeyword": "michael jackson the verdict netflix",
+      "primaryEntity": "Michael Jackson: The Verdict",
+      "entities": [
+        "Netflix",
+        "Michael Jackson"
+      ],
+      "angle": "Netflix executives reportedly debated pulling the Michael Jackson docuseries shortly before its release due to fear of backlash.",
+      "tmdbType": "movie",
+      "source": "rss:Variety Music",
+      "sources": [
+        {
+          "outlet": "Variety Music",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/global/michael-jackson-docuseries-netflix-considered-pulling-1236817368/",
+          "ageMin": 504,
+          "headline": "Netflix Executives Considered Pulling Michael Jackson: The Verdict Docuseries a Week Before Its Release (EXCLUSIVE)",
+          "summary": "Netflix almost pulled the streamer s recent documentary “Michael Jackson: The Verdict” a week before its release for fear of reprisal, Variety has learned. The three-part docuseries re-examines Jackson’s 2005 criminal trial, which saw the pop superstar acquitted of all charges, including child molestation. It ultimately ran as planned, premiering on June 3. “It would have [ ]"
+        }
+      ],
+      "ageMin": 504,
+      "_cand": {
+        "key": "rss:netflix-executives-considered-pulling-michael-jackson-the-ve",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety Music"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety Music",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -889,52 +898,55 @@
       "priority": 62,
       "signals": {
         "recency": 4,
-        "corroboration": 8,
+        "corroboration": 12,
         "status": 18,
-        "type": 15,
+        "type": 9,
         "pop": 0,
         "breakout": 0,
         "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
+        "demand": 2,
         "learned": -1
       },
+      "demandImpressions": 1,
+      "demandQuery": "how much was jafar paid for michael",
+      "demandPosition": 30,
       "tierClass": "B"
     },
     {
-      "id": "news-star-wars-rogue-one-spin-off-project",
-      "slug": "star-wars-confirms-new-rogue-one-spin-off-project",
-      "title": "Star Wars Confirms New Rogue One Spin-Off Project",
+      "id": "news-interview-with-the-vampire-season-4-queen-of-the-damned",
+      "slug": "queen-of-the-damned-to-be-season-4-of-interview-with-the-vampire-serie",
+      "title": "'Queen of the Damned' to be Season 4 of 'Interview With the Vampire' Series",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "star-wars-rogue-one-spin-off-project",
-      "primaryKeyword": "Rogue One spin-off",
-      "primaryEntity": "Rogue One: A Star Wars Story",
+      "eventSlug": "interview-with-the-vampire-season-4-queen-of-the-damned",
+      "primaryKeyword": "Interview with the Vampire season 4",
+      "primaryEntity": "Interview with the Vampire",
       "entities": [
-        "Rogue One",
-        "Star Wars"
+        "Queen of the Damned"
       ],
-      "angle": "Star Wars confirms a new spin-off project related to the 'Rogue One' story.",
+      "angle": "The upcoming season of AMC's 'Interview with the Vampire' will be titled 'Queen of the Damned'.",
       "tmdbType": "movie",
-      "source": "gnews:Collider",
+      "source": "gnews:EIN News",
       "sources": [
         {
-          "outlet": "Collider",
+          "outlet": "EIN News",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBXQm1GNGtNZDVuNDlTNTlLQ1hyXzdmYW1jWHhSNW1MVmNtSFRYU0VnU0FrbDExd0dhZnF4SEVsazkwbjV1eGxpMF94SklHLUZxeVZCd1hIQXZCS0xRX2VIQXR4UkpTNGZ5Um5VUzNpOVRpc2tzZml3UXVfSQ?oc=5",
-          "ageMin": 476,
-          "headline": "Star Wars Confirms New 'Rogue One' Spin-Off Project - Collider",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTFBXQm1GNGtNZDVuNDlTNTlLQ1hyXzdmYW1jWHhSNW1MVmNtSFRYU0VnU0FrbDExd0dhZnF4SEVsazkwbjV1eGxpMF94SklHLUZxeVZCd1hIQXZCS0xRX2VIQXR4UkpTNGZ5Um5VUzNpOVRpc2tzZml3UXVfSQ?oc=5\" target=\"_blank\" Star Wars Confirms New 'Rogue One' Spin-Off Project /a nbsp; n"
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQSjZtUHhCbkEwbG1QYm4wMWN6aDBZVml5RGZKR3h1TmlMTWV5RFNlTksxZlB5UTl0WDdCRkQ0V3dNWUFodDE5STFlbWVTVTd6Nl8taUJsY1BBallVSGJWdjJTNUU2cmZxS3ZPRV9aYWhaWXZ3X3JhWWhCMEY3N3I4cGRjZ0J4cEJXbzJydnFaSmUzZEpRRHZYb3dsRGlrYzV3Vy0wYkU4c29xVDJE?oc=5",
+          "ageMin": 397,
+          "headline": "Guilford County Recognizes Inaugural S.T.A.R. Program Award Winners - EIN News",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxQSjZtUHhCbkEwbG1QYm4wMWN6aDBZVml5RGZKR3h1TmlMTWV5RFNlTksxZlB5UTl0WDdCRkQ0V3dNWUFodDE5STFlbWVTVTd6Nl8taUJsY1BBallVSGJWdjJTNUU2cmZxS3ZPRV9aYWhaWXZ3X3JhWWhCMEY3N3I4cGRjZ0J4cEJXbzJydnFaSmUzZEpRRHZYb3dsRGlrYzV3Vy0wYkU4c29xVDJE?oc=5\" target=\"_bla"
         }
       ],
-      "ageMin": 476,
+      "ageMin": 397,
       "_cand": {
-        "key": "rss:star-wars-confirms-new-rogue-one-spin-off-project-collider",
+        "key": "rss:guilford-county-recognizes-inaugural-s-t-a-r-program-award-w",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -944,11 +956,11 @@
         "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "Collider"
+          "EIN News"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Collider",
+        "attribution": "EIN News",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -970,37 +982,106 @@
       "tierClass": "C"
     },
     {
-      "id": "news-monaco-royal-family-grace-kelly-descendants-event",
-      "slug": "monaco-s-royal-family-grace-kelly-s-descendants-honored-at-exclusive-e",
-      "title": "Monaco's Royal Family, Grace Kelly's Descendants, Honored at Exclusive Event",
+      "id": "news-chace-crawford-kelsey-merritt-breakup",
+      "slug": "celebrity-splits-of-2026-chace-crawford-and-kelsey-merritt-more-stars-",
+      "title": "Celebrity Splits of 2026: Chace Crawford and Kelsey Merritt, More Stars Who Called It Quits",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "celebrity",
+      "subcategory": "news",
+      "eventType": "breakup",
+      "sensitivity": "normal",
+      "eventSlug": "chace-crawford-kelsey-merritt-breakup",
+      "primaryKeyword": "Chace Crawford",
+      "primaryEntity": "Chace Crawford",
+      "entities": [
+        "Kelsey Merritt"
+      ],
+      "angle": "Chace Crawford and Kelsey Merritt are among the celebrity couples who have split in 2026.",
+      "tmdbType": "movie",
+      "source": "gnews:usmagazine.com",
+      "sources": [
+        {
+          "outlet": "usmagazine.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5",
+          "ageMin": 149,
+          "headline": "Celebrity Splits of 2026: Chace Crawford and Kelsey Merritt, More Stars Who Called It Quits - usmagazine.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeEg1REU2QkVnLTVmUERlckVvNWVHNjhnUmFjelBnbkdsalR5STVvQ29mM3dkcmVKRUxpQmItREREQ2sycm04REx6SjhrS1ktZHNYRXh0cTIwazVSWmduVzg0a3lhV0FHZVBrTjFXQnFUbkNTV09qUEhxU0pJamE0ZmppTFNsbkV6TmxITDg1Yk1qd25TZmMxTlFzM2FSMXFRUUtfSV9tY1JzSl9RNUZ5Ti1OZ0c?oc=5\" t"
+        }
+      ],
+      "ageMin": 149,
+      "_cand": {
+        "key": "rss:celebrity-splits-of-2026-chace-crawford-and-kelsey-merritt-m",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "usmagazine.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "usmagazine.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 55,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 8,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 4,
+        "softTv": 0,
+        "learned": 1
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-drake-diss-lebron-james",
+      "slug": "drake-seemingly-disses-lebron-james-with-shirt-at-nocta-manor-retreat-",
+      "title": "Drake Seemingly Disses LeBron James With Shirt at Nocta Manor Retreat: 'The Only LeBron I Rate Is Juan'",
       "contentType": "news",
       "formatTag": "news",
       "category": "celebrity",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "monaco-royal-family-grace-kelly-descendants-event",
-      "primaryKeyword": "Monaco royal family",
-      "primaryEntity": "Grace Kelly",
+      "tier": "popular",
+      "eventSlug": "drake-diss-lebron-james",
+      "primaryKeyword": "drake",
+      "primaryEntity": "Charles Drake",
       "entities": [
-        "Monaco royal family"
+        "Drake",
+        "LeBron James",
+        "Nocta Manor"
       ],
-      "angle": "Monaco's royal family, descendants of Grace Kelly, honored at exclusive Monte Carlo event.",
+      "angle": "Drake appears to diss LeBron James with a shirt and social media post, referencing a lesser-known athlete.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:Billboard",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "Billboard",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/77th-monaco-red-cross-gala-2026-recap-guests-fashion-prizes-1236651749/",
-          "ageMin": 76,
-          "headline": "Hollywood Royalty, Michelin-Starred Meal, Cartier Gift Bags: Inside Monaco s Most Exclusive Event of the Year",
-          "summary": "For its 77th iteration, Monte Carlo rolled out the red carpet for a most distinguished guest list, namely Monaco's royal family, the direct descendants and successors of Grace Kelly."
+          "url": "https://www.billboard.com/music/rb-hip-hop/drake-nocta-manor-retreat-only-lebron-juan-1236302669/",
+          "ageMin": 174,
+          "headline": "Drake Seemingly Disses LeBron James With Shirt at Nocta Manor Retreat: The Only LeBron I Rate Is Juan",
+          "summary": "The Toronto rapper also posted a caption on Instagram in which he claims he's been proving himself right these last two years."
         }
       ],
-      "ageMin": 76,
+      "ageMin": 174,
       "_cand": {
-        "key": "rss:hollywood-royalty-michelin-starred-meal-cartier-gift-bags-in",
+        "key": "rss:drake-seemingly-disses-lebron-james-with-shirt-at-nocta-mano",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -1010,11 +1091,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "Billboard"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "Billboard",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
