@@ -1300,6 +1300,20 @@
    "headlineNumberRaw": 259864235,
    "filmKey": "obsession",
    "chartDate": null
+  },
+  {
+   "key": "supergirl-bo-update-d28|BO-UPDATE",
+   "at": "2026-07-25T10:09:09.963Z",
+   "eventSlug": "supergirl-bo-update-d28",
+   "form": "BO-UPDATE",
+   "slug": "supergirl-box-office-tracker",
+   "title": "Milly Alcock's 'Supergirl' Bombs With $70.8M — Worst DC Opening Since 'Catwoman'",
+   "film": "Supergirl",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 70845054,
+   "filmKey": "supergirl",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2663,16 +2677,32 @@
    "reason": "1 unverified claim(s) cut, unrecovered",
    "tries": 2,
    "at": "2026-07-25T09:05:50.432Z"
+  },
+  {
+   "key": "the-end-of-evangelion-bo-update-d859|BO-UPDATE",
+   "eventSlug": "the-end-of-evangelion-bo-update-d859",
+   "form": "BO-UPDATE",
+   "reason": "scaffold: fewer than 3 keyTakeaways",
+   "tries": 1,
+   "at": "2026-07-25T10:04:59.874Z"
+  },
+  {
+   "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
+   "eventSlug": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2",
+   "form": "BO-UPDATE",
+   "reason": "scaffold: fewer than 3 keyTakeaways",
+   "tries": 1,
+   "at": "2026-07-25T10:07:00.352Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.06431
+  "usd": 0.07187
  },
  "pace": {
   "tokens": 0,
-  "lastMs": 1784971935004
+  "lastMs": 1784973773961
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2695,6 +2725,12 @@
    "evil dead burn": [
     "words # < # (owner-set ~#-word minimum)",
     "# unverified claim(s) cut# unrecovered"
+   ],
+   "the end of evangelion": [
+    "scaffold: fewer than # keytakeaways"
+   ],
+   "neon genesis evangelion: the end of evangelion 2026 re-release": [
+    "scaffold: fewer than # keytakeaways"
    ]
   }
  }
