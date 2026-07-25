@@ -1,0 +1,64 @@
+{
+  "id": "news-hollywood-walk-of-fame-2027-honorees",
+  "slug": "lil-wayne-karol-g-smashing-pumpkins-among-2027-hollywood-walk-of-fame-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "celebrity/news",
+      "format": [
+        "a 84-word run-on sentence (>55 — split it)",
+        "Flesch 37 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": [
+        "body 530w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Hollywood Walk of Fame",
+    "work": null,
+    "outlet": "walkoffame.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 610,
+      "h2s": 6,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 3,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 84,
+      "avgSentence": 23,
+      "flesch": 36,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 4,
+      "hardBlocks": [
+        "a 84-word run-on sentence (>55 — split it)",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "celebrity",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 183495
+}
