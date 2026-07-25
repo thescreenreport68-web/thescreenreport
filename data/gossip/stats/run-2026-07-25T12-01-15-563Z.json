@@ -1,0 +1,173 @@
+{
+  "ts": "2026-07-25T12:01:15.563Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "bunnie-xo-shuts-down-rumors-after-stepdaughter-bailee-anns-viral-divorce-co",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 6
+    }
+  ],
+  "topics": 5,
+  "held": 3,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.14034,
+  "costPerPublished": 0.14034,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 27,
+      "in": 68074,
+      "out": 18733,
+      "usd": 0.06671983
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 5,
+      "in": 6496,
+      "out": 53227,
+      "usd": 0.01426126
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 6,
+      "in": 10857,
+      "out": 4256,
+      "usd": 0.0018738722999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2076,
+      "out": 1784,
+      "usd": 0.000679232
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 22,
+      "in": 90687,
+      "out": 47653,
+      "usd": 0.0426072695
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 31,
+      "in": 64192,
+      "out": 16674,
+      "usd": 0.012197350000000003
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 11,
+      "in": 6199,
+      "out": 1351,
+      "usd": 0.00200135515
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 5,
+      "errors": 1,
+      "in": 10048,
+      "out": 884,
+      "usd": 0.0042879,
+      "ms": 9848
+    },
+    "detailFinder": {
+      "calls": 6,
+      "errors": 2,
+      "in": 4846,
+      "out": 35033,
+      "usd": 0,
+      "ms": 342008
+    },
+    "background": {
+      "calls": 5,
+      "errors": 1,
+      "in": 5469,
+      "out": 22685,
+      "usd": 0.0006632000000000001,
+      "ms": 171964
+    },
+    "synthesizer": {
+      "calls": 6,
+      "errors": 2,
+      "in": 4145,
+      "out": 2615,
+      "usd": 0.00132912,
+      "ms": 95691
+    },
+    "writer": {
+      "calls": 20,
+      "errors": 0,
+      "in": 88618,
+      "out": 46822,
+      "usd": 0.04123511999999999,
+      "ms": 1001458
+    },
+    "verify": {
+      "calls": 39,
+      "errors": 26,
+      "in": 32312,
+      "out": 7156,
+      "usd": 0.016969399999999996,
+      "ms": 154990
+    },
+    "judge": {
+      "calls": 7,
+      "errors": 2,
+      "in": 9269,
+      "out": 1459,
+      "usd": 0.0015105000000000003,
+      "ms": 20125
+    },
+    "claimAudit": {
+      "calls": 8,
+      "errors": 4,
+      "in": 8854,
+      "out": 969,
+      "usd": 0,
+      "ms": 199602
+    },
+    "headline": {
+      "calls": 4,
+      "errors": 0,
+      "in": 4016,
+      "out": 1248,
+      "usd": 0.0013480000000000002,
+      "ms": 55170
+    },
+    "dedup": {
+      "calls": 7,
+      "errors": 0,
+      "in": 2183,
+      "out": 103,
+      "usd": 0.0005371100000000001,
+      "ms": 10723
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2117,
+      "out": 119,
+      "usd": 0.0002593,
+      "ms": 1530
+    },
+    "linker": {
+      "calls": 6,
+      "errors": 0,
+      "in": 1806,
+      "out": 288,
+      "usd": 0.00029580000000000003,
+      "ms": 4234
+    }
+  }
+}
