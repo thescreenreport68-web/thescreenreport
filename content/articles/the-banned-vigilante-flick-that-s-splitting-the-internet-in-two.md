@@ -98,11 +98,34 @@ reactions:
       what i find genuinely striking and informative about Citizen Vigilante is
       the amount of the actual content of the film that is specifically wish
       fulfillment for small business tyrants
+  - speaker: Tristan Tate
+    platform: podcast
+    quote: I'd do it for free. My own time. My own money. I'll pay my own flights.
+  - speaker: Tristan Tate
+    platform: podcast
+    quote: >-
+      I would like you to contact that man and spam him with a clip of me
+      saying, ‘I’d like to be in the movie.’ He has all of the time that I could
+      possibly offer… It was 10 out of 10.
+  - speaker: Uwe Boll
+    platform: interview
+    quote: >-
+      Basically, yes… There is, of course, a good and a bad side of the X
+      posting. The question you have to evaluate is: Is that bringing more money
+      in the end, or is that costing me a lot of money? You know, you get a lot
+      of PR, but you don’t get a lot of money. So, we will figure that out in
+      the next four or six weeks.
+  - speaker: The Tate Motive
+    date: '2026-06-29'
+    quote: "\U0001F6A8Tristan Tate publicly asks his fans to spam the producer of Citizen Vigilante until he gets a cameo in part 2. \U0001F602 \"I'd do it for free. My own time. My own money. I'll pay my own flights.\" \"He has all of the time I"
+  - speaker: A viewer
+    date: '2026-06-20'
+    quote: Prophecy. This is probably the only solution to save Europe.
 fanConsensus: >-
   There is no consensus; the film is deeply polarizing, celebrated by some as a
   righteous vigilante fantasy and condemned by others as a beacon for extremist
   ideologies.
-updatedCount: 0
+updatedCount: 1
 trendScore: 28
 signals:
   popularity: 113
@@ -117,7 +140,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-23T06:31:02.307Z'
+dateModified: '2026-07-25T14:31:02.081Z'
 provenance:
   parentEventSlug: citizen-vigilante-2026
   primaryEntity: Citizen Vigilante
@@ -132,6 +155,7 @@ imageAlt: Citizen Vigilante movie poster thriller
 imageCredit: Photo via cosmicbook.news
 imageWidth: 1500
 imageHeight: 844
+updated: '2026-07-25T14:31:02.081Z'
 ---
 
 A low-budget thriller about a man taking the law into his own hands has sparked a firestorm way bigger than its filmmaking. The polarized response says less about the movie and more about the deep frustrations and ideological battles playing out online.

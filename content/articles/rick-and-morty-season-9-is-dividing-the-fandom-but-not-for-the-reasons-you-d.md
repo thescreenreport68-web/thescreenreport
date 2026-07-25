@@ -136,12 +136,46 @@ reactions:
     quote: >-
       Rick manufactured his body to have his fight or flight response to
       automatically fight
+  - speaker: Steve Levy
+    connection: EP
+    platform: interview
+    quote: >-
+      YES! There may or may not be a fun episode like this in an upcoming season
+      ;)
+  - speaker: Scott Marder
+    connection: Showrunner
+    platform: interview
+    quote: >-
+      No, but I can tell you that if you're digging 9, Season 10 keeps that
+      train a-movin'!
+  - speaker: Steve Levy
+    connection: EP
+    platform: interview
+    quote: >-
+      Oh yeah, we've been cooking over here. We're covering the spectrum in
+      season 10. I can't say specifics about the ones Harmon is talking about,
+      but I can promise fans will be getting lots of surprises!
+  - speaker: Scott Marder
+    connection: Showrunner
+    platform: interview
+    quote: We're cognizant of the big 100 and think you'll be happy
+  - speaker: Steve Levy
+    connection: EP
+    platform: interview
+    quote: >-
+      Super excited! We are so proud of the work we are doing, especially the
+      ground we cover in this finale. It has bits of different concepts that
+      we've kicked around for many seasons and wound up feeling like a really
+      satisfying button for an amazing season. Fans are spoiled Sunday. They get
+      this unbelievable finale and then the President Curtis pilot! Curtis is a
+      really wonderful show. I find it way more accessible than Rick and Morty
+      and just as fun. I hope you all enjoy it too!
 fanConsensus: >-
   The fandom is divided between viewers who welcome the show's focus on
   character development and emotional beats, and those who feel it has lost its
   anarchic, adventure-driven edge, with a side of criticism aimed at the
   fandom's own toxicity.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   popularity: 191
@@ -156,7 +190,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-25T06:36:23.421Z'
+dateModified: '2026-07-25T14:31:02.081Z'
 provenance:
   parentEventSlug: rick-and-morty-2013
   primaryEntity: Rick and Morty
@@ -171,7 +205,7 @@ imageAlt: Rick and Morty season 9 Beth and Jerry poster
 imageCredit: Photo via Valnet
 imageWidth: 1600
 imageHeight: 900
-updated: '2026-07-25T06:36:23.421Z'
+updated: '2026-07-25T14:31:02.081Z'
 ---
 
 The latest *[Rick and Morty](/tv/rick-and-morty-season-9-promises-a-full-tank-but-fans-are-still-split-on-the/)* episode has the timeline anything but calm. While the show has always sparked debate, season 9 is forcing a choice: is this the sign of a series gaining genuine depth, or is it a betrayal of the chaotic, anything-goes spirit that made it a hit? The reaction was instant — and loud, with wholesome praise for the Smith family's parents battling against frustration from viewers who miss the old bite.
