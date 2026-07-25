@@ -1,0 +1,172 @@
+{
+  "ts": "2026-07-25T05:02:37.015Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "did-ransom-canyon-predict-the-kit-and-lauren-romance-before-fans-did",
+      "category": "tv",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 6
+    }
+  ],
+  "topics": 10,
+  "held": 4,
+  "rejected": 2,
+  "skipped": 3,
+  "blocked": 0,
+  "costUSD": 0.154477,
+  "costPerPublished": 0.154477,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 35,
+      "in": 91029,
+      "out": 16040,
+      "usd": 0.06526031000000002
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 9,
+      "in": 14333,
+      "out": 82341,
+      "usd": 0.019994325
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 5,
+      "in": 5859,
+      "out": 3433,
+      "usd": 0.001303092
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 28,
+      "in": 108268,
+      "out": 54526,
+      "usd": 0.05371344250000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 25,
+      "in": 52107,
+      "out": 9607,
+      "usd": 0.008606919999999999
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 6,
+      "in": 10866,
+      "out": 4964,
+      "usd": 0.0016607158000000002
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 14,
+      "in": 13045,
+      "out": 3103,
+      "usd": 0.00393782345
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 7,
+      "errors": 0,
+      "in": 16784,
+      "out": 1369,
+      "usd": 0.0084577,
+      "ms": 9197
+    },
+    "background": {
+      "calls": 7,
+      "errors": 2,
+      "in": 6929,
+      "out": 18047,
+      "usd": 0.0005818,
+      "ms": 199699
+    },
+    "detailFinder": {
+      "calls": 8,
+      "errors": 3,
+      "in": 7150,
+      "out": 27119,
+      "usd": 0,
+      "ms": 351850
+    },
+    "synthesizer": {
+      "calls": 6,
+      "errors": 1,
+      "in": 5782,
+      "out": 3207,
+      "usd": 0.00134919,
+      "ms": 75530
+    },
+    "writer": {
+      "calls": 29,
+      "errors": 1,
+      "in": 113212,
+      "out": 55610,
+      "usd": 0.05040891,
+      "ms": 1559182
+    },
+    "verify": {
+      "calls": 37,
+      "errors": 15,
+      "in": 55942,
+      "out": 8090,
+      "usd": 0.0318825,
+      "ms": 109095
+    },
+    "judge": {
+      "calls": 9,
+      "errors": 0,
+      "in": 17509,
+      "out": 1777,
+      "usd": 0.0024617000000000003,
+      "ms": 8626
+    },
+    "claimAudit": {
+      "calls": 8,
+      "errors": 3,
+      "in": 12165,
+      "out": 17405,
+      "usd": 0,
+      "ms": 290697
+    },
+    "headline": {
+      "calls": 5,
+      "errors": 0,
+      "in": 4568,
+      "out": 1471,
+      "usd": 0.0015507800000000003,
+      "ms": 60732
+    },
+    "dedup": {
+      "calls": 8,
+      "errors": 0,
+      "in": 2426,
+      "out": 126,
+      "usd": 0.0006008200000000002,
+      "ms": 13045
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2128,
+      "out": 101,
+      "usd": 0.00025320000000000003,
+      "ms": 2260
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1181,
+      "out": 183,
+      "usd": 0.00019130000000000001,
+      "ms": 1830
+    }
+  }
+}
