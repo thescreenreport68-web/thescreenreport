@@ -1,0 +1,171 @@
+{
+  "ts": "2026-07-25T10:02:59.554Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "niecy-nash-spills-taylor-swift-and-travis-kelces-wedding-secrets-on-jimmy-k",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 1,
+      "surgicalFixes": 9
+    }
+  ],
+  "topics": 2,
+  "held": 1,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.063176,
+  "costPerPublished": 0.063176,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 12,
+      "in": 33429,
+      "out": 6216,
+      "usd": 0.0255687
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 3,
+      "in": 4647,
+      "out": 26437,
+      "usd": 0.007175674999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 2,
+      "in": 2831,
+      "out": 1292,
+      "usd": 0.0007581
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 11,
+      "in": 55331,
+      "out": 23614,
+      "usd": 0.025336687
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 9,
+      "in": 11318,
+      "out": 1543,
+      "usd": 0.001749
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 7563,
+      "out": 1234,
+      "usd": 0.0014130899999999999
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 8,
+      "in": 3921,
+      "out": 723,
+      "usd": 0.0011750789999999999
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 2,
+      "errors": 0,
+      "in": 4816,
+      "out": 405,
+      "usd": 0.0024573,
+      "ms": 2847
+    },
+    "background": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3614,
+      "out": 13544,
+      "usd": 0,
+      "ms": 70746
+    },
+    "detailFinder": {
+      "calls": 3,
+      "errors": 1,
+      "in": 3304,
+      "out": 13886,
+      "usd": 0,
+      "ms": 158359
+    },
+    "synthesizer": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2831,
+      "out": 1292,
+      "usd": 0.00048735,
+      "ms": 39598
+    },
+    "writer": {
+      "calls": 11,
+      "errors": 0,
+      "in": 55331,
+      "out": 23614,
+      "usd": 0.02271114,
+      "ms": 612443
+    },
+    "verify": {
+      "calls": 10,
+      "errors": 0,
+      "in": 28613,
+      "out": 5811,
+      "usd": 0.0231114,
+      "ms": 26993
+    },
+    "judge": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9019,
+      "out": 976,
+      "usd": 0.0012923000000000001,
+      "ms": 4321
+    },
+    "claimAudit": {
+      "calls": 4,
+      "errors": 2,
+      "in": 5292,
+      "out": 241,
+      "usd": 0,
+      "ms": 85122
+    },
+    "headline": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2049,
+      "out": 639,
+      "usd": 0.0006885300000000001,
+      "ms": 25874
+    },
+    "dedup": {
+      "calls": 6,
+      "errors": 0,
+      "in": 1872,
+      "out": 84,
+      "usd": 0.00045912000000000004,
+      "ms": 11757
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1083,
+      "out": 265,
+      "usd": 0.0002143,
+      "ms": 2178
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1216,
+      "out": 302,
+      "usd": 0.00024240000000000004,
+      "ms": 2686
+    }
+  }
+}
