@@ -79,11 +79,44 @@ reactions:
       character justice, but also being a role model on set and being a leader
       on set, and I think that’s something I really embraced even more on Wicked
       Wonderland .
+  - speaker: Malia Baker
+    connection: Actress
+    platform: interview
+    quote: >-
+      so rare and so unexpected with such a fantastical set. It was a big
+      blessing to be able to see the world that was envisioned for us and
+      physically being able to step into it. It was unlike anything I’ve ever
+      done. I’ll never get goosebumps like that again.
+  - speaker: Malia Baker
+    connection: Actress
+    platform: interview
+    quote: >-
+      You’re trying to get me beaten up in that group chat. Holy cow, those are
+      rough waters.
+  - speaker: Malia Baker
+    connection: Actress
+    platform: interview
+    quote: >-
+      It makes you feel like you want to become a part of an adventure and
+      gather up all your friends and just go, like, treasure hunting for no
+      reason.
+  - speaker: Malia Baker
+    platform: interview
+    quote: I don’t think there is a miss to any song.
+  - speaker: Liamani Segura
+    connection: plays Pink
+    platform: interview
+    quote: >-
+      I remember growing up and watching the original ‘Descendants’ movie on my
+      TV, being a little girl and turning on Disney Channel and idolizing every
+      person I saw on my screen. I wanted to be like them so bad. I memorized
+      the dance moves, I memorized the lyrics, and now I’m finally one of those
+      people on the screen, and it feels crazy.
 fanConsensus: >-
   A warm and playful embrace of the new film, characterized by affectionate
   reviews, inside jokes about specific scenes, and support for lead actress
   Kylie Cantrall.
-updatedCount: 0
+updatedCount: 1
 trendScore: 42
 signals:
   popularity: 169
@@ -98,7 +131,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-20T08:30:49.317Z'
+dateModified: '2026-07-25T12:31:05.406Z'
 provenance:
   parentEventSlug: descendants-wicked-wonderland-2026
   primaryEntity: 'Descendants: Wicked Wonderland'
@@ -112,6 +145,7 @@ imageAlt: Kylie Cantrall as Red in Descendants Wicked Wonderland
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-25T12:31:05.406Z'
 ---
 
 Instead of heated debates, the reaction is a refreshing wave of warm praise for the film and its new lead, Kylie Cantrall, paired with the kind of playful chaos that makes online fandom so fun.
