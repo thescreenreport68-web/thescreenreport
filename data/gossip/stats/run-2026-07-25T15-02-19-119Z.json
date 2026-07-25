@@ -1,0 +1,163 @@
+{
+  "ts": "2026-07-25T15:02:19.119Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "oprah-winfrey-reveals-her-real-name-wasnt-oprah-it-was-orpah",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaDescription-contract:repaired",
+        "lede-entity-missing:logged",
+        "geo-no-attribution:logged"
+      ],
+      "headline": [],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 2
+    }
+  ],
+  "topics": 2,
+  "held": 0,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.046388,
+  "costPerPublished": 0.046388,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 26,
+      "in": 45858,
+      "out": 15735,
+      "usd": 0.01052358
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 9,
+      "in": 24346,
+      "out": 7225,
+      "usd": 0.02429764
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 1,
+      "in": 1412,
+      "out": 5298,
+      "usd": 0.00146926
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 2,
+      "in": 4495,
+      "out": 1911,
+      "usd": 0.00074326205
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1043,
+      "out": 454,
+      "usd": 0.000218512
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 4,
+      "in": 17496,
+      "out": 9620,
+      "usd": 0.0086724785
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 1,
+      "in": 1247,
+      "out": 366,
+      "usd": 0.0004633
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2432,
+      "out": 212,
+      "usd": 0.0012595999999999998,
+      "ms": 1669
+    },
+    "background": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1412,
+      "out": 5298,
+      "usd": 0,
+      "ms": 26427
+    },
+    "detailFinder": {
+      "calls": 2,
+      "errors": 1,
+      "in": 1466,
+      "out": 1903,
+      "usd": 0,
+      "ms": 102494
+    },
+    "synthesizer": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1043,
+      "out": 454,
+      "usd": 0.00017558999999999996,
+      "ms": 19769
+    },
+    "writer": {
+      "calls": 4,
+      "errors": 0,
+      "in": 17496,
+      "out": 9620,
+      "usd": 0.00834408,
+      "ms": 188596
+    },
+    "verify": {
+      "calls": 14,
+      "errors": 12,
+      "in": 5255,
+      "out": 1613,
+      "usd": 0.005609,
+      "ms": 62716
+    },
+    "judge": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2206,
+      "out": 195,
+      "usd": 0.00029860000000000005,
+      "ms": 1298
+    },
+    "claimAudit": {
+      "calls": 2,
+      "errors": 1,
+      "in": 3029,
+      "out": 8,
+      "usd": 0,
+      "ms": 90885
+    },
+    "headline": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1247,
+      "out": 366,
+      "usd": 0.00041125,
+      "ms": 12421
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1620,
+      "out": 104,
+      "usd": 0.0002036,
+      "ms": 2416
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 274,
+      "out": 31,
+      "usd": 0.000039800000000000005,
+      "ms": 614
+    }
+  }
+}
