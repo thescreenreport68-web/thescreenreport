@@ -120,7 +120,13 @@ export async function run(job, { corrections = null, previousArticle = null, cha
   // Streaming + daily box-office updates are FULL 200+ word stories built from the ALWAYS-rich TMDB material +
   // their own numbers (Netflix hours / the chart cume), so aim high; a first-report opening keeps the grounding-
   // matched budget tied to its trade coverage.
-  const [budgetLo, budgetHi] = isDailyUpdate ? [190, 250] : isStreaming ? [220, 320] : (solidMaterial ? [240, 330] : [180, 240]);
+  // MARGIN OVER THE FLOOR, not a target AT it. The floor is 180; a 190-250 budget leaves only a 10-word
+  // margin, and a model cannot hit that reliably — 21 of 40 word-floor rejections landed at 160-179 words,
+  // i.e. fully-paid articles discarded for being a handful of words short (one was rejected at 179, one
+  // word under). Every budget now starts >=40 words above the floor so an ordinary miss still clears it.
+  // This is NOT a padding instruction: the prompt still forbids inventing a fact to reach length, and the
+  // structure asks for one more developed paragraph rather than more words about nothing.
+  const [budgetLo, budgetHi] = isDailyUpdate ? [230, 280] : isStreaming ? [240, 320] : (solidMaterial ? [250, 330] : [220, 260]);
   const structure = isStreaming
     ? `STRUCTURE — build the FULL story, developing EACH part into a full paragraph so the article clears 200 words (a real article, never a stub):
 1) LEAD: a hook — the title and why it's a phenomenon right now (its Netflix rank or hours viewed).

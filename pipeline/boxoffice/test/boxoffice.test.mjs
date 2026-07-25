@@ -1750,6 +1750,21 @@ await ta("PRE-FLIGHT: a thin streaming title is skipped BEFORE the expensive hal
   fs.rmSync(dirP, { recursive: true, force: true });
 });
 
+t("WORD BUDGET sits well ABOVE the floor — a near-miss draft must not cost a full paid attempt", () => {
+  // 21 of 40 word-floor rejections landed at 160-179 words: fully-paid research+writing+judging thrown
+  // away for being a few words short (one died at 179 — a single word under). The old daily-update budget
+  // was 190-250 against a 180 floor, a 10-word margin no model hits reliably. Every budget must leave
+  // real headroom so an ordinary miss still publishes.
+  const src = fs.readFileSync(path.join(fileURLToPath(new URL(".", import.meta.url)), "../agents/writer.mjs"), "utf8");
+  const m = src.match(/const \[budgetLo, budgetHi\] = [^;]+;/);
+  assert.ok(m, "word budget line found");
+  const lows = [...m[0].matchAll(/\[(\d+),\s*(\d+)\]/g)].map((x) => Number(x[1]));
+  assert.ok(lows.length >= 4, "all budget variants present: " + lows.join(","));
+  for (const lo of lows) {
+    assert.ok(lo >= 220, `every budget must start >=40 words above the 180 floor, found ${lo}`);
+  }
+});
+
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);
 if (fail) process.exit(1);
