@@ -1314,6 +1314,20 @@
    "headlineNumberRaw": 70845054,
    "filmKey": "supergirl",
    "chartDate": null
+  },
+  {
+   "key": "disclosure-day-bo-update-d42|BO-UPDATE",
+   "at": "2026-07-25T11:08:54.327Z",
+   "eventSlug": "disclosure-day-bo-update-d42",
+   "form": "BO-UPDATE",
+   "slug": "disclosure-day-box-office-tracker",
+   "title": "Disclosure Day: Emily Blunt's Alien Thriller from Steven Spielberg",
+   "film": "Disclosure Day",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 115345295,
+   "filmKey": "disclosure day",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2683,34 +2697,30 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 2,
-   "at": "2026-07-25T10:33:06.835Z"
+   "tries": 3,
+   "at": "2026-07-25T11:04:50.802Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T11:04:50.802Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
    "eventSlug": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 2,
-   "at": "2026-07-25T10:35:13.915Z"
-  },
-  {
-   "key": "disclosure-day-bo-update-d42|BO-UPDATE",
-   "eventSlug": "disclosure-day-bo-update-d42",
-   "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-25T10:37:06.718Z"
+   "tries": 3,
+   "at": "2026-07-25T11:07:01.612Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T11:07:01.612Z"
   }
  ],
- "zeroStreak": 1,
+ "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.07641
+  "usd": 0.08111
  },
  "pace": {
-  "tokens": 0.06705996031746032,
-  "lastMs": 1784975463872
+  "tokens": 0,
+  "lastMs": 1784977376661
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
