@@ -1202,6 +1202,20 @@
    "headlineNumberRaw": 70684870,
    "filmKey": "supergirl",
    "chartDate": null
+  },
+  {
+   "key": "the-odyssey-bo-update-d7|BO-UPDATE",
+   "at": "2026-07-25T07:10:16.320Z",
+   "eventSlug": "the-odyssey-bo-update-d7",
+   "form": "BO-UPDATE",
+   "slug": "the-odyssey-box-office-tracker",
+   "title": "Matt Damon’s ‘The Odyssey’ Crosses $199M Domestic as Nolan’s Biggest Global Debut",
+   "film": "The Odyssey",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 199371800,
+   "filmKey": "the odyssey",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2080,11 +2094,11 @@
    "key": "house-of-the-dragon-trending-tv|TRENDING-TV",
    "eventSlug": "house-of-the-dragon-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-23T05:09:43.570Z",
-   "dead": false,
-   "expiresAt": "2026-07-23T04:42:26.295Z"
+   "reason": "words 100 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-25T07:08:15.356Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T07:08:15.356Z"
   },
   {
    "key": "the-real-me-ev-opening|BO-OPENING",
@@ -2360,10 +2374,10 @@
    "key": "the-hawk-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "the-hawk-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "8 unverified claim(s) cut, unrecovered",
-   "tries": 3,
-   "at": "2026-07-22T05:37:27.426Z",
-   "dead": true,
+   "reason": "words 170 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-25T07:02:49.125Z",
+   "dead": false,
    "expiresAt": "2026-07-25T05:37:27.426Z"
   },
   {
@@ -2559,55 +2573,32 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 38,
+ "zeroStreak": 0,
  "daySpend": {
-  "laDay": "2026-07-24",
-  "usd": 0.3889
+  "laDay": "2026-07-25",
+  "usd": 0.0483
  },
  "pace": {
-  "tokens": 4,
-  "lastMs": 1784961379323
+  "tokens": 3,
+  "lastMs": 1784962863019
  },
- "lastAuditDay": "2026-07-24",
+ "lastAuditDay": "2026-07-25",
  "attempts": {
-  "laDay": "2026-07-24",
+  "laDay": "2026-07-25",
   "byFilm": {
-   "descendants: wicked wonderland": 1,
-   "kentucky flood recovery documentary": 1,
-   "masters of the universe": 3,
-   "malcolm in the middle: life's still unfair": 2,
-   "the last duel": 1,
-   "pressure": 1,
-   "the sheep detectives": 3,
-   "stuart fails to save the universe": 1,
-   "rising": 1,
-   "enola holmes 3": 1,
-   "regretting you": 1,
-   "kpop demon hunters": 1,
-   "death on the nile": 1,
-   "joy ride": 1,
-   "jana nayagan": 1,
-   "little house on the prairie": 1,
-   "i will find you": 1
+   "the hawk": 1,
+   "the sheep detectives": 1,
+   "house of the dragon": 1
   }
  },
  "failures": {
-  "laDay": "2026-07-24",
+  "laDay": "2026-07-25",
   "byFilm": {
-   "kpop demon hunters": [
-    "# unverified claim(s) cut# unrecovered"
+   "the hawk": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ],
-   "death on the nile": [
-    "words # < # (owner-set ~#-word minimum)"
-   ],
-   "joy ride": [
-    "words # < # (owner-set ~#-word minimum)"
-   ],
-   "little house on the prairie": [
-    "words # < # (owner-set ~#-word minimum)"
-   ],
-   "i will find you": [
-    "soft-floor engagement # < #"
+   "house of the dragon": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
    ]
   }
  }

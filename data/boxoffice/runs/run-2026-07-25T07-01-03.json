@@ -1,0 +1,256 @@
+{
+ "runId": "run-2026-07-25T07-01-03",
+ "mode": "live",
+ "startedAt": "2026-07-25T07:01:03.019Z",
+ "films": 43,
+ "published": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "slug": "the-odyssey-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-odyssey-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "words 170 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "score": 45
+  },
+  {
+   "tag": "house-of-the-dragon-trending-tv×TRENDING-TV",
+   "reason": "words 100 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "score": 45
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "worst-neighbor-ever-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "sullivan-s-crossing-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lucky-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "off-campus-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "malcolm-in-the-middle-life-s-still-unfair-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "masters-of-the-universe-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "descendants-wicked-wonderland-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "lee-cronin-s-the-mummy-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "tom-clancy-s-jack-ryan-ghost-war-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "outcome-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "stuart-fails-to-save-the-universe-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "silo-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "star-trek-strange-new-worlds-trending-tv×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-sheep-detectives-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer the-sheep-detectives-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.29,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 0,
+ "audit": {
+  "day": "2026-07-24",
+  "sampled": [
+   "disclosure-day-box-office-tracker",
+   "the-odyssey-box-office-tracker",
+   "supergirl-box-office-tracker"
+  ],
+  "issues": [
+   {
+    "slug": "supergirl-box-office-tracker",
+    "problem": "The article states 'The film's financial performance has been catastrophic' and 'This performance makes it the worst-performing superhero film at the box office since 2004's 'Catwoman'' without attrib"
+   }
+  ]
+ },
+ "daySpend": {
+  "laDay": "2026-07-25",
+  "usd": 0.0483
+ },
+ "faults": {
+  "count": 3,
+  "bySeverity": {
+   "warn": 1,
+   "info": 2
+  },
+  "faults": [
+   {
+    "stage": "chart:The Numbers",
+    "message": "expected 30 chart rows, got 27",
+    "severity": "warn",
+    "at": "2026-07-25T07:01:05.779Z",
+    "meta": {
+     "actual": 27,
+     "expected": 30,
+     "label": "chart rows"
+    }
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "malformed JSON from google/gemini-2.5-flash-lite — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-25T07:01:17.302Z"
+   },
+   {
+    "stage": "model:qa",
+    "message": "malformed JSON from google/gemini-2.5-flash — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-25T07:08:12.985Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-25T07:10:17.079Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 21350,
+    "out": 3744,
+    "usd": 0.00363,
+    "ms": null
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3621,
+    "out": 1971,
+    "usd": 0.0004,
+    "ms": 4503
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2407,
+    "out": 2443,
+    "usd": 0.00066,
+    "ms": 34991
+   },
+   "writer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 12803,
+    "out": 4276,
+    "usd": 0.01196,
+    "ms": 55968
+   },
+   "qa": {
+    "calls": 15,
+    "errors": 0,
+    "in": 42805,
+    "out": 5713,
+    "usd": 0.02712,
+    "ms": null
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2168,
+    "out": 1230,
+    "usd": 0.00092,
+    "ms": 46201
+   },
+   "categorize": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3581,
+    "out": 76,
+    "usd": 0.00039,
+    "ms": 748
+   }
+  },
+  "totalUsd": 0.04509
+ },
+ "openrouterTotalUsd": 0.0483
+}
