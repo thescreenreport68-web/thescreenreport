@@ -2280,10 +2280,10 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 161 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 3,
-   "at": "2026-07-22T02:39:16.033Z",
-   "dead": true,
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 2,
+   "at": "2026-07-25T03:07:39.424Z",
+   "dead": false,
    "expiresAt": "2026-07-25T02:39:16.033Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 30,
+ "zeroStreak": 31,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.23091
+  "usd": 0.25734
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784946663612
+  "lastMs": 1784948475128
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2580,7 +2580,8 @@
    "pressure": 1,
    "the sheep detectives": 3,
    "stuart fails to save the universe": 1,
-   "rising": 1
+   "rising": 1,
+   "enola holmes 3": 1
   }
  }
 }
