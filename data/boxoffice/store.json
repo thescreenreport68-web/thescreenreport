@@ -2454,11 +2454,11 @@
    "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-25T04:08:27.746Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T03:09:48.291Z"
+   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-25T15:07:32.042Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T15:07:32.042Z"
   },
   {
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -2725,20 +2725,20 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 9,
-   "at": "2026-07-25T14:33:33.436Z",
+   "tries": 10,
+   "at": "2026-07-25T15:03:13.283Z",
    "dead": true,
-   "expiresAt": "2026-07-28T14:33:33.436Z"
+   "expiresAt": "2026-07-28T15:03:13.283Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
    "eventSlug": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2",
    "form": "BO-UPDATE",
-   "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 9,
-   "at": "2026-07-25T14:34:32.343Z",
+   "reason": "synthesizer returned no usable brief",
+   "tries": 10,
+   "at": "2026-07-25T15:04:37.585Z",
    "dead": true,
-   "expiresAt": "2026-07-28T14:34:32.343Z"
+   "expiresAt": "2026-07-28T15:04:37.585Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d67|BO-UPDATE",
@@ -2747,16 +2747,24 @@
    "reason": "consistency: metaDescription: \"60%\" is not the film's verified change figure",
    "tries": 2,
    "at": "2026-07-25T13:37:07.230Z"
+  },
+  {
+   "key": "masters-of-the-universe-bo-update-d53|BO-UPDATE",
+   "eventSlug": "masters-of-the-universe-bo-update-d53",
+   "form": "BO-UPDATE",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 1,
+   "at": "2026-07-25T15:06:06.466Z"
   }
  ],
- "zeroStreak": 4,
+ "zeroStreak": 5,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.21654
+  "usd": 0.24364
  },
  "pace": {
-  "tokens": 3.1990888333333336,
-  "lastMs": 1784989863623
+  "tokens": 3.902325555555556,
+  "lastMs": 1784991671946
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2768,7 +2776,9 @@
    "the mandalorian and grogu": 2,
    "voicemails for isabelle": 2,
    "enola holmes 3": 1,
-   "regretting you": 1
+   "regretting you": 1,
+   "masters of the universe": 1,
+   "kpop demon hunters": 1
   }
  },
  "failures": {
@@ -2788,7 +2798,8 @@
     "scaffold: fewer than # keytakeaways"
    ],
    "neon genesis evangelion: the end of evangelion 2026 re-release": [
-    "scaffold: fewer than # keytakeaways"
+    "scaffold: fewer than # keytakeaways",
+    "synthesizer returned no usable brief"
    ],
    "disclosure day": [
     "# unverified claim(s) cut# unrecovered"
@@ -2804,6 +2815,12 @@
     "words # < # (owner-set ~#-word minimum)"
    ],
    "regretting you": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "masters of the universe": [
+    "fidelity: # unsupported figures/claims — draft-level failure"
+   ],
+   "kpop demon hunters": [
     "words # < # (owner-set ~#-word minimum)"
    ]
   }

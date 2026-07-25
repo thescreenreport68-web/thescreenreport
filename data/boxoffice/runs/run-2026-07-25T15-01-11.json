@@ -1,0 +1,177 @@
+{
+ "runId": "run-2026-07-25T15-01-11",
+ "mode": "live",
+ "startedAt": "2026-07-25T15:01:11.946Z",
+ "films": 43,
+ "published": [],
+ "held": [
+  {
+   "tag": "the-end-of-evangelion-bo-update×BO-UPDATE",
+   "reason": "scaffold: fewer than 3 keyTakeaways",
+   "score": 80
+  },
+  {
+   "tag": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update×BO-UPDATE",
+   "reason": "synthesizer returned no usable brief"
+  },
+  {
+   "tag": "masters-of-the-universe-bo-opening×BO-OPENING",
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "score": 0
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 172 < 180 (owner-set ~200-word minimum)",
+   "score": 60
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 3.9,
+  "behind": false,
+  "expected": 4.2,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 5,
+ "daySpend": {
+  "laDay": "2026-07-25",
+  "usd": 0.24364
+ },
+ "faults": {
+  "count": 1,
+  "bySeverity": {
+   "info": 1
+  },
+  "faults": [
+   {
+    "stage": "model:gatherer",
+    "message": "malformed JSON from google/gemini-2.5-flash-lite — salvaged the first balanced object",
+    "severity": "info",
+    "at": "2026-07-25T15:05:41.892Z"
+   }
+  ]
+ },
+ "finishedAt": "2026-07-25T15:07:32.046Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3504,
+    "out": 1753,
+    "usd": 0.00037,
+    "ms": 5278
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 8469,
+    "out": 699,
+    "usd": 0.00113,
+    "ms": null
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2586,
+    "out": 1033,
+    "usd": 0.00042,
+    "ms": 33262
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1800,
+    "out": 943,
+    "usd": 0.00074,
+    "ms": 31465
+   },
+   "writer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9681,
+    "out": 3149,
+    "usd": 0.00891,
+    "ms": 40717
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 21935,
+    "out": 3160,
+    "usd": 0.01448,
+    "ms": 21391
+   }
+  },
+  "totalUsd": 0.02604
+ },
+ "openrouterTotalUsd": 0.0271
+}
