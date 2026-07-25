@@ -1,0 +1,72 @@
+{
+  "id": "news-star-wars-the-experience-exhibition-world-premiere",
+  "slug": "world-premiere-exhibition-star-wars-the-experience-to-immerse-fans-in-",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 380w < 600",
+        "Flesch 36 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 1,
+      "broken": []
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "body 311w < 600",
+        "Flesch 37 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 0,
+      "broken": []
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Star Wars: The Experience",
+    "work": null,
+    "outlet": "prnewswire.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 311,
+      "h2s": 3,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 34,
+      "avgSentence": 17,
+      "flesch": 37,
+      "bannedTells": 0,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": [
+        "body 311w < 600",
+        "Flesch 37 < 40 (too dense to read comfortably)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": true,
+    "internalLinks": 2,
+    "failed": []
+  },
+  "ms": 111597
+}
