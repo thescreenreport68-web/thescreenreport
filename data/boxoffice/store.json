@@ -2350,10 +2350,10 @@
    "key": "i-will-find-you-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "i-will-find-you-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 62 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 3,
-   "at": "2026-07-22T05:08:57.864Z",
-   "dead": true,
+   "reason": "soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-25T06:40:48.836Z",
+   "dead": false,
    "expiresAt": "2026-07-25T05:08:57.864Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 37,
+ "zeroStreak": 38,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.36501
+  "usd": 0.3889
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784959377074
+  "lastMs": 1784961379323
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2587,7 +2587,8 @@
    "death on the nile": 1,
    "joy ride": 1,
    "jana nayagan": 1,
-   "little house on the prairie": 1
+   "little house on the prairie": 1,
+   "i will find you": 1
   }
  },
  "failures": {
@@ -2604,6 +2605,9 @@
    ],
    "little house on the prairie": [
     "words # < # (owner-set ~#-word minimum)"
+   ],
+   "i will find you": [
+    "soft-floor engagement # < #"
    ]
   }
  }
