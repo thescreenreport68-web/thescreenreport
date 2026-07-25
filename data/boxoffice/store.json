@@ -2434,21 +2434,21 @@
    "key": "enola-holmes-3-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 2,
-   "at": "2026-07-25T03:07:39.424Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T02:39:16.033Z"
+   "reason": "words 169 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-25T14:36:22.408Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T14:36:22.408Z"
   },
   {
    "key": "regretting-you-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 169 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-25T03:36:20.575Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T03:07:32.078Z"
+   "reason": "words 137 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-25T14:38:30.284Z",
+   "dead": true,
+   "expiresAt": "2026-07-28T14:38:30.284Z"
   },
   {
    "key": "kpop-demon-hunters-netflix-top10-w2026-07-19|NETFLIX-TOP10",
@@ -2725,20 +2725,20 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 8,
-   "at": "2026-07-25T14:02:21.216Z",
+   "tries": 9,
+   "at": "2026-07-25T14:33:33.436Z",
    "dead": true,
-   "expiresAt": "2026-07-28T14:02:21.216Z"
+   "expiresAt": "2026-07-28T14:33:33.436Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
    "eventSlug": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 8,
-   "at": "2026-07-25T14:04:40.061Z",
+   "tries": 9,
+   "at": "2026-07-25T14:34:32.343Z",
    "dead": true,
-   "expiresAt": "2026-07-28T14:04:40.061Z"
+   "expiresAt": "2026-07-28T14:34:32.343Z"
   },
   {
    "key": "the-mandalorian-and-grogu-bo-update-d67|BO-UPDATE",
@@ -2749,14 +2749,14 @@
    "at": "2026-07-25T13:37:07.230Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.18318
+  "usd": 0.21654
  },
  "pace": {
-  "tokens": 2.4991837222222224,
-  "lastMs": 1784988063867
+  "tokens": 3.1990888333333336,
+  "lastMs": 1784989863623
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2766,7 +2766,9 @@
    "the sheep detectives": 1,
    "house of the dragon": 1,
    "the mandalorian and grogu": 2,
-   "voicemails for isabelle": 2
+   "voicemails for isabelle": 2,
+   "enola holmes 3": 1,
+   "regretting you": 1
   }
  },
  "failures": {
@@ -2796,6 +2798,12 @@
     "consistency: metadescription: \"#%\" is not the film's verifie"
    ],
    "voicemails for isabelle": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "enola holmes 3": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "regretting you": [
     "words # < # (owner-set ~#-word minimum)"
    ]
   }
