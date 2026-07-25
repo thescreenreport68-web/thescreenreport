@@ -6,10 +6,12 @@
     "attempt1": {
       "score": null,
       "cat": "movies/news",
-      "format": [],
-      "cuts": 2,
+      "format": [
+        "a 76-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
       "broken": [
-        "body 470w < 600"
+        "body 403w < 600"
       ]
     }
   },
@@ -19,36 +21,37 @@
     "work": null,
     "outlet": "variety.com"
   },
-  "holdReason": "broken article: body 559w < 600",
+  "holdReason": "broken article: body 522w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 559,
-      "h2s": 5,
-      "h2Questions": 3,
+      "words": 522,
+      "h2s": 6,
+      "h2Questions": 4,
       "internalLinks": 0,
-      "externalLinks": 0,
-      "hasSources": false,
-      "faqCount": 4,
+      "externalLinks": 1,
+      "hasSources": true,
+      "faqCount": 3,
       "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 47,
-      "avgSentence": 17,
-      "flesch": 52,
+      "maxSentence": 76,
+      "avgSentence": 19,
+      "flesch": 42,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 559w < 600"
+        "body 522w < 600",
+        "a 76-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": [
-      "body 559w < 600"
+      "body 522w < 600"
     ]
   },
   "audit": {
@@ -60,7 +63,7 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 137416,
+  "ms": 201850,
   "previousRuns": [
     {
       "id": "news-cape-janet-yang-short-film-grants",
@@ -69,6 +72,70 @@
       "stages": {},
       "holdReason": "quality floor: single-source short: 1712 chars from 1 outlet < 1800 required (no thin single-source briefs)",
       "ms": 406
+    },
+    {
+      "id": "news-cape-janet-yang-short-film-grants",
+      "slug": "cape-and-janet-yang-productions-launch-short-film-challenge-with-auli-",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "body 470w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Julia S. Gouw Short Film Challenge",
+        "work": null,
+        "outlet": "variety.com"
+      },
+      "holdReason": "broken article: body 559w < 600",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 559,
+          "h2s": 5,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 47,
+          "avgSentence": 17,
+          "flesch": 52,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 559w < 600"
+          ]
+        },
+        "hardBlocks": [
+          "body 559w < 600"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 137416
     }
   ]
 }
