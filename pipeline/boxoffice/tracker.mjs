@@ -10,6 +10,7 @@
 //     TMDB platform becomes a NOW-STREAMING candidate.
 //   • the LINK-CHAIN — each new piece links our prior coverage of the SAME film.
 import fs from "node:fs";
+import { laDay } from "./textUtil.mjs";
 import path from "node:path";
 import { DATA_DIR } from "./config.bo.mjs";
 import { normMoney } from "./moneyGuard.mjs";
@@ -74,7 +75,6 @@ export function currentMetrics(gathered = {}, boxData = {}, dailyChart = null) {
   if (worldwide != null && domestic != null && (worldwide < domestic || worldwide > domestic * 5)) worldwide = null;
   return { domestic, worldwide };
 }
-const laDayOf = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
 const dropPctOf = (g) => { const n = parseFloat(String(g?.dropPct ?? "").replace("%", "")); return Number.isFinite(n) ? n : null; };
 const daysSince = (releaseDate, now) => {
   const d = Date.parse(releaseDate || ""); if (!Number.isFinite(d)) return null;
@@ -156,7 +156,7 @@ export function isMaterial(film, gathered = {}, boxData = {}, tracked = null, { 
   const ms = milestonesCrossed(prevMilestone ?? prev, cur);
   // ONE update per film per LA day (owner's freshness contract) — a second same-day update is only a story
   // when a milestone crossed since the morning's piece.
-  if (rec.lastArticleAt && laDayOf(new Date(rec.lastArticleAt)) === laDayOf(now) && !ms.length)
+  if (rec.lastArticleAt && laDay(new Date(rec.lastArticleAt)) === laDay(now) && !ms.length)
     return { material: false, reason: "already covered today (one update per film per day)", tag: null, currentRaw: cur };
 
   // 🔴 THE OWNER'S #1 RULE: an UPDATE must have a running total STRICTLY HIGHER than the last number we

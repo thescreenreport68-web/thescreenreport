@@ -3,11 +3,11 @@
 // cheap flash-lite call (~$0.003/day). Failures land in the run report + a GitHub ::warning:: annotation,
 // so quality drift is caught in hours — the lane grades its own homework before the owner ever sees it.
 import fs from "node:fs";
+import { laDay } from "./textUtil.mjs";
 import path from "node:path";
 import { agentChat } from "./models.mjs";
 import { CONTENT_DIR } from "./config.bo.mjs";
 
-const laDay = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
 
 const AUDIT_SYS = `You audit BOX-OFFICE/STREAMING articles against a strict quality contract. For EACH numbered
 article, check ONLY these, and report ONLY genuine failures:

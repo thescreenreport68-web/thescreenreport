@@ -7,6 +7,7 @@
 // (tracker.mjs) guarantees we never reuse yesterday's number. NO paid APIs — the numbers are facts we rewrite in
 // our own voice (owner's rule). This module only READS + EXTRACTS; it invents nothing.
 import fs from "node:fs";
+import { laDay } from "./textUtil.mjs";
 import path from "node:path";
 import { findContent } from "../lib/contentFinder.mjs";
 import { agentChat } from "./models.mjs";
@@ -37,7 +38,6 @@ const CHART_CACHE = path.join(DATA_DIR, "chartCache.json");
 // Bump when the parser changes shape/completeness. A cache written by an OLDER extractor is ignored, so a
 // lossy chart (the LLM's 6-of-17) can never hold the whole LA day hostage after a parser fix ships.
 const PARSER_VERSION = 2;
-const laDay = (ms) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(new Date(ms));
 export function readChartCache({ nowMs = Date.now(), file = CHART_CACHE } = {}) {
   try {
     const c = JSON.parse(fs.readFileSync(file, "utf8"));

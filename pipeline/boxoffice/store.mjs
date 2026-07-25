@@ -2,13 +2,13 @@
 // never-repost rule) + parked angles (a 3-strike retry budget so a film we couldn't gather stops
 // re-running the paid pipeline every tick forever). Mirrors the inside lane's store.
 //
-// TODO (later increment — the serialization tracker, plan §6): the per-film run ledger
-// (tracked.json: days-in-release, last number, last angle, link-chain, materiality across runs)
-// lives in tracker.mjs, NOT here. This store only does dedup + park for the lean single unit.
+// The per-film run ledger (tracked.json: days-in-release, per-metric baselines, link-chain, materiality)
+// lives in tracker.mjs. This file owns dedup, parks, pacing state, spend, attempts and failures.
 import fs from "node:fs";
 import path from "node:path";
 import { DATA_DIR } from "./config.bo.mjs";
 import { loadJsonState } from "./health.mjs";
+import { laDay } from "./textUtil.mjs";
 
 const STORE_PATH = path.join(DATA_DIR, "store.json");
 const CAP = 4000;
@@ -113,14 +113,13 @@ export function parkCooling(store, eventSlug, form, { now = new Date(), cooldown
 // Cap PAID pipeline attempts per FILM per LA day, across every slug and form. The cap resets at the LA day
 // roll, when fresh trade numbers exist and one clean attempt usually publishes.
 const FILM_ATTEMPTS_PER_DAY = 3;
-const laDayA = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
 export function filmAttemptBudgetLeft(store, filmTitle, { now = new Date() } = {}) {
-  const day = laDayA(now);
+  const day = laDay(now);
   if (!store.attempts || store.attempts.laDay !== day) return FILM_ATTEMPTS_PER_DAY;
   return FILM_ATTEMPTS_PER_DAY - (store.attempts.byFilm?.[String(filmTitle).toLowerCase()] || 0);
 }
 export function bumpFilmAttempt(store, filmTitle, { now = new Date() } = {}) {
-  const day = laDayA(now);
+  const day = laDay(now);
   if (!store.attempts || store.attempts.laDay !== day) store.attempts = { laDay: day, byFilm: {} };
   const k = String(filmTitle).toLowerCase();
   store.attempts.byFilm[k] = (store.attempts.byFilm[k] || 0) + 1;
@@ -137,7 +136,7 @@ export function bumpFilmAttempt(store, filmTitle, { now = new Date() } = {}) {
 // Cleared on the LA-day roll, when fresh numbers genuinely change the inputs.
 const reasonKey = (reason) => String(reason || "").toLowerCase().replace(/[0-9$.,]+/g, "#").slice(0, 60);
 export function recordFailure(store, filmTitle, reason, { now = new Date() } = {}) {
-  const day = laDayA(now);
+  const day = laDay(now);
   if (!store.failures || store.failures.laDay !== day) store.failures = { laDay: day, byFilm: {} };
   const k = String(filmTitle || "?").toLowerCase();
   const list = store.failures.byFilm[k] || (store.failures.byFilm[k] = []);
@@ -146,20 +145,19 @@ export function recordFailure(store, filmTitle, reason, { now = new Date() } = {
   save(store);
 }
 export function failedBeforeToday(store, filmTitle, reason, { now = new Date() } = {}) {
-  if (!store.failures || store.failures.laDay !== laDayA(now)) return false;
+  if (!store.failures || store.failures.laDay !== laDay(now)) return false;
   const list = store.failures.byFilm?.[String(filmTitle || "?").toLowerCase()] || [];
   return list.includes(reasonKey(reason));
 }
 // Has this film failed ANY paid attempt today? Used to refuse a 2nd paid attempt on a film whose material
 // we already know is insufficient, before any model call.
 export function failureCountToday(store, filmTitle, { now = new Date() } = {}) {
-  if (!store.failures || store.failures.laDay !== laDayA(now)) return 0;
+  if (!store.failures || store.failures.laDay !== laDay(now)) return 0;
   return (store.failures.byFilm?.[String(filmTitle || "?").toLowerCase()] || []).length;
 }
 
 // DAILY SPEND CAP (owner cost mandate): running LA-day spend, persisted in the store. borun refuses to
 // start a paid run once the day's total crosses the cap — the lane can never quietly burn again.
-const laDay = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: "America/Los_Angeles" }).format(d);
 export function bumpDaySpend(store, usd, { now = new Date() } = {}) {
   const day = laDay(now);
   if (!store.daySpend || store.daySpend.laDay !== day) store.daySpend = { laDay: day, usd: 0 };

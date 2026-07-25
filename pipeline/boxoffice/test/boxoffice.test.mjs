@@ -1722,6 +1722,34 @@ t("REPEAT-FAILURE LOCKOUT: the same film failing the same way today is refused f
   fs.rmSync(dirF, { recursive: true, force: true });
 });
 
+await ta("PRE-FLIGHT: a thin streaming title is skipped BEFORE the expensive half (synth/writer/judge)", async () => {
+  // Live waste: several streaming/TV titles ran the full stack every tick and then failed the 200-word
+  // floor — their premise was 66-210 chars with no cast and no coverage. Synth+writer+judge are ~85% of a
+  // candidate's cost, so this must be caught BEFORE them, not by the floor after.
+  const dirP = fs.mkdtempSync(path.join(os.tmpdir(), "bo-preflight-"));
+  const thin = { tmdbId: null, title: "Obscure Show", via: "tmdb-primevideo", originalLanguage: "en", overview: "" };
+  let synthCalled = 0, writerCalled = 0, qaCalled = 0;
+  const rep = await boRun({
+    dryRun: true, limit: 1, nowMs: Date.parse("2026-07-25T18:00:00Z"),
+    storeImpl: { published: [], parked: [], failures: null, file: path.join(dirP, "s.json") },
+    trackedImpl: { films: {} },
+    readQueueImpl: () => ({ events: [] }), runFindImpl: async () => ({ events: [] }),
+    findImpl: async () => ([{ film: thin,
+      trigger: { eventSlug: "obscure-show-trending-tv", title: "Obscure Show", category: "tv", subcategory: "news", priority: 40, signals: {}, eventType: "boxoffice", sources: [] },
+      angle: { form: "TRENDING-TV", star: "", queries: ["Obscure Show"], workingTitle: "Obscure Show trending" } }]),
+    dataImpl: async (job) => { job.boxData = { overview: "A short blurb.", castRoles: [] }; return job; },
+    gatherImpl: async (job) => { job.gathered = { numbers: [], records: [], cast: [], narrative: "", platform: "Prime Video", sources: [], outletCount: 0 }; job.bundle = { sources: [] }; return job; },
+    synthImpl: async (job) => { synthCalled++; job.brief = "x"; return job; },
+    writeArticleImpl: async (job) => { writerCalled++; return job; },
+    qaReviewImpl: async (job) => { qaCalled++; return job; },
+  });
+  assert.equal(synthCalled, 0, "synthesizer NOT called");
+  assert.equal(writerCalled, 0, "writer NOT called");
+  assert.equal(qaCalled, 0, "judge NOT called");
+  assert.ok(rep.skipped.some((k) => /pre-flight: thin material/.test(k.reason)), "skipped with the pre-flight reason: " + JSON.stringify(rep.skipped));
+  fs.rmSync(dirP, { recursive: true, force: true });
+});
+
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────
 console.log(`\n━━ boxoffice suite: ${pass}/${pass + fail} passed ━━`);
 if (fail) process.exit(1);
