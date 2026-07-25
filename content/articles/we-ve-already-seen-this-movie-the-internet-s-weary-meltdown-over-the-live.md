@@ -129,10 +129,18 @@ reactions:
     quote: >-
       Rock needs to stop pretending he cares about his Samoan culture when he is
       busy making bank of these souless adaptations
+  - speaker: A viewer
+    date: '2026-07-25'
+    quote: >-
+      This just broke the record set by the live-action Moana for most
+      un-asked-for movie of all time
+  - speaker: A viewer
+    date: '2026-07-25'
+    quote: Moana (2026) The animated movie was 20 minutes shorter.
 fanConsensus: >-
   Overwhelmingly negative, viewing the trailer as a pointless, visually inferior
   carbon copy that epitomizes Disney's creatively exhausted remake strategy.
-updatedCount: 1
+updatedCount: 2
 trendScore: 225
 signals:
   popularity: 620
@@ -147,7 +155,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T10:31:04.753Z'
+dateModified: '2026-07-25T02:31:03.113Z'
 provenance:
   parentEventSlug: moana-2026
   primaryEntity: Moana
@@ -161,7 +169,7 @@ imageAlt: live action Moana trailer screenshot Dwayne Johnson Maui
 imageCredit: The Movie Database (TMDB)
 imageWidth: 1920
 imageHeight: 1080
-updated: '2026-07-24T10:31:04.753Z'
+updated: '2026-07-25T02:31:03.113Z'
 ---
 
 Disney finally released that live-action [Moana](/movies/catherine-laga-aia-and-dwayne-johnson-lead-moana-live-action-cast/) trailer, and cue the meltdown — but not the nostalgic kind. The internet's reaction is a masterclass in déjà vu fatigue, with exhaustion and open mockery dominating the conversation. Audiences are questioning why this remake exists at all, while a handful of defenders clutch at the promise of a familiar song.

@@ -153,11 +153,30 @@ reactions:
     quote: >-
       The Supergirl: Woman of Tomorrow comic is really great. It's amazing that
       DC made such a bad movie out of it to be honest.
+  - speaker: Nicholas Hoult
+    platform: interview
+    quote: It reminds me of…
+  - speaker: A viewer
+    date: '2026-06-04'
+    quote: Is there anything in this that isn't soulless CGI.
+  - speaker: A viewer
+    date: '2026-06-03'
+    quote: Not sure how the song "corn beef" fits in here but I'll allow it
+  - speaker: A viewer
+    date: '2026-06-11'
+    quote: >-
+      Super girl looks like the Feral kid from the old school mad max 2 movie,
+      actors name Emil Minty
+  - speaker: A viewer
+    date: '2026-06-04'
+    quote: >-
+      CGI dogs and animals are the new trend in these big blockbuster movies, a
+      trend that really, really blows.
 fanConsensus: >-
   Audiences are passionately divided, with one side loving the film's gritty,
   fresh feel and Jason Momoa's Lobo, while the other side condemns it as a
   derivative John Wick clone with a cruel plot point involving Krypto.
-updatedCount: 2
+updatedCount: 3
 trendScore: 167
 signals:
   popularity: 388
@@ -172,7 +191,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T18:31:07.131Z'
+dateModified: '2026-07-25T02:31:03.113Z'
 provenance:
   parentEventSlug: supergirl-2026
   primaryEntity: Supergirl
@@ -186,7 +205,7 @@ imageAlt: Milly Alcock Supergirl 2026 movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-24T18:31:07.131Z'
+updated: '2026-07-25T02:31:03.113Z'
 ---
 
 From its grimy, sweat-stained aesthetic to a plot point that has dog lovers on high alert, the film has sparked a fierce and immediate divide.
