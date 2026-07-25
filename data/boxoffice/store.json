@@ -1258,6 +1258,20 @@
    "headlineNumberRaw": 438555658,
    "filmKey": "toy story 5",
    "chartDate": null
+  },
+  {
+   "key": "the-invite-bo-update-d28|BO-UPDATE",
+   "at": "2026-07-25T08:35:57.791Z",
+   "eventSlug": "the-invite-bo-update-d28",
+   "form": "BO-UPDATE",
+   "slug": "the-invite-box-office-tracker",
+   "title": "Olivia Wilde's 'The Invite' Holds Steady in Second Weekend",
+   "film": "The Invite",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 17178884,
+   "filmKey": "the invite",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2613,16 +2627,24 @@
    "reason": "consistency: title: \"$170M\" is not a canonical figure for this film | dek: \"$170 million\" is not a canonical figure for this film | metaDescription: \"$170M\" is not a canonical figure for this film",
    "tries": 2,
    "at": "2026-07-24T16:40:25.383Z"
+  },
+  {
+   "key": "evil-dead-burn-bo-update-d14|BO-UPDATE",
+   "eventSlug": "evil-dead-burn-bo-update-d14",
+   "form": "BO-UPDATE",
+   "reason": "words 173 < 180 (owner-set ~200-word minimum)",
+   "tries": 1,
+   "at": "2026-07-25T08:33:53.396Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.05418
+  "usd": 0.0582
  },
  "pace": {
-  "tokens": 0.14288726190476186,
-  "lastMs": 1784966463778
+  "tokens": 0,
+  "lastMs": 1784968342048
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2641,6 +2663,9 @@
    ],
    "house of the dragon": [
     "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
+   ],
+   "evil dead burn": [
+    "words # < # (owner-set ~#-word minimum)"
    ]
   }
  }
