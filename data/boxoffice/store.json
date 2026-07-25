@@ -2310,10 +2310,10 @@
    "key": "death-on-the-nile-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "death-on-the-nile-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 150 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T03:38:04.597Z",
-   "dead": true,
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-25T04:38:46.810Z",
+   "dead": false,
    "expiresAt": "2026-07-25T03:38:04.597Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 33,
+ "zeroStreak": 34,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.30101
+  "usd": 0.32325
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784952152842
+  "lastMs": 1784953948475
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2583,7 +2583,8 @@
    "rising": 1,
    "enola holmes 3": 1,
    "regretting you": 1,
-   "kpop demon hunters": 1
+   "kpop demon hunters": 1,
+   "death on the nile": 1
   }
  },
  "failures": {
@@ -2591,6 +2592,9 @@
   "byFilm": {
    "kpop demon hunters": [
     "# unverified claim(s) cut# unrecovered"
+   ],
+   "death on the nile": [
+    "words # < # (owner-set ~#-word minimum)"
    ]
   }
  }

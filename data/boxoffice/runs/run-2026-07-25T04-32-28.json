@@ -1,0 +1,163 @@
+{
+ "runId": "run-2026-07-25T04-32-28",
+ "mode": "live",
+ "startedAt": "2026-07-25T04:32:28.475Z",
+ "films": 41,
+ "published": [],
+ "held": [
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
+   "score": 55
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "jackass-best-and-last-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "scary-movie-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "michael-bo-update×BO-UPDATE",
+   "reason": "already published (this update)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-now-streaming×NOW-STREAMING",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "masters-of-the-universe-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "park cooling (held recently — escalating retry backoff)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 18.2,
+  "allow": 2
+ },
+ "queueBuilt": 10,
+ "attemptCapHit": 4,
+ "zeroStreak": 34,
+ "daySpend": {
+  "laDay": "2026-07-24",
+  "usd": 0.32325
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-25T04:38:46.816Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1091,
+    "out": 520,
+    "usd": 0.00032,
+    "ms": 2355
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3624,
+    "out": 3858,
+    "usd": 0.00067,
+    "ms": 7743
+   },
+   "gatherer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 11746,
+    "out": 778,
+    "usd": 0.00149,
+    "ms": 4368
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 800,
+    "out": 977,
+    "usd": 0.00025,
+    "ms": 8866
+   },
+   "writer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6658,
+    "out": 2230,
+    "usd": 0.00623,
+    "ms": 28643
+   },
+   "qa": {
+    "calls": 8,
+    "errors": 0,
+    "in": 22256,
+    "out": 3211,
+    "usd": 0.0147,
+    "ms": 18371
+   }
+  },
+  "totalUsd": 0.02365
+ },
+ "openrouterTotalUsd": 0.02224
+}
