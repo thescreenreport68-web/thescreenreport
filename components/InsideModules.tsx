@@ -56,10 +56,38 @@ function RippleHeader({ article }: { article: Article }) {
   );
 }
 
-/* ---------- the anchor statement (creator's reply to critics) ---------- */
+/* ---------- SITE-WIDE QUOTE UI (owner 2026-07-25) ----------
+   Every lane renders a person's words through one shared treatment, fed by the `pullQuote`
+   frontmatter contract ({ text, attribution }). The markup below is deliberately IDENTICAL to
+   NicheModules' NewsPullQuote — same figure/blockquote/figcaption and the same classes — so an
+   inside article's quote is visually indistinguishable from a news or statements one.
+   It lives here rather than in the shared file because NewsPullQuote is gated to formatTag "news";
+   duplicating the 8 lines keeps this lane self-contained instead of editing another lane's renderer. */
+function InsidePullQuote({ article }: { article: Article }) {
+  const q = article.pullQuote;
+  if (!q?.text) return null;
+  return (
+    <figure className="my-6 border-l-4 border-red pl-5 not-prose">
+      <blockquote className="font-display text-2xl italic leading-snug text-ink sm:text-[1.7rem]">
+        &ldquo;{stripQuotes(q.text)}&rdquo;
+      </blockquote>
+      {q.attribution ? (
+        <figcaption className="mt-2 font-sans text-xs uppercase tracking-[0.08em] text-slate">
+          — {q.attribution}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
+/* ---------- the anchor statement (creator's reply to critics) ----------
+   Superseded by InsidePullQuote for anything published from 2026-07-25 on: when a pullQuote is
+   present it carries the same quote, so rendering both would print it twice. Older articles have no
+   pullQuote and keep this box unchanged — no published page is rewritten to adopt the new UI. */
 function AnchorStatement({ article }: { article: Article }) {
   const a = article.anchorStatement;
   if (!a?.quote) return null;
+  if (article.pullQuote?.text) return null;
   const meta = [a.connection, a.platform].filter(Boolean).join(" · ");
   return (
     <aside className="my-6 not-prose border border-hair p-5">
@@ -138,6 +166,7 @@ export function InsideTop({ article }: { article: Article }) {
   return (
     <>
       <RippleHeader article={article} />
+      <InsidePullQuote article={article} />
       <AnchorStatement article={article} />
       <FanConsensusBox article={article} />
     </>

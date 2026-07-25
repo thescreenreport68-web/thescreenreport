@@ -9,7 +9,7 @@ import { run as synthRun } from "../agents/synthesizer.mjs";
 import { run as writerRun, repairBodyQuotes } from "../agents/writer.mjs";
 import { maskQuotes, unmaskQuotes, findTemplateHeadings, stripTemplateHeadings, run as voiceRun, PHRASEBOOK } from "../agents/voice.mjs";
 import { factLocks, review as qaReview, webCheck as qaWebCheck, classifyBlocks } from "../agents/qa.mjs";
-import { buildInsideMarkdown, insertInlineEmbeds, seoFinish } from "../assemble.mjs";
+import { buildInsideMarkdown, insertInlineEmbeds, seoFinish, pullQuoteFrom, pickPullQuote } from "../assemble.mjs";
 import { endsClean as endsCleanT } from "../seo.mjs";
 import { ytSearchVideos, ytTopComments, ytBudget, ytBudgetReset } from "../youtube.mjs";
 import { discoverReddit, redditSearchPosts, redditTopComments } from "../../find/sources/reddit.mjs";
@@ -1911,6 +1911,100 @@ await check("gsc client: ONE call per tick (memoized)", async () => {
 
 await check("gsc: ymd is UTC and stable", () => {
   assert.equal(ymd(Date.parse("2026-07-24T23:59:59Z")), "2026-07-24");
+});
+
+// ── SHARED QUOTE UI (owner 2026-07-25): every lane shows a person's words through one component,
+// fed by the `pullQuote` frontmatter contract { text, attribution }. ─────────────────────────────
+await check("quote UI: an on-record speaker maps to { text, attribution }", () => {
+  const pq = pullQuoteFrom({ speaker: "James Gunn", quote: "We shot that scene in one take.", connection: "director", platform: "Instagram" });
+  assert.equal(pq.text, "We shot that scene in one take.");
+  assert.equal(pq.attribution, "James Gunn, director on Instagram");
+});
+
+await check("quote UI: the quote text stays VERBATIM (fact-locks compare on it)", () => {
+  const raw = "It's a *tradition* — and I 100% stand by it.";
+  assert.equal(pullQuoteFrom({ speaker: "Kevin Feige", quote: raw }).text, raw,
+    "no markdown-stripping, no smartening, no re-punctuation");
+});
+
+await check("quote UI: an anonymous crowd voice never becomes an attributed pull quote", () => {
+  for (const speaker of ["A viewer", "One fan", "Another user", "some commenters", "A Redditor"]) {
+    assert.equal(pullQuoteFrom({ speaker, quote: "this movie broke me" }), undefined,
+      `${speaker} is not attributable — it stays in the reaction cards`);
+  }
+  assert.notEqual(pullQuoteFrom({ speaker: "Rian Johnson", quote: "this movie broke me" }), undefined);
+});
+
+await check("quote UI: missing speaker or quote yields undefined, never a half-empty box", () => {
+  assert.equal(pullQuoteFrom(null), undefined);
+  assert.equal(pullQuoteFrom({ speaker: "Greta Gerwig" }), undefined);
+  assert.equal(pullQuoteFrom({ quote: "no one said this" }), undefined);
+  assert.equal(pullQuoteFrom({ speaker: "  ", quote: "  " }), undefined);
+});
+
+await check("quote UI: a connection already inside the speaker isn't repeated", () => {
+  const pq = pullQuoteFrom({ speaker: "Director Jordan Peele", quote: "Look closer.", connection: "Director" });
+  assert.equal(pq.attribution, "Director Jordan Peele", "no 'Director Jordan Peele, Director'");
+});
+
+await check("quote UI: published frontmatter carries pullQuote for the shared renderer", () => {
+  const trigger = fakeTrigger();
+  const article = fakeArticle({ form: "creator-answers-critics", trigger });
+  article.anchorStatement = { speaker: "Ari Aster", quote: "The ending is the point.", connection: "director" };
+  const fm = buildInsideMarkdown({
+    article, trigger, angle: fakeAngle("creator-answers-critics"),
+    factBlock: fakeFactBlock("creator-answers-critics"), image: fakeImage(), embeds: null,
+    dateISO: new Date(NOW).toISOString(),
+  }).frontmatter;
+  assert.equal(fm.pullQuote.text, "The ending is the point.");
+  assert.equal(fm.pullQuote.attribution, "Ari Aster, director");
+  assert.equal(fm.formatTag, "inside", "still an inside article — the UI is shared, the lane is not");
+});
+
+await check("quote UI: prefers an on-record voice, else a named reaction, else the top fan post", () => {
+  const fan = { speaker: "A viewer", quote: "This finale absolutely destroyed me and I need a minute to recover." };
+  const named = { speaker: "Rian Johnson", quote: "We storyboarded that reveal for nine straight months, honestly." };
+  const anchor = { speaker: "Greta Gerwig", quote: "I wanted the ending to feel earned, not clever, above everything." };
+  assert.equal(pickPullQuote({ anchorStatement: anchor, reactions: [fan, named] }).pullQuote.attribution, "Greta Gerwig");
+  assert.equal(pickPullQuote({ reactions: [fan, named] }).pullQuote.attribution, "Rian Johnson", "a named voice outranks a fan post");
+  const onlyFans = pickPullQuote({ reactions: [fan, fan, fan] });
+  assert.equal(onlyFans.pullQuote.attribution, "A viewer", "an audience desk may lead with a reader's words — honestly labelled");
+});
+
+await check("quote UI: the hero quote is removed from the cards (never printed twice)", () => {
+  const trigger = fakeTrigger();
+  const article = fakeArticle({ form: "audience-reaction", trigger });
+  const long = "The pacing in the back half is genuinely incredible and nobody is talking about it.";
+  article.reactionsRender = [
+    { speaker: "A viewer", quote: long },
+    { speaker: "A viewer", quote: "Second reaction that is comfortably long enough to be a real card." },
+    { speaker: "A viewer", quote: "Third reaction that is also comfortably long enough to be a card." },
+  ];
+  const fm = buildInsideMarkdown({
+    article, trigger, angle: fakeAngle("audience-reaction"), factBlock: fakeFactBlock("audience-reaction"),
+    image: fakeImage(), embeds: null, dateISO: new Date(NOW).toISOString(),
+  }).frontmatter;
+  assert.equal(fm.pullQuote.text, long, "the strongest quote leads");
+  assert.ok(!(fm.reactions || []).some((r) => r.quote === long), "and is NOT repeated in the cards below");
+  assert.equal((fm.reactions || []).length, 2, "the remaining cards survive");
+});
+
+await check("quote UI: a lone short reaction is not force-promoted to a hero", () => {
+  assert.equal(pickPullQuote({ reactions: [{ speaker: "A viewer", quote: "same" }] }).pullQuote, undefined);
+  assert.equal(pickPullQuote({ reactions: [] }).pullQuote, undefined);
+});
+
+await check("quote UI: emoji-shortcode posts are kept out of the hero treatment", () => {
+  const shortcode = { speaker: "A viewer", quote: "this fucking show :blobcat_cwy: I cannot cope with any of it today" };
+  const clean2 = { speaker: "A viewer", quote: "Genuinely the best hour of television they have put out all year." };
+  const r = pickPullQuote({ reactions: [shortcode, clean2, clean2] });
+  assert.equal(r.pullQuote.text, clean2.quote, "the shortcode post stays in a card, where it reads fine");
+});
+
+await check("quote UI: 'on <platform>' only for real platforms, never 'on statement'", () => {
+  assert.equal(pullQuoteFrom({ speaker: "A24", quote: "x".repeat(50), platform: "Instagram" }).attribution, "A24 on Instagram");
+  assert.equal(pullQuoteFrom({ speaker: "Rob Bonta", quote: "x".repeat(50), connection: "Attorney General", platform: "statement" }).attribution,
+    "Rob Bonta, Attorney General");
 });
 
 console.log(`\n=== UNIT: ${pass} passed, ${fail} failed ===`);

@@ -41,6 +41,77 @@ export function cleanTitle(title) {
 }
 const clean = (o) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== null && v !== ""));
 
+// ── SHARED QUOTE UI (owner 2026-07-25) ───────────────────────────────────────────────────────────
+// Every lane displays a person's words through ONE site-wide component, fed by the `pullQuote`
+// frontmatter contract: { text, attribution }. This maps this lane's anchor statement onto it.
+//
+// Attribution follows the house style other lanes already use ("Kevin Feige to TheWrap") — the
+// speaker, then where they said it, so a reader can place the quote without leaving the card.
+// Returns undefined (never a half-filled object) when there is no real speaker+quote, so `clean`
+// drops the key entirely and the renderer stays silent rather than printing an empty box.
+// An anonymous crowd label is honest in a reaction card but is not a person we can attribute a hero
+// quote to by name. "Report" is this lane's marker for outlet prose — also not a person.
+const CROWD_SPEAKER_RX = /^(a|one|another|some)\s+(viewer|fan|user|commenter|poster|redditor)s?$|^report$/i;
+export const isCrowdSpeaker = (s) => CROWD_SPEAKER_RX.test(String(s || "").trim());
+
+// A hero quote has to READ as a hero: long enough to carry weight, short enough not to become a wall.
+// The floor differs by SOURCE. A harvested fan post needs 40 chars to prove it isn't noise ("same",
+// "lol", "this"). An on-record statement is deliberate and curated, and a short one is often the
+// BEST hero ("The ending is the point.") — so it only has to be a real sentence.
+const HERO_MIN = 40, HERO_MIN_ONRECORD = 15, HERO_MAX = 240;
+// Mastodon/Discord emoji shortcodes (":blobcatsadlife:") render as literal text and look broken at
+// display size. Real harvested posts carry them; they belong in a card, not in the hero treatment.
+const SHORTCODE_RX = /:[a-z0-9_+-]{2,}:/i;
+// Real platforms only — the `platform` field also carries non-platform values ("statement").
+const PLATFORM_RX = /^(x|twitter|bluesky|instagram|mastodon|threads|reddit|youtube|tiktok|facebook|tumblr)$/i;
+const heroReadable = (t, min = HERO_MIN) => t.length >= min && t.length <= HERO_MAX && !SHORTCODE_RX.test(t);
+
+export function pullQuoteFrom(anchor) {
+  const text = String(anchor?.quote || "").trim();
+  const speaker = String(anchor?.speaker || "").trim();
+  if (!text || !speaker) return undefined;
+  // The shared UI is for someone ON RECORD; crowd voices stay in the cards.
+  if (isCrowdSpeaker(speaker)) return undefined;
+  const connection = String(anchor?.connection || "").trim();
+  const platform = String(anchor?.platform || "").trim();
+  let attribution = speaker;
+  if (connection && !new RegExp(`\\b${connection.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(speaker)) {
+    attribution += `, ${connection}`;
+  }
+  // "on X" only reads correctly for an actual PLATFORM. The harvest also stores values like
+  // "statement" or "interview" in this field, and "Rob Bonta, Attorney General on statement" is
+  // broken English — for those the connection already supplies the context, so drop it.
+  if (PLATFORM_RX.test(platform)) attribution += ` on ${platform}`;
+  // NOTE: `text` is passed through UNMODIFIED apart from trimming. It is a verbatim quote that has
+  // already cleared the harvest's verbatim wall, and the QA fact-locks compare against that exact
+  // string — running it through stripMd here would silently break both guarantees.
+  return clean({ text, attribution: attribution.slice(0, 120) });
+}
+
+/**
+ * Choose the ONE quote this article leads with, in the shared UI.
+ * Tiered, because a measurement of the 126 live inside articles found ZERO anchor statements, 75
+ * with a named speaker and 126 with reactions — anchor-only would have meant the new UI never
+ * appeared. Returns { pullQuote, fromReactionQuote } so the caller can drop the chosen quote from
+ * the cards below and avoid printing it twice on one page.
+ */
+export function pickPullQuote({ anchorStatement = null, reactions = [] } = {}) {
+  // 1. the creator/subject speaking on the record — always the strongest lead if we have it
+  const fromAnchor = pullQuoteFrom(anchorStatement);
+  if (fromAnchor && heroReadable(fromAnchor.text, HERO_MIN_ONRECORD)) return { pullQuote: fromAnchor, fromReactionQuote: null };
+  const ok = (r) => r?.quote && heroReadable(String(r.quote).trim());
+  // 2. a NAMED voice among the harvested reactions (60% of articles have one)
+  // 3. otherwise the top fan reaction — this is an audience-reaction desk, so a reader's words ARE
+  //    the story. Only when ≥3 cards exist, so pulling one up still leaves a real card list below.
+  const named = reactions.find((r) => ok(r) && !isCrowdSpeaker(r.speaker));
+  const pick = named || (reactions.length >= 3 ? reactions.find(ok) : null);
+  if (!pick) return { pullQuote: undefined, fromReactionQuote: null };
+  const pq = pullQuoteFrom({ ...pick, speaker: pick.speaker || "A viewer" })
+    // a crowd speaker is rejected by pullQuoteFrom, so build its attribution here: honest, unnamed.
+    || clean({ text: String(pick.quote).trim(), attribution: [pick.speaker || "A viewer", pick.platform ? `on ${pick.platform}` : ""].filter(Boolean).join(" ") });
+  return { pullQuote: pq, fromReactionQuote: String(pick.quote).trim() };
+}
+
 // INLINE EMBEDS (REV 3, owner): the real post renders DIRECTLY BELOW the paragraph that quotes it —
 // never pooled at the bottom — so readers scroll through the receipts as they read. Deterministic:
 // the harvest's own quote↔tweet pairing decides placement (once per post); Instagram posts (no
@@ -127,6 +198,13 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     // A post embedded INLINE is its own display — a duplicate bottom card would repeat it.
     .filter((r) => !(r.tweetId && inlined.inlined.has(r.tweetId)));
 
+  // SHARED QUOTE UI: pick the one quote that leads the article, then drop it from the cards — the
+  // same words printed as a hero AND again as a card three inches below reads as a mistake.
+  const hero = pickPullQuote({ anchorStatement: article.anchorStatement, reactions });
+  const cards = hero.fromReactionQuote
+    ? reactions.filter((r) => String(r.quote).trim() !== hero.fromReactionQuote)
+    : reactions;
+
   const fm = clean({
     title,
     slug,
@@ -150,9 +228,13 @@ export function buildInsideMarkdown({ article, trigger, angle, factBlock, image,
     parentEventSlug: trigger.parentEventSlug || undefined,
     parentSlug: trigger.parentSlug || undefined,
     parentTitle: trigger.parentTitle || undefined,
-    reactions,
+    reactions: cards,
     anchorStatement: article.anchorStatement?.speaker && article.anchorStatement?.quote
       ? clean(article.anchorStatement) : undefined,
+    // SITE-WIDE QUOTE UI (owner 2026-07-25): the shared `pullQuote` contract every lane now emits —
+    // `{ text, attribution }`, rendered as the standard hero pull-quote. Sourced from an already
+    // verbatim-walled quote, so adopting the shared UI adds no new fabrication surface.
+    pullQuote: hero.pullQuote,
     fanConsensus: stripMd(article.fanConsensus) || undefined, // the honest sentiment read, all forms
     tweetIds: NO_EMBEDS ? undefined : (embeds?.tweetIds?.length ? embeds.tweetIds : factBlock.tweetIds.length ? factBlock.tweetIds : undefined),
     instagramUrls: NO_EMBEDS ? undefined : (embeds?.instagramUrls?.length ? embeds.instagramUrls : undefined),
