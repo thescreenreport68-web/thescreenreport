@@ -1,0 +1,178 @@
+{
+  "ts": "2026-07-25T03:01:14.494Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jon-bon-jovi-cuts-madison-square-garden-show-short-amid-sinus-infection",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 3,
+  "held": 2,
+  "rejected": 0,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.087117,
+  "costPerPublished": 0.087117,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 22,
+      "in": 50125,
+      "out": 7453,
+      "usd": 0.033670000000000005
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 6,
+      "in": 8249,
+      "out": 50437,
+      "usd": 0.011332165
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 2,
+      "in": 4127,
+      "out": 1571,
+      "usd": 0.0007335571500000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 14,
+      "in": 13695,
+      "out": 2558,
+      "usd": 0.0023926999999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 3,
+      "in": 3034,
+      "out": 1401,
+      "usd": 0.0006087312
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 19,
+      "in": 80386,
+      "out": 34800,
+      "usd": 0.03213800799999999
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 6,
+      "in": 17442,
+      "out": 4731,
+      "usd": 0.00624172425
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 7160,
+      "out": 543,
+      "usd": 0.0035055,
+      "ms": 3770
+    },
+    "detailFinder": {
+      "calls": 4,
+      "errors": 1,
+      "in": 4228,
+      "out": 22428,
+      "usd": 0,
+      "ms": 165887
+    },
+    "background": {
+      "calls": 5,
+      "errors": 2,
+      "in": 4074,
+      "out": 6103,
+      "usd": 0.0007693,
+      "ms": 148226
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 0,
+      "in": 3034,
+      "out": 1401,
+      "usd": 0.00052524,
+      "ms": 30186
+    },
+    "writer": {
+      "calls": 22,
+      "errors": 3,
+      "in": 80039,
+      "out": 35294,
+      "usd": 0.03345068,
+      "ms": 1096589
+    },
+    "verify": {
+      "calls": 19,
+      "errors": 0,
+      "in": 42965,
+      "out": 6910,
+      "usd": 0.0301645,
+      "ms": 35952
+    },
+    "judge": {
+      "calls": 4,
+      "errors": 0,
+      "in": 6795,
+      "out": 865,
+      "usd": 0.0010255,
+      "ms": 4021
+    },
+    "claimAudit": {
+      "calls": 4,
+      "errors": 1,
+      "in": 5955,
+      "out": 16016,
+      "usd": 0,
+      "ms": 164149
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2664,
+      "out": 961,
+      "usd": 0.00093946,
+      "ms": 32855
+    },
+    "headlineJudge": {
+      "calls": 3,
+      "errors": 0,
+      "in": 1178,
+      "out": 315,
+      "usd": 0.00024380000000000002,
+      "ms": 1981
+    },
+    "seoAuditor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 601,
+      "out": 115,
+      "usd": 0.0001061,
+      "ms": 1644
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1558,
+      "out": 94,
+      "usd": 0.0001934,
+      "ms": 2244
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 290,
+      "out": 64,
+      "usd": 0.0000546,
+      "ms": 469
+    }
+  }
+}
