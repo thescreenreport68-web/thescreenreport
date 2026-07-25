@@ -2290,10 +2290,10 @@
    "key": "regretting-you-netflix-top10-w2026-07-19|NETFLIX-TOP10",
    "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
-   "reason": "words 179 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-22T03:07:32.078Z",
-   "dead": true,
+   "reason": "words 169 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 2,
+   "at": "2026-07-25T03:36:20.575Z",
+   "dead": false,
    "expiresAt": "2026-07-25T03:07:32.078Z"
   },
   {
@@ -2559,14 +2559,14 @@
    "at": "2026-07-24T16:40:25.383Z"
   }
  ],
- "zeroStreak": 31,
+ "zeroStreak": 32,
  "daySpend": {
   "laDay": "2026-07-24",
-  "usd": 0.25734
+  "usd": 0.27757
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1784948475128
+  "lastMs": 1784950262624
  },
  "lastAuditDay": "2026-07-24",
  "attempts": {
@@ -2581,7 +2581,8 @@
    "the sheep detectives": 3,
    "stuart fails to save the universe": 1,
    "rising": 1,
-   "enola holmes 3": 1
+   "enola holmes 3": 1,
+   "regretting you": 1
   }
  }
 }
