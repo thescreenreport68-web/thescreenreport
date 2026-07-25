@@ -2725,30 +2725,38 @@
    "eventSlug": "the-end-of-evangelion-bo-update-d859",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 5,
-   "at": "2026-07-25T12:33:59.923Z",
+   "tries": 6,
+   "at": "2026-07-25T13:03:11.513Z",
    "dead": true,
-   "expiresAt": "2026-07-28T12:33:59.923Z"
+   "expiresAt": "2026-07-28T13:03:11.513Z"
   },
   {
    "key": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2|BO-UPDATE",
    "eventSlug": "neon-genesis-evangelion-the-end-of-evangelion-2026-re-release-bo-update-d2",
    "form": "BO-UPDATE",
    "reason": "scaffold: fewer than 3 keyTakeaways",
-   "tries": 5,
-   "at": "2026-07-25T12:36:09.021Z",
+   "tries": 6,
+   "at": "2026-07-25T13:05:00.800Z",
    "dead": true,
-   "expiresAt": "2026-07-28T12:36:09.021Z"
+   "expiresAt": "2026-07-28T13:05:00.800Z"
+  },
+  {
+   "key": "the-mandalorian-and-grogu-bo-update-d67|BO-UPDATE",
+   "eventSlug": "the-mandalorian-and-grogu-bo-update-d67",
+   "form": "BO-UPDATE",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-25T13:07:11.537Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-25",
-  "usd": 0.09127
+  "usd": 0.11456
  },
  "pace": {
-  "tokens": 0.4007171111111112,
-  "lastMs": 1784982667810
+  "tokens": 1.0994050000000002,
+  "lastMs": 1784984464436
  },
  "lastAuditDay": "2026-07-25",
  "attempts": {
@@ -2756,7 +2764,8 @@
   "byFilm": {
    "the hawk": 1,
    "the sheep detectives": 1,
-   "house of the dragon": 1
+   "house of the dragon": 1,
+   "the mandalorian and grogu": 1
   }
  },
  "failures": {
@@ -2779,6 +2788,9 @@
     "scaffold: fewer than # keytakeaways"
    ],
    "disclosure day": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "the mandalorian and grogu": [
     "# unverified claim(s) cut# unrecovered"
    ]
   }
