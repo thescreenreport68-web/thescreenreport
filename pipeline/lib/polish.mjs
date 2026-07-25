@@ -184,5 +184,10 @@ export function dropStubTitles(md) {
   out = out.replace(/\*[A-Za-z0-9]{1,2}\*\s+and\s+/g, "");
   // a lone stub left as the only named title → remove the naming clause entirely
   out = out.replace(/,?\s*(?:including|titled|named)\s+\*[A-Za-z0-9]{1,2}\*(?=[\s.,;)]|$)/g, "");
-  return out.replace(/\s{2,}/g, " ").replace(/\s+([.,;:])/g, "$1");
+  // 🔴 [ \t] NOT \s — for the THIRD time today, \s matching NEWLINES was the bug. This ran on the whole
+  // markdown body, so \s{2,} collapsed every paragraph break and every heading onto ONE line: an article
+  // with 6 headings rendered as a single wall of text with "## Who is in the cast?" mid-sentence. Any
+  // whitespace class applied to markdown MUST exclude newlines. (Same root as the inline-bullet detector
+  // and the near-duplicate detector earlier — this class of bug is the one to watch for in this file.)
+  return out.replace(/[ \t]{2,}/g, " ").replace(/[ \t]+([.,;:])/g, "$1");
 }

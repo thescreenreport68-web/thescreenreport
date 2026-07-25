@@ -18,10 +18,14 @@ import { assessGrounding } from "./lib/qualityFloor.mjs";
 import { ON as LF_ON } from "./lib/longform.mjs";
 import * as LONGFORM from "./lib/longform.mjs";
 import { mergeUpdate } from "./stages/updateArticle.mjs";
+import { expandArticle, MIN_RESCUABLE } from "./stages/expand.mjs";
 import { sourceImage, measureRemote } from "./stages/image.mjs";
 import { pickHeroImage } from "./lib/heroImage.mjs";
 import { cutArticle } from "./lib/cutter.mjs";
-import { dedupeSentences, trimIncomplete, dropOrphanHeadings, fixInlineBullets, dropStubTitles, fixSpacedPunctuation } from "./lib/polish.mjs";
+// NOTE: fixSpacedPunctuation is deliberately NOT imported here. It collapses ALL whitespace (it exists for
+// single-line meta fields) and applying it to a body would destroy every paragraph break — the exact bug that
+// broke a whole draft on 2026-07-25. The body uses the [ \t]-only variant defined below.
+import { dedupeSentences, trimIncomplete, dropOrphanHeadings, fixInlineBullets, dropStubTitles } from "./lib/polish.mjs";
 import { gate } from "./stages/gate.mjs";
 import { assemble } from "./stages/assemble.mjs";
 import { getPersonFacts, personFactsBlock, getWhereToWatch, factBlock, toWhereToWatch, discoverTop, discoverFactBlock, getTrailer, trailerFactBlock, getBoxOffice, boxOfficeFactBlock, getTitleFacts, titleFactBlock } from "./lib/tmdb.mjs";
@@ -485,7 +489,7 @@ async function processTopic(topic, i) {
       }
     }
 
-    let article, classification, image, scored, pass = false, corrections = null;
+    let article, classification, image, scored, pass = false, corrections = null, expandedOnce = false;
     const RUN_JUDGE = process.env.RUN_JUDGE === "1"; // paid quality judge OFF by default (cost) — QA opt-in only
 
     // Attach the DETERMINISTIC, system-owned structured fields the writer must NEVER author (verified TMDB/OMDb
@@ -505,13 +509,10 @@ async function processTopic(topic, i) {
     // faithful brief (short if the source is thin) is a valid article. Attempt 2 (only if needed) tightens format or
     // re-grounds a stray; whatever remains publishes (strays are trimmed after the loop).
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-      ({ article } = await generate({
-        // LONGFORM WRITER (owner 2026-07-24: "find the writer who can do this"). Measured: deepseek-v3.2
-        // produced 563/502/798/595/601 words on the SAME topic with the SAME abundant material — it does not
-        // hold a length. That is a model property, not a prompt one, so the model is the thing to change.
-        // Stays inside the cheap-models-only constraint; defaults to the locked generator when unset.
-        topic, model: (LF_ON && topic._longform && process.env.LONGFORM_WRITER) || MODELS.generator,
-        corrections, previousArticle: attempt > 1 ? article : null }));
+      // (The 2026-07-24 LONGFORM_WRITER override is REMOVED: swapping the model was tested and changed
+      // nothing — gemini-2.5-flash produced 620w where deepseek produced 601w on identical input. The
+      // cap was in our own prompt, not the model. One writer, the locked cheap one.)
+      ({ article } = await generate({ topic, model: MODELS.generator, corrections, previousArticle: attempt > 1 ? article : null }));
       attachStructured();
       // CLASSIFICATION is TOPIC-derived (a FIND/seed topic carries the authoritative category/subcategory/formatTag);
       // tags derive deterministically. The LLM classifier runs ONLY for a legacy topic with no categorization, once.
@@ -530,6 +531,40 @@ async function processTopic(topic, i) {
         : null;
       rec.stages[`attempt${attempt}`] = { score: scored.score, cat: `${classification.category}/${classification.subcategory}`, format: scored.formatBlocks, cuts: scored.cutClaims.length, broken: scored.brokenHold };
       console.log(`  attempt ${attempt}: ${scored.score != null ? `score ${scored.score} ` : ""}[${classification.category}/${classification.subcategory}] fidelity-cuts:${scored.cutClaims.length} format-nits:${scored.formatBlocks.length}${scored.brokenHold.length ? ` ⛔BROKEN:${scored.brokenHold.join(";")}` : ""}`);
+      // ── EXPAND PASS (2026-07-25) ─────────────────────────────────────────────────────────────
+      // Fires ONLY when length is the sole remaining failure: the draft is accurate, structured,
+      // unpadded and readable, and is being thrown away for ~50 words. Re-rolling the whole article
+      // is a coin flip (516/542/707/766 on identical input); this keeps the good draft and appends
+      // ONE section built from material it left unused. Add-only, same facts, and the merged article
+      // goes back through the FULL gate below — if the addition is padding it is still rejected.
+      const lenBlock = (scored.brokenHold || []).find((b) => /^body (\d+)w < (\d+)/.test(b));
+      const otherBlocks = (scored.brokenHold || []).filter((b) => b !== lenBlock);
+      if (lenBlock && !otherBlocks.length && !expandedOnce) {
+        const [, haveW, needW] = lenBlock.match(/^body (\d+)w < (\d+)/).map(Number);
+        if (haveW >= MIN_RESCUABLE) {
+          expandedOnce = true;
+          const ex = await expandArticle({ article, topic, facts: topic.facts, targetWords: needW, model: MODELS.generator }).catch(() => null);
+          if (ex) {
+            // Insert BEFORE the "## Sources" block. Appending blindly put the new section after Sources,
+            // which reads as an appendix stuck on the end. Sources must stay the last thing on the page.
+            const _b = String(article.body || "").trimEnd();
+            const _srcAt = _b.search(/\n##\s+Sources\b/i);
+            article.body = _srcAt > 0
+              ? _b.slice(0, _srcAt) + ex.markdown.replace(/\s+$/, "") + "\n" + _b.slice(_srcAt)
+              : _b + ex.markdown;
+            // Re-gate IN PLACE. `continue` would jump to the next loop iteration, which calls generate()
+            // again — regenerating from scratch and throwing away the section we just appended. The whole
+            // point is to keep the good draft, so the gate is re-run here on the merged article instead.
+            scored = await gate({ article, topic, judgeModel: judge, runJudge: RUN_JUDGE });
+            const nowW = String(article.body).split(/\s+/).filter(Boolean).length;
+            console.log(`  ⤢ expand pass: +${ex.words}w ("${ex.heading}") — ${haveW}w → ${nowW}w · ${scored.brokenHold.length ? "still held: " + scored.brokenHold.join("; ") : "PASSES"}`);
+            break;                                    // the merged article's gate result is final
+          }
+          console.log(`  ⤢ expand pass: declined — the facts hold nothing further (correct: never pad to a floor)`);
+        } else {
+          console.log(`  ⤢ expand pass: skipped — ${haveW}w is too far below ${needW} (story lacks material, not words)`);
+        }
+      }
       if (!needsRetry) break;
     }
     // FIDELITY TRIM (never a hold): delete any checkable specific the writer added beyond the source — from the body

@@ -93,5 +93,31 @@ console.log("=== 5. THE 2026-07-25 AUTONOMOUS-DRAFT DEFECTS (Chuck Russell obitu
   ok(!nonLongform.test("H2s 1 < 2"), "structure nits stay non-fatal on the short-form path");
 }
 
+
+console.log("=== 6. MARKDOWN STRUCTURE SURVIVES EVERY REPAIR (the \\s-matches-newline trap, 3rd occurrence) ===");
+{
+  const { dropStubTitles, fixInlineBullets } = await import("../lib/polish.mjs");
+  const md = "Opening paragraph.\n\n## Who Is in the Cast?\n\n- Andrew Durand as Benjamin\n- Kelsee Kimmel as Elowen\n\nClosing paragraph with *Hyperia* and *b* in it.";
+  const out = dropStubTitles(md);
+  ok(out.includes("\n\n"), "paragraph breaks survive (they did NOT: the whole article collapsed to one line)");
+  ok(/^## Who Is in the Cast\?$/m.test(out), "headings stay on their own line — an H2 mid-sentence renders as literal '##'");
+  ok((out.match(/^- /gm) || []).length === 2, "bullets stay on their own lines");
+  ok(!/\*b\*/.test(out) && /\*Hyperia\*/.test(out), "the stub title is still dropped and the real one kept");
+  // and the bullet repair must not eat structure either
+  const b2 = fixInlineBullets(md);
+  ok(/^## Who Is in the Cast\?$/m.test(b2) && b2.includes("\n\n"), "fixInlineBullets also preserves headings + paragraph breaks");
+}
+
+console.log("=== 7. EXPAND PASS places its section BEFORE Sources ===");
+{
+  const body = "Intro.\n\n## A Section\n\ntext\n\n## Sources\n- [x](https://e.com)";
+  const md = "\n\n## The New Section\n\nnew text\n";
+  const at = body.search(/\n##\s+Sources\b/i);
+  const out = at > 0 ? body.slice(0, at) + md.replace(/\s+$/, "") + "\n" + body.slice(at) : body + md;
+  const heads = (out.match(/^##\s+(.+)$/gm) || []).map((h) => h.replace(/^##\s+/, ""));
+  ok(heads[heads.length - 1] === "Sources", `Sources stays last (order: ${heads.join(" → ")})`);
+  ok(heads.includes("The New Section"), "the expanded section is present");
+}
+
 console.log(`\n${fail===0?"✅ ALL":"❌"} ${pass} passed, ${fail} failed`);
 process.exit(fail?1:0);
