@@ -1,149 +1,230 @@
 {
- "dateKey": "2026-07-24",
+ "dateKey": "2026-07-25",
  "topTopic": {
-  "name": "The Odyssey Box Office Surge",
-  "why": "Multiple independent headlines report Christopher Nolan's The Odyssey crossing ₹100 crore ($13.4M) in India and nearing $400M worldwide, dominating trade conversation with box-office records, IMAX re-release impact, and global haul milestones."
+  "name": "Christopher Nolan's The Odyssey dominates global box office and streaming discussion",
+  "why": "The day's largest shared conversation centers on Nolan's IMAX 70mm event film The Odyssey, its massive box-office performance (including a $264M worldwide opening), record-breaking IMAX 70mm engagement, and related streaming/discussion coverage."
  },
  "slots": [
   {
    "story": {
-    "title": "The Odyssey Box Office Surge in India",
-    "angle": "Crosses ₹100 crore ($13.4M) at Indian box office in 7 days; fastest for a Hollywood tentpole in India.",
+    "title": "The Odyssey opens to $264M worldwide box office",
+    "angle": "Global haul crosses $264M in opening frame, making it Nolan's biggest opening and a top-5 global debut ever.",
     "entities": [
      "Christopher Nolan",
-     "The Odyssey"
+     "The Odyssey",
+     "IMAX 70mm"
     ],
     "sourceLinks": [
-     "https://www.hindustantimes.com/entertainment/hollywood/christopher-nolan-the-odyssey-box-office-crosses-100-crore-in-india-400-million-worldwide-101784884257451.html",
-     "https://gulfnews.com/entertainment/the-odyssey-box-office-nolans-epic-neighs-past-rs-1-billion-in-india-trots-ahead-of-oppenheimer-in-north-america-1.500618808",
-     "https://www.news18.com/movies/hollywood/the-odyssey-box-office-day-7-christopher-nolans-epic-inches-closer-to-rs-100-crore-in-india-ws-l-10231685.html"
+     "https://www.cnbc.com/2026/07/25/the-odyssey-imax-70mm-screenings.html",
+     "https://www.tbsnews.net/splash/nolans-odyssey-opens-264m-worldwide-box-office-1493686",
+     "https://www.news18.com/movies/hollywood/the-odyssey-box-office-day-8-christopher-nolan-film-inches-closer-to-rs-100-crore-club-ws-l-10233001.html",
+     "https://www.nova.ie/the-odyssey-crushes-box-office-becomes-biggest-opening-of-nolans-career/",
+     "https://www.aol.com/articles/odyssey-box-office-still-continues-043542000.html"
     ],
     "isTopTopic": true,
     "viral": 9,
     "hint": "box-office"
    },
    "slotLA": "06:53",
-   "status": "dropped",
-   "reason": "imagehunt: no Tier-A image on whitelisted carriers"
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey Global Haul and IMAX Re-release",
-    "angle": "Nears $400 million worldwide; IMAX 70 mm re-release drives strong returns at premium large-format venues.",
+    "title": "IMAX 70mm becomes The Odyssey's biggest star",
+    "angle": "CNBC reports IMAX 70mm screenings are driving ticket demand and elevating the film's event status.",
     "entities": [
-     "Christopher Nolan",
+     "IMAX 70mm",
      "The Odyssey",
-     "IMAX"
+     "CNBC"
     ],
     "sourceLinks": [
-     "https://www.afr.com/life-and-luxury/arts-and-culture/imax-melbourne-nearly-dumped-projector-now-making-it-an-odyssey-fortune-20260724-p60i5r"
+     "https://www.cnbc.com/2026/07/25/the-odyssey-imax-70mm-screenings.html"
     ],
     "isTopTopic": true,
     "viral": 8,
     "hint": "box-office"
    },
-   "slotLA": "09:12",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "08:42",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "The Odyssey Tops Global Box Office Charts",
-    "angle": "Record-breaking haul surpasses regional releases; positions Nolan for strong awards-season positioning.",
+    "title": "Nolan's The Odyssey hailed as a career-defining event film",
+    "angle": "Reviews and industry analysis describe the film as a monumental achievement in event cinema.",
     "entities": [
      "Christopher Nolan",
      "The Odyssey"
     ],
     "sourceLinks": [
-     "https://variety.com/2026/film/news/tomorrow-and-tomorrow-and-tomorrow-movie-sky-yang-sean-kaufman-1236819131/",
-     "https://www.inverse.com/entertainment/star-trek-reboot-movie-jonathan-goldstein-and-john-francis-daley-characters-timeline",
-     "https://www.usatoday.com/story/entertainment/movies/2026/07/24/resident-evil-movie-zach-cregger-austin-abrams-comic-con/91032641007/"
-    ],
-    "isTopTopic": true,
-    "viral": 7,
-    "hint": "box-office"
-   },
-   "slotLA": "11:39",
-   "status": "dropped",
-   "reason": "factgate: The category tab 'BOX-OFFICE' is incorrect because the story is about an unreleased film and its special format screening, not about money already earned."
-  },
-  {
-   "story": {
-    "title": "The Odyssey Streaming and Home Release Plans",
-    "angle": "Warner Bros. strategizes streaming window and premium home formats amid strong theatrical tailwinds.",
-    "entities": [
-     "The Odyssey",
-     "Warner Bros."
-    ],
-    "sourceLinks": [
-     "https://www.thewrap.com/media-platforms/tv/fox-roku-deal-creators-on-fast-explained/"
-    ],
-    "isTopTopic": true,
-    "viral": 6,
-    "hint": "streaming"
-   },
-   "slotLA": "13:52",
-   "status": "posted",
-   "key": "the-odyssey-streaming-and-home-release-plans"
-  },
-  {
-   "story": {
-    "title": "The Odyssey Cast and Crew Reactions Fuel Buzz",
-    "angle": "On-set anecdotes and cast interviews amplify fan excitement and social engagement around the film.",
-    "entities": [
-     "Christopher Nolan",
-     "Cast"
-    ],
-    "sourceLinks": [
-     "https://www.mensjournal.com/entertainment/1956-glenn-ford-film-named-a-must-see-western-classic-has-a-100-rotten-tomatoes-score",
-     "https://www.mensjournal.com/news/74-years-ago-today-the-best-western-in-movie-history-was-released"
+     "https://www.theguardian.com/commentisfree/2026/jul/25/christopher-nolan-odyssey-homer-epic-film-classics",
+     "https://www.greenwichtime.com/opinion/article/odyssey-zendaya-nolan-imax-22359253.php"
     ],
     "isTopTopic": true,
     "viral": 7,
     "hint": "news"
    },
-   "slotLA": "16:02",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "10:15",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Resident Evil New Trailer and Fan Reactions",
-    "angle": "Zach Cregger's Resident Evil movie trailer packs franchise elements; fans debate fidelity to games.",
+    "title": "The Odyssey crushes box office records in India and abroad",
+    "angle": "The film surpasses Rs 100 crore globally within two days; strong holds in India and international markets.",
     "entities": [
-     "Zach Cregger",
-     "Resident Evil"
+     "The Odyssey",
+     "box office",
+     "India"
     ],
     "sourceLinks": [
-     "https://www.relyonhorror.com/latest-news/resident-evil-film-new-trailer/"
+     "https://www.deccanherald.com/amp/story/entertainment%2Fjana-nayagan-day-2-box-office-vijays-farewell-film-dips-over-50-crosses-rs-100-cr-globally-4087086",
+     "https://www.storyboard18.com/trending/vijays-jana-nayagan-box-office-collection-film-crosses-rs-100-crore-worldwide-in-two-days-105522.htm",
+     "https://www.wionews.com/entertainment/jana-nayagan-box-office-collection-day-2-cm-vijay-s-political-drama-crosses-rs-100-crore-worldwide-1784958741703/amp"
+    ],
+    "isTopTopic": true,
+    "viral": 6,
+    "hint": "box-office"
+   },
+   "slotLA": "11:52",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey sparks heated debate on social media",
+    "angle": "Fans and critics are passionately discussing Nolan's creative choices online.",
+    "entities": [
+     "The Odyssey",
+     "social media",
+     "Christopher Nolan"
+    ],
+    "sourceLinks": [
+     "https://www.theguardian.com/commentisfree/2026/jul/25/christopher-nolan-odyssey-homer-epic-film-classics",
+     "https://mashable.com/entertainment/the-odyssey-christopher-nolan-sinon-helen-clytemnestra-circe"
+    ],
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "news"
+   },
+   "slotLA": "13:17",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Marvel Studios' Blade reportedly cancelled",
+    "angle": "Popverse reports the MCU's Blade movie has been quietly shut down by Marvel Studios.",
+    "entities": [
+     "Blade",
+     "Marvel Studios"
+    ],
+    "sourceLinks": [
+     "https://www.thepopverse.com/movies-blade-mahershala-ali-kevin-feige-mcu-cancelled-logo/"
     ],
     "isTopTopic": false,
     "viral": 7,
     "hint": "news"
    },
-   "slotLA": "18:25",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "15:01",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Lil Wayne to Receive Hollywood Walk of Fame Star",
-    "angle": "Lil Wayne honored in 2027 class; music and crossover cinema presence highlighted.",
+    "title": "Emma Stone redefining modern Hollywood stardom",
+    "angle": "Young Hollywood profiles Emma Stone's evolving career and influence.",
     "entities": [
-     "Lil Wayne"
+     "Emma Stone"
     ],
     "sourceLinks": [
-     "https://olorisupergal.com/lil-wayne-to-receive-hollywood-walk-of-fame-star-in-class-of-2027/"
+     "https://younghollywood.com/scene/emma-stone-rewrites-a-list-playbook.html"
     ],
     "isTopTopic": false,
     "viral": 6,
     "hint": "celebrity"
    },
-   "slotLA": "20:39",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "16:40",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Rick Moranis says he never retired in rare interview",
+    "angle": "UNILAD reports Moranis opened up about his decades out of the spotlight and a personal tragedy.",
+    "entities": [
+     "Rick Moranis"
+    ],
+    "sourceLinks": [
+     "https://www.unilad.com/celebrity/rick-moranis-spaceballs-2-acting-return-interview-356892-20260725"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "celebrity"
+   },
+   "slotLA": "18:07",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Josh Sapan on life after AMC and championing disability on screen",
+    "angle": "Variety interviews Sapan about his new path and advocacy for disability representation.",
+    "entities": [
+     "Josh Sapan",
+     "AMC Networks",
+     "disability"
+    ],
+    "sourceLinks": [
+     "https://variety.com/2026/biz/news/josh-sapan-life-after-amc-networks-championing-disability-on-screen-1236820906/"
+    ],
+    "isTopTopic": false,
+    "viral": 5,
+    "hint": "news"
+   },
+   "slotLA": "19:54",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Charli xcx explores music, fashion, and film in new feature",
+    "angle": "Euphoria Magazine highlights Charli xcx's cross-disciplinary work in music, fashion, and film.",
+    "entities": [
+     "Charli xcx"
+    ],
+    "sourceLinks": [
+     "https://www.euphoriazine.com/blog/2026/07/music/albums-charli-xcx-music-fashion-film/"
+    ],
+    "isTopTopic": false,
+    "viral": 5,
+    "hint": "music"
+   },
+   "slotLA": "21:25",
+   "status": "pending"
   }
  ],
- "bench": [],
- "builtAt": 1784900745089
+ "bench": [
+  {
+   "title": "Unilad revisits The Sixth Sense child star Haley Joel Osment",
+   "angle": "Unilad checks in on Haley Joel Osment, who has changed significantly since his breakout role.",
+   "entities": [
+    "Haley Joel Osment",
+    "The Sixth Sense"
+   ],
+   "sourceLinks": [
+    "https://www.unilad.com/celebrity/the-sixth-sense-child-star-haley-joel-osment-now-288473-20260725"
+   ],
+   "isTopTopic": false,
+   "viral": 5,
+   "hint": "celebrity"
+  },
+  {
+   "title": "Jason Whitlock claims he could have been an understudy in Django Unchained",
+   "angle": "New Pittsburgh Courier column examines Whitlock's assertion about the Tarantino film.",
+   "entities": [
+    "Jason Whitlock",
+    "Django Unchained"
+   ],
+   "sourceLinks": [
+    "https://newpittsburghcourier.com/2026/07/25/inside-conditions-jason-whitlock-could-have-been-an-understudy-in-the-movie-django-unchained/"
+   ],
+   "isTopTopic": false,
+   "viral": 4,
+   "hint": "news"
+  }
+ ],
+ "builtAt": 1784987180124
 }
