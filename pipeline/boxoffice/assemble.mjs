@@ -485,6 +485,16 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
       s.type = 6;
       return Object.keys(s).length ? s : undefined;
     })(),
+    // PULL QUOTE (site-wide quote UI). Emitted ONLY when the gatherer verified a quote word-for-word in
+    // the source it actually fetched — see agents/gatherer.mjs. Box office is a numbers beat, so this is
+    // present on some articles and absent on most; the UI simply renders nothing when there is no quote.
+    // We never manufacture one to fill the design.
+    ...(gathered.quotes?.[0]?.text ? {
+      pullQuote: {
+        text: gathered.quotes[0].text,
+        attribution: [gathered.quotes[0].speaker, gathered.quotes[0].outlet].filter(Boolean).join(", "),
+      },
+    } : {}),
     eventSlug: trigger.eventSlug,
     eventType: EVENT_TYPE,
     outletCount: gathered.outletCount || (trigger.sources || []).length || undefined,

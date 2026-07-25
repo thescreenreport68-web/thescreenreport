@@ -4,6 +4,7 @@ import SocialReactionGrid from "@/components/embed/SocialReactionGrid";
 import { MusicTop, MusicBottom } from "@/components/MusicModules";
 import { PlaybookTop, PlaybookBottom } from "@/components/PlaybookModules";
 import { InsideTop, InsideBottom } from "@/components/InsideModules";
+import BoxOfficeModules from "@/components/BoxOfficeModules";
 import { RankingEntries, BestOfEntries, WeekendChart, RevealSpine, ReadingModeBox } from "@/components/CategoryUI";
 
 /* Per-niche UI modules, rendered on top of the shared article base.
@@ -497,6 +498,7 @@ export function NicheTop({ article }: { article: Article }) {
       {article.formatTag === "news" ? <NewsPullQuote article={article} /> : null}
       {article.formatTag === "box-office" ? <BoxOfficeModule article={article} /> : null}
       {article.formatTag === "awards" || article.formatTag === "music-awards" ? <AwardsHeader article={article} /> : null}
+      <BoxOfficeModules article={article} />
       <InsideTop article={article} />
       <MusicTop article={article} />
       <SpoilerBanner article={article} />

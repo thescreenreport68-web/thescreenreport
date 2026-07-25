@@ -22,6 +22,7 @@ const SCHEMA = `{
 "records":["records/milestones the report states ABOUT THIS FILM ONLY, verbatim — NEVER another film's or a studio-wide record"],
 "cast":["named stars of THIS film"],
 "narrative":"2-4 sentences: the why-up/why-down story the trade tells, in the trade's framing (no invented facts)",
+"quotes":[{"text":"a VERBATIM quoted sentence from the report — copy it EXACTLY as printed, inside the quotation marks, and ONLY if the report actually quotes a person about THIS film","speaker":"who said it (name + role/title if given)","outlet":"the publication the quote appears in"}],
 "hasDomesticInternationalSplit":true}`;
 
 // run(job) → job.gathered + job.trigger.sources filled — or job.gatherFail = reason.
@@ -69,7 +70,21 @@ export async function run(job, { findImpl = findContent, chatImpl = null } = {})
   const numbers = [data.openingWeekend, data.domestic, data.international, data.worldwide, data.cume,
     data.dropPct, data.theaters, data.perTheater, ...(Array.isArray(data.otherNumbers) ? data.otherNumbers : [])].filter(Boolean);
 
+  // QUOTE CAPTURE + VERBATIM VERIFICATION. A quote is the one thing in this lane a model could most
+  // easily invent, so nothing is trusted: each candidate must appear WORD-FOR-WORD in the source text we
+  // actually fetched, after normalising only whitespace and curly quotes. Anything that fails is dropped
+  // silently — an article with no quote is fine; an article with a fabricated quote is not.
+  const sourceBlob = sources.map((x) => x.text || "").join("\n");
+  const normQ = (t) => String(t || "").replace(/[\u2018\u2019\u201c\u201d]/g, "'").replace(/\s+/g, " ").trim().toLowerCase();
+  const haystack = normQ(sourceBlob);
+  const quotes = (Array.isArray(data.quotes) ? data.quotes : [])
+    .map((q) => ({ text: String(q?.text || "").replace(/^["\u201c]+|["\u201d]+$/g, "").trim(), speaker: String(q?.speaker || "").trim(), outlet: String(q?.outlet || "").trim() }))
+    .filter((q) => q.text.length >= 25 && q.text.split(/\s+/).length <= 45 && q.speaker)
+    .filter((q) => haystack.includes(normQ(q.text)))   // VERBATIM or it does not exist
+    .slice(0, 3);
+
   job.gathered = {
+    quotes,
     openingWeekend: data.openingWeekend || null, domestic: data.domestic || null,
     international: data.international || null, worldwide: data.worldwide || null,
     cume: data.cume || null, dropPct: data.dropPct || null, theaters: data.theaters || null,
