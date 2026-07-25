@@ -14,7 +14,7 @@ import { fidelityLocks, review as qaReview, classifyBlocks, findTemplateHeadings
 import { castTrustworthy } from "../boxofficeData.mjs";
 import { buildBoxOfficeMarkdown, writeBoxOfficeArticle, seoFinish, scaffoldViolations, numbersSection as numbersSectionX } from "../assemble.mjs";
 import { boRun } from "../borun.mjs";
-import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling, filmAttemptBudgetLeft, bumpFilmAttempt } from "../store.mjs";
+import { boKey, alreadyPublished, coveredEventSlugs, parkAngle as parkAngleX, parkedTries as parkedTriesX, parkCooling, filmAttemptBudgetLeft, bumpFilmAttempt, recordFailure as recordFailureX, failedBeforeToday as failedBeforeTodayX, failureCountToday as failureCountTodayX } from "../store.mjs";
 import { run as gatherRun } from "../agents/gatherer.mjs";
 import { run as writerRun } from "../agents/writer.mjs";
 import { readChartCache, writeChartCache, parseChartText, chartMetaFromText } from "../dailyChart.mjs";
@@ -1678,6 +1678,48 @@ await ta("a role WITH a fallback degrades (warn); a role WITHOUT one is critical
   // and the message must name BOTH models' errors, not just the fallback's
   assert.ok(/amazon\/nova-micro-v1/.test(finderFaults[0].message) && /gemini/.test(finderFaults[0].message),
     "both models reported: " + finderFaults[0].message);
+});
+
+t("MILESTONE DEADLOCK: a milestone title carries the real total, so it can actually publish", () => {
+  // The Odyssey burned 58 PAID attempts across 2 days and published ZERO. The milestone branch emitted
+  // only the round number ("Crosses $150 Million") while every other surface carried the real total
+  // ($163.7M), so numberConsistencyGate blocked it — unwinnably, forever, retrying every 30 minutes.
+  const para = "Christopher Nolan epic keeps drawing crowds across the country with its scale and spectacle, "
+    + "and audiences return week after week to see the story told on the largest screens available today. ";
+  const out = buildBoxOfficeMarkdown({
+    article: { title: "The Odyssey Box Office", metaTitle: "x", dek: "d", metaDescription: "m",
+      body: para + para + para + para + para, keyTakeaways: [], faq: [], about: [{ name: "The Odyssey", type: "Movie" }], tags: [] },
+    trigger: { eventSlug: "the-odyssey-bo-update", title: "The Odyssey", priority: 96, signals: {} },
+    angle: { form: "BO-UPDATE" },
+    film: { title: "The Odyssey", dailyChart: { cume: "$163,678,510", dailyGross: "$8,200,000", theaters: "3,919", dayInRelease: "Day 5" } },
+    gathered: { cume: "$163,678,510", numbers: ["$163,678,510"], sources: [], outletCount: 4 },
+    boxData: { worldwide: "$300 million", budget: "$250 million", castRoles: [{ name: "Matt Damon" }], director: "Christopher Nolan" },
+    image: { image: "https://x/y.jpg", alt: "t" }, dateISO: new Date().toISOString(), momentum: { tag: "150m" },
+  });
+  assert.ok(/Crosses \$150 Million/.test(out.frontmatter.title), "milestone still leads the headline");
+  assert.ok(/163\.7 Million/.test(out.frontmatter.title), "and the REAL total is carried alongside it");
+  assert.equal(out.consistency.ok, true, "consistency gate passes: " + JSON.stringify(out.consistency.violations || []));
+  assert.equal(out.scaffold.length, 0, "publishes: " + JSON.stringify(out.scaffold));
+});
+
+t("REPEAT-FAILURE LOCKOUT: the same film failing the same way today is refused for FREE", () => {
+  // 33 of 41 ticks on 2026-07-24 spent money and published nothing (76% of the day's cost). The pattern
+  // is one candidate failing the SAME check repeatedly — the day's inputs have not changed, so a second
+  // paid attempt cannot succeed. Bound retries by REASON, not just by time.
+  const dirF = fs.mkdtempSync(path.join(os.tmpdir(), "bo-lock-"));
+  const st = { published: [], parked: [], failures: null, file: path.join(dirF, "s.json") };
+  const now = new Date("2026-07-25T20:00:00Z");
+  const R = "consistency: metaTitle: headlines domestic while the title has a milestone";
+  recordFailureX(st, "The Odyssey", R, { now });
+  assert.equal(failedBeforeTodayX(st, "The Odyssey", R, { now }), true, "identical reason blocked");
+  // figures inside the reason are normalised, so "$164M vs $150M" and "$171M vs $150M" are ONE reason
+  assert.equal(failedBeforeTodayX(st, "The Odyssey", "consistency: metaTitle: headlines domestic while the title has a milestone", { now }), true);
+  assert.equal(failedBeforeTodayX(st, "The Odyssey", "words 150 < 180", { now }), false, "a DIFFERENT failure still gets a try");
+  assert.equal(failedBeforeTodayX(st, "Moana", R, { now }), false, "another film is unaffected");
+  assert.equal(failureCountTodayX(st, "The Odyssey", { now }), 1);
+  // fresh numbers tomorrow => fresh attempts
+  assert.equal(failedBeforeTodayX(st, "The Odyssey", R, { now: new Date("2026-07-26T20:00:00Z") }), false, "resets on the LA day roll");
+  fs.rmSync(dirF, { recursive: true, force: true });
 });
 
 // ── summary ──────────────────────────────────────────────────────────────────────────────────────

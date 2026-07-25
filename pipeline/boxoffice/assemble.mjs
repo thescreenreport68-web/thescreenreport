@@ -399,8 +399,14 @@ export function buildBoxOfficeMarkdown({ article, trigger, angle, film, gathered
     const day = canon.dayInRelease;
     const dom = fmtUSDWords(canon.domestic.raw);
     const dg = canon.dailyGross ? fmtUSDWords(canon.dailyGross.raw) : null;
+    // THE MILESTONE DEADLOCK (fixed 2026-07-25). The milestone branch used to emit ONLY the round
+    // milestone ("Crosses $150 Million"), while every other surface — metaTitle, numbers section, table —
+    // carried the real running total ($163.7M). numberConsistencyGate correctly saw two different domestic
+    // figures and blocked the write. It was unwinnable and retried forever: The Odyssey burned 58 PAID
+    // attempts across two days and published ZERO times, ~8c/day of pure waste. The milestone now carries
+    // the real total alongside it, so both surfaces agree and the story can actually publish.
     title = cleanTitle(
-      msText ? `${film.title} Box Office: Crosses ${msText} Domestically${day ? ` on Day ${day}` : ""}`
+      msText ? `${film.title} Box Office: Crosses ${msText} Domestically as Total Hits ${dom}${day ? ` on Day ${day}` : ""}`
       : dg ? `${film.title} Box Office Day ${day || "Update"}: Adds ${dg} as Domestic Total Hits ${dom}`
       : `${film.title} Box Office${day ? ` Day ${day}` : " Update"}: Domestic Total Hits ${dom}`);
   }

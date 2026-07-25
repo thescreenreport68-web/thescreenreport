@@ -18,7 +18,7 @@ import * as writer from "./agents/writer.mjs";
 import * as qa from "./agents/qa.mjs";
 import * as imageAgent from "./agents/image.mjs";
 import { writeBoxOfficeArticle } from "./assemble.mjs";
-import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, parkCooling, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd, filmAttemptBudgetLeft, bumpFilmAttempt } from "./store.mjs";
+import { loadStore, alreadyPublished, recordPublished, parkAngle, parkedTries, parkCooling, clearParked, coveredEventSlugs, bumpZeroStreak, bumpDaySpend, daySpendUsd, filmAttemptBudgetLeft, bumpFilmAttempt, recordFailure, failedBeforeToday, failureCountToday } from "./store.mjs";
 import { runFind, readQueue } from "./find/findrun.mjs";
 import { dailyAudit } from "./audit.mjs";
 import { allowance, debit } from "./pacing.mjs";
@@ -201,10 +201,22 @@ export async function boRun({
       const hold = (reason, { park = true, score = null } = {}) => {
         report.held.push({ tag, reason, ...(score != null ? { score } : {}) });
         if (park && !dryRun) parkAngle(store, trigger.eventSlug, angle.form, reason);
+        // COST: remember WHY this film failed today. The same film failing the same check again today
+        // cannot succeed — the day's chart figures have not changed — so the next attempt is refused for
+        // free instead of paying research+writing+judge to reach the identical rejection.
+        if (!dryRun && !reviewDir) recordFailure(store, film.title, reason, { now: new Date(now) });
       };
 
       // ── DATA MODULE (deterministic TMDB) — runs first so the gatherer floor can see worldwide/budget ──
       await withTimeout(dataImpl(job), 60e3, `data ${tag}`).catch(() => { job.boxData = null; });
+
+      // COST GATE (free): a film that has already failed 2 distinct ways today has demonstrated its
+      // material is not publishable today. Every further attempt pays the full pipeline to reach the same
+      // conclusion. 33 of 41 ticks on 07-24 spent money and published nothing — this is that leak.
+      if (!reviewDir && !dryRun && failureCountToday(store, film.title, { now: new Date(now) }) >= 2) {
+        report.skipped.push({ tag, reason: "failed twice today already — no further paid attempts until tomorrow's numbers" });
+        continue;
+      }
 
       // PAID work starts here — spend one of the film's 3 daily EVENT attempts (live only). Chart updates
       // are exempt (bounded by materiality) and must not consume the budget an event story needs.
