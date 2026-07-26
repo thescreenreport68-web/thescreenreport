@@ -9,9 +9,9 @@
       "format": [
         "primary keyword not in title"
       ],
-      "cuts": 1,
+      "cuts": 3,
       "broken": [
-        "body 229w < 600"
+        "body 236w < 600"
       ]
     },
     "attempt2": {
@@ -22,7 +22,7 @@
       ],
       "cuts": 1,
       "broken": [
-        "body 229w < 600"
+        "body 236w < 600"
       ]
     }
   },
@@ -36,37 +36,37 @@
     },
     "outlet": "deadline.com"
   },
-  "holdReason": "broken article: body 229w < 600",
+  "holdReason": "broken article: body 236w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 229,
+      "words": 236,
       "h2s": 4,
       "h2Questions": 3,
       "internalLinks": 0,
-      "externalLinks": 0,
+      "externalLinks": 2,
       "hasSources": true,
       "faqCount": 3,
-      "ktCount": 4,
+      "ktCount": 5,
       "kwInTitle": false,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 41,
-      "avgSentence": 14,
-      "flesch": 57,
+      "maxSentence": 45,
+      "avgSentence": 18,
+      "flesch": 48,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
         "primary keyword not in title",
-        "body 229w < 600"
+        "body 236w < 600"
       ]
     },
     "hardBlocks": [
-      "body 229w < 600"
+      "body 236w < 600"
     ]
   },
   "audit": {
@@ -79,5 +79,90 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 218273
+  "ms": 240201,
+  "previousRuns": [
+    {
+      "id": "news-kieran-culkin-family-guy-devil",
+      "slug": "family-guy-sets-annual-halloween-holiday-specials-for-hulu-kieran-culk",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 229w < 600"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 229w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Family Guy",
+        "work": {
+          "title": "Family Guy",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "broken article: body 229w < 600",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 229,
+          "h2s": 4,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 3,
+          "ktCount": 4,
+          "kwInTitle": false,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 41,
+          "avgSentence": 14,
+          "flesch": 57,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "primary keyword not in title",
+            "body 229w < 600"
+          ]
+        },
+        "hardBlocks": [
+          "body 229w < 600"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 300w",
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 218273
+    }
+  ]
 }
