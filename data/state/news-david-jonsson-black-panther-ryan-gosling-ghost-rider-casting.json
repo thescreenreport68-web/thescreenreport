@@ -6,71 +6,66 @@
     "attempt1": {
       "score": null,
       "cat": "movies/news",
-      "format": [
-        "primary keyword not in title"
-      ],
-      "cuts": 1,
+      "format": [],
+      "cuts": 4,
       "broken": [
-        "body 546w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
       ]
     },
     "attempt2": {
       "score": null,
       "cat": "movies/news",
-      "format": [
-        "primary keyword not in title"
-      ],
-      "cuts": 1,
+      "format": [],
+      "cuts": 2,
       "broken": [
-        "body 538w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
       ]
     }
   },
   "editorial": {
     "status": "official",
-    "entity": "Black Panther 3",
+    "entity": "Ryan Gosling",
     "work": {
-      "title": "Black Panther 3",
+      "title": "Ghost Rider",
       "year": 2028,
       "medium": "movie"
     },
-    "outlet": "washingtonpost.com"
+    "outlet": "apnews.com"
   },
-  "holdReason": "broken article: body 538w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+  "holdReason": "broken article: 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about; prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 538,
-      "h2s": 4,
+      "words": 607,
+      "h2s": 6,
       "h2Questions": 2,
       "internalLinks": 0,
-      "externalLinks": 0,
-      "hasSources": false,
+      "externalLinks": 2,
+      "hasSources": true,
       "faqCount": 4,
       "ktCount": 4,
-      "kwInTitle": false,
+      "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 34,
-      "avgSentence": 20,
-      "flesch": 57,
-      "bannedTells": 0,
+      "maxSentence": 31,
+      "avgSentence": 18,
+      "flesch": 56,
+      "bannedTells": 1,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "primary keyword not in title",
-        "body 538w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+        "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
       ]
     },
     "hardBlocks": [
-      "body 538w < 600",
-      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+      "prompt-leak / meta-refusal phrase reached reader copy (e.g. 'not detailed in the provided facts' / 'the reference facts') — rewrite or omit"
     ]
   },
   "audit": {
@@ -82,5 +77,93 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 256017
+  "ms": 339935,
+  "previousRuns": [
+    {
+      "id": "news-david-jonsson-black-panther-ryan-gosling-ghost-rider-casting",
+      "slug": "comic-con-2026-david-jonsson-is-new-black-panther-ryan-gosling-joins-m",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 546w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 538w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Black Panther 3",
+        "work": {
+          "title": "Black Panther 3",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "washingtonpost.com"
+      },
+      "holdReason": "broken article: body 538w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 538,
+          "h2s": 4,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": false,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 34,
+          "avgSentence": 20,
+          "flesch": 57,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "primary keyword not in title",
+            "body 538w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "hardBlocks": [
+          "body 538w < 600",
+          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 256017
+    }
+  ]
 }

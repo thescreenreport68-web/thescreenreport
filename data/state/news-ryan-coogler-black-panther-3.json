@@ -1,0 +1,71 @@
+{
+  "id": "news-ryan-coogler-black-panther-3",
+  "slug": "ryan-coogler-confirms-black-panther-3-is-coming-will-feature-a-new-t-c",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "a 60-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 1,
+      "broken": [
+        "body 483w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Black Panther 3",
+    "work": {
+      "title": "Black Panther 3",
+      "year": 2028,
+      "medium": "movie"
+    },
+    "outlet": "Entertainment Weekly"
+  },
+  "holdReason": "broken article: body 561w < 600",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 561,
+      "h2s": 6,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 60,
+      "avgSentence": 18,
+      "flesch": 49,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 4,
+      "hardBlocks": [
+        "body 561w < 600",
+        "a 60-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": [
+      "body 561w < 600"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 149155
+}
