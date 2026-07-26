@@ -2512,11 +2512,11 @@
    "key": "the-sheep-detectives-now-streaming|NOW-STREAMING",
    "eventSlug": "the-sheep-detectives-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 168 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 2,
-   "at": "2026-07-24T17:04:29.340Z",
-   "dead": false,
-   "expiresAt": "2026-07-24T07:07:22.224Z"
+   "reason": "words 174 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-26T15:37:52.015Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T15:37:52.015Z"
   },
   {
    "key": "the-odyssey-bo-update-100m|BO-UPDATE",
@@ -3021,16 +3021,32 @@
    "reason": "words 130 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
    "tries": 1,
    "at": "2026-07-26T15:11:26.272Z"
+  },
+  {
+   "key": "the-dink-now-streaming|NOW-STREAMING",
+   "eventSlug": "the-dink-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "words 102 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-26T15:35:29.602Z"
+  },
+  {
+   "key": "the-walking-dead-dead-city-trending-tv|TRENDING-TV",
+   "eventSlug": "the-walking-dead-dead-city-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 1,
+   "at": "2026-07-26T15:40:19.619Z"
   }
  ],
- "zeroStreak": 3,
+ "zeroStreak": 4,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.31933
+  "usd": 0.38559
  },
  "pace": {
-  "tokens": 1.4512872666666674,
-  "lastMs": 1785078248768
+  "tokens": 2.2797866555555566,
+  "lastMs": 1785079887558
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3047,7 +3063,10 @@
    "sullivan's crossing": 1,
    "off campus": 1,
    "spider-noir": 1,
-   "mortal kombat ii": 1
+   "mortal kombat ii": 1,
+   "the dink": 1,
+   "the sheep detectives": 1,
+   "the walking dead: dead city": 1
   }
  },
  "failures": {
@@ -3099,6 +3118,15 @@
    ],
    "mortal kombat ii": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "the dink": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "the sheep detectives": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "the walking dead: dead city": [
+    "soft-floor engagement # < # | soft-floor humanvoice # < #"
    ]
   }
  }
