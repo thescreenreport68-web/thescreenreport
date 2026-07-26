@@ -3026,27 +3026,27 @@
    "key": "the-dink-now-streaming|NOW-STREAMING",
    "eventSlug": "the-dink-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 102 < 180 (owner-set ~200-word minimum) | soft-floor engagement 2 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 1,
-   "at": "2026-07-26T15:35:29.602Z"
+   "reason": "soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
+   "tries": 2,
+   "at": "2026-07-26T18:04:43.794Z"
   },
   {
    "key": "the-walking-dead-dead-city-trending-tv|TRENDING-TV",
    "eventSlug": "the-walking-dead-dead-city-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "soft-floor engagement 4 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 1,
-   "at": "2026-07-26T15:40:19.619Z"
+   "reason": "soft-floor engagement 3 < 5",
+   "tries": 2,
+   "at": "2026-07-26T18:06:22.787Z"
   }
  ],
- "zeroStreak": 8,
+ "zeroStreak": 9,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.4276
+  "usd": 0.47041
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785087080386
+  "lastMs": 1785088882576
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3064,9 +3064,9 @@
    "off campus": 1,
    "spider-noir": 1,
    "mortal kombat ii": 2,
-   "the dink": 1,
+   "the dink": 2,
    "the sheep detectives": 1,
-   "the walking dead: dead city": 1,
+   "the walking dead: dead city": 2,
    "lee cronin's the mummy": 1,
    "lucky": 1
   }
@@ -3123,13 +3123,15 @@
     "fidelity: # unsupported figures/claims — draft-level failure"
    ],
    "the dink": [
-    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem",
+    "soft-floor engagement # < # | soft-floor humanvoice # < #"
    ],
    "the sheep detectives": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ],
    "the walking dead: dead city": [
-    "soft-floor engagement # < # | soft-floor humanvoice # < #"
+    "soft-floor engagement # < # | soft-floor humanvoice # < #",
+    "soft-floor engagement # < #"
    ],
    "lee cronin's the mummy": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
