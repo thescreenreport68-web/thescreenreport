@@ -1,0 +1,172 @@
+{
+  "ts": "2026-07-26T10:01:25.696Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "kelly-clarkson-shares-candid-thoughts-on-single-life-during-vegas-residency",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "geo-no-attribution:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 4
+    }
+  ],
+  "topics": 10,
+  "held": 7,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.276408,
+  "costPerPublished": 0.276408,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 54,
+      "in": 147636,
+      "out": 30802,
+      "usd": 0.11781873999999996
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 12,
+      "in": 21052,
+      "out": 122646,
+      "usd": 0.030969314999999997
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 8,
+      "in": 10447,
+      "out": 6154,
+      "usd": 0.0027841514
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 44,
+      "in": 195633,
+      "out": 96580,
+      "usd": 0.09839592750000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 41,
+      "in": 96224,
+      "out": 24834,
+      "usd": 0.018930680000000002
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 10,
+      "in": 8631,
+      "out": 2399,
+      "usd": 0.00343245025
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 7,
+      "in": 23171,
+      "out": 5521,
+      "usd": 0.00407625235
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 9,
+      "errors": 0,
+      "in": 21056,
+      "out": 1778,
+      "usd": 0.0107618,
+      "ms": 12065
+    },
+    "background": {
+      "calls": 14,
+      "errors": 6,
+      "in": 11811,
+      "out": 21204,
+      "usd": 0.0031403000000000004,
+      "ms": 415048
+    },
+    "detailFinder": {
+      "calls": 11,
+      "errors": 3,
+      "in": 14025,
+      "out": 66302,
+      "usd": 0,
+      "ms": 643323
+    },
+    "synthesizer": {
+      "calls": 9,
+      "errors": 1,
+      "in": 9598,
+      "out": 6094,
+      "usd": 0.00219987,
+      "ms": 110016
+    },
+    "writer": {
+      "calls": 43,
+      "errors": 0,
+      "in": 194492,
+      "out": 96201,
+      "usd": 0.08695710000000002,
+      "ms": 2194502
+    },
+    "verify": {
+      "calls": 63,
+      "errors": 31,
+      "in": 84968,
+      "out": 14982,
+      "usd": 0.0558558,
+      "ms": 214314
+    },
+    "judge": {
+      "calls": 15,
+      "errors": 1,
+      "in": 29723,
+      "out": 4987,
+      "usd": 0.004850620000000001,
+      "ms": 51699
+    },
+    "claimAudit": {
+      "calls": 12,
+      "errors": 4,
+      "in": 24641,
+      "out": 38152,
+      "usd": 0,
+      "ms": 467185
+    },
+    "headline": {
+      "calls": 8,
+      "errors": 0,
+      "in": 8040,
+      "out": 2371,
+      "usd": 0.00265534,
+      "ms": 75833
+    },
+    "dedup": {
+      "calls": 2,
+      "errors": 0,
+      "in": 591,
+      "out": 28,
+      "usd": 0.00014545,
+      "ms": 2837
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1559,
+      "out": 98,
+      "usd": 0.00019510000000000003,
+      "ms": 1745
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 541,
+      "out": 68,
+      "usd": 0.0000813,
+      "ms": 989
+    }
+  }
+}
