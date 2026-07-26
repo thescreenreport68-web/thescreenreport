@@ -1,0 +1,164 @@
+{
+  "ts": "2026-07-26T19:01:30.710Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "jessica-biel-wishes-she-could-keep-her-kids-in-her-pocket",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "metaTitle-contract:repaired",
+        "metaDescription-soft:logged"
+      ],
+      "headline": [
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 6
+    }
+  ],
+  "topics": 6,
+  "held": 2,
+  "rejected": 1,
+  "skipped": 1,
+  "blocked": 1,
+  "costUSD": 0.080033,
+  "costPerPublished": 0.080033,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 19,
+      "in": 44363,
+      "out": 7611,
+      "usd": 0.0323364
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 6,
+      "in": 8156,
+      "out": 56903,
+      "usd": 0.015324919999999999
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 3,
+      "in": 2980,
+      "out": 1325,
+      "usd": 0.0006576899999999999
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 17,
+      "in": 67091,
+      "out": 33134,
+      "usd": 0.027341319
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 12,
+      "in": 15474,
+      "out": 1960,
+      "usd": 0.0023314
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 4633,
+      "out": 1984,
+      "usd": 0.0006902168500000001
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 3,
+      "in": 2612,
+      "out": 876,
+      "usd": 0.001351495
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9798,
+      "out": 745,
+      "usd": 0.0048019,
+      "ms": 5951
+    },
+    "background": {
+      "calls": 3,
+      "errors": 0,
+      "in": 3262,
+      "out": 20958,
+      "usd": 0,
+      "ms": 104693
+    },
+    "detailFinder": {
+      "calls": 4,
+      "errors": 1,
+      "in": 3450,
+      "out": 25902,
+      "usd": 0,
+      "ms": 170408
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2980,
+      "out": 1325,
+      "usd": 0.0005067,
+      "ms": 58493
+    },
+    "writer": {
+      "calls": 17,
+      "errors": 0,
+      "in": 67091,
+      "out": 33134,
+      "usd": 0.029968739999999997,
+      "ms": 920773
+    },
+    "verify": {
+      "calls": 16,
+      "errors": 1,
+      "in": 34565,
+      "out": 6232,
+      "usd": 0.0249165,
+      "ms": 36702
+    },
+    "judge": {
+      "calls": 6,
+      "errors": 0,
+      "in": 10410,
+      "out": 1491,
+      "usd": 0.0016374,
+      "ms": 8269
+    },
+    "claimAudit": {
+      "calls": 5,
+      "errors": 2,
+      "in": 6077,
+      "out": 12027,
+      "usd": 0,
+      "ms": 212187
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2612,
+      "out": 876,
+      "usd": 0.0008986,
+      "ms": 27540
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 1568,
+      "out": 92,
+      "usd": 0.00019360000000000002,
+      "ms": 2171
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1124,
+      "out": 111,
+      "usd": 0.00015680000000000002,
+      "ms": 2704
+    }
+  }
+}
