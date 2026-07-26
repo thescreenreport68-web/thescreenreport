@@ -1,0 +1,112 @@
+{
+ "runId": "run-2026-07-26T10-01-28",
+ "mode": "live",
+ "startedAt": "2026-07-26T10:01:28.619Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "slug": "obsession-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/obsession-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "motor-city-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.09,
+  "behind": true,
+  "expected": 25.63,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.10721
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T10:05:35.520Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3409,
+    "out": 587,
+    "usd": 0.0002,
+    "ms": 6263
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6414,
+    "out": 307,
+    "usd": 0.00076,
+    "ms": 2049
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1429,
+    "out": 2382,
+    "usd": 0.00056,
+    "ms": 51072
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3977,
+    "out": 1912,
+    "usd": 0.00157,
+    "ms": 50842
+   }
+  },
+  "totalUsd": 0.00309
+ },
+ "openrouterTotalUsd": 0.00368
+}

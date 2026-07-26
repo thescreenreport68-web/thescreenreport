@@ -1454,6 +1454,20 @@
    "headlineNumberRaw": 17946916,
    "filmKey": "the invite",
    "chartDate": null
+  },
+  {
+   "key": "obsession-bo-update-d71|BO-UPDATE",
+   "at": "2026-07-26T10:05:35.516Z",
+   "eventSlug": "obsession-bo-update-d71",
+   "form": "BO-UPDATE",
+   "slug": "obsession-box-office-tracker",
+   "title": "Obsession Hits $448M Worldwide: Michael Johnston's Indie Horror on a $750K Budget",
+   "film": "Obsession",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 260344235,
+   "filmKey": "obsession",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2877,16 +2891,24 @@
    "reason": "fidelity: 11 unsupported figures/claims — draft-level failure",
    "tries": 2,
    "at": "2026-07-26T08:33:21.938Z"
+  },
+  {
+   "key": "young-washington-bo-update-d22|BO-UPDATE",
+   "eventSlug": "young-washington-bo-update-d22",
+   "form": "BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 1,
+   "at": "2026-07-26T10:03:20.849Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.10353
+  "usd": 0.10721
  },
  "pace": {
   "tokens": 0,
-  "lastMs": 1785058288907
+  "lastMs": 1785060088619
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -2919,6 +2941,9 @@
    "toy story 5": [
     "# unverified claim(s) cut# unrecovered",
     "fidelity: # unsupported figures/claims — draft-level failure"
+   ],
+   "young washington": [
+    "# unverified claim(s) cut# unrecovered"
    ]
   }
  }
