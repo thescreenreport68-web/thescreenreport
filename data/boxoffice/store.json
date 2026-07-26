@@ -3037,16 +3037,24 @@
    "reason": "soft-floor engagement 3 < 5",
    "tries": 2,
    "at": "2026-07-26T18:06:22.787Z"
+  },
+  {
+   "key": "reacher-trending-tv|TRENDING-TV",
+   "eventSlug": "reacher-trending-tv",
+   "form": "TRENDING-TV",
+   "reason": "platform: names netflix not in confirmed providers",
+   "tries": 1,
+   "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 9,
+ "zeroStreak": 10,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.47041
+  "usd": 0.4833
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785088882576
+  "lastMs": 1785090688497
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3068,7 +3076,8 @@
    "the sheep detectives": 1,
    "the walking dead: dead city": 2,
    "lee cronin's the mummy": 1,
-   "lucky": 1
+   "lucky": 1,
+   "reacher": 1
   }
  },
  "failures": {
@@ -3138,6 +3147,9 @@
    ],
    "lucky": [
     "words # < # (owner-set ~#-word minimum)"
+   ],
+   "reacher": [
+    "platform: names netflix not in confirmed providers"
    ]
   }
  }
