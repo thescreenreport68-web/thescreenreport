@@ -155,11 +155,42 @@ reactions:
       At this point, the majority of Marvel fans expect that Stranger Things
       star Sadie Sink will be revealed as X-Men’s Jean Grey in Spider-Man: Brand
       New Day – but it’s not definite.
+  - speaker: Destin Daniel Cretton
+    platform: interview
+    quote: >-
+      Some of the best scenes in this movie are when you see the three of them
+      together. They have such a magical chemistry that you can’t really fake
+      onscreen. It’s a gift that was given to me by Jon Watts.
+  - speaker: Destin Daniel Cretton
+    platform: interview
+    quote: >-
+      I wish people didn’t know anything when they go in to watch this movie,
+      but we’re not doing it for any other reason but to protect the experience
+      of the fans. And whoever goes on opening weekend, you are going to have a
+      much cooler experience if you go in not knowing certain things.
+  - speaker: Destin Daniel Cretton
+    connection: director
+    platform: interview
+    quote: >-
+      But what we definitely want to believe is that we didn’t actually go back
+      in time and delete somebody so that everything changed from that point on.
+      It’s really just a memory erasure of everybody’s brains. But! What happens
+      to print or names? I can’t even start.
+  - speaker: A viewer
+    date: '2026-07-25'
+    quote: >-
+      Jon Bernthal reading The Punisher comic book on the set of ‘SPIDER-MAN:
+      BRAND NEW DAY’
+  - speaker: A viewer
+    date: '2026-07-25'
+    quote: >-
+      New international poster for ‘SPIDER-MAN: BRAND NEW DAY’ In theaters on
+      July 31.
 fanConsensus: >-
   Fans are largely positive about the film's mature, emotionally weighty take on
   Spider-Man, celebrating his resilient humor amidst trauma, though a notable
   minority is vocally tired of the character's perpetual suffering.
-updatedCount: 2
+updatedCount: 3
 trendScore: 25
 signals:
   popularity: 100
@@ -174,7 +205,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-25T16:31:07.217Z'
+dateModified: '2026-07-26T08:31:21.408Z'
 provenance:
   parentEventSlug: spider-man-brand-new-day-2026
   primaryEntity: 'Spider-Man: Brand New Day'
@@ -188,7 +219,7 @@ imageAlt: Spider-Man Brand New Day poster Tom Holland
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
-updated: '2026-07-25T16:31:07.217Z'
+updated: '2026-07-26T08:31:21.408Z'
 ---
 
 The first wave of fan reactions to **[Spider-Man](/movies/spider-man-brand-new-day-has-fans-split-hulk-fears-downey-s-villain-tease-and/): Brand New Day** is here, and yeah—the internet went into full meltdown. But not everyone is on the same page. The discourse is split between emotional connection and superhero fatigue, and it's not cooling off anytime soon.
