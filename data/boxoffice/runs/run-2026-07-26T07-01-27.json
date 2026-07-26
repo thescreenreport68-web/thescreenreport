@@ -1,0 +1,146 @@
+{
+ "runId": "run-2026-07-26T07-01-27",
+ "mode": "live",
+ "startedAt": "2026-07-26T07:01:27.863Z",
+ "films": 48,
+ "published": [],
+ "held": [
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "soft-floor humanVoice 3 < 5",
+   "score": 50
+  },
+  {
+   "tag": "the-boss-baby-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "2 unverified claim(s) cut, unrecovered",
+   "score": 65
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "words 145 < 180 (owner-set ~200-word minimum)",
+   "score": 85
+  },
+  {
+   "tag": "avatar-the-last-airbender-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "soft-floor humanVoice 4 < 5",
+   "score": 55
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "enola-holmes-3-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "regretting-you-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "death-on-the-nile-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "joy-ride-netflix-top10-w2026-07-19×NETFLIX-TOP10",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "little-house-on-the-prairie-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "i-will-find-you-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  },
+  {
+   "tag": "the-hawk-trending-tv-w2026-07-19×TRENDING-TV",
+   "reason": "parked dead"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 25.07,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 38,
+ "audit": {
+  "day": "2026-07-25",
+  "sampled": [
+   "disclosure-day-box-office-tracker",
+   "backrooms-box-office-tracker",
+   "jackass-best-and-last-box-office-tracker"
+  ],
+  "issues": []
+ },
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.08437
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T07:10:00.058Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 6,
+    "errors": 0,
+    "in": 9682,
+    "out": 2144,
+    "usd": 0.00183,
+    "ms": 9161
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3588,
+    "out": 358,
+    "usd": 0.00018,
+    "ms": 1646
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 0,
+    "in": 2616,
+    "out": 3203,
+    "usd": 0.00081,
+    "ms": 73338
+   },
+   "writer": {
+    "calls": 8,
+    "errors": 0,
+    "in": 25238,
+    "out": 8424,
+    "usd": 0.02357,
+    "ms": 93896
+   },
+   "qa": {
+    "calls": 31,
+    "errors": 0,
+    "in": 86992,
+    "out": 13689,
+    "usd": 0.06032,
+    "ms": 87056
+   },
+   "categorize": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3627,
+    "out": 5,
+    "usd": 0.00036,
+    "ms": 532
+   }
+  },
+  "totalUsd": 0.08707
+ },
+ "openrouterTotalUsd": 0.08437
+}
