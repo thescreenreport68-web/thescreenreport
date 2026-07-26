@@ -1412,6 +1412,20 @@
    "headlineNumberRaw": 148638350,
    "filmKey": "minions & monsters",
    "chartDate": null
+  },
+  {
+   "key": "motor-city-bo-update-d1|BO-UPDATE",
+   "at": "2026-07-26T08:35:22.771Z",
+   "eventSlug": "motor-city-bo-update-d1",
+   "form": "BO-UPDATE",
+   "slug": "motor-city-box-office-tracker",
+   "title": "Motor City",
+   "film": "Motor City",
+   "tmdbId": null,
+   "eventType": "boxoffice",
+   "headlineNumberRaw": 850000,
+   "filmKey": "motor city",
+   "chartDate": null
   }
  ],
  "parked": [
@@ -2832,19 +2846,19 @@
    "key": "toy-story-5-bo-update-d36|BO-UPDATE",
    "eventSlug": "toy-story-5-bo-update-d36",
    "form": "BO-UPDATE",
-   "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 1,
-   "at": "2026-07-26T08:05:36.460Z"
+   "reason": "fidelity: 11 unsupported figures/claims — draft-level failure",
+   "tries": 2,
+   "at": "2026-07-26T08:33:21.938Z"
   }
  ],
  "zeroStreak": 0,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.09537
+  "usd": 0.09896
  },
  "pace": {
-  "tokens": 0.09267932142857127,
-  "lastMs": 1785052884097
+  "tokens": 0,
+  "lastMs": 1785054680652
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -2875,7 +2889,8 @@
     "# unverified claim(s) cut# unrecovered"
    ],
    "toy story 5": [
-    "# unverified claim(s) cut# unrecovered"
+    "# unverified claim(s) cut# unrecovered",
+    "fidelity: # unsupported figures/claims — draft-level failure"
    ]
   }
  }

@@ -1,0 +1,105 @@
+{
+ "runId": "run-2026-07-26T08-31-20",
+ "mode": "live",
+ "startedAt": "2026-07-26T08:31:20.652Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "motor-city-bo-update×BO-UPDATE",
+   "slug": "motor-city-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/motor-city-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "fidelity: 11 unsupported figures/claims — draft-level failure",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.19,
+  "behind": true,
+  "expected": 25.26,
+  "allow": 1
+ },
+ "queueBuilt": 10,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.09896
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T08:35:22.774Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1034,
+    "out": 534,
+    "usd": 0.00032,
+    "ms": 2154
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3454,
+    "out": 1741,
+    "usd": 0.00036,
+    "ms": 3554
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6360,
+    "out": 335,
+    "usd": 0.00077,
+    "ms": 1980
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1444,
+    "out": 1146,
+    "usd": 0.00034,
+    "ms": 12576
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 3868,
+    "out": 1955,
+    "usd": 0.00156,
+    "ms": 65775
+   }
+  },
+  "totalUsd": 0.00334
+ },
+ "openrouterTotalUsd": 0.00359
+}
