@@ -6,46 +6,66 @@ subcategory: news
 author: editorial-team
 date: '2026-07-20T07:31:26.455Z'
 dek: >-
-  The major studios will occupy Hall H starting July 23, marking a renewed push
-  for the convention after a scaled-back year.
+  Ryan Gosling will lead a new Ghost Rider film, while Ryan Coogler returns for
+  Black Panther III in 2028. The Hall H panel also delivered a new look at
+  Avengers: Doomsday.
 metaTitle: 'Marvel, HBO, Apple TV+ Return to San Diego Comic-Con'
 metaDescription: >-
-  Marvel Studios, HBO, and Apple TV+ are among the studios returning to San
-  Diego Comic-Con in July 2026, according to reports.
+  Marvel Studios announced a Ghost Rider film starring Ryan Gosling, Black
+  Panther III, and new Avengers: Doomsday footage at its 2026 Comic-Con Hall H
+  panel.
 tags:
-  - san diego comic-con 2026
-  - comic-con international
+  - marvel studios comic-con
   - marvel studios
-  - hbo
-  - heidi macdonald
-  - marvel
-targetKeyword: San Diego Comic-Con 2026
+  - kevin feige
+  - ryan gosling
+  - shawn levy
+  - ghost rider
+  - black panther iii
+  - 'avengers: doomsday'
+targetKeyword: Marvel Studios Comic-Con
 keyTakeaways:
   - >-
-    Marvel Studios, HBO, and Apple TV+ are confirmed to return to San Diego
-    Comic-Con in 2026.
+    Ryan Gosling will star in a Ghost Rider film directed by Shawn Levy for a
+    2028 release.
   - >-
-    The convention begins July 23, with major panels expected in the 6,500-seat
-    Hall H.
+    Ryan Coogler will direct Black Panther III, starring David Jonsson, for
+    December 15, 2028.
   - >-
-    This marks a renewed industry push after a period of scaled-back
-    participation.
+    Avengers: Doomsday's massive cast assembled on stage, and a new trailer
+    focused on Doctor Doom.
   - >-
-    Experts note the event's ability to cut through social media noise to
-    generate excitement.
+    Spider-Man: Brand New Day footage showed Tom Holland's hero teaming up with
+    Jon Bernthal's Punisher.
+  - 'Avengers: Endgame will return to theaters on September 25 with new footage.'
 faq:
-  - q: When does San Diego Comic-Con 2026 start?
-    a: The 2026 edition of San Diego Comic-Con begins on July 23.
-  - q: Which venue will the major studios use?
+  - q: Who will direct the new Ghost Rider movie?
     a: >-
-      Major studios like Marvel Studios are expected to present in Hall H, the
-      convention's main hall.
-  - q: Why did studios scale back last year?
+      Shawn Levy, the director of Deadpool & Wolverine and the upcoming Star
+      Wars: Starfighter, will direct the Ghost Rider film starring Ryan Gosling.
+      He confirmed his involvement on stage at Comic-Con.
+  - q: When does Black Panther III come out?
     a: >-
-      According to reports, last year's reduced participation was part of a
-      broader Hollywood belt-tightening period following some box office
-      disappointments.
-about: []
+      Ryan Coogler's Black Panther III is scheduled for release on December 15,
+      2028. The film will star David Jonsson as T'Challa II, the son of Chadwick
+      Boseman's original character.
+  - q: Was the original Avengers cast at Comic-Con?
+    a: >-
+      Yes. Robert Downey Jr. (Doctor Doom), Chris Evans, and many other stars
+      from across the MCU appeared on stage during the Avengers: Doomsday
+      segment of the panel, creating a major event for the Hall H crowd.
+  - q: Is there a new Spider-Man movie coming out soon?
+    a: >-
+      Yes. Spider-Man: Brand New Day, starring Tom Holland and Jon Bernthal,
+      opens in late July 2026. Footage shown at Comic-Con featured Spider-Man
+      and the Punisher fighting the Hulk together.
+about:
+  - name: Ghost Rider
+    type: Movie
+  - name: Black Panther III
+    type: Movie
+  - name: 'Avengers: Doomsday'
+    type: Movie
 imageAlt: 'Marvel Studios, HBO, Apple TV+ Return to San Diego Comic-Con in 2026'
 imageCredit: Photo via scmp.com
 image: >-
@@ -53,9 +73,9 @@ image: >-
 imageWidth: 1200
 imageHeight: 630
 formatTag: news
-trendScore: 77
+trendScore: 68
 signals:
-  recency: 24
+  recency: 16
   corroboration: 8
   status: 18
   type: 9
@@ -65,62 +85,85 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: san-diego-comic-con-2026-return
+  learned: -1
+eventSlug: marvel-studios-hall-h-comic-con-announcements
 eventType: announcement
-outletCount: 1
+outletCount: 6
 provenance:
-  eventSlug: san-diego-comic-con-2026-return
-  primaryEntity: Comic-Con International
+  eventSlug: marvel-studios-hall-h-comic-con-announcements
+  primaryEntity: Marvel Studios
   eventType: announcement
   sensitivity: normal
   status: DEVELOPING
-  attribution: scmp.com
+  attribution: gizmodo.com
   outlets:
-    - South China Morning Post
-  publishedAt: '2026-07-20T07:31:26.455Z'
-dateModified: '2026-07-20T07:31:26.455Z'
+    - Gizmodo
+  publishedAt: '2026-07-26T13:56:00.002Z'
+dateModified: '2026-07-26T14:10:54.231Z'
 storyStatus: DEVELOPING
+infoCard:
+  director: Various
+  cast:
+    - Ryan Gosling
+    - David Jonsson
+    - Robert Downey Jr.
+  releaseYear: 2026-2028
+  genre: Superhero
+  whereToWatch: Theaters
 newsType: general
 pullQuote:
-  text: >-
-    large panels have proven they have the ability to cut through the noise of
-    social media and other distractions to create excitement
-  attribution: 'Heidi MacDonald, editor of The Beat, to the South China Morning Post'
+  text: 'Bro, let’s ride.'
+  attribution: 'Shawn Levy, director, to Ryan Gosling about Ghost Rider'
 keyPoints:
+  - Marvel Studios unveiled its upcoming film slate at Comic-Con 2026.
   - >-
-    Major studios like Marvel, HBO, and Apple TV+ are returning to San Diego
-    Comic-Con in 2026.
-  - The event begins July 23 with panels in Hall H.
+    Ryan Gosling is set to star as Ghost Rider in a 2028 film directed by Shawn
+    Levy.
   - >-
-    The return marks a shift from last year's scaled-back industry
-    participation.
-seriesContext:
-  network: ''
-  premiere: ''
-  status: ''
-  seasons: ''
-  creator: ''
-  cast: []
-  whereToWatch: ''
-seriesStatus:
-  show: ''
-  network: ''
-  status: ''
-  season: ''
-  window: ''
-  castAdded: []
+    Ryan Coogler will direct Black Panther III for a December 2028 release, with
+    David Jonsson starring.
+updateCount: 1
 ---
 
-Marvel Studios, HBO, and Apple TV+ will return to San Diego Comic-Con in 2026, according to the South China Morning Post.
+Marvel Studios announced a slate of new films and major updates during its Hall H presentation at San Diego Comic-Con 2026. The panel, the studio's first at the convention in two years, served as a major showcase for the future of the [Marvel](/movies/ryan-gosling-as-ghost-rider-has-fans-split-down-the-middle/) Cinematic Universe.
 
-This follows a year where many of Hollywood's largest players stayed away from the event.
+[Kevin Feige](/movies/adam-driver-mcu-tradition-kevin-feige-laughs-off-actor-s-habit-of-turning/), Marvel Studios president, opened the event by focusing on upcoming movies. "Today, we’re mainly going to talk about movies," Feige told the crowd, according to Marvel.com. "We’re mainly going to talk about movies because that is what brings us together in the world."
 
-## Why are studios returning?
+## What New Movies Were Announced?
 
-The return signals a renewed industry interest in the marketing opportunity provided by Comic-Con. Heidi MacDonald, editor of the comic book news website The Beat, told the South China Morning Post that large panels have proven they can "cut through the noise of social media and other distractions to create excitement."
+The panel featured several major project reveals.
 
-Last year's scaled-back participation was attributed to Hollywood belt-tightening following some box office disappointments. The cyclical nature of Comic-Con's lineup since the pandemic has seen major names alternate between absence and strong pushes.
+* **Ghost Rider:** [Ryan Gosling](/movies/ryan-gosling-confirms-ghost-rider-role-for-2028-marvel-movie/) will star in a new Ghost Rider film, directed by Shawn Levy and scheduled for a 2028 release.
+* **Black Panther III:** Director Ryan Coogler will return for a third Black Panther film, set for release on December 15, 2028, and starring David Jonsson as T'Challa II.
+* **Avengers: Endgame Encore:** The 2019 blockbuster will return to theaters starting September 25 with new footage.
 
-## What does this mean for fans?
+## Who Is Starring in Ghost Rider and Black Panther 3?
 
-The confirmed return of these flagship brands suggests a robust schedule of panels and announcements for the 2026 event. While specific projects have not been detailed, the presence of [Marvel](/movies/fans-embrace-a-darker-joking-spider-man-in-brand-new-day-but-some-are-tired-of/), HBO, and Apple TV+ points to upcoming film and television reveals.
+Ryan Gosling's casting as the Spirit of Vengeance was a major surprise. Levy, who directed Gosling in the upcoming *Star Wars: Starfighter*, will helm the project. "We spent a lot of time last year making *Star Wars: Starfighter*," Levy told the Hall H audience, as reported by Marvel.com. "And as Ryan started talking about his vision for this character, we started riffing, and I finally said, 'Bro, let’s ride.'"
+
+For *Black Panther III*, the mantle of the hero will be taken up by David Jonsson, who will play a grown-up version of T'Challa II, the son of the late Chadwick Boseman's character. Ryan Coogler is back to direct, and the film will be shot on film.
+
+## What Did We Learn About Avengers: Doomsday?
+
+The presentation for *Avengers: Doomsday* was a spectacle, with a massive cast reveal. Actors including Robert Downey Jr., Chris Evans, Pedro Pascal, Hayley Atwell, Paul Rudd, Anthony Mackie, and Letitia Wright appeared from stages at the back of Hall H and walked through the crowd to the main stage.
+
+A new trailer focused on the threat of Doctor Doom, played by Downey. The footage showed Doom raising an army of Sentinels and featured tense moments with Pedro Pascal's Reed Richards. Downey, in character, addressed the crowd wearing Doom masks. "It's not easy being green," he said. "I need a lot of help. I need this whole family around me to finally assist me in being an arch-enemy, which is daunting."
+
+The panel was also crashed by Ryan Reynolds in full Deadpool costume, who jokingly asked the filmmakers if there was room for additional photography to add him to the film.
+
+## How Does Spider-Man: Brand New Day Fit In?
+
+With *Spider-Man: Brand New Day* opening in late July, star Jon Bernthal appeared to show exclusive footage. The clip featured Tom Holland's Spider-Man teaming up with Bernthal's Punisher for a battle against the Hulk, showcasing their combative partnership. The film represents the next immediate release in the MCU schedule.
+
+## What Is the Next Step for These Projects?
+
+The most immediate next step is the release of *Spider-Man: Brand New Day*. For the newly announced films, *Ghost Rider* and *Black Panther III* are now in active development for their 2028 releases. *Avengers: Doomsday* remains on track for its December 2026 debut, with the *Avengers: Endgame* re-release serving as a lead-in this September. Specific production start dates for the 2028 films were not confirmed.
+
+## The Making of Guardians of the Galaxy Vol. 3 Documentary
+
+A behind-the-scenes documentary about the creation of a recent MCU film is currently available for streaming. *Marvel Studios Assembled: The Making of the Guardians of the Galaxy Vol. 3* is a 58-minute documentary directed by Brad Baruh, according to TMDB. It features cast and crew including Chris Pratt, Zoe Saldaña, and director James Gunn recounting the film's production.
+
+The documentary, which is a streaming-original on Disney Plus as of July 2026, explores how the final Guardians film was conceived and delivered. Its premise, per TMDB, highlights the emotional farewells from the cast and crew as they closed this chapter of the saga.
+
+## Sources
+- [Marvel.com](https://www.marvel.com)
