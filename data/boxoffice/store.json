@@ -1621,11 +1621,11 @@
    "key": "voicemails-for-isabelle-now-streaming|NOW-STREAMING",
    "eventSlug": "voicemails-for-isabelle-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 146 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-25T14:06:03.221Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T13:35:08.989Z"
+   "reason": "8 unverified claim(s) cut, unrecovered",
+   "tries": 3,
+   "at": "2026-07-26T14:54:47.041Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T14:54:47.041Z"
   },
   {
    "key": "toy-story-5-bo-update-d25|BO-UPDATE",
@@ -2774,11 +2774,11 @@
    "key": "worst-neighbor-ever-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "worst-neighbor-ever-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "5 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-25T16:38:19.301Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T14:09:38.026Z"
+   "reason": "words 164 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 4 < 5",
+   "tries": 3,
+   "at": "2026-07-26T14:57:39.981Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T14:57:39.981Z"
   },
   {
    "key": "raw-trending-tv-w2026-07-19|TRENDING-TV",
@@ -2908,9 +2908,11 @@
    "key": "masters-of-the-universe-bo-opening|BO-OPENING",
    "eventSlug": "masters-of-the-universe-bo-opening",
    "form": "BO-OPENING",
-   "reason": "fidelity: 6 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-25T15:34:47.288Z"
+   "reason": "words 175 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-26T14:55:56.725Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T14:55:56.725Z"
   },
   {
    "key": "the-last-duel-ev-other|BO-UPDATE",
@@ -3005,30 +3007,33 @@
    "at": "2026-07-26T08:33:21.938Z"
   }
  ],
- "zeroStreak": 0,
+ "zeroStreak": 1,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.12999
+  "usd": 0.18542
  },
  "pace": {
-  "tokens": 0.9436695500000006,
-  "lastMs": 1785077244689
+  "tokens": 1.1247817944444451,
+  "lastMs": 1785077602933
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
   "laDay": "2026-07-26",
   "byFilm": {
-   "voicemails for isabelle": 1,
+   "voicemails for isabelle": 2,
    "the boss baby": 1,
    "sniper: no nation": 1,
-   "avatar: the last airbender": 1
+   "avatar: the last airbender": 1,
+   "masters of the universe": 1,
+   "worst neighbor ever": 1
   }
  },
  "failures": {
   "laDay": "2026-07-26",
   "byFilm": {
    "voicemails for isabelle": [
-    "soft-floor humanvoice # < #"
+    "soft-floor humanvoice # < #",
+    "# unverified claim(s) cut# unrecovered"
    ],
    "the boss baby": [
     "# unverified claim(s) cut# unrecovered"
@@ -3048,6 +3053,12 @@
    ],
    "young washington": [
     "# unverified claim(s) cut# unrecovered"
+   ],
+   "masters of the universe": [
+    "words # < # (owner-set ~#-word minimum)"
+   ],
+   "worst neighbor ever": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
    ]
   }
  }
