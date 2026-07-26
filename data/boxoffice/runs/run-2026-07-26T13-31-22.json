@@ -1,0 +1,139 @@
+{
+ "runId": "run-2026-07-26T13-31-22",
+ "mode": "live",
+ "startedAt": "2026-07-26T13:31:22.363Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "backrooms-bo-update×BO-UPDATE",
+   "slug": "backrooms-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/backrooms-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "motor-city-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "her-private-hell-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "pinocchio-unstrung-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "supergirl-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 1.64,
+  "behind": false,
+  "expected": 1.82,
+  "allow": 1
+ },
+ "queueBuilt": 9,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.12581
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T13:33:19.970Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1047,
+    "out": 537,
+    "usd": 0.00032,
+    "ms": 6096
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3589,
+    "out": 1643,
+    "usd": 0.00036,
+    "ms": 3554
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3017,
+    "out": 301,
+    "usd": 0.00042,
+    "ms": 1290
+   },
+   "synthesizer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 752,
+    "out": 760,
+    "usd": 0.0002,
+    "ms": 7693
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 2017,
+    "out": 1216,
+    "usd": 0.00088,
+    "ms": 56440
+   }
+  },
+  "totalUsd": 0.00218
+ },
+ "openrouterTotalUsd": 0.00253
+}
