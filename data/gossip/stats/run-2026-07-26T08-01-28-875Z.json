@@ -1,0 +1,173 @@
+{
+  "ts": "2026-07-26T08:01:28.875Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "ocean-house-denies-taylor-swift-and-travis-kelce-wedding-rumors",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged",
+        "absence-claim:logged"
+      ],
+      "headline": [
+        "metaTitle",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 7
+    }
+  ],
+  "topics": 6,
+  "held": 4,
+  "rejected": 0,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.157115,
+  "costPerPublished": 0.157115,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 29,
+      "in": 74872,
+      "out": 18182,
+      "usd": 0.06738281
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 8,
+      "in": 11171,
+      "out": 72837,
+      "usd": 0.019663734999999998
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 5,
+      "in": 5723,
+      "out": 5034,
+      "usd": 0.0017753708
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 22,
+      "in": 97834,
+      "out": 51659,
+      "usd": 0.05324159900000001
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 27,
+      "in": 45741,
+      "out": 12787,
+      "usd": 0.009333039999999999
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 5,
+      "in": 11797,
+      "out": 947,
+      "usd": 0.00084636885
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 13,
+      "in": 20869,
+      "out": 4787,
+      "usd": 0.004872348950000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 5,
+      "errors": 0,
+      "in": 12122,
+      "out": 980,
+      "usd": 0.0060866,
+      "ms": 6479
+    },
+    "background": {
+      "calls": 7,
+      "errors": 2,
+      "in": 6730,
+      "out": 17460,
+      "usd": 0.0009789,
+      "ms": 224252
+    },
+    "detailFinder": {
+      "calls": 5,
+      "errors": 0,
+      "in": 6878,
+      "out": 57215,
+      "usd": 0,
+      "ms": 295346
+    },
+    "synthesizer": {
+      "calls": 5,
+      "errors": 0,
+      "in": 5723,
+      "out": 5034,
+      "usd": 0.00142119,
+      "ms": 58737
+    },
+    "writer": {
+      "calls": 26,
+      "errors": 2,
+      "in": 112034,
+      "out": 54797,
+      "usd": 0.0498389,
+      "ms": 1524969
+    },
+    "verify": {
+      "calls": 35,
+      "errors": 20,
+      "in": 39200,
+      "out": 8535,
+      "usd": 0.029501200000000005,
+      "ms": 123608
+    },
+    "judge": {
+      "calls": 5,
+      "errors": 0,
+      "in": 10338,
+      "out": 1190,
+      "usd": 0.0015098,
+      "ms": 6620
+    },
+    "claimAudit": {
+      "calls": 10,
+      "errors": 5,
+      "in": 11797,
+      "out": 947,
+      "usd": 0,
+      "ms": 257104
+    },
+    "headline": {
+      "calls": 5,
+      "errors": 0,
+      "in": 4861,
+      "out": 1560,
+      "usd": 0.00164843,
+      "ms": 56334
+    },
+    "dedup": {
+      "calls": 6,
+      "errors": 0,
+      "in": 1808,
+      "out": 89,
+      "usd": 0.0004461,
+      "ms": 9751
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2089,
+      "out": 109,
+      "usd": 0.0002525,
+      "ms": 2155
+    },
+    "linker": {
+      "calls": 8,
+      "errors": 0,
+      "in": 2292,
+      "out": 317,
+      "usd": 0.000356,
+      "ms": 5628
+    }
+  }
+}
