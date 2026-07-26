@@ -1,0 +1,68 @@
+{
+  "id": "news-dungeons-dragons-honor-among-thieves-announcement",
+  "slug": "the-dungeons-dragons-movie-already-has-a-sequel-fans-may-never-see",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 2,
+      "broken": [
+        "body 573w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Jonathan Goldstein",
+    "work": {
+      "title": "Dungeons & Dragons: Honor Among Thieves",
+      "year": 2023,
+      "medium": "movie"
+    },
+    "outlet": "ScreenRant"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 621,
+      "h2s": 6,
+      "h2Questions": 4,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 52,
+      "avgSentence": 16,
+      "flesch": 52,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 1,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 227436
+}
