@@ -1,96 +1,98 @@
 ---
 title: >-
-  Young Washington Box Office Day 21: Adds $358,775 as Domestic Total Hits $42.8
+  Young Washington Box Office Day 22: Adds $566,612 as Domestic Total Hits $43.5
   Million
 slug: young-washington-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T11:30:40.267Z'
-updated: '2026-07-25T09:04:00.530Z'
+updated: '2026-07-26T13:01:29.048Z'
 boxOfficeTracker: true
 dek: >-
   How much Young Washington has made at the domestic box office, with a
   day-by-day breakdown of its theatrical run, updated daily.
 metaTitle: 'Young Washington Box Office: Total Gross and Daily'
 metaDescription: >-
-  Young Washington has grossed $42,770,644 at the domestic box office through
-  day 21, adding $358,775 in its latest daily haul.
+  Young Washington has grossed $43,537,870 at the domestic box office through
+  day 22, adding $566,612 in its latest daily haul.
 tags:
   - Young Washington
   - Box Office
   - Angel Studios
   - Historical Drama
   - George Washington
-  - Jon Erwin
   - William Franklyn-Miller
-  - Ben Kingsley
+  - Jon Erwin
+  - War Film
 keyTakeaways:
   - >-
-    'Young Washington' has grossed $42,770,644 at the domestic box office
-    through day 21.
-  - 'It added $358,775 in its most recent day, playing in 2,275 theaters.'
-  - It carries a reported $20 million production budget.
+    'Young Washington' has grossed $43,537,870 at the domestic box office
+    through day 22.
+  - 'It added $566,612 in its most recent day, playing in 2,029 theaters.'
+  - The worldwide total stands at $44 million.
   - William Franklyn-Miller leads the cast for director Jon Erwin.
 faq:
   - q: How much has 'Young Washington' made at the box office?
-    a: '''Young Washington'' has grossed $42,770,644 across 2,275 theaters.'
+    a: >-
+      'Young Washington' has grossed $43,537,870 domestically, with $44 million
+      worldwide.
   - q: What is the production budget of 'Young Washington'?
     a: >-
       'Young Washington' was produced on a reported budget of $20 million before
       marketing.
   - q: How many theaters is 'Young Washington' playing in?
-    a: '''Young Washington'' is currently playing across 2,275 theaters.'
+    a: '''Young Washington'' is currently playing across 2,029 theaters.'
   - q: How long has 'Young Washington' been in theaters?
     a: >-
-      'Young Washington' is 21 days into its theatrical run, adding $358,775 in
+      'Young Washington' is 22 days into its theatrical run, adding $566,612 in
       its most recent day.
 about:
   - name: Young Washington
     type: Movie
-  - name: Jon Erwin
+  - name: William Franklyn-Miller
     type: Person
   - name: Angel Studios
     type: Organization
+  - name: Jon Erwin
+    type: Person
 formatTag: box-office
 boxOffice:
-  domestic: '$42,770,644'
+  domestic: '$43,537,870'
+  worldwide: $44 million
   budget: $20 million
-  theaters: '2,275'
-trendScore: 72
+  theaters: '2,029'
+trendScore: 64
 signals:
   recency: 3
   pop: 1
   breakout: 0
-  corroboration: 4
+  corroboration: 3
   type: 6
-eventSlug: young-washington-bo-update-d21
+eventSlug: young-washington-bo-update-d22
 eventType: boxoffice
-outletCount: 4
+outletCount: 3
 storyStatus: CONFIRMED
-image: >-
-  https://www.deseret.com/resizer/v2/UVA5SSYQFJAEHAQ62XZMMSTWP4.jpg?focal=0%2C0&auth=601ee3e2ff5a6b380b4dd43141b7685c6b7f385debe3b242101fe78207ea11a3&width=1600&height=841
+image: 'https://image.tmdb.org/t/p/original/mj3RFamNUleZB94zMWgGnJkQCAH.jpg'
 imageAlt: Young Washington — William Franklyn-Miller Young Washington movie poster
-imageCredit: Photo via deseret.com
-imageWidth: 1600
-imageHeight: 841
+imageCredit: The Movie Database (TMDB)
+imageWidth: 3840
+imageHeight: 2160
 ---
 
-Before he led a nation, George Washington was a young soldier thrown into the crucible of a global conflict. That's the premise of **[Young Washington](/movies/young-washington-box-office-tracker/)**, a 125-minute historical drama from director Jon Erwin. The film explores a pivotal, formative period where, with alliances crumbling and war closing in, the future president must choose who to trust and confront the leader he is destined to become.
+Before he was the father of a nation, George Washington was a young soldier thrust into the crucible of a global conflict. That's the premise of **[Young Washington](/movies/young-washington-box-office-tracker/)**, a 125-minute historical war drama directed by Jon Erwin. The film explores Washington's formative years, depicting him as a young officer navigating crumbling alliances and the encroaching threat of war, forced to choose who to trust while confronting the leader he is destined to become.
 
-William Franklyn-Miller steps into the iconic role of the young George Washington. He is supported by a formidable ensemble: Ben Kingsley plays Virginia's Lieutenant Governor, Robert Dinwiddie; Mary-Louise Parker portrays Washington's mother, Mary Washington; and Leo Hanna appears as his guide, Christopher Gist. The cast is rounded out by Mia Rodgers as Sally Cary, Joel Smallbone as William Fairfax, Kelsey Grammer as Lord Fairfax, and Andy Serkis taking on the role of the formidable British General Edward Braddock. It's a story of character forged in fire, brought to life by a mix of rising talent and seasoned veterans.
+William Franklyn-Miller leads the cast as the titular young George Washington. He is supported by an impressive ensemble: Sir Ben Kingsley portrays Virginia's Lieutenant Governor, Robert Dinwiddie; Mary-Louise Parker plays Washington's mother, Mary Washington; and Andy Serkis embodies the formidable British General Edward Braddock. Kelsey Grammer appears as Lord Fairfax, with Joel Smallbone as William Fairfax, Mia Rodgers as Sally Cary, and Leo Hanna as frontiersman Christopher Gist.
 
-## The Box Office Story
+The film delivers a gritty, character-driven look at the making of an American icon.
 
-**Young Washington** has proven to be a formidable player at the domestic box office. It is currently playing in **2,275** theaters nationwide.
+## The Box Office
 
-The film's opening weekend performance was historic for its distributor, Angel Studios.
-
-Financially, the project is already a clear success.
+The **Young Washington box office** story is one of clear and decisive success.
 
 ## At the Box Office
 
-Young Washington has grossed $42,770,644 at the domestic box office, 21 days into its theatrical run, while playing across 2,275 theaters. The film added $358,775 in its most recent day of release. It carries a reported production budget of $20 million.
+Young Washington has grossed $43,537,870 at the domestic box office, 22 days into its theatrical run, while playing across 2,029 theaters. The film added $566,612 in its most recent day of release. Worldwide, it has taken in $44 million. It carries a reported production budget of $20 million.
 
 ## Daily Tracking
 
@@ -106,3 +108,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 19 | 2026-07-23 | — | $42 Million |
 | 20 | 2026-07-24 | $434,141 | $42.4 Million |
 | 21 | 2026-07-25 | $358,775 | $42.8 Million |
+| 22 | 2026-07-26 | $566,612 | $43.5 Million |
