@@ -1,0 +1,120 @@
+{
+ "runId": "run-2026-07-26T11-01-30",
+ "mode": "live",
+ "startedAt": "2026-07-26T11:01:30.798Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "disclosure-day-bo-update×BO-UPDATE",
+   "slug": "disclosure-day-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/disclosure-day-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "young-washington-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "motor-city-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "obsession-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "her-private-hell-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.09,
+  "behind": true,
+  "expected": 25.81,
+  "allow": 1
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.11416
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T11:05:25.200Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3409,
+    "out": 766,
+    "usd": 0.00023,
+    "ms": 9820
+   },
+   "gatherer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 6057,
+    "out": 371,
+    "usd": 0.00075,
+    "ms": 2364
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 0,
+    "in": 1467,
+    "out": 647,
+    "usd": 0.00025,
+    "ms": 36118
+   },
+   "writerChart": {
+    "calls": 2,
+    "errors": 0,
+    "in": 4010,
+    "out": 2123,
+    "usd": 0.00165,
+    "ms": 101281
+   }
+  },
+  "totalUsd": 0.00288
+ },
+ "openrouterTotalUsd": 0.00332
+}
