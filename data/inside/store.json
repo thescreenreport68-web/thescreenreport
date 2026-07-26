@@ -8360,10 +8360,10 @@
    "key": "the-death-of-robin-hood-2026|audience-reaction",
    "parentEventSlug": "the-death-of-robin-hood-2026",
    "form": "audience-reaction",
-   "reason": "web-check cuts didn't re-clear (4 contradictions)",
-   "tries": 3,
-   "at": "2026-07-24T12:31:11.692Z",
-   "dead": true
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-26T00:31:34.742Z",
+   "dead": false
   },
   {
    "key": "paramount-warner-bros-merger-pause-extended|audience-reaction",
@@ -8450,8 +8450,8 @@
    "parentEventSlug": "flaggs-dominate-barstool-stiffs-on-celebrity-family-feud-duk",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-24T18:31:07.131Z"
+   "tries": 2,
+   "at": "2026-07-26T00:31:34.742Z"
   },
   {
    "key": "pia-barlow-leaving-hbo-max-to-join-amazon-mgm-studios-as-hea|audience-reaction",
@@ -8498,8 +8498,9 @@
    "parentEventSlug": "minions-monsters-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-25T22:31:23.271Z"
+   "tries": 3,
+   "at": "2026-07-26T00:31:34.742Z",
+   "dead": true
   },
   {
    "key": "silo-2023|audience-reaction",
@@ -8556,8 +8557,9 @@
    "parentEventSlug": "rick-and-morty-2013",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-25T22:31:23.271Z"
+   "tries": 3,
+   "at": "2026-07-26T00:31:34.742Z",
+   "dead": true
   },
   {
    "key": "roxette-cancels-40th-anniversary-tour-of-north-american-amph|audience-reaction",
@@ -8572,8 +8574,9 @@
    "parentEventSlug": "why-david-cronenberg-s-feature-on-charli-xcx-s-music-fashion",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-25T22:31:23.271Z"
+   "tries": 3,
+   "at": "2026-07-26T00:31:34.742Z",
+   "dead": true
   },
   {
    "key": "final-fantasy-xiv-evercold-reveals-extended-teaser-trailer-a|audience-reaction",
@@ -8604,8 +8607,8 @@
    "parentEventSlug": "spider-man-brand-new-day-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-25T22:31:23.271Z"
+   "tries": 2,
+   "at": "2026-07-26T00:31:34.742Z"
   },
   {
    "key": "star-trek-strange-new-worlds-unveils-season-4-sneak-peek-at-|audience-reaction",
@@ -8614,6 +8617,38 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-07-25T22:31:23.271Z"
+  },
+  {
+   "key": "neuromancer-teaser-callum-turner-introduces-first-look-at-ap|audience-reaction",
+   "parentEventSlug": "neuromancer-teaser-callum-turner-introduces-first-look-at-ap",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-26T00:31:34.742Z"
+  },
+  {
+   "key": "katy-perry-slams-white-house-for-using-firework-in-military-|audience-reaction",
+   "parentEventSlug": "katy-perry-slams-white-house-for-using-firework-in-military-",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-26T00:31:34.742Z"
+  },
+  {
+   "key": "matchbox-the-movie-trailer-john-cena-jessica-biel-run-from-c|audience-reaction",
+   "parentEventSlug": "matchbox-the-movie-trailer-john-cena-jessica-biel-run-from-c",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-26T00:31:34.742Z"
+  },
+  {
+   "key": "citizen-vigilante-2026|audience-reaction",
+   "parentEventSlug": "citizen-vigilante-2026",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-26T00:31:34.742Z"
   }
  ]
 }
