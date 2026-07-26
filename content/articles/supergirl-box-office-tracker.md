@@ -1,41 +1,39 @@
 ---
-title: >-
-  Supergirl Box Office Day 28: Adds $160,184 as Domestic Total Hits $70.8
-  Million
+title: 'Supergirl Box Office Day 29: Adds $180,000 as Domestic Total Hits $71 Million'
 slug: supergirl-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T10:30:37.277Z'
-updated: '2026-07-25T10:02:53.961Z'
+updated: '2026-07-26T12:31:26.208Z'
 boxOfficeTracker: true
 dek: >-
   How much Supergirl has made at the domestic box office, with a day-by-day
   breakdown of its theatrical run, updated daily.
 metaTitle: 'Supergirl Box Office: Total Gross and Daily Breakdown'
 metaDescription: >-
-  Supergirl has grossed $70,845,054 at the domestic box office through day 28,
-  adding $160,184 in its latest daily haul.
+  Supergirl has grossed $71,025,054 at the domestic box office through day 29,
+  adding $180,000 in its latest daily haul.
 tags:
   - Supergirl
   - Box Office
-  - DC Films
+  - DC Universe
   - Milly Alcock
-  - Bomb
-  - Superhero
-  - 2026 Films
   - Craig Gillespie
+  - Superhero Movie
+  - 2026 Film
+  - Jason Momoa
 keyTakeaways:
   - >-
-    'Supergirl' has grossed $70,845,054 at the domestic box office through day
-    28.
-  - 'It added $160,184 in its most recent day, playing in 1,572 theaters.'
+    'Supergirl' has grossed $71,025,054 at the domestic box office through day
+    29.
+  - 'It added $180,000 in its most recent day, playing in 1,572 theaters.'
   - The worldwide total stands at $120 million.
   - Milly Alcock leads the cast for director Craig Gillespie.
 faq:
   - q: How much has 'Supergirl' made at the box office?
     a: >-
-      'Supergirl' has grossed $70,845,054 domestically, with $120 million
+      'Supergirl' has grossed $71,025,054 domestically, with $120 million
       worldwide.
   - q: What is the production budget of 'Supergirl'?
     a: >-
@@ -45,50 +43,51 @@ faq:
     a: '''Supergirl'' is currently playing across 1,572 theaters.'
   - q: How long has 'Supergirl' been in theaters?
     a: >-
-      'Supergirl' is 28 days into its theatrical run, adding $160,184 in its
+      'Supergirl' is 29 days into its theatrical run, adding $180,000 in its
       most recent day.
 about:
-  - name: Supergirl (2026 film)
+  - name: Supergirl (2026)
     type: Movie
+  - name: Craig Gillespie
+    type: Person
   - name: Milly Alcock
     type: Person
-  - name: DC Studios
-    type: Organization
 formatTag: box-office
 boxOffice:
-  domestic: '$70,845,054'
+  domestic: '$71,025,054'
   worldwide: $120 million
   budget: $175 million
   theaters: '1,572'
-trendScore: 60
+trendScore: 50
 signals:
   recency: 3
   pop: 1
   breakout: 0
-  corroboration: 5
+  corroboration: 1
   type: 6
-eventSlug: supergirl-bo-update-d28
+eventSlug: supergirl-bo-update-d29
 eventType: boxoffice
-outletCount: 5
 storyStatus: CONFIRMED
 image: 'https://image.tmdb.org/t/p/original/8CIgg0gCHIYz0jrx5IcZEOy047J.jpg'
-imageAlt: Supergirl — Milly Alcock Supergirl 2026 poster
+imageAlt: Supergirl — Milly Alcock Supergirl 2026 movie poster
 imageCredit: The Movie Database (TMDB)
 imageWidth: 2328
 imageHeight: 1309
 ---
 
-A Historic Crash Landing
+Milly Alcock takes flight as the Girl of Steel in the 2026 action-adventure *[Supergirl](/movies/supergirl-box-office-tracker/)*, directed by Craig Gillespie. When a ruthless adversary strikes too close to home, Kara Zor-El, aka Supergirl, is forced into an epic, interstellar journey. She reluctantly teams up with an unlikely companion on a mission fueled by vengeance and justice. This 108-minute science fiction spectacle charts a new course for the iconic DC hero.
 
-Milly Alcock's highly anticipated debut as the Girl of Steel has not just stumbled, but crashed to Earth. In a stunningly swift fall, the movie has already dropped out of the top five, landing at a dismal #7 in its second weekend of release. This [Supergirl](/movies/supergirl-box-office-tracker/) box office disaster signals a major franchise misstep, with audiences largely staying away from theaters.
+Alcock leads a formidable ensemble as the titular Kryptonian hero. She is joined by Eve Ridley as Ruthye and Matthias Schoenaerts as Krem. The cast features heavy hitters from the DC Universe, with Jason Momoa appearing as the interstellar bounty hunter Lobo and David Corenswet as Superman. Rounding out the key players are David Krumholtz as Zor-El, Emily Beecham as Alura In-Ze, and Kadiff Kirwan as Bomar Vran. This film carves out its own space in the superhero landscape.
 
-## The Financial Fallout
+## The Box Office Trajectory for Supergirl
 
-The numbers tell a grim story. Its worldwide total has reached $120 million, a figure that pales in comparison to its massive $175 million production budget. This guarantees the project will be a significant money-loser long before accounting for global marketing costs. Fury of the Gods'. With a per-theater average of just $160,184 over its run, the film's hold has been disastrous, failing to find the audience needed to justify its interstellar scope and budget.
+The film is currently playing in 1,572 theaters across the country.
+
+The Supergirl 2026 box office story is one of a solid domestic run struggling against the weight of blockbuster economics.
 
 ## At the Box Office
 
-Supergirl has grossed $70,845,054 at the domestic box office, 28 days into its theatrical run, while playing across 1,572 theaters. The film added $160,184 in its most recent day of release. Worldwide, it has taken in $120 million. It carries a reported production budget of $175 million.
+Supergirl has grossed $71,025,054 at the domestic box office, 29 days into its theatrical run, while playing across 1,572 theaters. The film added $180,000 in its most recent day of release. Worldwide, it has taken in $120 million. It carries a reported production budget of $175 million.
 
 ## Daily Tracking
 
@@ -104,3 +103,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 26 | 2026-07-23 | — | $70.5 Million |
 | 27 | 2026-07-24 | $228,236 | $70.7 Million |
 | 28 | 2026-07-25 | $160,184 | $70.8 Million |
+| 29 | 2026-07-26 | $180,000 | $71 Million |
