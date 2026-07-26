@@ -8,42 +8,47 @@ subcategory: news
 author: editorial-team
 date: '2026-07-26T04:52:46.510Z'
 dek: >-
-  The director announced the third installment at Comic-Con, with the 'Industry'
-  star taking on the mantle of T'Challa's son. The film is slated for a December
-  2028 release.
+  Marvel announced the sequel at SDCC, with David Jonsson playing T'Challa's
+  son. The film hits theaters on December 15, 2028.
 metaTitle: 'Ryan Coogler Confirms Black Panther 3, David Jonsson Cast'
 metaDescription: >-
-  Director Ryan Coogler has confirmed Black Panther 3 is in development with a
-  release date of December 15, 2028. David Jonsson will star as T'Challa's son.
+  Ryan Coogler will direct 'Black Panther 3' for Marvel, with David Jonsson
+  starring as a new T'Challa. The film is set for release on December 15, 2028.
 tags:
   - black panther 3
   - ryan coogler
   - david jonsson
-  - t’challa
   - t'challa
-targetKeyword: black panther 3
+targetKeyword: Black Panther 3
 keyTakeaways:
+  - Marvel officially announced 'Black Panther 3' at San Diego Comic-Con 2026.
   - >-
-    Ryan Coogler confirmed 'Black Panther 3' is officially in development with a
-    December 15, 2028 release date.
+    Ryan Coogler returns to direct, and the film will be released on December
+    15, 2028.
   - >-
-    David Jonsson will star as the new T’Challa, playing the adult son of
-    Chadwick Boseman’s character.
-  - >-
-    The announcement was made during Marvel’s Hall H panel at San Diego
-    Comic-Con in July 2026.
-  - Denzel Washington is also confirmed to have a role in the upcoming sequel.
+    David Jonsson will star as the new Black Panther, playing T'Challa's adult
+    son.
+  - Letitia Wright and Winston Duke are confirmed to return in the sequel.
+  - The film marks a major step in Marvel's post-Multiverse Saga planning.
 faq:
-  - q: How old will T’Challa's son be in the movie?
+  - q: Will Chadwick Boseman's T'Challa be recast in 'Black Panther 3'?
     a: >-
-      The film will feature a significant time jump. David Jonsson, who is 32,
-      will play the adult version of T’Challa's son, Toussaint. He was portrayed
-      as a young boy in the final scene of Wakanda Forever in 2022, so the
-      character will have aged several years by the 2028 release.
-  - q: Is Michael B. Jordan returning as Killmonger?
-    a: There has been no announcement regarding Michael B. Jordan's return.
-  - q: Will the movie film in Atlanta like the others?
-    a: A filming location has not been announced.
+      No. David Jonsson will not be replacing Chadwick Boseman. He is playing a
+      new character: the adult son of T'Challa, who is also named T'Challa. This
+      character was introduced as a young boy at the end of "Black Panther:
+      Wakanda Forever."
+  - q: Is Shuri still the Black Panther?
+    a: >-
+      Letitia Wright is confirmed to return as Shuri. The film will involve a
+      "passing of the torch," as David Jonsson's character comes of age and
+      takes on the mantle of Black Panther. The dynamic between Shuri and the
+      new T'Challa will be a central part of the story.
+  - q: What other Marvel movies will the cast appear in before 2028?
+    a: >-
+      According to reports, Letitia Wright (Shuri), Winston Duke (M'Baku), and
+      Tenoch Huerta Mejía (Namor) are all set to appear in the upcoming
+      "Avengers: Doomsday." Their involvement in "Black Panther 3" suggests
+      their stories will continue from that crossover event.
 about:
   - name: Black Panther 3
     type: Movie
@@ -56,9 +61,9 @@ image: >-
 imageWidth: 1600
 imageHeight: 840
 formatTag: news
-trendScore: 70
+trendScore: 62
 signals:
-  recency: 9
+  recency: 1
   corroboration: 10
   status: 18
   type: 9
@@ -68,93 +73,87 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: black-panther-3-confirmed-new-tchalla
+eventSlug: ryan-coogler-black-panther-3
 eventType: announcement
-outletCount: 4
+outletCount: 5
 provenance:
-  eventSlug: black-panther-3-confirmed-new-tchalla
+  eventSlug: ryan-coogler-black-panther-3
   primaryEntity: Black Panther 3
   eventType: announcement
   sensitivity: normal
   status: DEVELOPING
-  attribution: Entertainment Weekly
+  attribution: slashfilm.com
   outlets:
     - Entertainment Weekly
-  publishedAt: '2026-07-26T04:52:46.510Z'
-dateModified: '2026-07-26T04:52:46.510Z'
+  publishedAt: '2026-07-26T15:22:22.100Z'
+dateModified: '2026-07-26T15:41:53.810Z'
 storyStatus: DEVELOPING
 infoCard:
   director: Ryan Coogler
   cast:
     - David Jonsson
-    - Denzel Washington
+    - Letitia Wright
+    - Winston Duke
   releaseYear: '2028'
   genre: 'Science Fiction, Action, Adventure'
-  whereToWatch: Thea
+  whereToWatch: In Theaters
 newsType: general
 pullQuote:
   text: >-
-    I don’t want to say too much because I want to let the screen do the
-    talking, but believe me, the honor is entirely mine.
-  attribution: 'David Jonsson, the new star of Black Panther 3'
+    Thank you to this amazing family that I have the honor and the privilege,
+    the blessing to join ... Believe me, the honor is entirely mine
+  attribution: 'David Jonsson, upon being cast, to the Hall H crowd at SDCC'
 keyPoints:
   - >-
-    Ryan Coogler confirmed 'Black Panther 3' is in development with a December
-    2028 release date.
+    Marvel confirmed 'Black Panther 3' at SDCC with a December 15, 2028 release
+    date.
   - >-
-    David Jonsson will star as T’Challa's son, taking over the mantle from
-    Chadwick Boseman's character.
-  - Denzel Washington is confirmed to have a role in the sequel.
+    Director Ryan Coogler returns, and David Jonsson will play T'Challa's adult
+    son as the new Black Panther.
+  - The film is a key building block for Marvel's post-Multiverse Saga future.
+updateCount: 1
 ---
 
-Director Ryan Coogler confirmed at San Diego Comic-Con in July 2026 that a third *Black Panther* film is officially in development. The filmmaker announced that *[Black Panther 3](/movies/winston-duke-confirms-return-for-black-panther-3-david-jonsson-joins-cast/)* will be released in theaters on December 15, 2028, and will feature a new star in the title role.
+Marvel Studios officially announced "Black Panther 3" at its San Diego Comic-Con panel, confirming Ryan Coogler will direct and the film will be released on December 15, 2028. The studio revealed that rising star David Jonsson will play the new Black Panther, taking on the role of T'Challa's son.
 
-Coogler, the Oscar-winning director of the first two films, revealed the news during [Marvel](/movies/avengers-doomsday-fans-are-hyped-critics-are-skeptical/) Studios’ Hall H presentation. The event also introduced actor David Jonsson as the performer who will inherit the mantle of Black Panther.
+This confirmation solidifies a major pillar for the [Marvel](/movies/david-jonsson-as-the-new-black-panther-fans-are-split-but-many-are-ready-to/) Cinematic Universe's future. Coogler, fresh from his Oscar win for "Sinners," returns to the franchise he launched in 2018 with the late Chadwick Boseman.
 
-## What Are the Specifics of the Announcement?
+## What Are the Key Details for 'Black Panther 3'?
 
-The Comic-Con panel delivered several concrete details about the future of the franchise:
+The announcement at SDCC provided several concrete details about the upcoming sequel. According to reports from multiple outlets, here is what we know so far.
 
-* **Release Date:** December 15, 2028
-* **New Star:** David Jonsson will play T’Challa
-* **Character Details:** Jonsson will portray the adult version of T’Challa’s son, who was introduced as a young boy named Toussaint in *Black Panther: Wakanda Forever*.
-* **Returning Director:** Ryan Coogler will direct.
-* **Confirmed Cast Member:** Denzel Washington has a role in the film.
+* **Director:** Ryan Coogler is confirmed to direct.
+* **Lead Actor:** David Jonsson will play the new T'Challa, the son of Chadwick Boseman's character.
+* **Returning Cast:** Letitia Wright will reprise her role as Shuri, and Winston Duke is set to return as M'Baku.
+* **Release Date:** The film is scheduled for a theatrical release on December 15, 2028.
+* **Character Context:** Jonsson's character is the adult version of the young boy seen at the end of "Black Panther: Wakanda Forever."
 
-From the stage, Jonsson expressed his gratitude for the opportunity. "I want to say thank you so much," he said. "Thank you, Ryan. Thank you, [Kevin Feige]. Thank you to this amazing family that I honor, [it’s] a privilege and blessing to join." He added, "I don’t want to say too much because I want to let the screen do the talking, but believe me, the honor is entirely mine."
+The film was described as a "large format film" in the reporting. Jonsson addressed the Hall H crowd upon the announcement, saying, "Thank you to this amazing family that I have the honor and the privilege, the blessing to join... Believe me, the honor is entirely mine."
 
 ## Who Is Involved in the Project?
 
-Ryan Coogler returns to direct the third installment, having helmed the first two films in the series. His 2018 film *Black Panther* was a cultural and commercial phenomenon, grossing over $1.33 billion worldwide and earning a Best Picture nomination at the Academy Awards. He most recently wrote and directed the 2025 horror film *Sinners*.
+Ryan Coogler's return is a significant vote of confidence in the franchise's future. The director, who also wrote and directed the first two films, has become synonymous with the cultural and critical success of the "Black Panther" series. His recent Oscar win for "Sinners" underscores his standing as a major filmmaker.
 
-The new lead, David Jonsson, is a 32-year-old actor known for his roles in HBO’s *Industry* and the films *Alien: Romulus* and *The Long Walk*. He will play a character directly connected to the legacy of Chadwick Boseman’s original T’Challa. According to reports from Entertainment Weekly, Oscar-winner Denzel Washington is also confirmed for a role in the sequel, fulfilling earlier comments he made about Coogler writing a part for him.
+David Jonsson, known for his roles in "Industry," "Alien: Romulus," and the Stephen King adaptation "The Long Walk," steps into a monumental role. He will not be replacing Chadwick Boseman but rather continuing the legacy by portraying a grown-up T'Challa II. Letitia Wright, who took up the Black Panther mantle in "Wakanda Forever," is confirmed to return, ensuring continuity from the previous film.
 
-## How Does This Fit into the MCU's Future?
+## Why This Announcement Matters for Marvel
 
-The confirmation of *Black Panther 3* represents a major building block for Marvel’s cinematic future beyond the Multiverse Saga. The *Black Panther* franchise is one of the studio’s most critically acclaimed and commercially reliable properties. The 2022 sequel, *Wakanda Forever*, which saw Letitia Wright’s Shuri become the new Black Panther following Boseman’s passing, grossed $859 million worldwide.
+This news arrives at a crucial time for [Marvel Studios](/movies/marvel-s-comic-con-panel-reaction-doomsday-hype-meets-cautious-optimism-for/). The post-"Avengers: Endgame" landscape has been uneven, and the studio is actively building its future beyond the Multiverse Saga. A new "Black Panther" film directed by Coogler represents one of the surest bets in its portfolio.
 
-This third film signals a planned generational shift, moving the story forward with the son of the original hero. The narrative groundwork was laid in *Wakanda Forever*, where Lupita Nyong’o’s Nakia revealed she had been raising her son with T’Challa in secret.
+Its sequel, "Wakanda Forever," navigated the tragic loss of its star to become another major success. A third film has been considered inevitable, and its official greenlight provides a clear anchor point for the MCU's next chapter.
 
 ## What Happens Next?
 
-With a release date set for the end of 2028, the project is now in active development. The next major milestones will likely include further casting announcements, a finalized script, and the beginning of pre-production. While the core creative team is in place, many details about the plot and the full returning cast remain under wraps.
+With a release date set for December 15, 2028, the project now moves into active development. While casting for key roles like Denzel Washington's rumored part remains unconfirmed, the core creative team is locked. Production timelines and a start date have not yet been announced.
 
-The film is confirmed for a theatrical release and will not debut on a streaming service. As with previous installments, it is expected to be a large-format cinematic event.
+The announcement also raises questions about Coogler's other projects, including his reboot of "The X-Files," which recently wrapped production. However, his primary focus is now on returning to Wakanda. Fans can expect more casting news and plot details to emerge as the 2028 release date approaches.
 
-## FAQ
+## The Film's Format and Box Office Legacy
 
-**Who will be the villain in *Black Panther 3*?**
-No villain has been announced. The focus of the initial announcement was on confirming the new lead actor and the release date. Given the character's connection to the underwater kingdom of Talokan, Tenoch Huerta's Namor could potentially return, but this has not been confirmed.
+This technical detail suggests a specific cinematic presentation, though its exact implications for production or exhibition were not elaborated upon.
 
-**Will Letitia Wright's Shuri still be in the movie?**
-Letitia Wright's involvement has not been confirmed for *Black Panther 3*, though she is set to appear in the upcoming *Avengers: Doomsday*. The film's premise, focusing on T’Challa's son taking the mantle, suggests Shuri's role may evolve, but her status remains unannounced.
-
-**Is this connected to Ryan Coogler's *X-Files* reboot?**
-No. Ryan Coogler recently wrapped production on a reboot of *The X-Files*, but that is a separate television project. His commitment to directing *Black Panther 3* is his next confirmed feature film endeavor.
-
-**What happened to the original plans for *Black Panther 3* with Chadwick Boseman?**
-Original plans for the franchise were upended following Chadwick Boseman's death in 2020. The storyline for *Wakanda Forever* was rewritten, and the series is now continuing with a new character bearing the T’Challa name, honoring the legacy while moving the narrative forward.
+Its sequel, "Wakanda Forever," delivered another big hit that took in $859 million at the box office. This financial track record underscores the franchise's commercial importance to Marvel Studios as it builds its post-Multiverse Saga future.
 
 ## Sources
-- [Box Office Mojo](https://www.boxofficemojo.com/)
-- [Marvel Studios](https://www.marvel.com/movies)
+* [Marvel Studios](https://www.marvel.com/)
+* [Box Office Mojo](https://www.boxofficemojo.com/)
