@@ -125,11 +125,38 @@ reactions:
     connection: actor
     platform: X
     quote: Longtime listener. First time caller
+  - speaker: Ryan Gosling
+    connection: actor
+    platform: interview
+    date: March
+    quote: some discussions have been had
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      AMC’s ‘The Vampire Lestat’ is getting a season four, the cast announced
+      during their Comic-Con 2026 panel.
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      SDCC 2026: Petco Park Interactive Zone — what to know Petco Park
+      Interactive Zone is back again at San Diego Comic-Con 2026 with an
+      eclectic mix of partners offering fans different activations, food
+      options, and activities....
+  - speaker: A viewer
+    date: '2026-07-26'
+    quote: >-
+      3:50 The "Doom" movie will CRUSH ALL RECORDS EVER ESTABLISHED IN CINEMA
+      HISTORY...Just sayin...
+  - speaker: A viewer
+    date: '2026-07-24'
+    quote: >-
+      From gated comic drops to citywide ice cream hunts, studios are reshaping
+      how fans experience San Diego Comic-Con 2026.
 fanConsensus: >-
   Fans loved the energy and offerings of SDCC 2026 but are thoughtfully debating
   whether its expansion into digital and brand activations is enriching the
   experience or diluting its comic-book-centric soul.
-updatedCount: 1
+updatedCount: 2
 trendScore: 45
 signals:
   outlets: 3
@@ -145,7 +172,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-26T06:31:22.865Z'
+dateModified: '2026-07-26T14:31:24.888Z'
 provenance:
   parentEventSlug: san-diego-comic-con-2026-see-all-the-celebrities-e-news
   primaryEntity: San Diego Comic-Con 2026
@@ -160,7 +187,7 @@ imageAlt: San Diego Comic-Con 2026 crowd floor panels cosplay
 imageCredit: Photo via NBCU
 imageWidth: 1200
 imageHeight: 1200
-updated: '2026-07-26T06:31:22.865Z'
+updated: '2026-07-26T14:31:24.888Z'
 ---
 
 San Diego Comic-Con 2026 drew its usual waves of fans, creators, and collectible hunters, creating the vibrant, chaotic spectacle it's famous for. But behind the cosplay and crowded aisles, a quieter, perennial debate resurfaced among attendees and observers online: is the convention still fundamentally about comics and tangible fandom, or has it evolved into a broader, more digital pop culture marketplace?
