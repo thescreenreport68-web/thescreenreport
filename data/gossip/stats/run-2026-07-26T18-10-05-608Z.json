@@ -1,0 +1,139 @@
+{
+  "ts": "2026-07-26T18:10:05.608Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [],
+  "topics": 10,
+  "held": 6,
+  "rejected": 1,
+  "skipped": 2,
+  "blocked": 1,
+  "costUSD": 0.183007,
+  "costPerPublished": null,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 33,
+      "in": 52913,
+      "out": 17460,
+      "usd": 0.011920700000000001
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 36,
+      "in": 84320,
+      "out": 18546,
+      "usd": 0.07166100000000002
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 12,
+      "in": 14963,
+      "out": 108907,
+      "usd": 0.029288415
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 7,
+      "in": 7693,
+      "out": 5529,
+      "usd": 0.00220932624
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 33,
+      "in": 136131,
+      "out": 68406,
+      "usd": 0.0648979905
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 12,
+      "in": 6903,
+      "out": 1941,
+      "usd": 0.0021561748700000003
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 5719,
+      "out": 1959,
+      "usd": 0.0008732348
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 7,
+      "errors": 0,
+      "in": 16952,
+      "out": 1416,
+      "usd": 0.008625599999999999,
+      "ms": 10617
+    },
+    "background": {
+      "calls": 9,
+      "errors": 3,
+      "in": 5964,
+      "out": 20520,
+      "usd": 0.0010425999999999999,
+      "ms": 215772
+    },
+    "detailFinder": {
+      "calls": 7,
+      "errors": 1,
+      "in": 6379,
+      "out": 57591,
+      "usd": 0,
+      "ms": 280332
+    },
+    "synthesizer": {
+      "calls": 6,
+      "errors": 0,
+      "in": 5902,
+      "out": 5187,
+      "usd": 0.0014648399999999998,
+      "ms": 79637
+    },
+    "writer": {
+      "calls": 33,
+      "errors": 0,
+      "in": 136131,
+      "out": 68406,
+      "usd": 0.061442820000000016,
+      "ms": 1766797
+    },
+    "verify": {
+      "calls": 33,
+      "errors": 7,
+      "in": 60045,
+      "out": 13629,
+      "usd": 0.051352500000000016,
+      "ms": 101638
+    },
+    "judge": {
+      "calls": 10,
+      "errors": 1,
+      "in": 15165,
+      "out": 2136,
+      "usd": 0.0022777500000000003,
+      "ms": 22683
+    },
+    "claimAudit": {
+      "calls": 8,
+      "errors": 2,
+      "in": 11177,
+      "out": 34652,
+      "usd": 0,
+      "ms": 303755
+    },
+    "headline": {
+      "calls": 6,
+      "errors": 0,
+      "in": 4990,
+      "out": 1856,
+      "usd": 0.00177874,
+      "ms": 52197
+    },
+    "dedup": {
+      "calls": 6,
+      "errors": 0,
+      "in": 1913,
+      "out": 85,
+      "usd": 0.00046889000000000007,
+      "ms": 7300
+    }
+  }
+}
