@@ -6,23 +6,19 @@
     "attempt1": {
       "score": null,
       "cat": "tv/news",
-      "format": [
-        "primary keyword not in title"
-      ],
-      "cuts": 3,
+      "format": [],
+      "cuts": 1,
       "broken": [
-        "body 236w < 600"
+        "body 284w < 600"
       ]
     },
     "attempt2": {
       "score": null,
       "cat": "tv/news",
-      "format": [
-        "primary keyword not in title"
-      ],
+      "format": [],
       "cuts": 1,
       "broken": [
-        "body 236w < 600"
+        "body 284w < 600"
       ]
     }
   },
@@ -36,50 +32,48 @@
     },
     "outlet": "deadline.com"
   },
-  "holdReason": "broken article: body 236w < 600",
+  "holdReason": "broken article: body 284w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 236,
+      "words": 284,
       "h2s": 4,
       "h2Questions": 3,
       "internalLinks": 0,
-      "externalLinks": 2,
+      "externalLinks": 0,
       "hasSources": true,
-      "faqCount": 3,
-      "ktCount": 5,
-      "kwInTitle": false,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 45,
-      "avgSentence": 18,
-      "flesch": 48,
+      "maxSentence": 42,
+      "avgSentence": 17,
+      "flesch": 50,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "primary keyword not in title",
-        "body 236w < 600"
+        "body 284w < 600"
       ]
     },
     "hardBlocks": [
-      "body 236w < 600"
+      "body 284w < 600"
     ]
   },
   "audit": {
     "ok": false,
     "internalLinks": 0,
     "failed": [
-      "body ≥ 300w",
       "≥1200px legal image",
       "credit",
       "zero hard-blocks"
     ]
   },
-  "ms": 240201,
+  "ms": 133062,
   "previousRuns": [
     {
       "id": "news-kieran-culkin-family-guy-devil",
@@ -163,6 +157,89 @@
         ]
       },
       "ms": 218273
+    },
+    {
+      "id": "news-kieran-culkin-family-guy-devil",
+      "slug": "family-guy-sets-annual-halloween-holiday-specials-for-hulu-kieran-culk",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 3,
+          "broken": [
+            "body 236w < 600"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [
+            "primary keyword not in title"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 236w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Family Guy",
+        "work": {
+          "title": "Family Guy",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "broken article: body 236w < 600",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 236,
+          "h2s": 4,
+          "h2Questions": 3,
+          "internalLinks": 0,
+          "externalLinks": 2,
+          "hasSources": true,
+          "faqCount": 3,
+          "ktCount": 5,
+          "kwInTitle": false,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 45,
+          "avgSentence": 18,
+          "flesch": 48,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "primary keyword not in title",
+            "body 236w < 600"
+          ]
+        },
+        "hardBlocks": [
+          "body 236w < 600"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 300w",
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 240201
     }
   ]
 }
