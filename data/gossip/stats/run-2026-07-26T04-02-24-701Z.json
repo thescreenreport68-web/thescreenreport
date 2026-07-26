@@ -1,0 +1,162 @@
+{
+  "ts": "2026-07-26T04:02:24.701Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "natalya-scudder-was-told-to-dry-herself-with-dirty-clothes-after-being-deta",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 4,
+  "held": 2,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.083692,
+  "costPerPublished": 0.083692,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 32,
+      "in": 48186,
+      "out": 15855,
+      "usd": 0.010805640000000002
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 17,
+      "in": 42505,
+      "out": 8925,
+      "usd": 0.03399912000000001
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 3,
+      "in": 3646,
+      "out": 42222,
+      "usd": 0.01121471
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 3,
+      "in": 3387,
+      "out": 2612,
+      "usd": 0.0010903956
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 13,
+      "in": 57349,
+      "out": 27714,
+      "usd": 0.025148696500000005
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 6131,
+      "out": 189,
+      "usd": 0.0005409562000000001
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 3,
+      "in": 2837,
+      "out": 911,
+      "usd": 0.0008923761000000001
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 4,
+      "errors": 0,
+      "in": 9998,
+      "out": 793,
+      "usd": 0.0049819,
+      "ms": 5193
+    },
+    "detailFinder": {
+      "calls": 3,
+      "errors": 0,
+      "in": 3646,
+      "out": 42222,
+      "usd": 0,
+      "ms": 240026
+    },
+    "background": {
+      "calls": 6,
+      "errors": 3,
+      "in": 3507,
+      "out": 1305,
+      "usd": 0.0008726999999999999,
+      "ms": 215744
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 0,
+      "in": 3387,
+      "out": 2612,
+      "usd": 0.0007749899999999999,
+      "ms": 32172
+    },
+    "writer": {
+      "calls": 13,
+      "errors": 0,
+      "in": 57349,
+      "out": 27714,
+      "usd": 0.02528838,
+      "ms": 795221
+    },
+    "verify": {
+      "calls": 18,
+      "errors": 8,
+      "in": 24938,
+      "out": 4566,
+      "usd": 0.0159504,
+      "ms": 57873
+    },
+    "judge": {
+      "calls": 3,
+      "errors": 0,
+      "in": 5856,
+      "out": 670,
+      "usd": 0.0008536,
+      "ms": 4153
+    },
+    "claimAudit": {
+      "calls": 6,
+      "errors": 3,
+      "in": 6131,
+      "out": 189,
+      "usd": 0,
+      "ms": 245516
+    },
+    "headline": {
+      "calls": 3,
+      "errors": 0,
+      "in": 2837,
+      "out": 911,
+      "usd": 0.00096225,
+      "ms": 30112
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 791,
+      "out": 205,
+      "usd": 0.0001611,
+      "ms": 1846
+    },
+    "linker": {
+      "calls": 3,
+      "errors": 0,
+      "in": 909,
+      "out": 77,
+      "usd": 0.0001217,
+      "ms": 1570
+    }
+  }
+}
