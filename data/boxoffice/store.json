@@ -2254,9 +2254,9 @@
    "key": "off-campus-trending-tv|TRENDING-TV",
    "eventSlug": "off-campus-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "2 unverified claim(s) cut, unrecovered",
-   "tries": 0,
-   "at": "2026-07-23T00:34:51.507Z",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "tries": 2,
+   "at": "2026-07-26T15:06:15.278Z",
    "dead": false,
    "expiresAt": "2026-07-26T00:34:51.507Z"
   },
@@ -2986,9 +2986,9 @@
    "key": "spider-noir-trending-tv|TRENDING-TV",
    "eventSlug": "spider-noir-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 157 < 180 (owner-set ~200-word minimum)",
-   "tries": 1,
-   "at": "2026-07-25T17:04:03.250Z"
+   "reason": "words 139 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 2 < 5",
+   "tries": 2,
+   "at": "2026-07-26T15:09:13.530Z"
   },
   {
    "key": "lanterns-trending-tv|TRENDING-TV",
@@ -3013,16 +3013,24 @@
    "reason": "words 179 < 180 (owner-set ~200-word minimum)",
    "tries": 1,
    "at": "2026-07-26T14:59:51.231Z"
+  },
+  {
+   "key": "mortal-kombat-ii-now-streaming|NOW-STREAMING",
+   "eventSlug": "mortal-kombat-ii-now-streaming",
+   "form": "NOW-STREAMING",
+   "reason": "words 130 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
+   "tries": 1,
+   "at": "2026-07-26T15:11:26.272Z"
   }
  ],
- "zeroStreak": 2,
+ "zeroStreak": 3,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.25279
+  "usd": 0.31933
  },
  "pace": {
-  "tokens": 1.2734990500000007,
-  "lastMs": 1785077897099
+  "tokens": 1.4512872666666674,
+  "lastMs": 1785078248768
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3036,7 +3044,10 @@
    "worst neighbor ever": 1,
    "the mandalorian and grogu": 1,
    "raw": 1,
-   "sullivan's crossing": 1
+   "sullivan's crossing": 1,
+   "off campus": 1,
+   "spider-noir": 1,
+   "mortal kombat ii": 1
   }
  },
  "failures": {
@@ -3079,6 +3090,15 @@
    ],
    "sullivan's crossing": [
     "words # < # (owner-set ~#-word minimum)"
+   ],
+   "off campus": [
+    "# unverified claim(s) cut# unrecovered"
+   ],
+   "spider-noir": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "mortal kombat ii": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ]
   }
  }
