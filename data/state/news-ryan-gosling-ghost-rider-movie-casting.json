@@ -1,28 +1,30 @@
 {
   "id": "news-ryan-gosling-ghost-rider-movie-casting",
-  "slug": "ryan-gosling-to-star-as-ghost-rider-in-marvel-studios-film",
+  "slug": "ryan-gosling-to-star-in-marvel-s-ghost-rider-movie",
   "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "movies/news",
-      "format": [],
-      "cuts": 2,
+      "format": [
+        "a 66-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 4,
       "broken": [
-        "body 484w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-        "padding — headline restated 2x in the body"
+        "body 568w < 600",
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     },
     "attempt2": {
       "score": null,
       "cat": "movies/news",
-      "format": [],
-      "cuts": 1,
+      "format": [
+        "a 66-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 2,
       "broken": [
-        "body 490w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-        "padding — headline restated 2x in the body"
+        "body 554w < 600",
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     }
   },
@@ -36,52 +38,52 @@
     },
     "outlet": "hollywoodreporter.com"
   },
-  "holdReason": "broken article: body 490w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about; padding — headline restated 2x in the body",
+  "holdReason": "broken article: body 554w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 490,
+      "words": 554,
       "h2s": 5,
-      "h2Questions": 4,
+      "h2Questions": 2,
       "internalLinks": 0,
-      "externalLinks": 2,
-      "hasSources": true,
-      "faqCount": 4,
-      "ktCount": 4,
+      "externalLinks": 0,
+      "hasSources": false,
+      "faqCount": 3,
+      "ktCount": 3,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 55,
-      "avgSentence": 21,
-      "flesch": 55,
+      "maxSentence": 66,
+      "avgSentence": 19,
+      "flesch": 53,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 490w < 600",
+        "body 554w < 600",
         "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-        "padding — headline restated 2x in the body"
+        "a 66-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": [
-      "body 490w < 600",
-      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-      "padding — headline restated 2x in the body"
+      "body 554w < 600",
+      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
     ]
   },
   "audit": {
     "ok": false,
     "internalLinks": 0,
     "failed": [
+      "3+ FAQ",
       "≥1200px legal image",
       "credit",
       "zero hard-blocks"
     ]
   },
-  "ms": 166885,
+  "ms": 214792,
   "previousRuns": [
     {
       "id": "news-ryan-gosling-ghost-rider-movie-casting",
@@ -249,6 +251,91 @@
         ]
       },
       "ms": 199883
+    },
+    {
+      "id": "news-ryan-gosling-ghost-rider-movie-casting",
+      "slug": "ryan-gosling-to-star-as-ghost-rider-in-marvel-studios-film",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "body 484w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+            "padding — headline restated 2x in the body"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 1,
+          "broken": [
+            "body 490w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+            "padding — headline restated 2x in the body"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Ryan Gosling",
+        "work": {
+          "title": "Ghost Rider",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "hollywoodreporter.com"
+      },
+      "holdReason": "broken article: body 490w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about; padding — headline restated 2x in the body",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 490,
+          "h2s": 5,
+          "h2Questions": 4,
+          "internalLinks": 0,
+          "externalLinks": 2,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 55,
+          "avgSentence": 21,
+          "flesch": 55,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 490w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+            "padding — headline restated 2x in the body"
+          ]
+        },
+        "hardBlocks": [
+          "body 490w < 600",
+          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+          "padding — headline restated 2x in the body"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 166885
     }
   ]
 }

@@ -8,61 +8,54 @@ subcategory: trailers
 author: editorial-team
 date: '2026-07-26T04:01:44.582Z'
 dek: >-
-  Alan Ritchson's drifter returns in August for a New York conspiracy, while
-  Maria Sten's spinoff begins a Chicago investigation in September.
+  The streamer also confirmed a fifth season is already in production, set to
+  adapt Lee Child's novel 'Make Me'.
 metaTitle: Prime Video Drops the Official Reacher Season 4 Trailer
 metaDescription: >-
-  Based on Lee Child's bestselling novels, the show follows the adventures of
-  Jack Reacher, a former military police investigator who drifts across the
-  country.
+  Prime Video unveiled the official trailer for Reacher Season 4 and a teaser
+  for the Neagley spinoff at Comic-Con, with new episodes arriving in August
+  2026.
 tags:
   - reacher season 4 trailer
   - reacher
   - neagley
   - alan ritchson
   - maria sten
-targetKeyword: reacher season 4 trailer
+targetKeyword: Reacher Season 4 trailer
 keyTakeaways:
   - >-
-    Prime Video released the official trailer for 'Reacher' Season 4 and the
-    first teaser for the spinoff 'Neagley' at San Diego Comic-Con.
+    The first trailer for Reacher Season 4 adapts Lee Child's novel 'Gone
+    Tomorrow' and premieres August 12, 2026.
   - >-
-    Season 4, adapting Lee Child's 'Gone Tomorrow', premieres August 12, 2026,
-    with weekly episodes leading to the September 16 finale.
+    A teaser for the spinoff series Neagley, starring Maria Sten, was also
+    revealed, with all episodes dropping September 16, 2026.
   - >-
-    The 'Neagley' spinoff series, starring Maria Sten, launches with all eight
-    episodes on September 16, 2026, the same day the 'Reacher' season ends.
+    Alan Ritchson confirmed Season 5 is already written and will begin filming
+    immediately, adapting the novel 'Make Me'.
   - >-
-    Season 4's plot centers on a suicide on a New York subway that pulls Jack
-    Reacher into a deadly conspiracy involving Pentagon clerks and foreign
-    agents.
-  - >-
-    The series has been renewed for a fifth season, with filming already
-    underway.
+    New cast members for Season 4 include Sydelle Noel, Chris Marquette, AGNEZ
+    MO, and Anggun.
 faq:
-  - q: Is 'Reacher' Season 4 finished filming?
+  - q: What book is Reacher Season 4 based on?
     a: >-
-      Yes, according to reports, filming for 'Reacher' Season 4 was completed in
-      March 2026. The season is now in post-production ahead of its August 2026
-      premiere.
-  - q: Will Alan Ritchson appear in the 'Neagley' spinoff series?
+      Season 4 is an adaptation of Gone Tomorrow, the 13th novel in Lee Child's
+      Jack Reacher book series. The story follows Reacher after a chance, tragic
+      encounter on a Philadelphia subway pulls him into a city-wide conspiracy.
+  - q: Will Alan Ritchson appear in the Neagley spinoff?
     a: >-
-      The official synopsis for 'Neagley' describes the character as a "former
-      military protégé of Jack Reacher," but it does not confirm if Alan
-      Ritchson will make a cameo appearance. The show is focused on Maria Sten's
-      character leading her own investigation in Chicago.
-  - q: How many episodes are in 'Reacher' Season 4?
+      Yes. Alan Ritchson is confirmed to guest star as Jack Reacher in the
+      Neagley spinoff series, creating a direct link between the two shows
+      within the same universe.
+  - q: When does Reacher Season 4 start streaming?
     a: >-
-      The exact episode count for Season 4 has not been officially stated.
-      However, the release plan confirms the season will debut with three
-      episodes on August 12, followed by a new episode each week. The similar
-      'Neagley' spinoff is confirmed to have eight episodes in its first season.
-  - q: Where can I watch the 'Reacher' Season 4 trailer?
+      Reacher Season 4 premieres on Prime Video on Wednesday, August 12, 2026.
+      The first three episodes will be available that day, with new episodes
+      releasing weekly thereafter.
+  - q: Is there a book coming for the Neagley character?
     a: >-
-      The official trailer was released by Prime Video and is available on their
-      official social media channels and YouTube page. It debuted during the
-      'Reacher's Back and Neagley's In' panel at San Diego Comic-Con in July
-      2026.
+      Yes. The first-ever Neagley novel, titled Zero Margin and co-authored by
+      Lee Child and Yasmin Angoe, is scheduled for release in March 2027,
+      expanding the character's story beyond the television series.
 about:
   - name: Reacher
     type: TV Series
@@ -91,89 +84,79 @@ signals:
   softTv: 0
   learned: -1
   radar: 18
-eventSlug: reacher-season-4-trailer
+eventSlug: reacher-season-4-trailer-neagley-spinoff-sdcc
 eventType: trailer
-outletCount: 6
+outletCount: 5
 provenance:
-  eventSlug: reacher-season-4-trailer
+  eventSlug: reacher-season-4-trailer-neagley-spinoff-sdcc
   primaryEntity: Reacher
   eventType: trailer
   sensitivity: normal
   status: DEVELOPING
-  attribution: MovieWeb
+  attribution: complex.com
   outlets:
-    - IMDb
-  publishedAt: '2026-07-26T12:01:59.277Z'
-dateModified: '2026-07-26T12:06:29.116Z'
+    - Complex
+  publishedAt: '2026-07-26T20:03:01.405Z'
+dateModified: '2026-07-26T20:06:47.336Z'
 storyStatus: DEVELOPING
 youtubeId: kAbxn_F8lps
 releaseInfo: 'December 21, 2012'
 keyMoments:
-  - Season 4 adapts Lee Child's novel 'Gone Tomorrow'.
   - >-
-    The plot begins with a suicide on a New York subway, leading Reacher into a
-    conspiracy involving the Pentagon.
+    Season 4 moves the action to Philadelphia for an urban chase based on 'Gone
+    Tomorrow'.
   - >-
-    Maria Sten's character Frances Neagley leads her own spinoff as a private
-    investigator in Chicago.
-  - The shows premiere weeks apart in August and September 2026 on Prime Video.
-  - The franchise has been renewed for a fifth season.
+    Maria Sten leads the 'Neagley' spinoff as a Chicago private investigator and
+    former Reacher protégé.
+  - >-
+    Alan Ritchson confirmed Season 5 is already written and begins filming
+    immediately.
+  - The franchise is expanding with a new spinoff series and an upcoming novel.
 officialSynopsis: >-
-  In the fourth season of the action-packed series, when a chance encounter with
-  a distraught stranger on a subway goes horribly wrong, Jack Reacher (Alan
-  Ritchson) is drawn into a complex and deadly game that pits him against
-  ruthless foes from the highest echelons of power.
+  Based on the 13th book in Lee Child’s global best-selling series, “Gone
+  Tomorrow,” in the fourth season of the actio
 seriesContext:
   network: Prime Video
-  premiere: 'February 3, 2022'
+  premiere: '2022-02-03'
   seasons: '4'
   creator: Nick Santora
   cast:
     - Alan Ritchson
     - Maria Sten
-    - Anggun
-updateCount: 1
+    - Sydelle Noel
+updateCount: 2
 ---
 
-Prime Video debuted the first official trailer for 'Reacher' Season 4 and the first teaser for the spinoff series 'Neagley' during its San Diego Comic-Con panel. The dual reveals confirm the release strategy for the expanding action franchise, with Alan Ritchson's return set for August and Maria Sten's solo venture launching in September.
+Prime Video officially released the first trailer for *Reacher* Season 4 and a teaser for the new spinoff series *Neagley* at San Diego Comic-Con. According to Complex, the panel also brought the announcement that a fifth season of the hit action series is already in the works.
 
-The streamer has built a major hit with the series, which became the first Prime Video show to top Nielsen's overall streaming rankings as early as its first season. Based on Lee Child's bestselling novels, the show follows the adventures of Jack Reacher, a former military police investigator who drifts across the country. The new season continues that success story with a high-stakes conspiracy plot.
+The dual reveals signal a major expansion of the franchise on Amazon's streaming service. The core series continues its relentless pace, while the new spinoff will explore a fan-favorite character's solo adventures in Chicago. [Alan Ritchson](/movies/motor-city-box-office-tracker/), who stars as the titular drifter, confirmed the immediate next steps for his character.
 
-## What Are the Key Details for Season 4 and 'Neagley'?
+## What Are the Key Details for Season 4 and Neagley?
 
-The Comic-Con event locked in concrete dates and plotlines for both shows. Here are the confirmed facts:
+The Comic-Con panel provided concrete dates and casting news for the franchise's next chapter. Here are the confirmed details:
 
-* **'Reacher' Season 4 Release:** Premieres on **August 12, 2026** on Prime Video.
-* **'Reacher' Season 4 Source:** Adapts **'Gone Tomorrow'**, the 13th novel in Lee Child's Jack Reacher series.
-* **'Neagley' Spinoff Release:** All **eight episodes** become available on **September 16, 2026** on Prime Video.
-* **'Reacher' Release Pattern:** The season begins with three episodes on August 12, followed by **one new episode weekly** through the finale on September 16.
-* **Season 4 Cast:** Includes **Christopher Rodriguez Marquette** as Jacob Merrick, **Sydelle Noel** as Tamara Green, **Agnez Mo** as Lila Hoth, and **Kevin Corrigan** as Detective Dochert.
-* **Series Status:** 'Reacher' has already been renewed for a **fifth season**, with filming in its early days.
+* **Season 4 Premiere:** Wednesday, August 12, 2026, with the first three episodes.
+* **Season 4 Source Material:** Adapts *Gone Tomorrow*, the 13th novel in Lee Child's Jack Reacher series.
+* **Neagley Release:** All eight episodes of the spinoff will debut on Wednesday, September 16, 2026.
+* **New Season 4 Cast:** Sydelle Noel, Chris Marquette, AGNEZ MO, Anggun, Kevin Weisman, Marc Blucas, Kevin Corrigan, and Kathleen Robertson.
+* **Streaming Platform:** Both series will stream exclusively on Prime Video.
 
-## The New Conspiracy for Jack Reacher
+Season 4 shifts the action from the show's familiar small-town settings to a dense urban chase through Philadelphia. The official synopsis states the story begins when "a chance encounter with a distraught stranger on a subway goes horribly wrong," drawing Jack Reacher into a deadly game against powerful foes.
 
-The official synopsis for Season 4 sets the stage for a classic Reacher mystery. According to Amazon, "when a chance encounter with a distraught stranger on a subway goes horribly wrong, Jack Reacher ([Alan Ritchson](/movies/motor-city-box-office-tracker/)) is drawn into a complex and deadly game that pits him against ruthless foes from the highest echelons of power."
+## The Cast and Characters Expanding the Universe
 
-Expanding on that, the season finds Reacher witnessing a woman's suicide on a New York City subway. His attempt to help her before the act puts him at odds with an NYPD eager to close the case. His refusal to walk away leads him to discover the woman was a civilian Pentagon clerk entangled in a massive cover-up, drawing him into a conflict with U.S. federal agents and Russian operatives. The story is reported to delve into Cold War history and a shocking encounter with Osama bin Laden from the Soviet-Afghan War era, promising a season packed with the action and investigation fans expect.
+Alan Ritchson returns as the formidable ex-military investigator. He is joined by a slate of new faces playing pivotal roles in the Philadelphia-set mystery. The new cast includes Sydelle Noel as Tamara Green and Chris Marquette as Jacob Merrick, two local police officers, alongside Kevin Weisman as Russell Plum. AGNEZ MO and Anggun play Lila and Amisha Hoth, characters positioned as the season's antagonists.
 
-## Who Is Frances Neagley and What Is Her Show About?
+The *Neagley* spinoff centers on Frances Neagley, a private investigator in Chicago and former military protégé of Jack Reacher, played by Maria Sten. The full ensemble features Greyston Holt as Detective Hudson Riley, Adeline Rudolph as Renee Birdwhistle, Jasper Jones as Keno, Matthew Del Negro as Pierce Woodrow, and Damon Herriman as Lawrence Cole. Ritchson is confirmed to guest star as Jack Reacher, linking the two series.
 
-The 'Neagley' spinoff centers on Maria Sten's character, a fan-favorite former military colleague of Jack Reacher from the Army's 110th Special Investigations Unit. The official synopsis describes her new life: "Frances Neagley (Maria Sten) is a private investigator in Chicago... When she learns that a beloved friend from her past has been killed in a suspicious accident, she becomes hell-bent on justice."
+## How the Franchise Is Building Its Future
 
-Using the skills she honed alongside Reacher, Neagley embarks on a dangerous solo mission to uncover a menacing evil. The series represents a strategic expansion of the 'Reacher' universe, leveraging a popular supporting character to tell a new type of story set in the urban landscape of Chicago, distinct from Reacher's nomadic journey.
+The announcements at Comic-Con represent a calculated bet by Prime Video to build a sustained action universe. The main *Reacher* series, produced by Paramount Television Studios and Amazon MGM Studios and showrun by Nick Santora, has been a standout hit since its 2022 debut. Its premise follows the drifter Jack Reacher as he explores the nation he once served, often uncovering conspiracies and confronting blunt violence—themes reflected in its TV-MA rating.
 
-## How the Two Shows Connect and Why It Matters
+Spinning off a supporting character into her own series is a classic franchise play, and Neagley's military background and investigative skills make her a natural lead. The spinoff will also get its own literary foundation, with Lee Child and author Yasmin Angoe set to debut the first *Neagley* novel, *Zero Margin*, in March 2027.
 
-The release schedule creates a direct handoff between the two series. 'Reacher' Season 4 concludes on September 16, 2026, and all episodes of 'Neagley' become available that same day. This scheduling turns the finale of one show into the launchpad for the next, keeping subscribers engaged with the franchise for consecutive months.
+## What's Next for Jack Reacher?
 
-The move underscores the show's value to Prime Video. The early and consistent renewals—Season 4 was greenlit months before Season 3 aired—highlight its status as a cornerstone property. By spinning off Neagley, Amazon is building a sustainable action-drama franchise akin to its successful 'Jack Ryan' universe, offering multiple entry points for viewers.
+The news doesn't stop with the imminent fourth season. Alan Ritchson used the Comic-Con stage to confirm that *Reacher* Season 5 is already written and ready for production. "We start shooting on Monday. The season's been written. We're ready to shoot. All the scripts are done," Ritchson said. He added, "The last half of my year is going to be all 'Reacher' Season 5."
 
-## What's Next for the 'Reacher' Franchise?
-
-With the Season 4 trailer now public, the next confirmed milestone is the premiere on August 12, 2026. The weekly episode release will carry viewers through to the September 16 finale and the immediate availability of 'Neagley'.
-
-Beyond that, the franchise's future is already in motion. According to reports, production on 'Reacher' Season 5 has begun. While the specific Lee Child novel to be adapted for that season has not been officially confirmed by Prime Video, the show's pattern of drawing from the beloved book series ensures more grounded, mystery-driven stories are on the horizon.
-
-## Sources
-* [Prime Video](https://www.primevideo.com/)
-* [IMDb](https://www.imdb.com/)
+Season 5 will adapt *Make Me*, the 20th novel in Lee Child's series. This confirms the show's long-term roadmap and Ritchson's continued commitment to the role, ensuring the drifter's journey will continue on Prime Video for the foreseeable future.
