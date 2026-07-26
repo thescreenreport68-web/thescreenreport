@@ -6,61 +6,64 @@ subcategory: news
 author: editorial-team
 date: '2026-07-26T03:58:44.582Z'
 dek: >-
-  Marvel Studios announced the major casting moves at San Diego Comic-Con, with
-  Ryan Coogler returning to direct 'Black Panther 3' for a 2028 release.
+  The 'Industry' star will play T'Challa's son in 'Black Panther III,' directed
+  by Ryan Coogler and set for release in December 2028.
 metaTitle: 'David Jonsson Black Panther, Ryan Gosling Ghost Rider'
 metaDescription: >-
-  The studio confirmed the major casting moves during its Hall H presentation,
-  setting the stage for two major superhero releases in 2028. "Thank you, Ryan.
+  David Jonsson has been cast as the new Black Panther, playing T'Challa's son
+  in the upcoming 'Black Panther III' from director Ryan Coogler.
 tags:
-  - black panther casting
-  - ryan gosling
+  - black panther sequel casting
   - david jonsson
+  - black panther iii
   - ryan coogler
-  - kevin feige
+  - letitia wright
   - black panther
   - black panther 3
-  - ghost rider
-targetKeyword: black panther casting
+targetKeyword: black panther sequel casting
 keyTakeaways:
   - >-
-    Ryan Gosling has officially joined the Marvel Cinematic Universe as the
-    supernatural antihero Ghost Rider.
+    David Jonsson will play the son of Chadwick Boseman's T'Challa, inheriting
+    the mantle of Black Panther.
   - >-
-    David Jonsson will star as T'Challa's son, the new Black Panther, in 'Black
-    Panther 3'.
+    Director Ryan Coogler announced the casting at Marvel's Comic-Con 2026
+    presentation.
   - >-
-    Ryan Coogler returns to write and direct the third 'Black Panther' film, set
-    for release on December 15, 2028.
+    The film, 'Black Panther III,' is scheduled for a U.S. theatrical release on
+    December 15, 2028.
+  - >-
+    Letitia Wright and Winston Duke are confirmed to reprise their roles from
+    the previous films.
 faq:
-  - q: Who played Ghost Rider before Ryan Gosling?
+  - q: Who played Black Panther before David Jonsson?
     a: >-
-      Nicolas Cage portrayed Johnny Blaze, the Ghost Rider, in two previous
-      films: 2007's 'Ghost Rider' and its 2011 sequel, 'Ghost Rider: Spirit of
-      Vengeance'. Those films exist outside the continuity of the Marvel
-      Cinematic Universe.
-  - q: Who is David Jonsson?
+      The original Black Panther in the Marvel Cinematic Universe was played by
+      Chadwick Boseman, starting with the 2018 film. Following Boseman's
+      passing, Letitia Wright's character, Shuri, took on the mantle in the 2022
+      sequel, 'Black Panther: Wakanda Forever.' David Jonsson will now portray
+      T'Challa's son as the new character to bear the title.
+  - q: Is Lupita Nyong'o returning for 'Black Panther III'?
     a: >-
-      David Jonsson is a British actor best known for his role as Gus Sackey in
-      the HBO/BBC series 'Industry'. His film credits include 'Rye Lane' (2023),
-      'Alien: Romulus' (2024), and 'The Long Walk' (2025). He won the BAFTA
-      Rising Star Award in 2025.
-  - q: Will Letitia Wright still be in 'Black Panther 3'?
+      The current casting announcement confirms the return of Letitia Wright and
+      Winston Duke. While Lupita Nyong'o played Nakia, the mother of T'Challa's
+      son, in 'Wakanda Forever,' her involvement in the third film has not been
+      confirmed in the initial reports. Her character's presence would be a
+      logical narrative continuation.
+  - q: What other projects is Ryan Coogler working on?
     a: >-
-      Yes, according to reports from the Comic-Con panel, Letitia Wright is
-      returning as Shuri. In 'Black Panther: Wakanda Forever', her character
-      took on the role of Black Panther, and she will appear alongside David
-      Jonsson's T'Challa II in the new film.
-  - q: Is this the first time Ryan Gosling has been in a superhero movie?
+      Ryan Coogler recently won the Oscar for Best Original Screenplay for his
+      2025 vampire film 'Sinners.' According to Consequence, he also recently
+      wrapped production on a reboot of 'The X-Files' starring Danielle
+      Deadwyler and Himesh Patel. His primary focus is now on developing 'Black
+      Panther III.'
+  - q: Where can I watch David Jonsson's previous work?
     a: >-
-      Yes, this will be Ryan Gosling's first role in a superhero film. While he
-      has starred in major action and sci-fi projects like 'Blade Runner 2049'
-      and 'The Gray Man', his casting as Ghost Rider marks his debut in the
-      comic book genre.
+      To see Jonsson's acclaimed performances, you can stream 'Industry' on HBO
+      Max. His film 'The Long Walk' is also available on the platform. These
+      projects showcase the range and depth he brings to his roles ahead of his
+      Marvel debut.
 about:
   - name: Black Panther 3
-    type: Movie
-  - name: Ghost Rider
     type: Movie
 imageAlt: 'Winston Duke Confirms Return for ''Black Panther 3'', David Jonsson Joins Cast'
 imageCredit: Photo via Consequence
@@ -68,9 +71,9 @@ image: 'https://consequence.net/wp-content/uploads/2026/07/Black-Panther.jpeg'
 imageWidth: 1280
 imageHeight: 721
 formatTag: news
-trendScore: 72
+trendScore: 92
 signals:
-  recency: 4
+  recency: 24
   corroboration: 12
   status: 18
   type: 14
@@ -80,79 +83,87 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: comic-con-david-jonsson-black-panther-ryan-gosling-ghost-rider
+eventSlug: david-jonsson-black-panther-sequel
 eventType: casting
 outletCount: 6
 provenance:
-  eventSlug: comic-con-david-jonsson-black-panther-ryan-gosling-ghost-rider
-  primaryEntity: Ryan Gosling
+  eventSlug: david-jonsson-black-panther-sequel
+  primaryEntity: David Jonsson
   eventType: casting
   sensitivity: normal
   status: DEVELOPING
-  attribution: latimes.com
+  attribution: theguardian.com
   outlets:
-    - Los Angeles Times
-  publishedAt: '2026-07-26T11:53:59.277Z'
-dateModified: '2026-07-26T12:12:01.618Z'
+    - The Guardian
+  publishedAt: '2026-07-26T19:02:43.818Z'
+dateModified: '2026-07-26T19:06:11.728Z'
 storyStatus: DEVELOPING
 infoCard:
   director: Ryan Coogler
   cast:
     - David Jonsson
     - Letitia Wright
-    - Lupita Nyong'o
+    - Winston Duke
   releaseYear: '2028'
-  genre: 'Action, Adventure'
+  genre: 'Science Fiction, Action, Adventure'
   whereToWatch: Theaters
 newsType: general
 pullQuote:
-  text: This is a character I’ve wanted to play for a long time.
-  attribution: 'Ryan Gosling, on playing Ghost Rider'
+  text: >-
+    Thank you to this family that I have the honour and the blessing to join. I
+    don’t want to say too much, because I want to let the screen do the talking.
+  attribution: 'David Jonsson, on his casting'
 keyPoints:
-  - Ryan Gosling and David Jonsson were cast in major Marvel roles at Comic-Con.
   - >-
-    Ryan Coogler returns to direct 'Black Panther 3' for a December 2028
-    release.
-  - Shawn Levy will direct Gosling in a new MCU 'Ghost Rider' film.
-updateCount: 1
+    David Jonsson is the new Black Panther, cast as T'Challa's son in the
+    upcoming sequel.
+  - >-
+    Director Ryan Coogler made the announcement at San Diego Comic-Con 2026,
+    confirming a December 2028 release.
+  - >-
+    The film will feature a time jump and the return of Letitia Wright and
+    Winston Duke.
+updateCount: 2
 ---
 
-Ryan Gosling will star as Ghost Rider in a new [Marvel](/movies/david-jonsson-as-the-new-black-panther-fans-are-split-but-many-are-ready-to/) Cinematic Universe film, and David Jonsson will lead 'Black Panther 3' as the new Black Panther, Marvel Studios announced at San Diego Comic-Con on July 25, 2026. The studio confirmed the major casting moves during its Hall H presentation, setting the stage for two major superhero releases in 2028.
+David Jonsson has been officially cast as the new Black Panther in the upcoming [Marvel](/movies/david-jonsson-as-the-new-black-panther-fans-are-split-but-many-are-ready-to/) Studios film 'Black Panther III.' The announcement was made at Marvel's Comic-Con International presentation on Saturday, July 26, 2026, according to The Guardian. The British actor will play the son of the late Chadwick Boseman’s character, T'Challa.
 
-Marvel Studios president [Kevin Feige](/movies/adam-driver-mcu-tradition-kevin-feige-laughs-off-actor-s-habit-of-turning/) made the official announcements, bringing years of fan speculation to an end. Gosling made a surprise appearance on stage to confirm his role, while director Ryan Coogler welcomed Jonsson to the stage to reveal his casting in the next 'Black Panther' installment.
+[Ryan Coogler](/movies/ryan-coogler-confirms-black-panther-3-for-2028-casts-david-jonsson-as-new-t/), the Oscar-winning director of the franchise, unveiled the news on stage alongside Jonsson and returning co-stars Letitia Wright and Winston Duke. The casting marks a pivotal moment for the series, passing the iconic mantle to a new generation.
 
-## What Are the Key Casting Details?
+## What Are the Key Details of the Casting?
 
-The announcements included several concrete details about the upcoming projects.
+The announcement confirmed several concrete details about the film's development and cast.
 
-- **Ryan Gosling as Ghost Rider:** Gosling will play the supernatural antihero, a character he has publicly expressed interest in for years
-- **David Jonsson as the new Black Panther:** Jonsson will portray T'Challa II, the adult son of Chadwick Boseman's original character
-- **Ryan Coogler returns to direct:** Coogler will write and direct '[Black Panther 3](/movies/ryan-coogler-confirms-black-panther-3-for-2028-casts-david-jonsson-as-new-t/)', marking his return to the franchise he launched
-- **Shawn Levy to direct 'Ghost Rider':** Levy, who directed the 2024 hit 'Deadpool & Wolverine', will helm the new film
-- **2028 release dates:** 'Black Panther 3' is slated for release on December 15, 2028. The 'Ghost Rider' film is also expected to arrive in theaters in 2028
+* **The New Black Panther:** David Jonsson will play T'Challa's son, who is also named T'Challa.
+* **Returning Stars:** Letitia Wright will reprise her role as Shuri, and Winston Duke returns as M'Baku.
+* **Director:** Ryan Coogler will direct the film, returning to the franchise he launched.
+* **Release Date:** 'Black Panther III' is scheduled for release in U.S. cinemas on December 15, 2028.
+* **Setting:** The film will feature a time jump, following the character's coming of age after being introduced as a young boy in 2022's 'Black Panther: Wakanda Forever.'
 
-## The New Black Panther's Journey
+Coogler set the stage for the story during the presentation. "The last time we got to make a movie, we introduced a character who is the son of the character that the great Chadwick Boseman played – our T'Challa – in that film," he said. "And today, I want to tell you that in this next film, he grows up, he comes of age."
 
-David Jonsson's character, T'Challa II, was first introduced as a young boy named Toussaint in a post-credits scene of 2022's 'Black Panther: Wakanda Forever'. In that film, Letitia Wright's Shuri took on the mantle of the Black Panther following the death of her brother, T'Challa. The new film will feature a time jump to show Jonsson as an adult inheriting his father's legacy. Letitia Wright and Lupita Nyong'o are expected to return, reprising their roles as Shuri and Nakia, the character's mother.
+## Who Is David Jonsson?
 
-On stage at Comic-Con, Jonsson expressed his gratitude. "I want to say thank you so much," he said. "Thank you, Ryan. Thank you, Kevin. Thank you to this amazing family that I honor. [It's] a privilege and blessing to join." He added, "I don't want to say too much because I want to let the screen do the talking, but believe me, the honor is entirely mine."
+Jonsson, 32, is a rising star known for his layered performances. He first gained significant attention for his role as Augustus "Gus" Sackey in the first two seasons of HBO's finance drama 'Industry.' His breakout film role came in 2025's Stephen King adaptation 'The Long Walk,' where he played Pete McVries, a performance praised for its emotional depth. He also appeared in the 2024 sci-fi horror film 'Alien: Romulus.'
 
-## A Long-Awaited Role for Ryan Gosling
+Jonsson won the BAFTA Rising Star Award in 2025. His upcoming projects include the films 'The Chaperones,' 'Benn/Eubank,' and 'Scandalous.' On stage at Comic-Con, the actor expressed his gratitude. "Thank you to this family that I have the honour and the blessing to join," Jonsson said. "I don’t want to say too much, because I want to let the screen do the talking."
 
-Ryan Gosling's casting concludes a campaign that began in 2022 when he first discussed the role publicly. On the Comic-Con stage, he confirmed his long-held desire to play the character. Ghost Rider, most famously portrayed as Johnny Blaze, is a motorcycle stunt performer who makes a deal with the demon Mephisto and becomes a fiery-skulled spirit of vengeance. Nicolas Cage previously played the role in two standalone films released in 2007 and 2011.
+## How Does This Casting Fit the Franchise's Future?
 
-Gosling will reunite with director Shawn Levy on the project; the two are currently collaborating on the upcoming 'Star Wars: Starfighter'. Jonathan Tropper, who is writing 'Starfighter', has also been enlisted to write the screenplay for the new 'Ghost Rider'.
+The decision to cast Jonsson continues the narrative path established in 'Black Panther: Wakanda Forever,' which saw Shuri temporarily assume the protector role after T'Challa's death. The sequel will now follow his son's journey to claim his birthright. Letitia Wright, who shared the stage for the announcement, celebrated the news in a conversation with Entertainment Weekly. "The news was really beautiful to hear because I have a personal connection to David," Wright said. "I’m going to have a really, a really good time. I’m going to pick on him so much."
 
-## What's Next for These Projects?
+Industry observers note the choice to cast an actor who is acclaimed but not yet a global superstar, allowing the performance to stand on its own merit following Boseman's legacy.
 
-Both films are in the early stages of development with their 2028 release targets set. 'Black Panther 3' will be shot on larger-format celluloid film rather than digitally, according to reports from the panel. The announcement clarifies the future of the franchise after Ryan Coogler's work on other projects, including the Oscar-winning film 'Sinners' and a reboot of 'The X-Files'.
+## What Is the Status of 'Black Panther III'?
 
-For 'Ghost Rider', the film represents a fresh introduction of the character into the official Marvel Cinematic Universe, separate from the previous Nicolas Cage films. No production start dates have been confirmed, but the involvement of Gosling, Levy, and Tropper signals Marvel's commitment to the project.
+As of July 2026, 'Black Panther III' is officially in active development with Ryan Coogler attached to direct. The film has a confirmed U.S. release date of December 15, 2028. A release date for the United Kingdom has not yet been announced. The core cast is now in place, with David Jonsson, Letitia Wright, and Winston Duke set to lead. Denzel Washington is also confirmed to be part of the cast, though his role remains unspecified.
 
-## The 2007 'Ghost Rider' Film's Legacy
+## Ryan Coogler's Oscar for 'Sinners'
 
-The new film will reboot a character previously played by Nicolas Cage in 2007's 'Ghost Rider'. That film, directed by Mark Steven Johnson, earned a 28% critics score on Rotten Tomatoes and grossed $229 million worldwide against a $110 million budget. Its premise saw stunt cyclist Johnny Blaze sell his soul to Mephistopheles to save his father, later becoming the fiery 'Ghost Rider' to reclaim it. As of July 2026, the 2007 film is available to stream on Philo, Starz, and YouTube TV in the US.
+Ryan Coogler's announcement at Comic-Con came shortly after a major personal achievement. The director won his first Academy Award earlier in 2026. He took home the Oscar for Best Original Screenplay for his audacious vampire film 'Sinners'.
+
+This accolade adds to his prestige as he returns to helm the next chapter of the Wakandan saga. Coogler's recent success underscores the creative momentum behind 'Black Panther III'.
 
 ## Sources
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [Rotten Tomatoes](https://www.rottentomatoes.com/)
+- [Box Office Mojo](https://www.boxofficemojo.com/)
+- [Marvel Studios](https://www.marvel.com/movies)
