@@ -2364,10 +2364,10 @@
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
    "eventSlug": "lee-cronin-s-the-mummy-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 165 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
-   "at": "2026-07-23T16:08:46.531Z",
-   "dead": true,
+   "reason": "words 128 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
+   "tries": 2,
+   "at": "2026-07-26T16:33:36.501Z",
+   "dead": false,
    "expiresAt": "2026-07-26T16:08:46.531Z"
   },
   {
@@ -3039,14 +3039,14 @@
    "at": "2026-07-26T15:40:19.619Z"
   }
  ],
- "zeroStreak": 5,
+ "zeroStreak": 6,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.38616
+  "usd": 0.40788
  },
  "pace": {
-  "tokens": 3.18681853888889,
-  "lastMs": 1785081681687
+  "tokens": 4,
+  "lastMs": 1785083490497
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3066,7 +3066,8 @@
    "mortal kombat ii": 1,
    "the dink": 1,
    "the sheep detectives": 1,
-   "the walking dead: dead city": 1
+   "the walking dead: dead city": 1,
+   "lee cronin's the mummy": 1
   }
  },
  "failures": {
@@ -3127,6 +3128,9 @@
    ],
    "the walking dead: dead city": [
     "soft-floor engagement # < # | soft-floor humanvoice # < #"
+   ],
+   "lee cronin's the mummy": [
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ]
   }
  }
