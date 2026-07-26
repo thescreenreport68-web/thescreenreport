@@ -7,20 +7,9 @@
       "score": null,
       "cat": "music/news",
       "format": [],
-      "cuts": 1,
+      "cuts": 4,
       "broken": [
-        "body 511w < 600",
-        "3 bullet points < 4"
-      ]
-    },
-    "attempt2": {
-      "score": null,
-      "cat": "music/news",
-      "format": [],
-      "cuts": 1,
-      "broken": [
-        "body 495w < 600",
-        "3 bullet points < 4"
+        "body 502w < 600"
       ]
     }
   },
@@ -34,38 +23,36 @@
     },
     "outlet": "billboard.com"
   },
-  "holdReason": "broken article: body 495w < 600; 3 bullet points < 4",
+  "holdReason": "broken article: body 584w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 495,
-      "h2s": 4,
+      "words": 584,
+      "h2s": 6,
       "h2Questions": 4,
       "internalLinks": 0,
       "externalLinks": 0,
-      "hasSources": false,
+      "hasSources": true,
       "faqCount": 4,
-      "ktCount": 4,
+      "ktCount": 5,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 52,
+      "maxSentence": 47,
       "avgSentence": 19,
-      "flesch": 55,
+      "flesch": 59,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 495w < 600",
-        "3 bullet points < 4"
+        "body 584w < 600"
       ]
     },
     "hardBlocks": [
-      "body 495w < 600",
-      "3 bullet points < 4"
+      "body 584w < 600"
     ]
   },
   "audit": {
@@ -77,7 +64,7 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 133422,
+  "ms": 179240,
   "previousRuns": [
     {
       "id": "music-news-kacey-musgraves-tour-cancellations",
@@ -146,6 +133,87 @@
         ]
       },
       "ms": 135464
+    },
+    {
+      "id": "music-news-kacey-musgraves-tour-cancellations",
+      "slug": "kacey-musgraves-cancels-three-middle-of-nowhere-tour-dates",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "music/news",
+          "format": [],
+          "cuts": 1,
+          "broken": [
+            "body 511w < 600",
+            "3 bullet points < 4"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "music/news",
+          "format": [],
+          "cuts": 1,
+          "broken": [
+            "body 495w < 600",
+            "3 bullet points < 4"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Kacey Musgraves",
+        "work": {
+          "title": "Middle of Nowhere",
+          "year": null,
+          "medium": null
+        },
+        "outlet": "billboard.com"
+      },
+      "holdReason": "broken article: body 495w < 600; 3 bullet points < 4",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 495,
+          "h2s": 4,
+          "h2Questions": 4,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 52,
+          "avgSentence": 19,
+          "flesch": 55,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 495w < 600",
+            "3 bullet points < 4"
+          ]
+        },
+        "hardBlocks": [
+          "body 495w < 600",
+          "3 bullet points < 4"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 133422
     }
   ]
 }

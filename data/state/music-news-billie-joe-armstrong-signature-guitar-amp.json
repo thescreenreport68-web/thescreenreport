@@ -1,0 +1,64 @@
+{
+  "id": "music-news-billie-joe-armstrong-signature-guitar-amp",
+  "slug": "green-day-s-billie-joe-armstrong-unveils-new-signature-guitar-and-mars",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "music/news",
+      "format": [
+        "a 64-word run-on sentence (>55 — split it)"
+      ],
+      "cuts": 4,
+      "broken": [
+        "body 577w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Billie Joe Armstrong",
+    "work": null,
+    "outlet": "billboard.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 661,
+      "h2s": 6,
+      "h2Questions": 1,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 64,
+      "avgSentence": 24,
+      "flesch": 43,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "a 64-word run-on sentence (>55 — split it)"
+      ]
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "music",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "3+ FAQ"
+    ]
+  },
+  "ms": 202827
+}

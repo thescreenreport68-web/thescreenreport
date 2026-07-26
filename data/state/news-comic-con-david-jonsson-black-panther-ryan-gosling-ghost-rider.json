@@ -1,18 +1,28 @@
 {
   "id": "news-comic-con-david-jonsson-black-panther-ryan-gosling-ghost-rider",
   "slug": "comic-con-david-jonsson-is-new-black-panther-ryan-gosling-joins-marvel",
-  "status": "published",
+  "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "movies/news",
       "format": [
-        "primary keyword not in title",
-        "a 57-word run-on sentence (>55 — split it)"
+        "primary keyword not in title"
       ],
       "cuts": 1,
       "broken": [
-        "body 599w < 600"
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+      ]
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 1,
+      "broken": [
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     }
   },
@@ -26,15 +36,16 @@
     },
     "outlet": "latimes.com"
   },
+  "holdReason": "broken article: 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 685,
+      "words": 735,
       "h2s": 6,
-      "h2Questions": 2,
+      "h2Questions": 1,
       "internalLinks": 0,
       "externalLinks": 2,
       "hasSources": true,
@@ -43,27 +54,100 @@
       "kwInTitle": false,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 57,
-      "avgSentence": 19,
-      "flesch": 55,
+      "maxSentence": 41,
+      "avgSentence": 21,
+      "flesch": 51,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
         "primary keyword not in title",
-        "a 57-word run-on sentence (>55 — split it)"
+        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     },
-    "hardBlocks": []
+    "hardBlocks": [
+      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+    ]
   },
-  "score": null,
-  "category": "movies",
-  "subcategory": "news",
-  "updatedSlug": "winston-duke-confirms-return-for-black-panther-3-david-jonsson-joins-cast",
   "audit": {
-    "ok": true,
-    "internalLinks": 3,
-    "failed": []
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
   },
-  "ms": 174849
+  "ms": 284839,
+  "previousRuns": [
+    {
+      "id": "news-comic-con-david-jonsson-black-panther-ryan-gosling-ghost-rider",
+      "slug": "comic-con-david-jonsson-is-new-black-panther-ryan-gosling-joins-marvel",
+      "status": "published",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [
+            "primary keyword not in title",
+            "a 57-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 1,
+          "broken": [
+            "body 599w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Ryan Gosling",
+        "work": {
+          "title": "Ghost Rider",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "latimes.com"
+      },
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 685,
+          "h2s": 6,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 2,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": false,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 57,
+          "avgSentence": 19,
+          "flesch": 55,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "primary keyword not in title",
+            "a 57-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": []
+      },
+      "score": null,
+      "category": "movies",
+      "subcategory": "news",
+      "updatedSlug": "winston-duke-confirms-return-for-black-panther-3-david-jonsson-joins-cast",
+      "audit": {
+        "ok": true,
+        "internalLinks": 3,
+        "failed": []
+      },
+      "ms": 174849
+    }
+  ]
 }
