@@ -1,70 +1,74 @@
 ---
-title: 'Marvel Studios, HBO, Apple TV+ Return to San Diego Comic-Con in 2026'
+title: >-
+  Marvel Stuns SDCC with 'Avengers: Doomsday,' 'Ghost Rider' with Ryan Gosling,
+  and 'Black Panther 3'
 slug: marvel-studios-hbo-apple-tv-return-to-san-diego-comic-con-in-2026
 category: tv
 subcategory: news
 author: editorial-team
 date: '2026-07-20T07:31:26.455Z'
 dek: >-
-  Ryan Gosling will lead a new Ghost Rider film, while Ryan Coogler returns for
-  Black Panther III in 2028. The Hall H panel also delivered a new look at
-  Avengers: Doomsday.
-metaTitle: 'Marvel, HBO, Apple TV+ Return to San Diego Comic-Con'
+  Kevin Feige announced a new 'Ghost Rider' starring Ryan Gosling, confirmed
+  David Jonsson as the new Black Panther, and brought a massive cast to Hall H
+  for 'Avengers: Doomsday.'
+metaTitle: 'Marvel SDCC 2026: Avengers Doomsday, Ghost Rider'
 metaDescription: >-
-  Marvel Studios announced a Ghost Rider film starring Ryan Gosling, Black
-  Panther III, and new Avengers: Doomsday footage at its 2026 Comic-Con Hall H
-  panel.
+  Marvel Studios announced a slate of major new films during its presentation at
+  San Diego Comic-Con on July 25, 2026, according to The Walt Disney Company.
 tags:
-  - marvel studios comic-con
+  - marvel sdcc announcements
   - marvel studios
   - kevin feige
   - ryan gosling
-  - shawn levy
-  - ghost rider
-  - black panther iii
+  - ryan coogler
   - 'avengers: doomsday'
-targetKeyword: Marvel Studios Comic-Con
+  - ghost rider
+  - black panther 3
+targetKeyword: marvel sdcc announcements
 keyTakeaways:
   - >-
-    Ryan Gosling will star in a Ghost Rider film directed by Shawn Levy for a
-    2028 release.
+    Marvel announced a new 'Ghost Rider' film starring Ryan Gosling, directed by
+    Shawn Levy, for release in 2028.
   - >-
-    Ryan Coogler will direct Black Panther III, starring David Jonsson, for
-    December 15, 2028.
+    David Jonsson was revealed as the new Black Panther in 'Black Panther 3,'
+    directed by Ryan Coogler and releasing December 15, 2028.
   - >-
-    Avengers: Doomsday's massive cast assembled on stage, and a new trailer
-    focused on Doctor Doom.
+    'Avengers: Doomsday' was showcased with a massive cast panel, confirming its
+    release for December 18, 2026.
   - >-
-    Spider-Man: Brand New Day footage showed Tom Holland's hero teaming up with
-    Jon Bernthal's Punisher.
-  - 'Avengers: Endgame will return to theaters on September 25 with new footage.'
+    Kevin Feige also confirmed a 'Nova' movie is in development during a
+    post-panel interview.
 faq:
-  - q: Who will direct the new Ghost Rider movie?
+  - q: Who is Ryan Gosling playing in 'Ghost Rider'?
     a: >-
-      Shawn Levy, the director of Deadpool & Wolverine and the upcoming Star
-      Wars: Starfighter, will direct the Ghost Rider film starring Ryan Gosling.
-      He confirmed his involvement on stage at Comic-Con.
-  - q: When does Black Panther III come out?
+      Ryan Gosling will play Johnny Blaze, the cursed stunt rider who becomes
+      the supernatural hero Ghost Rider. This version of the character is being
+      brought into the Marvel Cinematic Universe for the first time.
+  - q: 'Is Ryan Reynolds confirmed to be in ''Avengers: Doomsday''?'
     a: >-
-      Ryan Coogler's Black Panther III is scheduled for release on December 15,
-      2028. The film will star David Jonsson as T'Challa II, the son of Chadwick
-      Boseman's original character.
-  - q: Was the original Avengers cast at Comic-Con?
+      No. While Ryan Reynolds made a surprise appearance in character as
+      Deadpool at the Comic-Con panel to joke about joining the film, he has not
+      been officially confirmed as part of the cast. Reynolds has previously
+      stated that Deadpool will likely be a "supporting character" in future
+      team-up films rather than headlining another solo movie.
+  - q: 'What happened to the original ''Black Panther,'' Chadwick Boseman?'
     a: >-
-      Yes. Robert Downey Jr. (Doctor Doom), Chris Evans, and many other stars
-      from across the MCU appeared on stage during the Avengers: Doomsday
-      segment of the panel, creating a major event for the Hall H crowd.
-  - q: Is there a new Spider-Man movie coming out soon?
+      The character of T'Challa, originally portrayed by the late Chadwick
+      Boseman, will not be recast. The story of 'Black Panther 3' will continue
+      the legacy of the mantle, with David Jonsson taking on the role of the new
+      Black Panther, who is T'Challa's son.
+  - q: When is the 'Nova' movie coming out?
     a: >-
-      Yes. Spider-Man: Brand New Day, starring Tom Holland and Jon Bernthal,
-      opens in late July 2026. Footage shown at Comic-Con featured Spider-Man
-      and the Punisher fighting the Hulk together.
+      There is no release date for the 'Nova' movie yet. Kevin Feige only
+      confirmed the project is in development. Given that 'Ghost Rider' and
+      'Black Panther 3' are scheduled for 2028, a 'Nova' film likely would not
+      arrive until 2029 at the earliest.
 about:
+  - name: 'Avengers: Doomsday'
+    type: Movie
   - name: Ghost Rider
     type: Movie
-  - name: Black Panther III
-    type: Movie
-  - name: 'Avengers: Doomsday'
+  - name: Black Panther 3
     type: Movie
 imageAlt: 'Marvel Studios, HBO, Apple TV+ Return to San Diego Comic-Con in 2026'
 imageCredit: Photo via scmp.com
@@ -73,97 +77,82 @@ image: >-
 imageWidth: 1200
 imageHeight: 630
 formatTag: news
-trendScore: 68
+trendScore: 80
 signals:
-  recency: 16
+  recency: 1
   corroboration: 8
   status: 18
   type: 9
   pop: 0
   breakout: 0
-  big: 18
+  big: 24
   trending: 0
   spice: 0
   softTv: 0
-  learned: -1
-eventSlug: marvel-studios-hall-h-comic-con-announcements
+  radar: 20
+eventSlug: marvel-studios-sdcc-announcements-avengers-doomsday-ghost-rider-black-
 eventType: announcement
 outletCount: 6
 provenance:
-  eventSlug: marvel-studios-hall-h-comic-con-announcements
+  eventSlug: marvel-studios-sdcc-announcements-avengers-doomsday-ghost-rider-black-
   primaryEntity: Marvel Studios
   eventType: announcement
   sensitivity: normal
   status: DEVELOPING
-  attribution: gizmodo.com
+  attribution: thewaltdisneycompany.com
   outlets:
-    - Gizmodo
-  publishedAt: '2026-07-26T13:56:00.002Z'
-dateModified: '2026-07-26T14:10:54.231Z'
+    - The Walt Disney Company
+  publishedAt: '2026-07-26T20:23:21.788Z'
+dateModified: '2026-07-26T20:45:07.461Z'
 storyStatus: DEVELOPING
 infoCard:
-  director: Various
-  cast:
-    - Ryan Gosling
-    - David Jonsson
-    - Robert Downey Jr.
-  releaseYear: 2026-2028
-  genre: Superhero
-  whereToWatch: Theaters
+  director: 'Anthony Russo, Joe Russo, Shawn Levy, Ryan Coogler'
+  ca: ''
 newsType: general
 pullQuote:
-  text: 'Bro, let’s ride.'
-  attribution: 'Shawn Levy, director, to Ryan Gosling about Ghost Rider'
+  text: 'Not a damn thing, but it''s a movie.'
+  attribution: 'Kevin Feige, Marvel Studios President, in a post-panel interview'
 keyPoints:
-  - Marvel Studios unveiled its upcoming film slate at Comic-Con 2026.
+  - Marvel Studios announced three major new films at San Diego Comic-Con 2026.
   - >-
-    Ryan Gosling is set to star as Ghost Rider in a 2028 film directed by Shawn
-    Levy.
+    Ryan Gosling will star as Johnny Blaze in a new 'Ghost Rider' movie directed
+    by Shawn Levy.
   - >-
-    Ryan Coogler will direct Black Panther III for a December 2028 release, with
-    David Jonsson starring.
-updateCount: 1
+    David Jonsson was revealed as the new Black Panther in Ryan Coogler's 'Black
+    Panther 3.'
+updateCount: 2
 ---
 
-Marvel Studios announced a slate of new films and major updates during its Hall H presentation at San Diego Comic-Con 2026. The panel, the studio's first at the convention in two years, served as a major showcase for the future of the [Marvel](/movies/ryan-gosling-as-ghost-rider-has-fans-split-down-the-middle/) Cinematic Universe.
+Marvel Studios announced a slate of major new films during its presentation at San Diego Comic-Con on July 25, 2026, according to The Walt Disney Company. The studio confirmed a new 'Ghost Rider' movie, revealed the new star of 'Black Panther 3,' and provided a major update on the upcoming 'Avengers: Doomsday.'
 
-[Kevin Feige](/movies/adam-driver-mcu-tradition-kevin-feige-laughs-off-actor-s-habit-of-turning/), Marvel Studios president, opened the event by focusing on upcoming movies. "Today, we’re mainly going to talk about movies," Feige told the crowd, according to Marvel.com. "We’re mainly going to talk about movies because that is what brings us together in the world."
+Marvel Studios President [Kevin Feige](/movies/adam-driver-mcu-tradition-kevin-feige-laughs-off-actor-s-habit-of-turning/) led the Hall H presentation, which focused on the future of the Marvel Cinematic Universe. "Today, we’re mainly going to talk about movies," Feige told the crowd, as reported by Marvel.com. "We’re mainly going to talk about movies because that is what brings us together in the world."
 
-## What New Movies Were Announced?
+## What Was Announced at Marvel's SDCC Panel?
+The core announcements from the panel included three major theatrical films and a surprise confirmation.
 
-The panel featured several major project reveals.
+* **Ghost Rider**: A new film starring Ryan Gosling as Johnny Blaze, directed by Shawn Levy, and set for release in 2028. Jonathan Tropper is writing the script.
+* **Black Panther 3**: Ryan Coogler returns to direct, with David Jonsson revealed as the new Black Panther. The film is scheduled for release on December 15, 2028.
+* **Avengers: Doomsday**: A massive cast panel confirmed the film, directed by Anthony and Joe Russo, will release on December 18, 2026.
+* **Nova**: While not announced on stage, Feige confirmed in a post-panel interview that a movie based on the character is in the works.
 
-* **Ghost Rider:** [Ryan Gosling](/movies/ryan-gosling-confirms-ghost-rider-role-for-2028-marvel-movie/) will star in a new Ghost Rider film, directed by Shawn Levy and scheduled for a 2028 release.
-* **Black Panther III:** Director Ryan Coogler will return for a third Black Panther film, set for release on December 15, 2028, and starring David Jonsson as T'Challa II.
-* **Avengers: Endgame Encore:** The 2019 blockbuster will return to theaters starting September 25 with new footage.
+## The Massive 'Avengers: Doomsday' Showcase
+The centerpiece of the event was a mega-panel for 'Avengers: Doomsday.' Feige was joined on stage by directors Anthony and Joe Russo and a sprawling cast that included returning stars and new faces.
 
-## Who Is Starring in Ghost Rider and Black Panther 3?
+Confirmed cast members present included Robert Downey Jr., [Chris Evans](/movies/chris-evans-reveals-marvel-pitched-a-dozen-captain-america-returns-before/), Pedro Pascal, Paul Rudd, Anthony Mackie, Simu Liu, Letitia Wright, and Hayley Atwell, who confirmed her return as Peggy Carter. The panel featured an exclusive look at the film and an interactive moment where attendees were given Doctor Doom masks and cloaks to wear.
 
-Ryan Gosling's casting as the Spirit of Vengeance was a major surprise. Levy, who directed Gosling in the upcoming *Star Wars: Starfighter*, will helm the project. "We spent a lot of time last year making *Star Wars: Starfighter*," Levy told the Hall H audience, as reported by Marvel.com. "And as Ryan started talking about his vision for this character, we started riffing, and I finally said, 'Bro, let’s ride.'"
+Ryan Reynolds also made a surprise appearance in full Deadpool costume, humorously angling for a role. "This seems like an awfully expensive way to announce a film," Reynolds' Deadpool said from the crowd, according to NME. "When do you start filming?" Robert Downey Jr., in character as Victor von Doom, replied, "It’s in the can, bro. Look around you. Did you bump your head?"
 
-For *Black Panther III*, the mantle of the hero will be taken up by David Jonsson, who will play a grown-up version of T'Challa II, the son of the late Chadwick Boseman's character. Ryan Coogler is back to direct, and the film will be shot on film.
+## The New Projects: 'Ghost Rider' and 'Black Panther 3'
+The announcement of Ryan Gosling as the new Ghost Rider marks a major casting coup. Gosling, who recently starred in a Star Wars film and 2024's *The Fall Guy*, has long expressed interest in the role. He will play Johnny Blaze, a character previously portrayed by Nicolas Cage in two non-MCU films.
 
-## What Did We Learn About Avengers: Doomsday?
+For 'Black Panther 3,' the emotional reveal came when director Ryan Coogler brought David Jonsson to the stage. Jonsson, known for his role in *Alien: Romulus*, will take on the mantle of the Black Panther. Coogler returns to write and direct the sequel, with Letitia Wright and Winston Duke also confirmed to return.
 
-The presentation for *Avengers: Doomsday* was a spectacle, with a massive cast reveal. Actors including Robert Downey Jr., Chris Evans, Pedro Pascal, Hayley Atwell, Paul Rudd, Anthony Mackie, and Letitia Wright appeared from stages at the back of Hall H and walked through the crowd to the main stage.
+## How the Announcements Fit the MCU's Future
+The announcements confirm the studio's commitment to its core franchises while introducing new heroes. 'Avengers: Doomsday' is positioned as the next major crossover event, bringing together heroes from multiple universes.
 
-A new trailer focused on the threat of Doctor Doom, played by Downey. The footage showed Doom raising an army of Sentinels and featured tense moments with Pedro Pascal's Reed Richards. Downey, in character, addressed the crowd wearing Doom masks. "It's not easy being green," he said. "I need a lot of help. I need this whole family around me to finally assist me in being an arch-enemy, which is daunting."
+The confirmation of a 'Nova' movie, though not ready for a full reveal, points to further cosmic expansion. In a post-panel interview reported by Polygon, when asked about Nova, Feige said, "Not a damn thing, but it's a movie." Screenwriter Michael Waldron, a veteran of *Loki* and *Avengers: Doomsday*, is attached to the project.
 
-The panel was also crashed by Ryan Reynolds in full Deadpool costume, who jokingly asked the filmmakers if there was room for additional photography to add him to the film.
+## What's Next for These Marvel Films?
+The next confirmed milestone is the theatrical re-release of *Avengers: Endgame* on September 25, 2026, which will include new footage setting up 'Avengers: Doomsday.'
 
-## How Does Spider-Man: Brand New Day Fit In?
-
-With *Spider-Man: Brand New Day* opening in late July, star Jon Bernthal appeared to show exclusive footage. The clip featured Tom Holland's Spider-Man teaming up with Bernthal's Punisher for a battle against the Hulk, showcasing their combative partnership. The film represents the next immediate release in the MCU schedule.
-
-## What Is the Next Step for These Projects?
-
-The most immediate next step is the release of *Spider-Man: Brand New Day*. For the newly announced films, *Ghost Rider* and *Black Panther III* are now in active development for their 2028 releases. *Avengers: Doomsday* remains on track for its December 2026 debut, with the *Avengers: Endgame* re-release serving as a lead-in this September. Specific production start dates for the 2028 films were not confirmed.
-
-## The Making of Guardians of the Galaxy Vol. 3 Documentary
-
-A behind-the-scenes documentary about the creation of a recent MCU film is currently available for streaming. *Marvel Studios Assembled: The Making of the Guardians of the Galaxy Vol. 3* is a 58-minute documentary directed by Brad Baruh, according to TMDB. It features cast and crew including Chris Pratt, Zoe Saldaña, and director James Gunn recounting the film's production.
-
-The documentary, which is a streaming-original on Disney Plus as of July 2026, explores how the final Guardians film was conceived and delivered. Its premise, per TMDB, highlights the emotional farewells from the cast and crew as they closed this chapter of the saga.
-
-## Sources
-- [Marvel.com](https://www.marvel.com)
+'Spider-Man: Brand New Day' is still set for release on July 31, 2026, with Jon Bernthal appearing at SDCC to discuss his role as Frank Castle/The Punisher. 'Avengers: Doomsday' will follow in December 2026. Specific production start dates for 'Ghost Rider' and 'Black Panther 3' were not announced, but both are slated for 2028 releases.

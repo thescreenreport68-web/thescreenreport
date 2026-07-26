@@ -1,15 +1,15 @@
 {
   "id": "news-ryan-gosling-ghost-rider-casting",
   "slug": "ryan-gosling-cast-as-ghost-rider-for-2028-marvel-film",
-  "status": "published",
+  "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "movies/news",
       "format": [],
-      "cuts": 2,
+      "cuts": 1,
       "broken": [
-        "body 551w < 600"
+        "body 436w < 600"
       ]
     }
   },
@@ -23,130 +23,49 @@
     },
     "outlet": "rollingstone.com"
   },
+  "holdReason": "broken article: body 582w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 678,
+      "words": 582,
       "h2s": 6,
-      "h2Questions": 4,
+      "h2Questions": 1,
       "internalLinks": 0,
       "externalLinks": 2,
       "hasSources": true,
       "faqCount": 4,
-      "ktCount": 3,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 51,
-      "avgSentence": 22,
-      "flesch": 52,
-      "bannedTells": 0,
+      "maxSentence": 54,
+      "avgSentence": 21,
+      "flesch": 53,
+      "bannedTells": 2,
       "fillerPraise": 0,
       "kwExact": 0,
-      "hardBlocks": []
+      "hardBlocks": [
+        "body 582w < 600"
+      ]
     },
-    "hardBlocks": []
+    "hardBlocks": [
+      "body 582w < 600"
+    ]
   },
-  "score": null,
-  "category": "movies",
-  "subcategory": "news",
-  "updatedSlug": "ryan-gosling-confirms-ghost-rider-role-for-2028-marvel-movie",
   "audit": {
-    "ok": true,
-    "internalLinks": 2,
-    "failed": []
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
   },
-  "ms": 261711,
+  "ms": 220872,
   "previousRuns": [
-    {
-      "id": "news-ryan-gosling-ghost-rider-casting",
-      "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe-as-fiery-anti",
-      "status": "needs_review",
-      "stages": {
-        "attempt1": {
-          "score": null,
-          "cat": "movies/news",
-          "format": [
-            "a 82-word run-on sentence (>55 — split it)"
-          ],
-          "cuts": 6,
-          "broken": [
-            "body 464w < 600",
-            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
-          ]
-        },
-        "attempt2": {
-          "score": null,
-          "cat": "movies/news",
-          "format": [
-            "a 82-word run-on sentence (>55 — split it)"
-          ],
-          "cuts": 3,
-          "broken": [
-            "body 443w < 600",
-            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
-          ]
-        }
-      },
-      "editorial": {
-        "status": "official",
-        "entity": "Ryan Gosling",
-        "work": {
-          "title": "Ghost Rider",
-          "year": 2028,
-          "medium": "movie"
-        },
-        "outlet": "thewrap.com"
-      },
-      "holdReason": "broken article: body 443w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-      "scorecard": {
-        "score": null,
-        "subscores": {},
-        "strengths": [],
-        "weaknesses": [],
-        "deterministic": {
-          "words": 443,
-          "h2s": 5,
-          "h2Questions": 2,
-          "internalLinks": 0,
-          "externalLinks": 0,
-          "hasSources": true,
-          "faqCount": 4,
-          "ktCount": 5,
-          "kwInTitle": true,
-          "kwInFirst100": true,
-          "kwInH2": false,
-          "maxSentence": 82,
-          "avgSentence": 18,
-          "flesch": 53,
-          "bannedTells": 0,
-          "fillerPraise": 0,
-          "kwExact": 0,
-          "hardBlocks": [
-            "body 443w < 600",
-            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-            "a 82-word run-on sentence (>55 — split it)"
-          ]
-        },
-        "hardBlocks": [
-          "body 443w < 600",
-          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
-        ]
-      },
-      "audit": {
-        "ok": false,
-        "internalLinks": 0,
-        "failed": [
-          "≥1200px legal image",
-          "credit",
-          "zero hard-blocks"
-        ]
-      },
-      "ms": 191168
-    },
     {
       "id": "news-ryan-gosling-ghost-rider-casting",
       "slug": "ryan-gosling-to-star-as-ghost-rider-in-marvel-cinematic-universe-film",
@@ -448,6 +367,69 @@
         ]
       },
       "ms": 139652
+    },
+    {
+      "id": "news-ryan-gosling-ghost-rider-casting",
+      "slug": "ryan-gosling-cast-as-ghost-rider-for-2028-marvel-film",
+      "status": "published",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "body 551w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Ryan Gosling",
+        "work": {
+          "title": "Ghost Rider",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "rollingstone.com"
+      },
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 678,
+          "h2s": 6,
+          "h2Questions": 4,
+          "internalLinks": 0,
+          "externalLinks": 2,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 51,
+          "avgSentence": 22,
+          "flesch": 52,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": []
+        },
+        "hardBlocks": []
+      },
+      "score": null,
+      "category": "movies",
+      "subcategory": "news",
+      "updatedSlug": "ryan-gosling-confirms-ghost-rider-role-for-2028-marvel-movie",
+      "audit": {
+        "ok": true,
+        "internalLinks": 2,
+        "failed": []
+      },
+      "ms": 261711
     }
   ]
 }
