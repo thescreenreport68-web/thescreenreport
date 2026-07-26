@@ -1,0 +1,111 @@
+{
+ "runId": "run-2026-07-26T09-31-28",
+ "mode": "live",
+ "startedAt": "2026-07-26T09:31:28.907Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "the-invite-bo-update×BO-UPDATE",
+   "slug": "the-invite-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-invite-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "failed twice today already — no further paid attempts until tomorrow's numbers"
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "motor-city-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "evil-dead-burn-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 0.09,
+  "behind": true,
+  "expected": 25.44,
+  "allow": 1
+ },
+ "queueBuilt": 10,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.10353
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T09:33:39.666Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1044,
+    "out": 536,
+    "usd": 0.00032,
+    "ms": 2599
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3406,
+    "out": 3442,
+    "usd": 0.0006,
+    "ms": 6748
+   },
+   "gatherer": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3450,
+    "out": 98,
+    "usd": 0.00038,
+    "ms": 1252
+   },
+   "synthesizer": {
+    "calls": 2,
+    "errors": 1,
+    "in": 664,
+    "out": 291,
+    "usd": 0.00009,
+    "ms": 6772
+   },
+   "writerChart": {
+    "calls": 1,
+    "errors": 0,
+    "in": 1895,
+    "out": 1039,
+    "usd": 0.00079,
+    "ms": 46610
+   }
+  },
+  "totalUsd": 0.00218
+ },
+ "openrouterTotalUsd": 0.00282
+}
