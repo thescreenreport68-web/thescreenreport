@@ -1,211 +1,163 @@
 {
- "dateKey": "2026-07-25",
+ "dateKey": "2026-07-26",
  "topTopic": {
-  "name": "Christopher Nolan's The Odyssey dominates global box office and streaming discussion",
-  "why": "The day's largest shared conversation centers on Nolan's IMAX 70mm event film The Odyssey, its massive box-office performance (including a $264M worldwide opening), record-breaking IMAX 70mm engagement, and related streaming/discussion coverage."
+  "name": "The Odyssey Box Office Dominance",
+  "why": "The Christopher Nolan film appears in multiple headlines across outlets (box office records, international grosses, streaming success, cast interviews), making it the day's dominant conversation across entertainment news."
  },
  "slots": [
   {
    "story": {
-    "title": "Jason Whitlock claims he could have been an understudy in Django Unchained",
-    "angle": "New Pittsburgh Courier column examines Whitlock's assertion about the Tarantino film.",
-    "entities": [
-     "Jason Whitlock",
-     "Django Unchained"
-    ],
-    "sourceLinks": [
-     "https://newpittsburghcourier.com/2026/07/25/inside-conditions-jason-whitlock-could-have-been-an-understudy-in-the-movie-django-unchained/"
-    ],
-    "isTopTopic": false,
-    "viral": 4,
-    "hint": "news"
-   },
-   "slotLA": "06:53",
-   "status": "dropped",
-   "swaps": 2,
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "IMAX 70mm becomes The Odyssey's biggest star",
-    "angle": "CNBC reports IMAX 70mm screenings are driving ticket demand and elevating the film's event status.",
-    "entities": [
-     "IMAX 70mm",
-     "The Odyssey",
-     "CNBC"
-    ],
-    "sourceLinks": [
-     "https://www.cnbc.com/2026/07/25/the-odyssey-imax-70mm-screenings.html"
-    ],
-    "isTopTopic": true,
-    "viral": 8,
-    "hint": "box-office"
-   },
-   "slotLA": "08:42",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Nolan's The Odyssey hailed as a career-defining event film",
-    "angle": "Reviews and industry analysis describe the film as a monumental achievement in event cinema.",
-    "entities": [
-     "Christopher Nolan",
-     "The Odyssey"
-    ],
-    "sourceLinks": [
-     "https://www.theguardian.com/commentisfree/2026/jul/25/christopher-nolan-odyssey-homer-epic-film-classics",
-     "https://www.greenwichtime.com/opinion/article/odyssey-zendaya-nolan-imax-22359253.php"
-    ],
-    "isTopTopic": true,
-    "viral": 7,
-    "hint": "news"
-   },
-   "slotLA": "10:15",
-   "status": "dropped",
-   "attempts": 2,
-   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
-  },
-  {
-   "story": {
-    "title": "The Odyssey crushes box office records in India and abroad",
-    "angle": "The film surpasses Rs 100 crore globally within two days; strong holds in India and international markets.",
+    "title": "The Odyssey obliterates The Dark Knight's box-office record",
+    "angle": "The film became the fastest movie to overtake The Dark Knight's box office haul",
     "entities": [
      "The Odyssey",
-     "box office",
-     "India"
-    ],
-    "sourceLinks": [
-     "https://www.deccanherald.com/amp/story/entertainment%2Fjana-nayagan-day-2-box-office-vijays-farewell-film-dips-over-50-crosses-rs-100-cr-globally-4087086",
-     "https://www.storyboard18.com/trending/vijays-jana-nayagan-box-office-collection-film-crosses-rs-100-crore-worldwide-in-two-days-105522.htm",
-     "https://www.wionews.com/entertainment/jana-nayagan-box-office-collection-day-2-cm-vijay-s-political-drama-crosses-rs-100-crore-worldwide-1784958741703/amp"
-    ],
-    "isTopTopic": true,
-    "viral": 6,
-    "hint": "box-office"
-   },
-   "slotLA": "11:52",
-   "status": "dropped",
-   "attempts": 2,
-   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
-  },
-  {
-   "story": {
-    "title": "The Odyssey sparks heated debate on social media",
-    "angle": "Fans and critics are passionately discussing Nolan's creative choices online.",
-    "entities": [
-     "The Odyssey",
-     "social media",
+     "The Dark Knight",
      "Christopher Nolan"
     ],
     "sourceLinks": [
-     "https://www.theguardian.com/commentisfree/2026/jul/25/christopher-nolan-odyssey-homer-epic-film-classics",
-     "https://mashable.com/entertainment/the-odyssey-christopher-nolan-sinon-helen-clytemnestra-circe"
+     "https://collider.com/the-odyssey-overtakes-the-dark-knight-box-office-record-christopher-nolan/"
+    ],
+    "isTopTopic": true,
+    "viral": 9,
+    "hint": "box-office"
+   },
+   "slotLA": "06:54",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "The Odyssey crosses Rs 100 crore in India by Day 9",
+    "angle": "Indian box office milestone reached within two weeks of release",
+    "entities": [
+     "The Odyssey",
+     "India",
+     "box office"
+    ],
+    "sourceLinks": [
+     "https://www.news18.com/movies/hollywood/the-odyssey-box-office-day-9-christopher-nolans-epic-crosses-rs-100-crore-in-india-ws-l-10234459.html"
     ],
     "isTopTopic": true,
     "viral": 8,
-    "hint": "news"
+    "hint": "box-office"
    },
-   "slotLA": "13:17",
-   "status": "dropped",
-   "attempts": 2,
-   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+   "slotLA": "09:04",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Marvel Studios' Blade reportedly cancelled",
-    "angle": "Popverse reports the MCU's Blade movie has been quietly shut down by Marvel Studios.",
+    "title": "The Odyssey tops global box office after second weekend",
+    "angle": "Continues leading international markets with strong second-weekend performance",
     "entities": [
-     "Blade",
-     "Marvel Studios"
+     "The Odyssey",
+     "global box office",
+     "second weekend"
     ],
     "sourceLinks": [
-     "https://www.thepopverse.com/movies-blade-mahershala-ali-kevin-feige-mcu-cancelled-logo/"
+     "https://franchisere.substack.com/p/the-odysseys-second-weekend-moviegoing-frequency-fandango-film-box-office"
     ],
-    "isTopTopic": false,
+    "isTopTopic": true,
+    "viral": 8,
+    "hint": "box-office"
+   },
+   "slotLA": "11:00",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Ryan Gosling transforms into Ghost Rider for Marvel film",
+    "angle": "First look at Gosling as Johnny Blaze in upcoming Marvel movie",
+    "entities": [
+     "Ryan Gosling",
+     "Ghost Rider",
+     "Marvel"
+    ],
+    "sourceLinks": [
+     "https://www.radiotimes.com/movies/scifi/ryan-gosling-joins-marvel-new-ghost-rider-film-newsupdate/"
+    ],
+    "isTopTopic": true,
+    "viral": 9,
+    "hint": "first-look"
+   },
+   "slotLA": "12:53",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Matt Damon reveals brutal six-month transformation for The Odyssey",
+    "angle": "Actor details intense physical preparation for Christopher Nolan film",
+    "entities": [
+     "Matt Damon",
+     "The Odyssey",
+     "transformation"
+    ],
+    "sourceLinks": [
+     "https://www.foxnews.com/entertainment/the-odyssey-star-matt-damon-reveals-brutal-six-month-transformation-behind-christopher-nolan-film"
+    ],
+    "isTopTopic": true,
     "viral": 7,
     "hint": "news"
    },
-   "slotLA": "15:01",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "15:06",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Emma Stone redefining modern Hollywood stardom",
-    "angle": "Young Hollywood profiles Emma Stone's evolving career and influence.",
+    "title": "Matchbox The Movie official trailer released",
+    "angle": "First trailer for upcoming film starring Ryan Gosling and Chris Pratt",
     "entities": [
-     "Emma Stone"
+     "Matchbox The Movie",
+     "trailer",
+     "Ryan Gosling"
     ],
     "sourceLinks": [
-     "https://younghollywood.com/scene/emma-stone-rewrites-a-list-playbook.html"
+     "https://www.gamereactor.eu/video/819233/Matchbox+The+Movie+-+Official+Trailer/"
     ],
     "isTopTopic": false,
     "viral": 6,
-    "hint": "celebrity"
-   },
-   "slotLA": "16:40",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Rick Moranis says he never retired in rare interview",
-    "angle": "UNILAD reports Moranis opened up about his decades out of the spotlight and a personal tragedy.",
-    "entities": [
-     "Rick Moranis"
-    ],
-    "sourceLinks": [
-     "https://www.unilad.com/celebrity/rick-moranis-spaceballs-2-acting-return-interview-356892-20260725"
-    ],
-    "isTopTopic": false,
-    "viral": 6,
-    "hint": "celebrity"
-   },
-   "slotLA": "18:07",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
-  },
-  {
-   "story": {
-    "title": "Josh Sapan on life after AMC and championing disability on screen",
-    "angle": "Variety interviews Sapan about his new path and advocacy for disability representation.",
-    "entities": [
-     "Josh Sapan",
-     "AMC Networks",
-     "disability"
-    ],
-    "sourceLinks": [
-     "https://variety.com/2026/biz/news/josh-sapan-life-after-amc-networks-championing-disability-on-screen-1236820906/"
-    ],
-    "isTopTopic": false,
-    "viral": 5,
     "hint": "news"
    },
-   "slotLA": "19:54",
-   "status": "dropped",
-   "attempts": 2,
-   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+   "slotLA": "17:01",
+   "status": "pending"
   },
   {
    "story": {
-    "title": "Charli xcx explores music, fashion, and film in new feature",
-    "angle": "Euphoria Magazine highlights Charli xcx's cross-disciplinary work in music, fashion, and film.",
+    "title": "Toy Story 5 approaches $440M+ lifetime domestic milestone",
+    "angle": "Disney sequel nearing Shrek 2's all-time animation box office record",
     "entities": [
-     "Charli xcx"
+     "Toy Story 5",
+     "box office",
+     "animation"
     ],
     "sourceLinks": [
-     "https://www.euphoriazine.com/blog/2026/07/music/albums-charli-xcx-music-fashion-film/"
+     "https://www.imdb.com/it/news/ni65945064/?ref_=nm_nwr_2"
+    ],
+    "isTopTopic": false,
+    "viral": 6,
+    "hint": "box-office"
+   },
+   "slotLA": "18:58",
+   "status": "pending"
+  },
+  {
+   "story": {
+    "title": "Dhamaal 4 enters 200 crore club in 16 days",
+    "angle": "Ajay Devgn film becomes fastest Indian movie to reach milestone",
+    "entities": [
+     "Dhamaal 4",
+     "box office",
+     "Ajay Devgn"
+    ],
+    "sourceLinks": [
+     "https://www.imdb.com/news/ni65945086/?ref_=int_nwr_1"
     ],
     "isTopTopic": false,
     "viral": 5,
-    "hint": "music"
+    "hint": "box-office"
    },
-   "slotLA": "21:25",
-   "status": "dropped",
-   "reason": "gather: <2 independent sources and no own article"
+   "slotLA": "20:53",
+   "status": "pending"
   }
  ],
  "bench": [],
- "builtAt": 1784987180124
+ "builtAt": 1785073597828
 }
