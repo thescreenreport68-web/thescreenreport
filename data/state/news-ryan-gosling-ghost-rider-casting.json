@@ -7,20 +7,9 @@
       "score": null,
       "cat": "movies/news",
       "format": [],
-      "cuts": 2,
+      "cuts": 4,
       "broken": [
-        "body 507w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
-      ]
-    },
-    "attempt2": {
-      "score": null,
-      "cat": "movies/news",
-      "format": [],
-      "cuts": 1,
-      "broken": [
-        "body 485w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "body 482w < 600"
       ]
     }
   },
@@ -34,38 +23,36 @@
     },
     "outlet": "thewrap.com"
   },
-  "holdReason": "broken article: body 485w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+  "holdReason": "broken article: body 591w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 485,
-      "h2s": 5,
-      "h2Questions": 2,
+      "words": 591,
+      "h2s": 6,
+      "h2Questions": 3,
       "internalLinks": 0,
-      "externalLinks": 0,
+      "externalLinks": 2,
       "hasSources": true,
       "faqCount": 4,
-      "ktCount": 3,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 42,
-      "avgSentence": 17,
-      "flesch": 57,
-      "bannedTells": 0,
+      "maxSentence": 50,
+      "avgSentence": 20,
+      "flesch": 51,
+      "bannedTells": 1,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 485w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "body 591w < 600"
       ]
     },
     "hardBlocks": [
-      "body 485w < 600",
-      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+      "body 591w < 600"
     ]
   },
   "audit": {
@@ -77,79 +64,8 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 138911,
+  "ms": 139652,
   "previousRuns": [
-    {
-      "id": "news-ryan-gosling-ghost-rider-casting",
-      "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe",
-      "status": "needs_review",
-      "stages": {
-        "attempt1": {
-          "score": null,
-          "cat": "movies/news",
-          "format": [
-            "a 94-word run-on sentence (>55 — split it)"
-          ],
-          "cuts": 0,
-          "broken": [
-            "body 389w < 600"
-          ]
-        }
-      },
-      "editorial": {
-        "status": "official",
-        "entity": "Ryan Gosling",
-        "work": {
-          "title": "Ghost Rider",
-          "year": 2028,
-          "medium": "movie"
-        },
-        "outlet": "thewrap.com"
-      },
-      "holdReason": "broken article: body 581w < 600",
-      "scorecard": {
-        "score": null,
-        "subscores": {},
-        "strengths": [],
-        "weaknesses": [],
-        "deterministic": {
-          "words": 581,
-          "h2s": 6,
-          "h2Questions": 2,
-          "internalLinks": 0,
-          "externalLinks": 2,
-          "hasSources": true,
-          "faqCount": 4,
-          "ktCount": 4,
-          "kwInTitle": true,
-          "kwInFirst100": true,
-          "kwInH2": false,
-          "maxSentence": 94,
-          "avgSentence": 20,
-          "flesch": 50,
-          "bannedTells": 0,
-          "fillerPraise": 0,
-          "kwExact": 0,
-          "hardBlocks": [
-            "body 581w < 600",
-            "a 94-word run-on sentence (>55 — split it)"
-          ]
-        },
-        "hardBlocks": [
-          "body 581w < 600"
-        ]
-      },
-      "audit": {
-        "ok": false,
-        "internalLinks": 0,
-        "failed": [
-          "≥1200px legal image",
-          "credit",
-          "zero hard-blocks"
-        ]
-      },
-      "ms": 170965
-    },
     {
       "id": "news-ryan-gosling-ghost-rider-casting",
       "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe",
@@ -469,6 +385,87 @@
         "failed": []
       },
       "ms": 147474
+    },
+    {
+      "id": "news-ryan-gosling-ghost-rider-casting",
+      "slug": "ryan-gosling-to-join-marvel-universe-as-ghost-rider-film-set-for-2028-",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "body 507w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 1,
+          "broken": [
+            "body 485w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Ryan Gosling",
+        "work": {
+          "title": "Ghost Rider",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "thewrap.com"
+      },
+      "holdReason": "broken article: body 485w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 485,
+          "h2s": 5,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 42,
+          "avgSentence": 17,
+          "flesch": 57,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 485w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "hardBlocks": [
+          "body 485w < 600",
+          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 138911
     }
   ]
 }
