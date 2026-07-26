@@ -1,101 +1,96 @@
 ---
 title: >-
-  Minions & Monsters Box Office Day 23: Adds $1.9 Million as Domestic Total Hits
-  $145.8 Million
+  Minions & Monsters Box Office Day 24: Adds $2.9 Million as Domestic Total Hits
+  $148.6 Million
 slug: minions-monsters-box-office-tracker
 category: movies
 subcategory: box-office
 author: editorial-team
 date: '2026-07-16T06:30:43.348Z'
-updated: '2026-07-25T07:30:07.907Z'
+updated: '2026-07-26T08:00:24.097Z'
 boxOfficeTracker: true
 dek: >-
   How much Minions & Monsters has made at the domestic box office, with a
   day-by-day breakdown of its theatrical run, updated daily.
 metaTitle: 'Minions & Monsters Box Office: Total Gross by Day'
 metaDescription: >-
-  Minions & Monsters has grossed $145,788,350 at the domestic box office through
-  day 23, adding $1,927,405 in its latest daily haul.
+  Minions & Monsters has grossed $148,638,350 at the domestic box office through
+  day 24, adding $2,850,000 in its latest daily haul.
 tags:
-  - Minions & Monsters
-  - Jeff Bridges
-  - Illumination
-  - Animated Movie
   - Box Office
-  - Pierre Coffin
-  - Family Film
-  - Comedy
+  - Animation
+  - Illumination
+  - Despicable Me
+  - Minions
+  - Jeff Bridges
+  - Film
+  - Weekend Report
 keyTakeaways:
   - >-
-    'Minions & Monsters' has grossed $145,788,350 at the domestic box office
-    through day 23.
-  - 'It added $1,927,405 in its most recent day, playing in 3,510 theaters.'
-  - The worldwide total stands at $364 million.
+    'Minions & Monsters' has grossed $148,638,350 at the domestic box office
+    through day 24.
+  - 'It added $2,850,000 in its most recent day, playing in 3,386 theaters.'
+  - The worldwide total stands at $371 million.
   - Pierre Coffin leads the cast for director Pierre Coffin.
 faq:
   - q: How much has 'Minions & Monsters' made at the box office?
     a: >-
-      'Minions & Monsters' has grossed $145,788,350 domestically, with $364
+      'Minions & Monsters' has grossed $148,638,350 domestically, with $371
       million worldwide.
   - q: What is the production budget of 'Minions & Monsters'?
     a: >-
       'Minions & Monsters' was produced on a reported budget of $85 million
       before marketing.
   - q: How many theaters is 'Minions & Monsters' playing in?
-    a: '''Minions & Monsters'' is currently playing across 3,510 theaters.'
+    a: '''Minions & Monsters'' is currently playing across 3,386 theaters.'
   - q: How long has 'Minions & Monsters' been in theaters?
     a: >-
-      'Minions & Monsters' is 23 days into its theatrical run, adding $1,927,405
+      'Minions & Monsters' is 24 days into its theatrical run, adding $2,850,000
       in its most recent day.
 about:
   - name: Minions & Monsters
     type: Movie
   - name: Jeff Bridges
     type: Person
-  - name: Illumination (company)
+  - name: Illumination
     type: Organization
 formatTag: box-office
 boxOffice:
-  domestic: '$145,788,350'
-  worldwide: $364 million
+  domestic: '$148,638,350'
+  worldwide: $371 million
   budget: $85 million
-  theaters: '3,510'
-trendScore: 88
+  theaters: '3,386'
+trendScore: 80
 signals:
   recency: 3
   pop: 2
   breakout: 0
   corroboration: 5
   type: 6
-eventSlug: minions-monsters-bo-update-d23
+eventSlug: minions-monsters-bo-update-d24
 eventType: boxoffice
 outletCount: 5
 storyStatus: CONFIRMED
-image: >-
-  https://ca-times.brightspotcdn.com/dims4/default/6b6e4f6/2147483647/strip/true/crop/1024x538+0+72/resize/1200x630!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe6%2F44%2Faf58196b47168cad46f10a6d936d%2Fap26181711415345.jpg
-imageAlt: Minions & Monsters — Jeff Bridges Minions & Monsters animated movie poster
-imageCredit: Photo via LATimes
-imageWidth: 1200
-imageHeight: 630
+image: 'https://image.tmdb.org/t/p/original/kkcwhgSFd81QDlXo8ytrpHPQjhy.jpg'
+imageAlt: Minions & Monsters — Minions & Monsters Jeff Bridges poster 2026
+imageCredit: The Movie Database (TMDB)
+imageWidth: 3840
+imageHeight: 2160
 ---
 
-Jeff Bridges Leads a Starry Cast in Illumination's Latest
+Jeff Bridges and a familiar yellow horde lead the charge in *[Minions & Monsters](/movies/minions-monsters-box-office-tracker/)*, the latest rambunctious adventure from Illumination. Directed by Pierre Coffin, this 90-minute animated family comedy tells the ridiculous and true story of how the Minions conquered Hollywood, became movie stars, lost everything, and then accidentally unleashed monsters onto the world, forcing them to band together to save the planet from the mayhem they created.
 
-Jeff Bridges headlines the voice cast of *[Minions & Monsters](/movies/minions-monsters-box-office-tracker/)*, taking on the dual roles of Frank and Elwood. They are part of a rambunctious origin story that traces the yellow henchmen's chaotic path to Hollywood stardom.
+The voice cast is a who's who of talent. Pierre Coffin returns as the chaotic chorus of James, Henry, Ed, Dick, and all the Minions themselves. They are joined by Trey Parker as Goomi, Allison Janney as Olivia, and Christoph Waltz as Max. Jeff Bridges pulls double duty as both Frank and Elwood, while Jesse Eisenberg voices Dort, Zoey Deutch plays Debbie, and Bobby Moynihan rounds out the cast as Phillips. The film has been met with acclaim, earning Illumination's top critical response of its 17 movies. It’s a high-energy, monster-filled caper that puts a new spin on the Minions' legacy.
 
-The film is a 90-minute animated adventure comedy that bills itself as the 'rambunctious, ridiculous and totally true story' of how the Minions conquered Hollywood, became movie stars, lost everything, and then unleashed monsters onto the world. The plot follows the frantic crew as they band together to save the planet from the global mayhem they created. The film is directed by Pierre Coffin, a longtime creative force behind the *Despicable Me* franchise.
+## The Box Office Story
 
-## The Full Voice Cast and Characters
+The **Minions & Monsters box office Jeff Bridges** led saw a tale of two markets.
 
-The ensemble features a deep bench of talent. Pierre Coffin himself voices James, Henry, Ed, Dick, and of course, the Minions. Trey Parker plays Goomi, while Allison Janney voices Olivia. Christoph Waltz is Max, and Jesse Eisenberg takes on the role of Dort. Zoey Deutch plays Debbie, and Bobby Moynihan rounds out the cast as Phillips.
-
-## Critical Reception for the Animated Adventure
-
-According to trade reports, *Minions & Monsters* has earned Illumination’s top critical response across its 17-movie history. This marks a significant achievement for the studio known for its commercially successful family films. The movie itself is a high-energy, globe-trotting comedy built for laughs and spectacle.
+While it stumbled out of the gate domestically, the worldwide embrace has unequivocally saved the day for this animated adventure.
 
 ## At the Box Office
 
-Minions & Monsters has grossed $145,788,350 at the domestic box office, 23 days into its theatrical run, while playing across 3,510 theaters. The film added $1,927,405 in its most recent day of release. Worldwide, it has taken in $364 million. It carries a reported production budget of $85 million.
+Minions & Monsters has grossed $148,638,350 at the domestic box office, 24 days into its theatrical run, while playing across 3,386 theaters. The film added $2,850,000 in its most recent day of release. Worldwide, it has taken in $371 million. It carries a reported production budget of $85 million.
 
 ## Daily Tracking
 
@@ -111,3 +106,4 @@ Domestic box-office totals for each reported day of the theatrical run.
 | 21 | 2026-07-23 | $3.4 Million | $141.6 Million |
 | 22 | 2026-07-24 | $2.3 Million | $143.9 Million |
 | 23 | 2026-07-25 | $1.9 Million | $145.8 Million |
+| 24 | 2026-07-26 | $2.9 Million | $148.6 Million |

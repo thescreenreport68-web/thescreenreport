@@ -1,0 +1,94 @@
+{
+ "runId": "run-2026-07-26T08-01-24",
+ "mode": "live",
+ "startedAt": "2026-07-26T08:01:24.097Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "slug": "the-odyssey-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/the-odyssey-box-office-tracker.md",
+   "score": 80
+  },
+  {
+   "tag": "minions-monsters-bo-update×BO-UPDATE",
+   "slug": "minions-monsters-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/minions-monsters-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "toy-story-5-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "reason": "pre-gate (free): already covered today (one update per film per day)"
+  }
+ ],
+ "blocked": [],
+ "paced": {
+  "tokens": 2.09,
+  "behind": true,
+  "expected": 25.26,
+  "allow": 2
+ },
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.09537
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T08:07:55.003Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3406,
+    "out": 1321,
+    "usd": 0.0003,
+    "ms": 3583
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9794,
+    "out": 838,
+    "usd": 0.00131,
+    "ms": 3991
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2399,
+    "out": 3195,
+    "usd": 0.00079,
+    "ms": 37898
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6177,
+    "out": 3340,
+    "usd": 0.00256,
+    "ms": 119069
+   }
+  },
+  "totalUsd": 0.00497
+ },
+ "openrouterTotalUsd": 0.00572
+}
