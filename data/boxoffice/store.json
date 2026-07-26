@@ -2245,9 +2245,9 @@
    "eventSlug": "silo-trending-tv",
    "form": "TRENDING-TV",
    "reason": "words 145 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-23T22:05:53.990Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-26T22:05:53.990Z"
   },
   {
@@ -2421,9 +2421,9 @@
    "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
    "form": "NOW-STREAMING",
    "reason": "score 65 < 70",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-23T22:04:19.006Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-26T22:04:19.006Z"
   },
   {
@@ -3049,14 +3049,14 @@
    "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 17,
+ "zeroStreak": 18,
  "daySpend": {
   "laDay": "2026-07-26",
   "usd": 0.54754
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785103290976
+  "lastMs": 1785105086082
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3078,8 +3078,10 @@
    "the sheep detectives": 1,
    "the walking dead: dead city": 2,
    "lee cronin's the mummy": 3,
-   "lucky": 2,
-   "reacher": 1
+   "lucky": 3,
+   "reacher": 1,
+   "tom clancy's jack ryan: ghost war": 1,
+   "silo": 1
   }
  },
  "failures": {
