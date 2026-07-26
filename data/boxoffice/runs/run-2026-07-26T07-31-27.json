@@ -1,0 +1,94 @@
+{
+ "runId": "run-2026-07-26T07-31-27",
+ "mode": "live",
+ "startedAt": "2026-07-26T07:31:27.544Z",
+ "films": 48,
+ "published": [
+  {
+   "tag": "hadestown-the-musical-bo-update×BO-UPDATE",
+   "slug": "hadestown-the-musical-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/hadestown-the-musical-box-office-tracker.md",
+   "score": 80
+  },
+  {
+   "tag": "moana-bo-update×BO-UPDATE",
+   "slug": "moana-box-office-tracker",
+   "path": "/home/runner/work/thescreenreport/thescreenreport/content/articles/moana-box-office-tracker.md",
+   "score": 80
+  }
+ ],
+ "held": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "1 unverified claim(s) cut, unrecovered",
+   "score": 50
+  }
+ ],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 25.07,
+  "allow": 2
+ },
+ "queueBuilt": 9,
+ "zeroStreak": 0,
+ "daySpend": {
+  "laDay": "2026-07-26",
+  "usd": 0.08965
+ },
+ "faults": {
+  "count": 0,
+  "bySeverity": {},
+  "faults": []
+ },
+ "finishedAt": "2026-07-26T07:36:30.423Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 3,
+    "errors": 0,
+    "in": 1039,
+    "out": 539,
+    "usd": 0.00032,
+    "ms": 2724
+   },
+   "finder": {
+    "calls": 1,
+    "errors": 0,
+    "in": 3588,
+    "out": 738,
+    "usd": 0.00023,
+    "ms": 2628
+   },
+   "gatherer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 9527,
+    "out": 883,
+    "usd": 0.00131,
+    "ms": 3761
+   },
+   "synthesizer": {
+    "calls": 3,
+    "errors": 0,
+    "in": 2425,
+    "out": 1199,
+    "usd": 0.00043,
+    "ms": 43196
+   },
+   "writerChart": {
+    "calls": 3,
+    "errors": 0,
+    "in": 6060,
+    "out": 3484,
+    "usd": 0.00258,
+    "ms": 102103
+   }
+  },
+  "totalUsd": 0.00487
+ },
+ "openrouterTotalUsd": 0.00528
+}
