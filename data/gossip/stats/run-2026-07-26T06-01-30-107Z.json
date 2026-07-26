@@ -1,0 +1,164 @@
+{
+  "ts": "2026-07-26T06:01:30.107Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "courtney-stodden-thanks-jason-alexander-after-15k-donation-to-child-marriag",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [
+        "lede-entity-missing:logged"
+      ],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 0
+    }
+  ],
+  "topics": 10,
+  "held": 7,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 1,
+  "costUSD": 0.241937,
+  "costPerPublished": 0.241937,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 50,
+      "in": 119140,
+      "out": 27097,
+      "usd": 0.10295205999999998
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 18,
+      "in": 23766,
+      "out": 154982,
+      "usd": 0.04184011
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 7,
+      "in": 6666,
+      "out": 4140,
+      "usd": 0.0015522160000000001
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 42,
+      "in": 173105,
+      "out": 83748,
+      "usd": 0.07984346300000002
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 9,
+      "in": 12699,
+      "out": 3864,
+      "usd": 0.00450259425
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 28,
+      "in": 55764,
+      "out": 14130,
+      "usd": 0.010518569999999998
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 5,
+      "in": 9154,
+      "out": 37,
+      "usd": 0.00072808635
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 9,
+      "errors": 0,
+      "in": 22145,
+      "out": 1770,
+      "usd": 0.0110685,
+      "ms": 12124
+    },
+    "background": {
+      "calls": 9,
+      "errors": 1,
+      "in": 8996,
+      "out": 41696,
+      "usd": 0.000305,
+      "ms": 340604
+    },
+    "detailFinder": {
+      "calls": 8,
+      "errors": 0,
+      "in": 9117,
+      "out": 85968,
+      "usd": 0,
+      "ms": 475559
+    },
+    "synthesizer": {
+      "calls": 9,
+      "errors": 1,
+      "in": 7685,
+      "out": 4518,
+      "usd": 0.00173268,
+      "ms": 148939
+    },
+    "writer": {
+      "calls": 43,
+      "errors": 1,
+      "in": 177991,
+      "out": 84783,
+      "usd": 0.07783385,
+      "ms": 1820007
+    },
+    "verify": {
+      "calls": 53,
+      "errors": 21,
+      "in": 74369,
+      "out": 16350,
+      "usd": 0.057878,
+      "ms": 166070
+    },
+    "judge": {
+      "calls": 13,
+      "errors": 0,
+      "in": 22396,
+      "out": 3546,
+      "usd": 0.0036580000000000007,
+      "ms": 15898
+    },
+    "claimAudit": {
+      "calls": 13,
+      "errors": 5,
+      "in": 15745,
+      "out": 27883,
+      "usd": 0,
+      "ms": 540103
+    },
+    "headline": {
+      "calls": 8,
+      "errors": 0,
+      "in": 6794,
+      "out": 2451,
+      "usd": 0.00239596,
+      "ms": 79501
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2096,
+      "out": 94,
+      "usd": 0.0002472,
+      "ms": 2124
+    },
+    "linker": {
+      "calls": 1,
+      "errors": 0,
+      "in": 311,
+      "out": 39,
+      "usd": 0.000046700000000000003,
+      "ms": 446
+    }
+  }
+}
