@@ -1,0 +1,64 @@
+{
+  "id": "news-transformers-the-movie-theatrical-re-release",
+  "slug": "transformers-the-movie-set-for-theatrical-re-release-this-fall",
+  "status": "published",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [],
+      "cuts": 4,
+      "broken": [
+        "body 556w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "The Transformers: The Movie",
+    "work": {
+      "title": "The Transformers: The Movie",
+      "year": 1986,
+      "medium": "movie"
+    },
+    "outlet": "deadline.com"
+  },
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 652,
+      "h2s": 6,
+      "h2Questions": 2,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 3,
+      "ktCount": 4,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 35,
+      "avgSentence": 18,
+      "flesch": 44,
+      "bannedTells": 2,
+      "fillerPraise": 1,
+      "kwExact": 0,
+      "hardBlocks": []
+    },
+    "hardBlocks": []
+  },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "keyword in title"
+    ]
+  },
+  "ms": 219517
+}

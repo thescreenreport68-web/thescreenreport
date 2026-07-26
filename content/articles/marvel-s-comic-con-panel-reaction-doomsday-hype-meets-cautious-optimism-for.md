@@ -1,69 +1,65 @@
 ---
 title: >-
-  Marvel's Comic-Con Panel Reaction: Doomsday Hype Meets Cautious Optimism for
-  2028
+  Avengers: Doomsday Comic-Con Trailer Redeems Marvel After Underwhelming First
+  Look
 slug: marvel-s-comic-con-panel-reaction-doomsday-hype-meets-cautious-optimism-for
 category: movies
 subcategory: news
 author: editorial-team
 date: '2026-07-26T05:31:24.994Z'
 dek: >-
-  The studio delivered new footage and two major announcements, but fans left
-  Hall H wondering about the X-Men and the long-term plan.
-metaTitle: 'Marvel Comic-Con Panel Reaction: Doomsday Hype, Future Plans'
+  The extended Hall H footage, featuring Robert Downey Jr.'s Doctor Doom and a
+  massive crossover, reversed fan sentiment ahead of the December 2026 release.
+metaTitle: 'Avengers: Doomsday Trailer Wins Over Fans at Comic-Con'
 metaDescription: >-
-  The panel was built around the December 2026 release of ‘Avengers: Doomsday’,
-  but it also seeded the next phase with two key projects.
+  The Avengers: Doomsday trailer shown at Comic-Con has earned positive
+  reactions from fans, overcoming a lukewarm response to the first clip.
 tags:
-  - marvel comic-con panel reaction
-  - marvel studios
-  - doomsday
+  - doomsday movie trailer
   - 'avengers: doomsday'
-targetKeyword: marvel comic-con panel reaction
+  - robert downey jr.
+  - chris evans
+  - san diego comic-con
+  - doomsday
+targetKeyword: avengers doomsday comic con trailer redeems
 keyTakeaways:
   - >-
-    Marvel's Hall H panel centered on 'Avengers: Doomsday' with a new trailer
-    showing Doctor Doom and Sentinel robots.
+    The second Doomsday trailer premiered at San Diego Comic-Con to a much
+    warmer reception than the first.
   - >-
-    Two 2028 films were announced: 'Ghost Rider' starring Ryan Gosling and
-    'Black Panther 3' with David Jonsson.
+    The footage emphasizes Doctor Doom's backstory and his connection to the
+    Fantastic Four.
   - >-
-    The lack of X-Men or 'Secret Wars' announcements left some fans feeling the
-    future slate is thin.
+    The film features a massive crossover of MCU, X-Men, and Fantastic Four
+    characters.
   - >-
-    A surprise Deadpool cameo confirmed the character's role in 'Doomsday', but
-    Ryan Reynolds's involvement was not explicitly stated.
-  - >-
-    The overall reaction from attendees was a mix of excitement for the
-    immediate future and caution about what comes next.
+    Chris Evans reveals he turned down many pitches before agreeing to return as
+    Captain America.
+  - 'Avengers: Doomsday is set for a theatrical release on December 18, 2026.'
 faq:
-  - q: Who is playing the new Black Panther?
+  - q: 'When will the Avengers: Doomsday Comic-Con trailer be released online?'
     a: >-
-      David Jonsson has been cast as the new Black Panther in ‘Black Panther 3’.
-      He will portray T’Challa II, the son of the original T’Challa, a role
-      originated by the late Chadwick Boseman. Jonsson is known for his role in
-      ‘Alien: Romulus’ and last year’s adaptation of Stephen King’s ‘The Long
-      Walk’.
-  - q: When is ‘Black Panther 3’ coming out?
+      The online release date for the Comic-Con trailer has not been announced.
+      The footage was shown exclusively to attendees in Hall H and is not yet
+      available to the public.
+  - q: 'Is Avengers: Doomsday connected to the previous Fantastic Four movies?'
     a: >-
-      Ryan Coogler’s ‘Black Panther 3’ is scheduled to hit theaters on December
-      15, 2028. The film was officially announced during Marvel’s Comic-Con
-      panel, making it one of only two films confirmed for the MCU’s 2028 slate.
-  - q: Was the X-Men reboot announced at Comic-Con?
+      The trailer emphasizes Doctor Doom's pre-existing relationship with the
+      Fantastic Four, specifically Pedro Pascal's Mr. Fantastic and Vanessa
+      Kirby's Invisible Woman. This suggests the film will integrate these
+      characters into the main MCU narrative, though the exact nature of the
+      connection is not detailed in the revealed footage.
+  - q: 'Who else is confirmed to be in the Avengers: Doomsday cast?'
     a: >-
-      No. Despite widespread fan expectation and rumors, Marvel’s Comic-Con
-      panel featured no announcements regarding a rebooted X-Men film franchise.
-      The focus was squarely on ‘Avengers: Doomsday’ and the two 2028 films.
-      Several legacy X-Men actors are returning for ‘Doomsday’, but their future
-      beyond that film was not addressed.
-  - q: 'Is Ryan Reynolds officially confirmed for ‘Avengers: Doomsday’?'
+      Beyond the core heroes, the confirmed cast includes Florence Pugh as
+      Yelena Belova, Wyatt Russell as John Walker / U.S. Agent, and Paul Rudd as
+      Scott Lang / Ant-Man. The trailer also reportedly features cameos or
+      scenes with characters like Shang-Chi, Loki, and members of the X-Men.
+  - q: 'Will there be an Avengers: Doomsday Part 2?'
     a: >-
-      While Deadpool’s presence in the film was confirmed via a surprise cameo,
-      Ryan Reynolds’s personal involvement was not explicitly stated by Kevin
-      Feige. The person in the Deadpool costume during the panel did not remove
-      their mask, leading to some ambiguity, though the voice was recognizable.
-      The directors and cast treated it as a confirmation of the character’s
-      role.
+      Yes. According to reporting, Avengers: Doomsday is described as "the first
+      in a two-part Avengers finale." This confirms a direct sequel is planned
+      to conclude the story.
 about:
   - name: 'Avengers: Doomsday'
     type: Movie
@@ -74,11 +70,11 @@ imageCredit: The Movie Database (TMDB)
 image: 'https://image.tmdb.org/t/p/original/7SgsIAwZRx2CW5uAgIQDwrw3KpA.jpg'
 imageWidth: 3840
 imageHeight: 2160
-formatTag: news
-trendScore: 92
+formatTag: trailer
+trendScore: 65
 signals:
-  recency: 24
-  corroboration: 12
+  recency: 4
+  corroboration: 8
   status: 18
   type: 11
   pop: 0
@@ -87,82 +83,94 @@ signals:
   trending: 0
   spice: 0
   softTv: 0
-  demand: 3
-eventSlug: marvel-comic-con-panel-fan-reaction-doomsday
+eventSlug: doomsday-movie-comic-con-trailer-reaction
 eventType: reaction
 outletCount: 6
 provenance:
-  eventSlug: marvel-comic-con-panel-fan-reaction-doomsday
-  primaryEntity: Marvel Studios
+  eventSlug: doomsday-movie-comic-con-trailer-reaction
+  primaryEntity: 'Avengers: Doomsday'
   eventType: reaction
   sensitivity: normal
   status: DEVELOPING
-  attribution: variety.com
+  attribution: the-independent.com
   outlets:
-    - Variety
-  publishedAt: '2026-07-26T05:31:24.994Z'
-dateModified: '2026-07-26T05:31:24.994Z'
+    - The Independent
+  publishedAt: '2026-07-26T17:58:06.246Z'
+dateModified: '2026-07-26T18:11:22.312Z'
 storyStatus: DEVELOPING
 infoCard:
-  director: Brad Baruh
+  director: Joe Russo
   cast:
-    - Chris Pratt
-    - Zoe Saldaña
-    - Karen Gillan
-    - Dave Bautista
-    - James Gunn
-    - Sean Gunn
-    - Chukwudi Iwuji
-    - Sylvester Stallone
-    - Kevin Feige
-    - Simon Hatt
-  releaseYear: '2023'
-  genre: Documentary
-  whereToWatch: Disney Plus
-consensus: >-
-  Fans are excited for the imminent 'Avengers: Doomsday' and intrigued by the
-  new 'Ghost Rider' and 'Black Panther' casting, but the lack of a fleshed-out
-  future slate, particularly regarding the X-Men, has tempered expectations and
-  left a sense that Marvel is playing its cards close to the vest.
-keyPoints:
-  - >-
-    Marvel's Comic-Con panel focused on 'Avengers: Doomsday' with a new trailer
-    and confirmed two 2028 films.
-  - >-
-    Reaction is split between hype for the December blockbuster and concern over
-    a thin announced future slate.
-  - >-
-    The studio did not announce any X-Men projects or provide new details on
-    'Avengers: Secret Wars'.
+    - Robert Downey Jr.
+    - Chris Evans
+    - Chris Hemsworth
+  releaseYear: '2026'
+  genre: 'Science Fiction, Action, Adventure'
+youtubeId: irVNGjRFZGk
+releaseInfo: 'December 18, 2026'
+keyMoments:
+  - The first part of a two-part Avengers finale directed by Joe Russo.
+  - Robert Downey Jr.'s debu
+reveals:
+  - term: Doctor Doom's Motivation
+    note: >-
+      The trailer reveals Doctor Doom's tragic backstory, framed by Sue Storm's
+      voiceover about his lost kindness.
+  - term: Fantastic Four Connection
+    note: >-
+      The footage confirms a troubled pre-existing relationship between Doom and
+      the Fantastic Four, particularly Mr. Fantastic.
+  - term: Crossover Scale
+    note: >-
+      The trailer confirms appearances from heroes across the MCU, Fantastic
+      Four, and X-Men franchises, including the use of Sentinel robots.
+officialSynopsis: >-
+  Beloved heroes from three distinct universes are set on a deadly collision
+  course and face an existential threat unlike anything they've ever
+  encountered.
+updateCount: 1
 ---
 
-Marvel Studios’ 2026 San Diego Comic-Con panel delivered new footage for ‘Avengers: Doomsday’ and two major film announcements, but left a packed Hall H with a palpable sense that the studio’s long-term roadmap remains frustratingly opaque. The 40-minute presentation, according to Variety, culminated in a reaction best described as cautiously optimistic, with fans thrilled by the imminent blockbuster but hungry for more concrete details about the franchise’s future beyond 2028.
+The second trailer for *[Avengers: Doomsday](/movies/avengers-doomsday-trailer-drops-with-fans-cheering-robert-downey-jr-s/)* has dramatically shifted fan opinion, according to reports from San Diego Comic-Con. Marvel Studios premiered the extended footage exclusively for Hall H attendees on Saturday, July 25, and the reaction was a clear improvement over the "underwhelming" first clip released just a week prior.
 
-## What Did Marvel Announce at Comic-Con?
+Directed by Joe Russo, the film is the first part of a two-part Avengers finale and promises to bring together heroes from across the [Marvel](/movies/avengers-doomsday-fans-are-hyped-critics-are-skeptical/) Cinematic Universe. The new trailer reportedly focuses heavily on Robert Downey Jr.'s Victor von Doom, establishing him as the film's central existential threat.
 
-The panel was built around the December 2026 release of ‘Avengers: Doomsday’, but it also seeded the next phase with two key projects. Here are the concrete announcements:
+## What Does the New Doomsday Trailer Show?
 
-* **Ryan Gosling as Ghost Rider:** The actor will star in a new ‘Ghost Rider’ film directed by Shawn Levy, slated for release in 2028.
-* **‘Black Panther 3’ with a New Star:** Ryan Coogler will direct ‘Black Panther 3’ for December 15, 2028, with David Jonsson cast as T’Challa II, the son of Chadwick Boseman’s character.
-* **Deadpool Confirmed for ‘Doomsday’:** A surprise cameo from Deadpool in his X-Force costume confirmed the character’s appearance in the upcoming Avengers film.
-* **New ‘Doomsday’ Footage:** An exclusive trailer provided more backstory for Robert Downey Jr.’s Doctor Doom and revealed he resurrects a fleet of giant Sentinel robots to battle the heroes.
+According to descriptions from The Independent, the Comic-Con footage provides a deeper look at the film's core conflict and sprawling cast. The trailer begins with Vanessa Kirby's Sue Storm providing voiceover about Doom's tragic past. It then showcases the villain's troubled pre-existing relationship with Pedro Pascal's Mr. Fantastic and the rest of the Fantastic Four.
 
-## The ‘Doomsday’ Deep Dive and Fan Reaction
+The footage leans into the massive crossover scope, with reported appearances from characters across the MCU and beyond:
 
-The core of the panel was a dedicated push for ‘Avengers: Doomsday’. Directors Joe and Anthony Russo assembled a massive cast on stage and debuted new footage that delved deeper into the villain’s origins. “We see Doom on the throne,” IGN reported. “Sue Storm says he used to be kind, he used to be caring, but everything he loved was taken from him.” The most visually striking moment showed Doom raising an army of dormant Sentinels, described as the most comic-accurate version yet seen on film.
+* **Robert Downey Jr.** as Victor von Doom / Doctor Doom
+* **Chris Evans** as Steve Rogers / Captain America
+* **Chris Hemsworth** as Thor
+* **Pedro Pascal** as Reed Richards / Mr. Fantastic
+* **Vanessa Kirby** as Sue Storm / The Invisible Woman
+* **Ebon Moss-Bachrach** as Ben Grimm / The Thing
+* **Anthony Mackie** as Sam Wilson / Captain America
 
-Fan reaction to this footage was largely positive, generating the kind of hype Marvel needs for its year-end tentpole. The surprise Deadpool cameo, where a voice from the crowd begged for a role in the movie, was a clear crowd-pleaser. However, Variety noted the moment was awkward because the person in the suit never removed his mask, leaving it unclear if it was actually Ryan Reynolds. The Russo brothers joked that production had wrapped, but [Kevin Feige](/movies/adam-driver-mcu-tradition-kevin-feige-laughs-off-actor-s-habit-of-turning/) did not explicitly confirm Reynolds’s return to the MCU, a missed opportunity that left some speculation unresolved.
+Fans also got a glimpse of Doom's army of Sentinel robots, the androids from the *X-Men* films, which he unleashes upon Thor. The trailer is not yet available online, having been shown only to the Comic-Con audience.
 
-## Why the Optimism Is Cautious
+## How Did Fans React?
 
-Beyond the excitement for ‘Doomsday’, the panel revealed what many fans perceived as a thin slate for the future. With only ‘Ghost Rider’ and ‘Black Panther 3’ announced for 2028, and no new information on the highly anticipated ‘Avengers: Secret Wars’ or the integration of the [X-Men](/movies/tramell-tillman-reportedly-reprises-william-metzger-as-first-x-men-movie/), the presentation felt incomplete to a segment of the audience. “It’s hard not to feel like, ‘Is that it?’” Variety reported, capturing the sentiment of fans who camped out for over 30 hours expecting a more comprehensive roadmap.
+The fan response on social media was overwhelmingly positive toward the new footage, with many directly comparing it to the first trailer. One person on X wrote, "OK the second Doomsday trailer is so much better than the first." Another echoed, "Why wasn’t this the first Doomsday trailer cause it’s way better than whatever that slop first trailer was."
 
-The announcement of Ryan Gosling as Ghost Rider, while a fun surprise, was also met with a measured ‘wait-and-see’ attitude. Given the long-gestating and ultimately stalled ‘Blade’ project, some fans adopted an “I’ll believe it when I see it” stance, despite the involvement of ‘Deadpool & Wolverine’ director Shawn Levy. The focus remained almost entirely on ‘Doomsday’, with little to no indication of what comes after for the returning Fox ‘X-Men’ stars or the new mutant lineup.
+Calling out "Marvel’s weird judgement," a third fan stated, "[The second trailer] hit infinitely better than the one they released to the public. A lot of people I know who didn’t like the first one loved this one." The sentiment was widely shared, with others calling the Comic-Con clip "legitimately so much better" and "50 bazillion times better" than the initial online reveal.
 
-## What’s Next for the MCU?
+## Why Is Chris Evans Back as Captain America?
 
-The confirmed next step is the release of ‘Avengers: Doomsday’ on December 18, 2026. Marvel will undoubtedly continue its marketing push for the film in the coming months. For the broader future, the panel made it clear that ‘Ghost Rider’ and ‘Black Panther 3’ are the pillars of the post-‘Secret Wars’ landscape, but many key details are still unknown. Disney’s D23 event, scheduled for just three weeks after Comic-Con, is now positioned as the next likely venue for further announcements, particularly regarding television projects and potentially more film news to flesh out the phase.
+Chris Evans' return to the role of Steve Rogers after a seven-year absence is a major draw. In an interview with Entertainment Weekly at Comic-Con, the actor explained his cautious approach to coming back. "I was a little precious," Evans said. "I wanted to preserve it."
 
-## Sources
-* [Box Office Mojo](https://www.boxofficemojo.com/)
-* [Disney Plus](https://www.disneyplus.com/)
+He revealed that he had turned down "at least a dozen" pitches to return as Captain America before finally agreeing to *Avengers: Doomsday*. His return, alongside Downey Jr.'s debut as the iconic villain, forms the emotional and narrative backbone of the crossover event.
+
+## What Is Avengers: Doomsday About?
+
+The film's official synopsis sets the stage: "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered." This aligns with the trailer's emphasis on a massive roster, including characters from the Avengers, the Fantastic Four, and the X-Men, all uniting against Doctor Doom.
+
+The story appears to deeply explore Doom's origins and motivations. A key quote from the trailer, delivered by Sue Storm, frames his descent: "Victor was always the smartest guy in the room. He used to be different. He used to be kind. He used to be caring… Everything he loved was taken from him. I knew he was lost, and I did not realise that he was broken."
+
+## What's Next for the Film?
+
+*Avengers: Doomsday* is confirmed for a theatrical release on **December 18, 2026**. In the lead-up, Marvel and Hasbro have unveiled a new line of Marvel Legends action figures tied to the film, featuring characters like Captain America, Thor, Shang-Chi, and the Fantastic Four in their *Doomsday*-specific costumes.
+
+The online release date for the well-received Comic-Con trailer remains unconfirmed. Marvel's next major marketing beat will likely be the global debut of this trailer, capitalizing on the positive buzz generated in Hall H.
