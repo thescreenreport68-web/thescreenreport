@@ -2255,10 +2255,10 @@
    "eventSlug": "off-campus-trending-tv",
    "form": "TRENDING-TV",
    "reason": "1 unverified claim(s) cut, unrecovered",
-   "tries": 2,
-   "at": "2026-07-26T15:06:15.278Z",
-   "dead": false,
-   "expiresAt": "2026-07-26T00:34:51.507Z"
+   "tries": 3,
+   "at": "2026-07-26T19:35:12.954Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T19:35:12.954Z"
   },
   {
    "key": "ride-or-die-trending-tv|TRENDING-TV",
@@ -2804,11 +2804,11 @@
    "key": "sullivan-s-crossing-trending-tv-w2026-07-19|TRENDING-TV",
    "eventSlug": "sullivan-s-crossing-trending-tv-w2026-07-19",
    "form": "TRENDING-TV",
-   "reason": "words 139 < 180 (owner-set ~200-word minimum)",
-   "tries": 2,
-   "at": "2026-07-26T15:03:32.751Z",
-   "dead": false,
-   "expiresAt": "2026-07-25T19:04:42.992Z"
+   "reason": "words 124 < 180 (owner-set ~200-word minimum)",
+   "tries": 3,
+   "at": "2026-07-26T19:32:56.077Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T19:32:56.077Z"
   },
   {
    "key": "outcome-now-streaming|NOW-STREAMING",
@@ -2986,9 +2986,11 @@
    "key": "spider-noir-trending-tv|TRENDING-TV",
    "eventSlug": "spider-noir-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 139 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5 | soft-floor humanVoice 2 < 5",
-   "tries": 2,
-   "at": "2026-07-26T15:09:13.530Z"
+   "reason": "words 152 < 180 (owner-set ~200-word minimum) | soft-floor humanVoice 3 < 5",
+   "tries": 3,
+   "at": "2026-07-26T19:37:45.075Z",
+   "dead": true,
+   "expiresAt": "2026-07-29T19:37:45.075Z"
   },
   {
    "key": "lanterns-trending-tv|TRENDING-TV",
@@ -3047,14 +3049,14 @@
    "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 11,
+ "zeroStreak": 12,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.4835
+  "usd": 0.54647
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785092483655
+  "lastMs": 1785094283585
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3068,9 +3070,9 @@
    "worst neighbor ever": 1,
    "the mandalorian and grogu": 1,
    "raw": 1,
-   "sullivan's crossing": 1,
-   "off campus": 1,
-   "spider-noir": 1,
+   "sullivan's crossing": 2,
+   "off campus": 2,
+   "spider-noir": 2,
    "mortal kombat ii": 2,
    "the dink": 2,
    "the sheep detectives": 1,
@@ -3125,7 +3127,8 @@
     "# unverified claim(s) cut# unrecovered"
    ],
    "spider-noir": [
-    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem",
+    "words # < # (owner-set ~#-word minimum) | soft-floor humanvo"
    ],
    "mortal kombat ii": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem",
