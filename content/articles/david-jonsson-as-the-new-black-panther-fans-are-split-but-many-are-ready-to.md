@@ -108,6 +108,27 @@ reactions:
     quote: >-
       Where are my fellow Industry fans? We need to celebrate David Jonsson
       being the next Black Panther.
+  - speaker: Denzel Washington
+    platform: interview
+    date: '2024'
+    quote: Coogler wrote a part specifically for him.
+  - speaker: A viewer
+    date: '2026-07-26'
+    quote: I loved this guy in alien Romulus. He deserves every bit of it.
+  - speaker: A viewer
+    date: '2026-07-26'
+    quote: >-
+      ‘BLACK PANTHER 3’ is officially in the works at Marvel Studios. • Ryan
+      Coogler will return to direct. • In theaters on December 15, 2028.
+  - speaker: A viewer
+    date: '2026-07-26'
+    quote: Well deserved role. Absolutely killed it in The Long Walk
+  - speaker: A viewer
+    date: '2026-07-26'
+    quote: >-
+      Brother was great in Alien Romlus and The Long Walk. He has the gravitas
+      and regal vibe T'Challa II needs. This Black Panther will have Storm as
+      his wife.
 pullQuote:
   text: "His performances in Alien and The Long Walk led to this\U0001F389 now he in the MCU.. his career really abt to take off\U0001F525"
   attribution: A viewer
@@ -117,7 +138,7 @@ fanConsensus: >-
   vision, and skeptical disappointment from fans who had their hearts set on
   other actors, with a large middle ground adopting a cautious wait-and-see
   approach.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   outlets: 7
@@ -134,7 +155,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-26T06:31:22.865Z'
+dateModified: '2026-07-26T18:31:22.375Z'
 provenance:
   parentEventSlug: david-jonsson-to-play-t-challa-s-grown-son-in-black-panther-
   primaryEntity: David Jonsson
@@ -149,6 +170,7 @@ imageAlt: David Jonsson Black Panther 3 casting announcement photo
 imageCredit: Photo via PMC
 imageWidth: 1600
 imageHeight: 1066
+updated: '2026-07-26T18:31:22.375Z'
 ---
 
 The [Marvel](/movies/nobody-was-ready-for-that-final-spider-man-brand-new-day-trailer/) Cinematic Universe has its new Black Panther. The move to pass the mantle sent fans into a frenzy, with reactions ranging from enthusiastic celebration to skeptical disappointment.
