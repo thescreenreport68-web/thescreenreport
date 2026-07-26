@@ -1,0 +1,68 @@
+{
+  "id": "news-futurama-three-new-supersized-specials-announced",
+  "slug": "futurama-to-release-three-new-supersized-specials-including-a-christma",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "tv/news",
+      "format": [],
+      "cuts": 2,
+      "broken": [
+        "body 456w < 600"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "official",
+    "entity": "Futurama",
+    "work": {
+      "title": "Futurama",
+      "year": null,
+      "medium": "tv"
+    },
+    "outlet": "variety.com"
+  },
+  "holdReason": "broken article: body 550w < 600",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 550,
+      "h2s": 6,
+      "h2Questions": 3,
+      "internalLinks": 0,
+      "externalLinks": 2,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 5,
+      "kwInTitle": true,
+      "kwInFirst100": true,
+      "kwInH2": true,
+      "maxSentence": 50,
+      "avgSentence": 16,
+      "flesch": 46,
+      "bannedTells": 1,
+      "fillerPraise": 0,
+      "kwExact": 6,
+      "hardBlocks": [
+        "body 550w < 600"
+      ]
+    },
+    "hardBlocks": [
+      "body 550w < 600"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 297212
+}
