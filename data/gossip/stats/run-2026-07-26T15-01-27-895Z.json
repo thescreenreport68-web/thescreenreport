@@ -1,0 +1,171 @@
+{
+  "ts": "2026-07-26T15:01:27.895Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "pamela-anderson-confirms-she-wont-return-for-baywatch-reboot",
+      "category": "tv",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaTitle",
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 4
+    }
+  ],
+  "topics": 8,
+  "held": 5,
+  "rejected": 1,
+  "skipped": 1,
+  "blocked": 0,
+  "costUSD": 0.170731,
+  "costPerPublished": 0.170731,
+  "byModel": {
+    "google/gemini-2.5-flash": {
+      "calls": 37,
+      "in": 93944,
+      "out": 16857,
+      "usd": 0.07032569999999999
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 10,
+      "in": 13400,
+      "out": 83073,
+      "usd": 0.022469979999999997
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 6,
+      "in": 13752,
+      "out": 2234,
+      "usd": 0.00173245905
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 5,
+      "in": 5635,
+      "out": 3543,
+      "usd": 0.00123834916
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 33,
+      "in": 134516,
+      "out": 63265,
+      "usd": 0.061566163
+    },
+    "google/gemini-2.5-flash-lite": {
+      "calls": 24,
+      "in": 46460,
+      "out": 8324,
+      "usd": 0.007707489999999997
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 9,
+      "in": 18517,
+      "out": 4952,
+      "usd": 0.0056907674
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 7,
+      "errors": 0,
+      "in": 17527,
+      "out": 1331,
+      "usd": 0.0085856,
+      "ms": 9238
+    },
+    "background": {
+      "calls": 8,
+      "errors": 2,
+      "in": 8345,
+      "out": 24181,
+      "usd": 0.0007353000000000001,
+      "ms": 198001
+    },
+    "detailFinder": {
+      "calls": 7,
+      "errors": 1,
+      "in": 8352,
+      "out": 53646,
+      "usd": 0,
+      "ms": 355402
+    },
+    "synthesizer": {
+      "calls": 7,
+      "errors": 1,
+      "in": 6665,
+      "out": 3885,
+      "usd": 0.00151497,
+      "ms": 79149
+    },
+    "writer": {
+      "calls": 36,
+      "errors": 2,
+      "in": 146327,
+      "out": 66002,
+      "usd": 0.06200619,
+      "ms": 1764606
+    },
+    "verify": {
+      "calls": 37,
+      "errors": 10,
+      "in": 67171,
+      "out": 11426,
+      "usd": 0.041743100000000005,
+      "ms": 99855
+    },
+    "judge": {
+      "calls": 10,
+      "errors": 0,
+      "in": 18410,
+      "out": 2314,
+      "usd": 0.0027666,
+      "ms": 12075
+    },
+    "claimAudit": {
+      "calls": 11,
+      "errors": 5,
+      "in": 14204,
+      "out": 8381,
+      "usd": 0,
+      "ms": 362766
+    },
+    "headline": {
+      "calls": 6,
+      "errors": 0,
+      "in": 5369,
+      "out": 1859,
+      "usd": 0.0018669300000000004,
+      "ms": 65818
+    },
+    "dedup": {
+      "calls": 1,
+      "errors": 0,
+      "in": 307,
+      "out": 14,
+      "usd": 0.00007537,
+      "ms": 1730
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 2071,
+      "out": 90,
+      "usd": 0.00024310000000000003,
+      "ms": 1676
+    },
+    "linker": {
+      "calls": 4,
+      "errors": 0,
+      "in": 1218,
+      "out": 119,
+      "usd": 0.00016940000000000002,
+      "ms": 1942
+    }
+  }
+}
