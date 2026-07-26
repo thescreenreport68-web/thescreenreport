@@ -8,60 +8,65 @@ subcategory: news
 author: editorial-team
 date: '2026-07-24T20:32:53.926Z'
 dek: >-
-  Hannah Moscovitch takes over as showrunner for the new season, which will
-  focus on Sheila Atim's Akasha.
+  Hannah Moscovitch will step up as showrunner for the new season, which adapts
+  Anne Rice's third novel and centers on the original vampire Akasha.
 metaTitle: Interview With the Vampire Season 4 Queen of the Damned
 metaDescription: >-
-  AMC has renewed Interview With the Vampire for a fourth season, which will be
-  titled Queen of the Damned and feature a new showrunner.
+  AMC's acclaimed series Interview With the Vampire has been renewed for a
+  fourth season, which will be titled Queen of the Damned and feature a new
+  showrunner.
 tags:
-  - interview with the vampire renewed
+  - interview with the vampire renewed season 4 queen of the damned
   - interview with the vampire
   - queen of the damned
-  - the vampire lestat
   - hannah moscovitch
-  - the hollywood reporter
-targetKeyword: Interview with the Vampire renewed
+  - mark johnson
+targetKeyword: interview with the vampire renewed season 4 queen of the damned
 keyTakeaways:
-  - AMC has renewed Interview With the Vampire for a fourth season.
   - >-
-    The new season will be titled Queen of the Damned, following the show's
-    trend of naming seasons after Anne Rice novels.
+    AMC has renewed Interview With the Vampire for a fourth season, officially
+    titled Queen of the Damned.
   - >-
-    Writer-producer Hannah Moscovitch will take over as showrunner from Rolin
-    Jones.
-  - 'The season will focus on the original vampire Akasha, played by Sheila Atim.'
+    Hannah Moscovitch will take over as showrunner from series creator Rolin
+    Jones, who remains an executive producer.
   - >-
-    The renewal was announced at San Diego Comic-Con following the conclusion of
-    Season 3, The Vampire Lestat.
+    The new season will adapt Anne Rice's third novel and focus on the ancient
+    vampire Akasha, played by Sheila Atim.
+  - >-
+    The renewal was announced at San Diego Comic-Con, just after the conclusion
+    of the show's third season, The Vampire Lestat.
 faq:
   - q: Will the main cast return for Queen of the Damned?
     a: >-
-      While not explicitly listed in the renewal announcement, the narrative
-      premise confirms that the established characters will confront Akasha.
-      Given that stars Jacob Anderson, Sam Reid, Assad Zaman, and Eric Bogosian
-      are integral to that story, their return is all but certain. Sheila Atim
-      is confirmed to reprise her role as Akasha.
-  - q: Is Queen of the Damned connected to the 2002 movie of the same name?
+      While not explicitly confirmed in the renewal announcement, the narrative
+      continuation strongly implies the return of the core cast. The statement
+      from AMC Studios mentions "our established and beloved characters confront
+      Akasha," pointing to the ongoing stories of Louis (Jacob Anderson), Lestat
+      (Sam Reid), Armand (Assad Zaman), and Daniel Molloy (Eric Bogosian).
+  - q: Is Queen of the Damned related to the 2002 movie of the same name?
     a: >-
-      Both are adaptations of Anne Rice's 1988 novel, but they are separate
-      productions. The AMC series is a continuation of its own ongoing story
-      that began with Interview With the Vampire in 2022, featuring its
-      established cast and continuity, and is not a remake of the earlier film.
+      Both are adaptations of Anne Rice's 1988 novel Queen of the Damned, but
+      they are separate projects. The AMC series is a direct continuation of its
+      own ongoing story that began with Interview With the Vampire and The
+      Vampire Lestat, featuring its established cast and a different creative
+      approach.
+  - q: Why did the show change showrunners?
+    a: >-
+      The shift appears to be a planned creative handoff within the production
+      team. Hannah Moscovitch has been deeply involved since the first season as
+      a writer and producer. Her promotion to showrunner for the Queen of the
+      Damned adaptation allows series creator Rolin Jones to remain as an
+      executive producer while Moscovitch takes the lead on this specific
+      chapter of the saga.
   - q: Where can I watch the previous seasons?
     a: >-
-      As of July 2026, Interview With the Vampire (Season 1), its second season,
-      and The Vampire Lestat (Season 3) are available to stream on multiple
-      platforms in the US, including Netflix, AMC+, Philo, and YouTube TV.
-  - q: Why did the showrunner change?
-    a: >-
-      The reporting does not specify a reason for the change. It notes that
-      Rolin Jones, who served as showrunner for the first three seasons, remains
-      an executive producer on the series. Hannah Moscovitch, his successor, has
-      been a writer and producer on the show since its first season and is
-      deeply familiar with its characters and mythology.
+      As of July 2026, Interview With the Vampire (Seasons 1 and 2) and The
+      Vampire Lestat (Season 3) are available to stream on multiple platforms in
+      the United States, including Netflix, AMC+, Philo, and YouTube TV.
 about:
   - name: Interview with the Vampire
+    type: TV Series
+  - name: Queen of the Damned
     type: TV Series
 imageAlt: >-
   AMC's 'Interview With the Vampire' Renewed for Season 4, Rebrands as 'Queen of
@@ -98,8 +103,8 @@ provenance:
   outlets:
     - The Hollywood Reporter
     - Variety
-  publishedAt: '2026-07-26T10:29:42.765Z'
-dateModified: '2026-07-26T10:44:54.984Z'
+  publishedAt: '2026-07-26T16:58:50.849Z'
+dateModified: '2026-07-26T17:08:43.711Z'
 storyStatus: DEVELOPING
 newsType: general
 pullQuote:
@@ -113,70 +118,72 @@ pullQuote:
     AMC Studios
 keyPoints:
   - >-
-    AMC renews Interview With the Vampire for a fourth season, rebranding it as
-    Queen of the Damned.
+    AMC renewed Interview With the Vampire for a fourth season titled Queen of
+    the Damned.
   - >-
-    Writer-producer Hannah Moscovitch takes over as showrunner for the new
-    season.
-  - 'The storyline will center on Sheila Atim''s Akasha, the original vampire.'
+    Hannah Moscovitch is the new showrunner, taking over from creator Rolin
+    Jones.
+  - >-
+    Season 4 will adapt Anne Rice's third novel and center on the vampire
+    Akasha.
 seriesContext:
   network: AMC
   premiere: '2022'
   status: Renewed through Season 4
-  seasons: '4'
+  seasons: 3 (renewed for 4)
   creator: Rolin Jones
   cast:
     - Jacob Anderson
     - Sam Reid
     - Assad Zaman
-  whereToWatch: 'Netflix, AMC+, Philo'
+  whereToWatch: 'Netflix, AMC+, YouTube TV, Philo'
 seriesStatus:
-  show: Interview With the Vampire
+  show: Interview With the Vampire / Queen of the Damned
   network: AMC
   status: renewed
   season: Season 4
   window: ''
   castAdded: []
-updateCount: 5
+updateCount: 6
 ---
 
-AMC has renewed *Interview With the Vampire* for a fourth season, according to The Hollywood Reporter. The network announced the news during the show's Hall H panel at San Diego Comic-Con on Friday, July 24, 2026, just after the third season, *The Vampire Lestat*, concluded its run.
+AMC renewed its series *Interview With the Vampire* for a fourth season, which will be titled *Queen of the Damned*, during a San Diego Comic-Con panel on Friday. The announcement comes just a week after the third season, *The Vampire Lestat*, concluded its run.
 
-This renewal continues the series' ambitious adaptation of Anne Rice's Vampire Chronicles. The upcoming season will be rebranded as *Queen of the Damned*, following the pattern set by the third season, which took the title of Rice's second novel.
+This renewal continues the show's unique tradition of rebranding each season to match the title of the Anne Rice novel it adapts. The upcoming season will also see a leadership change, with longtime writer and producer Hannah Moscovitch stepping into the showrunner role.
 
 ## What Are the Key Details for Season 4?
 
-The fourth season introduces several significant changes, confirmed by multiple industry reports. The core details are:
+The fourth season, officially titled *Anne Rice's Queen of the Damned*, brings several major changes confirmed by AMC and reported by outlets including The Hollywood Reporter and Variety.
 
-- **New Title:** *Queen of the Damned*, based on the third novel in Rice's series
-- **New Showrunner:** Hannah Moscovitch takes over from Rolin Jones, who remains an executive producer
-- **Central Character:** The season will focus on the original vampire Akasha, portrayed by Sheila Atim
-- **Creative Team:** Moscovitch will executive produce alongside Mark Johnson and Rolin Jones
-- **Announcement Venue:** San Diego Comic-Con Hall H, with executive producers and cast in attendance
-- **Source Material:** The season is a direct adaptation of Rice's 1988 novel *Queen of the Damned*
+* **New Title:** *Queen of the Damned*, adapting Rice's third novel in *The Vampire Chronicles*.
+* **New Showrunner:** Hannah Moscovitch takes over from series creator Rolin Jones.
+* **Central Character:** The season will focus heavily on Akasha, the original vampire, portrayed by Sheila Atim.
+* **Creative Team:** Moscovitch will executive produce alongside Mark Johnson and Rolin Jones.
+* **Announcement Venue:** The renewal was revealed at the show's Comic-Con Hall H panel.
+* **Timing:** The news arrived immediately following the finale of Season 3, *[The Vampire Lestat](/tv/the-vampire-lestat-finale-sent-fans-into-a-frenzy/)*.
 
-Moscovitch is a known quantity within the series, having worked as a writer on the first two seasons and as an executive producer on *[The Vampire Lestat](/tv/the-vampire-lestat-finale-sent-fans-into-a-frenzy/)*. She specifically wrote for the characters of Akasha and Gabriella, played by Jennifer Ehle, in the third season.
+## The People and Project Behind the Renewal
 
-## The Story So Far and the New Threat
+*Interview With the Vampire*, created by Rolin Jones, first premiered in 2022. It stars Jacob Anderson as Louis de Pointe du Lac, Sam Reid as Lestat de Lioncourt, Assad Zaman as Armand, and Eric Bogosian as journalist Daniel Molloy.
 
-The series, which first premiered in 2022, follows a century-old vampire from New Orleans as he recounts his life and tumultuous relationship with the charismatic Lestat de Lioncourt to a journalist. The third season shifted focus to Lestat's own origin story as an aspiring rock star.
+Hannah Moscovitch is not new to this world. She served as a writer on the show's first two seasons and was an executive producer on *The Vampire Lestat*, where she specifically wrote the characters of Akasha and Gabriella (played by Jennifer Ehle). Her promotion continues the series' internal development of its creative team.
 
-Season four pivots to a monumental threat. Akasha, the mother of all vampires who was briefly introduced in the previous season, becomes the central figure. In a statement, AMC Studios president Dan McDermott framed the coming conflict: “We can’t wait to continue the journey with *Queen of the Damned*, one of the most iconic stories in Anne Rice’s mythology, and watch our established and beloved characters confront Akasha with their world, and ours, very much hanging in the balance.”
+## Why This Renewal and Rebrand Matter
 
-This sets the stage for a showdown between the series' core characters—Louis (Jacob Anderson), Lestat (Sam Reid), Armand (Assad Zaman), and Daniel Molloy (Eric Bogosian)—and the most ancient and powerful being in their world.
+The decision to renew and rename the series underscores AMC's confidence in the expansive *Vampire Chronicles* adaptation. Dan McDermott, Chief Content Officer of AMC Global Media and President of AMC Studios, framed the upcoming season as a high-stakes escalation. "We can’t wait to continue the journey with *Queen of the Damned*, one of the most iconic stories in Anne Rice’s mythology," he said in a statement, "and watch our established and beloved characters confront Akasha with their world, and ours, very much hanging in the balance."
 
-## A Successful Franchise Strategy
+The shift to *Queen of the Damned* follows the narrative established in Season 3, which ended on a cliffhanger teasing the destructive reign of Akasha. This model of serialized novel adaptation allows the show to explore different corners of Rice's mythology while maintaining a core cast, a strategy that has captivated its dedicated fanbase.
 
-The renewal and rebranding underscore AMC's commitment to faithfully and expansively adapting Rice's literary universe. By renaming each season after the novel it adapts, the network creates clear entry points for fans while maintaining a continuous serialized narrative. The strategy appears to be working; the series has been nominated for two Primetime Emmys and has garnered 47 nominations in total, according to verified awards data.
+## What Happens Next for Queen of the Damned?
 
-The announcement at Comic-Con, a hub for genre fans, capitalized on the momentum from *The Vampire Lestat*'s finale. A brief teaser for *Queen of the Damned* was shown to the Hall H audience, featuring Sheila Atim's Akasha and hinting at the global scale of the coming story.
+With the renewal officially announced, the next major steps will be pre-production and scripting under Moscovitch's leadership. No premiere window or start-of-production date has been announced by AMC as of July 2026. The core cast, including Jacob Anderson, Sam Reid, and Assad Zaman, is expected to return to continue their storylines as they collide with the awakening of Akasha. Fans can expect the series to continue streaming on its current platforms, including Netflix and AMC+, when the new season eventually arrives.
 
-## What Happens Next?
+## The Season 3 Finale and Its Cliffhanger
 
-With the renewal officially confirmed, the next major step is the start of production for *Queen of the Damned*. No official production start date or release window has been announced by AMC as of July 2026. The series will continue to be available on its current streaming platforms, including AMC+, Netflix, and Philo.
+The renewal announcement at Comic-Con came just ahead of the Season 3 finale for *The Vampire Lestat*, which aired the following Sunday. According to Variety, that third season focused on aspiring rock star Lestat, played by Sam Reid, as he gave an interview to journalist Daniel Molloy. The season included vulnerable confessions about Lestat's first love, Nicolas de Lenfent, who became a vampire with him.
 
-## The Third Season's Musical Scope
+The season ended on a cliffhanger that teased the destructive reign of the original vampire, Akasha. This narrative setup directly leads into the story of *Queen of the Damned*, where the established characters must confront her awakening. To accompany Lestat's rock star journey, the series produced 20 songs sung by Reid.
 
-The third season, *The Vampire Lestat*, centered on Lestat's journey as an aspiring rock star. As part of this storyline, the series produced 20 original songs sung by actor Sam Reid. These songs accompanied Lestat's vulnerable confessions to journalist Daniel Molloy, including detailed recollections of his first love, Nicolas de Lenfent.
-
-Joseph Potter portrayed Nicolas de Lenfent, the character who became a vampire alongside Lestat. This focus on Lestat's origin story and musical ambition marked a distinct shift from the series' initial premise, which followed a century-old vampire from New Orleans recounting his life.
+## Sources
+* [IMDb](https://www.imdb.com/)
+* [AMC](https://www.amc.com/)

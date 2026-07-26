@@ -1,58 +1,63 @@
 ---
-title: Lucas Museum Reveals Comic-Con Plans to Screen Lost 'Star Wars Detours' Series
+title: >-
+  Seth Green Confirms Long-Lost 'Star Wars Detours' Will Finally Be Released at
+  Lucas Museum
 slug: lucas-museum-reveals-comic-con-plans-to-screen-lost-star-wars-detours
 category: movies
 subcategory: news
 author: editorial-team
 date: '2026-07-24T18:01:05.365Z'
 dek: >-
-  Seth Green announced the previously unaired animated parody will be part of
-  the museum's extensive film programming, set to open in September.
-metaTitle: Lucas Museum to Screen Star Wars Detours at Comic-Con
+  The shelved animated comedy, created with George Lucas, will be exhibited as a
+  curated selection of episodes when the Los Angeles museum opens in September.
+metaTitle: Star Wars Detours Animated Series Release at Lucas Museum
 metaDescription: >-
-  The Lucas Museum of Narrative Art will screen episodes of the unaired Star
-  Wars Detours animated series, as revealed by creator Seth Green at Comic-Con.
+  The actor and producer made the announcement during a panel discussion about
+  the museum, as reported by Entertainment Weekly and IGN.
 tags:
-  - lucas museum comic con
-  - lucas museum of narrative art
-  - seth green
-  - matthew senreich
-  - ryan linkof
-  - star wars
+  - star wars detours release
   - star wars detours
-targetKeyword: lucas museum comic con
+  - seth green
+  - george lucas
+  - lucas museum of narrative art
+targetKeyword: Star Wars Detours release
 keyTakeaways:
   - >-
-    The Lucas Museum will screen episodes of the unaired Star Wars parody series
-    Detours.
+    Seth Green announced 'Star Wars Detours' will be publicly exhibited at the
+    Lucas Museum of Narrative Art in Los Angeles.
   - >-
-    The museum, opening in September, will feature two theaters with non-stop
-    film programming.
+    The animated comedy was created by George Lucas with Green and Matthew
+    Senreich but shelved after Disney acquired Lucasfilm.
   - >-
-    The announcement was made by creator Seth Green during a Comic-Con panel in
-    Hall H.
+    A curated selection of episodes from the 39 completed installments will be
+    shown in the museum's theaters.
+  - >-
+    The Lucas Museum of Narrative Art is scheduled to open to the public on
+    September 22, 2026.
 faq:
-  - q: What is Star Wars Detours?
+  - q: >-
+      Will 'Star Wars Detours' ever be released on Disney+ or another streaming
+      service?
     a: >-
-      Star Wars Detours is an unaired CGI-animated comedy series created by Seth
-      Green and Matthew Senreich. It is a parody of the Star Wars franchise, set
-      between the events of the prequel and original film trilogies. The voice
-      cast includes Seth MacFarlane, Catherine Taber, and Anthony Daniels.
-  - q: When does the Lucas Museum open?
+      There is no current announcement regarding a traditional streaming or home
+      media release for Star Wars Detours. The only confirmed plan is for a
+      curated exhibition of episodes at the Lucas Museum of Narrative Art in Los
+      Angeles. Seth Green indicated in a 2025 interview that a streaming release
+      would require significant financial investment to update the material,
+      which he did not believe was a priority for the studio.
+  - q: How many episodes of 'Star Wars Detours' were made?
     a: >-
-      The Lucas Museum of Narrative Art is scheduled to open in September. The
-      exact date was not specified in the announcement at Comic-Con.
-  - q: Who else was on the Comic-Con panel?
+      According to reports from IGN and GoldDerby, a total of 39 episodes of
+      Star Wars Detours were completed before the series was shelved.
+      Additionally, 62 scripts were reportedly ready for production. The museum
+      exhibition will feature a selection from the archive of completed
+      episodes.
+  - q: Who else from the original Star Wars cast was involved in the series?
     a: >-
-      The panel featured Detours creators Seth Green and Matthew Senreich, comic
-      artist and DC head Jim Lee, Lucas Museum senior curator Ryan Linkof, and
-      was moderated by actress Keke Palmer.
-  - q: What other content will the museum's theaters show?
-    a: >-
-      Beyond Star Wars Detours, the museum's programming includes documentaries
-      on artists like Norman Rockwell, early silent films by Georges Méliès,
-      Looney Tunes cartoons, anime, and student films by George Lucas from
-      1965-1969.
+      The voice cast included several actors reprising their iconic Star Wars
+      roles. Anthony Daniels returned as C-3PO. The main cast also featured Seth
+      MacFarlane, Catherine Taber, Zachary Levi, Jennifer Hale, and Joel McHale
+      in various roles.
 about:
   - name: Star Wars Detours
     type: TV Series
@@ -62,64 +67,103 @@ image: 'https://image.tmdb.org/t/p/original/7WCJhOz9ktKyKom8R4KNpC0H8pB.jpg'
 imageWidth: 1920
 imageHeight: 1080
 formatTag: news
-trendScore: 79
+trendScore: 68
 signals:
   recency: 16
-  corroboration: 12
+  corroboration: 8
   status: 18
   type: 9
   pop: 0
   breakout: 0
-  big: 24
+  big: 18
   trending: 0
   spice: 0
   softTv: 0
-eventSlug: lucas-museum-comic-con-star-wars-animation
+  learned: -1
+eventSlug: star-wars-detours-animated-series-release
 eventType: announcement
-outletCount: 1
+outletCount: 6
 provenance:
-  eventSlug: lucas-museum-comic-con-star-wars-animation
-  primaryEntity: Lucas Museum of Narrative Art
+  eventSlug: star-wars-detours-animated-series-release
+  primaryEntity: Star Wars Detours
   eventType: announcement
   sensitivity: normal
   status: DEVELOPING
-  attribution: hollywoodreporter.com
+  attribution: Entertainment Weekly
   outlets:
-    - THR
-  publishedAt: '2026-07-24T18:01:05.365Z'
-dateModified: '2026-07-24T18:01:05.365Z'
+    - IMDb
+  publishedAt: '2026-07-26T16:55:50.849Z'
+dateModified: '2026-07-26T17:13:03.431Z'
 storyStatus: DEVELOPING
-infoCard:
-  director: 'George Lucas, Matthew Senreich, Seth Green'
-  cast:
-    - Seth MacFarlane
-    - Seth Green
-    - Catherine Taber
-  releaseYear: ''
-  genre: 'Animation, Comedy, Sci-Fi & Fantasy'
-  whereToWatch: Lucas Museum of Narrative Art
 newsType: general
 pullQuote:
   text: >-
-    “There is going to be a curation of episodes of that show on display for the
-    public,”
-  attribution: 'Seth Green, during a panel at San Diego Comic-Con'
+    He wanted to make Simpsons in the Star Wars universe. It's called Detours,
+    and there's… going to be a curation of episodes from that show on display
+    for the public in the theater.
+  attribution: 'Seth Green, co-creator of Star Wars Detours'
 keyPoints:
-  - The Lucas Museum will screen the lost Star Wars parody series Detours.
+  - The lost 'Star Wars Detours' series will be exhibited at the Lucas Museum.
   - >-
-    The museum's film program includes two theaters with non-stop screenings of
-    shorts, documentaries, and classic animation.
+    The animated comedy was created by George Lucas and shelved after Disney's
+    acquisition.
   - >-
-    Creator Seth Green announced the news at Comic-Con, framing the museum as a
-    home for popular art.
+    A selection from 39 completed episodes will be shown when the museum opens
+    September 22.
+seriesContext:
+  network: ''
+  premiere: Unaired
+  status: Completed
+  seasons: ''
+seriesStatus:
+  show: Star Wars Detours
+  network: ''
+  status: ordered
+  season: ''
+  window: ''
+  castAdded: []
+updateCount: 1
 ---
 
-The Lucas Museum of Narrative Art will screen episodes of the previously unaired animated series *Star Wars Detours*, creator [Seth Green](/tv/seth-green-announces-shelved-simpsons-style-star-wars-series-will-premiere/) revealed during a panel at San Diego Comic-Con. According to The Hollywood Reporter, the museum, which opens in September, will feature expansive exhibitions and two theaters screening various films and shorts.
+[Seth Green](/tv/seth-green-announces-shelved-simpsons-style-star-wars-series-will-premiere/) announced at San Diego Comic-Con 2026 that the long-shelved animated series *Star Wars Detours* will finally be publicly exhibited as a curation of episodes at the Lucas Museum of Narrative Art, which opens on September 22. The actor and producer made the announcement during a panel discussion about the museum, as reported by Entertainment Weekly and IGN. The series, a comedic parody of the Star Wars universe, was created with George Lucas but has been unseen since being shelved over a decade ago.
 
-Green, who created the show with his *Robot Chicken* partner Matthew Senreich, made the announcement during a panel in Hall H. “There is going to be a curation of episodes of that show on display for the public,” he said. The series is a CGI-animated comedy parody of the [Star Wars](/movies/a-star-wars-powerwash-pack-has-fans-in-a-chokehold-but-not-for-the-reason-you/) franchise, offering a comedic take on events between the prequel and original trilogies.
+Green is best known as a co-creator of *Robot Chicken* and for his voice role as Howard the Duck in the Marvel Cinematic Universe. His work on *Detours* began after Lucas saw his team's Star Wars sketches and wanted to collaborate on a full series.
 
-Senior curator Ryan Linkof detailed the museum's film offerings, which will be housed in two theaters. The Robert Flaherty Theater will focus on documentaries about artists featured in the museum, while the Slavko Vorkapich Theater will screen early silent films, animations, anime including *Cowboy Bebop*, an episode of *Star Wars: Visions*, and student films by [George Lucas](/movies/george-lucas-says-ai-is-the-future-and-fans-shouldn-t-control-movies-the/).
+## What Are the Specifics of the Release?
 
-The panelists emphasized the museum's focus on popular and commercial arts. “It will be the home for the kinds of art that we live with,” Linkof said. Artist Jim Lee, who will have work displayed, said the museum elevates commercial art. Green added a personal perspective: “We’ve lived long enough to see all the stuff that we were beaten for loving become the fine art of our day.”
+The news provides concrete details about how and when fans can finally see the lost series.
 
-The Lucas Museum of Narrative Art is scheduled to open to the public in September.
+* **Location:** The Lucas Museum of Narrative Art in Los Angeles, California.
+* **Format:** A curated selection of episodes will be on display for the public in the museum's theaters.
+* **Opening Date:** The museum is scheduled to open on September 22, 2026.
+* **Content:** Episodes from the 39 completed installments of *Star Wars Detours*.
+* **Original Pitch:** [George Lucas](/celebrity/george-lucas-calls-ai-in-filmmaking-an-inevitable-progress/) described the concept as "*The Simpsons* in the *Star Wars* universe," according to Green.
+
+Green shared the news directly at the Comic-Con panel. "We made a show with George, an animated series," he said. "He wanted to make *Simpsons* in the *Star Wars* universe. It's called *Detours*, and there's… going to be a curation of episodes from that show on display for the public in the theater."
+
+## What Is 'Star Wars Detours'?
+
+*Star Wars Detours* is an unaired CGI-animated comedy series that offers a parody of the Star Wars franchise. Set in the timeline between the prequel and original trilogies, the series was developed by George Lucas alongside *Robot Chicken* creators Seth Green and Matthew Senreich. It was officially announced at Star Wars Celebration in 2012, with a variety of clips showcased at the time.
+
+The voice cast is notably stacked, featuring Seth Green himself alongside Seth MacFarlane as Emperor Palpatine, Anthony Daniels reprising his role as C-3PO, Catherine Taber as Leia Organa, Zachary Levi, Jennifer Hale, and Joel McHale.
+
+## Why Was It Shelved for So Long?
+
+The series' fate changed dramatically following Disney's acquisition of Lucasfilm in 2012. According to reporting by GoldDerby, Lucasfilm president Kathleen Kennedy told Green and Senreich that the company wanted to focus on relaunching the Star Wars franchise with the sequel films, and she felt a broad comedic cartoon would undermine that strategy. As a result, the completed episodes were locked away.
+
+Green had previously expressed doubt the series would ever be released. In a February 2025 interview with ComicBook.com, he stated that updating the show for a streaming release would require new work and a financial commitment he didn't think Disney was willing to make. The museum exhibition represents a unique compromise, allowing the work to be seen without a full commercial rollout.
+
+## What Happens Next?
+
+The next confirmed step is the opening of the Lucas Museum of Narrative Art on September 22. The museum will feature two theaters—the Robert Flaherty Theater and the Slavko Vorkapich Theater—that will showcase curated film selections throughout the day. *Star Wars Detours* will be among those selections, though the exact number of episodes and the schedule for viewing have not yet been detailed by the museum.
+
+For now, the announcement ends over a decade of speculation and provides a definitive, if unconventional, answer for fans who have wondered about the fate of this legendary lost project.
+
+## Seth Green's Star Wars Voice Roles
+
+Beyond his work as a co-creator, Seth Green lent his voice to multiple characters in *Star Wars Detours*. According to the verified cast list, he voiced Obi-Wan Kenobi, a Jawa, Qui-Gon Jinn, and the Kowakian monkey-lizard Salacious Crumb.
+
+This multi-role performance highlights Green's versatility as a voice actor within the parody. His other recent Star Wars voice work includes playing the droid Todo 360 in the 2021 series *Star Wars: The Bad Batch*.
+
+## Sources
+* [Lucas Museum of Narrative Art](https://lucasmuseum.org/)
