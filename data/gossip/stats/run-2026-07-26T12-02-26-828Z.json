@@ -1,0 +1,162 @@
+{
+  "ts": "2026-07-26T12:02:26.828Z",
+  "mode": "from-find",
+  "review": false,
+  "published": [
+    {
+      "slug": "john-cusack-ditches-hollywood-for-a-graphic-novel-and-zero-studio-notes",
+      "category": "celebrity",
+      "isUpdate": false,
+      "parentSlug": null,
+      "seoIssues": [],
+      "headline": [
+        "metaDescription",
+        "dek"
+      ],
+      "voice": null,
+      "guardCuts": 0,
+      "surgicalFixes": 3
+    }
+  ],
+  "topics": 3,
+  "held": 1,
+  "rejected": 1,
+  "skipped": 0,
+  "blocked": 0,
+  "costUSD": 0.069311,
+  "costPerPublished": 0.069311,
+  "byModel": {
+    "google/gemini-2.5-flash-lite": {
+      "calls": 28,
+      "in": 49983,
+      "out": 14444,
+      "usd": 0.010506799999999998
+    },
+    "google/gemini-2.5-flash": {
+      "calls": 14,
+      "in": 39963,
+      "out": 7482,
+      "usd": 0.029079300000000002
+    },
+    "qwen/qwen3.5-flash-02-23": {
+      "calls": 3,
+      "in": 5779,
+      "out": 19238,
+      "usd": 0.005377515
+    },
+    "qwen/qwen3-235b-a22b-2507": {
+      "calls": 9,
+      "in": 39874,
+      "out": 17355,
+      "usd": 0.019205269
+    },
+    "deepseek/deepseek-v3.2": {
+      "calls": 4,
+      "in": 10653,
+      "out": 3871,
+      "usd": 0.00342265415
+    },
+    "qwen/qwen3-30b-a3b-instruct-2507": {
+      "calls": 3,
+      "in": 8643,
+      "out": 1954,
+      "usd": 0.00124480545
+    },
+    "deepseek/deepseek-v4-flash": {
+      "calls": 1,
+      "in": 1792,
+      "out": 825,
+      "usd": 0.000474171
+    }
+  },
+  "byRole": {
+    "editor": {
+      "calls": 3,
+      "errors": 0,
+      "in": 7604,
+      "out": 622,
+      "usd": 0.0038362000000000005,
+      "ms": 3980
+    },
+    "background": {
+      "calls": 2,
+      "errors": 0,
+      "in": 3827,
+      "out": 11178,
+      "usd": 0,
+      "ms": 59958
+    },
+    "detailFinder": {
+      "calls": 3,
+      "errors": 1,
+      "in": 3941,
+      "out": 9998,
+      "usd": 0,
+      "ms": 166558
+    },
+    "synthesizer": {
+      "calls": 3,
+      "errors": 1,
+      "in": 2793,
+      "out": 1204,
+      "usd": 0.00069462,
+      "ms": 48106
+    },
+    "writer": {
+      "calls": 12,
+      "errors": 2,
+      "in": 47486,
+      "out": 20210,
+      "usd": 0.01924473,
+      "ms": 618228
+    },
+    "verify": {
+      "calls": 16,
+      "errors": 8,
+      "in": 21832,
+      "out": 3180,
+      "usd": 0.011359999999999999,
+      "ms": 50575
+    },
+    "judge": {
+      "calls": 3,
+      "errors": 0,
+      "in": 6141,
+      "out": 525,
+      "usd": 0.0008241000000000001,
+      "ms": 2950
+    },
+    "claimAudit": {
+      "calls": 4,
+      "errors": 2,
+      "in": 6654,
+      "out": 16,
+      "usd": 0,
+      "ms": 153037
+    },
+    "headline": {
+      "calls": 2,
+      "errors": 0,
+      "in": 2040,
+      "out": 637,
+      "usd": 0.00068578,
+      "ms": 19447
+    },
+    "image": {
+      "calls": 1,
+      "errors": 0,
+      "in": 804,
+      "out": 152,
+      "usd": 0.00014120000000000002,
+      "ms": 1358
+    },
+    "linker": {
+      "calls": 2,
+      "errors": 0,
+      "in": 612,
+      "out": 71,
+      "usd": 0.00008960000000000001,
+      "ms": 921
+    }
+  }
+}
