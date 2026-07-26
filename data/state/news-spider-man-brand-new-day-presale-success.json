@@ -1,0 +1,86 @@
+{
+  "id": "news-spider-man-brand-new-day-presale-success",
+  "slug": "spider-man-brand-new-day-sets-biggest-hollywood-presale-overseas-since",
+  "status": "needs_review",
+  "stages": {
+    "attempt1": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 3,
+      "broken": [
+        "body 551w < 600",
+        "1 generic heading(s) [\"What Is the Story About?\"] — name the specific person/film/number the section is about"
+      ]
+    },
+    "attempt2": {
+      "score": null,
+      "cat": "movies/news",
+      "format": [
+        "primary keyword not in title"
+      ],
+      "cuts": 0,
+      "broken": [
+        "body 541w < 600",
+        "1 generic heading(s) [\"What Is the Story About?\"] — name the specific person/film/number the section is about"
+      ]
+    }
+  },
+  "editorial": {
+    "status": "confirmed",
+    "entity": "Spider-Man: Brand New Day",
+    "work": {
+      "title": "Spider-Man: Brand New Day",
+      "year": null,
+      "medium": "movie"
+    },
+    "outlet": "Comic Basics"
+  },
+  "holdReason": "broken article: body 541w < 600; 1 generic heading(s) [\"What Is the Story About?\"] — name the specific person/film/number the section is about",
+  "scorecard": {
+    "score": null,
+    "subscores": {},
+    "strengths": [],
+    "weaknesses": [],
+    "deterministic": {
+      "words": 541,
+      "h2s": 6,
+      "h2Questions": 5,
+      "internalLinks": 0,
+      "externalLinks": 0,
+      "hasSources": true,
+      "faqCount": 4,
+      "ktCount": 4,
+      "kwInTitle": false,
+      "kwInFirst100": true,
+      "kwInH2": false,
+      "maxSentence": 30,
+      "avgSentence": 15,
+      "flesch": 48,
+      "bannedTells": 0,
+      "fillerPraise": 0,
+      "kwExact": 0,
+      "hardBlocks": [
+        "primary keyword not in title",
+        "body 541w < 600",
+        "1 generic heading(s) [\"What Is the Story About?\"] — name the specific person/film/number the section is about"
+      ]
+    },
+    "hardBlocks": [
+      "body 541w < 600",
+      "1 generic heading(s) [\"What Is the Story About?\"] — name the specific person/film/number the section is about"
+    ]
+  },
+  "audit": {
+    "ok": false,
+    "internalLinks": 0,
+    "failed": [
+      "≥1200px legal image",
+      "credit",
+      "zero hard-blocks"
+    ]
+  },
+  "ms": 192546
+}

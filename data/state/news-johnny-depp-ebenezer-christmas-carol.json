@@ -6,11 +6,13 @@
     "attempt1": {
       "score": null,
       "cat": "movies/news",
-      "format": [],
-      "cuts": 0,
+      "format": [
+        "a 67-word run-on sentence (>55 — split it)",
+        "Flesch 35 < 40 (too dense to read comfortably)"
+      ],
+      "cuts": 3,
       "broken": [
-        "body 471w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "body 486w < 600"
       ]
     }
   },
@@ -24,38 +26,38 @@
     },
     "outlet": "deadline.com"
   },
-  "holdReason": "broken article: body 471w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+  "holdReason": "broken article: body 583w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 471,
+      "words": 583,
       "h2s": 5,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
-      "hasSources": true,
+      "hasSources": false,
       "faqCount": 3,
-      "ktCount": 3,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 43,
-      "avgSentence": 19,
-      "flesch": 45,
+      "maxSentence": 67,
+      "avgSentence": 25,
+      "flesch": 37,
       "bannedTells": 0,
-      "fillerPraise": 0,
+      "fillerPraise": 1,
       "kwExact": 0,
       "hardBlocks": [
-        "body 471w < 600",
-        "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        "body 583w < 600",
+        "a 67-word run-on sentence (>55 — split it)",
+        "Flesch 37 < 40 (too dense to read comfortably)"
       ]
     },
     "hardBlocks": [
-      "body 471w < 600",
-      "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+      "body 583w < 600"
     ]
   },
   "audit": {
@@ -67,5 +69,78 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 137940
+  "ms": 132186,
+  "previousRuns": [
+    {
+      "id": "news-johnny-depp-ebenezer-christmas-carol",
+      "slug": "johnny-depp-is-scrooge-in-pearl-director-s-ebenezer-a-christmas-carol-",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 0,
+          "broken": [
+            "body 471w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "confirmed",
+        "entity": "Johnny Depp",
+        "work": {
+          "title": "Ebenezer",
+          "year": null,
+          "medium": "movie"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "broken article: body 471w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 471,
+          "h2s": 5,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 3,
+          "ktCount": 3,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 43,
+          "avgSentence": 19,
+          "flesch": 45,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 471w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "hardBlocks": [
+          "body 471w < 600",
+          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 137940
+    }
+  ]
 }

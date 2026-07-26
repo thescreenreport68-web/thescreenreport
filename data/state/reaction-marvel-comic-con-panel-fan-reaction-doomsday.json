@@ -1,23 +1,21 @@
 {
   "id": "reaction-marvel-comic-con-panel-fan-reaction-doomsday",
   "slug": "marvel-s-comic-con-panel-excites-fans-for-doomsday-but-leaves-them-cau",
-  "status": "needs_review",
+  "status": "published",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "movies/news",
       "format": [],
-      "cuts": 3,
+      "cuts": 2,
       "broken": []
     },
     "attempt2": {
       "score": null,
       "cat": "movies/news",
       "format": [],
-      "cuts": 0,
-      "broken": [
-        "2 bullet points < 4"
-      ]
+      "cuts": 2,
+      "broken": []
     }
   },
   "editorial": {
@@ -26,46 +24,115 @@
     "work": null,
     "outlet": "variety.com"
   },
-  "holdReason": "broken article: 2 bullet points < 4",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 653,
-      "h2s": 4,
-      "h2Questions": 4,
+      "words": 645,
+      "h2s": 5,
+      "h2Questions": 2,
       "internalLinks": 0,
-      "externalLinks": 0,
-      "hasSources": false,
+      "externalLinks": 2,
+      "hasSources": true,
       "faqCount": 4,
-      "ktCount": 4,
+      "ktCount": 5,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 45,
-      "avgSentence": 19,
-      "flesch": 53,
+      "maxSentence": 44,
+      "avgSentence": 24,
+      "flesch": 49,
       "bannedTells": 0,
-      "fillerPraise": 1,
+      "fillerPraise": 0,
       "kwExact": 0,
-      "hardBlocks": [
-        "2 bullet points < 4"
-      ]
+      "hardBlocks": []
     },
-    "hardBlocks": [
-      "2 bullet points < 4"
-    ]
+    "hardBlocks": []
   },
+  "score": null,
+  "category": "movies",
+  "subcategory": "news",
   "audit": {
     "ok": false,
-    "internalLinks": 0,
+    "internalLinks": 3,
     "failed": [
-      "≥1200px legal image",
-      "credit",
-      "zero hard-blocks"
+      "keyword in title"
     ]
   },
-  "ms": 267655
+  "ms": 377464,
+  "previousRuns": [
+    {
+      "id": "reaction-marvel-comic-con-panel-fan-reaction-doomsday",
+      "slug": "marvel-s-comic-con-panel-excites-fans-for-doomsday-but-leaves-them-cau",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 3,
+          "broken": []
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [],
+          "cuts": 0,
+          "broken": [
+            "2 bullet points < 4"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Marvel Studios",
+        "work": null,
+        "outlet": "variety.com"
+      },
+      "holdReason": "broken article: 2 bullet points < 4",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 653,
+          "h2s": 4,
+          "h2Questions": 4,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 4,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 45,
+          "avgSentence": 19,
+          "flesch": 53,
+          "bannedTells": 0,
+          "fillerPraise": 1,
+          "kwExact": 0,
+          "hardBlocks": [
+            "2 bullet points < 4"
+          ]
+        },
+        "hardBlocks": [
+          "2 bullet points < 4"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 267655
+    }
+  ]
 }
