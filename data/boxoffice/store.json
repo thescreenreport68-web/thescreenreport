@@ -2234,10 +2234,10 @@
    "key": "lucky-trending-tv|TRENDING-TV",
    "eventSlug": "lucky-trending-tv",
    "form": "TRENDING-TV",
-   "reason": "words 145 < 180 (owner-set ~200-word minimum) | template-heading: \"## What's Next for 'Lucky'?  \" — rewrite story-specific | soft-floor engagement 3 < 5 | soft-floor humanVoice 3 < 5",
-   "tries": 3,
-   "at": "2026-07-23T17:02:56.271Z",
-   "dead": true,
+   "reason": "words 128 < 180 (owner-set ~200-word minimum)",
+   "tries": 2,
+   "at": "2026-07-26T17:33:29.725Z",
+   "dead": false,
    "expiresAt": "2026-07-26T17:02:56.271Z"
   },
   {
@@ -3018,9 +3018,9 @@
    "key": "mortal-kombat-ii-now-streaming|NOW-STREAMING",
    "eventSlug": "mortal-kombat-ii-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 130 < 180 (owner-set ~200-word minimum) | soft-floor engagement 3 < 5 | soft-floor humanVoice 4 < 5",
-   "tries": 1,
-   "at": "2026-07-26T15:11:26.272Z"
+   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
+   "tries": 2,
+   "at": "2026-07-26T17:34:54.969Z"
   },
   {
    "key": "the-dink-now-streaming|NOW-STREAMING",
@@ -3039,14 +3039,14 @@
    "at": "2026-07-26T15:40:19.619Z"
   }
  ],
- "zeroStreak": 7,
+ "zeroStreak": 8,
  "daySpend": {
   "laDay": "2026-07-26",
-  "usd": 0.40837
+  "usd": 0.4276
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785085282545
+  "lastMs": 1785087080386
  },
  "lastAuditDay": "2026-07-26",
  "attempts": {
@@ -3063,11 +3063,12 @@
    "sullivan's crossing": 1,
    "off campus": 1,
    "spider-noir": 1,
-   "mortal kombat ii": 1,
+   "mortal kombat ii": 2,
    "the dink": 1,
    "the sheep detectives": 1,
    "the walking dead: dead city": 1,
-   "lee cronin's the mummy": 1
+   "lee cronin's the mummy": 1,
+   "lucky": 1
   }
  },
  "failures": {
@@ -3118,7 +3119,8 @@
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
    ],
    "mortal kombat ii": [
-    "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+    "words # < # (owner-set ~#-word minimum) | soft-floor engagem",
+    "fidelity: # unsupported figures/claims — draft-level failure"
    ],
    "the dink": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
@@ -3131,6 +3133,9 @@
    ],
    "lee cronin's the mummy": [
     "words # < # (owner-set ~#-word minimum) | soft-floor engagem"
+   ],
+   "lucky": [
+    "words # < # (owner-set ~#-word minimum)"
    ]
   }
  }
