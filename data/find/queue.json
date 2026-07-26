@@ -1,102 +1,511 @@
 {
-  "runId": "run-2026-07-25T16-01-08",
-  "builtAt": "2026-07-25T16:02:39.123Z",
-  "count": 13,
+  "runId": "run-2026-07-26T04-01-20",
+  "builtAt": "2026-07-26T04:02:43.919Z",
+  "count": 32,
   "topics": [
     {
-      "id": "trailer-rings-of-power-season-3-trailer-simon-pegg-joins-cast",
-      "slug": "the-rings-of-power-season-3-trailer-drops-simon-pegg-joins-cast",
-      "title": "'The Rings of Power' Season 3 Trailer Drops, Simon Pegg Joins Cast",
+      "id": "news-ryan-gosling-ghost-rider-casting",
+      "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe",
+      "title": "Ghost Rider: Ryan Gosling Joins Marvel Cinematic Universe",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "ryan-gosling-ghost-rider-casting",
+      "primaryKeyword": "ryan gosling ghost rider",
+      "primaryEntity": "Ghost Rider",
+      "entities": [
+        "Ryan Gosling",
+        "Marvel Studios",
+        "Shawn Levy"
+      ],
+      "angle": "Ryan Gosling is officially joining the Marvel Cinematic Universe as Ghost Rider, with Shawn Levy set to direct.",
+      "tmdbType": "movie",
+      "source": "rss:TheWrap",
+      "sources": [
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/ghost-rider-ryan-gosling-joins-marvel-cinematic-universe-as-fiery-antihero/",
+          "ageMin": 170,
+          "headline": "Ghost Rider : Ryan Gosling Joins Marvel Cinematic Universe as Fiery Antihero",
+          "summary": "Comic-Con 2026: Shawn Levy is set to direct the film, which will be released in 2028 The post Ghost Rider : Ryan Gosling Joins Marvel Cinematic Universe as Fiery Antihero appeared first on TheWrap ."
+        },
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ryan-gosling-ghost-rider-for-marvel-studios-1236656560/",
+          "ageMin": 170,
+          "headline": "Ryan Gosling to Star in Ghost Rider Movie for Marvel Studios, Director Shawn Levy",
+          "summary": "Kevin Feige made theannouncement during Marvel's Comic-Con panel."
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/ryan-gosling-ghost-rider-marvel-movie-1236821206/",
+          "ageMin": 174,
+          "headline": "Ryan Gosling to Star in Marvel s Ghost Rider Movie",
+          "summary": "Ryan Gosling is finally joining the Marvel Cinematic Universe. The Project Hail Mary star will play Ghost Rider in a new standalone movie, Marvel Studios exec Kevin Feige announced onstage from Hall H at San Diego Comic Con. The film will be directed by Shawn Levy and is slated to release in 2028. Levy is [ ]"
+        },
+        {
+          "outlet": "extratv.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE51dm1EVVhmenE5X2R3S1NRQ2Z4Q1RLQWFQX1BXQVRjcV9fZk0yRkdGNzE2RHlJbGYwdVVZZkY2VkJvLW1td3hqZXA1cE8zVl9WX3QtcDV2Vjk1X1IwREJMSXJSa2JzcV9nb0lTZW9ZNk51NmZQdXg3SQ?oc=5",
+          "ageMin": 78,
+          "headline": "Ryan Gosling Joins MCU as Ghost Rider — Movie Coming in 2028 - extratv.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE51dm1EVVhmenE5X2R3S1NRQ2Z4Q1RLQWFQX1BXQVRjcV9fZk0yRkdGNzE2RHlJbGYwdVVZZkY2VkJvLW1td3hqZXA1cE8zVl9WX3QtcDV2Vjk1X1IwREJMSXJSa2JzcV9nb0lTZW9ZNk51NmZQdXg3SQ?oc=5\" target=\"_blank\" Ryan Gosling Joins MCU as Ghost Rider — Movie Coming in 2028 /a nb"
+        },
+        {
+          "outlet": "People.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPUm5iU01GNVBqQWVEV0tVdU0yMEcwLVN3UXU4cmxvM25SUmowVDJOVlNOYjNtbXpCY2cwa0NFOTY4a0cwQkJrcUREM1dadEk3R18zX0d6VFN1QXp5c1J3eldUZHEwc2RMcWx4QW9iTHViRnZLN0Jacmt3YlgybzdhZjh5U1RSbHM?oc=5",
+          "ageMin": 145,
+          "headline": "Ryan Gosling Joins the Marvel Universe as Ghost Rider: ‘A Character I’ve Wanted to Play for a Long Time’ - People.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxPUm5iU01GNVBqQWVEV0tVdU0yMEcwLVN3UXU4cmxvM25SUmowVDJOVlNOYjNtbXpCY2cwa0NFOTY4a0cwQkJrcUREM1dadEk3R18zX0d6VFN1QXp5c1J3eldUZHEwc2RMcWx4QW9iTHViRnZLN0Jacmt3YlgybzdhZjh5U1RSbHM?oc=5\" target=\"_blank\" Ryan Gosling Joins the Marvel Universe as Gho"
+        },
+        {
+          "outlet": "GeekTyrant",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPUWtmLXYwRkcwNWdQelBWSEdrVjdvZ2t5cm9GRWxPVjZic29NTFN4Q2VTWklIT20tN2JIWmZLdG1GaXZ6dkxYNDl3YUtNbkNudXQxMFlJLW43SmJnLXRZcWJCQWN5OC1GYnlDZjhqbUt6UklsYkowVThsUjNka1VGcEY3UTJUUWtTT0REajlXUjIzelYwejM4Yjd5dGlYbk9ObXZFa3VMUktMYnlYaGc?oc=5",
+          "ageMin": 156,
+          "headline": "Ryan Gosling Joins MCU as GHOST RIDER With DEADPOOL WOLVERINE Director Shawn Levy - GeekTyrant",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPUWtmLXYwRkcwNWdQelBWSEdrVjdvZ2t5cm9GRWxPVjZic29NTFN4Q2VTWklIT20tN2JIWmZLdG1GaXZ6dkxYNDl3YUtNbkNudXQxMFlJLW43SmJnLXRZcWJCQWN5OC1GYnlDZjhqbUt6UklsYkowVThsUjNka1VGcEY3UTJUUWtTT0REajlXUjIzelYwejM4Yjd5dGlYbk9ObXZFa3VMUktMYnlYaGc?oc=5\" target=\"_"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223367/marvel-ghost-rider-movie-ryan-gosling-shawn-levy-2026-sdcc/",
+          "headline": "Marvel's Ghost Rider With Ryan Gosling Coming In 2028, Shawn Levy To Direct [SDCC 2026]",
+          "summary": "Ghost Rider is coming to the Marvel Cinematic Universe, and Ryan Gosling will be heating up as the titular character.",
+          "ageMin": 168,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Digital Spy",
+          "tier": 5,
+          "url": "https://www.digitalspy.com/movies/a73263887/ryan-gosling-ghost-rider-mcu/",
+          "headline": "Ryan Gosling confirmed for dream MCU role in new Ghost Rider movie",
+          "summary": "It's coming in 2028.",
+          "ageMin": 171,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "ComingSoon",
+          "tier": 4,
+          "url": "https://www.comingsoon.net/movies/news/2167686-ryan-goslings-ghost-rider-mcu-movie-announced-with-release-date-logo",
+          "headline": "Ryan Gosling’s Ghost Rider MCU Movie Announced With Release Date, Logo",
+          "summary": "Ryan Gosling s Ghost Rider MCU movie is real, and we even know when it s coming out. Marvel Studios announced the news as a big surprise for fans, and now Gosling is joining the MCU as a hero. When does Ryan Gosling s Ghost Rider movie come out? During Marvel Studios San Diego Comic-Con 2026 panel, they [ ] The post Ryan Gosling’s Ghost Rider MCU Movie Announced With Release Date, Logo appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
+          "ageMin": 85,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-gosling-ghost-rider/",
+          "headline": "Ryan Gosling Set as Marvel s New Ghost Rider",
+          "summary": "Shawn Levy (Deadpool Wolverine, Star Wars: Starfighter) will direct the 2028 release. Ryan Gosling Set as Marvel s New Ghost Rider Liz Shannon Miller",
+          "ageMin": 156,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/marvel-ghost-rider-movie-ryan-gosling-comic-con/",
+          "headline": "Ryan Gosling officially cast as Marvel's new Ghost Rider",
+          "summary": "The MCU will recast Ghost Rider in an upcoming Midnight Suns movie set after Avengers: Doomsday",
+          "ageMin": 172,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 170,
+      "_cand": {
+        "key": "rss:ghost-rider-ryan-gosling-joins-marvel-cinematic-universe-as-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 11,
+      "verification": {
+        "tier1Count": 3,
+        "tier1Owners": 2,
+        "outletCount": 11,
+        "outlets": [
+          "TheWrap",
+          "THR",
+          "Variety",
+          "extratv.com",
+          "People.com",
+          "GeekTyrant"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 127,
+      "signals": {
+        "recency": 16,
+        "corroboration": 25,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 15,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 8
+      },
+      "demandImpressions": 40,
+      "demandQuery": "ryan gosling movies",
+      "demandPosition": 55.81818181818182,
+      "tierClass": "S"
+    },
+    {
+      "id": "trailer-reacher-season-4-trailer-drop",
+      "slug": "prime-video-debuts-reacher-season-four-official-trailer-and-neagley-te",
+      "title": "Prime Video Debuts Reacher Season Four Official Trailer and Neagley Teaser Trailer at San Diego Comic-Con",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "rings-of-power-season-3-trailer-simon-pegg-joins-cast",
-      "primaryKeyword": "rings of power season 3 trailer",
-      "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
+      "eventSlug": "reacher-season-4-trailer-drop",
+      "primaryKeyword": "reacher season 4 trailer",
+      "primaryEntity": "Jack Reacher",
       "entities": [
-        "The Lord of the Rings: The Rings of Power (TV Series)",
-        "Simon Pegg",
-        "Middle-earth"
+        "Reacher (TV Series)",
+        "Alan Ritchson",
+        "Prime Video",
+        "San Diego Comic-Con"
       ],
-      "angle": "Amazon's 'Rings of Power' drops a new trailer for its third season, also announcing Simon Pegg has joined the cast.",
+      "angle": "Prime Video drops the official trailer for Reacher Season 4 and a teaser for Neagley at San Diego Comic-Con.",
       "tmdbType": "movie",
-      "source": "gnews:The Hollywood Reporter",
+      "source": "gnews:TheFutonCritic.com",
       "sources": [
         {
-          "outlet": "The Hollywood Reporter",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVBIRWhaa2VweGM4WDJnOHBUTWZNaVJGbUVEQ2lNaElyQlg4X3dHSUQ1U0ZWTlRTMjRQVjBVc0FqemZ2bVNUU01WY0Q3Qm5DMURFQVBLUHdDa0dYb1hDYVY2dnY4NENTTzNCcmZvbnFNdzJQNlNmZTJOeVdTOC1LTDREb0dBcWxoZ3hTckl0Z3g3MXhNTV8xR0NPR3VwSUJUd0IxeA?oc=5",
-          "ageMin": 1273,
-          "headline": "‘The Rings of Power’ Season 3 Trailer Is Full of Middle-earth Action, Simon Pegg Joins Cast - The Hollywood Reporter",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxQcVBIRWhaa2VweGM4WDJnOHBUTWZNaVJGbUVEQ2lNaElyQlg4X3dHSUQ1U0ZWTlRTMjRQVjBVc0FqemZ2bVNUU01WY0Q3Qm5DMURFQVBLUHdDa0dYb1hDYVY2dnY4NENTTzNCcmZvbnFNdzJQNlNmZTJOeVdTOC1LTDREb0dBcWxoZ3hTckl0Z3g3MXhNTV8xR0NPR3VwSUJUd0IxeA?oc=5\" target=\"_blank\" ‘The R"
-        },
-        {
-          "outlet": "Variety",
-          "tier": 7,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5",
-          "ageMin": 1291,
-          "headline": "‘Rings of Power’ Debuts Season 3 Trailer; Simon Pegg Joins Cast as the Balrog - Variety",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxQUFRsdVhsNllSbW1NQnVWME1Db2pONTJ3Q3VMVzVKenBfU3VCUlU2TDJkWGR1UDJhZk9sbmhiVFlxaEplUzNKZnQ5Rkd5VVJoemNoWG5qcGs4RDNUbzRoeHExaWdfV0RJaWRWWE0xb19VaUtONjhxRkVrZFY0aUZXYVNsQnNQenloTTdueTFRc2UwMnNIQm1uTDZB?oc=5\" target=\"_blank\" ‘Rings of Power’ Deb"
-        },
-        {
-          "outlet": "Consequence",
+          "outlet": "TheFutonCritic.com",
           "tier": 5,
-          "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
-          "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
-          "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
-          "ageMin": 1238,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "TVLine",
-          "tier": 6,
-          "url": "https://www.tvline.com/2222736/simon-pegg-balrog-voice-lord-of-the-rings-the-rings-of-power/",
-          "headline": "The Lord Of The Rings: The Rings Of Power Casts Simon Pegg To Voice The Balrog In Season 3",
-          "summary": "Get all the scoop out of the fantasy series San Diego Comic-Con panel!",
-          "ageMin": 1292,
-          "via": "corr-feed"
+          "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPZ1BHVDN6bE1pbkFod2RMZzlaV1FuWHozWFowcW1yenhBMVJuTExuUnVjZ3Fzb0JPTDdoVDZ5SHl0OUlqZzJib0hsUlFHaWlfMExvdGFWSmpSUzZGblNES3FfSUNrTnRLVmFvU3Vqbl9WRXhsMERnMXlQQ1hqa1o2VDhTMmJWVlBGNjV6Ni1qSFFUWWtQUGlpUmVjMDk4Uk5rdXZIcUlUbVd3QThfWm8xckNyNzdtclpCYzliQTZ5MGFRc01qcTFIVnlyVWp3bFd0TUVNOG0wLWNQaDB6OVM5ZkVHblUtSlkzazhlT0V2bXN4WExiTkpwUkRRRng2YlhLSXk5TEtIV19TdllwNHlzMQ?oc=5",
+          "ageMin": 24,
+          "headline": "Prime Video Debuts Reacher Season Four Official Trailer and Neagley Teaser Trailer at San Diego Comic-Con 👊💥 - TheFutonCritic.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikAJBVV95cUxPZ1BHVDN6bE1pbkFod2RMZzlaV1FuWHozWFowcW1yenhBMVJuTExuUnVjZ3Fzb0JPTDdoVDZ5SHl0OUlqZzJib0hsUlFHaWlfMExvdGFWSmpSUzZGblNES3FfSUNrTnRLVmFvU3Vqbl9WRXhsMERnMXlQQ1hqa1o2VDhTMmJWVlBGNjV6Ni1qSFFUWWtQUGlpUmVjMDk4Uk5rdXZIcUlUbVd3QThfWm8xckNyNzdtclpCYzl"
         },
         {
           "outlet": "ComingSoon",
           "tier": 4,
-          "url": "https://www.comingsoon.net/tv/trailers/2167458-lotr-rings-of-power-season-3-trailer-mission-impossible-star",
-          "headline": "LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast",
-          "summary": "The first exciting teaser trailer for The Lord of the Rings: The Rings of Power season 3 shows Sauron forging the One Ring. The post LOTR: The Rings of Power Season 3 Trailer Sees Huge Mission: Impossible Star Join Cast appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
-          "ageMin": 1198,
+          "url": "https://www.comingsoon.net/tv/trailers/2167664-reacher-season-4-neagley-trailers-preview-prime-video-action-shows",
+          "headline": "Reacher Season 4 Neagley Trailers Preview Prime Video Action Shows",
+          "summary": "Prime Video has officially released a brand new pair of trailers. The Reacher Season 4 and Neagley trailers highlight two upcoming shows set in Reacher s world. Reacher Season 4 sees the return of Ritchson as Jack Reacher, and will premiere on Prime Video on August 12, 2026, with the first three episodes dropping and then [ ] The post Reacher Season 4 Neagley Trailers Preview Prime Video Action Shows appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
+          "ageMin": 188,
           "via": "corr-feed"
         }
       ],
-      "ageMin": 1273,
+      "ageMin": 24,
       "_cand": {
-        "key": "rss:-the-rings-of-power-season-3-trailer-is-full-of-middle-earth",
+        "key": "rss:prime-video-debuts-reacher-season-four-official-trailer-and-",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 5,
+      "corroborationCount": 2,
       "verification": {
-        "tier1Count": 2,
-        "tier1Owners": 1,
-        "outletCount": 5,
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
         "outlets": [
-          "The Hollywood Reporter",
-          "Variety"
+          "TheFutonCritic.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "The Hollywood Reporter",
+        "attribution": "TheFutonCritic.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 77,
+      "priority": 100,
       "signals": {
-        "recency": 1,
-        "corroboration": 18,
+        "recency": 24,
+        "corroboration": 8,
         "status": 18,
         "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1,
+        "radar": 18
+      },
+      "radarKind": "tv-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-black-panther-3-david-jonsson-t-challa-son-casting",
+      "slug": "black-panther-3-casts-david-jonsson-as-t-challa-s-son",
+      "title": "Black Panther 3 Casts David Jonsson as T'Challa's Son",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "black-panther-3-david-jonsson-t-challa-son-casting",
+      "primaryKeyword": "black panther 3",
+      "primaryEntity": "Black Panther 3",
+      "entities": [
+        "David Jonsson",
+        "Marvel Studios"
+      ],
+      "angle": "Marvel Studios announces David Jonsson will play T'Challa's son in the upcoming 'Black Panther 3'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/black-panther-3-marvel-ryan-coogler-comic-con-1236656570/",
+          "ageMin": 135,
+          "headline": "Black Panther 3 : David Jonsson to Star as T Challa s Son, Sequel Set for 2028",
+          "summary": "The crown jewel of this year's Comic-Con was Saturday's Marvel Studios panel, where the actor was announced as a grown version of T'Challa's son."
+        },
+        {
+          "outlet": "TheWrap",
+          "tier": 7,
+          "url": "https://www.thewrap.com/creative-content/movies/black-panther-3-david-jonsson/",
+          "ageMin": 138,
+          "headline": "Black Panther 3 Casts David Jonsson as T Challa s Son, Set for December 2028 Release",
+          "summary": "\"Believe me, the honor is entirely mine,\" the 32-year-old \"Industry\" actor says from the Comic-Con stage The post Black Panther 3 Casts David Jonsson as T Challa s Son, Set for December 2028 Release appeared first on TheWrap ."
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223373/black-panther-3-david-jonsson-tchalla-marvel-2026-sdcc/",
+          "headline": "Black Panther 3 Will Star David Jonsson As New T'Challa, Coming In 2028 [SDCC]",
+          "summary": "David Jonsson (Industry, The Long Walk) will play the next T Challa in the Marvel Cinematic Universe, and Black Panther 3 is hitting theaters in 2028.",
+          "ageMin": 135,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 135,
+      "_cand": {
+        "key": "rss:black-panther-3-david-jonsson-to-star-as-t-challa-s-son-sequ",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 5,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 2,
+        "outletCount": 5,
+        "outlets": [
+          "THR",
+          "TheWrap"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 105,
+      "signals": {
+        "recency": 16,
+        "corroboration": 18,
+        "status": 25,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-marvel-unveils-ghost-rider-black-panther-3-at-comic-con",
+      "slug": "marvel-unveils-ghost-rider-black-panther-3-at-comic-con",
+      "title": "Marvel Unveils 'Ghost Rider,' 'Black Panther 3' at Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "marvel-unveils-ghost-rider-black-panther-3-at-comic-con",
+      "primaryKeyword": "marvel comic-con announcements",
+      "primaryEntity": "Marvel Studios",
+      "entities": [
+        "Ghost Rider",
+        "Black Panther 3"
+      ],
+      "angle": "Marvel used Comic-Con to announce upcoming films 'Ghost Rider' and 'Black Panther 3'.",
+      "tmdbType": "movie",
+      "source": "gnews:Reuters",
+      "sources": [
+        {
+          "outlet": "The Walt Disney Company",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5vREE2VUEwZ0IwRWxmYmV0V3h5RTFLTUc0MHI3b1dWYW1qMW1aVTNlU24yZWFNSkFnLU5DNlJLbGxzTzVIQzVvVEJidUJfWE5heHd3YmE2VHBmRnphWnpIVllhWnQwRkxSeVlta0ptNnlVbTBmY0ww?oc=5",
+          "ageMin": 71,
+          "headline": "Marvel Studios Stuns San Diego Comic-Con with 'Avengers: Doomsday,' 'Ghost Rider,' and 'Black Panther 3' Reveals - The Walt Disney Company",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMid0FVX3lxTE5vREE2VUEwZ0IwRWxmYmV0V3h5RTFLTUc0MHI3b1dWYW1qMW1aVTNlU24yZWFNSkFnLU5DNlJLbGxzTzVIQzVvVEJidUJfWE5heHd3YmE2VHBmRnphWnpIVllhWnQwRkxSeVlta0ptNnlVbTBmY0ww?oc=5\" target=\"_blank\" Marvel Studios Stuns San Diego Comic-Con with 'Avengers: Doomsday,' "
+        },
+        {
+          "outlet": "Reuters",
+          "tier": 8,
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOX05uWGZuRERrX3Nta2dzWXJhYldYQlhKRFhJSWc0TUdlQ3lFdlZwV1dMNmRtRF9BbV9xVW04d1NpM0NJVkNMWkxnTTh3eXZDd3UyTE0tdGZJSUtCbFdCWVhTZDZqb3QxNVU2cE54bFltSHVZc2hjd25BN2FzQ0laaFFJa3RSVFFuRWhUWC0ydkJfRFhSdkNTSXV6U0tLbnExSlBIYnBPQWU1eGxNcE52SA?oc=5",
+          "ageMin": 82,
+          "headline": "Marvel unveils 'Ghost Rider,' 'Black Panther 3' at Comic-Con - Reuters",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxOX05uWGZuRERrX3Nta2dzWXJhYldYQlhKRFhJSWc0TUdlQ3lFdlZwV1dMNmRtRF9BbV9xVW04d1NpM0NJVkNMWkxnTTh3eXZDd3UyTE0tdGZJSUtCbFdCWVhTZDZqb3QxNVU2cE54bFltSHVZc2hjd25BN2FzQ0laaFFJa3RSVFFuRWhUWC0ydkJfRFhSdkNTSXV6U0tLbnExSlBIYnBPQWU1eGxNcE52SA?oc=5\" target"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-gosling-ghost-rider/",
+          "headline": "Ryan Gosling Set as Marvel s New Ghost Rider",
+          "summary": "Shawn Levy (Deadpool Wolverine, Star Wars: Starfighter) will direct the 2028 release. Ryan Gosling Set as Marvel s New Ghost Rider Liz Shannon Miller",
+          "ageMin": 156,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 82,
+      "_cand": {
+        "key": "rss:marvel-unveils-ghost-rider-black-panther-3-at-comic-con-reut",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 4,
+        "outlets": [
+          "The Walt Disney Company",
+          "Reuters"
+        ],
+        "maxTier": 8,
+        "sensitivity": "normal",
+        "attribution": null,
+        "framing": "plain",
+        "status": "CONFIRMED",
+        "publishable": true
+      },
+      "priority": 102,
+      "signals": {
+        "recency": 16,
+        "corroboration": 20,
+        "status": 25,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-kieran-culkin-family-guy-devil",
+      "slug": "family-guy-sets-annual-halloween-holiday-specials-for-hulu-kieran-culk",
+      "title": "Family Guy Sets Annual Halloween Holiday Specials For Hulu, Kieran Culkin Cast As The Devil",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "kieran-culkin-family-guy-devil",
+      "primaryKeyword": "family guy devil casting",
+      "primaryEntity": "Family Guy Presents: Blue Harvest",
+      "entities": [
+        "Family Guy",
+        "Kieran Culkin",
+        "Hulu"
+      ],
+      "angle": "Kieran Culkin cast as the Devil in upcoming Family Guy holiday specials.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/family-guy-halloween-holiday-special-hulu-kieran-culkin-1237003715/",
+          "ageMin": 263,
+          "headline": "Family Guy Sets Annual Halloween Holiday Specials For Hulu, Kieran Culkin Cast As The Devil",
+          "summary": "Family Guy s Halloween and holiday specials are returning exclusively to Hulu for a third straight year in 2026. Series executive producer and showrunner Rich Appel made the announcement at Family Guy s Comic-Con panel Saturday, while also sharing a first look atbKieran Culkin (Succession), who will guest star in the Halloween special as the devil. Appel [ ]"
+        },
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/family-guy-kieran-culkin-devil-halloween-special-hulu-1236820678/",
+          "ageMin": 406,
+          "headline": "Family Guy Casts Kieran Culkin to Play the Devil in New Halloween Special for Hulu",
+          "summary": "Roman Roy did some pretty devilish things on Succession, so perhaps it makes sense that Family Guy has tapped star Kieran Culkin to play Satan in a new Halloween-themed special that will run exclusively on Hulu later this year. Culkin s casting was announced Saturday during the Family Guy panel at San Diego Comic-Con, where it [ ]"
+        }
+      ],
+      "ageMin": 263,
+      "_cand": {
+        "key": "rss:family-guy-sets-annual-halloween-holiday-specials-for-hulu-k",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 2,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Deadline",
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 9,
+        "corroboration": 18,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 18,
@@ -108,23 +517,559 @@
       "tierClass": "B"
     },
     {
-      "id": "news-interview-with-the-vampire-renewed-for-season-4",
-      "slug": "interview-with-the-vampire-renewed-for-season-4-titled-queen-of-the-da",
-      "title": "‘Interview With the Vampire’ Renewed for Season 4, Titled ‘Queen of the Damned’",
+      "id": "news-winston-duke-david-jonsson-black-panther-3",
+      "slug": "winston-duke-returning-for-black-panther-3-david-jonsson-joins-cast",
+      "title": "Winston Duke Returning for 'Black Panther 3', David Jonsson Joins Cast",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "winston-duke-david-jonsson-black-panther-3",
+      "primaryKeyword": "black panther 3 casting",
+      "primaryEntity": "Black Panther 3",
+      "entities": [
+        "Winston Duke",
+        "David Jonsson",
+        "Marvel"
+      ],
+      "angle": "Winston Duke confirms his return for 'Black Panther 3' and welcomes David Jonsson to the franchise.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/tom-holland-admits-some-movies-hard-promote-1237003784/",
+          "ageMin": 2,
+          "headline": "Tom Holland Admits Some Of His Movies Were Hard To Promote Because It s Sh*t",
+          "summary": "While Tom Holland is proud of his two summer blockbusters, he wouldn t recommend certain pieces of his past filmography. The actor, whose movies The Odyssey and Spider-Man: Brand New Day are in theaters this summer, recently admitted that while those press tours have been really easy, some of his past films were shit and not [ ]"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 2,
+      "_cand": {
+        "key": "rss:tom-holland-admits-some-of-his-movies-were-hard-to-promote-b",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 98,
+      "signals": {
+        "recency": 30,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-star-trek-strange-new-worlds-season-4-trailer",
+      "slug": "star-trek-strange-new-worlds-teases-returning-characters-and-twisty-ti",
+      "title": "STAR TREK: STRANGE NEW WORLDS Teases Returning Characters and Twisty Timelines in New Season 4 Trailer",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "star-trek-strange-new-worlds-season-4-trailer",
+      "primaryKeyword": "star trek strange new worlds trailer",
+      "primaryEntity": "Star Trek: Strange New Worlds",
+      "entities": [
+        "Star Trek"
+      ],
+      "angle": "The new trailer for 'Star Trek: Strange New Worlds' Season 4 teases returning characters and timelines.",
+      "tmdbType": "movie",
+      "source": "gnews:TrekCore",
+      "sources": [
+        {
+          "outlet": "TrekCore",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNb2FjTzhzNEdLbjlwVjBzbzdLdEhwcDNIS1MzdjlsS3o0b2lXLXhBNl9rUGIzQXdvWjNya1lmTU1IQ0VGTmdObUE5TTNPXzVvOTlZOXg2ajhDVk12YkFNQ3o3ZEFaUElONHZJN3B1TUgxbW9xLV84VDViX01wQ20wdl9QVEh6M3IyOURBQzRB?oc=5",
+          "ageMin": 204,
+          "headline": "STAR TREK: STRANGE NEW WORLDS Teases Returning Characters and Twisty Timelines in New Season 4 Trailer - TrekCore",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNb2FjTzhzNEdLbjlwVjBzbzdLdEhwcDNIS1MzdjlsS3o0b2lXLXhBNl9rUGIzQXdvWjNya1lmTU1IQ0VGTmdObUE5TTNPXzVvOTlZOXg2ajhDVk12YkFNQ3o3ZEFaUElONHZJN3B1TUgxbW9xLV84VDViX01wQ20wdl9QVEh6M3IyOURBQzRB?oc=5\" target=\"_blank\" STAR TREK: STRANGE NEW WORLDS Teases"
+        }
+      ],
+      "ageMin": 204,
+      "_cand": {
+        "key": "rss:star-trek-strange-new-worlds-teases-returning-characters-and",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "TrekCore"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "TrekCore",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 9,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1,
+        "radar": 10
+      },
+      "radarKind": "tv-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "music-news-star-wars-zero-company-soundtrack-single-release",
+      "slug": "first-single-off-the-star-wars-zero-company-soundtrack-drops-on-stream",
+      "title": "First Single Off the \"Star Wars Zero Company\" Soundtrack Drops on Streaming Platforms",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "star-wars-zero-company-soundtrack-single-release",
+      "primaryKeyword": "star wars zero company soundtrack",
+      "primaryEntity": "Star Wars Zero Company",
+      "entities": [
+        "Star Wars"
+      ],
+      "angle": "First single from the 'Star Wars Zero Company' soundtrack is now available.",
+      "tmdbType": "movie",
+      "source": "gnews:Star Wars News Net",
+      "sources": [
+        {
+          "outlet": "Star Wars News Net",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPdXVLMXJQZUlFNkFvWndiNmpsN0tCT1lacGVQc0hIVlRDYlo2RGpYMngyYkVKN3hfQUJnVk9kUzZYUmxRZjNkTUIzQlFfbU9xZmVJNDA3ZlYzTVpHaE9OVVlkNlFKYUtJNE1zaGNSZ1JqbDdCWnZNbXUyZlJWc2JCUS04dGFCVnlGcnZCYVRuQUotR3d2UnRVNG53RVpPTHlrcFU0MkFhbUF2UEIzbnNwS2lKM1VYaGVGb1lwaHVNV0VUOFZRNThCWTBqLV9PQm1KMlJoRjlPNkFTbDFlV3dtTVVXOGk5Nm1UbklVNXF4WGEydHM?oc=5",
+          "ageMin": 178,
+          "headline": "'Star Wars Zero Company' Collector's Edition Revealed at San Diego Comic-Con, First Single From Soundtrack Available Now - Star Wars News Net",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi8wFBVV95cUxPdXVLMXJQZUlFNkFvWndiNmpsN0tCT1lacGVQc0hIVlRDYlo2RGpYMngyYkVKN3hfQUJnVk9kUzZYUmxRZjNkTUIzQlFfbU9xZmVJNDA3ZlYzTVpHaE9OVVlkNlFKYUtJNE1zaGNSZ1JqbDdCWnZNbXUyZlJWc2JCUS04dGFCVnlGcnZCYVRuQUotR3d2UnRVNG53RVpPTHlrcFU0MkFhbUF2UEIzbnNwS2lKM1VYaGVGb1l"
+        },
+        {
+          "outlet": "LaughingPlace.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMTFINzNCU0x0U2FSZmpyUWsycnVYY2dfNGxvR0doR0hfM3J5YnBFTkc2R1pOWUJJZ3dZd3JETWZMQ0FBNlg2SjhNSmM3cDNSb1ppTy0yLUxiYjR5MG8xZ0p2WHNUSG9FVlBWYnJMZVRDc1BBcHdncnNFc185MXBVY2VnWWIxS0ExSHZIUUtRTEh4YThtRXc?oc=5",
+          "ageMin": 231,
+          "headline": "First Single Off the \"Star Wars Zero Company\" Soundtrack Drops on Streaming Platforms - LaughingPlace.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxNMTFINzNCU0x0U2FSZmpyUWsycnVYY2dfNGxvR0doR0hfM3J5YnBFTkc2R1pOWUJJZ3dZd3JETWZMQ0FBNlg2SjhNSmM3cDNSb1ppTy0yLUxiYjR5MG8xZ0p2WHNUSG9FVlBWYnJMZVRDc1BBcHdncnNFc185MXBVY2VnWWIxS0ExSHZIUUtRTEh4YThtRXc?oc=5\" target=\"_blank\" First Single Off the \"Sta"
+        }
+      ],
+      "ageMin": 178,
+      "_cand": {
+        "key": "rss:-star-wars-zero-company-collector-s-edition-revealed-at-san-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 2,
+        "outlets": [
+          "Star Wars News Net",
+          "LaughingPlace.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "multiple outlets",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 69,
+      "signals": {
+        "recency": 16,
+        "corroboration": 14,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 8,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-ryan-reynolds-deadpool-comic-con-avengers-doomsday-role",
+      "slug": "ryan-reynolds-crashes-comic-con-as-deadpool-to-beg-for-avengers-doomsd",
+      "title": "Ryan Reynolds Crashes Comic-Con as Deadpool to Beg for 'Avengers: Doomsday' Role",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "high",
+      "eventSlug": "ryan-reynolds-deadpool-comic-con-avengers-doomsday-role",
+      "primaryKeyword": "ryan reynolds avengers doomsday",
+      "primaryEntity": "Ryan Reynolds",
+      "entities": [
+        "Deadpool",
+        "Avengers: Doomsday",
+        "Paul Rudd"
+      ],
+      "angle": "Ryan Reynolds, in costume as Deadpool, made a surprise appearance at Marvel's Comic-Con panel to jokingly campaign for a role in 'Avengers: Doomsday'.",
+      "tmdbType": "movie",
+      "source": "rss:THR",
+      "sources": [
+        {
+          "outlet": "THR",
+          "tier": 7,
+          "url": "https://www.hollywoodreporter.com/movies/movie-news/ryan-reynolds-deadpool-avengers-doomsday-comic-con-1236656648/",
+          "ageMin": 51,
+          "headline": "Ryan Reynolds Deadpool Crashes Comic-Con to Beg for Avengers: Doomsday Role",
+          "summary": "\"When do you start filming?\" asked the star, who appeared in a new gray costume and endured a barb from Paul Rudd during Marvel's high-profile panel."
+        },
+        {
+          "outlet": "ComingSoon",
+          "tier": 4,
+          "url": "https://www.comingsoon.net/movies/news/2167697-ryan-reynolds-deadpool-gets-a-surprising-new-suit-for-avengers-doomsday",
+          "headline": "Ryan Reynolds’ Deadpool Gets a Surprising New Suit for Avengers: Doomsday",
+          "summary": "Ryan Reynolds popped up at Marvel Studios San Diego Comic-Con panel. There, he teased a brand new Deadpool costume for his appearance in the upcoming Avengers: Doomsday. What does Ryan Reynolds new Deadpool costume look like? While the Doomsday cast was on stage and Marvel was taking questions about Doomsday, someone wearing a grey Deadpool [ ] The post Ryan Reynolds’ Deadpool Gets a Surprising New Suit for Avengers: Doomsday appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
+          "ageMin": 52,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 51,
+      "_cand": {
+        "key": "rss:ryan-reynolds-deadpool-crashes-comic-con-to-beg-for-avengers",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "THR"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "THR",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-the-rookie-season-9-premiere-news",
+      "slug": "the-rookie-creator-reveals-supersized-season-9-premiere",
+      "title": "The Rookie Creator Reveals Supersized Season 9 Premiere",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "the-rookie-season-9-premiere-news",
+      "primaryKeyword": "the rookie season 9",
+      "primaryEntity": "The Rookie",
+      "entities": [
+        "Alexi Hawley",
+        "Nathan Fillion",
+        "Melissa O'Neil"
+      ],
+      "angle": "Creator Alexi Hawley reveals 'The Rookie' will have a supersized Season 9 premiere, addressing the shocking Season 8 cliffhanger.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/the-rookie-season-9-premiere-season-8-finale-cliffhanger-1237003758/",
+          "ageMin": 154,
+          "headline": "The Rookie Creator Reveals Supersized Season 9 Premiere As Melissa O Neil Apologizes For Shocking Season 8 Finale Cliffhanger",
+          "summary": "The Rookie creator Alexi Hawley and the cast, led by Nathan Fillion, made a return to Comic-Con with some news about ABC series upcoming ninth season. It had started production this week without Fillion, who will join them on set Monday but was reunited with his colleagues during the show s Comic-Con panel Saturday. Hawley revealed [ ]"
+        }
+      ],
+      "ageMin": 154,
+      "_cand": {
+        "key": "rss:the-rookie-creator-reveals-supersized-season-9-premiere-as-m",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-david-jonsson-black-panther-ryan-gosling-ghost-rider-casting",
+      "slug": "comic-con-2026-david-jonsson-is-new-black-panther-ryan-gosling-joins-m",
+      "title": "Comic-Con 2026: David Jonsson is new Black Panther, Ryan Gosling joins Marvel as Ghost Rider",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "david-jonsson-black-panther-ryan-gosling-ghost-rider-casting",
+      "primaryKeyword": "black panther 3 casting",
+      "primaryEntity": "Black Panther 3 (film)",
+      "entities": [
+        "David Jonsson",
+        "Ryan Gosling",
+        "Marvel",
+        "Ghost Rider"
+      ],
+      "angle": "Marvel announces David Jonsson as the new Black Panther and Ryan Gosling as Ghost Rider.",
+      "tmdbType": "movie",
+      "source": "gnews:The Washington Post",
+      "sources": [
+        {
+          "outlet": "The Washington Post",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNVWh0ZmJjY3ZOT1FOQTZwMkJFQjhYdk5lRFB6ZHpaczhOcDVsMUZKX25LQWNaT3Q2TFluZEFlbjV2eFoteXRrRkJ6SmdkVk92RUt1QVNrOUdPQ2JZNW1VbkFWWDZHVHdBdTVPRDEwdy0zdEtMVm5rdV9kUFJ5Vm9fdGREVGZveldXaTc4ZDVJYXJTVDdXQy1wdExzRE9KaGYzanYzX0M5X0tjT0ZzZ3l2bjNSUjV6RlVHd3ZIY21UaEFOZUJYMzg0a0tuX0FHcDhkWUFSSzkyTXhJYlM4TGJsSEZwaEI?oc=5",
+          "ageMin": 31,
+          "headline": "Comic-Con 2026: David Jonsson is new Black Panther, Ryan Gosling joins Marvel as Ghost Rider - The Washington Post",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMi5AFBVV95cUxNVWh0ZmJjY3ZOT1FOQTZwMkJFQjhYdk5lRFB6ZHpaczhOcDVsMUZKX25LQWNaT3Q2TFluZEFlbjV2eFoteXRrRkJ6SmdkVk92RUt1QVNrOUdPQ2JZNW1VbkFWWDZHVHdBdTVPRDEwdy0zdEtMVm5rdV9kUFJ5Vm9fdGREVGZveldXaTc4ZDVJYXJTVDdXQy1wdExzRE9KaGYzanYzX0M5X0tjT0ZzZ3l2bjNSUjV6RlVHd3Z"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223367/marvel-ghost-rider-movie-ryan-gosling-shawn-levy-2026-sdcc/",
+          "headline": "Marvel's Ghost Rider With Ryan Gosling Coming In 2028, Shawn Levy To Direct [SDCC 2026]",
+          "summary": "Ghost Rider is coming to the Marvel Cinematic Universe, and Ryan Gosling will be heating up as the titular character.",
+          "ageMin": 168,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 31,
+      "_cand": {
+        "key": "rss:comic-con-2026-david-jonsson-is-new-black-panther-ryan-gosli",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 4,
+        "outlets": [
+          "The Washington Post"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Washington Post",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 24,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-star-trek-strange-new-worlds-season-4-teaser",
+      "slug": "sdcc-new-teaser-reveals-what-s-coming-in-star-trek-strange-new-worlds-",
+      "title": "SDCC: New Teaser Reveals What’s Coming In ‘Star Trek: Strange New Worlds’ Season 4",
+      "contentType": "trailer",
+      "formatTag": "trailer",
+      "category": "tv",
+      "subcategory": "trailers",
+      "eventType": "trailer",
+      "sensitivity": "normal",
+      "eventSlug": "star-trek-strange-new-worlds-season-4-teaser",
+      "primaryKeyword": "star trek strange new worlds season 4 teaser",
+      "primaryEntity": "Star Trek: Strange New Worlds",
+      "entities": [
+        "Paramount+"
+      ],
+      "angle": "A new teaser for the upcoming fourth season of 'Star Trek: Strange New Worlds' has been unveiled at SDCC.",
+      "tmdbType": "movie",
+      "source": "gnews:trekmovie.com",
+      "sources": [
+        {
+          "outlet": "trekmovie.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZkRSTGUyM3VGeTZTRFdMaE83Wk9SajZHTUVkM2NfWGhFdmxkUzBCT2F3VWlHMUNIVGlBX1A4a3pzNzJTSFJ5R1VMM3RYZjFPX0tBa2Zwa1dpWFZNZmhfTnZwcW01cDJDMHBFMDBHQkhEd01sTlVjM2VFZHdnVUFBNkNBdFNETEJ4NmZiV0cwV0lVU0ZTb3YwMVdHX0VRQTAwNnVRaU5HalJfYTNHZGh1Zw?oc=5",
+          "ageMin": 431,
+          "headline": "SDCC: New Teaser Reveals What’s Coming In ‘Star Trek: Strange New Worlds’ Season 4 - trekmovie.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxNZkRSTGUyM3VGeTZTRFdMaE83Wk9SajZHTUVkM2NfWGhFdmxkUzBCT2F3VWlHMUNIVGlBX1A4a3pzNzJTSFJ5R1VMM3RYZjFPX0tBa2Zwa1dpWFZNZmhfTnZwcW01cDJDMHBFMDBHQkhEd01sTlVjM2VFZHdnVUFBNkNBdFNETEJ4NmZiV0cwV0lVU0ZTb3YwMVdHX0VRQTAwNnVRaU5HalJfYTNHZGh1Zw?oc=5\" target"
+        }
+      ],
+      "ageMin": 431,
+      "_cand": {
+        "key": "rss:sdcc-new-teaser-reveals-what-s-coming-in-star-trek-strange-n",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "trekmovie.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "trekmovie.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 72,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 15,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1,
+        "radar": 10
+      },
+      "radarKind": "tv-trending",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-interview-with-the-vampire-renewed-for-season-4-rebranded-queen-of-the",
+      "slug": "interview-with-the-vampire-renewed-for-season-4-with-rebrand-to-queen-",
+      "title": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
       "eventType": "renewal",
       "sensitivity": "normal",
-      "eventSlug": "interview-with-the-vampire-renewed-for-season-4",
+      "eventSlug": "interview-with-the-vampire-renewed-for-season-4-rebranded-queen-of-the",
       "primaryKeyword": "interview with the vampire season 4",
       "primaryEntity": "Interview with the Vampire",
       "entities": [
         "Interview with the Vampire (TV series)",
         "Queen of the Damned"
       ],
-      "angle": "AMC's 'Interview With the Vampire' is renewed for a fourth season, which will be subtitled 'Queen of the Damned'.",
+      "angle": "AMC's 'Interview With the Vampire' is renewed for a fourth season and will be rebranded as 'Queen of the Damned'.",
       "tmdbType": "movie",
       "source": "gnews:The Hollywood Reporter",
       "sources": [
@@ -132,7 +1077,7 @@
           "outlet": "The Hollywood Reporter",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc=5",
-          "ageMin": 1121,
+          "ageMin": 1842,
           "headline": "‘Interview With the Vampire’ Renewed for Season 4 With Rebrand to ’Queen of the Damned’ - The Hollywood Reporter",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxPZUNIZk1HbGxWenN3OUhSM0FENzVjV1ZGUWxNbVl4a2V3SEZ3emJkRkNTazVKZ200VmtYZEY0OEczR2JBT1Fmd3VDTjlxT0Y5X2FIdnNhbEJkNnFIM1JJTHA1WUNZdm5EVzdZZThYcjR6SktmbjNpbzU4YW52Vk1hbnNXa1JNcHlfUGY1WFJNQW5nMkVLVXExZGJDTHR1REFtSllMSW9obnd4ZldWbHBYU2kteklNcGM?oc="
         },
@@ -140,31 +1085,22 @@
           "outlet": "Variety",
           "tier": 7,
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5",
-          "ageMin": 1186,
+          "ageMin": 1906,
           "headline": "‘Interview With the Vampire’ Renewed for Season 4, Titled ‘Queen of the Damned’ - Variety",
           "summary": "a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxNRDdHWFAyOE9sVTdOcWxVRE1Xa1lJV1d0ZHVlMWRfYWJfZFNYaUh2ZzZvdWhSbWpObEIwYVM1MlFTNDVWaXROdlU2SEUteEFhNGpCb2JHS3NtU3ZQV2FMS2JpaGdCZW1jXzFuOWpwcVQ0cnlXTHlNRlpQZ1NtcjMzTmhpRTBzVHJaeDdoSGF4Tm1TYlRISjZv?oc=5\" target=\"_blank\" ‘Interview With the Vamp"
-        },
-        {
-          "outlet": "TVLine",
-          "tier": 6,
-          "url": "https://www.tvline.com/2222823/interview-with-the-vampire-renewed-season-4-queen-of-the-damned/",
-          "headline": "Interview With The Vampire Renewed For Season 4 At AMC (With A New, Akasha-Centric Title)",
-          "summary": "Interview With the Vampire will officially be back at AMC, and Season 4 is putting Akasha front and center - get details on the renewal.",
-          "ageMin": 1188,
-          "via": "corr-feed"
         }
       ],
-      "ageMin": 1121,
+      "ageMin": 1842,
       "_cand": {
         "key": "rss:-interview-with-the-vampire-renewed-for-season-4-with-rebran",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 3,
+      "corroborationCount": 2,
       "verification": {
         "tier1Count": 2,
         "tier1Owners": 1,
-        "outletCount": 3,
+        "outletCount": 2,
         "outlets": [
           "The Hollywood Reporter",
           "Variety"
@@ -193,54 +1129,46 @@
       "tierClass": "B"
     },
     {
-      "id": "news-guillermo-del-toro-no-ai-pan-s-labyrinth-3d",
-      "slug": "guillermo-del-toro-vows-no-ai-in-pan-s-labyrinth-3d-re-release",
-      "title": "Guillermo del Toro Vows No AI in 'Pan's Labyrinth' 3D Re-Release",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
+      "id": "awards-fantasia-international-film-festival-awards-nightborn-wins",
+      "slug": "fantasia-international-film-festival-awards-hanna-bergholm-s-nightborn",
+      "title": "Fantasia International Film Festival Awards: Hanna Bergholm’s Nightborn Wins Top Honor",
+      "contentType": "awards",
+      "formatTag": "awards",
+      "category": "awards",
+      "subcategory": "winners",
+      "eventType": "award",
       "sensitivity": "normal",
-      "eventSlug": "guillermo-del-toro-no-ai-pan-s-labyrinth-3d",
-      "primaryKeyword": "guillermo del toro pan's labyrinth ai",
-      "primaryEntity": "Pan's Labyrinth",
+      "eventSlug": "fantasia-international-film-festival-awards-nightborn-wins",
+      "primaryKeyword": "Fantasia International Film Festival",
+      "primaryEntity": "Fantasia International Film Festival",
       "entities": [
-        "Guillermo del Toro"
+        "Nightborn",
+        "Hanna Bergholm"
       ],
-      "angle": "Guillermo del Toro emphasizes his commitment to artistic integrity by banning AI from the 3D re-release of 'Pan's Labyrinth'.",
+      "angle": "Film festival announces its top award winners.",
       "tmdbType": "movie",
       "source": "rss:Variety",
       "sources": [
         {
           "outlet": "Variety",
           "tier": 7,
-          "url": "https://variety.com/2026/film/news/guillermo-del-toro-no-ai-pans-labyrinth-rerelease-1236815109/",
-          "ageMin": 864,
-          "headline": "Guillermo del Toro Says There Is Absolutely No Goddamn AI in Pan s Labyrinth 3D Re-Release: We re Protecting a Lineage of Art",
-          "summary": "Guillermo del Toro had one rule when bringing “Pan s Labyrinth” back to theaters for its 20th anniversary: “No goddamn AI.” The filmmaker returned to San Diego Comic-Con on July 24 to discuss the film’s 20th anniversary, which will include a return to theaters Oct. 9, with the screenings in 3D and HDR for the first [ ]"
-        },
-        {
-          "outlet": "NME",
-          "tier": 6,
-          "url": "https://www.nme.com/news/film/guillermo-del-toro-promises-absolutely-no-goddamn-ai-on-pans-labyrinth-re-release-3958947?utm_source=rss&#038;utm_medium=rss&#038;utm_campaign=guillermo-del-toro-promises-absolutely-no-goddamn-ai-on-pans-labyrinth-re-release",
-          "headline": "Guillermo del Toro says there was “absolutely no goddamn AI” involved in ‘Pan’s Labyrinth’ re-release",
-          "summary": "“What we’re protecting is the beauty and the redeeming power of art\" The post Guillermo del Toro says there was “absolutely no goddamn AI” involved in ‘Pan’s Labyrinth’ re-release appeared first on NME .",
-          "ageMin": 336,
-          "via": "corr-feed"
+          "url": "https://variety.com/2026/film/festivals/fantasia-festival-awards-nightborn-wins-top-honor-1236821190/",
+          "ageMin": 269,
+          "headline": "Fantasia International Film Festival Awards: Hanna Bergholm’s Nightborn Wins Top Honor",
+          "summary": "Hanna Bergholm’s “Nightborn” has won the top honor at this year’s Fantasia International Film Festival juried awards. “Nightborn” was awarded the prestigious Cheval Noir trophy for best film. Seidi Haarla, who stars opposite Rupert Grint in the film, was also awarded best actress. Kasper Kalle’s “No Rest for the Wicked” also took home two statues [ ]"
         }
       ],
-      "ageMin": 864,
+      "ageMin": 269,
       "_cand": {
-        "key": "rss:guillermo-del-toro-says-there-is-absolutely-no-goddamn-ai-in",
+        "key": "rss:fantasia-international-film-festival-awards-hanna-bergholm-s",
         "popularity": 0,
         "kind": "rss-news"
       },
-      "corroborationCount": 2,
+      "corroborationCount": 1,
       "verification": {
         "tier1Count": 1,
         "tier1Owners": 1,
-        "outletCount": 2,
+        "outletCount": 1,
         "outlets": [
           "Variety"
         ],
@@ -251,68 +1179,219 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 57,
       "signals": {
-        "recency": 1,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
-        "type": 9,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-ryan-gosling-ghost-rider-marvel-comic-con",
+      "slug": "ryan-gosling-unveiled-as-marvel-s-next-ghost-rider-at-comic-con",
+      "title": "Ryan Gosling Unveiled as Marvel's Next Ghost Rider at Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "ryan-gosling-ghost-rider-marvel-comic-con",
+      "primaryKeyword": "ryan gosling ghost rider",
+      "primaryEntity": "Ryan Gosling",
+      "entities": [
+        "Ghost Rider",
+        "Marvel",
+        "Shawn Levy"
+      ],
+      "angle": "Ryan Gosling was officially announced as the next Ghost Rider at Marvel's Comic-Con panel, with his film slated for a 2028 release.",
+      "tmdbType": "movie",
+      "source": "rss:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://deadline.com/2026/07/ryan-gosling-ghost-rider-marvel-comic-con-1237003726/",
+          "ageMin": 170,
+          "headline": "Ryan Gosling Unveiled As Ghost Rider At Marvel s Comic-Con Panel",
+          "summary": "What was rumored has become reality. Three-time Oscar nominee Ryan Gosling has been named Marvel s next Ghost Rider. The Gosling movie will come out in 2028, and he s reteaming with Shawn Levy and Jonathan Tropper after Star Wars: Starfighter. Levy will direct, and Tropper is writing the script again. The latest role keeps Gosling, who [ ]"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223367/marvel-ghost-rider-movie-ryan-gosling-shawn-levy-2026-sdcc/",
+          "headline": "Marvel's Ghost Rider With Ryan Gosling Coming In 2028, Shawn Levy To Direct [SDCC 2026]",
+          "summary": "Ghost Rider is coming to the Marvel Cinematic Universe, and Ryan Gosling will be heating up as the titular character.",
+          "ageMin": 168,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-gosling-ghost-rider/",
+          "headline": "Ryan Gosling Set as Marvel s New Ghost Rider",
+          "summary": "Shawn Levy (Deadpool Wolverine, Star Wars: Starfighter) will direct the 2028 release. Ryan Gosling Set as Marvel s New Ghost Rider Liz Shannon Miller",
+          "ageMin": 156,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/marvel-ghost-rider-movie-ryan-gosling-comic-con/",
+          "headline": "Ryan Gosling officially cast as Marvel's new Ghost Rider",
+          "summary": "The MCU will recast Ghost Rider in an upcoming Midnight Suns movie set after Avengers: Doomsday",
+          "ageMin": 172,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 170,
+      "_cand": {
+        "key": "rss:ryan-gosling-unveiled-as-ghost-rider-at-marvel-s-comic-con-p",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 4,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 92,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
         "pop": 0,
         "breakout": 0,
         "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0
+        "softTv": 0,
+        "demand": 8
       },
+      "demandImpressions": 40,
+      "demandQuery": "ryan gosling movies",
+      "demandPosition": 55.81818181818182,
       "tierClass": "B"
     },
     {
-      "id": "trailer-the-lord-of-the-rings-the-rings-of-power-season-3-teaser-trailer",
-      "slug": "prime-video-s-the-lord-of-the-rings-the-rings-of-power-brings-an-epic-",
-      "title": "Prime Video’s The Lord Of The Rings: The Rings Of Power Brings An Epic New Season Three Teaser Trailer From Mordor",
+      "id": "news-ruaidh-aldington-star-trek-starfleet-academy-season-2",
+      "slug": "ruaridh-aldington-cast-as-series-regular-in-star-trek-starfleet-academ",
+      "title": "Ruaridh Aldington Cast as Series Regular in 'Star Trek: Starfleet Academy' Season 2",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "ruaidh-aldington-star-trek-starfleet-academy-season-2",
+      "primaryKeyword": "star trek starfleet academy casting",
+      "primaryEntity": "Star Trek: Starfleet Academy",
+      "entities": [
+        "Ruaridh Aldington"
+      ],
+      "angle": "Newcomer Ruaridh Aldington has been cast as a series regular in the second season of 'Star Trek: Starfleet Academy'.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/star-trek-starfleet-academy-season-2-casts-ruaridh-aldington-1236821134/",
+          "ageMin": 424,
+          "headline": "Star Trek: Starfleet Academy Season 2 Casts Newcomer Ruaridh Aldington",
+          "summary": "Star Trek: Starfleet Academy Season 2 has cast newcomer Ruaridh Aldington as a series regular. The news was announced today at the Star Trek 60th anniversary panel at San Diego Comic-Con. Aldington will play Keats, a young alien with a mysterious backstory. An official description reads: When the cadets make the risky decision to bring [ ]"
+        }
+      ],
+      "ageMin": 424,
+      "_cand": {
+        "key": "rss:star-trek-starfleet-academy-season-2-casts-newcomer-ruaridh-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 71,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 6,
+        "learned": -1
+      },
+      "demandImpressions": 6,
+      "demandQuery": "2025 academy award winners",
+      "demandPosition": 58,
+      "tierClass": "B"
+    },
+    {
+      "id": "trailer-the-rings-of-power-season-2-trailer",
+      "slug": "the-rings-of-power-returns-to-hall-h-with-new-trailer-and-season-3-rev",
+      "title": "‘The Rings of Power’ Returns To Hall H With New Trailer And Season 3 Reveals",
       "contentType": "trailer",
       "formatTag": "trailer",
       "category": "tv",
       "subcategory": "trailers",
       "eventType": "trailer",
       "sensitivity": "normal",
-      "eventSlug": "the-lord-of-the-rings-the-rings-of-power-season-3-teaser-trailer",
-      "primaryKeyword": "rings of power season 3 trailer",
+      "eventSlug": "the-rings-of-power-season-2-trailer",
+      "primaryKeyword": "rings of power trailer",
       "primaryEntity": "The Lord of the Rings: The Rings of Power Global Fan Screening",
       "entities": [
-        "The Lord of the Rings: The Rings of Power",
-        "Prime Video",
-        "Mordor"
+        "The Lord of the Rings: The Rings of Power (2022)",
+        "Amazon Prime Video",
+        "Hall H"
       ],
-      "angle": "Prime Video has released an epic new teaser trailer for the third season of 'The Lord of the Rings: The Rings of Power' from Mordor.",
+      "angle": "Amazon Prime Video's 'The Rings of Power' unveiled a new trailer and season 3 details at San Diego Comic-Con.",
       "tmdbType": "movie",
-      "source": "gnews:Future of the Force",
+      "source": "gnews:scifipulse.net",
       "sources": [
         {
-          "outlet": "Future of the Force",
+          "outlet": "scifipulse.net",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQV0ZIU2NFQmJocTlUamhxeVpheHB3akpkOHlOemR6dENJYW5wYmRKZnpkUkdhSlpMQndYRTZnWEEzTGVsRHBhTkNXQTZ6OGp4VFZfa2tXd285aHNIa0gyMU1xXzdCSFY0cHVWQmhJdGdLV3YtSTdfUGVBdS1WNnREWmdYZ0FrNmxFeVJUaDBIRTd6Q1ZXRmpMWmV5aktMU3dPNEJKSE5CZTFhcmpTVkdIYnNwSlQ1MkFjWWxEaE04dXp1RkhncjRVaExrWGU5bGtqdC1qWjdJd2RaWE1fdDZXWlJzaWgtOWRwMl9qd1EwR0dEZ9IB8gFBVV95cUxQV0ZIU2NFQmJocTlUamhxeVpheHB3akpkOHlOemR6dENJYW5wYmRKZnpkUkdhSlpMQndYRTZnWEEzTGVsRHBhTkNXQTZ6OGp4VFZfa2tXd285aHNIa0gyMU1xXzdCSFY0cHVWQmhJdGdLV3YtSTdfUGVBdS1WNnREWmdYZ0FrNmxFeVJUaDBIRTd6Q1ZXRmpMWmV5aktMU3dPNEJKSE5CZTFhcmpTVkdIYnNwSlQ1MkFjWWxEaE04dXp1RkhncjRVaExrWGU5bGtqdC1qWjdJd2RaWE1fdDZXWlJzaWgtOWRwMl9qd1EwR0dEZw?oc=5",
-          "ageMin": 297,
-          "headline": "Prime Video’s The Lord Of The Rings: The Rings Of Power Brings An Epic New Season Three Teaser Trailer From Mordor - Future of the Force",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi8gFBVV95cUxQV0ZIU2NFQmJocTlUamhxeVpheHB3akpkOHlOemR6dENJYW5wYmRKZnpkUkdhSlpMQndYRTZnWEEzTGVsRHBhTkNXQTZ6OGp4VFZfa2tXd285aHNIa0gyMU1xXzdCSFY0cHVWQmhJdGdLV3YtSTdfUGVBdS1WNnREWmdYZ0FrNmxFeVJUaDBIRTd6Q1ZXRmpMWmV5aktMU3dPNEJKSE5CZTFhcmpTVkdIYnNwSlQ1MkFjWWx"
-        },
-        {
-          "outlet": "Consequence",
-          "tier": 5,
-          "url": "https://consequence.net/2026/07/simon-pegg-balrog-lord-of-the-rings-season-3/",
-          "headline": "Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3",
-          "summary": "Watch out, Gandalf! Simon Pegg to Voice the Balrog in Lord of the Rings: The Rings of Power Season 3 Liz Shannon Miller",
-          "ageMin": 1238,
-          "via": "corr-feed"
-        },
-        {
-          "outlet": "Digital Spy",
-          "tier": 5,
-          "url": "https://www.digitalspy.com/tv/a73257424/rings-of-power-season-3-trailer/",
-          "headline": "Prime Video's epic returning series Rings of Power unveils season 3 trailer",
-          "summary": "One Ring to rule them all...",
-          "ageMin": 1288,
-          "via": "corr-feed"
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUFFQZm9HNGJPWnZVb3pmR1luY0dGaldjdHNpQjNrR19rc2ltQi1fbldlREkzbklpc0Y3cFcxbElaTEdhOFZsaTc3Q0pQWUJTaFEzY0ZxbmpPVFpFSnNfXzlYb3dJMnhwczRvVWRlQm9KT3RxbFVCSnIwNnE5OU5iQ2VCT2hXdlJQR2lqQmhTX18xYlZQb1U5dm41QThkOUZmSUFzNQ?oc=5",
+          "ageMin": 284,
+          "headline": "‘The Rings of Power’ Returns To Hall H With New Trailer And Season 3 Reveals - scifipulse.net",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxOUFFQZm9HNGJPWnZVb3pmR1luY0dGaldjdHNpQjNrR19rc2ltQi1fbldlREkzbklpc0Y3cFcxbElaTEdhOFZsaTc3Q0pQWUJTaFEzY0ZxbmpPVFpFSnNfXzlYb3dJMnhwczRvVWRlQm9KT3RxbFVCSnIwNnE5OU5iQ2VCT2hXdlJQR2lqQmhTX18xYlZQb1U5dm41QThkOUZmSUFzNQ?oc=5\" target=\"_blank\" ‘The R"
         },
         {
           "outlet": "The A.V. Club",
@@ -320,27 +1399,27 @@
           "url": "https://www.avclub.com/sauron-forges-the-ring-in-rings-of-power-season-3-trailer",
           "headline": "Sauron's fiery ascent begins in The Lord Of The Rings: Rings Of Power's season 3 trailer",
           "summary": "Prime Video s fantasy epic returns in November, bringing Jamie Campbell Bower and Simon Pegg along for the ride.",
-          "ageMin": 1291,
+          "ageMin": 2011,
           "via": "corr-feed"
         }
       ],
-      "ageMin": 297,
+      "ageMin": 284,
       "_cand": {
-        "key": "rss:prime-video-s-the-lord-of-the-rings-the-rings-of-power-bring",
+        "key": "rss:-the-rings-of-power-returns-to-hall-h-with-new-trailer-and-s",
         "popularity": 0,
         "kind": "gnews"
       },
-      "corroborationCount": 4,
+      "corroborationCount": 2,
       "verification": {
         "tier1Count": 0,
         "tier1Owners": 0,
-        "outletCount": 4,
+        "outletCount": 2,
         "outlets": [
-          "Future of the Force"
+          "scifipulse.net"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Future of the Force",
+        "attribution": "scifipulse.net",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -362,37 +1441,376 @@
       "tierClass": "B"
     },
     {
-      "id": "news-spaceballs-the-new-one-comic-con-panel",
-      "slug": "spaceballs-the-new-one-parodies-marvel-panels-at-comic-con",
-      "title": "'Spaceballs: The New One' Parodies Marvel Panels at Comic-Con",
+      "id": "news-avatar-aang-the-last-airbender-cut-ideas-creators",
+      "slug": "avatar-aang-the-last-airbender-creators-reveal-ideas-that-got-cut",
+      "title": "'Avatar Aang: The Last Airbender' Creators Reveal Ideas That Got Cut",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "eventSlug": "avatar-aang-the-last-airbender-cut-ideas-creators",
+      "primaryKeyword": "Avatar Aang The Last Airbender cut ideas",
+      "primaryEntity": "Avatar Aang: The Last Airbender",
+      "entities": [
+        "Avatar: The Last Airbender",
+        "Aang"
+      ],
+      "angle": "Creators of 'Avatar Aang: The Last Airbender' reveal discarded concepts from the series.",
+      "tmdbType": "movie",
+      "source": "gnews:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxORDJ1UjZZb3dHdmRfYVJfM19wU3p4YlVPNXdRU2Q4TU4ydFdENDNxOEVvMEtha25fcE5fNTkyekpBWk9lRWw2SHp5ME9sUUNsNzY0dkVOSS03RHAtczRfSk9VWWRlWjdpRGF1S3ZsX091UFQ3aWEwNFozQzd1bnBOVno2WUo2MW1tQ2JQN3M5SGJWaGtWRkhjM2xwWEREMVpPS2U4YnR3?oc=5",
+          "ageMin": 661,
+          "headline": "'Avatar Aang: The Last Airbender' Creators Reveal Ideas That Got Cut - Variety",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxORDJ1UjZZb3dHdmRfYVJfM19wU3p4YlVPNXdRU2Q4TU4ydFdENDNxOEVvMEtha25fcE5fNTkyekpBWk9lRWw2SHp5ME9sUUNsNzY0dkVOSS03RHAtczRfSk9VWWRlWjdpRGF1S3ZsX091UFQ3aWEwNFozQzd1bnBOVno2WUo2MW1tQ2JQN3M5SGJWaGtWRkhjM2xwWEREMVpPS2U4YnR3?oc=5\" target=\"_blank\" 'Ava"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223232/how-avatar-aang-the-last-airbender-movie-sets-up-the-legend-of-korra/",
+          "headline": "How The Avatar Aang: The Last Airbender Movie Sets Up The Legend Of Korra",
+          "summary": "The new Avatar Aang: The Last Airbender Movie bridges the gap between the original animated series and The Legend of Korra. Here s how.",
+          "ageMin": 605,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 661,
+      "_cand": {
+        "key": "rss:-avatar-aang-the-last-airbender-creators-reveal-ideas-that-g",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 68,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 3,
+        "learned": -1,
+        "radar": 21
+      },
+      "demandImpressions": 2,
+      "demandQuery": "avatar all-time worldwide box office gross exact 2026",
+      "demandPosition": 6,
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-black-panther-3-david-jonsson-t-challa-son-2028-release",
+      "slug": "black-panther-3-david-jonsson-to-star-as-t-challa-s-son-sequel-set-for",
+      "title": "‘Black Panther 3’: David Jonsson to Star as T’Challa’s Son, Sequel Set for 2028",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "black-panther-3-david-jonsson-t-challa-son-2028-release",
+      "primaryKeyword": "black panther 3 david jonsson",
+      "primaryEntity": "Black Panther 3 (film)",
+      "entities": [
+        "David Jonsson",
+        "T'Challa",
+        "Marvel Studios"
+      ],
+      "angle": "David Jonsson will star as T'Challa's son in 'Black Panther 3', with the sequel set for a 2028 release.",
+      "tmdbType": "movie",
+      "source": "gnews:The Hollywood Reporter",
+      "sources": [
+        {
+          "outlet": "The Hollywood Reporter",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSTBOdGVaWW9BeGZpZHVoOFE1N0FvRVQtV1ZUSllTNFZIQ1l3aHd5X3AzZ0FJN2t3OWVKUHB4b091My15V2R2V2ZLZVJHdzZXR216eUJXRzlHWTZoR3hSUl9hcnJZdWRGa2NHRWloUWl6NnBEcDd5Rlg2dlBRMGdBNUt5WTNWVEtlY1NrSzAwbGt1V0QzVWE3WEdrSTZSV1lOZ2V0QlllUzFSMDZMRGc?oc=5",
+          "ageMin": 80,
+          "headline": "‘Black Panther 3’: David Jonsson to Star as T’Challa’s Son, Sequel Set for 2028 - The Hollywood Reporter",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxNSTBOdGVaWW9BeGZpZHVoOFE1N0FvRVQtV1ZUSllTNFZIQ1l3aHd5X3AzZ0FJN2t3OWVKUHB4b091My15V2R2V2ZLZVJHdzZXR216eUJXRzlHWTZoR3hSUl9hcnJZdWRGa2NHRWloUWl6NnBEcDd5Rlg2dlBRMGdBNUt5WTNWVEtlY1NrSzAwbGt1V0QzVWE3WEdrSTZSV1lOZ2V0QlllUzFSMDZMRGc?oc=5\" target=\"_"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223373/black-panther-3-david-jonsson-tchalla-marvel-2026-sdcc/",
+          "headline": "Black Panther 3 Will Star David Jonsson As New T'Challa, Coming In 2028 [SDCC]",
+          "summary": "David Jonsson (Industry, The Long Walk) will play the next T Challa in the Marvel Cinematic Universe, and Black Panther 3 is hitting theaters in 2028.",
+          "ageMin": 135,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 80,
+      "_cand": {
+        "key": "rss:-black-panther-3-david-jonsson-to-star-as-t-challa-s-son-seq",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 3,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 3,
+        "outlets": [
+          "The Hollywood Reporter"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "The Hollywood Reporter",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 84,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "music-news-hayley-williams-newport-folk-fest-surprise-guests",
+      "slug": "hayley-williams-welcomes-jenny-lewis-jack-antonoff-as-surprise-guests-",
+      "title": "Hayley Williams Welcomes Jenny Lewis, Jack Antonoff as Surprise Guests at Newport Folk Fest",
+      "contentType": "music-news",
+      "formatTag": "music-news",
+      "category": "music",
+      "subcategory": "news",
+      "eventType": "other",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "hayley-williams-newport-folk-fest-surprise-guests",
+      "primaryKeyword": "hayley williams newport folk fest",
+      "primaryEntity": "Hayley Williams",
+      "entities": [
+        "Jenny Lewis",
+        "Jack Antonoff",
+        "Newport Folk Fest"
+      ],
+      "angle": "Hayley Williams brought out surprise guests Jenny Lewis and Jack Antonoff during her set at the Newport Folk Festival.",
+      "tmdbType": "movie",
+      "source": "rss:Billboard",
+      "sources": [
+        {
+          "outlet": "Billboard",
+          "tier": 7,
+          "url": "https://www.billboard.com/music/music-news/newport-folk-2026-hayley-williams-jenny-lewis-jack-antonoff-1236303020/",
+          "ageMin": 233,
+          "headline": "Hayley Williams Brings Jenny Lewis, Jack Antonoff More Surprise Guests to the Stage at Newport Folk Fest",
+          "summary": "Williams sang Rilo Kiley's \"Silver Lining\" with Lewis and Bleachers' \"I Wanna Get Better\" with Antonoff during her set in Newport, R.I."
+        },
+        {
+          "outlet": "Stereogum",
+          "tier": 5,
+          "url": "https://stereogum.com/2506269/hayley-williams-brings-out-wednesday-this-is-lorelei-jack-antonoff-more-at-newport-folk-festival/news/",
+          "headline": "Hayley Williams Brings Out Wednesday, This Is Lorelei, Jack Antonoff, More At Newport Folk Festival",
+          "summary": "No one is tapped in quite like Hayley Williams. That woman has taste. She brought Water From Your Eyes and Snuggle with her on her first solo tour , and there were many great guests, like Snooper , Julien Baker , and more. Last night she headlined the Newport Folk Festival and brought out Wednesday, This Is Lorelei, Jack Antonoff, and many, many more. The post Hayley Williams Brings Out Wednesday, This Is Lorelei, Jack Antonoff, More At Newport Folk Festival appeared first on Stereogum .",
+          "ageMin": 868,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 233,
+      "_cand": {
+        "key": "rss:hayley-williams-brings-jenny-lewis-jack-antonoff-more-surpri",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 2,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 2,
+        "outlets": [
+          "Billboard"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Billboard",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 48,
+      "signals": {
+        "recency": 9,
+        "corroboration": 12,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 0,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": 4
+      },
+      "tierClass": "C"
+    },
+    {
+      "id": "news-black-panther-3-announced-ryan-coogler-returning",
+      "slug": "marvel-officially-announces-black-panther-3-with-ryan-coogler-returnin",
+      "title": "Marvel Officially Announces 'Black Panther 3' With Ryan Coogler Returning to Direct",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "spaceballs-the-new-one-comic-con-panel",
-      "primaryKeyword": "spaceballs the new one",
-      "primaryEntity": "Spaceballs",
+      "eventSlug": "black-panther-3-announced-ryan-coogler-returning",
+      "primaryKeyword": "black panther 3",
+      "primaryEntity": "Black Panther 3 (film)",
       "entities": [
-        "Amazon MGM Studios"
+        "Ryan Coogler",
+        "Marvel"
       ],
-      "angle": "Amazon MGM Studios unveils 'Spaceballs: The New One' at Comic-Con with a parody of Marvel's Hall H panels.",
+      "angle": "Marvel officially announces Black Panther 3 with Ryan Coogler returning to direct.",
+      "tmdbType": "movie",
+      "source": "gnews:Complex",
+      "sources": [
+        {
+          "outlet": "Complex",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbF83M0ZkbnRHMk45TnJUcG9lelAwdkhQS1ZZYnZCWjU2U0ViRGtGS1RlLVM3ODYwLTctbV8tU1h2cWU1M2pBS2N1ZXN1dmtnZ3RDOUJDSXZKUzdjOUZhTlN0dUJpYmRpWTdMS2txb1N5elh2MjJiZW51eURjLWF1MEd3MTJEQXVYZWszclNleUJndmJZVF9JdGtJc2dCZjBZSG1WaDM3Z0drVFk?oc=5",
+          "ageMin": 60,
+          "headline": "Marvel Officially Announces 'Black Panther 3' With Ryan Coogler Returning to Direct - Complex",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxNbF83M0ZkbnRHMk45TnJUcG9lelAwdkhQS1ZZYnZCWjU2U0ViRGtGS1RlLVM3ODYwLTctbV8tU1h2cWU1M2pBS2N1ZXN1dmtnZ3RDOUJDSXZKUzdjOUZhTlN0dUJpYmRpWTdMS2txb1N5elh2MjJiZW51eURjLWF1MEd3MTJEQXVYZWszclNleUJndmJZVF9JdGtJc2dCZjBZSG1WaDM3Z0drVFk?oc=5\" target=\"_blan"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "CBR",
+          "tier": 4,
+          "url": "https://www.cbr.com/marvel-studios-sdcc-black-panther-3-trilogy-announcement/",
+          "headline": "Marvel Studios Officially Confirms Black Panther To Become a Trilogy",
+          "summary": "The announcement came during the studio's San Diego Comic Con panel.",
+          "ageMin": 55,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 60,
+      "_cand": {
+        "key": "rss:marvel-officially-announces-black-panther-3-with-ryan-coogle",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 4,
+        "outlets": [
+          "Complex"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Complex",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 83,
+      "signals": {
+        "recency": 24,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-widows-bay-creator-comic-con-original-script-character",
+      "slug": "widow-s-bay-creator-reveals-major-character-was-absent-from-original-s",
+      "title": "'Widow's Bay' Creator Reveals Major Character Was Absent from Original Script at Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "widows-bay-creator-comic-con-original-script-character",
+      "primaryKeyword": "widow's bay comic-con",
+      "primaryEntity": "Widow's Bay",
+      "entities": [
+        "Katie Dippold",
+        "Apple TV"
+      ],
+      "angle": "At Comic-Con, 'Widow's Bay' creator Katie Dippold revealed that a major character was not in the original script.",
       "tmdbType": "movie",
       "source": "rss:Deadline",
       "sources": [
         {
           "outlet": "Deadline",
           "tier": 7,
-          "url": "https://deadline.com/2026/07/spaceballs-the-new-one-comic-con-marvel-1237003091/",
-          "ageMin": 925,
-          "headline": "Spaceballs: The New One Invades Comic-Con With Send-Up Of Marvel s Hall H Panels Of Yore",
-          "summary": "Just like the beginning of the original Spaceballs, which went really big in that long opening spaceship take that made fun of Star Wars, so did Amazon MGM Studios in its Hall H presentation Friday of Spaceballs: The New One. A la the studio s presentation of Project Hail Mary last year, they blew open the [ ]"
+          "url": "https://deadline.com/2026/07/widows-bay-creator-major-character-wasnt-in-original-script-1237003692/",
+          "ageMin": 252,
+          "headline": "Widow s Bay Creator Reveals Which Major Character Wasn t In Original Script: Burn Every Copy — Comic-Con",
+          "summary": "As Widow s Bay gears up for another tourist season, creator Katie Dippold reflected on the show s evolution at San Diego Comic-Con. During Apple TV s Hall H panel on Saturday, Dippold revealed that Stephen Root s Wyck was not originally part of the pilot script, which she has previously said started as a spec for Parks and [ ]"
         }
       ],
-      "ageMin": 925,
+      "ageMin": 252,
       "_cand": {
-        "key": "rss:spaceballs-the-new-one-invades-comic-con-with-send-up-of-mar",
+        "key": "rss:widow-s-bay-creator-reveals-which-major-character-wasn-t-in-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -411,335 +1829,64 @@
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 64,
+      "priority": 65,
       "signals": {
-        "recency": 1,
+        "recency": 9,
         "corroboration": 12,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
-      "tierClass": "B"
-    },
-    {
-      "id": "music-news-metaliite-echoes-of-you-music-video",
-      "slug": "metalite-release-music-video-for-emotional-new-album-single-echoes-of-",
-      "title": "METALITE Release Music Video For Emotional New Album Single \"Echoes Of You\"",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "metaliite-echoes-of-you-music-video",
-      "primaryKeyword": "Metaliite Echoes of You",
-      "primaryEntity": "Metalite",
-      "entities": [
-        "Metaliite",
-        "Echoes of You"
-      ],
-      "angle": "German metal band Metaliite drops a new music video for their latest single.",
-      "tmdbType": "movie",
-      "source": "gnews:Metalheads Forever Magazine",
-      "sources": [
-        {
-          "outlet": "Metalheads Forever Magazine",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWTZuUGtGR3VvR01mMzN5aGRPOG5lZG0wTWtTZDdEeC12ZVpXWUR3R0I1dk8tNHBiMFd2RF9GWmhwcFVhZFE4RllreXNudnRkRTNjeGg1aXhUX2JJenlTSHBYdUY0cTB5bnpqMFpZY1U5UEIxLVJxa3NBWVQweHFTT051SmstT0dFRW1NQTNibGVCSjJlTC0yMG5R?oc=5",
-          "ageMin": 70,
-          "headline": "METALITE Release Music Video For Emotional New Album Single \"Echoes Of You\" - Metalheads Forever Magazine",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMimgFBVV95cUxOWTZuUGtGR3VvR01mMzN5aGRPOG5lZG0wTWtTZDdEeC12ZVpXWUR3R0I1dk8tNHBiMFd2RF9GWmhwcFVhZFE4RllreXNudnRkRTNjeGg1aXhUX2JJenlTSHBYdUY0cTB5bnpqMFpZY1U5UEIxLVJxa3NBWVQweHFTT051SmstT0dFRW1NQTNibGVCSjJlTC0yMG5R?oc=5\" target=\"_blank\" METALITE Release Mus"
-        }
-      ],
-      "ageMin": 70,
-      "_cand": {
-        "key": "rss:metalite-release-music-video-for-emotional-new-album-single-",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Metalheads Forever Magazine"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Metalheads Forever Magazine",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
+        "big": 18,
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-real-housewives-of-rhode-island-launch",
-      "slug": "bravo-strikes-gold-with-the-real-housewives-of-rhode-island",
-      "title": "Bravo Strikes Gold With ‘The Real Housewives of Rhode Island’",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "tv",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "real-housewives-of-rhode-island-launch",
-      "primaryKeyword": "real housewives of rhode island",
-      "primaryEntity": "The Real Housewives of Rhode Island",
-      "entities": [
-        "Ciara Bravo",
-        "Bravo"
-      ],
-      "angle": "Bravo announces a new hit franchise with 'The Real Housewives of Rhode Island'.",
-      "tmdbType": "movie",
-      "source": "rss:THR",
-      "sources": [
-        {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-features/bravo-real-housewives-of-rhode-island-bravo-feature-1236624302/",
-          "ageMin": 1,
-          "headline": "How Bravo Struck Gold With ‘The Real Housewives of Rhode Island’",
-          "summary": "‘Housewife’ may not accurately describe all the castmembers of ‘The Real Housewives of Rhode Island,’ but the newest Bravo franchise is a hit just the same: “Basically, we found magic.”"
-        }
-      ],
-      "ageMin": 1,
-      "_cand": {
-        "key": "rss:how-bravo-struck-gold-with-the-real-housewives-of-rhode-isla",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "THR"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "THR",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 58,
-      "signals": {
-        "recency": 30,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": -12,
-        "demand": 2,
         "learned": -1
       },
-      "demandImpressions": 1,
-      "demandQuery": "temptation island winner",
-      "demandPosition": 61,
-      "tierClass": "C"
-    },
-    {
-      "id": "music-news-mimi-barks-ophelia-music-video",
-      "slug": "mimi-barks-releases-new-music-video-for-ophelia",
-      "title": "Mimi Barks releases new music video for ‘Ophelia’",
-      "contentType": "music-news",
-      "formatTag": "music-news",
-      "category": "music",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "tier": "popular",
-      "eventSlug": "mimi-barks-ophelia-music-video",
-      "primaryKeyword": "Mimi Barks Ophelia",
-      "primaryEntity": "Mimi Barks",
-      "entities": [
-        "Ophelia"
-      ],
-      "angle": "Artist Mimi Barks has released a new music video for her track 'Ophelia'.",
-      "tmdbType": "movie",
-      "source": "gnews:Distorted Sound Magazine -",
-      "sources": [
-        {
-          "outlet": "Distorted Sound Magazine -",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPS19NSGZoejBFVXZ5ZVV5SlloVllQUFdJclp3NjRYdHpHX3NrUEpRdlU1d3BhX18xaUw1N0g0RDZmNVJxdGtQZndTQkxUV0hqUk14OFRudnhaRW5KUTdXX090WmNkd29EenV5YzdSUDRMa0U4cXFqSWhGeUlHcnZoazk4SkQ?oc=5",
-          "ageMin": 154,
-          "headline": "Mimi Barks releases new music video for ‘Ophelia’ - Distorted Sound Magazine -",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxPS19NSGZoejBFVXZ5ZVV5SlloVllQUFdJclp3NjRYdHpHX3NrUEpRdlU1d3BhX18xaUw1N0g0RDZmNVJxdGtQZndTQkxUV0hqUk14OFRudnhaRW5KUTdXX090WmNkd29EenV5YzdSUDRMa0U4cXFqSWhGeUlHcnZoazk4SkQ?oc=5\" target=\"_blank\" Mimi Barks releases new music video for ‘Ophelia’"
-        }
-      ],
-      "ageMin": 154,
-      "_cand": {
-        "key": "rss:mimi-barks-releases-new-music-video-for-ophelia-distorted-so",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "Distorted Sound Magazine -"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "Distorted Sound Magazine -",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 55,
-      "signals": {
-        "recency": 16,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0,
-        "learned": 4
-      },
-      "tierClass": "C"
-    },
-    {
-      "id": "news-star-wars-the-experience-exhibition-announced",
-      "slug": "world-premiere-exhibition-star-wars-the-experience-a-journey-through-t",
-      "title": "WORLD PREMIERE EXHIBITION \"STAR WARS™: THE EXPERIENCE\" - A Journey Through the Galaxy TO IMMERSE FANS IN THE LEGACY OF STAR WARS™",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "movies",
-      "subcategory": "news",
-      "eventType": "announcement",
-      "sensitivity": "normal",
-      "eventSlug": "star-wars-the-experience-exhibition-announced",
-      "primaryKeyword": "star wars exhibition",
-      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
-      "entities": [
-        "Star Wars: The Experience",
-        "Lucasfilm"
-      ],
-      "angle": "A new immersive exhibition celebrating the legacy of Star Wars is set to open.",
-      "tmdbType": "movie",
-      "source": "gnews:PR Newswire",
-      "sources": [
-        {
-          "outlet": "PR Newswire",
-          "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMijAJBVV95cUxPVjYxcXJIWElZS0xfeVlnSGlEWXBSbzBJc3VhOG91ZE54Tk55NFZaZ3ljeUQ4Rk9nN1VzLWRvVVBRTGVoZ0VsdmgzaDU4dUJ5cjk4T2JOV0tEeEl3SVlYTi1pa1ZtM0JyWGJmQl9CdEswR0lELU1Ea19yYVhDUUpQcDZqenNrZEhSVTEyWWV4SVpMZ29VakhBSWpQNmVaeDVhRjFUNEViVk10dmZnaWlZUTI4dXd6enpLMUxSS0MxcWp1cVhvaU5Yd2hPUWIwNEh1WjhrZHp0TjE3RUhxSHhvLXBDd1VGckFjc25mN2JpMFd0SVRQRlM5WEktbFFIcUZMU3pySElWbmF5dDZH?oc=5",
-          "ageMin": 961,
-          "headline": "WORLD PREMIERE EXHIBITION \"STAR WARS™: THE EXPERIENCE\" - A Journey Through the Galaxy TO IMMERSE FANS IN THE LEGACY OF STAR WARS™ - PR Newswire",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMijAJBVV95cUxPVjYxcXJIWElZS0xfeVlnSGlEWXBSbzBJc3VhOG91ZE54Tk55NFZaZ3ljeUQ4Rk9nN1VzLWRvVVBRTGVoZ0VsdmgzaDU4dUJ5cjk4T2JOV0tEeEl3SVlYTi1pa1ZtM0JyWGJmQl9CdEswR0lELU1Ea19yYVhDUUpQcDZqenNrZEhSVTEyWWV4SVpMZ29VakhBSWpQNmVaeDVhRjFUNEViVk10dmZnaWlZUTI4dXd6enpLMUx"
-        }
-      ],
-      "ageMin": 961,
-      "_cand": {
-        "key": "rss:world-premiere-exhibition-star-wars-the-experience-a-journey",
-        "popularity": 0,
-        "kind": "gnews"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 0,
-        "tier1Owners": 0,
-        "outletCount": 1,
-        "outlets": [
-          "PR Newswire"
-        ],
-        "maxTier": 5,
-        "sensitivity": "normal",
-        "attribution": "PR Newswire",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 1,
-        "corroboration": 8,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 24,
-        "trending": 0,
-        "spice": 0,
-        "softTv": 0
-      },
       "tierClass": "B"
     },
     {
-      "id": "news-apple-tv-announces-renewals-and-cancellations-for-2026",
-      "slug": "apple-tv-announces-2-tv-shows-are-ending-1-is-canceled-several-televis",
-      "title": "Apple TV Announces 2 TV Shows Are Ending, 1 Is Canceled, Several Television Series Are Renewed in 2026",
+      "id": "news-avatar-the-last-airbender-production-issues",
+      "slug": "the-road-to-the-release-of-avatar-aang-the-last-airbender-has-been-an-",
+      "title": "The Road to the Release of Avatar Aang: The Last Airbender Has Been an Utter Mess",
       "contentType": "news",
       "formatTag": "news",
       "category": "tv",
       "subcategory": "news",
-      "eventType": "renewal",
+      "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "apple-tv-announces-renewals-and-cancellations-for-2026",
-      "primaryKeyword": "apple tv shows cancelled renewed",
-      "primaryEntity": "Apple TV+",
+      "eventSlug": "avatar-the-last-airbender-production-issues",
+      "primaryKeyword": "Avatar The Last Airbender production issues",
+      "primaryEntity": "Avatar Aang: The Last Airbender",
       "entities": [
-        "Apple Dy",
-        "Apple"
+        "Avatar: The Last Airbender",
+        "Netflix"
       ],
-      "angle": "Apple TV+ has announced that two of its shows are ending, one is canceled, and several others have been renewed for 2026.",
+      "angle": "Examines the troubled production and development of Netflix's live-action adaptation of 'Avatar: The Last Airbender'.",
       "tmdbType": "movie",
-      "source": "gnews:Just Jared",
+      "source": "gnews:Slate",
       "sources": [
         {
-          "outlet": "Just Jared",
+          "outlet": "Slate",
           "tier": 5,
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZWZ3NmhGMFdncFZJM3pCajFLR3JlUmFWMlZzR2l4aW1JdkNHRlpCQmMxNVZvOGo4YW5JYXNqN1FJSUJjNVNMT3J1SkNzMVlxVnJZZG8wNDJfSDNkRjNfNDNsN3ZTN09MN0ZweU90clRUUi1WamR1Qk1fTWJ3NTlZQnhxZUNiYU9SUFpScGsyWTJvZVJ2Z3ZVcENteDJ0cXkxUjd3Q2hpU0FWZjlYS3l3RElxcGJnTUpQb1BoalRYYlVrT0FpYzNtd2pZWnJNQ2s0MTJOUDhMcw?oc=5",
-          "ageMin": 439,
-          "headline": "Apple TV Announces 2 TV Shows Are Ending, 1 Is Canceled, Several Television Series Are Renewed in 2026 - Just Jared",
-          "summary": "a href=\"https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZWZ3NmhGMFdncFZJM3pCajFLR3JlUmFWMlZzR2l4aW1JdkNHRlpCQmMxNVZvOGo4YW5JYXNqN1FJSUJjNVNMT3J1SkNzMVlxVnJZZG8wNDJfSDNkRjNfNDNsN3ZTN09MN0ZweU90clRUUi1WamR1Qk1fTWJ3NTlZQnhxZUNiYU9SUFpScGsyWTJvZVJ2Z3ZVcENteDJ0cXkxUjd3Q2hpU0FWZjlYS3l3RElxcGJnTUpQb1B"
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZ1B5M1JESjBSSDlidGotVmIyNnpBN29Kbk8yYUttYzdWTHZhQ0hwUEdpNGtkNWhqd1otMkRhNDFlMzBrV3ZwdEhCUWdNWk1wYW5iX25NRmtPLVc1dDJDVWRaZ3VLbTJUOEVoUWgwTkxGXzBHVm81SjF6RW5rOXowU2N5VGVTajlmb2VJM1phNkhRbVhIN2JURHpzNDZadVV2WVRMVW93?oc=5",
+          "ageMin": 841,
+          "headline": "The Road to the Release of Avatar Aang: The Last Airbender Has Been an Utter Mess - Slate",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxPZ1B5M1JESjBSSDlidGotVmIyNnpBN29Kbk8yYUttYzdWTHZhQ0hwUEdpNGtkNWhqd1otMkRhNDFlMzBrV3ZwdEhCUWdNWk1wYW5iX25NRmtPLVc1dDJDVWRaZ3VLbTJUOEVoUWgwTkxGXzBHVm81SjF6RW5rOXowU2N5VGVTajlmb2VJM1phNkhRbVhIN2JURHpzNDZadVV2WVRMVW93?oc=5\" target=\"_blank\" The "
         },
         {
-          "outlet": "Rotten Tomatoes",
+          "outlet": "/Film",
           "tier": 5,
-          "url": "https://editorial.rottentomatoes.com/article/renewed-and-cancelled-tv-shows-2026/",
-          "headline": "Renewed and Canceled TV Shows 2026",
-          "summary": "Find out which shows are returning and which are ending in this list of 2026's renewed and canceled TV shows.",
-          "ageMin": 1387,
+          "url": "https://www.slashfilm.com/2223232/how-avatar-aang-the-last-airbender-movie-sets-up-the-legend-of-korra/",
+          "headline": "How The Avatar Aang: The Last Airbender Movie Sets Up The Legend Of Korra",
+          "summary": "The new Avatar Aang: The Last Airbender Movie bridges the gap between the original animated series and The Legend of Korra. Here s how.",
+          "ageMin": 605,
           "via": "corr-feed"
         }
       ],
-      "ageMin": 439,
+      "ageMin": 841,
       "_cand": {
-        "key": "rss:apple-tv-announces-2-tv-shows-are-ending-1-is-canceled-sever",
+        "key": "rss:the-road-to-the-release-of-avatar-aang-the-last-airbender-ha",
         "popularity": 0,
         "kind": "gnews"
       },
@@ -749,16 +1896,475 @@
         "tier1Owners": 0,
         "outletCount": 2,
         "outlets": [
-          "Just Jared"
+          "Slate"
         ],
         "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "Just Jared",
+        "attribution": "Slate",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 58,
+      "priority": 63,
+      "signals": {
+        "recency": 1,
+        "corroboration": 8,
+        "status": 18,
+        "type": 5,
+        "pop": 0,
+        "breakout": 0,
+        "big": 6,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "demand": 5,
+        "learned": -1,
+        "radar": 21
+      },
+      "demandImpressions": 4,
+      "demandQuery": "avatar all-time worldwide box office gross exact 2026",
+      "demandPosition": 6,
+      "radarKind": "movie-in-theaters",
+      "tierClass": "A"
+    },
+    {
+      "id": "news-david-jonsson-is-black-panther",
+      "slug": "david-jonsson-is-black-panther-marvel-hall-h-comic-con",
+      "title": "David Jonsson is Black Panther | Marvel Hall H Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "casting",
+      "sensitivity": "normal",
+      "eventSlug": "david-jonsson-is-black-panther",
+      "primaryKeyword": "David Jonsson Black Panther",
+      "primaryEntity": "David Jonsson",
+      "entities": [
+        "Black Panther"
+      ],
+      "angle": "David Jonsson has been confirmed to take on the mantle of Black Panther.",
+      "tmdbType": "movie",
+      "source": "gnews:facebook.com",
+      "sources": [
+        {
+          "outlet": "facebook.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxORWxQN0pRT0s0QzFEZWhXdDFyTF9SWlRmc0FfSlBuUVRQbVFhaDlFdm9yeDBFMmpwZTNJUm5oWjdCUmNZaTlyV0tiUUs1dDc4RG9xa09CQWNSeHdKdS1DNmctRDROLXpxby1XNnZDQ1Q0NkVOY1Vzd2ZrRnZxa2pFaER4Z0FqMWRSNUxZVkxiSG5MNVdCMmF5LWlMSnpXYTc5Nmt2VTByVXVJNU9vVEtnS2E4eWozakJY?oc=5",
+          "ageMin": 134,
+          "headline": "David Jonsson is Black Panther | Marvel Hall H Comic-Con | #SDCC - facebook.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMiuAFBVV95cUxORWxQN0pRT0s0QzFEZWhXdDFyTF9SWlRmc0FfSlBuUVRQbVFhaDlFdm9yeDBFMmpwZTNJUm5oWjdCUmNZaTlyV0tiUUs1dDc4RG9xa09CQWNSeHdKdS1DNmctRDROLXpxby1XNnZDQ1Q0NkVOY1Vzd2ZrRnZxa2pFaER4Z0FqMWRSNUxZVkxiSG5MNVdCMmF5LWlMSnpXYTc5Nmt2VTByVXVJNU9vVEtnS2E4eWozakJY?oc"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223373/black-panther-3-david-jonsson-tchalla-marvel-2026-sdcc/",
+          "headline": "Black Panther 3 Will Star David Jonsson As New T'Challa, Coming In 2028 [SDCC]",
+          "summary": "David Jonsson (Industry, The Long Walk) will play the next T Challa in the Marvel Cinematic Universe, and Black Panther 3 is hitting theaters in 2028.",
+          "ageMin": 135,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Polygon",
+          "tier": 5,
+          "url": "https://www.polygon.com/black-panther-3-announcement-marvel-comic-con/",
+          "headline": "Marvel casts a new Black Panther for Black Panther 3",
+          "summary": "Black Panther 3 will be released on Dec. 15 2028, and will star The Long Walk's David Jonsson as T'Challa's son",
+          "ageMin": 126,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 134,
+      "_cand": {
+        "key": "rss:david-jonsson-is-black-panther-marvel-hall-h-comic-con-sdcc-",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 4,
+        "outlets": [
+          "facebook.com"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "facebook.com",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 80,
+      "signals": {
+        "recency": 16,
+        "corroboration": 8,
+        "status": 18,
+        "type": 14,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-coyote-vs-acme-comic-con-debut-lana-condor-dave-green",
+      "slug": "coyote-vs-acme-director-and-star-discuss-film-s-comic-con-debut-and-th",
+      "title": "'Coyote vs. Acme' Director and Star Discuss Film's Comic-Con Debut and the Fight to Show It",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "coyote-vs-acme-comic-con-debut-lana-condor-dave-green",
+      "primaryKeyword": "coyote vs acme comic-con",
+      "primaryEntity": "Coyote vs. Acme",
+      "entities": [
+        "Lana Condor",
+        "Dave Green"
+      ],
+      "angle": "Director Dave Green and star Lana Condor discussed the long journey and fight to finally show their film 'Coyote vs. Acme' at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/film/news/coyote-vs-acme-director-lana-condor-public-screening-fans-comic-con-1236821209/",
+          "ageMin": 147,
+          "headline": "Coyote vs. Acme Director and Star Lana Condor on Finally Showing Their Film to the Fans at Comic-Con: The Fight Was For a Good Reason",
+          "summary": "If you went back to November 2023 and told “Coyote vs. Acme” director Dave Green that his Looney Toons legal comedy would make its debut at San Diego Comic-Con, he probably wouldn’t believe it. Of course, that’s largely because that’s when Green learned the film had been shelved by Warner Bros. Discovery as a tax [ ]"
+        }
+      ],
+      "ageMin": 147,
+      "_cand": {
+        "key": "rss:coyote-vs-acme-director-and-star-lana-condor-on-finally-show",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 79,
+      "signals": {
+        "recency": 16,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-futurama-supersized-specials-season-14",
+      "slug": "futurama-to-release-three-new-supersized-specials-including-a-christma",
+      "title": "Futurama to Release Three New Supersized Specials, Including a Christmas Episode, Starting Next Year on Hulu",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "futurama-supersized-specials-season-14",
+      "primaryKeyword": "futurama new episodes",
+      "primaryEntity": "Futurama: Bender's Big Score",
+      "entities": [
+        "Futurama",
+        "Hulu"
+      ],
+      "angle": "Futurama gets three supersized specials and a 14th season announced at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "rss:Variety",
+      "sources": [
+        {
+          "outlet": "Variety",
+          "tier": 7,
+          "url": "https://variety.com/2026/tv/news/futurama-three-new-supersized-specials-hulu-comic-con-1236821009/",
+          "ageMin": 556,
+          "headline": "Futurama to Release Three New Supersized Specials, Including a Christmas Episode, Starting Next Year on Hulu",
+          "summary": "Hulu has greenlit three supersized Futurama specials in addition to the show s upcoming Season 14, the series executive producers and cast revealed Saturday at San Diego Comic-Con. During their morning Comic-Con panel, which featured creator Matt Groening, showrunner and head writer David X. Cohen and more cast and crew, the Futurama team unveiled a trailer [ ]"
+        }
+      ],
+      "ageMin": 556,
+      "_cand": {
+        "key": "rss:futurama-to-release-three-new-supersized-specials-including-",
+        "popularity": 0,
+        "kind": "rss-news"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Variety"
+        ],
+        "maxTier": 7,
+        "sensitivity": "normal",
+        "attribution": "Variety",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-futurama-hulu-special-episodes-trailer",
+      "slug": "futurama-hulu-greenlights-3-extended-special-episodes-ahead-of-season-",
+      "title": "‘Futurama’: Hulu Greenlights 3 Extended Special Episodes Ahead Of Season 14 As New Trailer Debuts At Comic-Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "high",
+      "eventSlug": "futurama-hulu-special-episodes-trailer",
+      "primaryKeyword": "futurama season 14 trailer",
+      "primaryEntity": "Futurama: Bender's Big Score",
+      "entities": [
+        "Futurama",
+        "Hulu",
+        "Comic-Con"
+      ],
+      "angle": "Hulu has announced three extended special episodes for 'Futurama' ahead of its 14th season and debuted a new trailer at Comic-Con.",
+      "tmdbType": "movie",
+      "source": "gnews:Deadline",
+      "sources": [
+        {
+          "outlet": "Deadline",
+          "tier": 7,
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPV0JTa0tpLWpWQ0luLXdVNTl2bmtRNnV1NkVFZ0pIM2JUdER6TnFITS1GeExzeDlSS3FRMEI3dERjVGRadUNvWG9mY0IzWXJkR3REdHQ3SklZMnhyYWUxdE5rQnlMZHM3Qi1hUUdjQXRNME9VelZSeXVaU2UzOHA1YmNSNGhaRzUwQ29ZMHJvRzc2YXM?oc=5",
+          "ageMin": 556,
+          "headline": "‘Futurama’: Hulu Greenlights 3 Extended Special Episodes Ahead Of Season 14 As New Trailer Debuts At Comic-Con - Deadline",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxPV0JTa0tpLWpWQ0luLXdVNTl2bmtRNnV1NkVFZ0pIM2JUdER6TnFITS1GeExzeDlSS3FRMEI3dERjVGRadUNvWG9mY0IzWXJkR3REdHQ3SklZMnhyYWUxdE5rQnlMZHM3Qi1hUUdjQXRNME9VelZSeXVaU2UzOHA1YmNSNGhaRzUwQ29ZMHJvRzc2YXM?oc=5\" target=\"_blank\" ‘Futurama’: Hulu Greenlights "
+        }
+      ],
+      "ageMin": 556,
+      "_cand": {
+        "key": "rss:-futurama-hulu-greenlights-3-extended-special-episodes-ahead",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 1,
+        "tier1Owners": 1,
+        "outletCount": 1,
+        "outlets": [
+          "Deadline"
+        ],
+        "maxTier": 7,
+        "sensitivity": "high",
+        "attribution": "Deadline",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 60,
+      "signals": {
+        "recency": 4,
+        "corroboration": 12,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 18,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0,
+        "learned": -1
+      },
+      "tierClass": "S"
+    },
+    {
+      "id": "news-ryan-coogler-confirms-black-panther-3-with-new-tchalla",
+      "slug": "ryan-coogler-confirms-black-panther-3-is-coming-with-a-new-t-challa",
+      "title": "Ryan Coogler Confirms 'Black Panther 3' is Coming — With a New T'Challa",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "ryan-coogler-confirms-black-panther-3-with-new-tchalla",
+      "primaryKeyword": "Black Panther 3",
+      "primaryEntity": "Black Panther 3",
+      "entities": [
+        "Ryan Coogler",
+        "T'Challa"
+      ],
+      "angle": "Director Ryan Coogler has confirmed that 'Black Panther 3' is in development and will feature a new iteration of T'Challa.",
+      "tmdbType": "movie",
+      "source": "gnews:Entertainment Weekly",
+      "sources": [
+        {
+          "outlet": "Entertainment Weekly",
+          "tier": 6,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUEZqallMdzFuTVhqdGJ6T0hHTkt0eG9wVG94TGZyOHo2aHI2OHY0UDNiOEFwWHlrOTQ0Mm1TMUF3OF9hM3JNRTRQbU82cVhsUkpJaFAzZTh6UVhhT1c1UXhhOHMwbVAydmVmdENHeWZUcGRBbEdEZ1J5TVdYdm1XUmhFaEYwZ0dYakVuVjdB?oc=5",
+          "ageMin": 126,
+          "headline": "Ryan Coogler confirms ‘Black Panther 3’ is coming — with a new T’Challa - Entertainment Weekly",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNUEZqallMdzFuTVhqdGJ6T0hHTkt0eG9wVG94TGZyOHo2aHI2OHY0UDNiOEFwWHlrOTQ0Mm1TMUF3OF9hM3JNRTRQbU82cVhsUkpJaFAzZTh6UVhhT1c1UXhhOHMwbVAydmVmdENHeWZUcGRBbEdEZ1J5TVdYdm1XUmhFaEYwZ0dYakVuVjdB?oc=5\" target=\"_blank\" Ryan Coogler confirms ‘Black Panther"
+        },
+        {
+          "outlet": "/Film",
+          "tier": 5,
+          "url": "https://www.slashfilm.com/2223373/black-panther-3-david-jonsson-tchalla-marvel-2026-sdcc/",
+          "headline": "Black Panther 3 Will Star David Jonsson As New T'Challa, Coming In 2028 [SDCC]",
+          "summary": "David Jonsson (Industry, The Long Walk) will play the next T Challa in the Marvel Cinematic Universe, and Black Panther 3 is hitting theaters in 2028.",
+          "ageMin": 135,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "ComingSoon",
+          "tier": 4,
+          "url": "https://www.comingsoon.net/movies/news/2167691-black-panther-3-gets-official-logo-release-date-for-ryan-coogler-mcu-movie",
+          "headline": "Black Panther 3 Gets Official Logo, Release Date for Ryan Coogler MCU Movie",
+          "summary": "The Black Panther 3 logo has officially been revealed alongside a release date. Now, we officially know when Ryan Coogler s next MCU movie is coming. When does Black Panther 3 come out? During Marvel Studios San Diego Comic-Con 2026 panel, they closed out the show with a big surprise. The studio revealed more information about [ ] The post Black Panther 3 Gets Official Logo, Release Date for Ryan Coogler MCU Movie appeared first on ComingSoon.net - Movie Trailers, TV Streaming News, and More .",
+          "ageMin": 73,
+          "via": "corr-feed"
+        },
+        {
+          "outlet": "Consequence",
+          "tier": 5,
+          "url": "https://consequence.net/2026/07/ryan-coogler-black-panther-3-marvel-2028/",
+          "headline": "Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son",
+          "summary": "Set for release in December 2028. Ryan Coogler to Direct Black Panther 3, David Jonsson Cast as T Challa s Son Liz Shannon Miller",
+          "ageMin": 122,
+          "via": "corr-feed"
+        }
+      ],
+      "ageMin": 126,
+      "_cand": {
+        "key": "rss:ryan-coogler-confirms-black-panther-3-is-coming-with-a-new-t",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 4,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 4,
+        "outlets": [
+          "Entertainment Weekly"
+        ],
+        "maxTier": 6,
+        "sensitivity": "normal",
+        "attribution": "Entertainment Weekly",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 77,
+      "signals": {
+        "recency": 16,
+        "corroboration": 10,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-star-wars-experience-museum-tour-details",
+      "slug": "star-wars-the-experience-museum-to-travel-around-north-america-for-fiv",
+      "title": "'Star Wars: The Experience' Museum To Travel Around North America for Five Years; New Details Revealed at San Diego Comic Con",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "tv",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "tier": "popular",
+      "eventSlug": "star-wars-experience-museum-tour-details",
+      "primaryKeyword": "Star Wars Experience museum",
+      "primaryEntity": "Star Wars: Episode II - Attack of the Clones",
+      "entities": [
+        "Star Wars: The Experience"
+      ],
+      "angle": "New details about the traveling 'Star Wars: The Experience' museum were revealed at San Diego Comic-Con.",
+      "tmdbType": "movie",
+      "source": "gnews:Star Wars News Net",
+      "sources": [
+        {
+          "outlet": "Star Wars News Net",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVzB6S2Jnby1RWlhBZFNPc0dPdTdXc2dTTFJ3SmEwcW1nakp6YXByTlJHWEtQYXBDSENRUnZtZ1VoZm1PaVg4VnhfaVhnOG9yS0F6eFZwczN2Mk83WVRhZnFUVGZlQUlPZHdEUlk0ZVBBVTZSdHlmUUhwR0dhRUVMNmV1akRIQ2FOYmQzN0NIZHNoREZDMW1NemFFcTlhTEtHbWhKbnZxeHluYjJDSU9maXRPOGVDNjZRN0JQckZKRQ?oc=5",
+          "ageMin": 698,
+          "headline": "'Star Wars: The Experience' Museum To Travel Around North America for Five Years; New Details Revealed at San Diego Comic Con - Star Wars News Net",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxPVzB6S2Jnby1RWlhBZFNPc0dPdTdXc2dTTFJ3SmEwcW1nakp6YXByTlJHWEtQYXBDSENRUnZtZ1VoZm1PaVg4VnhfaVhnOG9yS0F6eFZwczN2Mk83WVRhZnFUVGZlQUlPZHdEUlk0ZVBBVTZSdHlmUUhwR0dhRUVMNmV1akRIQ2FOYmQzN0NIZHNoREZDMW1NemFFcTlhTEtHbWhKbnZxeHluYjJDSU9maXRPOGVDNjZRN0J"
+        }
+      ],
+      "ageMin": 698,
+      "_cand": {
+        "key": "rss:-star-wars-the-experience-museum-to-travel-around-north-amer",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "Star Wars News Net"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "Star Wars News Net",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 56,
       "signals": {
         "recency": 4,
         "corroboration": 8,
@@ -770,115 +2376,175 @@
         "trending": 0,
         "spice": 0,
         "softTv": 0,
-        "demand": 2,
         "learned": -1
       },
-      "demandImpressions": 1,
-      "demandQuery": "lil wayne cancelled",
-      "demandPosition": 65,
       "tierClass": "C"
     },
     {
-      "id": "news-on-patrol-live-tom-morris-jr-joins",
-      "slug": "the-whole-live-pd-gang-is-back-together-as-tom-morris-jr-joins-on-patr",
-      "title": "The Whole Live PD Gang Is Back Together as Tom Morris Jr. Joins On Patrol: Live",
+      "id": "news-ebenezer-a-christmas-carol-movie-poster-reveal",
+      "slug": "johnny-depp-is-scrooge-in-pearl-director-s-ebenezer-a-christmas-carol-",
+      "title": "Johnny Depp Is Scrooge in Pearl Director’s Ebenezer A Christmas Carol Movie Poster",
       "contentType": "news",
       "formatTag": "news",
-      "category": "tv",
+      "category": "movies",
       "subcategory": "news",
       "eventType": "announcement",
       "sensitivity": "normal",
-      "eventSlug": "on-patrol-live-tom-morris-jr-joins",
-      "primaryKeyword": "On Patrol: Live",
-      "primaryEntity": "On Patrol: Live",
+      "eventSlug": "ebenezer-a-christmas-carol-movie-poster-reveal",
+      "primaryKeyword": "ebenezer a christmas carol movie",
+      "primaryEntity": "Ebenezer",
       "entities": [
-        "Dan Abrams",
-        "Sgt. Sean \"Sticks\" Larkin",
-        "Live PD"
+        "Ebenezer A Christmas Carol",
+        "Johnny Depp",
+        "Pearl (film)"
       ],
-      "angle": "Original Live PD cast members reunite for the revived series.",
+      "angle": "Johnny Depp is set to portray Scrooge in the upcoming 'Ebenezer A Christmas Carol' film, with the first poster released.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "gnews:AOL.com",
       "sources": [
         {
-          "outlet": "THR",
-          "tier": 7,
-          "url": "https://www.hollywoodreporter.com/tv/tv-news/live-pd-reunion-tom-morris-jr-dan-abrams-on-patrol-live-1236656080/",
-          "ageMin": 886,
-          "headline": "The Whole Live PD Gang Is Back Together as Tom Morris Jr. Joins On Patrol: Live",
-          "summary": "Dan Abrams and Sgt. Sean \"Sticks\" Larkin have their buddy back."
+          "outlet": "AOL.com",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQc1Z6eFM3eG4xcnd6Wm1tMUQ1emt5UG5XVzRVS2xDWlpndmZuSnVBYkptd3VCbkdXVUVYYkYwS09qWDNoMlhOU2JjN0IyaGV1UjVYQVdZMm5uLUE1T2l6V3kzNnZ5anQ2Qy1UQWdpNU1qcHFzbndtYk9zeTZlRXJ1QXRraWo?oc=5",
+          "ageMin": 217,
+          "headline": "Johnny Depp Is Scrooge in Pearl Director’s Ebenezer A Christmas Carol Movie Poster - AOL.com",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxQc1Z6eFM3eG4xcnd6Wm1tMUQ1emt5UG5XVzRVS2xDWlpndmZuSnVBYkptd3VCbkdXVUVYYkYwS09qWDNoMlhOU2JjN0IyaGV1UjVYQVdZMm5uLUE1T2l6V3kzNnZ5anQ2Qy1UQWdpNU1qcHFzbndtYk9zeTZlRXJ1QXRraWo?oc=5\" target=\"_blank\" Johnny Depp Is Scrooge in Pearl Director’s Ebenez"
         }
       ],
-      "ageMin": 886,
+      "ageMin": 217,
       "_cand": {
-        "key": "rss:the-whole-live-pd-gang-is-back-together-as-tom-morris-jr-joi",
+        "key": "rss:johnny-depp-is-scrooge-in-pearl-director-s-ebenezer-a-christ",
         "popularity": 0,
-        "kind": "rss-news"
+        "kind": "gnews"
       },
       "corroborationCount": 1,
       "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
+        "tier1Count": 0,
+        "tier1Owners": 0,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "AOL.com"
         ],
-        "maxTier": 7,
+        "maxTier": 5,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "AOL.com",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
       },
-      "priority": 57,
+      "priority": 68,
       "signals": {
-        "recency": 1,
-        "corroboration": 12,
+        "recency": 9,
+        "corroboration": 8,
         "status": 18,
         "type": 9,
         "pop": 0,
         "breakout": 0,
-        "big": 18,
+        "big": 24,
         "trending": 0,
         "spice": 0,
-        "softTv": 0,
-        "learned": -1
+        "softTv": 0
       },
-      "tierClass": "C"
+      "tierClass": "B"
     },
     {
-      "id": "news-lucas-museum-comic-con-star-wars-animated-series-screening",
-      "slug": "lucas-museum-at-comic-con-star-wars-animated-series-detours-to-finally",
-      "title": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
+      "id": "news-dungeons-dragons-sequel-script-financial-reasons",
+      "slug": "we-think-we-wrote-something-that-fans-would-like-dungeons-dragons-hono",
+      "title": "'We Think We Wrote Something That Fans Would Like' — Dungeons Dragons: Honor Among Thieves Director Says 'Financial Reasons' Might Keep Sequel from Coming Out Even Though It Already Has a Script",
+      "contentType": "news",
+      "formatTag": "news",
+      "category": "movies",
+      "subcategory": "news",
+      "eventType": "announcement",
+      "sensitivity": "normal",
+      "eventSlug": "dungeons-dragons-sequel-script-financial-reasons",
+      "primaryKeyword": "dungeons and dragons sequel",
+      "primaryEntity": "Dungeons & Dragons: Honor Among Thieves",
+      "entities": [
+        "Paramount Pictures"
+      ],
+      "angle": "Directors of 'Dungeons & Dragons: Honor Among Thieves' reveal a script for a sequel exists but financial reasons may prevent its production.",
+      "tmdbType": "movie",
+      "source": "gnews:IGN",
+      "sources": [
+        {
+          "outlet": "IGN",
+          "tier": 5,
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUmJDcGdYdmF4OFhpemxBcGxILXZsVE1pTXZ3TGhiSklTVXhRZC1sa3pnM0lNMHZxdVlqZ09MeWFBaWZLMjl4TkxHTjBrWWp2NzR6UlhTbHotdVJhd2xoQkxsZW1EcXFybUs0bUZjcVczOEQwemQ3QzBkQk1WMTZ3ZzEyZ094WW9heVBzeU1GN1RRY1N6ckxXQzlnTlc1cTc3dEVLUmhKdGZ0SHAzYmJxeERmTjVPdzVzY1VXYXF1VzVEMlRUTWQ0?oc=5",
+          "ageMin": 387,
+          "headline": "'We Think We Wrote Something That Fans Would Like' — Dungeons Dragons: Honor Among Thieves Director Says 'Financial Reasons' Might Keep Sequel from Coming Out Even Though It Already Has a Script - IGN",
+          "summary": "a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxOUmJDcGdYdmF4OFhpemxBcGxILXZsVE1pTXZ3TGhiSklTVXhRZC1sa3pnM0lNMHZxdVlqZ09MeWFBaWZLMjl4TkxHTjBrWWp2NzR6UlhTbHotdVJhd2xoQkxsZW1EcXFybUs0bUZjcVczOEQwemQ3QzBkQk1WMTZ3ZzEyZ094WW9heVBzeU1GN1RRY1N6ckxXQzlnTlc1cTc3dEVLUmhKdGZ0SHAzYmJxeERmTjVPdzVzY1V"
+        }
+      ],
+      "ageMin": 387,
+      "_cand": {
+        "key": "rss:-we-think-we-wrote-something-that-fans-would-like-dungeons-d",
+        "popularity": 0,
+        "kind": "gnews"
+      },
+      "corroborationCount": 1,
+      "verification": {
+        "tier1Count": 0,
+        "tier1Owners": 0,
+        "outletCount": 1,
+        "outlets": [
+          "IGN"
+        ],
+        "maxTier": 5,
+        "sensitivity": "normal",
+        "attribution": "IGN",
+        "framing": "attributed",
+        "status": "DEVELOPING",
+        "publishable": true
+      },
+      "priority": 63,
+      "signals": {
+        "recency": 4,
+        "corroboration": 8,
+        "status": 18,
+        "type": 9,
+        "pop": 0,
+        "breakout": 0,
+        "big": 24,
+        "trending": 0,
+        "spice": 0,
+        "softTv": 0
+      },
+      "tierClass": "B"
+    },
+    {
+      "id": "news-na-hong-jin-hope-re-edits",
+      "slug": "director-na-hong-jin-discusses-hope-film-s-post-cannes-re-edits",
+      "title": "Director Na Hong-jin Discusses 'Hope' Film's Post-Cannes Re-Edits",
       "contentType": "news",
       "formatTag": "news",
       "category": "movies",
       "subcategory": "news",
       "eventType": "other",
       "sensitivity": "normal",
-      "eventSlug": "lucas-museum-comic-con-star-wars-animated-series-screening",
-      "primaryKeyword": "Lucas Museum Comic-Con",
-      "primaryEntity": "Lucas Museum of Narrative Art",
+      "eventSlug": "na-hong-jin-hope-re-edits",
+      "primaryKeyword": "Na Hong-jin Hope",
+      "primaryEntity": "In the Line of Duty 4",
       "entities": [
-        "Star Wars",
-        "Seth Green"
+        "Na Hong-jin",
+        "Hope (film)"
       ],
-      "angle": "The Lucas Museum announces its film programming at Comic-Con, including a screening of a Star Wars animated series.",
+      "angle": "Director Na Hong-jin details the post-Cannes re-edits and technical work on his film 'Hope'.",
       "tmdbType": "movie",
-      "source": "rss:THR",
+      "source": "rss:IndieWire",
       "sources": [
         {
-          "outlet": "THR",
+          "outlet": "IndieWire",
           "tier": 7,
-          "url": "https://www.hollywoodreporter.com/movies/movie-news/lucas-museum-comic-con-star-wars-animated-series-detours-1236655674/",
-          "ageMin": 1466,
-          "headline": "Lucas Museum at Comic-Con: Star Wars Animated Series Detours to Finally Screen, Film Programming Revealed",
-          "summary": "\"We’ve lived long enough to see all the stuff that we were beaten for loving become the fine art of our day,\" said show creator Seth Green."
+          "url": "https://www.indiewire.com/features/interviews/hope-re-edit-how-na-hong-jin-movie-changed-since-cannes-1235206972/",
+          "ageMin": 1861,
+          "headline": "I Saw Both Cuts of ‘Hope.’ Na Hong-jin Turned a Cannes Letdown into an Action-Movie Triumph",
+          "summary": "Director Na Hong-jin tells IndieWire about the re-edits, sound, and CGI work done after the massive South Korean genre film rocked (and polarized) Cannes."
         }
       ],
-      "ageMin": 1466,
+      "ageMin": 1861,
       "_cand": {
-        "key": "rss:lucas-museum-at-comic-con-star-wars-animated-series-detours-",
+        "key": "rss:i-saw-both-cuts-of-hope-na-hong-jin-turned-a-cannes-letdown-",
         "popularity": 0,
         "kind": "rss-news"
       },
@@ -888,11 +2554,11 @@
         "tier1Owners": 1,
         "outletCount": 1,
         "outlets": [
-          "THR"
+          "IndieWire"
         ],
         "maxTier": 7,
         "sensitivity": "normal",
-        "attribution": "THR",
+        "attribution": "IndieWire",
         "framing": "attributed",
         "status": "DEVELOPING",
         "publishable": true
@@ -911,72 +2577,6 @@
         "softTv": 0
       },
       "tierClass": "C"
-    },
-    {
-      "id": "news-rosie-o-donnell-common-knowledge-review",
-      "slug": "rosie-o-donnell-common-knowledge-review-poignant-off-broadway-show-rec",
-      "title": "Rosie O Donnell: Common Knowledge Review: Poignant Off Broadway Show Recounts Family Challenges, The Trump Feud And What She Just Might Do On Jimmy Kimmel Live",
-      "contentType": "news",
-      "formatTag": "news",
-      "category": "celebrity",
-      "subcategory": "news",
-      "eventType": "review",
-      "sensitivity": "normal",
-      "eventSlug": "rosie-o-donnell-common-knowledge-review",
-      "primaryKeyword": "rosie o'donnell common knowledge",
-      "primaryEntity": "Rosie O'Donnell",
-      "entities": [
-        "Common Knowledge"
-      ],
-      "angle": "Rosie O'Donnell's Off-Broadway show 'Common Knowledge' is reviewed as a poignant recounting of family challenges and her feud with Donald Trump.",
-      "tmdbType": "movie",
-      "source": "rss:Deadline",
-      "sources": [
-        {
-          "outlet": "Deadline",
-          "tier": 7,
-          "url": "https://deadline.com/2026/07/rosie-odonnell-common-knowledge-off-broadway-1237003334/",
-          "ageMin": 77,
-          "headline": "Rosie O Donnell: Common Knowledge Review: Poignant Off Broadway Show Recounts Family Challenges, The Trump Feud And What She Just Might Do On Jimmy Kimmel Live",
-          "summary": "Last night, both Rosie O Donnell, performing her new Off Broadway solo show Common Knowledge, and Donald Trump, making his first appearance as president at the White House Correspondents’ Association Dinner, took to their respective stages to share their thoughts on, among many other things, one another. Cutting to the chase: O Donnell was better. Much, much [ ]"
-        }
-      ],
-      "ageMin": 77,
-      "_cand": {
-        "key": "rss:rosie-o-donnell-common-knowledge-review-poignant-off-broadwa",
-        "popularity": 0,
-        "kind": "rss-news"
-      },
-      "corroborationCount": 1,
-      "verification": {
-        "tier1Count": 1,
-        "tier1Owners": 1,
-        "outletCount": 1,
-        "outlets": [
-          "Deadline"
-        ],
-        "maxTier": 7,
-        "sensitivity": "normal",
-        "attribution": "Deadline",
-        "framing": "attributed",
-        "status": "DEVELOPING",
-        "publishable": true
-      },
-      "priority": 60,
-      "signals": {
-        "recency": 16,
-        "corroboration": 12,
-        "status": 18,
-        "type": 9,
-        "pop": 0,
-        "breakout": 0,
-        "big": 0,
-        "trending": 0,
-        "spice": 4,
-        "softTv": 0,
-        "learned": 1
-      },
-      "tierClass": "B"
     }
   ]
 }
