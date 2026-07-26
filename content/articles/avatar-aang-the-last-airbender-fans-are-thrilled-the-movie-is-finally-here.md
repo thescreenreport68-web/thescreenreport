@@ -98,12 +98,47 @@ reactions:
       others who worked on Avatar Aang: The Last Airbender can finally show the
       amazing work that they've done. Their determination and resolve against
       their difficult situation can't be understated
+  - speaker: Michael Dante DiMartino
+    connection: co-creator of Avatar
+    platform: interview
+    quote: >-
+      There wasn’t too much debate that we would focus on the original
+      characters since they were the most iconic and most beloved characters we
+      had so far.
+  - speaker: Bryan Konietzko
+    connection: co-creator of Avatar
+    platform: interview
+    quote: >-
+      I might be an outlier, but — I still wanted to work in the “Avatar” world,
+      but I wasn’t hungry to go back to the original characters because that was
+      the story that Mike and I set out to tell, and we were lucky enough to be
+      able to complete it.
+  - speaker: Bryan Konietzko
+    connection: co-creator of Avatar
+    platform: interview
+    quote: >-
+      But it wasn’t until Mike pitched to me the idea of them at this age that
+      the door sort of opened for me creatively.
+  - speaker: Lauren Montgomery
+    connection: director
+    platform: interview
+    quote: >-
+      And I think like the beauty of what we found is the only really personal
+      story left to tell about Aang, and just the fact that it was always in the
+      title, was being the last Airbender.
+  - speaker: Lauren Montgomery
+    connection: director
+    platform: interview
+    quote: >-
+      There was something really beautiful and emotional still to tell in that
+      story. I was excited just because I very much love a tortured, emotional
+      story.
 fanConsensus: >-
   Fans are ecstatic about the film's quality and its fulfillment of a long-held
   promise, but are deeply frustrated and confused by the decision to prioritize
   a streaming release over a wide theatrical one, viewing it as a missed
   opportunity and a slight against the franchise's stature.
-updatedCount: 0
+updatedCount: 1
 trendScore: 20
 signals:
   popularity: 78
@@ -118,7 +153,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-20T20:31:30.188Z'
+dateModified: '2026-07-26T06:31:22.865Z'
 provenance:
   parentEventSlug: avatar-aang-the-last-airbender-2026
   primaryEntity: 'Avatar Aang: The Last Airbender'
@@ -132,6 +167,7 @@ imageAlt: Avatar Aang The Last Airbender movie poster trailer
 imageCredit: The Movie Database (TMDB)
 imageWidth: 3840
 imageHeight: 2160
+updated: '2026-07-26T06:31:22.865Z'
 ---
 
 For fans of *Avatar: The Last Airbender*, the first trailer for the animated sequel film *Avatar Aang: The Last Airbender* was a moment years in the making. The reaction, however, has split cleanly in two: unbridled joy for the project's existence and palpable fury over how it's being delivered. While the film's quality and emotional payoff are being celebrated, the decision to relegate it to a streaming-only premiere on Paramount+ has ignited a heated debate about the value of beloved franchises and the audience that sustains them.

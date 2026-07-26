@@ -104,11 +104,32 @@ reactions:
       San Diego Comic-Con 2026 begins! We hope you have an amazing Thursday.
       Visit us at booth 1943- a limited amount of our 10th Anniversary pin comes
       with each purchase at the booth daily. See you soon!
+  - speaker: Shawn Levy
+    platform: press
+    quote: Gosling is the absolute shit. I say that with tremendous respect.
+  - speaker: Shawn Levy
+    platform: press
+    quote: 'Bro, let’s ride.'
+  - speaker: Kevin Feige
+    connection: Marvel Studios President
+    platform: interview
+    quote: 'Hey man, if Ryan wants to be Ghost Rider…'
+  - speaker: David Jonsson
+    connection: actor
+    platform: statement
+    quote: >-
+      Thank you to this family that I have the honor and the blessing to join. I
+      don’t want to say too much, because I want to let the screen do the
+      talking
+  - speaker: Ryan Reynolds
+    connection: actor
+    platform: X
+    quote: Longtime listener. First time caller
 fanConsensus: >-
   Fans loved the energy and offerings of SDCC 2026 but are thoughtfully debating
   whether its expansion into digital and brand activations is enriching the
   experience or diluting its comic-book-centric soul.
-updatedCount: 0
+updatedCount: 1
 trendScore: 45
 signals:
   outlets: 3
@@ -124,7 +145,7 @@ aiDisclosure: >-
   This article was produced with AI-assisted research and reviewed editorially.
   Quoted reactions are real public posts and statements; the surrounding
   analysis is our own.
-dateModified: '2026-07-24T06:31:03.398Z'
+dateModified: '2026-07-26T06:31:22.865Z'
 provenance:
   parentEventSlug: san-diego-comic-con-2026-see-all-the-celebrities-e-news
   primaryEntity: San Diego Comic-Con 2026
@@ -139,6 +160,7 @@ imageAlt: San Diego Comic-Con 2026 crowd floor panels cosplay
 imageCredit: Photo via NBCU
 imageWidth: 1200
 imageHeight: 1200
+updated: '2026-07-26T06:31:22.865Z'
 ---
 
 San Diego Comic-Con 2026 drew its usual waves of fans, creators, and collectible hunters, creating the vibrant, chaotic spectacle it's famous for. But behind the cosplay and crowded aisles, a quieter, perennial debate resurfaced among attendees and observers online: is the convention still fundamentally about comics and tangible fandom, or has it evolved into a broader, more digital pop culture marketplace?
