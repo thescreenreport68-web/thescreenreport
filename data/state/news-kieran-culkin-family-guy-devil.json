@@ -1,30 +1,30 @@
 {
   "id": "news-kieran-culkin-family-guy-devil",
-  "slug": "family-guy-sets-annual-halloween-holiday-specials-for-hulu-kieran-culk",
+  "slug": "family-guy-casts-kieran-culkin-to-play-the-devil-in-new-halloween-spec",
   "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "tv/news",
       "format": [],
-      "cuts": 2,
+      "cuts": 4,
       "broken": [
-        "body 239w < 600"
+        "body 275w < 600"
       ]
     },
     "attempt2": {
       "score": null,
       "cat": "tv/news",
       "format": [],
-      "cuts": 1,
+      "cuts": 3,
       "broken": [
-        "body 234w < 600"
+        "body 272w < 600"
       ]
     }
   },
   "editorial": {
     "status": "official",
-    "entity": "Family Guy",
+    "entity": "Kieran Culkin",
     "work": {
       "title": "Family Guy",
       "year": null,
@@ -32,36 +32,36 @@
     },
     "outlet": "deadline.com"
   },
-  "holdReason": "broken article: body 234w < 600",
+  "holdReason": "broken article: body 272w < 600",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 234,
+      "words": 272,
       "h2s": 2,
       "h2Questions": 2,
       "internalLinks": 0,
       "externalLinks": 0,
       "hasSources": false,
       "faqCount": 3,
-      "ktCount": 4,
+      "ktCount": 5,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 38,
+      "maxSentence": 43,
       "avgSentence": 18,
-      "flesch": 54,
+      "flesch": 51,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 234w < 600"
+        "body 272w < 600"
       ]
     },
     "hardBlocks": [
-      "body 234w < 600"
+      "body 272w < 600"
     ]
   },
   "audit": {
@@ -69,12 +69,13 @@
     "internalLinks": 0,
     "failed": [
       "body ≥ 300w",
+      "3+ FAQ",
       "≥1200px legal image",
       "credit",
       "zero hard-blocks"
     ]
   },
-  "ms": 68121,
+  "ms": 201818,
   "previousRuns": [
     {
       "id": "news-kieran-culkin-family-guy-devil",
@@ -318,6 +319,84 @@
         ]
       },
       "ms": 133062
+    },
+    {
+      "id": "news-kieran-culkin-family-guy-devil",
+      "slug": "family-guy-sets-annual-halloween-holiday-specials-for-hulu-kieran-culk",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [],
+          "cuts": 2,
+          "broken": [
+            "body 239w < 600"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "tv/news",
+          "format": [],
+          "cuts": 1,
+          "broken": [
+            "body 234w < 600"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Family Guy",
+        "work": {
+          "title": "Family Guy",
+          "year": null,
+          "medium": "tv"
+        },
+        "outlet": "deadline.com"
+      },
+      "holdReason": "broken article: body 234w < 600",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 234,
+          "h2s": 2,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": false,
+          "faqCount": 3,
+          "ktCount": 4,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 38,
+          "avgSentence": 18,
+          "flesch": 54,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 234w < 600"
+          ]
+        },
+        "hardBlocks": [
+          "body 234w < 600"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "body ≥ 300w",
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 68121
     }
   ]
 }

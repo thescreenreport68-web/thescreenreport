@@ -1,17 +1,17 @@
 {
   "id": "news-ryan-gosling-ghost-rider-casting",
-  "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe-as-fiery-anti",
+  "slug": "ryan-gosling-to-star-as-ghost-rider-in-marvel-cinematic-universe-film",
   "status": "needs_review",
   "stages": {
     "attempt1": {
       "score": null,
       "cat": "movies/news",
       "format": [
-        "a 82-word run-on sentence (>55 — split it)"
+        "a 75-word run-on sentence (>55 — split it)"
       ],
-      "cuts": 6,
+      "cuts": 2,
       "broken": [
-        "body 464w < 600",
+        "body 509w < 600",
         "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     },
@@ -19,11 +19,11 @@
       "score": null,
       "cat": "movies/news",
       "format": [
-        "a 82-word run-on sentence (>55 — split it)"
+        "a 75-word run-on sentence (>55 — split it)"
       ],
-      "cuts": 3,
+      "cuts": 2,
       "broken": [
-        "body 443w < 600",
+        "body 499w < 600",
         "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
       ]
     }
@@ -38,38 +38,38 @@
     },
     "outlet": "thewrap.com"
   },
-  "holdReason": "broken article: body 443w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+  "holdReason": "broken article: body 499w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
   "scorecard": {
     "score": null,
     "subscores": {},
     "strengths": [],
     "weaknesses": [],
     "deterministic": {
-      "words": 443,
+      "words": 499,
       "h2s": 5,
       "h2Questions": 2,
       "internalLinks": 0,
-      "externalLinks": 0,
+      "externalLinks": 2,
       "hasSources": true,
       "faqCount": 4,
-      "ktCount": 5,
+      "ktCount": 4,
       "kwInTitle": true,
       "kwInFirst100": true,
       "kwInH2": false,
-      "maxSentence": 82,
-      "avgSentence": 18,
-      "flesch": 53,
+      "maxSentence": 75,
+      "avgSentence": 19,
+      "flesch": 51,
       "bannedTells": 0,
       "fillerPraise": 0,
       "kwExact": 0,
       "hardBlocks": [
-        "body 443w < 600",
+        "body 499w < 600",
         "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
-        "a 82-word run-on sentence (>55 — split it)"
+        "a 75-word run-on sentence (>55 — split it)"
       ]
     },
     "hardBlocks": [
-      "body 443w < 600",
+      "body 499w < 600",
       "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
     ]
   },
@@ -82,7 +82,7 @@
       "zero hard-blocks"
     ]
   },
-  "ms": 191168,
+  "ms": 158036,
   "previousRuns": [
     {
       "id": "news-ryan-gosling-ghost-rider-casting",
@@ -235,6 +235,92 @@
         ]
       },
       "ms": 188885
+    },
+    {
+      "id": "news-ryan-gosling-ghost-rider-casting",
+      "slug": "ghost-rider-ryan-gosling-joins-marvel-cinematic-universe-as-fiery-anti",
+      "status": "needs_review",
+      "stages": {
+        "attempt1": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [
+            "a 82-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 6,
+          "broken": [
+            "body 464w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        },
+        "attempt2": {
+          "score": null,
+          "cat": "movies/news",
+          "format": [
+            "a 82-word run-on sentence (>55 — split it)"
+          ],
+          "cuts": 3,
+          "broken": [
+            "body 443w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+          ]
+        }
+      },
+      "editorial": {
+        "status": "official",
+        "entity": "Ryan Gosling",
+        "work": {
+          "title": "Ghost Rider",
+          "year": 2028,
+          "medium": "movie"
+        },
+        "outlet": "thewrap.com"
+      },
+      "holdReason": "broken article: body 443w < 600; 1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+      "scorecard": {
+        "score": null,
+        "subscores": {},
+        "strengths": [],
+        "weaknesses": [],
+        "deterministic": {
+          "words": 443,
+          "h2s": 5,
+          "h2Questions": 2,
+          "internalLinks": 0,
+          "externalLinks": 0,
+          "hasSources": true,
+          "faqCount": 4,
+          "ktCount": 5,
+          "kwInTitle": true,
+          "kwInFirst100": true,
+          "kwInH2": false,
+          "maxSentence": 82,
+          "avgSentence": 18,
+          "flesch": 53,
+          "bannedTells": 0,
+          "fillerPraise": 0,
+          "kwExact": 0,
+          "hardBlocks": [
+            "body 443w < 600",
+            "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about",
+            "a 82-word run-on sentence (>55 — split it)"
+          ]
+        },
+        "hardBlocks": [
+          "body 443w < 600",
+          "1 generic heading(s) [\"What Are the Key Details?\"] — name the specific person/film/number the section is about"
+        ]
+      },
+      "audit": {
+        "ok": false,
+        "internalLinks": 0,
+        "failed": [
+          "≥1200px legal image",
+          "credit",
+          "zero hard-blocks"
+        ]
+      },
+      "ms": 191168
     }
   ]
 }
