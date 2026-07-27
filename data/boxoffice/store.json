@@ -2354,9 +2354,9 @@
    "key": "descendants-wicked-wonderland-now-streaming|NOW-STREAMING",
    "eventSlug": "descendants-wicked-wonderland-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 155 < 180 (owner-set ~200-word minimum)",
-   "tries": 0,
-   "at": "2026-07-24T07:05:25.804Z",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 2,
+   "at": "2026-07-27T12:05:28.732Z",
    "dead": false,
    "expiresAt": "2026-07-27T07:05:25.804Z"
   },
@@ -2888,9 +2888,9 @@
    "key": "masters-of-the-universe-now-streaming|NOW-STREAMING",
    "eventSlug": "masters-of-the-universe-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 0,
-   "at": "2026-07-23T23:05:18.855Z",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 2,
+   "at": "2026-07-27T12:03:21.063Z",
    "dead": false,
    "expiresAt": "2026-07-26T23:05:18.855Z"
   },
@@ -3020,9 +3020,11 @@
    "key": "mortal-kombat-ii-now-streaming|NOW-STREAMING",
    "eventSlug": "mortal-kombat-ii-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "fidelity: 5 unsupported figures/claims — draft-level failure",
-   "tries": 2,
-   "at": "2026-07-26T17:34:54.969Z"
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 3,
+   "at": "2026-07-27T12:07:50.179Z",
+   "dead": true,
+   "expiresAt": "2026-07-30T12:07:50.179Z"
   },
   {
    "key": "the-dink-now-streaming|NOW-STREAMING",
@@ -3049,23 +3051,23 @@
    "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 46,
+ "zeroStreak": 47,
  "daySpend": {
   "laDay": "2026-07-27",
   "usd": 0
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785151844004
+  "lastMs": 1785153636982
  },
  "lastAuditDay": "2026-07-27",
  "attempts": {
   "laDay": "2026-07-27",
   "byFilm": {
-   "lucky": 1,
-   "masters of the universe": 1,
-   "descendants: wicked wonderland": 1,
-   "mortal kombat ii": 1
+   "lucky": 2,
+   "masters of the universe": 2,
+   "descendants: wicked wonderland": 2,
+   "mortal kombat ii": 2
   }
  },
  "failures": {
