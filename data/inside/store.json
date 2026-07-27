@@ -8271,8 +8271,8 @@
    "parentEventSlug": "lucky-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-27T04:31:24.878Z",
+   "tries": 2,
+   "at": "2026-07-27T06:31:24.100Z",
    "dead": false
   },
   {
@@ -9149,7 +9149,8 @@
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
-   "at": "2026-07-25T18:31:10.177Z"
+   "at": "2026-07-27T06:31:24.100Z",
+   "dead": false
   },
   {
    "key": "lucas-museum-at-comic-con-star-wars-animated-series-detours-|audience-reaction",
@@ -9224,8 +9225,9 @@
    "parentEventSlug": "spider-man-brand-new-day-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-26T00:31:34.742Z"
+   "tries": 3,
+   "at": "2026-07-27T06:31:24.100Z",
+   "dead": true
   },
   {
    "key": "star-trek-strange-new-worlds-unveils-season-4-sneak-peek-at-|audience-reaction",
@@ -9378,16 +9380,18 @@
    "parentEventSlug": "the-death-of-robin-hood-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-27T04:31:24.878Z"
+   "tries": 3,
+   "at": "2026-07-27T06:31:24.100Z",
+   "dead": true
   },
   {
    "key": "katy-perry-slams-trump-administration-for-using-song-firewor|audience-reaction",
    "parentEventSlug": "katy-perry-slams-trump-administration-for-using-song-firewor",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-27T04:31:24.878Z"
+   "tries": 3,
+   "at": "2026-07-27T06:31:24.100Z",
+   "dead": true
   },
   {
    "key": "72-hours-2026|audience-reaction",
@@ -9396,6 +9400,22 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-07-27T04:31:24.878Z"
+  },
+  {
+   "key": "ryan-gosling-to-star-in-ghost-rider-movie-for-marvel-studios|audience-reaction",
+   "parentEventSlug": "ryan-gosling-to-star-in-ghost-rider-movie-for-marvel-studios",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-27T06:31:24.100Z"
+  },
+  {
+   "key": "gracie-abrams-scores-first-no-1-on-albums-chart-with-daughte|audience-reaction",
+   "parentEventSlug": "gracie-abrams-scores-first-no-1-on-albums-chart-with-daughte",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-07-27T06:31:24.100Z"
   }
  ]
 }
