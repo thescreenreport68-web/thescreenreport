@@ -2659,9 +2659,9 @@
    "eventSlug": "enola-holmes-3-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
    "reason": "words 169 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-25T14:36:22.408Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-28T14:36:22.408Z"
   },
   {
@@ -2669,9 +2669,9 @@
    "eventSlug": "regretting-you-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
    "reason": "words 137 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-25T14:38:30.284Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-28T14:38:30.284Z"
   },
   {
@@ -2679,9 +2679,9 @@
    "eventSlug": "kpop-demon-hunters-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
    "reason": "words 172 < 180 (owner-set ~200-word minimum)",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-25T15:07:32.042Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-28T15:07:32.042Z"
   },
   {
@@ -2689,9 +2689,9 @@
    "eventSlug": "death-on-the-nile-netflix-top10-w2026-07-19",
    "form": "NETFLIX-TOP10",
    "reason": "3 unverified claim(s) cut, unrecovered",
-   "tries": 3,
+   "tries": 0,
    "at": "2026-07-25T15:37:35.122Z",
-   "dead": true,
+   "dead": false,
    "expiresAt": "2026-07-28T15:37:35.122Z"
   },
   {
@@ -3051,14 +3051,14 @@
    "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 111,
+ "zeroStreak": 112,
  "daySpend": {
   "laDay": "2026-07-28",
   "usd": 0
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785256242472
+  "lastMs": 1785258043857
  },
  "lastAuditDay": "2026-07-28",
  "attempts": {
@@ -3068,7 +3068,11 @@
    "stuart fails to save the universe": 2,
    "masters of the universe": 2,
    "descendants: wicked wonderland": 1,
-   "malcolm in the middle: life's still unfair": 1
+   "malcolm in the middle: life's still unfair": 1,
+   "enola holmes 3": 1,
+   "regretting you": 1,
+   "kpop demon hunters": 1,
+   "death on the nile": 1
   }
  },
  "failures": {
