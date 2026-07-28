@@ -2364,11 +2364,11 @@
    "key": "lee-cronin-s-the-mummy-now-streaming|NOW-STREAMING",
    "eventSlug": "lee-cronin-s-the-mummy-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "words 128 < 180 (owner-set ~200-word minimum) | soft-floor engagement 4 < 5",
-   "tries": 2,
-   "at": "2026-07-26T16:33:36.501Z",
-   "dead": false,
-   "expiresAt": "2026-07-26T16:08:46.531Z"
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 3,
+   "at": "2026-07-28T02:03:37.176Z",
+   "dead": true,
+   "expiresAt": "2026-07-31T02:03:37.176Z"
   },
   {
    "key": "gail-daughtry-and-the-celebrity-sex-pass-bo-update-d8|BO-UPDATE",
@@ -2420,9 +2420,9 @@
    "key": "tom-clancy-s-jack-ryan-ghost-war-now-streaming|NOW-STREAMING",
    "eventSlug": "tom-clancy-s-jack-ryan-ghost-war-now-streaming",
    "form": "NOW-STREAMING",
-   "reason": "score 65 < 70",
-   "tries": 0,
-   "at": "2026-07-23T22:04:19.006Z",
+   "reason": "under floor: no trade box-office report (no extractable sources and no inline reporting)",
+   "tries": 2,
+   "at": "2026-07-28T02:06:18.146Z",
    "dead": false,
    "expiresAt": "2026-07-26T22:04:19.006Z"
   },
@@ -3051,14 +3051,14 @@
    "at": "2026-07-26T18:32:35.848Z"
   }
  ],
- "zeroStreak": 80,
+ "zeroStreak": 81,
  "daySpend": {
   "laDay": "2026-07-27",
   "usd": 0
  },
  "pace": {
   "tokens": 4,
-  "lastMs": 1785202236384
+  "lastMs": 1785204036729
  },
  "lastAuditDay": "2026-07-27",
  "attempts": {
@@ -3068,10 +3068,10 @@
    "masters of the universe": 3,
    "descendants: wicked wonderland": 3,
    "mortal kombat ii": 2,
-   "lee cronin's the mummy": 2,
-   "stuart fails to save the universe": 1,
-   "tom clancy's jack ryan: ghost war": 1,
-   "outcome": 1
+   "lee cronin's the mummy": 3,
+   "stuart fails to save the universe": 2,
+   "tom clancy's jack ryan: ghost war": 2,
+   "outcome": 2
   }
  },
  "failures": {
