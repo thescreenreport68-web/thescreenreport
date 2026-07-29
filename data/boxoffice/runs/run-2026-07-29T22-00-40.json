@@ -1,0 +1,152 @@
+{
+ "runId": "run-2026-07-29T22-00-40",
+ "mode": "live",
+ "startedAt": "2026-07-29T22:00:40.261Z",
+ "films": 41,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "72-hours-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "a-toxic-love-story-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "sniper-no-nation-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "voicemails-for-isabelle-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "quarantine-2-terminal-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "ordinary-angels-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "swapped-netflix-top10-w2026-07-26×NETFLIX-TOP10",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 10.72,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 178,
+ "daySpend": {
+  "laDay": "2026-07-29",
+  "usd": 0
+ },
+ "faults": {
+  "count": 9,
+  "bySeverity": {
+   "warn": 2,
+   "critical": 7
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits | google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-07-29T22:00:44.629Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-07-29T22:00:44.629Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:01:26.541Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:02:15.609Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:02:18.670Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:03:17.247Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:03:20.324Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:04:02.661Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-07-29T22:04:05.723Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-07-29T22:04:05.727Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
