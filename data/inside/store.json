@@ -9133,9 +9133,9 @@
    "parentEventSlug": "borderline-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-07-31T16:32:16.419Z",
-   "dead": true
+   "tries": 1,
+   "at": "2026-08-02T10:31:35.024Z",
+   "dead": false
   },
   {
    "key": "katy-perry-deeply-appalled-at-white-house-use-of-firework-so|audience-reaction",
@@ -10278,8 +10278,8 @@
    "parentEventSlug": "celebrity-deaths-2026-remembering-the-stars-who-died-this-ye",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-31T22:31:46.733Z",
+   "tries": 2,
+   "at": "2026-08-02T10:31:35.024Z",
    "dead": false
   },
   {
@@ -11043,8 +11043,9 @@
    "parentEventSlug": "box-office-spider-man-brand-new-day-breaks-opening-day-recor",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-02T02:31:35.740Z"
+   "tries": 3,
+   "at": "2026-08-02T10:31:35.024Z",
+   "dead": true
   },
   {
    "key": "barbie-sequel-stalls-as-david-zaslav-won-t-approve-bigger-sa|audience-reaction",
@@ -11119,8 +11120,9 @@
    "parentEventSlug": "vin-diesel-calls-fast-forever-the-best-script-he-s-read-in-d",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-02T08:31:29.233Z"
+   "tries": 3,
+   "at": "2026-08-02T10:31:35.024Z",
+   "dead": true
   },
   {
    "key": "wonder-man-star-yahya-abdul-mateen-ii-reacts-to-marvel-serie|audience-reaction",
@@ -11138,6 +11140,14 @@
    "reason": "under floor: real anchor posts 0 < 3",
    "tries": 1,
    "at": "2026-08-02T06:31:39.248Z"
+  },
+  {
+   "key": "vincent-pastore-tributes-the-sopranos-alums-jamie-lynn-sigle|audience-reaction",
+   "parentEventSlug": "vincent-pastore-tributes-the-sopranos-alums-jamie-lynn-sigle",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-02T10:31:35.024Z"
   }
  ]
 }
