@@ -7649,22 +7649,6 @@
  ],
  "parked": [
   {
-   "key": "behemoth-trailer-pedro-pascal-plays-a-classically-trained-ce|audience-reaction",
-   "parentEventSlug": "behemoth-trailer-pedro-pascal-plays-a-classically-trained-ce",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-07-14T14:34:47.804Z"
-  },
-  {
-   "key": "1-2-special-acquires-emmanuel-marre-s-a-man-of-his-time|audience-reaction",
-   "parentEventSlug": "1-2-special-acquires-emmanuel-marre-s-a-man-of-his-time",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 1 < 3",
-   "tries": 1,
-   "at": "2026-07-14T14:41:41.734Z"
-  },
-  {
    "key": "80s-pop-star-tiffany-to-make-new-york-stage-debut-in-spandex|audience-reaction",
    "parentEventSlug": "80s-pop-star-tiffany-to-make-new-york-stage-debut-in-spandex",
    "form": "audience-reaction",
@@ -7879,8 +7863,8 @@
    "parentEventSlug": "lucky-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-05T22:31:17.754Z",
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z",
    "dead": false
   },
   {
@@ -8723,8 +8707,8 @@
    "parentEventSlug": "minions-monsters-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-06T10:31:29.135Z",
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z",
    "dead": false
   },
   {
@@ -8835,8 +8819,8 @@
    "parentEventSlug": "spider-man-brand-new-day-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-06T08:31:30.683Z",
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z",
    "dead": false
   },
   {
@@ -9972,8 +9956,8 @@
    "parentEventSlug": "masters-of-the-universe-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-06T10:31:29.135Z",
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z",
    "dead": false
   },
   {
@@ -10006,9 +9990,9 @@
    "parentEventSlug": "the-odyssey-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-06T10:31:29.135Z",
-   "dead": false
+   "tries": 3,
+   "at": "2026-08-06T12:31:19.514Z",
+   "dead": true
   },
   {
    "key": "tony-iommi-to-release-new-album-from-the-dark-new-single-wit|audience-reaction",
@@ -11708,8 +11692,9 @@
    "parentEventSlug": "star-wars-visions-presents-the-ninth-jedi-series-starwars-co",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-06T08:31:30.683Z"
+   "tries": 3,
+   "at": "2026-08-06T12:31:19.514Z",
+   "dead": true
   },
   {
    "key": "judge-dismisses-lawsuit-from-paramount-streaming-subscribers|audience-reaction",
@@ -11740,16 +11725,32 @@
    "parentEventSlug": "phantom-blade-zero-pre-orders-start-august-12-new-trailer-to",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-06T10:31:29.135Z"
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z"
   },
   {
    "key": "michelle-yeoh-named-asian-filmmaker-of-the-year-at-busan|audience-reaction",
    "parentEventSlug": "michelle-yeoh-named-asian-filmmaker-of-the-year-at-busan",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
+   "tries": 2,
+   "at": "2026-08-06T12:31:19.514Z"
+  },
+  {
+   "key": "paramount-s-takeover-of-warner-bros-cleared-by-uk-authoritie|audience-reaction",
+   "parentEventSlug": "paramount-s-takeover-of-warner-bros-cleared-by-uk-authoritie",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
-   "at": "2026-08-06T10:31:29.135Z"
+   "at": "2026-08-06T12:31:19.514Z"
+  },
+  {
+   "key": "evil-dead-burn-2026|audience-reaction",
+   "parentEventSlug": "evil-dead-burn-2026",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-06T12:31:19.514Z"
   }
  ]
 }
