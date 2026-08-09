@@ -7649,22 +7649,6 @@
  ],
  "parked": [
   {
-   "key": "passenger-2026|creator-answers-critics",
-   "parentEventSlug": "passenger-2026",
-   "form": "creator-answers-critics",
-   "reason": "under floor: creator quotes 0 < 1",
-   "tries": 1,
-   "at": "2026-07-18T14:35:41.754Z"
-  },
-  {
-   "key": "bts-normal-music-video-sets-spotify-single-day-streaming-rec|audience-reaction",
-   "parentEventSlug": "bts-normal-music-video-sets-spotify-single-day-streaming-rec",
-   "form": "audience-reaction",
-   "reason": "divided-claim-without-both-sides",
-   "tries": 1,
-   "at": "2026-07-18T18:36:14.086Z"
-  },
-  {
    "key": "joe-caldwell-dark-shadows-writer-dies-at-97|audience-reaction",
    "parentEventSlug": "joe-caldwell-dark-shadows-writer-dies-at-97",
    "form": "audience-reaction",
@@ -8035,9 +8019,9 @@
    "parentEventSlug": "moana-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-09T14:31:06.651Z",
-   "dead": false
+   "tries": 3,
+   "at": "2026-08-09T18:30:53.759Z",
+   "dead": true
   },
   {
    "key": "blade-runner-2099-trailer-michelle-yeoh-and-hunter-schafer-b|audience-reaction",
@@ -8152,9 +8136,9 @@
    "parentEventSlug": "avatar-aang-the-last-airbender-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-08T04:31:13.389Z",
-   "dead": true
+   "tries": 1,
+   "at": "2026-08-09T18:30:53.759Z",
+   "dead": false
   },
   {
    "key": "rick-and-morty-2013|audience-reaction",
@@ -9666,8 +9650,8 @@
    "parentEventSlug": "scary-movie-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-09T16:30:47.533Z",
+   "tries": 2,
+   "at": "2026-08-09T18:30:53.759Z",
    "dead": false
   },
   {
@@ -10307,8 +10291,8 @@
    "parentEventSlug": "soulm8te-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-09T16:30:47.533Z",
+   "tries": 2,
+   "at": "2026-08-09T18:30:53.759Z",
    "dead": false
   },
   {
@@ -11028,8 +11012,8 @@
    "parentEventSlug": "ted-lasso-2020",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-09T16:30:47.533Z",
+   "tries": 2,
+   "at": "2026-08-09T18:30:53.759Z",
    "dead": false
   },
   {
@@ -11750,8 +11734,9 @@
    "parentEventSlug": "the-isolate-thief-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-09T16:30:47.533Z"
+   "tries": 3,
+   "at": "2026-08-09T18:30:53.759Z",
+   "dead": true
   },
   {
    "key": "spider-man-brand-new-day-is-second-fastest-film-to-cross-1b-|audience-reaction",
@@ -11760,6 +11745,22 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-08-09T16:30:47.533Z"
+  },
+  {
+   "key": "nascar-is-back-how-to-live-stream-nascar-at-iowa-speedway-to|audience-reaction",
+   "parentEventSlug": "nascar-is-back-how-to-live-stream-nascar-at-iowa-speedway-to",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-09T18:30:53.759Z"
+  },
+  {
+   "key": "spider-man-brand-new-day-reaches-stunning-1-67-billion-after|audience-reaction",
+   "parentEventSlug": "spider-man-brand-new-day-reaches-stunning-1-67-billion-after",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-09T18:30:53.759Z"
   }
  ]
 }
