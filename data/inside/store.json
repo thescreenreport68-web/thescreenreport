@@ -7649,15 +7649,6 @@
  ],
  "parked": [
   {
-   "key": "the-breadwinner-2026|audience-reaction",
-   "parentEventSlug": "the-breadwinner-2026",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 2 < 3",
-   "tries": 3,
-   "at": "2026-07-18T12:36:10.154Z",
-   "dead": true
-  },
-  {
    "key": "netflix-paid-587-million-in-cash-for-ben-affleck-s-ai-startu|audience-reaction",
    "parentEventSlug": "netflix-paid-587-million-in-cash-for-ben-affleck-s-ai-startu",
    "form": "audience-reaction",
@@ -9190,7 +9181,7 @@
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
-   "at": "2026-08-07T06:31:15.947Z",
+   "at": "2026-08-09T06:30:59.905Z",
    "dead": false
   },
   {
@@ -9782,9 +9773,9 @@
    "parentEventSlug": "leviticus-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-09T04:30:53.002Z",
-   "dead": false
+   "tries": 3,
+   "at": "2026-08-09T06:30:59.905Z",
+   "dead": true
   },
   {
    "key": "spider-man-brand-new-day-besting-no-way-home-s-50m-u-s-previ|audience-reaction",
@@ -11102,9 +11093,9 @@
    "parentEventSlug": "futurama-1999",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-07T10:31:21.773Z",
-   "dead": true
+   "tries": 1,
+   "at": "2026-08-09T06:30:59.905Z",
+   "dead": false
   },
   {
    "key": "ted-lasso-2020|audience-reaction",
@@ -11749,8 +11740,9 @@
    "parentEventSlug": "heated-rivalry-author-rachel-reid-pushes-back-against-season",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-09T04:30:53.002Z"
+   "tries": 3,
+   "at": "2026-08-09T06:30:59.905Z",
+   "dead": true
   },
   {
    "key": "nascar-cup-series-iowa-usa-network|audience-reaction",
@@ -11759,6 +11751,14 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-08-09T02:30:50.350Z"
+  },
+  {
+   "key": "heated-rivalry-author-appears-to-dismiss-negative-reactions-|audience-reaction",
+   "parentEventSlug": "heated-rivalry-author-appears-to-dismiss-negative-reactions-",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-09T06:30:59.905Z"
   }
  ]
 }
