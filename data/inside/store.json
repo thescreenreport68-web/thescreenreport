@@ -7649,58 +7649,6 @@
  ],
  "parked": [
   {
-   "key": "silo-2023|audience-reaction",
-   "parentEventSlug": "silo-2023",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-10T12:30:48.269Z",
-   "dead": true
-  },
-  {
-   "key": "borderline-2026|audience-reaction",
-   "parentEventSlug": "borderline-2026",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-10T04:30:48.971Z",
-   "dead": true
-  },
-  {
-   "key": "katy-perry-deeply-appalled-at-white-house-use-of-firework-so|audience-reaction",
-   "parentEventSlug": "katy-perry-deeply-appalled-at-white-house-use-of-firework-so",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-25T20:31:22.076Z"
-  },
-  {
-   "key": "project-hail-mary-2026|audience-reaction",
-   "parentEventSlug": "project-hail-mary-2026",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-11T10:30:46.444Z",
-   "dead": true
-  },
-  {
-   "key": "lucas-museum-at-comic-con-star-wars-animated-series-detours-|audience-reaction",
-   "parentEventSlug": "lucas-museum-at-comic-con-star-wars-animated-series-detours-",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-07-25T22:31:23.271Z"
-  },
-  {
-   "key": "avatar-aang-the-last-airbender-2026|audience-reaction",
-   "parentEventSlug": "avatar-aang-the-last-airbender-2026",
-   "form": "audience-reaction",
-   "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-09T22:30:46.781Z",
-   "dead": true
-  },
-  {
    "key": "rick-and-morty-2013|audience-reaction",
    "parentEventSlug": "rick-and-morty-2013",
    "form": "audience-reaction",
@@ -8927,9 +8875,9 @@
    "parentEventSlug": "the-odyssey-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 3,
-   "at": "2026-08-10T02:30:46.360Z",
-   "dead": true
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z",
+   "dead": false
   },
   {
    "key": "tony-iommi-to-release-new-album-from-the-dark-new-single-wit|audience-reaction",
@@ -9851,9 +9799,9 @@
    "parentEventSlug": "soulm8te-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-11T12:30:54.525Z",
-   "dead": false
+   "tries": 3,
+   "at": "2026-08-11T14:30:59.996Z",
+   "dead": true
   },
   {
    "key": "spider-man-brand-new-day-sets-imax-release-as-the-odyssey-ex|audience-reaction",
@@ -10572,8 +10520,8 @@
    "parentEventSlug": "ted-lasso-2020",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 1,
-   "at": "2026-08-11T12:30:54.525Z",
+   "tries": 2,
+   "at": "2026-08-11T14:30:59.996Z",
    "dead": false
   },
   {
@@ -11723,8 +11671,9 @@
    "parentEventSlug": "moana-2026",
    "form": "audience-reaction",
    "reason": "under floor: audience posts 0 < 3",
-   "tries": 2,
-   "at": "2026-08-11T10:30:46.444Z"
+   "tries": 3,
+   "at": "2026-08-11T14:30:59.996Z",
+   "dead": true
   },
   {
    "key": "spider-man-brand-new-day-the-odyssey-battle-atop-u-k-ireland|audience-reaction",
@@ -11765,6 +11714,54 @@
    "reason": "under floor: audience posts 0 < 3",
    "tries": 1,
    "at": "2026-08-11T12:30:54.525Z"
+  },
+  {
+   "key": "minions-monsters-2026|audience-reaction",
+   "parentEventSlug": "minions-monsters-2026",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
+  },
+  {
+   "key": "toronto-film-festival-adds-werner-herzog-martin-mcdonagh-mov|audience-reaction",
+   "parentEventSlug": "toronto-film-festival-adds-werner-herzog-martin-mcdonagh-mov",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
+  },
+  {
+   "key": "star-wars-zero-company-is-not-xcom-but-i-have-a-good-feeling|audience-reaction",
+   "parentEventSlug": "star-wars-zero-company-is-not-xcom-but-i-have-a-good-feeling",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
+  },
+  {
+   "key": "netflix-unveils-premiere-date-first-look-images-for-the-body|audience-reaction",
+   "parentEventSlug": "netflix-unveils-premiere-date-first-look-images-for-the-body",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
+  },
+  {
+   "key": "spotify-to-start-labeling-ai-artists|audience-reaction",
+   "parentEventSlug": "spotify-to-start-labeling-ai-artists",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
+  },
+  {
+   "key": "designrush-unveils-design-award-winners-for-august-2026-yaho|audience-reaction",
+   "parentEventSlug": "designrush-unveils-design-award-winners-for-august-2026-yaho",
+   "form": "audience-reaction",
+   "reason": "under floor: audience posts 0 < 3",
+   "tries": 1,
+   "at": "2026-08-11T14:30:59.996Z"
   }
  ]
 }
