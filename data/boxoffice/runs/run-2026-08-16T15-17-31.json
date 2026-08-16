@@ -1,0 +1,170 @@
+{
+ "runId": "run-2026-08-16T15-17-31",
+ "mode": "live",
+ "startedAt": "2026-08-16T15:17:31.376Z",
+ "films": 42,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "spider-man-brand-new-day-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "the-end-of-oak-street-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "paw-patrol-the-dino-movie-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 5.46,
+  "allow": 1
+ },
+ "queueBuilt": 0,
+ "attemptCapHit": 3,
+ "zeroStreak": 1127,
+ "daySpend": {
+  "laDay": "2026-08-16",
+  "usd": 0
+ },
+ "faults": {
+  "count": 14,
+  "bySeverity": {
+   "warn": 8,
+   "critical": 6
+  },
+  "faults": [
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:36.639Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:36.640Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:39.679Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:39.680Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:42.724Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:42.724Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits | google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:47.086Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-16T15:17:47.086Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:18:26.318Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:18:29.363Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:19:54.761Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:19:58.235Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits | openai/gpt-5-nano: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:21:24.883Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-16T15:21:27.933Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-08-16T15:21:27.937Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
