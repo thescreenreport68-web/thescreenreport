@@ -1,0 +1,114 @@
+{
+ "runId": "run-2026-08-29T18-31-13",
+ "mode": "live",
+ "startedAt": "2026-08-29T18:31:13.788Z",
+ "films": 41,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "spider-man-brand-new-day-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "insidious-out-of-the-further-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "the-end-of-oak-street-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  },
+  {
+   "tag": "paw-patrol-the-dino-movie-bo-update×BO-UPDATE",
+   "reason": "Insufficient credits. Add more using https://openrouter.ai/settings/credits"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 8.4,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 1818,
+ "daySpend": {
+  "laDay": "2026-08-29",
+  "usd": 0
+ },
+ "faults": {
+  "count": 6,
+  "bySeverity": {
+   "warn": 2,
+   "critical": 4
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: Insufficient credits. Add more using https://openrouter.ai/settings/credits | google/gemini-2.5-flash-lite: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-29T18:31:19.049Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "warn",
+    "at": "2026-08-29T18:31:19.049Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-29T18:31:59.604Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-29T18:32:40.160Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-29T18:33:20.826Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: Insufficient credits. Add more using https://openrouter.ai/settings/credits | qwen/qwen3-235b-a22b-2507: Insufficient credits. Add more using https://openrouter.ai/settings/credits",
+    "severity": "critical",
+    "at": "2026-08-29T18:34:01.409Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-08-29T18:34:01.413Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
