@@ -1,0 +1,186 @@
+{
+ "runId": "run-2026-09-10T06-00-45",
+ "mode": "live",
+ "startedAt": "2026-09-10T06:00:45.011Z",
+ "films": 50,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "spider-man-brand-new-day-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "coyote-vs-acme-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "cars-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 15.31,
+  "allow": 2
+ },
+ "queueBuilt": 0,
+ "attemptCapHit": 4,
+ "zeroStreak": 2405,
+ "daySpend": {
+  "laDay": "2026-09-09",
+  "usd": 0
+ },
+ "faults": {
+  "count": 16,
+  "bySeverity": {
+   "warn": 8,
+   "critical": 8
+  },
+  "faults": [
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:50.390Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:50.391Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:53.423Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:53.423Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:56.465Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:00:56.465Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:01:00.252Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-09-10T06:01:00.252Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:01:41.772Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:01:44.809Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:02:26.855Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:02:29.897Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:03:15.582Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:03:18.616Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:03:59.979Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-10T06:04:03.011Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-09-10T06:04:03.014Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
