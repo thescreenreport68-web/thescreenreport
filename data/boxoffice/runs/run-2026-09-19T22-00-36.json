@@ -1,0 +1,158 @@
+{
+ "runId": "run-2026-09-19T22-00-36",
+ "mode": "live",
+ "startedAt": "2026-09-19T22:00:36.038Z",
+ "films": 48,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "why-did-i-get-married-again-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-whisper-man-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "turning-point-generation-9-11-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-little-things-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "those-who-wish-me-dead-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "the-hard-corps-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "untold-mr-t-i-pity-the-fool-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "kpop-demon-hunters-netflix-top10-w2026-09-13×NETFLIX-TOP10",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 13.4,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 2898,
+ "daySpend": {
+  "laDay": "2026-09-19",
+  "usd": 0
+ },
+ "faults": {
+  "count": 10,
+  "bySeverity": {
+   "warn": 2,
+   "critical": 8
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-09-19T22:00:40.722Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-09-19T22:00:40.722Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:01:25.146Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:01:28.213Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:02:10.198Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:02:13.373Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:03:14.912Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:03:17.994Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:04:28.732Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-19T22:04:31.818Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-09-19T22:04:31.821Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
