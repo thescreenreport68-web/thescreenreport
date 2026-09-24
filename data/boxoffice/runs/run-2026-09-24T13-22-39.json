@@ -1,0 +1,170 @@
+{
+ "runId": "run-2026-09-24T13-22-39",
+ "mode": "live",
+ "startedAt": "2026-09-24T13:22:39.000Z",
+ "films": 43,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "resident-evil-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "practical-magic-2-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "the-odyssey-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 1.12,
+  "allow": 1
+ },
+ "queueBuilt": 0,
+ "attemptCapHit": 3,
+ "zeroStreak": 3137,
+ "daySpend": {
+  "laDay": "2026-09-24",
+  "usd": 0
+ },
+ "faults": {
+  "count": 14,
+  "bySeverity": {
+   "warn": 8,
+   "critical": 6
+  },
+  "faults": [
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:44.509Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:44.510Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:47.571Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:47.571Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:50.991Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:50.991Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:55.106Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-09-24T13:22:55.106Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:24:06.223Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:24:09.277Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:25:12.958Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:25:16.027Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:26:05.735Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-09-24T13:26:08.806Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-09-24T13:26:08.809Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
