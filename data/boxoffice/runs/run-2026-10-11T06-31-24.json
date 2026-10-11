@@ -1,0 +1,109 @@
+{
+ "runId": "run-2026-10-11T06-31-24",
+ "mode": "live",
+ "startedAt": "2026-10-11T06:31:24.201Z",
+ "films": 38,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "verity-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "resident-evil-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "heart-of-the-beast-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  },
+  {
+   "tag": "primetime-bo-update×BO-UPDATE",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 19.14,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 3987,
+ "daySpend": {
+  "laDay": "2026-10-10",
+  "usd": 0
+ },
+ "faults": {
+  "count": 6,
+  "bySeverity": {
+   "warn": 2,
+   "critical": 4
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-10-11T06:31:29.990Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-10-11T06:31:29.990Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-10-11T06:32:34.050Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-10-11T06:33:49.617Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-10-11T06:35:13.987Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-10-11T06:35:32.279Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-10-11T06:35:32.283Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
