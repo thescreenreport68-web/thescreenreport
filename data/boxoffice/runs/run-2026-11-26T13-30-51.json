@@ -1,0 +1,288 @@
+{
+ "runId": "run-2026-11-26T13-30-51",
+ "mode": "live",
+ "startedAt": "2026-11-26T13:30:51.686Z",
+ "films": 33,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "king-of-the-hill-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-hunger-games-sunrise-on-the-reaping-bo-opening×BO-OPENING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "guarding-stars-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "heartland-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "steps-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "dr-seuss-the-grinch-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "russell-brand-open-secret-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "despicable-me-4-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "obsession-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-gospel-of-christmas-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-body-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "black-doves-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "raw-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "User not found."
+  },
+  {
+   "tag": "taken-natalee-holloway-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "User not found."
+  },
+  {
+   "tag": "doozie-s-doghouse-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "User not found."
+  },
+  {
+   "tag": "danny-go-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": false,
+  "expected": 0,
+  "allow": 2
+ },
+ "queueBuilt": 0,
+ "attemptCapHit": 4,
+ "zeroStreak": 6382,
+ "daySpend": {
+  "laDay": "2026-11-26",
+  "usd": 0
+ },
+ "faults": {
+  "count": 24,
+  "bySeverity": {
+   "warn": 9,
+   "critical": 15
+  },
+  "faults": [
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:30:57.119Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:30:57.119Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:00.215Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:00.215Z"
+   },
+   {
+    "stage": "model:categorize",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | amazon/nova-micro-v1: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:03.280Z"
+   },
+   {
+    "stage": "find:categorize",
+    "message": "event categorization failed — queue batch dropped: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:03.280Z"
+   },
+   {
+    "stage": "chart:The Numbers",
+    "message": "expected 25 chart rows, got 4",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:04.692Z",
+    "meta": {
+     "actual": 4,
+     "expected": 25,
+     "label": "chart rows"
+    }
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:07.753Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:07.753Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:11.264Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:11.264Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:14.638Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:14.638Z"
+   },
+   {
+    "stage": "chart",
+    "message": "chart parse produced ZERO films from all seeds — supply outage, not a quiet day",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:14.639Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:17.703Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T13:31:17.703Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:31:59.843Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:32:02.894Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:33:20.818Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:33:23.865Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:34:36.041Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:34:39.103Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:35:43.942Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T13:35:47.019Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-11-26T13:35:47.022Z",
+ "meter": {
+  "byRole": {
+   "categorize": {
+    "calls": 6,
+    "errors": 6,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 14,
+    "errors": 14,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
