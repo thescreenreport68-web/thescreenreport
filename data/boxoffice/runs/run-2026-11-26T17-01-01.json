@@ -1,0 +1,296 @@
+{
+ "runId": "run-2026-11-26T17-01-01",
+ "mode": "live",
+ "startedAt": "2026-11-26T17:01:01.018Z",
+ "films": 32,
+ "published": [],
+ "held": [],
+ "rejected": [
+  {
+   "tag": "matchbox-the-movie-now-streaming×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "extractor returned no JSON (transient)"
+  },
+  {
+   "tag": "masterplan-now-streaming×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "extractor returned no JSON (transient)"
+  }
+ ],
+ "skipped": [
+  {
+   "tag": "guarding-stars-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "heartland-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "steps-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "dr-seuss-the-grinch-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "russell-brand-open-secret-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "despicable-me-4-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "obsession-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-gospel-of-christmas-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-body-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "black-doves-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "raw-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "taken-natalee-holloway-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "doozie-s-doghouse-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "danny-go-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "power-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "nobody-wants-this-trending-tv-w2026-11-22×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "blade-runner-2099-trending-tv×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "lanterns-trending-tv×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "carrie-trending-tv×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "crystal-lake-trending-tv×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "neagley-trending-tv×TRENDING-TV",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "the-end-of-oak-street-now-streaming×NOW-STREAMING",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "the-uprising-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer the-uprising-now-streaming×NOW-STREAMING exceeded 180s"
+  },
+  {
+   "tag": "tenzing-now-streaming×NOW-STREAMING",
+   "reason": "watchdog: gatherer tenzing-now-streaming×NOW-STREAMING exceeded 180s"
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 4.48,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 6389,
+ "daySpend": {
+  "laDay": "2026-11-26",
+  "usd": 0
+ },
+ "faults": {
+  "count": 21,
+  "bySeverity": {
+   "warn": 3,
+   "critical": 18
+  },
+  "faults": [
+   {
+    "stage": "chart:The Numbers",
+    "message": "expected 3 chart rows, got 2",
+    "severity": "warn",
+    "at": "2026-11-26T17:01:03.384Z",
+    "meta": {
+     "actual": 2,
+     "expected": 3,
+     "label": "chart rows"
+    }
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:06.523Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:06.523Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:10.122Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:10.122Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:13.643Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:13.643Z"
+   },
+   {
+    "stage": "chart",
+    "message": "chart parse produced ZERO films from all seeds — supply outage, not a quiet day",
+    "severity": "critical",
+    "at": "2026-11-26T17:01:13.643Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T17:01:16.834Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T17:01:16.834Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:02:01.826Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:02:57.030Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:04:03.515Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:05:26.645Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:06:10.650Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:07:00.286Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:08:18.091Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:08:41.536Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:10:12.900Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:10:46.693Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T17:11:50.903Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-11-26T17:13:00.721Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 28,
+    "errors": 28,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
