@@ -1,0 +1,158 @@
+{
+ "runId": "run-2026-11-26T02-01-13",
+ "mode": "live",
+ "startedAt": "2026-11-26T02:01:13.218Z",
+ "films": 44,
+ "published": [],
+ "held": [],
+ "rejected": [],
+ "skipped": [
+  {
+   "tag": "guarding-stars-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "heartland-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "steps-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  },
+  {
+   "tag": "dr-seuss-the-grinch-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "film attempt budget exhausted today (3 paid event tries/film/day)"
+  }
+ ],
+ "blocked": [
+  {
+   "tag": "russell-brand-open-secret-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "despicable-me-4-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "obsession-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "the-gospel-of-christmas-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 12.64,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 6357,
+ "daySpend": {
+  "laDay": "2026-11-25",
+  "usd": 0
+ },
+ "faults": {
+  "count": 10,
+  "bySeverity": {
+   "warn": 2,
+   "critical": 8
+  },
+  "faults": [
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T02:01:18.068Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T02:01:18.068Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:02:00.405Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:02:03.495Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:02:58.812Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:03:01.880Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:03:43.504Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:03:46.595Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:04:41.775Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T02:04:44.837Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-11-26T02:04:44.840Z",
+ "meter": {
+  "byRole": {
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "gatherer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 8,
+    "errors": 8,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
