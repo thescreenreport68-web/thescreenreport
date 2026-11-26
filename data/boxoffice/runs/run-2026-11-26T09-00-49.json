@@ -1,0 +1,208 @@
+{
+ "runId": "run-2026-11-26T09-00-49",
+ "mode": "live",
+ "startedAt": "2026-11-26T09:00:49.434Z",
+ "films": 33,
+ "published": [],
+ "held": [],
+ "rejected": [
+  {
+   "tag": "king-of-the-hill-now-streaming×NOW-STREAMING",
+   "stage": "gatherer",
+   "reason": "extractor returned no JSON (transient)"
+  }
+ ],
+ "skipped": [],
+ "blocked": [
+  {
+   "tag": "the-hunger-games-sunrise-on-the-reaping-bo-opening×BO-OPENING",
+   "reason": "watchdog: gatherer the-hunger-games-sunrise-on-the-reaping-bo-opening×BO-OPENING exceeded 180s"
+  },
+  {
+   "tag": "guarding-stars-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  },
+  {
+   "tag": "heartland-netflix-top10-w2026-11-22×NETFLIX-TOP10",
+   "reason": "User not found."
+  }
+ ],
+ "paced": {
+  "tokens": 4,
+  "behind": true,
+  "expected": 15.54,
+  "allow": 2
+ },
+ "attemptCapHit": 4,
+ "zeroStreak": 6373,
+ "daySpend": {
+  "laDay": "2026-11-26",
+  "usd": 0
+ },
+ "faults": {
+  "count": 20,
+  "bySeverity": {
+   "warn": 3,
+   "critical": 17
+  },
+  "faults": [
+   {
+    "stage": "chart:The Numbers",
+    "message": "expected 25 chart rows, got 4",
+    "severity": "warn",
+    "at": "2026-11-26T09:00:50.986Z",
+    "meta": {
+     "actual": 4,
+     "expected": 25,
+     "label": "chart rows"
+    }
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:00:54.116Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:00:54.117Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:00:57.472Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:00:57.472Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:01:00.765Z"
+   },
+   {
+    "stage": "chart:llm-fallback",
+    "message": "LLM chart extraction failed after a short deterministic parse: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:01:00.765Z"
+   },
+   {
+    "stage": "chart",
+    "message": "chart parse produced ZERO films from all seeds — supply outage, not a quiet day",
+    "severity": "critical",
+    "at": "2026-11-26T09:01:00.765Z"
+   },
+   {
+    "stage": "model:finder",
+    "message": "all models failed — amazon/nova-micro-v1: User not found. | google/gemini-2.5-flash-lite: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T09:01:03.842Z"
+   },
+   {
+    "stage": "finder:llm",
+    "message": "finder classification failed — falling back to deterministic picks: User not found.",
+    "severity": "warn",
+    "at": "2026-11-26T09:01:03.842Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:01:52.403Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:02:36.094Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:03:18.192Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:04:07.827Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:05:25.097Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:06:21.805Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:07:21.477Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:07:24.522Z"
+   },
+   {
+    "stage": "model:gatherer",
+    "message": "all models failed — google/gemini-2.5-flash-lite: User not found. | openai/gpt-5-nano: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:08:35.243Z"
+   },
+   {
+    "stage": "model:synthesizer",
+    "message": "all models failed — deepseek/deepseek-v4-flash: User not found. | qwen/qwen3-235b-a22b-2507: User not found.",
+    "severity": "critical",
+    "at": "2026-11-26T09:08:38.295Z"
+   }
+  ]
+ },
+ "degraded": true,
+ "finishedAt": "2026-11-26T09:08:38.298Z",
+ "meter": {
+  "byRole": {
+   "gatherer": {
+    "calls": 22,
+    "errors": 22,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "finder": {
+    "calls": 2,
+    "errors": 2,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   },
+   "synthesizer": {
+    "calls": 4,
+    "errors": 4,
+    "in": 0,
+    "out": 0,
+    "usd": 0,
+    "ms": 0
+   }
+  },
+  "totalUsd": 0
+ },
+ "openrouterTotalUsd": 0
+}
